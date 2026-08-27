@@ -26,6 +26,7 @@ Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
          stepb2d++)
     {
         task->onLIDARworld (world, robot);
+        task->onGyroTurn (task->getangularVelocity () / HZ);
         instVelocity.x = task->getLinearSpeed () * cos (theta);
         instVelocity.y = task->getLinearSpeed () * sin (theta);
         robot->body ()->SetLinearVelocity (instVelocity);
@@ -48,7 +49,6 @@ Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
             1.0f / HZ, 3,
             8); //time step 100 ms which also is zetabot callback time, possibly put it higher in the future if fast
         theta += task->getangularVelocity () / HZ; //= omega *t
-        task->onGyroTurn (task->getangularVelocity () / HZ);
     }
     simResult.endPose = robot->body ()->GetTransform ();
     simResult.step = stepb2d;

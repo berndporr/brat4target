@@ -18,7 +18,8 @@ class AbstractTask
 {
   public:
     float nearbyObstacleDetectionRadius = NEARBY_OBSTACLE_DETECTION_RADIUS;
-    float nearbyMaxObstacleDetectionAngle = NEARBY_MAX_OBSTACLE_DETECTION_ANGLE;
+    float nearbyMaxObstacleDetectionAngle
+        = NEARBY_MAX_OBSTACLE_DETECTION_ANGLE;
 
     using MotorEvent = std::function<void (const float l, const float r)>;
     void registerMotorEvent (MotorEvent me) { motorEvent = me; }
@@ -72,31 +73,34 @@ class AbstractTask
         emitTwoWheeledEvent ();
     }
 
-    /**
-     * Task needs to react to the LIDAR world.
-     * This has already a working functionality where it detects close objects
-     * which would lead to an imminent crash or might be the target itself.
-     */
+   /**
+   * Task needs to react to the LIDAR world.
+   * This has already a working functionality where it detects close objects
+   * which would lead to an imminent crash or might be the target itself.
+   */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot);
 
     /**
-     * Task needs to incorporate new target angle info from the camera.
-     */
-    virtual void onTargetAngle (float phi);
+    * Task needs to incorporate new target angle info from the camera.
+    */
+    virtual void onTargetDetected (float r, float phi);
 
     /**
-     * Task needs to take into account the new gyro readings
-     */
+    * Task needs to take into account the new gyro readings
+    */
     virtual void onGyroTurn (float dphi);
 
     /**
-     * Callback when the task is started
-     */
+    * Callback when the task is started
+    */
     virtual void onStart () = 0;
 
+    /**
+    * Gets the velocity in x/y in the world coordinate system
+    **/
     b2Vec2 getLinearVelocity (const float dt = 1) const
-    { //dt integrates
+    { // dt integrates
         b2Vec2 velocity;
         velocity.x = linearSpeed * cos (angularVelocity) * dt;
         velocity.y = linearSpeed * sin (angularVelocity) * dt;
@@ -104,12 +108,12 @@ class AbstractTask
     }
 
     /**
-        * @brief Gets the ROBOT's displacement in the world frame after dt seconds
-        * 
-        * @param dt delta time (in seconds)
-        **/
+    * @brief Gets the ROBOT's displacement in the world frame after dt seconds
+    *
+    * @param dt delta time (in seconds)
+    **/
     b2Transform getTransform (const float dt = 1) const
-    { //dt integrates
+    { // dt integrates
         return b2Transform (getLinearVelocity (dt),
                             b2Rot (getangularVelocity (dt)));
     }
@@ -152,12 +156,13 @@ class AbstractTask
     };
 
   public:
-    void init(std::shared_ptr<AbstractTask> at) {
-      linearSpeed = at->linearSpeed;
-      angularVelocity = at->angularVelocity;
-      motorEvent = at->motorEvent;
-      terminatedEvent = at->terminatedEvent;
-      targetAngle = at->targetAngle;
+    void init (std::shared_ptr<AbstractTask> at)
+    {
+        linearSpeed = at->linearSpeed;
+        angularVelocity = at->angularVelocity;
+        motorEvent = at->motorEvent;
+        terminatedEvent = at->terminatedEvent;
+        targetAngle = at->targetAngle;
     }
 
   protected:
@@ -179,7 +184,7 @@ class StopTask : public AbstractTask
                                std::shared_ptr<Robot> robot) override
     {
     }
-    virtual void onTargetAngle (float phi) override {}
+    virtual void onTargetDetected (float r, float phi) override {}
 };
 
 /**
@@ -191,14 +196,14 @@ class TargetTask : public AbstractTask
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
     virtual void onStart () override {}
-    virtual void onTargetAngle (float phi) override
+    virtual void onTargetDetected (float r, float phi) override
     {
         targetAngle = phi;
         updateTargeting ();
     }
     /**
-     * Task needs to take into account the new gyro readings
-     */
+   * Task needs to take into account the new gyro readings
+   */
     virtual void onGyroTurn (float dphi) override
     {
         AbstractTask::onGyroTurn (dphi);

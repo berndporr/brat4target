@@ -5,6 +5,7 @@
 #include <memory>
 
 constexpr float target_angle = 0.45;
+constexpr float target_distance = 1;
 
 CoordinateContainer loadLIDARdata (const char *filename)
 {
@@ -78,7 +79,7 @@ void test_target_task_far ()
     std::shared_ptr<Robot> robot = std::make_shared<Robot> (world);
     task.setLinearSpeed (0.5);
     task.onLIDARworld (world, robot);
-    task.onTargetAngle (target_angle);
+    task.onTargetDetected (target_distance, target_angle);
     printf ("\n");
 }
 

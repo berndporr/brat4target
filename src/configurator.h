@@ -36,9 +36,9 @@ class Configurator
     /**
      * Task needs to incorporate new target angle info from the camera
      */
-    virtual void onTargetAngle (float phi)
+    virtual void onTargetDetected (float r, float phi)
     {
-        currentTask->onTargetAngle (phi);
+        currentTask->onTargetDetected (r,phi);
     }
 
     /**

@@ -27,13 +27,14 @@ void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
     }
 }
 
-void AbstractTask::onTargetAngle (float phi) { targetAngle = phi; }
+void AbstractTask::onTargetDetected (float r, float phi) { targetAngle = phi; }
 
 void AbstractTask::onGyroTurn (float dphi)
 {
     if (targetAngle.has_value ())
     {
         fprintf (stderr, "Target angle: %f\n", targetAngle.value ());
+        auto v = getLinearVelocity();
         targetAngle = targetAngle.value () - dphi;
     }
 }
