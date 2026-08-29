@@ -4,8 +4,8 @@
 #include "worldbuilder.h"
 #include <memory>
 
-constexpr float target_angle = 0.45;
-constexpr float target_distance = 1;
+constexpr float target_angle = 0.43;
+constexpr float target_distance = 0.95;
 
 CoordinateContainer loadLIDARdata (const char *filename)
 {
