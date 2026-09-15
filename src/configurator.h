@@ -5,9 +5,11 @@
 #include "task.h"
 #include "worldbuilder.h"
 #include <algorithm>
+#include <box2d/b2_math.h>
 #include <dirent.h>
 #include <memory>
 #include <ncurses.h>
+#include <optional>
 #include <sys/stat.h>
 #include <vector>
 
@@ -38,7 +40,7 @@ class Configurator
      */
     virtual void onTargetDetected (float r, float phi)
     {
-        currentTask->onTargetDetected (r,phi);
+        currentTask->onTargetDetected (r, phi);
     }
 
     /**
@@ -92,11 +94,20 @@ class Configurator
             instVelocity = { 0, 0 };
         }
 
+        void setTarget (float r, float phi) {
+            b2Vec2 t;
+            t.x = r * cos(phi);
+            t.y = r * sin(phi);
+            targetPos = std::optional<b2Vec2>(t);
+        }
+
         Configurator::Simulator::Result
         run (std::shared_ptr<AbstractTask> task,
              const char *plan_file = nullptr);
 
       private:
+        float cameraAngle = M_PI / 2;
+        void checkTarget (std::shared_ptr<AbstractTask> task);
         virtual float
         remainingSimulationTime (std::shared_ptr<AbstractTask> task);
         std::shared_ptr<b2World> world;
@@ -105,6 +116,7 @@ class Configurator
         b2Vec2 instVelocity = { 0, 0 };
         int stepb2d = 0;
         b2Transform start = b2Transform_zero;
+        std::optional<b2Vec2> targetPos;
     };
 
   protected:

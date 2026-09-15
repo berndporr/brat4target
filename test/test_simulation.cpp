@@ -3,8 +3,8 @@
 #include "task.h"
 #include <memory>
 
-constexpr float target_angle = 0.45;
-constexpr float target_distance = 1;
+constexpr float target_angle = 0.44;
+constexpr float target_distance = 0.93;
 
 CoordinateContainer loadLIDARdata (const char *filename)
 {
@@ -34,7 +34,7 @@ void drive_to_target ()
         printf ("Motor event: %f,%f\n", l, r);
     });
     Configurator::Simulator simulator (world);
-    task->onTargetDetected (target_distance,target_angle);
+    simulator.setTarget (target_distance, target_angle);
     simulator.run (task, "/tmp/test_configur_far_target_sim.tsv");
     printf ("\n");
 }
@@ -57,7 +57,7 @@ void avoid_obstacle ()
         printf ("Motor event: %f,%f\n", l, r);
     });
     Configurator::Simulator simulator (world);
-    task->onTargetDetected (target_distance,target_angle);
+    simulator.setTarget (target_distance, target_angle);
     simulator.run (task, "/tmp/test_configur_close_obst_far_target_sim.tsv");
     printf ("\n");
 }
@@ -80,13 +80,12 @@ void avoid_obstacle_drive_to_arget ()
         printf ("Motor event: %f,%f\n", l, r);
     });
     Configurator::Simulator simulator (world);
-    taskAvoid->onTargetDetected (target_distance,target_angle);
+    simulator.setTarget (target_distance, target_angle);
     printf ("->Avoid obstacle:\n");
     simulator.run (taskAvoid,
                    "/tmp/test_configur_close_obst_far_target_sim2avoid.tsv");
     auto taskTarget = std::make_shared<TargetTask> ();
     taskTarget->init (taskAvoid);
-//    taskTarget->onTargetAngle (M_PI / 2);
     printf ("->>> Drive to target:\n");
     simulator.run (taskTarget,
                    "/tmp/test_configur_close_obst_far_target_sim2target.tsv");

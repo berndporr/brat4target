@@ -24,7 +24,8 @@ void test_target_task_close ()
 {
     printf ("Target close test.\n");
     TargetTask task;
-    CoordinateContainer coords = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
+    CoordinateContainer coords
+        = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
     std::shared_ptr<b2World> world
         = worldBuilder.buildWorld (coords, b2Transform_zero);
@@ -44,7 +45,8 @@ void test_avoid_task_close ()
 {
     printf ("Avoid test close.\n");
     AvoidTask task;
-    CoordinateContainer coords = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
+    CoordinateContainer coords
+        = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
     std::shared_ptr<b2World> world
         = worldBuilder.buildWorld (coords, b2Transform_zero);

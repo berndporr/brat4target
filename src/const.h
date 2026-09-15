@@ -59,4 +59,4 @@ constexpr int MIN_LIDAR_AVOID_SAMPLES = 5;
 constexpr int AVOID_TASK_STEERING_GAIN = 2;
 
 // Targeting task
-constexpr float TARGET_STEERING_GAIN = 2;
+constexpr float TARGET_STEERING_GAIN = 5;

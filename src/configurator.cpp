@@ -3,9 +3,33 @@
 #include "worldbuilder.h"
 #include <memory>
 
+void Configurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
+{
+    if (!targetPos->IsValid())
+        return;
+    b2Vec2 robotPos = robot->body ()->GetPosition ();
+    b2Vec2 delta = targetPos.value () - robotPos;
+    float distance = delta.Length ();
+    // Transform world delta vector into robot's local space
+    b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
+
+    // Calculate relative angle (-PI to +PI). 0 is dead ahead.
+    float relativeThreatAngle = b2Atan2 (localDelta.y, localDelta.x);
+    fprintf(stderr,"Relative target angle: %f\n",relativeThreatAngle);
+
+    if (fabs (relativeThreatAngle) > cameraAngle)
+    {
+        fprintf (stderr, "SIM: target out of sight: %f > %f\n", relativeThreatAngle,
+                 cameraAngle);
+        return;
+    }
+    fprintf (stderr, "SIM: Target det at r=%f, phi=%f\n", localDelta.Length(), relativeThreatAngle);
+    task->onTargetDetected (localDelta.Length (), relativeThreatAngle);
+}
+
 Configurator::Simulator::Result
 Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
-                                   const char *plan_file)
+                              const char *plan_file)
 {
     char collisionFile[50]; //debug
     FILE *robotPath = nullptr;
@@ -27,6 +51,7 @@ Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
     {
         task->onLIDARworld (world, robot);
         task->onGyroTurn (task->getangularVelocity () / HZ);
+        checkTarget (task);
         instVelocity.x = task->getLinearSpeed () * cos (theta);
         instVelocity.y = task->getLinearSpeed () * sin (theta);
         robot->body ()->SetLinearVelocity (instVelocity);
