@@ -1,11 +1,12 @@
 #include "configurator.h"
+#include "debug.h"
 #include "task.h"
 #include "worldbuilder.h"
 #include <memory>
 
 void Configurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
 {
-    if (!targetPos->IsValid())
+    if (!targetPos->IsValid ())
         return;
     b2Vec2 robotPos = robot->body ()->GetPosition ();
     b2Vec2 delta = targetPos.value () - robotPos;
@@ -14,17 +15,26 @@ void Configurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
     b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
-    float relativeThreatAngle = b2Atan2 (localDelta.y, localDelta.x);
-    fprintf(stderr,"Relative target angle: %f\n",relativeThreatAngle);
-
-    if (fabs (relativeThreatAngle) > cameraAngle)
+    float relativeTargetAngle = b2Atan2 (localDelta.y, localDelta.x);
+    if (DEBUG)
     {
-        fprintf (stderr, "SIM: target out of sight: %f > %f\n", relativeThreatAngle,
-                 cameraAngle);
+        fprintf (stderr, "Relative target angle: %f\n", relativeTargetAngle);
+    }
+    if (fabs (relativeTargetAngle) > cameraAngle)
+    {
+        if (DEBUG)
+        {
+            fprintf (stderr, "SIM: target out of sight: %f > %f\n",
+                     relativeTargetAngle, cameraAngle);
+        }
         return;
     }
-    fprintf (stderr, "SIM: Target det at r=%f, phi=%f\n", localDelta.Length(), relativeThreatAngle);
-    task->onTargetDetected (localDelta.Length (), relativeThreatAngle);
+    if (DEBUG)
+    {
+        fprintf (stderr, "SIM: Target det at r=%f, phi=%f\n",
+                 localDelta.Length (), relativeTargetAngle);
+    }
+    task->onTargetDetected (localDelta.Length (), relativeTargetAngle);
 }
 
 Configurator::Simulator::Result
