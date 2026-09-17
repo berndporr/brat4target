@@ -1,8 +1,10 @@
 #pragma once
 #include "const.h"
+#include "debug.h"
 #include <algorithm>
 #include <atomic>
 #include <box2d/b2_math.h>
+#include <box2d/b2_world.h>
 #include <box2d/box2d.h>
 #include <cstddef>
 #include <memory>
@@ -376,19 +378,25 @@ class WorldBuilder
                             float halfWindowWidth = HALF_WINDOW_WIDTH,
                             CLUSTERING clustering = PARTITION)
     {
+        nPastWorlds++;
         if (isWorldBuilding)
         {
-            fprintf (stderr, "Still worldbuilding.\n");
+            if (DEBUG)
+            {
+                fprintf (stderr, "Still worldbuilding.\n");
+            }
             return;
         }
         asyncThread = std::thread ([&] () {
             isWorldBuilding = true;
             auto world
                 = buildWorld (coords, start, halfWindowWidth, clustering);
+            calculateSpeed (currentWorld, world, (float)nPastWorlds / HZ);
             if (onWorldReady)
             {
                 onWorldReady (world);
             }
+            nPastWorlds = 0;
             isWorldBuilding = false;
         });
     }
@@ -527,6 +535,17 @@ class WorldBuilder
      * Saves SVG
      */
     void exportWorldToSVG (const char *filename, float scale = 100.0f);
+
+    //////////////////////////////////////////////////////////////////////
+    // speed estimation
+    void calculateSpeed (std::shared_ptr<b2World> worldA,
+                         std::shared_ptr<b2World> worldB, float dt);
+
+  private:
+    std::shared_ptr<b2World> currentWorld;
+    std::atomic<int> nPastWorlds = 0;
+    b2Vec2 linSpeed = b2Vec2 (0.0f, 0.0f);
+    float angSpeed = 0.0f; // In radians
 };
 
 /**
@@ -552,54 +571,4 @@ class FocusedBuilder : public virtual WorldClusterBuilder
     buildWorld (CoordinateContainer &coords, b2Transform start,
                 float halfWindowWidth = HALF_WINDOW_WIDTH,
                 CLUSTERING clustering = CLUSTERING::PARTITION) override;
-};
-
-// calc displacement between two worlds
-class WorldTransform
-{
-  public:
-    struct Result
-    {
-        b2Vec2 linSpeed = b2Vec2 (0.0f, 0.0f);
-        float angSpeed = 0.0f; // In radians
-        bool success = false;
-    };
-
-    Result calculate (b2World *worldA, b2World *worldB, float dt);
-
-    void calculateAsync (b2World *newWorld)
-    {
-        if (currentWorld == nullptr)
-            return;
-        nWorlds++;
-        if (running)
-            return;
-        thr = std::thread ([&] () {
-            running = true;
-            auto r = calculate (currentWorld, newWorld, dt * nWorlds);
-            if (onTransformReady)
-            {
-                onTransformReady (r);
-            }
-            currentWorld = newWorld;
-            nWorlds = 0;
-            running = false;
-        });
-    }
-
-    using OnTransformReady
-        = std::function<void (Result)>;
-
-        void registerOnTransformReady (OnTransformReady otr)
-    {
-        onTransformReady = otr;
-    }
-
-  private:
-    std::thread thr;
-    b2World *currentWorld = nullptr;
-    const float dt = 1.0f/HZ;
-    std::atomic<bool> running = false;
-    std::atomic<int> nWorlds = 0;
-    OnTransformReady onTransformReady;
 };

@@ -1,4 +1,5 @@
 #include "worldbuilder.h"
+#include "debug.h"
 #include <algorithm>
 #include <box2d/box2d.h>
 #include <fstream> // std::ofstream
@@ -9,63 +10,72 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
-WorldTransform::Result WorldTransform::calculate(b2World* worldA, b2World* worldB, float dt) {
+void WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
+                                   std::shared_ptr<b2World> worldB, float dt)
+{
     std::vector<cv::Point2f> pointsA;
     std::vector<cv::Point2f> pointsB;
 
     // 1. Extract coordinates from Box2D to OpenCV point formats
-    for (b2Body* b = worldA->GetBodyList(); b; b = b->GetNext()) {
-        if (b->GetFixtureList()) {
-            pointsA.push_back(cv::Point2f(b->GetPosition().x, b->GetPosition().y));
+    for (b2Body *b = worldA->GetBodyList (); b; b = b->GetNext ())
+    {
+        if (b->GetFixtureList ())
+        {
+            pointsA.push_back (
+                cv::Point2f (b->GetPosition ().x, b->GetPosition ().y));
         }
     }
-    for (b2Body* b = worldB->GetBodyList(); b; b = b->GetNext()) {
-        if (b->GetFixtureList()) {
-            pointsB.push_back(cv::Point2f(b->GetPosition().x, b->GetPosition().y));
+    for (b2Body *b = worldB->GetBodyList (); b; b = b->GetNext ())
+    {
+        if (b->GetFixtureList ())
+        {
+            pointsB.push_back (
+                cv::Point2f (b->GetPosition ().x, b->GetPosition ().y));
         }
     }
-
-    WorldTransform::Result result;
 
     // We need at least 2 points to compute translation + rotation, but more is better for noise
-    if (pointsA.size() < 3 || pointsB.size() < 3) return result;
+    if (pointsA.size () < 3 || pointsB.size () < 3)
+        return;
 
     // Fast-track optimization: Ensure the point sets match in size for the estimator.
-    // In real LIDAR data, if sizes differ due to occlusions, truncate or pad, 
+    // In real LIDAR data, if sizes differ due to occlusions, truncate or pad,
     // or use a Nearest Neighbors matching pass first.
-    size_t minSize = std::min(pointsA.size(), pointsB.size());
-    pointsA.resize(minSize);
-    pointsB.resize(minSize);
+    size_t minSize = std::min (pointsA.size (), pointsB.size ());
+    pointsA.resize (minSize);
+    pointsB.resize (minSize);
 
     // 2. Compute the Rigid 2D Transformation (Translation + Rotation) using native RANSAC
     std::vector<uchar> inliers;
-    cv::Mat affineMatrix = cv::estimateAffinePartial2D(
-        pointsA,            // Source points
-        pointsB,            // Target points
-        inliers,            // Output vector indicating which points were considered "good data"
-        cv::RANSAC,         // Robust estimation method
-        0.3,                // RANSAC inlier threshold (maximum distance allowance for noise)
-        2000,               // Maximum iterations
-        0.99                // Confidence level
+    cv::Mat affineMatrix = cv::estimateAffinePartial2D (
+        pointsA, // Source points
+        pointsB, // Target points
+        inliers, // Output vector indicating which points were considered "good data"
+        cv::RANSAC, // Robust estimation method
+        0.3,  // RANSAC inlier threshold (maximum distance allowance for noise)
+        2000, // Maximum iterations
+        0.99  // Confidence level
     );
 
     // If a valid matrix couldn't be calculated (e.g. noise completely broke consensus)
-    if (affineMatrix.empty()) return result;
+    if (affineMatrix.empty ())
+        return;
 
     // 3. Extract Translation and Rotation from the 2x3 Affine Matrix
     // The matrix structure is:
     // [  cos(theta)   -sin(theta)   tx ]
     // [  sin(theta)    cos(theta)   ty ]
-    double cosTheta = affineMatrix.at<double>(0, 0);
-    double sinTheta = affineMatrix.at<double>(1, 0);
+    double cosTheta = affineMatrix.at<double> (0, 0);
+    double sinTheta = affineMatrix.at<double> (1, 0);
 
-    result.angSpeed = std::atan2(sinTheta, cosTheta) / dt;
-    result.linSpeed.x = static_cast<float>(affineMatrix.at<double>(0, 2)) / dt;
-    result.linSpeed.y = static_cast<float>(affineMatrix.at<double>(1, 2)) / dt;
-    result.success = true;
-    return result;
+    angSpeed = std::atan2 (sinTheta, cosTheta) / dt;
+    linSpeed.x = (float)affineMatrix.at<double> (0, 2) / dt;
+    linSpeed.y = (float)affineMatrix.at<double> (1, 2) / dt;
+    if (DEBUG)
+    {
+        fprintf (stderr, "Lin speed = %f,%f\n", linSpeed.x, linSpeed.y);
+    }
 }
-
 
 float getBodyBoundingBoxArea (b2Body *body)
 {
@@ -469,7 +479,8 @@ WorldBuilder::partition_clusters (std::vector<cv::Point2f> points)
     const float maxDistanceThreshold = 0.05;
     const float distThresSq = maxDistanceThreshold * maxDistanceThreshold;
     const float maxAngleDegrees = 30;
-    const float cornerThreshold = std::cos(maxAngleDegrees * 3.14159265f / 180.0f);
+    const float cornerThreshold
+        = std::cos (maxAngleDegrees * 3.14159265f / 180.0f);
 
     auto dist = [&] (const cv::Point2f &a, const cv::Point2f &b) {
         // 1. Distance Constraint (Standard Proximity check)
