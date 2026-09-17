@@ -58,7 +58,7 @@ typedef std::vector<Pointf> CoordinateContainer;
  * Gets the area of the bounding box of a body. That's useful to determine how
  * big an obstacle is for Braitenberg avoidance.
  */
-float getBodyBoundingBoxArea(b2Body* body);
+float getBodyBoundingBoxArea (b2Body *body);
 
 struct CompareY
 {
@@ -525,8 +525,7 @@ class WorldBuilder
     /**
      * Saves SVG
      */
-     void exportWorldToSVG(const char* filename, float scale = 100.0f);
-
+    void exportWorldToSVG (const char *filename, float scale = 100.0f);
 };
 
 /**
@@ -554,14 +553,11 @@ class FocusedBuilder : public virtual WorldClusterBuilder
                 CLUSTERING clustering = CLUSTERING::PARTITION) override;
 };
 
-
-
-// calc displacement between worlds
-struct WorldTransformResult {
-    b2Vec2 translation = b2Vec2(0.0f, 0.0f);
+// calc displacement between two worlds
+struct WorldTransform
+{
+    void calculate(b2World *worldA, b2World *worldB);
+    b2Vec2 translation = b2Vec2 (0.0f, 0.0f);
     float rotation = 0.0f; // In radians
     bool success = false;
 };
-
-
-WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* worldB);

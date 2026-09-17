@@ -9,7 +9,7 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
-WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* worldB) {
+void WorldTransform::calculate(b2World* worldA, b2World* worldB) {
     std::vector<cv::Point2f> pointsA;
     std::vector<cv::Point2f> pointsB;
 
@@ -25,9 +25,8 @@ WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* w
         }
     }
 
-    WorldTransformResult result;
     // We need at least 2 points to compute translation + rotation, but more is better for noise
-    if (pointsA.size() < 3 || pointsB.size() < 3) return result;
+    if (pointsA.size() < 3 || pointsB.size() < 3) return;
 
     // Fast-track optimization: Ensure the point sets match in size for the estimator.
     // In real LIDAR data, if sizes differ due to occlusions, truncate or pad, 
@@ -49,7 +48,7 @@ WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* w
     );
 
     // If a valid matrix couldn't be calculated (e.g. noise completely broke consensus)
-    if (affineMatrix.empty()) return result;
+    if (affineMatrix.empty()) return;
 
     // 3. Extract Translation and Rotation from the 2x3 Affine Matrix
     // The matrix structure is:
@@ -58,12 +57,10 @@ WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* w
     double cosTheta = affineMatrix.at<double>(0, 0);
     double sinTheta = affineMatrix.at<double>(1, 0);
     
-    result.rotation = std::atan2(sinTheta, cosTheta);
-    result.translation.x = static_cast<float>(affineMatrix.at<double>(0, 2));
-    result.translation.y = static_cast<float>(affineMatrix.at<double>(1, 2));
-    result.success = true;
-
-    return result;
+    rotation = std::atan2(sinTheta, cosTheta);
+    translation.x = static_cast<float>(affineMatrix.at<double>(0, 2));
+    translation.y = static_cast<float>(affineMatrix.at<double>(1, 2));
+    success = true;
 }
 
 
