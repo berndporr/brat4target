@@ -4,6 +4,7 @@
 #include <atomic>
 #include <box2d/b2_math.h>
 #include <box2d/box2d.h>
+#include <cstddef>
 #include <memory>
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp> //useful down the line! (graphTools)
@@ -554,10 +555,51 @@ class FocusedBuilder : public virtual WorldClusterBuilder
 };
 
 // calc displacement between two worlds
-struct WorldTransform
+class WorldTransform
 {
-    void calculate(b2World *worldA, b2World *worldB);
-    b2Vec2 translation = b2Vec2 (0.0f, 0.0f);
-    float rotation = 0.0f; // In radians
-    bool success = false;
+  public:
+    struct Result
+    {
+        b2Vec2 linSpeed = b2Vec2 (0.0f, 0.0f);
+        float angSpeed = 0.0f; // In radians
+        bool success = false;
+    };
+
+    Result calculate (b2World *worldA, b2World *worldB, float dt);
+
+    void calculateAsync (b2World *newWorld)
+    {
+        if (currentWorld == nullptr)
+            return;
+        nWorlds++;
+        if (running)
+            return;
+        thr = std::thread ([&] () {
+            running = true;
+            auto r = calculate (currentWorld, newWorld, dt * nWorlds);
+            if (onTransformReady)
+            {
+                onTransformReady (r);
+            }
+            currentWorld = newWorld;
+            nWorlds = 0;
+            running = false;
+        });
+    }
+
+    using OnTransformReady
+        = std::function<void (Result)>;
+
+        void registerOnTransformReady (OnTransformReady otr)
+    {
+        onTransformReady = otr;
+    }
+
+  private:
+    std::thread thr;
+    b2World *currentWorld = nullptr;
+    const float dt = 1.0f/HZ;
+    std::atomic<bool> running = false;
+    std::atomic<int> nWorlds = 0;
+    OnTransformReady onTransformReady;
 };
