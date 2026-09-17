@@ -5,6 +5,68 @@
 #include <iostream>
 #include <memory>
 
+#include <box2d/box2d.h>
+#include <opencv2/opencv.hpp>
+#include <vector>
+
+WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* worldB) {
+    std::vector<cv::Point2f> pointsA;
+    std::vector<cv::Point2f> pointsB;
+
+    // 1. Extract coordinates from Box2D to OpenCV point formats
+    for (b2Body* b = worldA->GetBodyList(); b; b = b->GetNext()) {
+        if (b->GetFixtureList()) {
+            pointsA.push_back(cv::Point2f(b->GetPosition().x, b->GetPosition().y));
+        }
+    }
+    for (b2Body* b = worldB->GetBodyList(); b; b = b->GetNext()) {
+        if (b->GetFixtureList()) {
+            pointsB.push_back(cv::Point2f(b->GetPosition().x, b->GetPosition().y));
+        }
+    }
+
+    WorldTransformResult result;
+    // We need at least 2 points to compute translation + rotation, but more is better for noise
+    if (pointsA.size() < 3 || pointsB.size() < 3) return result;
+
+    // Fast-track optimization: Ensure the point sets match in size for the estimator.
+    // In real LIDAR data, if sizes differ due to occlusions, truncate or pad, 
+    // or use a Nearest Neighbors matching pass first.
+    size_t minSize = std::min(pointsA.size(), pointsB.size());
+    pointsA.resize(minSize);
+    pointsB.resize(minSize);
+
+    // 2. Compute the Rigid 2D Transformation (Translation + Rotation) using native RANSAC
+    std::vector<uchar> inliers;
+    cv::Mat affineMatrix = cv::estimateAffinePartial2D(
+        pointsA,            // Source points
+        pointsB,            // Target points
+        inliers,            // Output vector indicating which points were considered "good data"
+        cv::RANSAC,         // Robust estimation method
+        0.3,                // RANSAC inlier threshold (maximum distance allowance for noise)
+        2000,               // Maximum iterations
+        0.99                // Confidence level
+    );
+
+    // If a valid matrix couldn't be calculated (e.g. noise completely broke consensus)
+    if (affineMatrix.empty()) return result;
+
+    // 3. Extract Translation and Rotation from the 2x3 Affine Matrix
+    // The matrix structure is:
+    // [  cos(theta)   -sin(theta)   tx ]
+    // [  sin(theta)    cos(theta)   ty ]
+    double cosTheta = affineMatrix.at<double>(0, 0);
+    double sinTheta = affineMatrix.at<double>(1, 0);
+    
+    result.rotation = std::atan2(sinTheta, cosTheta);
+    result.translation.x = static_cast<float>(affineMatrix.at<double>(0, 2));
+    result.translation.y = static_cast<float>(affineMatrix.at<double>(1, 2));
+    result.success = true;
+
+    return result;
+}
+
+
 float getBodyBoundingBoxArea (b2Body *body)
 {
     b2AABB totalAABB;

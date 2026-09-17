@@ -553,3 +553,15 @@ class FocusedBuilder : public virtual WorldClusterBuilder
                 float halfWindowWidth = HALF_WINDOW_WIDTH,
                 CLUSTERING clustering = CLUSTERING::PARTITION) override;
 };
+
+
+
+// calc displacement between worlds
+struct WorldTransformResult {
+    b2Vec2 translation = b2Vec2(0.0f, 0.0f);
+    float rotation = 0.0f; // In radians
+    bool success = false;
+};
+
+
+WorldTransformResult CalculateDisplacementWithOpenCV(b2World* worldA, b2World* worldB);
