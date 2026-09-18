@@ -10,8 +10,9 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
-void WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
-                                   std::shared_ptr<b2World> worldB, float dt)
+WorldBuilder::SpeedResult
+WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
+                              std::shared_ptr<b2World> worldB, float dt)
 {
     std::vector<cv::Point2f> pointsA;
     std::vector<cv::Point2f> pointsB;
@@ -34,9 +35,11 @@ void WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
         }
     }
 
+    SpeedResult result;
+
     // We need at least 2 points to compute translation + rotation, but more is better for noise
     if (pointsA.size () < 3 || pointsB.size () < 3)
-        return;
+        return result;
 
     // Fast-track optimization: Ensure the point sets match in size for the estimator.
     // In real LIDAR data, if sizes differ due to occlusions, truncate or pad,
@@ -59,7 +62,7 @@ void WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
 
     // If a valid matrix couldn't be calculated (e.g. noise completely broke consensus)
     if (affineMatrix.empty ())
-        return;
+        return result;
 
     // 3. Extract Translation and Rotation from the 2x3 Affine Matrix
     // The matrix structure is:
@@ -68,13 +71,16 @@ void WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
     double cosTheta = affineMatrix.at<double> (0, 0);
     double sinTheta = affineMatrix.at<double> (1, 0);
 
-    angSpeed = std::atan2 (sinTheta, cosTheta) / dt;
-    linSpeed.x = linearSpeedXfilter.process((float)affineMatrix.at<double> (0, 2) / dt);
-    linSpeed.y = linearSpeedYfilter.process((float)affineMatrix.at<double> (1, 2) / dt);
+    result.angSpeed = std::atan2 (sinTheta, cosTheta) / dt;
+    result.linSpeed.x = linearSpeedXfilter.process (
+        (float)affineMatrix.at<double> (0, 2) / dt);
+    result.linSpeed.y = linearSpeedYfilter.process (
+        (float)affineMatrix.at<double> (1, 2) / dt);
     if (DEBUG)
     {
-        fprintf (stderr, "Lin speed = %f,%f\n", linSpeed.x, linSpeed.y);
+        fprintf (stderr, "Lin speed = %f,%f\n", result.linSpeed.x, result.linSpeed.y);
     }
+    return result;
 }
 
 float getBodyBoundingBoxArea (b2Body *body)

@@ -32,7 +32,9 @@ template <size_t WindowSize> class SpeedMedianFilter
         if (window.size () > WindowSize)
         {
             window.pop_front ();
-        } else {
+        }
+        else
+        {
             return 0;
         }
         std::deque<float> copy = window;
@@ -374,7 +376,14 @@ class WorldBuilder
   public:
     WorldBuilder () = default;
 
-    using OnWorldReady = std::function<void (std::shared_ptr<b2World>)>;
+    struct SpeedResult
+    {
+        b2Vec2 linSpeed = b2Vec2 (0.0f, 0.0f);
+        float angSpeed = 0.0f; // In radians
+    };
+
+    using OnWorldReady
+        = std::function<void (std::shared_ptr<b2World>, SpeedResult)>;
 
   protected:
     float simulationStep = BOX2DRANGE;
@@ -416,10 +425,10 @@ class WorldBuilder
             isWorldBuilding = true;
             auto world
                 = buildWorld (coords, start, halfWindowWidth, clustering);
-            calculateSpeed (currentWorld, world, (float)nPastWorlds / HZ);
+            SpeedResult r = calculateSpeed (currentWorld, world, (float)nPastWorlds / HZ);
             if (onWorldReady)
             {
-                onWorldReady (world);
+                onWorldReady (world,r);
             }
             nPastWorlds = 0;
             isWorldBuilding = false;
@@ -563,14 +572,12 @@ class WorldBuilder
 
     //////////////////////////////////////////////////////////////////////
     // speed estimation
-    void calculateSpeed (std::shared_ptr<b2World> worldA,
-                         std::shared_ptr<b2World> worldB, float dt);
+    SpeedResult calculateSpeed (std::shared_ptr<b2World> worldA,
+                                std::shared_ptr<b2World> worldB, float dt);
 
   private:
     std::shared_ptr<b2World> currentWorld;
     std::atomic<int> nPastWorlds = 0;
-    b2Vec2 linSpeed = b2Vec2 (0.0f, 0.0f);
-    float angSpeed = 0.0f; // In radians
 };
 
 /**
