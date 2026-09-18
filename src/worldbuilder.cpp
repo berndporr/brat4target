@@ -69,8 +69,8 @@ void WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
     double sinTheta = affineMatrix.at<double> (1, 0);
 
     angSpeed = std::atan2 (sinTheta, cosTheta) / dt;
-    linSpeed.x = (float)affineMatrix.at<double> (0, 2) / dt;
-    linSpeed.y = (float)affineMatrix.at<double> (1, 2) / dt;
+    linSpeed.x = linearSpeedXfilter.process((float)affineMatrix.at<double> (0, 2) / dt);
+    linSpeed.y = linearSpeedYfilter.process((float)affineMatrix.at<double> (1, 2) / dt);
     if (DEBUG)
     {
         fprintf (stderr, "Lin speed = %f,%f\n", linSpeed.x, linSpeed.y);

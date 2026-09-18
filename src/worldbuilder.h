@@ -7,6 +7,7 @@
 #include <box2d/b2_world.h>
 #include <box2d/box2d.h>
 #include <cstddef>
+#include <deque>
 #include <memory>
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp> //useful down the line! (graphTools)
@@ -18,6 +19,28 @@
 // Anything here is about creating an effective representation of the world
 // for box2d so that the mental simulations can run with minimal effort.
 //
+
+template <size_t WindowSize> class SpeedMedianFilter
+{
+  private:
+    std::deque<float> window;
+
+  public:
+    float process (float val)
+    {
+        window.push_back (val);
+        if (window.size () > WindowSize)
+        {
+            window.pop_front ();
+        } else {
+            return 0;
+        }
+        std::deque<float> copy = window;
+        auto median_it = copy.begin () + (copy.size () / 2);
+        std::nth_element (copy.begin (), median_it, copy.end ());
+        return *median_it;
+    }
+};
 
 /**
  * @brief Wrapper around cv::Point2f for customisation purposes
@@ -362,6 +385,8 @@ class WorldBuilder
     std::thread asyncThread;
     std::atomic<bool> isWorldBuilding;
     OnWorldReady onWorldReady;
+    SpeedMedianFilter<3> linearSpeedXfilter;
+    SpeedMedianFilter<3> linearSpeedYfilter;
 
   public:
     void registerWorldReadyCallback (OnWorldReady cb) { onWorldReady = cb; }
