@@ -3,3 +3,4 @@ This is subdirectory performs the target detection and localisaton.
 It has a debugging QT application to see if the target detection works.
 It provides a callback to bratmobile with its coordinates.
 
+QR code needs to be 8cm x 8cm

@@ -64,9 +64,10 @@ class TargetLoc
     static constexpr float fieldOfView = 62.2 / 180.0 * M_PI;
 
     /**
-     * factor mapping from QR code size to distance.
+     * Factor mapping from QR code size to distance.
+     * QR code height must be 8cm.
      */
-     static constexpr float QRcodeYsize2distance = 1;
+     static constexpr float QRcodeYsize2distance = 0.108;
 
   private:
     // current camera image
