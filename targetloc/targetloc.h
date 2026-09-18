@@ -21,12 +21,12 @@ class TargetLoc
     void registerDetectionEvent (DetectionEvent de) { detectionEvent = de; }
 
     /**
-     * Starts the cameras and the lidar.
+     * Starts the camera
      */
     void start ();
 
     /**
-     * Stops the cameras and the lidar.
+     * Stops the camera
      */
     void stop ();
 
@@ -62,6 +62,11 @@ class TargetLoc
      * Camera field of view
      */
     static constexpr float fieldOfView = 62.2 / 180.0 * M_PI;
+
+    /**
+     * factor mapping from QR code size to distance.
+     */
+     static constexpr float QRcodeYsize2distance = 1;
 
   private:
     // current camera image

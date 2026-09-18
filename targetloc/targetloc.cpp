@@ -46,25 +46,25 @@ void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
     // of maxContourPixelErrorBetweenDetectionContours.
     contoursRingbuffer.push_front (contour);
     if (contoursRingbuffer.size () < 3)
-        {
-            return;
-        }
+    {
+        return;
+    }
     contoursRingbuffer.pop_back ();
     for (int i = 1; i < 3; i++)
+    {
+        std::vector<cv::Point2f> contour1 = contoursRingbuffer[i - 1];
+        std::vector<cv::Point2f> contour2 = contoursRingbuffer[i];
+        for (unsigned long int j = 0;
+             (j < contour1.size ()) && (j < contour2.size ()); j++)
         {
-            std::vector<cv::Point2f> contour1 = contoursRingbuffer[i - 1];
-            std::vector<cv::Point2f> contour2 = contoursRingbuffer[i];
-            for (unsigned long int j = 0;
-                 (j < contour1.size ()) && (j < contour2.size ()); j++)
-                {
-                    if (point2point (contour1[j], contour2[j])
-                        > maxContourPixelErrorBetweenDetectionContours)
-                        {
-                            fprintf (stderr, "Contour discarded.\n");
-                            return;
-                        }
-                }
+            if (point2point (contour1[j], contour2[j])
+                > maxContourPixelErrorBetweenDetectionContours)
+            {
+                fprintf (stderr, "Contour discarded.\n");
+                return;
+            }
         }
+    }
 
     int i = 0;
     float avgX = 0;
@@ -73,46 +73,34 @@ void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
     float minY = 1;
     float maxY = 0;
     for (auto &c : contour)
-        {
-            const float x = c.x / settings.width;
-            const float y = c.x / settings.height;
-            avgX = avgX + x;
-            i++;
-            if (x > maxX)
-                maxX = x;
-            if (x < minX)
-                minX = x;
-            if (y > maxY)
-                maxY = y;
-            if (y < minY)
-                minY = y;
-        }
+    {
+        const float x = c.x / settings.width;
+        const float y = c.x / settings.height;
+        avgX = avgX + x;
+        i++;
+        if (x > maxX)
+            maxX = x;
+        if (x < minX)
+            minX = x;
+        if (y > maxY)
+            maxY = y;
+        if (y < minY)
+            minY = y;
+    }
     avgX = (avgX / (float)i) - 0.5;
     //const float phi = avgX * fieldOfView;
-    const float phi = -atan(avgX * 2 * tan(fieldOfView/2));
+    const float phi = -atan (avgX * 2 * tan (fieldOfView / 2));
     float r = 1E38;
-    const float dx = maxX - minX;
-    const float dy = maxY - minY;
-    if (dx > dy)
-        {
-            if (maxX != minX)
-                {
-                    r = 1 / (maxX - minX);
-                }
-        }
-    else
-        {
-            if (maxY != minY)
-                {
-                    r = 1 / (maxY - minY);
-                }
-        }
+    if (maxY != minY)
+    {
+        r = QRcodeYsize2distance / (maxY - minY);
+    }
     // printf ("avgX = %f, phi=%f, minX=%f, maxX=%f, minY=%f, maxY=%f, r = %f\n",
     //        avgX, phi, minX, maxX, minY, maxY, r);
 
     // callback!
     if (detectionEvent)
-        {
-            detectionEvent (r, phi);
-        }
+    {
+        detectionEvent (r, phi);
+    }
 }
