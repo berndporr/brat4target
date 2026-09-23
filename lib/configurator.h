@@ -30,7 +30,7 @@ class Configurator
     /**
      * Needs to react to the LIDAR world
      */
-    virtual void onLIDARworld (std::shared_ptr<b2World> world)
+    virtual void onLIDARworld (std::shared_ptr<b2World> world, WorldBuilder::SpeedResult sr)
     {
         currentTask->onLIDARworld (world, std::make_shared<Robot> (world));
     }
