@@ -14,6 +14,16 @@ find_package(OpenCV REQUIRED)
 
 find_package(box2d REQUIRED)
 
+pkg_check_modules(TURBOJPEG REQUIRED libturbojpeg)
+pkg_check_modules(LIBCAMERA REQUIRED IMPORTED_TARGET libcamera)
+
+include_directories(
+        ${CMAKE_SOURCE_DIR}
+        ${TURBOJPEG_INCLUDE_DIRS}
+        ${LIBCAMERA_INCLUDE_DIRS}
+        ${OPENCV_INCLUDE_DIRS}
+)
+
 add_library(brat ${SRC} ${HEAD})
 
 target_link_libraries(brat box2d ${OpenCV_LIBS} pthread)

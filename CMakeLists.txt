@@ -13,11 +13,8 @@ find_package(PkgConfig)
 find_package(OpenCV REQUIRED)
 find_package(box2d REQUIRED)
 
-add_subdirectory(src "${CMAKE_CURRENT_BINARY_DIR}/src")
+add_subdirectory(lib)
 add_subdirectory(test)
-add_subdirectory(targetloc)
-
-option(BUILD_FASTDDS "Building FastDDS directory" 0)
 
 include(GNUInstallDirs)
 
@@ -33,10 +30,6 @@ if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64") # for Raspberry Pi
 else()
 #  add_subdirectory(test/unit_test "${CMAKE_CURRENT_BINARY_DIR}/test/unit_test")
 #  add_subdirectory(test "${CMAKE_CURRENT_BINARY_DIR}/test")
-endif()
-
-if(BUILD_FASTDDS)
-  add_subdirectory(fastdds "${CMAKE_CURRENT_BINARY_DIR}/fastdds")
 endif()
 
 add_compile_options(-Wall -pedantic)

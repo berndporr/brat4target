@@ -8,7 +8,7 @@ project(Tests LANGUAGES CXX)
 include(GNUInstallDirs)
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(.. ../src)
+include_directories(.. ../lib)
 
 add_executable(test_worldbuilder test_worldbuilder.cpp)
 target_link_libraries(test_worldbuilder brat)
