@@ -73,11 +73,11 @@ class AbstractTask
         emitTwoWheeledEvent ();
     }
 
-   /**
-   * Task needs to react to the LIDAR world.
-   * This has already a working functionality where it detects close objects
-   * which would lead to an imminent crash or might be the target itself.
-   */
+    /**
+     * Task needs to react to the LIDAR world.
+     * This has already a working functionality where it detects close objects
+     * which would lead to an imminent crash or might be the target itself.
+     */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot);
 

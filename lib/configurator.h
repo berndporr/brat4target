@@ -19,7 +19,7 @@
 struct State
 {
     std::vector<std::shared_ptr<State> > children;
-    std::shared_ptr<AbstractTask> task;
+    std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
 };
 
 class Configurator
@@ -30,9 +30,11 @@ class Configurator
     /**
      * Needs to react to the LIDAR world
      */
-    virtual void onLIDARworld (std::shared_ptr<b2World> world, WorldBuilder::SpeedResult sr)
+    virtual void onLIDARworld (std::shared_ptr<b2World> world,
+                               WorldBuilder::SpeedResult sr)
     {
-        currentTask->onLIDARworld (world, std::make_shared<Robot> (world));
+        currentState->task->onLIDARworld (world,
+                                          std::make_shared<Robot> (world));
     }
 
     /**
@@ -40,28 +42,41 @@ class Configurator
      */
     virtual void onTargetDetected (float r, float phi)
     {
-        currentTask->onTargetDetected (r, phi);
+        // We have no plan. Let's create one.
+        if (nullptr == plan)
+        {
+            plan = std::make_shared<State>();
+            plan->task = std::make_shared<TargetTask> ();
+            setCurrentTask (plan->task);
+        }
+        currentState->task->onTargetDetected (r, phi);
     }
 
     /**
      * Task needs to take into account the new gyro readings
      */
-    virtual void onGyroTurn (float dphi) { currentTask->onGyroTurn (dphi); }
+    virtual void onGyroTurn (float dphi)
+    {
+        currentState->task->onGyroTurn (dphi);
+    }
 
     /**
      * @brief changes tasks executing on the robot
      */
     virtual void setCurrentTask (std::shared_ptr<AbstractTask> task)
     {
-        currentTask = task;
-        currentTask->registerTerminated (
+        currentState->task = task;
+        currentState->task->registerTerminated (
             [&] (AbstractTask::TerminationMessage tm) {
                 onTaskTerminated (tm);
             });
-        currentTask->registerMotorEvent (motorEvent);
+        currentState->task->registerMotorEvent (motorEvent);
     }
 
-    std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
+    std::shared_ptr<AbstractTask> getCurrentTask ()
+    {
+        return currentState->task;
+    }
 
     /**
      * Registers the motor event callback which sets the wheel speeds of the
@@ -94,11 +109,12 @@ class Configurator
             instVelocity = { 0, 0 };
         }
 
-        void setTarget (float r, float phi) {
+        void setTarget (float r, float phi)
+        {
             b2Vec2 t;
-            t.x = r * cos(phi);
-            t.y = r * sin(phi);
-            targetPos = std::optional<b2Vec2>(t);
+            t.x = r * cos (phi);
+            t.y = r * sin (phi);
+            targetPos = std::optional<b2Vec2> (t);
         }
 
         Configurator::Simulator::Result
@@ -122,12 +138,16 @@ class Configurator
   protected:
     virtual void onTaskTerminated (AbstractTask::TerminationMessage tm)
     {
+        // fixme
         setCurrentTask (std::make_shared<StopTask> ());
     }
 
     AbstractTask::MotorEvent motorEvent;
-    std::shared_ptr<AbstractTask> currentTask = std::make_shared<StopTask> ();
     std::shared_ptr<Logger> logger;
     float simulationStep = 2 * std::max (ROBOT_HALFLENGTH, ROBOT_HALFWIDTH);
     std::chrono::high_resolution_clock::time_point previousTimeScan;
+    // the root
+    std::shared_ptr<State> plan;
+    // the current position in the tree
+    std::shared_ptr<State> currentState;
 };

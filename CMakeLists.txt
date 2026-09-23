@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.25.0)
 
-project(brat LANGUAGES CXX)
+project(brat4 LANGUAGES CXX)
 
-include(CTest)
 set (CMAKE_CXX_STANDARD 17)
-set (CMAKE_BUILD_TYPE Debug)
+
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_BUILD_TYPE "RelWithDebInfo")
+endif()
 
 set (CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
@@ -17,6 +19,10 @@ add_subdirectory(lib)
 add_subdirectory(test)
 
 include(GNUInstallDirs)
+
+add_compile_options(-Wall -pedantic)
+
+enable_testing()
 
 pkg_check_modules(TURBOJPEG REQUIRED libturbojpeg)
 pkg_check_modules(LIBCAMERA REQUIRED IMPORTED_TARGET libcamera)
@@ -31,7 +37,3 @@ else()
 #  add_subdirectory(test/unit_test "${CMAKE_CURRENT_BINARY_DIR}/test/unit_test")
 #  add_subdirectory(test "${CMAKE_CURRENT_BINARY_DIR}/test")
 endif()
-
-add_compile_options(-Wall -pedantic)
-
-# enable_testing()
