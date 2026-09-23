@@ -8,7 +8,6 @@
 #include <box2d/b2_math.h>
 #include <dirent.h>
 #include <memory>
-#include <ncurses.h>
 #include <optional>
 #include <sys/stat.h>
 #include <vector>
@@ -46,6 +45,7 @@ class Configurator
         if (nullptr == plan)
         {
             plan = std::make_shared<State>();
+            currentState = plan;
             plan->task = std::make_shared<TargetTask> ();
             setCurrentTask (plan->task);
         }

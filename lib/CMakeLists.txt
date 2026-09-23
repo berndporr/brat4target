@@ -11,9 +11,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 
 find_package(OpenCV REQUIRED)
-
 find_package(box2d REQUIRED)
-
 pkg_check_modules(TURBOJPEG REQUIRED libturbojpeg)
 pkg_check_modules(LIBCAMERA REQUIRED IMPORTED_TARGET libcamera)
 
@@ -27,6 +25,9 @@ include_directories(
 add_library(brat ${SRC} ${HEAD})
 
 target_link_libraries(brat box2d ${OpenCV_LIBS} pthread)
+target_link_libraries(brat PkgConfig::LIBCAMERA)
+target_link_libraries(brat cam2opencv)
+target_link_libraries(brat ${TURBOJPEG_LINK_LIBRARIES})
 
 message("box2d installed ${BOX2D_LIBS}")
 

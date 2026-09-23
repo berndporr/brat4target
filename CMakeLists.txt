@@ -20,6 +20,13 @@ add_subdirectory(test)
 
 include(GNUInstallDirs)
 
+include_directories(
+        ${CMAKE_SOURCE_DIR}
+        ${TURBOJPEG_INCLUDE_DIRS}
+        ${LIBCAMERA_INCLUDE_DIRS}
+        ${OPENCV_INCLUDE_DIRS}
+)
+
 add_compile_options(-Wall -pedantic)
 
 enable_testing()
@@ -29,11 +36,6 @@ pkg_check_modules(LIBCAMERA REQUIRED IMPORTED_TARGET libcamera)
 
 if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64") # for Raspberry Pi
   message("detected architecture aarch64, building executables")
-
-  # add_executable(reactive custom_robot.h reactive.cpp)
-  # target_link_libraries(reactive ${OpenCV_LIBS} box2d zetabot c1lidarrpi brat gpiod)
-  # add_subdirectory(test)
-else()
-#  add_subdirectory(test/unit_test "${CMAKE_CURRENT_BINARY_DIR}/test/unit_test")
-#  add_subdirectory(test "${CMAKE_CURRENT_BINARY_DIR}/test")
+  add_executable(reactive reactive.cpp)
+  target_link_libraries(reactive ${OpenCV_LIBS} box2d zetabot c1lidarrpi brat gpiod PkgConfig::LIBCAMERA)
 endif()

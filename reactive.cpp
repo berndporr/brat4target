@@ -1,37 +1,56 @@
 #include "c1lidarrpi.h"
 #include "lib/configurator.h"
 #include "lib/const.h"
+#include "lib/debug.h"
 #include "lib/targetloc.h"
 #include "lib/worldbuilder.h"
 #include "zetabot.h"
 #include <iostream>
 
-int main (int, char **)
+int main (int nargs, char **argv)
 {
-    printf ("->>> Avoid obstacle & drive to target:\n");
+    printf ("->>> Reactive.\n");
+
+    if (nargs < 2)
+    {
+        fprintf (stderr, "%s 0=no motor ctrl, 1=motor ctrl\n", argv[0]);
+        return 1;
+    }
+    bool motorOutput = atoi (argv[1]) > 0;
 
     C1Lidar lidar;
     TargetLoc targetLoc;
     Configurator configurator;
     ZetaBot zetabot;
 
+    long int nWorld = 0;
+
     configurator.registerMotorEvent ([&] (float l, float r) {
-       zetabot.setLeftWheelSpeed (l);
-       zetabot.setRightWheelSpeed (r); 
+        if (motorOutput)
+        {
+            zetabot.setLeftWheelSpeed (l);
+            zetabot.setRightWheelSpeed (r);
+        }
+        if (DEBUG)
+            fprintf (stderr, "Motor out: %f,%f\n", l, r);
     });
 
     targetLoc.registerDetectionEvent ([&] (const float r, const float phi) {
+        if (DEBUG)
+            fprintf (stderr, "Detection: %f,%f\n", r, phi);
         configurator.onTargetDetected (r, phi);
     });
 
     WorldClusterBuilder worldBuilder;
     worldBuilder.registerWorldReadyCallback (
         [&] (std::shared_ptr<b2World> world, WorldBuilder::SpeedResult sr) {
-            configurator.onLIDARworld (world);
-            worldBuilder.exportWorldToSVG (
-                "/tmp/test_configur_close_obst_far_target_bodies2.svg");
-            worldBuilder.bodies_dump (
-                "/tmp/test_configur_close_obst_far_target_bodies2.tsv");
+            configurator.onLIDARworld (world, sr);
+            char tmp[256];
+            sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
+            worldBuilder.exportWorldToSVG (tmp);
+            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
+            worldBuilder.bodies_dump (tmp);
+            nWorld++;
         });
 
     lidar.registerCallbackFunction (
@@ -65,19 +84,22 @@ int main (int, char **)
     {
         std::cerr << "ERROR: " << msg << std::endl;
         lidar.stop (); // Make sure motor and scan stop
-        zetabot.stop();
+        zetabot.stop ();
         return 1;
     }
 
     targetLoc.start ();
 
-    printf ("->>> Drive to target:\n");
-    printf ("\n");
+    printf ("Up and running.\n");
 
     // waiting for a keypress
     getchar ();
 
-    std::cerr << "\nStopped cleanly." << std::endl;
-    lidar.stop (); // Stop the scanning and motor
+    printf ("Stopping.\n");
+
+    zetabot.stop();
+    targetLoc.stop();
+    lidar.stop ();
+    
     return 0;
 }
