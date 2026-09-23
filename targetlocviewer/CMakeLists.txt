@@ -40,7 +40,7 @@ include_directories(
 	${TURBOJPEG_INCLUDE_DIRS}
 	${LIBCAMERA_INCLUDE_DIRS}
 	${OPENCV_INCLUDE_DIRS}
-	..
+	../lib
 )
 
 set(CMAKE_AUTOMOC ON)
@@ -52,8 +52,8 @@ include(GNUInstallDirs)
 add_executable(targetlocviewer
   window.cpp
   main.cpp
-  ../targetloc.cpp
-  ../targetdet.cpp
+  ../lib/targetdet.cpp
+  ../lib/targetloc.cpp
 )
 
 target_link_libraries(targetlocviewer Qt6::Widgets QCustomPlotQt6)
@@ -61,3 +61,4 @@ target_link_libraries(targetlocviewer PkgConfig::LIBCAMERA)
 target_link_libraries(targetlocviewer ${OpenCV_LIBS})
 target_link_libraries(targetlocviewer cam2opencv)
 target_link_libraries(targetlocviewer ${TURBOJPEG_LINK_LIBRARIES})
+
