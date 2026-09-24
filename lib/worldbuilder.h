@@ -415,25 +415,36 @@ class WorldBuilder
         nPastWorlds++;
         if (isWorldBuilding)
         {
-            if (DEBUG)
-            {
-                fprintf (stderr, "Still worldbuilding.\n");
-            }
+            fprintf (stderr, "Still worldbuilding.\n");
             return;
         }
+        if (asyncThread.joinable ())
+        {
+            asyncThread.join ();
+        }
+        isWorldBuilding = true;
         asyncThread = std::thread ([&] () {
-            isWorldBuilding = true;
             auto world
                 = buildWorld (coords, start, halfWindowWidth, clustering);
-            SpeedResult r = calculateSpeed (currentWorld, world, (float)nPastWorlds / HZ);
+            SpeedResult r = calculateSpeed (currentWorld, world,
+                                            (float)nPastWorlds / HZ);
             if (onWorldReady)
             {
-                onWorldReady (world,r);
+                onWorldReady (world, r);
             }
             nPastWorlds = 0;
+            currentWorld = world;
             isWorldBuilding = false;
         });
     }
+
+    void wait4Async ()
+    {
+        if (asyncThread.joinable ())
+            asyncThread.join ();
+    }
+
+    void stop () { wait4Async (); }
 
     struct CompareCluster
     {
@@ -563,12 +574,24 @@ class WorldBuilder
     /**
      * Saves the bodies in the box2D world. Dataformat: x,y,area.
      */
-    void bodies_dump (const char *filename);
+    void bodies_dump (const char *filename) { bodies_dump (world, filename); }
+
+    /**
+     * Saves the bodies in the box2D world. Dataformat: x,y,area.
+     */
+    static void bodies_dump (std::shared_ptr<b2World> world,
+                             const char *filename);
 
     /**
      * Saves SVG
      */
-    void exportWorldToSVG (const char *filename, float scale = 100.0f);
+    void exportWorldToSVG (const char *filename, float scale = 100.0f)
+    {
+        exportWorldToSVG (world, filename, scale);
+    }
+
+    static void exportWorldToSVG (std::shared_ptr<b2World> world,
+                                  const char *filename, float scale = 100.0f);
 
     //////////////////////////////////////////////////////////////////////
     // speed estimation

@@ -14,6 +14,11 @@ WorldBuilder::SpeedResult
 WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
                               std::shared_ptr<b2World> worldB, float dt)
 {
+    SpeedResult result;
+
+    if (!worldA) return result;
+    if (!worldB) return result;
+
     std::vector<cv::Point2f> pointsA;
     std::vector<cv::Point2f> pointsB;
 
@@ -34,8 +39,6 @@ WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
                 cv::Point2f (b->GetPosition ().x, b->GetPosition ().y));
         }
     }
-
-    SpeedResult result;
 
     // We need at least 2 points to compute translation + rotation, but more is better for noise
     if (pointsA.size () < 3 || pointsB.size () < 3)
@@ -316,7 +319,7 @@ void WorldBuilder::object_dump (const char *filename)
     fclose (f);
 }
 
-void WorldBuilder::bodies_dump (const char *filename)
+void WorldBuilder::bodies_dump (std::shared_ptr<b2World> world, const char *filename)
 {
     FILE *file = fopen (filename, "wt");
     for (b2Body *b = world->GetBodyList (); b != NULL; b = b->GetNext ())
@@ -328,7 +331,7 @@ void WorldBuilder::bodies_dump (const char *filename)
     fclose (file);
 }
 
-void WorldBuilder::exportWorldToSVG (const char *filename, float scale)
+void WorldBuilder::exportWorldToSVG (std::shared_ptr<b2World> world, const char *filename, float scale)
 {
     std::ofstream svg (filename, std::ios::out | std::ios::trunc);
     if (!svg.is_open ())
