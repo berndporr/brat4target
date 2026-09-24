@@ -100,6 +100,7 @@ int main (int nargs, char **argv)
     zetabot.stop();
     targetLoc.stop();
     lidar.stop ();
+    worldBuilder.stop();
     
     return 0;
 }
