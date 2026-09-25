@@ -8,7 +8,7 @@ file(GLOB HEAD "*.h")
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
+add_compile_options(-Wall -pedantic)
 
 find_package(OpenCV REQUIRED)
 find_package(box2d REQUIRED)
@@ -43,6 +43,3 @@ install(TARGETS brat
 
 message("library and archive destination " ${CMAKE_INSTALL_LIBDIR})
 
-set(CMAKE_BUILD_TYPE Debug)
-
-add_compile_options(-Wall -pedantic)

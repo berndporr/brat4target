@@ -16,8 +16,10 @@ WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
 {
     SpeedResult result;
 
-    if (!worldA) return result;
-    if (!worldB) return result;
+    if (!worldA)
+        return result;
+    if (!worldB)
+        return result;
 
     std::vector<cv::Point2f> pointsA;
     std::vector<cv::Point2f> pointsB;
@@ -81,7 +83,8 @@ WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
         (float)affineMatrix.at<double> (1, 2) / dt);
     if (DEBUG)
     {
-        fprintf (stderr, "Lin speed = %f,%f\n", result.linSpeed.x, result.linSpeed.y);
+        fprintf (stderr, "Lin speed = %f,%f\n", result.linSpeed.x,
+                 result.linSpeed.y);
     }
     return result;
 }
@@ -112,7 +115,6 @@ float getBodyBoundingBoxArea (b2Body *body)
     // Fallback if the body has no fixtures (uses the body center position)
     if (!hasFixtures)
     {
-        b2Vec2 pos = body->GetPosition ();
         return 0;
     }
 
@@ -176,19 +178,11 @@ Bundle Bundle::operator- (const Bundle &b) const
 bool BodyFeatures::match (const BodyFeatures &bf, Bundle *bundle,
                           b2Transform t) const
 {
-    float hypothenuse_square
-        = pow (bf.pose.p.Length (), 2); //assumes robot-centric perspective
-    float adj_side_square = pow (bf.pose.p.Length () * t.q.c, 2);
-    float distance_adjust = sqrt (hypothenuse_square - adj_side_square);
     float diff_x = pose.p.x - bf.pose.p.x; //-t.q.s*distance_adjust
     float diff_y = pose.p.y - bf.pose.p.y; //+t.q.c*distance_adjust
     //InvMul float diff_transform=bf.pose.p.Length()- pose.p.Length();
     float diff_w = halfWidth - bf.halfWidth;
     float diff_l = halfLength - bf.halfLength;
-    bool match_x
-        = fabs (diff_x) < D_POSE_MARGIN + fabs (t.q.s * distance_adjust);
-    bool match_y
-        = fabs (diff_y) < D_POSE_MARGIN + fabs (t.q.c * distance_adjust);
     bool match_distance
         = pose.p.Length () - bf.pose.p.Length () < D_POSE_MARGIN;
     bool match_w = fabs (diff_w) < D_DIMENSIONS_MARGIN;
@@ -228,8 +222,8 @@ std::vector<cv::Point2f> BodyFeatures::vertices_cv () const
 
 bool Pointf::isin (Pointf tl, Pointf br)
 {
-    bool result
-        = this->x > tl.x & this->x<br.x &this->y> br.y & this->y < tl.y;
+    bool result = (this->x > tl.x) && (this->x < br.x) && (this->y > br.y)
+                  && (this->y < tl.y);
     return result;
 }
 
@@ -319,7 +313,8 @@ void WorldBuilder::object_dump (const char *filename)
     fclose (f);
 }
 
-void WorldBuilder::bodies_dump (std::shared_ptr<b2World> world, const char *filename)
+void WorldBuilder::bodies_dump (std::shared_ptr<b2World> world,
+                                const char *filename)
 {
     FILE *file = fopen (filename, "wt");
     for (b2Body *b = world->GetBodyList (); b != NULL; b = b->GetNext ())
@@ -331,7 +326,8 @@ void WorldBuilder::bodies_dump (std::shared_ptr<b2World> world, const char *file
     fclose (file);
 }
 
-void WorldBuilder::exportWorldToSVG (std::shared_ptr<b2World> world, const char *filename, float scale)
+void WorldBuilder::exportWorldToSVG (std::shared_ptr<b2World> world,
+                                     const char *filename, float scale)
 {
     std::ofstream svg (filename, std::ios::out | std::ios::trunc);
     if (!svg.is_open ())
@@ -535,7 +531,7 @@ WorldBuilder::partition_clusters (std::vector<cv::Point2f> points)
     cv::partition (points, labels, dist);
     int n_clusters = *(std::max_element (labels.begin (), labels.end ())) + 1;
     std::vector<std::vector<cv::Point2f> > result (n_clusters);
-    for (int i = 0; i < points.size (); i++)
+    for (int i = 0; i < (int)(points.size ()); i++)
     { //bestlabel[i] gives the index
         int label = labels[i];
         result[label].push_back (points[i]);
@@ -577,7 +573,7 @@ WorldBuilder::cluster_data (const CoordinateContainer &pts,
     {
         clusters = partition_clusters (points);
     }
-    for (int c = 0; c < clusters.size (); c++)
+    for (int c = 0; c < (int)(clusters.size ()); c++)
     {
         if (std::pair<bool, BodyFeatures> feature
             = bounding_rotated_box (clusters[c]);
@@ -763,6 +759,5 @@ FocusedBuilder::buildWorld (CoordinateContainer coords, b2Transform start,
             makeBody (f);
         }
     }
-    int _count = world->GetBodyCount ();
     return world;
 }

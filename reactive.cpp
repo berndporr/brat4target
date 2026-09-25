@@ -1,7 +1,6 @@
 #include "c1lidarrpi.h"
 #include "lib/configurator.h"
 #include "lib/const.h"
-#include "lib/debug.h"
 #include "lib/targetloc.h"
 #include "lib/worldbuilder.h"
 #include "zetabot.h"
@@ -31,13 +30,11 @@ int main (int nargs, char **argv)
             zetabot.setLeftWheelSpeed (l);
             zetabot.setRightWheelSpeed (r);
         }
-        if (DEBUG)
-            fprintf (stderr, "Motor out: %f,%f\n", l, r);
+        fprintf (stderr, "Motor out: %f,%f\n", l, r);
     });
 
     targetLoc.registerDetectionEvent ([&] (const float r, const float phi) {
-        if (DEBUG)
-            fprintf (stderr, "Detection: %f,%f\n", r, phi);
+        fprintf (stderr, "Detection: %f,%f\n", r, phi);
         configurator.onTargetDetected (r, phi);
     });
 
@@ -97,10 +94,10 @@ int main (int nargs, char **argv)
 
     printf ("Stopping.\n");
 
-    zetabot.stop();
-    targetLoc.stop();
+    zetabot.stop ();
+    targetLoc.stop ();
     lidar.stop ();
-    worldBuilder.stop();
-    
+    worldBuilder.stop ();
+
     return 0;
 }

@@ -8,11 +8,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-#ifdef NDEBUG
-static constexpr bool DEBUG = false;
-#else
 static constexpr bool DEBUG = true;
-#endif
 
 /**
  * @brief Class used to load data from the configurator

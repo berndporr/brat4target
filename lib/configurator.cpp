@@ -10,7 +10,6 @@ void Configurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
         return;
     b2Vec2 robotPos = robot->body ()->GetPosition ();
     b2Vec2 delta = targetPos.value () - robotPos;
-    float distance = delta.Length ();
     // Transform world delta vector into robot's local space
     b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
 
@@ -41,7 +40,6 @@ Configurator::Simulator::Result
 Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
                               const char *plan_file)
 {
-    char collisionFile[50]; //debug
     FILE *robotPath = nullptr;
     Result simResult;
     simResult.endPose = start;

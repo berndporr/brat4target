@@ -1,6 +1,5 @@
 #pragma once
 #include "const.h"
-#include "debug.h"
 #include <algorithm>
 #include <atomic>
 #include <box2d/b2_math.h>
