@@ -5,11 +5,11 @@ float angle_subtract (float a1, float a2)
     float result = 0;
     if (fabs (a1) > 3 * M_PI_4 || fabs (a2) > 3 * M_PI_4)
     {
-        if (a1 < 0 & a2 > 0)
+        if ((a1 < 0) && (a2 > 0))
         {
             a2 -= 2 * M_PI;
         }
-        else if (a2 < 0 & a1 > 0)
+        else if ((a2 < 0) && (a1 > 0))
         {
             a2 += 2 * M_PI;
         }

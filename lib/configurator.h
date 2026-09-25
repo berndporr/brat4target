@@ -59,7 +59,13 @@ class Configurator
      */
     virtual void onGyroTurn (float dphi)
     {
-        currentState->task->onGyroTurn (dphi);
+        if (currentState)
+        {
+            if (currentState->task)
+            {
+                currentState->task->onGyroTurn (dphi);
+            }
+        }
     }
 
     /**

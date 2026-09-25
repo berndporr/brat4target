@@ -37,5 +37,5 @@ pkg_check_modules(LIBCAMERA REQUIRED IMPORTED_TARGET libcamera)
 if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64") # for Raspberry Pi
   message("detected architecture aarch64, building executables")
   add_executable(reactive reactive.cpp)
-  target_link_libraries(reactive ${OpenCV_LIBS} box2d zetabot c1lidarrpi brat gpiod PkgConfig::LIBCAMERA)
+  target_link_libraries(reactive ${OpenCV_LIBS} box2d zetabot c1lidarrpi brat gpiod PkgConfig::LIBCAMERA LSM6DSOX_Rpi i2c)
 endif()

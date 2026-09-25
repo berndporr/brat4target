@@ -1,3 +1,4 @@
+#include "LSM6DSOX.h"
 #include "c1lidarrpi.h"
 #include "lib/configurator.h"
 #include "lib/const.h"
@@ -21,8 +22,14 @@ int main (int nargs, char **argv)
     TargetLoc targetLoc;
     Configurator configurator;
     ZetaBot zetabot;
+    LSM6DSOX lsm6dS0x;
 
     long int nWorld = 0;
+
+    float gyrofs = 52;
+
+    lsm6dS0x.registerCallback (
+        [&] (const LSM6DSOXSample &s) { configurator.onGyroTurn (-s.gz/gyrofs); });
 
     configurator.registerMotorEvent ([&] (float l, float r) {
         if (motorOutput)
@@ -86,6 +93,7 @@ int main (int nargs, char **argv)
     }
 
     targetLoc.start ();
+    lsm6dS0x.start ();
 
     printf ("Up and running.\n");
 
@@ -94,10 +102,11 @@ int main (int nargs, char **argv)
 
     printf ("Stopping.\n");
 
-    zetabot.stop ();
+    lsm6dS0x.stop ();
     targetLoc.stop ();
     lidar.stop ();
     worldBuilder.stop ();
+    zetabot.stop ();
 
     return 0;
 }

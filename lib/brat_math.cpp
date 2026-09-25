@@ -26,8 +26,6 @@ cv::Mat math::cv_affine_matrix33 (const b2Transform &t)
 b2Transform math::solveAxB (const b2Transform &x, const b2Transform &B)
 { //
     cv::Point2f p (x.p.x, x.p.y);
-    double angle = double (x.q.GetAngle ()) * double (1 / DEG_TO_RAD_K),
-           scale = 1.0;
     cv::Mat x_matrix (3, 3, CV_32F);
     x_matrix.at<float> (0, 0) = x.q.c;
     x_matrix.at<float> (1, 1) = x.q.c;
