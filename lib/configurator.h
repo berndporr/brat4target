@@ -44,10 +44,11 @@ class Configurator
         // We have no plan. Let's create one.
         if (nullptr == plan)
         {
-            plan = std::make_shared<State>();
+            plan = std::make_shared<State> ();
             currentState = plan;
             plan->task = std::make_shared<TargetTask> ();
             setCurrentTask (plan->task);
+            fprintf (stderr, "Created Target plan.\n");
         }
         currentState->task->onTargetDetected (r, phi);
     }
@@ -140,6 +141,7 @@ class Configurator
     {
         // fixme
         setCurrentTask (std::make_shared<StopTask> ());
+        fprintf (stderr, "Terminated: stopping.\n");
     }
 
     AbstractTask::MotorEvent motorEvent;
