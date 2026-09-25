@@ -408,7 +408,7 @@ class WorldBuilder
         PARTITION = 2
     }; //BOX: bounding box around points
 
-    void doAsyncBuildWorld (CoordinateContainer &coords, b2Transform start,
+    void doAsyncBuildWorld (CoordinateContainer coords, b2Transform start,
                             float halfWindowWidth = HALF_WINDOW_WIDTH,
                             CLUSTERING clustering = PARTITION)
     {
@@ -423,19 +423,22 @@ class WorldBuilder
             asyncThread.join ();
         }
         isWorldBuilding = true;
-        asyncThread = std::thread ([&] () {
-            auto world
-                = buildWorld (coords, start, halfWindowWidth, clustering);
-            SpeedResult r = calculateSpeed (currentWorld, world,
-                                            (float)nPastWorlds / HZ);
-            if (onWorldReady)
-            {
-                onWorldReady (world, r);
-            }
-            nPastWorlds = 0;
-            currentWorld = world;
-            isWorldBuilding = false;
-        });
+        asyncThread = std::thread (
+            [&] (CoordinateContainer cc, b2Transform tr, float hw,
+                 CLUSTERING cl) {
+                auto world = buildWorld (cc, tr, hw, cl);
+                SpeedResult r = calculateSpeed (currentWorld, world,
+                                                (float)nPastWorlds / HZ);
+                if (onWorldReady)
+                {
+                    onWorldReady (world, r);
+                }
+                nPastWorlds = 0;
+                currentWorld = world;
+                isWorldBuilding = false;
+            },
+            std::move (coords), std::move (start), halfWindowWidth,
+            clustering);
     }
 
     void wait4Async ()
@@ -512,7 +515,7 @@ class WorldBuilder
      * @brief Creates bodies (objects) in the box2d world
      */
     virtual std::shared_ptr<b2World>
-    buildWorld (CoordinateContainer &coords, b2Transform,
+    buildWorld (CoordinateContainer coords, b2Transform,
                 float halfWindowWidth = 0.15,
                 CLUSTERING clustering = CLUSTERING::PARTITION);
 
@@ -623,7 +626,7 @@ class FocusedBuilder : public virtual WorldClusterBuilder
 {
   protected:
     virtual std::shared_ptr<b2World>
-    buildWorld (CoordinateContainer &coords, b2Transform start,
+    buildWorld (CoordinateContainer coords, b2Transform start,
                 float halfWindowWidth = HALF_WINDOW_WIDTH,
                 CLUSTERING clustering = CLUSTERING::PARTITION) override;
 };

@@ -678,7 +678,7 @@ WorldBuilder::getFeatures (const CoordinateContainer &current,
     return features;
 }
 
-std::shared_ptr<b2World> WorldBuilder::buildWorld (CoordinateContainer &coords,
+std::shared_ptr<b2World> WorldBuilder::buildWorld (CoordinateContainer coords,
                                                    b2Transform start,
                                                    float halfWindowWidth,
                                                    CLUSTERING clustering)
@@ -744,7 +744,7 @@ WorldClusterBuilder::getFeatures (const CoordinateContainer &current,
 }
 
 std::shared_ptr<b2World>
-FocusedBuilder::buildWorld (CoordinateContainer &coords, b2Transform start,
+FocusedBuilder::buildWorld (CoordinateContainer coords, b2Transform start,
                             float halfWindowWidth, CLUSTERING clustering)
 {
     world = std::make_shared<b2World> (GRAVITY);
