@@ -47,6 +47,7 @@ class Configurator
             plan = std::make_shared<State> ();
             currentState = plan;
             plan->task = std::make_shared<TargetTask> ();
+            plan->task->setLinearSpeed (defaultSpeed);
             setCurrentTask (plan->task);
             fprintf (stderr, "Created Target plan.\n");
         }
@@ -88,6 +89,8 @@ class Configurator
     void setSimulationStep (float f) { simulationStep = f; }
 
     void register_logger (std::shared_ptr<Logger> l) { logger = l; }
+
+    void setDefaultSpeed (float speed) { defaultSpeed = speed; }
 
     class Simulator
     {
@@ -152,4 +155,5 @@ class Configurator
     std::shared_ptr<State> plan;
     // the current position in the tree
     std::shared_ptr<State> currentState;
+    float defaultSpeed = 0.5;
 };
