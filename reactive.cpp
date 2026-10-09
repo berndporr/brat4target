@@ -18,6 +18,8 @@ int main (int nargs, char **argv)
     }
     bool motorOutput = atoi (argv[1]) > 0;
 
+    logger.start("/tmp","reactive");
+
     C1Lidar lidar;
     TargetLoc targetLoc;
     Configurator configurator;

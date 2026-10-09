@@ -32,8 +32,14 @@ class Configurator
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                WorldBuilder::SpeedResult sr)
     {
-        currentState->task->onLIDARworld (world,
-                                          std::make_shared<Robot> (world));
+        if (currentState)
+        {
+            if (currentState->task)
+            {
+                currentState->task->onLIDARworld (
+                    world, std::make_shared<Robot> (world));
+            }
+        }
     }
 
     /**
@@ -79,7 +85,7 @@ class Configurator
                 onTaskTerminated (tm);
             });
         currentState->task->registerMotorEvent (motorEvent);
-	currentState->task->onStart();
+        currentState->task->onStart ();
     }
 
     std::shared_ptr<AbstractTask> getCurrentTask ()
@@ -148,7 +154,7 @@ class Configurator
     virtual void onTaskTerminated (AbstractTask::TerminationMessage tm)
     {
         setCurrentTask (std::make_shared<StopTask> ());
-        logger.log("Terminated: stopping.\n");
+        logger.log ("Terminated: stopping.\n");
     }
 
     AbstractTask::MotorEvent motorEvent;
