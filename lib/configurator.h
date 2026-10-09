@@ -4,7 +4,6 @@
 #include "robot.h"
 #include "task.h"
 #include "worldbuilder.h"
-#include <algorithm>
 #include <box2d/b2_math.h>
 #include <dirent.h>
 #include <memory>
@@ -99,8 +98,6 @@ class Configurator
      */
     void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
-    void setSimulationStep (float f) { simulationStep = f; }
-
     void setDefaultSpeed (float speed) { defaultSpeed = speed; }
 
     class Simulator
@@ -158,8 +155,6 @@ class Configurator
     }
 
     AbstractTask::MotorEvent motorEvent;
-    float simulationStep = 2 * std::max (ROBOT_HALFLENGTH, ROBOT_HALFWIDTH);
-    std::chrono::high_resolution_clock::time_point previousTimeScan;
     // the root
     std::shared_ptr<State> plan;
     // the current position in the tree
