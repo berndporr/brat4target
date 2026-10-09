@@ -79,6 +79,7 @@ class Configurator
                 onTaskTerminated (tm);
             });
         currentState->task->registerMotorEvent (motorEvent);
+	currentState->task->onStart();
     }
 
     std::shared_ptr<AbstractTask> getCurrentTask ()

@@ -17,8 +17,8 @@ void TargetLoc::start ()
             onTargetDetected (coords);
         });
 
-    settings.width = 1640;
-    settings.height = 1232;
+    settings.width = 1280;
+    settings.height = 800;
     settings.cameraIndex = 0;
     camera.start (cm, settings);
 }
