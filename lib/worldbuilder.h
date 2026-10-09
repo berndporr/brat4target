@@ -19,7 +19,7 @@
 // for box2d so that the mental simulations can run with minimal effort.
 //
 
-template <size_t WindowSize> class SpeedMedianFilter
+template <size_t WindowSize> class SpeedAvgFilter
 {
   private:
     std::deque<float> window;
@@ -36,10 +36,12 @@ template <size_t WindowSize> class SpeedMedianFilter
         {
             return 0;
         }
-        std::deque<float> copy = window;
-        auto median_it = copy.begin () + (copy.size () / 2);
-        std::nth_element (copy.begin (), median_it, copy.end ());
-        return *median_it;
+        float sum = 0;
+        for(auto &v : window) {
+            sum += v;
+        }
+        sum /= (float)(window.size());
+        return sum;
     }
 };
 
@@ -393,8 +395,8 @@ class WorldBuilder
     std::thread asyncThread;
     std::atomic<bool> isWorldBuilding;
     OnWorldReady onWorldReady;
-    SpeedMedianFilter<3> linearSpeedXfilter;
-    SpeedMedianFilter<3> linearSpeedYfilter;
+    SpeedAvgFilter<10> linearSpeedXfilter;
+    SpeedAvgFilter<10> linearSpeedYfilter;
 
   public:
     void registerWorldReadyCallback (OnWorldReady cb) { onWorldReady = cb; }
@@ -426,14 +428,14 @@ class WorldBuilder
             [&] (CoordinateContainer cc, b2Transform tr, float hw,
                  CLUSTERING cl) {
                 auto world = buildWorld (cc, tr, hw, cl);
-                SpeedResult r = calculateSpeed (currentWorld, world,
+                SpeedResult r = calculateSpeed (currentLIDARscan, cc,
                                                 (float)nPastWorlds / HZ);
                 if (onWorldReady)
                 {
                     onWorldReady (world, r);
                 }
                 nPastWorlds = 0;
-                currentWorld = world;
+                currentLIDARscan = cc;
                 isWorldBuilding = false;
             },
             std::move (coords), std::move (start), halfWindowWidth,
@@ -520,10 +522,7 @@ class WorldBuilder
 
     //returns top and bottom of rotated rectangle (not side-specific)
     static std::pair<Pointf, Pointf>
-    bounds (b2Transform t, float boxLength, float halfWindowWidth,
-            std::vector<Pointf> *_bounds
-            = NULL); //returns bottom and top of bounding box
-
+    bounds (b2Transform t, float boxLength, float halfWindowWidth);
     /**
      * @brief Makes a box 
      * 
@@ -597,11 +596,11 @@ class WorldBuilder
 
     //////////////////////////////////////////////////////////////////////
     // speed estimation
-    SpeedResult calculateSpeed (std::shared_ptr<b2World> worldA,
-                                std::shared_ptr<b2World> worldB, float dt);
+    SpeedResult calculateSpeed (CoordinateContainer ccA,
+                                CoordinateContainer ccB, float dt);
 
   private:
-    std::shared_ptr<b2World> currentWorld;
+    CoordinateContainer currentLIDARscan;
     std::atomic<int> nPastWorlds = 0;
 };
 

@@ -11,36 +11,10 @@
 #include <vector>
 
 WorldBuilder::SpeedResult
-WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
-                              std::shared_ptr<b2World> worldB, float dt)
+WorldBuilder::calculateSpeed (CoordinateContainer pointsA,
+                              CoordinateContainer pointsB, float dt)
 {
     SpeedResult result;
-
-    if (!worldA)
-        return result;
-    if (!worldB)
-        return result;
-
-    std::vector<cv::Point2f> pointsA;
-    std::vector<cv::Point2f> pointsB;
-
-    // 1. Extract coordinates from Box2D to OpenCV point formats
-    for (b2Body *b = worldA->GetBodyList (); b; b = b->GetNext ())
-    {
-        if (b->GetFixtureList ())
-        {
-            pointsA.push_back (
-                cv::Point2f (b->GetPosition ().x, b->GetPosition ().y));
-        }
-    }
-    for (b2Body *b = worldB->GetBodyList (); b; b = b->GetNext ())
-    {
-        if (b->GetFixtureList ())
-        {
-            pointsB.push_back (
-                cv::Point2f (b->GetPosition ().x, b->GetPosition ().y));
-        }
-    }
 
     // We need at least 2 points to compute translation + rotation, but more is better for noise
     if (pointsA.size () < 3 || pointsB.size () < 3)
@@ -53,16 +27,9 @@ WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
     pointsA.resize (minSize);
     pointsB.resize (minSize);
 
-    // 2. Compute the Rigid 2D Transformation (Translation + Rotation) using native RANSAC
-    std::vector<uchar> inliers;
     cv::Mat affineMatrix = cv::estimateAffinePartial2D (
         pointsA, // Source points
-        pointsB, // Target points
-        inliers, // Output vector indicating which points were considered "good data"
-        cv::RANSAC, // Robust estimation method
-        0.3,  // RANSAC inlier threshold (maximum distance allowance for noise)
-        2000, // Maximum iterations
-        0.99  // Confidence level
+        pointsB // Target points
     );
 
     // If a valid matrix couldn't be calculated (e.g. noise completely broke consensus)
@@ -81,7 +48,7 @@ WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
         (float)affineMatrix.at<double> (0, 2) / dt);
     result.linSpeed.y = linearSpeedYfilter.process (
         (float)affineMatrix.at<double> (1, 2) / dt);
-    logger.log ("Lin speed = %f,%f", result.linSpeed.x, result.linSpeed.y);
+    logger.log ("Lin speed = %f,%f. dt=%f", result.linSpeed.x, result.linSpeed.y, dt);
     return result;
 }
 
@@ -406,8 +373,7 @@ void WorldBuilder::exportWorldToSVG (std::shared_ptr<b2World> world,
 
 std::pair<Pointf, Pointf> WorldBuilder::bounds (b2Transform start,
                                                 float boxLength,
-                                                float halfWindowWidth,
-                                                std::vector<Pointf> *_bounds)
+                                                float halfWindowWidth)
 {
     std::pair<Pointf, Pointf> result;
     std::vector<Pointf> bds;
@@ -433,10 +399,6 @@ std::pair<Pointf, Pointf> WorldBuilder::bounds (b2Transform start,
     std::sort (bds.begin (), bds.end (), compareY); //sort bottom to top
     result.first = bds[0];                          //bottom
     result.second = bds[3];                         //top
-    if (_bounds != NULL)
-    { //for debug
-        *_bounds = bds;
-    }
     return result;
 }
 
