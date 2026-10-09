@@ -55,7 +55,7 @@ class Configurator
             plan->task = std::make_shared<TargetTask> ();
             plan->task->setLinearSpeed (defaultSpeed);
             setCurrentTask (plan->task);
-            logger.log ("Created Target plan.\n");
+            bratlogger.log ("Created Target plan.\n");
         }
         currentState->task->onTargetDetected (r, phi);
     }
@@ -154,7 +154,7 @@ class Configurator
     virtual void onTaskTerminated (AbstractTask::TerminationMessage tm)
     {
         setCurrentTask (std::make_shared<StopTask> ());
-        logger.log ("Terminated: stopping.\n");
+        bratlogger.log ("Terminated: stopping.\n");
     }
 
     AbstractTask::MotorEvent motorEvent;

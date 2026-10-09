@@ -61,7 +61,7 @@ void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
             if (point2point (contour1[j], contour2[j])
                 > maxContourPixelErrorBetweenDetectionContours)
             {
-                logger.log ("Targetloc: Contour discarded.");
+                bratlogger.log ("Targetloc: Contour discarded.");
                 return;
             }
         }

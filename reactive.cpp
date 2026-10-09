@@ -19,7 +19,7 @@ int main (int nargs, char **argv)
     }
     bool motorOutput = atoi (argv[1]) > 0;
 
-    logger.start("/tmp","reactive");
+    bratlogger.start("/tmp","reactive");
 
     C1Lidar lidar;
     TargetLoc targetLoc;
@@ -111,7 +111,7 @@ int main (int nargs, char **argv)
     worldBuilder.stop ();
     zetabot.stop ();
 
-    logger.log("END");
+    bratlogger.log("END");
 
     return 0;
 }

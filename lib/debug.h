@@ -63,4 +63,4 @@ class Logger
     FILE *f = NULL;
 };
 
-static Logger logger;
+inline Logger bratlogger;

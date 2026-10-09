@@ -48,7 +48,7 @@ WorldBuilder::calculateSpeed (CoordinateContainer pointsA,
         (float)affineMatrix.at<double> (0, 2) / dt);
     result.linSpeed.y = linearSpeedYfilter.process (
         (float)affineMatrix.at<double> (1, 2) / dt);
-    logger.log ("Lin speed = %f,%f. dt=%f", result.linSpeed.x, result.linSpeed.y, dt);
+    bratlogger.log ("Lin speed = %f,%f. dt=%f", result.linSpeed.x, result.linSpeed.y, dt);
     return result;
 }
 

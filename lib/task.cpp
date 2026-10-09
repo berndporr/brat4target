@@ -33,7 +33,7 @@ void AbstractTask::onGyroTurn (float dphi)
 {
     if (targetAngle.has_value ())
     {
-        logger.log ("Target angle: %f.", targetAngle.value ());
+        bratlogger.log ("Target angle: %f.", targetAngle.value ());
         targetAngle = targetAngle.value () - dphi;
     }
 }
@@ -43,7 +43,7 @@ bool AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
 {
     robot = _robot;
     robotPos = robot->getPosition ();
-    logger.log ("Running: AbstractTask::CloseObjectDetector::detect.");
+    bratlogger.log ("Running: AbstractTask::CloseObjectDetector::detect.");
     b2AABB aabb;
     aabb.lowerBound
         = robotPos - b2Vec2 (maxDetectionRadius, maxDetectionRadius);
@@ -55,7 +55,7 @@ bool AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
 
 bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 {
-    logger.log ("Running: AbstractTask::CloseObjectDetector::ReportFixture.");
+    bratlogger.log ("Running: AbstractTask::CloseObjectDetector::ReportFixture.");
     b2Body *body = fixture->GetBody ();
 
     // Skip sensors or the robot's own chassis
@@ -68,7 +68,7 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     b2Vec2 obstaclePos = body->GetPosition ();
     b2Vec2 delta = obstaclePos - robotPos;
     float distance = delta.Length ();
-    logger.log ("AbstractTask::CloseObjectDetector::ReportFixture: Distance = "
+    bratlogger.log ("AbstractTask::CloseObjectDetector::ReportFixture: Distance = "
                 "%f, bodyflag=%d",
                 distance, (int)(body->GetUserData ().pointer));
 
@@ -76,7 +76,7 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     if (distance > maxDetectionRadius)
         return true;
 
-    logger.log ("AbstractTask::CloseObjectDetector: We are close!");
+    bratlogger.log ("AbstractTask::CloseObjectDetector: We are close!");
 
     // Transform world delta vector into robot's local space
     b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
@@ -86,7 +86,7 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
     if (fabs (relativeThreatAngle) > maxDetectionAngle)
     {
-        logger.log (
+        bratlogger.log (
             "AbstractTask::CloseObjectDetector: But out of sight: %f > %f.",
             relativeThreatAngle, maxDetectionAngle);
         return true;
@@ -94,7 +94,7 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
     detectedBody = body;
 
-    logger.log ("AbstractTask::CloseObjectDetector: In field of view: detected!");
+    bratlogger.log ("AbstractTask::CloseObjectDetector: In field of view: detected!");
 
     return false;
 }
