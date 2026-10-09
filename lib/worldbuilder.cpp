@@ -81,11 +81,7 @@ WorldBuilder::calculateSpeed (std::shared_ptr<b2World> worldA,
         (float)affineMatrix.at<double> (0, 2) / dt);
     result.linSpeed.y = linearSpeedYfilter.process (
         (float)affineMatrix.at<double> (1, 2) / dt);
-    if (DEBUG)
-    {
-        fprintf (stderr, "Lin speed = %f,%f\n", result.linSpeed.x,
-                 result.linSpeed.y);
-    }
+    logger.log ("Lin speed = %f,%f", result.linSpeed.x, result.linSpeed.y);
     return result;
 }
 

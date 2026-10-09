@@ -1,4 +1,5 @@
 #include "targetloc.h"
+#include "lib/debug.h"
 #include <cmath>
 #include <libcamera/libcamera/camera_manager.h>
 #include <opencv2/core/types.hpp>
@@ -60,7 +61,7 @@ void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
             if (point2point (contour1[j], contour2[j])
                 > maxContourPixelErrorBetweenDetectionContours)
             {
-                fprintf (stderr, "Contour discarded.\n");
+                logger.log ("Targetloc: Contour discarded.");
                 return;
             }
         }

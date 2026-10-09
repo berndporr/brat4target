@@ -1,9 +1,10 @@
 #include "debug.h"
 #include <box2d/b2_math.h>
 #include <box2d/b2_world.h>
+#include <cstdio>
 #include <opencv2/core/mat.hpp>
 
-std::string Logger::file_dateTime (const char *custom, char name[80])
+const std::string Logger::dateTime ()
 {
     time_t now = time (0);
     tm *ltm = localtime (&now);
@@ -13,61 +14,60 @@ std::string Logger::file_dateTime (const char *custom, char name[80])
     d = ltm->tm_mday;
     h = ltm->tm_hour;
     min = ltm->tm_min;
-    //	struct stat buffer;
-
-    sprintf (name, "%s_%02i%02i%02i_%02i%02i.txt", custom, d, m, y, h, min);
-    // int count=0;
-    // while (stat (fileName, &buffer)==0){
-    // 	count++;
-    // }
+    char name[256];
+    sprintf (name, "%02i%02i%02i_%02i%02i", d, m, y, h, min);
     return std::string (name);
 }
 
-bool Logger::log (const char *format, ...)
+void Logger::log (const char *format, ...)
 {
     try
     {
         va_list args;
-        va_start (args, format);
-        vfprintf (f, format, args);
-        va_end (args);
-        fflush (f);
-        return true;
+        if (DEBUG)
+        {
+            va_start (args, format);
+            vfprintf (stderr, format, args);
+            va_end (args);
+            fprintf (stderr, "\n");
+            fflush (stderr);
+        }
+        if (f)
+        {
+            va_start (args, format);
+            vfprintf (f, format, args);
+            va_end (args);
+            fprintf (f, "\n");
+            fflush (f);
+        }
     }
     catch (std::exception &e)
     {
-        return false;
+        f = nullptr;
     }
 }
 
-void Logger::init (const char *new_folder, const char *_dir,
-                   const char *customName, bool dateOn)
+void Logger::start (const std::string _dir, std::string _newFolder,
+                    const std::string _filename)
 {
-    std::string dirName = _dir;
-    if (!opendir (dirName.c_str ()))
+    if (!opendir (_dir.c_str ()))
     {
-        mkdir (dirName.c_str (), 0777);
+        mkdir (_dir.c_str (), 0777);
     }
-
-    std::string new_path = dirName + "/" + new_folder;
-    if (!opendir (new_path.c_str ()))
+    if (_newFolder.empty ())
     {
-        mkdir (new_path.c_str (), 0777); //""
-    }
-    std::string customfile = new_path + customName;
-    if (dateOn)
-    {
-        file_dateTime (customfile.c_str (), fileName);
+        fileName = _dir + "/" + _filename;
     }
     else
     {
-        sprintf (fileName, "%s.txt", customfile.c_str ());
+        std::string new_path = _dir + "/" + _newFolder;
+        if (!opendir (new_path.c_str ()))
+        {
+            mkdir (new_path.c_str (), 0777);
+        }
+        fileName = new_path + "/" + _filename;
     }
-    f = fopen (fileName, "a+");
-    if (!f)
-    {
-        f = fopen (fileName, "w+");
-    }
+    f = fopen (fileName.c_str (), "wt");
     if (!f)
     {
         std::cerr << "cannot open file " << fileName << std::endl;
@@ -75,7 +75,16 @@ void Logger::init (const char *new_folder, const char *_dir,
     }
 }
 
-const char *Logger::getSystemArchitecture ()
+void Logger::stop ()
+{
+    if (NULL != f)
+    {
+        fclose (f);
+    }
+    f = NULL;
+}
+
+const std::string Logger::getSystemArchitecture ()
 {
 #if defined(__x86_64__) || defined(_M_X64)
     return "x86_64";
@@ -93,11 +102,3 @@ const char *Logger::getSystemArchitecture ()
     return "UnknownArchitecture";
 #endif
 }
-
-b2Vec2 GetWorldPoints (b2Body *b, b2Vec2 v)
-{
-    b2Vec2 wp = b->GetWorldPoint (v);
-    printf ("x=%f, y=%f\t", wp.x, wp.y);
-    return wp;
-}
-

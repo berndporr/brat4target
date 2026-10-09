@@ -49,7 +49,7 @@ class Configurator
             plan->task = std::make_shared<TargetTask> ();
             plan->task->setLinearSpeed (defaultSpeed);
             setCurrentTask (plan->task);
-            fprintf (stderr, "Created Target plan.\n");
+            logger.log ("Created Target plan.\n");
         }
         currentState->task->onTargetDetected (r, phi);
     }
@@ -94,8 +94,6 @@ class Configurator
     void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
     void setSimulationStep (float f) { simulationStep = f; }
-
-    void register_logger (std::shared_ptr<Logger> l) { logger = l; }
 
     void setDefaultSpeed (float speed) { defaultSpeed = speed; }
 
@@ -149,13 +147,11 @@ class Configurator
   protected:
     virtual void onTaskTerminated (AbstractTask::TerminationMessage tm)
     {
-        // fixme
         setCurrentTask (std::make_shared<StopTask> ());
-        fprintf (stderr, "Terminated: stopping.\n");
+        logger.log("Terminated: stopping.\n");
     }
 
     AbstractTask::MotorEvent motorEvent;
-    std::shared_ptr<Logger> logger;
     float simulationStep = 2 * std::max (ROBOT_HALFLENGTH, ROBOT_HALFWIDTH);
     std::chrono::high_resolution_clock::time_point previousTimeScan;
     // the root

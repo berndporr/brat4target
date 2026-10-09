@@ -33,7 +33,7 @@ void AbstractTask::onGyroTurn (float dphi)
 {
     if (targetAngle.has_value ())
     {
-        fprintf (stderr, "Target angle: %f\n", targetAngle.value ());
+        logger.log ("Target angle: %f\n", targetAngle.value ());
         targetAngle = targetAngle.value () - dphi;
     }
 }
@@ -43,8 +43,7 @@ bool AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
 {
     robot = _robot;
     robotPos = robot->getPosition ();
-    if (DEBUG)
-        fprintf (stderr, "AbstractTask::CloseObjectDetector::detect.\n");
+    logger.log ("Running: AbstractTask::CloseObjectDetector::detect.");
     b2AABB aabb;
     aabb.lowerBound
         = robotPos - b2Vec2 (maxDetectionRadius, maxDetectionRadius);
@@ -56,9 +55,7 @@ bool AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
 
 bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 {
-    if (DEBUG)
-        fprintf (stderr,
-                 "AbstractTask::CloseObjectDetector::ReportFixture.\n");
+    logger.log ("Running: AbstractTask::CloseObjectDetector::ReportFixture.");
     b2Body *body = fixture->GetBody ();
 
     // Skip sensors or the robot's own chassis
@@ -71,16 +68,15 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     b2Vec2 obstaclePos = body->GetPosition ();
     b2Vec2 delta = obstaclePos - robotPos;
     float distance = delta.Length ();
-    if (DEBUG)
-        fprintf (stderr, "Distance = %f, bodyflag=%d\n", distance,
-                 (int)(body->GetUserData ().pointer));
+    logger.log ("AbstractTask::CloseObjectDetector::ReportFixture: Distance = "
+                "%f, bodyflag=%d",
+                distance, (int)(body->GetUserData ().pointer));
 
     // beyond detection radius
     if (distance > maxDetectionRadius)
         return true;
 
-    if (DEBUG)
-        fprintf (stderr, "We are close.\n");
+    logger.log ("AbstractTask::CloseObjectDetector: We are close!");
 
     // Transform world delta vector into robot's local space
     b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
@@ -90,15 +86,15 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
     if (fabs (relativeThreatAngle) > maxDetectionAngle)
     {
-        fprintf (stderr, "But out of sight: %f > %f\n", relativeThreatAngle,
-                 maxDetectionAngle);
+        logger.log (
+            "AbstractTask::CloseObjectDetector: But out of sight: %f > %f.",
+            relativeThreatAngle, maxDetectionAngle);
         return true;
     }
 
     detectedBody = body;
 
-    if (DEBUG)
-        fprintf (stderr, "In field of view: detected!!!!\n");
+    logger.log ("AbstractTask::CloseObjectDetector: In field of view: detected!");
 
     return false;
 }

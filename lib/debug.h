@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 #include <box2d/b2_body.h>
 #include <box2d/b2_math.h>
+#include <cstddef>
 #include <dirent.h>
 #include <opencv2/core/mat.hpp>
 #include <string>
@@ -16,77 +17,50 @@ static constexpr bool DEBUG = true;
  */
 class Logger
 {
-  protected:
-    char fileName[60];
-    FILE *f = NULL;
-    int fileCount = 0; //files with the same name
-
   public:
     Logger () = default;
 
     /**
 	 * @brief Construct a new Logger object
 	 * 
-	 * @param new_folder folder where files will be dumped (no / at the end)
 	 * @param _dir directory containing new_folder
-	 * @param customName file prefix (/ must be at the beginning)
-	 * @param dateOn whether to add today's date and time to file name
+	 * @param _newFolder folder where files will be dumped (no / at the end)
+	 * @param _filename the filename of the log file
 	 */
-    Logger (const char *new_folder, const char *_dir = "/tmp",
-            const char *customName = "/stats", bool dateOn = true)
-    {
-        init (new_folder, _dir, customName, dateOn);
-    }
+    void start (const std::string _dir = "/tmp",
+                std::string _newFolder = {},
+                const std::string _filename = dateTime () + ".txt");
 
-    ~Logger ()
-    {
-        if (NULL != f)
-        {
-            fclose (f);
-        }
-        f = NULL;
-    }
+    void stop ();
+
+    ~Logger () { stop (); }
 
     /**
-	 * @brief 
-	 * 
-	 * @param format printf style e.g. "hello%s"
-	 * @param ... other parameters
-	 */
-    bool log (const char *format, ...);
+	  * @brief 
+	  * 
+	  * @param format printf style e.g. "hello%s"
+	  * @param ... other parameters
+	  */
+    void log (const char *format, ...);
 
-    const char *get_fileName () { return fileName; }
+    const std::string get_fileName () const { return fileName; };
 
     /**
-	 * @brief Returns a string with system architecture
-	 */
-    static const char *getSystemArchitecture ();
+	  * @brief Returns a string with system architecture
+	  */
+    static const std::string getSystemArchitecture ();
 
-  protected:
     /**
 	 * @brief Creates filename with today's date and time, name in format customdmy_hm.txt
 	 * 
 	 * @param custom custom
 	 * @param name empty char array
 	 */
-    std::string file_dateTime (const char *custom, char name[80]);
+    static const std::string dateTime ();
 
-    /**
-	 * @see Logger
-	 */
-    void init (const char *new_folder, const char *_dir = NULL,
-               const char *customName = "/stats", bool dateOn = false);
+  private:
+    std::string fileName;
+    FILE *f = NULL;
 };
 
-namespace debug
-{
-
-b2Vec2 GetWorldPoints (b2Body *, b2Vec2);
-
-void print_pose (const b2Transform &p, const char *msg = NULL);
-
-void print_matrix (const cv::Mat &);
-
-std::vector<b2Vec2> GetBodies (b2World *);
-
-}
+static Logger logger;
