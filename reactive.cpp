@@ -2,6 +2,7 @@
 #include "c1lidarrpi.h"
 #include "lib/configurator.h"
 #include "lib/const.h"
+#include "lib/debug.h"
 #include "lib/targetloc.h"
 #include "lib/worldbuilder.h"
 #include "zetabot.h"
@@ -109,6 +110,8 @@ int main (int nargs, char **argv)
     lidar.stop ();
     worldBuilder.stop ();
     zetabot.stop ();
+
+    logger.log("END");
 
     return 0;
 }

@@ -23,9 +23,9 @@ void Logger::log (const char *format, ...)
 {
     try
     {
-        va_list args;
         if (DEBUG)
         {
+            va_list args;
             va_start (args, format);
             vfprintf (stderr, format, args);
             va_end (args);
@@ -34,6 +34,7 @@ void Logger::log (const char *format, ...)
         }
         if (f)
         {
+            va_list args;
             va_start (args, format);
             vfprintf (f, format, args);
             va_end (args);
@@ -44,6 +45,7 @@ void Logger::log (const char *format, ...)
     catch (std::exception &e)
     {
         f = nullptr;
+        fprintf(stderr,"Logger exeption: %s\n",e.what());
     }
 }
 

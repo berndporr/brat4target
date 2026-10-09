@@ -33,7 +33,7 @@ void AbstractTask::onGyroTurn (float dphi)
 {
     if (targetAngle.has_value ())
     {
-        logger.log ("Target angle: %f\n", targetAngle.value ());
+        logger.log ("Target angle: %f.", targetAngle.value ());
         targetAngle = targetAngle.value () - dphi;
     }
 }
