@@ -28,8 +28,7 @@ class Configurator
     /**
      * Needs to react to the LIDAR world
      */
-    virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               WorldBuilder::SpeedResult sr)
+    virtual void onLIDARworld (std::shared_ptr<b2World> world)
     {
         if (currentState)
         {

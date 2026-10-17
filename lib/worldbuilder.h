@@ -377,14 +377,8 @@ class WorldBuilder
   public:
     WorldBuilder () = default;
 
-    struct SpeedResult
-    {
-        b2Vec2 linSpeed = b2Vec2 (0.0f, 0.0f);
-        float angSpeed = 0.0f; // In radians
-    };
-
     using OnWorldReady
-        = std::function<void (std::shared_ptr<b2World>, SpeedResult)>;
+        = std::function<void (std::shared_ptr<b2World>)>;
 
   protected:
     float simulationStep = BOX2DRANGE;
@@ -428,11 +422,9 @@ class WorldBuilder
             [&] (CoordinateContainer cc, b2Transform tr, float hw,
                  CLUSTERING cl) {
                 auto world = buildWorld (cc, tr, hw, cl);
-                SpeedResult r = calculateSpeed (currentLIDARscan, cc,
-                                                (float)nPastWorlds / HZ);
                 if (onWorldReady)
                 {
-                    onWorldReady (world, r);
+                    onWorldReady (world);
                 }
                 nPastWorlds = 0;
                 currentLIDARscan = cc;
@@ -593,11 +585,6 @@ class WorldBuilder
 
     static void exportWorldToSVG (std::shared_ptr<b2World> world,
                                   const char *filename, float scale = 100.0f);
-
-    //////////////////////////////////////////////////////////////////////
-    // speed estimation
-    SpeedResult calculateSpeed (CoordinateContainer ccA,
-                                CoordinateContainer ccB, float dt);
 
   private:
     CoordinateContainer currentLIDARscan;

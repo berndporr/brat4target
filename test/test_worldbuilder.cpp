@@ -43,7 +43,7 @@ void test_worldbuilder_async (std::shared_ptr<WorldBuilder> worldbuilder,
     int n = 0;
 
     worldbuilder->registerWorldReadyCallback (
-        [&] (std::shared_ptr<b2World> world, WorldBuilder::SpeedResult sr) {
+        [&] (std::shared_ptr<b2World> world) {
             WorldBuilder::bodies_dump (world, bodiesFilename);
             WorldBuilder::exportWorldToSVG (world, svgfilename);
             n++;

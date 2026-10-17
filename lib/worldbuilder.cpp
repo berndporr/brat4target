@@ -1,5 +1,4 @@
 #include "worldbuilder.h"
-#include "debug.h"
 #include <algorithm>
 #include <box2d/box2d.h>
 #include <fstream> // std::ofstream
@@ -9,48 +8,6 @@
 #include <box2d/box2d.h>
 #include <opencv2/opencv.hpp>
 #include <vector>
-
-WorldBuilder::SpeedResult
-WorldBuilder::calculateSpeed (CoordinateContainer pointsA,
-                              CoordinateContainer pointsB, float dt)
-{
-    SpeedResult result;
-
-    // We need at least 2 points to compute translation + rotation, but more is better for noise
-    if (pointsA.size () < 3 || pointsB.size () < 3)
-        return result;
-
-    // Fast-track optimization: Ensure the point sets match in size for the estimator.
-    // In real LIDAR data, if sizes differ due to occlusions, truncate or pad,
-    // or use a Nearest Neighbors matching pass first.
-    size_t minSize = std::min (pointsA.size (), pointsB.size ());
-    pointsA.resize (minSize);
-    pointsB.resize (minSize);
-
-    cv::Mat affineMatrix = cv::estimateAffinePartial2D (
-        pointsA, // Source points
-        pointsB // Target points
-    );
-
-    // If a valid matrix couldn't be calculated (e.g. noise completely broke consensus)
-    if (affineMatrix.empty ())
-        return result;
-
-    // 3. Extract Translation and Rotation from the 2x3 Affine Matrix
-    // The matrix structure is:
-    // [  cos(theta)   -sin(theta)   tx ]
-    // [  sin(theta)    cos(theta)   ty ]
-    double cosTheta = affineMatrix.at<double> (0, 0);
-    double sinTheta = affineMatrix.at<double> (1, 0);
-
-    result.angSpeed = std::atan2 (sinTheta, cosTheta) / dt;
-    result.linSpeed.x = linearSpeedXfilter.process (
-        (float)affineMatrix.at<double> (0, 2) / dt);
-    result.linSpeed.y = linearSpeedYfilter.process (
-        (float)affineMatrix.at<double> (1, 2) / dt);
-    bratlogger.log ("Lin speed = %f,%f. dt=%f", result.linSpeed.x, result.linSpeed.y, dt);
-    return result;
-}
 
 float getBodyBoundingBoxArea (b2Body *body)
 {
