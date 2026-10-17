@@ -1,6 +1,5 @@
 #pragma once
 #include <box2d/b2_math.h>
-#include <cmath>
 #include <cstdint>
 #include <stdlib.h>
 #include <unistd.h>

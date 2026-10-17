@@ -36,6 +36,15 @@ class AbstractTask
         TerminationReason terminationReason = NONE;
     };
 
+    enum AvoidDirecton
+    {
+        NONE,
+        LEFT,
+        RIGHT
+    };
+
+    void setAvoidDirection (AvoidDirecton ad) { avoidDirection = ad; }
+
     using TerminatedEvent = std::function<void (TerminationMessage)>;
     void registerTerminated (TerminatedEvent te) { terminatedEvent = te; }
 
@@ -62,7 +71,9 @@ class AbstractTask
     void setAngularVelocity (const float a)
     {
         if (DEBUG)
-            fprintf (stderr, "Setting angular vel to: %f\n", angularVelocity);
+        {
+            fprintf (stderr, "Setting angular vel to: %f\n", a);
+        }
         angularVelocity = a;
         emitTwoWheeledEvent ();
     }
@@ -171,6 +182,8 @@ class AbstractTask
     MotorEvent motorEvent;
     TerminatedEvent terminatedEvent;
     std::optional<float> targetAngle;
+    std::optional<float> targetDistance;
+    AvoidDirecton avoidDirection = NONE;
 };
 
 /**
@@ -237,11 +250,12 @@ class AvoidTask : public AbstractTask
         BraitenbergAvoider (const float maxDetectionRadius,
                             const float maxDetectionAngle)
             : maxDetectionRadius (maxDetectionRadius),
-              maxDetectionAngle (maxDetectionAngle){};
+              maxDetectionAngle (maxDetectionAngle) {};
 
         bool detect (std::shared_ptr<b2World> world,
                      std::shared_ptr<Robot> _robot);
         float getAverageThreatAngle () const { return averageThreatAngle; }
+        float getminThreatDistance () const { return minThreatDistance; }
         bool hasDetectedThreats () { return totalWeight > 0; }
 
       protected:
@@ -257,6 +271,7 @@ class AvoidTask : public AbstractTask
         float totalWeightedAngle = 0.0f;
         float totalWeight = 0.0f;
         float averageThreatAngle = 0.0f;
+        float minThreatDistance = 100000;
     };
     int nSamplesWithoutThreat = 0;
 };

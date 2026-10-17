@@ -5,7 +5,6 @@
 #include <box2d/b2_distance.h>
 #include <box2d/b2_math.h>
 #include <box2d/box2d.h>
-#include <cstdio>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,7 +26,11 @@ void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
     }
 }
 
-void AbstractTask::onTargetDetected (float r, float phi) { targetAngle = phi; }
+void AbstractTask::onTargetDetected (float r, float phi)
+{
+    targetDistance = r;
+    targetAngle = phi;
+}
 
 void AbstractTask::onGyroTurn (float dphi)
 {
@@ -55,7 +58,8 @@ bool AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
 
 bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 {
-    bratlogger.log ("Running: AbstractTask::CloseObjectDetector::ReportFixture.");
+    bratlogger.log (
+        "Running: AbstractTask::CloseObjectDetector::ReportFixture.");
     b2Body *body = fixture->GetBody ();
 
     // Skip sensors or the robot's own chassis
@@ -68,9 +72,10 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     b2Vec2 obstaclePos = body->GetPosition ();
     b2Vec2 delta = obstaclePos - robotPos;
     float distance = delta.Length ();
-    bratlogger.log ("AbstractTask::CloseObjectDetector::ReportFixture: Distance = "
-                "%f, bodyflag=%d",
-                distance, (int)(body->GetUserData ().pointer));
+    bratlogger.log (
+        "AbstractTask::CloseObjectDetector::ReportFixture: Distance = "
+        "%f, bodyflag=%d",
+        distance, (int)(body->GetUserData ().pointer));
 
     // beyond detection radius
     if (distance > maxDetectionRadius)
@@ -94,7 +99,8 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
     detectedBody = body;
 
-    bratlogger.log ("AbstractTask::CloseObjectDetector: In field of view: detected!");
+    bratlogger.log (
+        "AbstractTask::CloseObjectDetector: In field of view: detected!");
 
     return false;
 }
@@ -184,6 +190,10 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
         weight = 0;
     totalWeightedAngle += relativeAngle * weight;
     totalWeight += weight;
+    if (distance < minThreatDistance)
+    {
+        minThreatDistance = distance;
+    }
     return true;
 }
 
@@ -194,16 +204,31 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
                                            M_PI / 2);
 
+    if (NONE == avoidDirection)
+    {
+        bratlogger.log ("BUG: Avoidance task but no avoidance direction!");
+        return;
+    }
+
     const bool threatsDetected = braitenbergAvoider.detect (world, robot);
 
     if (threatsDetected)
     {
-        const float averageThreatAngle
-            = braitenbergAvoider.getAverageThreatAngle ();
+        const float maxAngularVel = linearSpeed / BETWEEN_WHEELS;
+        float targetSteeringAngle
+            = 0.5 * nearbyObstacleDetectionRadius
+              / braitenbergAvoider.getminThreatDistance () * maxAngularVel;
 
-        // REPULSION: Steer in the OPPOSITE direction of the threat
-        const float targetSteeringAngle
-            = -averageThreatAngle * avoidTaskSteeringGain;
+        if (RIGHT == avoidDirection)
+        {
+            targetSteeringAngle = -targetSteeringAngle;
+        }
+
+        bratlogger.log ("====> avoid(%d, %f %f): %f degrees\n", avoidDirection,
+                        nearbyObstacleDetectionRadius,
+                        braitenbergAvoider.getminThreatDistance (),
+                        targetSteeringAngle);
+
         setAngularVelocity (targetSteeringAngle);
         nSamplesWithoutThreat = 0;
     }
