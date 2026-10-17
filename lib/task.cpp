@@ -216,7 +216,7 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     {
         const float maxAngularVel = linearSpeed / BETWEEN_WHEELS;
         float targetSteeringAngle
-            = 0.5 * nearbyObstacleDetectionRadius
+            = 0.75 * nearbyObstacleDetectionRadius
               / braitenbergAvoider.getminThreatDistance () * maxAngularVel;
 
         if (RIGHT == avoidDirection)
@@ -235,6 +235,7 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     else
     {
         nSamplesWithoutThreat++;
+        if (nSamplesWithoutThreat > (minLidarAvoidSamples/2)) setAngularVelocity(0);
         if (nSamplesWithoutThreat > minLidarAvoidSamples)
         {
             TerminationMessage tm;
