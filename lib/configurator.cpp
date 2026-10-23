@@ -1,10 +1,9 @@
 #include "configurator.h"
 #include "debug.h"
 #include "task.h"
-#include "worldbuilder.h"
 #include <memory>
 
-void Configurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
+void BaseConfigurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
 {
     if (!targetPos->IsValid ())
         return;
@@ -36,8 +35,8 @@ void Configurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
     task->onTargetDetected (localDelta.Length (), relativeTargetAngle);
 }
 
-Configurator::Simulator::Result
-Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
+BaseConfigurator::Simulator::Result
+BaseConfigurator::Simulator::run (std::shared_ptr<AbstractTask> task,
                               const char *plan_file)
 {
     FILE *robotPath = nullptr;
@@ -92,7 +91,7 @@ Configurator::Simulator::run (std::shared_ptr<AbstractTask> task,
     return simResult;
 }
 
-float Configurator::Simulator::remainingSimulationTime (
+float BaseConfigurator::Simulator::remainingSimulationTime (
     std::shared_ptr<AbstractTask> task)
 {
     float distance = BOX2DRANGE;

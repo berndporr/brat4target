@@ -3,7 +3,6 @@
 #include "debug.h"
 #include "robot.h"
 #include "task.h"
-#include "worldbuilder.h"
 #include <box2d/b2_math.h>
 #include <dirent.h>
 #include <memory>
@@ -20,10 +19,11 @@ struct State
     std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
 };
 
-class Configurator
+// The base configurator does not plan.
+class BaseConfigurator
 {
   public:
-    Configurator () = default;
+    BaseConfigurator () = default;
 
     /**
      * Needs to react to the LIDAR world
@@ -43,19 +43,9 @@ class Configurator
     /**
      * Task needs to incorporate new target angle info from the camera
      */
-    virtual void onTargetDetected (float r, float phi)
+    virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
     {
-        // We have no plan. Let's create one.
-        if (nullptr == plan)
-        {
-            plan = std::make_shared<State> ();
-            currentState = plan;
-            plan->task = std::make_shared<TargetTask> ();
-            plan->task->setLinearSpeed (defaultSpeed);
-            setCurrentTask (plan->task);
-            bratlogger.log ("Created Target plan.\n");
-        }
-        currentState->task->onTargetDetected (r, phi);
+        currentState->task->onTargetDetected (r, phi, targetIndex);
     }
 
     /**
@@ -128,7 +118,7 @@ class Configurator
             targetPos = std::optional<b2Vec2> (t);
         }
 
-        Configurator::Simulator::Result
+        BaseConfigurator::Simulator::Result
         run (std::shared_ptr<AbstractTask> task,
              const char *plan_file = nullptr);
 
@@ -159,4 +149,80 @@ class Configurator
     // the current position in the tree
     std::shared_ptr<State> currentState;
     float defaultSpeed = 0.5;
+};
+
+class ReactiveConfigurator : public BaseConfigurator
+{
+    virtual void
+    onTaskTerminated (AbstractTask::TerminationMessage tm) override
+    {
+        switch (tm.terminationReason)
+        {
+        case AbstractTask::TerminationMessage::TerminationReason::
+            ObstacleDetected:
+            bratlogger.log ("Obstacle detected.\n");
+            if (tm.targetAngle)
+            {
+                if (tm.targetAngle.value () > 0)
+                {
+                    bratlogger.log (
+                        "Avoidance to the LEFT b/c target to the left.\n");
+                    auto t = std::make_shared<AvoidTask> ();
+                    t->setAvoidDirection (AbstractTask::AvoidDirecton::LEFT);
+                    setCurrentTask (t);
+                }
+                else
+                {
+                    bratlogger.log (
+                        "Avoidance to the RIGHT b/c target to the right.\n");
+                    auto t = std::make_shared<AvoidTask> ();
+                    t->setAvoidDirection (AbstractTask::AvoidDirecton::RIGHT);
+                    setCurrentTask (t);
+                }
+            }
+            else
+            {
+                if (random () & 1)
+                {
+                    bratlogger.log (
+                        "Avoidance to the LEFT b/c random choice.\n");
+                    auto t = std::make_shared<AvoidTask> ();
+                    t->setAvoidDirection (AbstractTask::AvoidDirecton::LEFT);
+                    setCurrentTask (t);
+                }
+                else
+                {
+                    bratlogger.log (
+                        "Avoidance to the RIGHT b/c random choice.\n");
+                    auto t = std::make_shared<AvoidTask> ();
+                    t->setAvoidDirection (AbstractTask::AvoidDirecton::LEFT);
+                    setCurrentTask (t);
+                }
+            }
+            break;
+        case AbstractTask::TerminationMessage::ObstacleAvoided:
+            setCurrentTask (std::make_shared<TargetTask> ());
+            bratlogger.log ("Obstacle avoided. Now targeting again.\n");
+            break;
+        case AbstractTask::TerminationMessage::TargetReached:
+        case AbstractTask::TerminationMessage::NONE:
+            setCurrentTask (std::make_shared<StopTask> ());
+            bratlogger.log ("Terminated: stopping.\n");
+            break;
+        }
+    }
+    void onTargetDetected (float r, float phi, int targetIndex = 0) override
+    {
+        // We have no plan. Let's create one.
+        if (nullptr == plan)
+        {
+            plan = std::make_shared<State> ();
+            currentState = plan;
+            plan->task = std::make_shared<TargetTask> ();
+            plan->task->setLinearSpeed (defaultSpeed);
+            setCurrentTask (plan->task);
+            bratlogger.log ("Created Target plan.\n");
+        }
+        BaseConfigurator::onTargetDetected (r, phi, targetIndex);
+    }
 };

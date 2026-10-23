@@ -20,16 +20,27 @@ void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
         if (terminatedEvent)
         {
             TerminationMessage tm;
+            tm.targetAngle = targetAngle;
             tm.terminationReason = TerminationMessage::ObstacleDetected;
             terminatedEvent (tm);
         }
     }
 }
 
-void AbstractTask::onTargetDetected (float r, float phi)
+void AbstractTask::onTargetDetected (float r, float phi, int)
 {
     targetDistance = r;
     targetAngle = phi;
+    if (targetDistance <= targetArrivedDistance)
+    {
+        if (terminatedEvent)
+        {
+            TerminationMessage tm;
+            tm.targetAngle = targetAngle;
+            tm.terminationReason = TerminationMessage::TargetReached;
+            terminatedEvent (tm);
+        }
+    }
 }
 
 void AbstractTask::onGyroTurn (float dphi)
@@ -235,10 +246,12 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     else
     {
         nSamplesWithoutThreat++;
-        if (nSamplesWithoutThreat > (minLidarAvoidSamples/2)) setAngularVelocity(0);
+        if (nSamplesWithoutThreat > (minLidarAvoidSamples / 2))
+            setAngularVelocity (0);
         if (nSamplesWithoutThreat > minLidarAvoidSamples)
         {
             TerminationMessage tm;
+            tm.targetAngle = targetAngle;
             tm.terminationReason = TerminationMessage::ObstacleAvoided;
             terminatedEvent (tm);
         }

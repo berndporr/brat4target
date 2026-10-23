@@ -23,7 +23,7 @@ int main (int nargs, char **argv)
 
     C1Lidar lidar;
     TargetLoc targetLoc;
-    Configurator configurator;
+    ReactiveConfigurator configurator;
     ZetaBot zetabot;
     LSM6DSOX lsm6dS0x;
 

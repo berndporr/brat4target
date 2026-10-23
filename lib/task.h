@@ -21,6 +21,8 @@ class AbstractTask
     float nearbyMaxObstacleDetectionAngle
         = NEARBY_MAX_OBSTACLE_DETECTION_ANGLE;
 
+    float targetArrivedDistance = TARGET_ARRIVED_DISTANCE;
+
     using MotorEvent = std::function<void (const float l, const float r)>;
     void registerMotorEvent (MotorEvent me) { motorEvent = me; }
 
@@ -34,6 +36,7 @@ class AbstractTask
             TargetReached
         };
         TerminationReason terminationReason = NONE;
+        std::optional<float> targetAngle = 0;
     };
 
     enum AvoidDirecton
@@ -95,7 +98,7 @@ class AbstractTask
     /**
     * Task needs to incorporate new target angle info from the camera.
     */
-    virtual void onTargetDetected (float r, float phi);
+    virtual void onTargetDetected (float r, float phi, int targetIndex = 0);
 
     /**
     * Task needs to take into account the new gyro readings
@@ -197,7 +200,7 @@ class StopTask : public AbstractTask
                                std::shared_ptr<Robot> robot) override
     {
     }
-    virtual void onTargetDetected (float r, float phi) override {}
+    virtual void onTargetDetected (float r, float phi, int index = 0) override {}
 };
 
 /**
@@ -209,7 +212,7 @@ class TargetTask : public AbstractTask
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
     virtual void onStart () override {}
-    virtual void onTargetDetected (float r, float phi) override
+    virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
         updateTargeting ();
