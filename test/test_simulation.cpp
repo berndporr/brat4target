@@ -40,12 +40,11 @@ void drive_to_target ()
     printf ("\n");
 }
 
-void avoid_obstacle (AbstractTask::AvoidDirecton ad)
+void avoid_obstacle (AvoidTask::AvoidDirecton ad)
 {
     printf ("Avoid obstacle:\n");
-    auto task = std::make_shared<AvoidTask> ();
+    auto task = std::make_shared<AvoidTask> (ad);
     task->setLinearSpeed (0.5);
-    task->setAvoidDirection (ad);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -67,12 +66,11 @@ void avoid_obstacle (AbstractTask::AvoidDirecton ad)
     printf ("\n");
 }
 
-void avoid_obstacle_drive_to_arget (AbstractTask::AvoidDirecton ad)
+void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
 {
     printf ("->>> Avoid obstacle & drive to target:\n");
-    auto taskAvoid = std::make_shared<AvoidTask> ();
+    auto taskAvoid = std::make_shared<AvoidTask> (ad);
     taskAvoid->setLinearSpeed (0.5);
-    taskAvoid->setAvoidDirection (ad);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -106,8 +104,8 @@ void avoid_obstacle_drive_to_arget (AbstractTask::AvoidDirecton ad)
 int main (int, char **)
 {
     drive_to_target ();
-    avoid_obstacle (AbstractTask::LEFT);
-    avoid_obstacle (AbstractTask::RIGHT);
-    avoid_obstacle_drive_to_arget (AbstractTask::LEFT);
-    avoid_obstacle_drive_to_arget (AbstractTask::RIGHT);
+    avoid_obstacle (AvoidTask::LEFT);
+    avoid_obstacle (AvoidTask::RIGHT);
+    avoid_obstacle_drive_to_arget (AvoidTask::LEFT);
+    avoid_obstacle_drive_to_arget (AvoidTask::RIGHT);
 }

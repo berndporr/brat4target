@@ -215,12 +215,6 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
                                            M_PI / 2);
 
-    if (NONE == avoidDirection)
-    {
-        bratlogger.log ("BUG: Avoidance task but no avoidance direction!");
-        return;
-    }
-
     const bool threatsDetected = braitenbergAvoider.detect (world, robot);
 
     if (threatsDetected)

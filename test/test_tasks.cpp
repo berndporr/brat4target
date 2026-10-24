@@ -44,7 +44,7 @@ void test_target_task_close ()
 void test_avoid_task_close ()
 {
     printf ("Avoid test close.\n");
-    AvoidTask task;
+    AvoidTask task(AvoidTask::AvoidDirecton::LEFT);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;

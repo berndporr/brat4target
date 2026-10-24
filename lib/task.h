@@ -39,15 +39,6 @@ class AbstractTask
         std::optional<float> targetAngle = 0;
     };
 
-    enum AvoidDirecton
-    {
-        NONE,
-        LEFT,
-        RIGHT
-    };
-
-    void setAvoidDirection (AvoidDirecton ad) { avoidDirection = ad; }
-
     using TerminatedEvent = std::function<void (TerminationMessage)>;
     void registerTerminated (TerminatedEvent te) { terminatedEvent = te; }
 
@@ -170,14 +161,18 @@ class AbstractTask
     };
 
   public:
-    AbstractTask() {}
+    AbstractTask () = default;
     AbstractTask (std::shared_ptr<AbstractTask> at)
     {
-        linearSpeed = at->linearSpeed;
-        angularVelocity = at->angularVelocity;
-        motorEvent = at->motorEvent;
-        terminatedEvent = at->terminatedEvent;
-        targetAngle = at->targetAngle;
+        if (at)
+        {
+            linearSpeed = at->linearSpeed;
+            angularVelocity = at->angularVelocity;
+            motorEvent = at->motorEvent;
+            terminatedEvent = at->terminatedEvent;
+            targetAngle = at->targetAngle;
+            targetDistance = at->targetDistance;
+        }
     }
 
   protected:
@@ -187,7 +182,6 @@ class AbstractTask
     TerminatedEvent terminatedEvent;
     std::optional<float> targetAngle;
     std::optional<float> targetDistance;
-    AvoidDirecton avoidDirection = NONE;
 };
 
 /**
@@ -196,12 +190,16 @@ class AbstractTask
 class StopTask : public AbstractTask
 {
   public:
+    StopTask () : AbstractTask () {}
+    StopTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
     virtual void onStart () override { setLinearSpeed (0); }
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot) override
     {
     }
-    virtual void onTargetDetected (float r, float phi, int index = 0) override {}
+    virtual void onTargetDetected (float r, float phi, int index = 0) override
+    {
+    }
 };
 
 /**
@@ -210,8 +208,8 @@ class StopTask : public AbstractTask
 class TargetTask : public AbstractTask
 {
   public:
-    TargetTask(std::shared_ptr<AbstractTask> at) : AbstractTask(at) {}
-    TargetTask() : AbstractTask() {}
+    TargetTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
+    TargetTask () = default;
 
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
@@ -222,8 +220,8 @@ class TargetTask : public AbstractTask
         updateTargeting ();
     }
     /**
-   * Task needs to take into account the new gyro readings
-   */
+     * Task needs to take into account the new gyro readings
+     */
     virtual void onGyroTurn (float dphi) override
     {
         AbstractTask::onGyroTurn (dphi);
@@ -246,8 +244,18 @@ class AvoidTask : public AbstractTask
     float avoidTaskSteeringGain = AVOID_TASK_STEERING_GAIN;
     int minLidarAvoidSamples = MIN_LIDAR_AVOID_SAMPLES;
 
-    AvoidTask() : AbstractTask() {}
-    AvoidTask(std::shared_ptr<AbstractTask> a) : AbstractTask(a) {}
+    enum AvoidDirecton
+    {
+        LEFT,
+        RIGHT
+    };
+
+    AvoidTask (AvoidDirecton ad) : AbstractTask (), avoidDirection (ad) {}
+    AvoidTask (std::shared_ptr<AbstractTask> a, AvoidDirecton ad)
+        : AbstractTask (a), avoidDirection (ad)
+    {
+    }
+    AvoidTask () = delete;
 
     virtual void onStart () override {}
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
@@ -284,4 +292,5 @@ class AvoidTask : public AbstractTask
         float minThreatDistance = 100000;
     };
     int nSamplesWithoutThreat = 0;
+    const AvoidDirecton avoidDirection;
 };

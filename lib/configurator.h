@@ -167,16 +167,16 @@ class ReactiveConfigurator : public BaseConfigurator
                 {
                     bratlogger.log (
                         "Avoidance to the LEFT b/c target to the left.\n");
-                    auto t = std::make_shared<AvoidTask> ();
-                    t->setAvoidDirection (AbstractTask::AvoidDirecton::LEFT);
+                    auto t = std::make_shared<AvoidTask> (
+                        getCurrentTask (), AvoidTask::AvoidDirecton::LEFT);
                     setCurrentTask (t);
                 }
                 else
                 {
                     bratlogger.log (
                         "Avoidance to the RIGHT b/c target to the right.\n");
-                    auto t = std::make_shared<AvoidTask> ();
-                    t->setAvoidDirection (AbstractTask::AvoidDirecton::RIGHT);
+                    auto t = std::make_shared<AvoidTask> (
+                        getCurrentTask (), AvoidTask::AvoidDirecton::RIGHT);
                     setCurrentTask (t);
                 }
             }
@@ -186,27 +186,27 @@ class ReactiveConfigurator : public BaseConfigurator
                 {
                     bratlogger.log (
                         "Avoidance to the LEFT b/c random choice.\n");
-                    auto t = std::make_shared<AvoidTask> ();
-                    t->setAvoidDirection (AbstractTask::AvoidDirecton::LEFT);
+                    auto t = std::make_shared<AvoidTask> (
+                        getCurrentTask (), AvoidTask::AvoidDirecton::LEFT);
                     setCurrentTask (t);
                 }
                 else
                 {
                     bratlogger.log (
                         "Avoidance to the RIGHT b/c random choice.\n");
-                    auto t = std::make_shared<AvoidTask> ();
-                    t->setAvoidDirection (AbstractTask::AvoidDirecton::LEFT);
+                    auto t = std::make_shared<AvoidTask> (
+                        getCurrentTask (), AvoidTask::AvoidDirecton::LEFT);
                     setCurrentTask (t);
                 }
             }
             break;
         case AbstractTask::TerminationMessage::ObstacleAvoided:
-            setCurrentTask (std::make_shared<TargetTask> ());
+            setCurrentTask (std::make_shared<TargetTask> (getCurrentTask()));
             bratlogger.log ("Obstacle avoided. Now targeting again.\n");
             break;
         case AbstractTask::TerminationMessage::TargetReached:
         case AbstractTask::TerminationMessage::NONE:
-            setCurrentTask (std::make_shared<StopTask> ());
+            setCurrentTask (std::make_shared<StopTask> (getCurrentTask()));
             bratlogger.log ("Terminated: stopping.\n");
             break;
         }
