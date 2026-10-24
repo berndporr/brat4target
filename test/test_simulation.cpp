@@ -93,8 +93,7 @@ void avoid_obstacle_drive_to_arget (AbstractTask::AvoidDirecton ad)
              "/tmp/test_configur_close_obst_far_target_sim_ad%d_seq_avoid.tsv",
              ad);
     simulator.run (taskAvoid, tmp);
-    auto taskTarget = std::make_shared<TargetTask> ();
-    taskTarget->init (taskAvoid);
+    auto taskTarget = std::make_shared<TargetTask> (taskAvoid);
     printf ("->>> Drive to target:\n");
     sprintf (
         tmp,

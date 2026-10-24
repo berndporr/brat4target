@@ -170,7 +170,8 @@ class AbstractTask
     };
 
   public:
-    void init (std::shared_ptr<AbstractTask> at)
+    AbstractTask() {}
+    AbstractTask (std::shared_ptr<AbstractTask> at)
     {
         linearSpeed = at->linearSpeed;
         angularVelocity = at->angularVelocity;
@@ -209,6 +210,9 @@ class StopTask : public AbstractTask
 class TargetTask : public AbstractTask
 {
   public:
+    TargetTask(std::shared_ptr<AbstractTask> at) : AbstractTask(at) {}
+    TargetTask() : AbstractTask() {}
+
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
     virtual void onStart () override {}
@@ -241,6 +245,9 @@ class AvoidTask : public AbstractTask
   public:
     float avoidTaskSteeringGain = AVOID_TASK_STEERING_GAIN;
     int minLidarAvoidSamples = MIN_LIDAR_AVOID_SAMPLES;
+
+    AvoidTask() : AbstractTask() {}
+    AvoidTask(std::shared_ptr<AbstractTask> a) : AbstractTask(a) {}
 
     virtual void onStart () override {}
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
