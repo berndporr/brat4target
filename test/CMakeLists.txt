@@ -14,10 +14,6 @@ add_executable(test_worldbuilder test_worldbuilder.cpp)
 target_link_libraries(test_worldbuilder brat)
 add_test(TestWorldbuilder test_worldbuilder)
 
-add_executable(test_simulation test_simulation.cpp)
-target_link_libraries(test_simulation brat)
-add_test(TestSimulation test_simulation)
-
 add_executable(test_tasks test_tasks.cpp)
 target_link_libraries(test_tasks brat)
 add_test(TestTasks test_tasks)
@@ -25,3 +21,12 @@ add_test(TestTasks test_tasks)
 add_executable(test_debug test_debug.cpp)
 target_link_libraries(test_debug brat)
 add_test(TestDebug test_debug)
+
+add_executable(test_simulation test_simulation.cpp)
+target_link_libraries(test_simulation brat)
+add_test(TestSimulation test_simulation)
+
+add_executable(test_configurator test_configurator.cpp)
+target_link_libraries(test_configurator brat)
+add_test(TestSimulation test_configurator)
+
