@@ -2,8 +2,8 @@
 
 This is work in progress towards true mapless navigation using insights from neuroscience and psychology:
 
-- [Core Knowledge](https://www.harvardlds.org/wp-content/uploads/2017/01/SpelkeKinzler07-1.pdf) (Spelke, 2007).
-- [Retrosplenial cortex](https://pubmed.ncbi.nlm.nih.gov/19812579/)
+- [Core Knowledge (Spelke, 2007)](https://www.harvardlds.org/wp-content/uploads/2017/01/SpelkeKinzler07-1.pdf)
+- [Retrosplenial cortex (Alexander et al, 2023](https://pubmed.ncbi.nlm.nih.gov/36460006/)
 
 The navigation problem is broken down into attraction and avoidance Braitenberg behaviours, called Tasks. A supervising module, called the Configurator, can simulate sequences of Tasks to build up a plan and represents the robot's 
 
