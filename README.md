@@ -18,7 +18,7 @@ The navigation problem is broken down into attraction and avoidance Braitenberg 
 
 ## Hardware
 
-[Zetabot](https://github.com/berndporr/zetabot))
+[Zetabot](https://github.com/berndporr/zetabot)
 
 ## Software
 ### Development packages
