@@ -2,14 +2,15 @@
 
 This is work in progress towards true mapless navigation using insights from neuroscience and psychology:
 
-- [Core Knowledge (Spelke, 2007)](https://www.harvardlds.org/wp-content/uploads/2017/01/SpelkeKinzler07-1.pdf)
+- Elizabeth S. Spelke and Katherine D. Kinzler. Core knowledge. Developmental Science,
+10:89–96, 1 2007. ISSN 1363755X. doi: 10.1111/J.1467-7687.2007.00569.X.
 - [Retrosplenial cortex (Auger & Maguire, 2018](https://www.jneurosci.org/content/jneuro/38/6/1472.full.pdf)
 
 The navigation problem is broken down into attraction and avoidance Braitenberg behaviours, called Tasks. A supervising module, called the Configurator, can simulate sequences of Tasks to build up a plan and represents the robot's 
 
 ## Features:
 * Hybrid state-space representation
-  
+
 * Mapless navigation
 
 * Plans are made up of multiple Tasks, not trajectories
