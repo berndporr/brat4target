@@ -1,9 +1,11 @@
 #include "configurator.h"
 #include "debug.h"
+#include "lib/const.h"
 #include "task.h"
 #include <memory>
 
-void BaseConfigurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> task)
+void BaseConfigurator::Simulator::checkTarget (
+    std::shared_ptr<AbstractTask> task)
 {
     if (!targetPos->IsValid ())
         return;
@@ -37,7 +39,7 @@ void BaseConfigurator::Simulator::checkTarget (std::shared_ptr<AbstractTask> tas
 
 BaseConfigurator::Simulator::Result
 BaseConfigurator::Simulator::run (std::shared_ptr<AbstractTask> task,
-                              const char *plan_file)
+                                  const char *plan_file)
 {
     FILE *robotPath = nullptr;
     Result simResult;
@@ -96,4 +98,34 @@ float BaseConfigurator::Simulator::remainingSimulationTime (
 {
     float distance = BOX2DRANGE;
     return distance / task->getLinearSpeed ();
+}
+
+State ReactiveConfigurator::planner (std::shared_ptr<b2World> world,
+                                     float target_distance, float target_angle)
+{
+    State state;
+
+    std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
+    task->setLinearSpeed (WHEEL_SPEED_DEFAULT);
+    task->registerMotorEvent ([&] (const float l, const float r) {
+        printf ("Motor event: %f,%f\n", l, r);
+    });
+    Simulator simulator (world);
+    simulator.setTarget (target_distance, target_angle);
+    char tmp[256];
+    int nSimSteps = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        sprintf (
+            tmp,
+            "/tmp/test_configur_recative_planner_sim_ad_seq%d_avoid.tsv",
+            nSimSteps);
+        if (nullptr == state.task)
+        {
+            state.task = task;
+        }
+        auto res = simulator.run (task, tmp);
+        task = res.nextTask;
+    }
+    return state;
 }

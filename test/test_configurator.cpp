@@ -37,19 +37,8 @@ void avoid_obstacle_drive_to_arget ()
     task->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
-    ReactiveConfigurator::Simulator simulator (world);
-    simulator.setTarget (target_distance, target_angle);
-    char tmp[256];
-    int nSimSteps = 0;
-    for (int i = 0; i < 5; i++)
-    {
-        sprintf (
-            tmp,
-            "/tmp/test_configur_close_obst_far_target_sim_ad_seq%d_avoid.tsv",
-            nSimSteps);
-        auto res = simulator.run (task, tmp);
-    }
-    printf ("\n");
+    ReactiveConfigurator reactiveConfigurator;
+    reactiveConfigurator.planner (world, target_distance, target_angle);
 }
 
 int main (int, char **) { avoid_obstacle_drive_to_arget (); }

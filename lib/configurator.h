@@ -4,6 +4,7 @@
 #include "robot.h"
 #include "task.h"
 #include <box2d/b2_math.h>
+#include <box2d/b2_world.h>
 #include <dirent.h>
 #include <memory>
 #include <optional>
@@ -98,6 +99,7 @@ class BaseConfigurator
             b2Transform endPose = b2Transform (b2Vec2 (0.0, 0.0), b2Rot (0));
             int step = 0;
             Result () = default;
+            std::shared_ptr<AbstractTask> nextTask;
         };
 
         Simulator (std::shared_ptr<b2World> _world)
@@ -153,6 +155,11 @@ class BaseConfigurator
 
 class ReactiveConfigurator : public BaseConfigurator
 {
+  public:
+    State planner (std::shared_ptr<b2World> world, float target_distance,
+                   float target_angle);
+
+  private:
     virtual void
     onTaskTerminated (AbstractTask::TerminationMessage tm) override
     {
@@ -201,12 +208,12 @@ class ReactiveConfigurator : public BaseConfigurator
             }
             break;
         case AbstractTask::TerminationMessage::ObstacleAvoided:
-            setCurrentTask (std::make_shared<TargetTask> (getCurrentTask()));
+            setCurrentTask (std::make_shared<TargetTask> (getCurrentTask ()));
             bratlogger.log ("Obstacle avoided. Now targeting again.\n");
             break;
         case AbstractTask::TerminationMessage::TargetReached:
         case AbstractTask::TerminationMessage::NONE:
-            setCurrentTask (std::make_shared<StopTask> (getCurrentTask()));
+            setCurrentTask (std::make_shared<StopTask> (getCurrentTask ()));
             bratlogger.log ("Terminated: stopping.\n");
             break;
         }
