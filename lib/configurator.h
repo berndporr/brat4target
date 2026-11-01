@@ -125,10 +125,6 @@ class BaseConfigurator
 class ReactiveConfigurator : public BaseConfigurator
 {
   public:
-    State planner (std::shared_ptr<b2World> world, float target_distance,
-                   float target_angle);
-
-  private:
     virtual void
     onTaskTerminated (AbstractTask::TerminationMessage tm) override
     {
