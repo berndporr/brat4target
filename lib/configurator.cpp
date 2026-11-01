@@ -43,11 +43,11 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
 {
     FILE *robotPath = nullptr;
     AbstractTask::TerminationMessage simResult;
-    float remaining = remainingSimulationTime (task);
     bool running = true;
     task->registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
         running = false;
         simResult = tm;
+        bratlogger.log ("BaseConfigurator::TaskSimulator::run Simulation terminating.");
     });
     if (plan_file)
     {
@@ -56,8 +56,7 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
     // needs to be called before it can be used. Sets for example the wheel speed.
     task->onStart ();
     bool out = false;
-    for (stepb2d = 0; (stepb2d < (HZ * remaining)) && running && (!out);
-         stepb2d++)
+    for (stepb2d = 0; running && (!out); stepb2d++)
     {
         task->onLIDARworld (world, robot);
         task->onGyroTurn (task->getangularVelocity () / HZ);
@@ -85,16 +84,12 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
             8); //time step 100 ms which also is zetabot callback time, possibly put it higher in the future if fast
         theta += task->getangularVelocity () / HZ; //= omega *t
     }
+    bratlogger.log ("BaseConfigurator::TaskSimulator::run: Termination status:"
+                    " step2d = %d, running = %d, out = %d",
+                    stepb2d, running, out);
     if (robotPath)
     {
         fclose (robotPath);
     }
     return simResult;
-}
-
-float BaseConfigurator::TaskSimulator::remainingSimulationTime (
-    std::shared_ptr<AbstractTask> task)
-{
-    float distance = BOX2DRANGE;
-    return distance / task->getLinearSpeed ();
 }

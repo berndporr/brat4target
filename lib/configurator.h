@@ -99,8 +99,6 @@ class BaseConfigurator
       private:
         float cameraAngle = M_PI / 2;
         void checkTarget (std::shared_ptr<AbstractTask> task);
-        virtual float
-        remainingSimulationTime (std::shared_ptr<AbstractTask> task);
         std::shared_ptr<b2World> world;
         std::shared_ptr<Robot> robot;
         float theta = 0;

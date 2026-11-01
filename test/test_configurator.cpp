@@ -39,7 +39,7 @@ void avoid_obstacle_drive_to_arget ()
         [&] (const float l, const float r) {
             printf ("Motor event: %f,%f\n", l, r);
         });
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 3; i++)
     {
         char tmp[256];
         sprintf (tmp, "/tmp/test_reactive_configur_simseq%d_target.tsv", i);
