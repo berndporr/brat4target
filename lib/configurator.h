@@ -163,14 +163,18 @@ class ReactiveConfigurator : public BaseConfigurator
     virtual void
     onTaskTerminated (AbstractTask::TerminationMessage tm) override
     {
+        bratlogger.log ("Reactive: onTaskTerminated");
         switch (tm.terminationReason)
         {
-        case AbstractTask::TerminationMessage::TerminationReason::
-            ObstacleDetected:
+        case AbstractTask::TerminationMessage::TargetDetected:
+            setCurrentTask (std::make_shared<TargetTask> (getCurrentTask ()));
+            bratlogger.log ("Targeting again.\n");
+            break;
+        case AbstractTask::TerminationMessage::ObstacleDetected:
             bratlogger.log ("Obstacle detected.\n");
-            if (tm.targetAngle)
+            if (tm.taskWhichSentMessage->getTargetAngle())
             {
-                if (tm.targetAngle.value () > 0)
+                if (tm.taskWhichSentMessage->getTargetAngle().value () > 0)
                 {
                     bratlogger.log (
                         "Avoidance to the LEFT b/c target to the left.\n");

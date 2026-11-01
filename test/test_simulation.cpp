@@ -24,7 +24,7 @@ void drive_to_target ()
 {
     printf ("Drive to target:\n");
     auto task = std::make_shared<TargetTask> ();
-    task->setLinearSpeed (0.5);
+//    task->setLinearSpeed (0.5);
     CoordinateContainer coords = loadLIDARdata ("lidar_scans/far_target.tsv");
     WorldClusterBuilder worldBuilder;
     std::shared_ptr<b2World> world
@@ -44,7 +44,7 @@ void avoid_obstacle (AvoidTask::AvoidDirecton ad)
 {
     printf ("Avoid obstacle:\n");
     auto task = std::make_shared<AvoidTask> (ad);
-    task->setLinearSpeed (0.5);
+//    task->setLinearSpeed (0.5);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -70,7 +70,7 @@ void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
 {
     printf ("->>> Avoid obstacle & drive to target:\n");
     auto taskAvoid = std::make_shared<AvoidTask> (ad);
-    taskAvoid->setLinearSpeed (0.5);
+//    taskAvoid->setLinearSpeed (0.5);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;

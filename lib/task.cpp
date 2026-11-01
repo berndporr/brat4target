@@ -20,7 +20,7 @@ void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
         if (terminatedEvent)
         {
             TerminationMessage tm;
-            tm.targetAngle = targetAngle;
+            tm.taskWhichSentMessage = shared_from_this();
             tm.terminationReason = TerminationMessage::ObstacleDetected;
             terminatedEvent (tm);
         }
@@ -36,7 +36,7 @@ void AbstractTask::onTargetDetected (float r, float phi, int)
         if (terminatedEvent)
         {
             TerminationMessage tm;
-            tm.targetAngle = targetAngle;
+            tm.taskWhichSentMessage = shared_from_this();
             tm.terminationReason = TerminationMessage::TargetReached;
             terminatedEvent (tm);
         }
@@ -245,7 +245,7 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
         if (nSamplesWithoutThreat > minLidarAvoidSamples)
         {
             TerminationMessage tm;
-            tm.targetAngle = targetAngle;
+            tm.taskWhichSentMessage = shared_from_this();
             tm.terminationReason = TerminationMessage::ObstacleAvoided;
             terminatedEvent (tm);
         }

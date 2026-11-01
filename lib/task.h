@@ -14,7 +14,7 @@
  * @brief Turns sensorevents into motor outputs in a reactive way
  * This is an abstract task
  */
-class AbstractTask
+class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 {
   public:
     float nearbyObstacleDetectionRadius = NEARBY_OBSTACLE_DETECTION_RADIUS;
@@ -33,10 +33,11 @@ class AbstractTask
             NONE,
             ObstacleDetected,
             ObstacleAvoided,
-            TargetReached
+            TargetReached,
+            TargetDetected
         };
         TerminationReason terminationReason = NONE;
-        std::optional<float> targetAngle = 0;
+        std::shared_ptr<AbstractTask> taskWhichSentMessage;
     };
 
     using TerminatedEvent = std::function<void (TerminationMessage)>;
@@ -175,6 +176,11 @@ class AbstractTask
         }
     }
 
+  public:
+    std::optional<float> getTargetAngle () { return targetAngle; };
+
+    std::optional<float> getTargetDistance () { return targetDistance; };
+
   protected:
     float linearSpeed = 0;
     float angularVelocity = 0;
@@ -199,6 +205,15 @@ class StopTask : public AbstractTask
     }
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
+        targetAngle = phi;
+        targetDistance = r;
+        if (terminatedEvent)
+        {
+            TerminationMessage tm;
+            tm.taskWhichSentMessage = shared_from_this ();
+            tm.terminationReason = TerminationMessage::TargetDetected;
+            terminatedEvent (tm);
+        }
     }
 };
 
@@ -213,7 +228,7 @@ class TargetTask : public AbstractTask
 
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
-    virtual void onStart () override {}
+    virtual void onStart () override { setLinearSpeed (WHEEL_SPEED_DEFAULT); }
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
@@ -257,7 +272,7 @@ class AvoidTask : public AbstractTask
     }
     AvoidTask () = delete;
 
-    virtual void onStart () override {}
+    virtual void onStart () override { setLinearSpeed (WHEEL_SPEED_DEFAULT); }
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot) override;
 

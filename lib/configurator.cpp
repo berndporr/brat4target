@@ -54,6 +54,8 @@ BaseConfigurator::Simulator::run (std::shared_ptr<AbstractTask> task,
     {
         robotPath = fopen (plan_file, "wt");
     }
+    // needs to be called before it can be used. Sets for example the wheel speed.
+    task->onStart();
     bool out = false;
     for (stepb2d = 0; (stepb2d < (HZ * remaining)) && running && (!out);
          stepb2d++)
@@ -106,7 +108,6 @@ State ReactiveConfigurator::planner (std::shared_ptr<b2World> world,
     State state;
 
     std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
-    task->setLinearSpeed (WHEEL_SPEED_DEFAULT);
     task->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
@@ -114,7 +115,7 @@ State ReactiveConfigurator::planner (std::shared_ptr<b2World> world,
     simulator.setTarget (target_distance, target_angle);
     char tmp[256];
     int nSimSteps = 0;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 2; i++)
     {
         sprintf (
             tmp,
