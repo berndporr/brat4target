@@ -38,6 +38,14 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         };
         TerminationReason terminationReason = NONE;
         std::shared_ptr<AbstractTask> taskWhichSentMessage;
+        TerminationMessage (
+            TerminationReason _tr,
+            std::shared_ptr<AbstractTask> _taskWhichSentMessage)
+            : terminationReason (_tr),
+              taskWhichSentMessage (_taskWhichSentMessage)
+        {
+        }
+        TerminationMessage() = default;
     };
 
     using TerminatedEvent = std::function<void (TerminationMessage)>;
@@ -55,20 +63,15 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
             l = linearSpeed - angularVelocity / maxAngularVel;
             r = linearSpeed + angularVelocity / maxAngularVel;
         }
-        if (DEBUG)
-            fprintf (
-                stderr,
-                "l=%f, r=%f, linearSpeed=%f, angularVel=%f, maxAngVel=%f\n", l,
-                r, linearSpeed, angularVelocity, maxAngularVel);
+        bratlogger.log (
+            "l=%f, r=%f, linearSpeed=%f, angularVel=%f, maxAngVel=%f\n", l, r,
+            linearSpeed, angularVelocity, maxAngularVel);
         motorEvent (l, r);
     }
 
     void setAngularVelocity (const float a)
     {
-        if (DEBUG)
-        {
-            fprintf (stderr, "Setting angular vel to: %f\n", a);
-        }
+        bratlogger.log ("Setting angular vel to: %f\n", a);
         angularVelocity = a;
         emitTwoWheeledEvent ();
     }
@@ -209,9 +212,8 @@ class StopTask : public AbstractTask
         targetDistance = r;
         if (terminatedEvent)
         {
-            TerminationMessage tm;
-            tm.taskWhichSentMessage = shared_from_this ();
-            tm.terminationReason = TerminationMessage::TargetDetected;
+            TerminationMessage tm (TerminationMessage::TargetDetected,
+                                   shared_from_this ());
             terminatedEvent (tm);
         }
     }
