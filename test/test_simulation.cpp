@@ -34,7 +34,7 @@ void drive_to_target ()
     task->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
-    BaseConfigurator::Simulator simulator (world);
+    BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
     simulator.run (task, "/tmp/test_configur_far_target_sim.tsv");
     printf ("\n");
@@ -57,7 +57,7 @@ void avoid_obstacle (AvoidTask::AvoidDirecton ad)
     task->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
-    BaseConfigurator::Simulator simulator (world);
+    BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
     char tmp[256];
     sprintf (tmp, "/tmp/test_configur_close_obst_far_target_sim_dir_ad%d.tsv",
@@ -83,7 +83,7 @@ void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
     taskAvoid->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
-    BaseConfigurator::Simulator simulator (world);
+    BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
     printf ("->Avoid obstacle:\n");
     char tmp[256];

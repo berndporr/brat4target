@@ -71,19 +71,10 @@ class BaseConfigurator
 
     void setDefaultSpeed (float speed) { defaultSpeed = speed; }
 
-    class Simulator
+    class TaskSimulator
     {
       public:
-        struct Result
-        {
-            AbstractTask::TerminationMessage terminationMessage;
-            b2Transform endPose = b2Transform (b2Vec2 (0.0, 0.0), b2Rot (0));
-            int step = 0;
-            Result () = default;
-            std::shared_ptr<AbstractTask> nextTask;
-        };
-
-        Simulator (std::shared_ptr<b2World> _world)
+        TaskSimulator (std::shared_ptr<b2World> _world)
         {
             world = _world;
             start = b2Transform_zero;
@@ -101,7 +92,7 @@ class BaseConfigurator
             targetPos = std::optional<b2Vec2> (t);
         }
 
-        BaseConfigurator::Simulator::Result
+        AbstractTask::TerminationMessage
         run (std::shared_ptr<AbstractTask> task,
              const char *plan_file = nullptr);
 

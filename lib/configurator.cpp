@@ -4,7 +4,7 @@
 #include "task.h"
 #include <memory>
 
-void BaseConfigurator::Simulator::checkTarget (
+void BaseConfigurator::TaskSimulator::checkTarget (
     std::shared_ptr<AbstractTask> task)
 {
     if (!targetPos->IsValid ())
@@ -37,25 +37,24 @@ void BaseConfigurator::Simulator::checkTarget (
     task->onTargetDetected (localDelta.Length (), relativeTargetAngle);
 }
 
-BaseConfigurator::Simulator::Result
-BaseConfigurator::Simulator::run (std::shared_ptr<AbstractTask> task,
-                                  const char *plan_file)
+AbstractTask::TerminationMessage
+BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
+                                      const char *plan_file)
 {
     FILE *robotPath = nullptr;
-    Result simResult;
-    simResult.endPose = start;
+    AbstractTask::TerminationMessage simResult;
     float remaining = remainingSimulationTime (task);
     bool running = true;
     task->registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
         running = false;
-        simResult.terminationMessage = tm;
+        simResult = tm;
     });
     if (plan_file)
     {
         robotPath = fopen (plan_file, "wt");
     }
     // needs to be called before it can be used. Sets for example the wheel speed.
-    task->onStart();
+    task->onStart ();
     bool out = false;
     for (stepb2d = 0; (stepb2d < (HZ * remaining)) && running && (!out);
          stepb2d++)
@@ -86,8 +85,6 @@ BaseConfigurator::Simulator::run (std::shared_ptr<AbstractTask> task,
             8); //time step 100 ms which also is zetabot callback time, possibly put it higher in the future if fast
         theta += task->getangularVelocity () / HZ; //= omega *t
     }
-    simResult.endPose = robot->body ()->GetTransform ();
-    simResult.step = stepb2d;
     if (robotPath)
     {
         fclose (robotPath);
@@ -95,7 +92,7 @@ BaseConfigurator::Simulator::run (std::shared_ptr<AbstractTask> task,
     return simResult;
 }
 
-float BaseConfigurator::Simulator::remainingSimulationTime (
+float BaseConfigurator::TaskSimulator::remainingSimulationTime (
     std::shared_ptr<AbstractTask> task)
 {
     float distance = BOX2DRANGE;
@@ -111,22 +108,20 @@ State ReactiveConfigurator::planner (std::shared_ptr<b2World> world,
     task->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
-    Simulator simulator (world);
+    TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
     char tmp[256];
     int nSimSteps = 0;
     for (int i = 0; i < 2; i++)
     {
-        sprintf (
-            tmp,
-            "/tmp/test_configur_recative_planner_sim_ad_seq%d_avoid.tsv",
-            nSimSteps);
+        sprintf (tmp,
+                 "/tmp/test_configur_recative_planner_sim_ad_seq%d_avoid.tsv",
+                 nSimSteps);
         if (nullptr == state.task)
         {
             state.task = task;
         }
         auto res = simulator.run (task, tmp);
-        task = res.nextTask;
     }
     return state;
 }
