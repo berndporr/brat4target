@@ -125,66 +125,80 @@ class BaseConfigurator
 class ReactiveConfigurator : public BaseConfigurator
 {
   public:
-    virtual void
-    onTaskTerminated (AbstractTask::TerminationMessage tm) override
+    // static so that the tests can test it without touching the configurator state.
+    static std::shared_ptr<AbstractTask>
+    terminationMessage2task (AbstractTask::TerminationMessage tm)
     {
         bratlogger.log ("Reactive: onTaskTerminated");
         switch (tm.terminationReason)
         {
         case AbstractTask::TerminationMessage::TargetDetected:
-            setCurrentTask (std::make_shared<TargetTask> (getCurrentTask ()));
-            bratlogger.log ("Targeting again.\n");
-            break;
+            bratlogger.log (
+                "ReactiveConfigurator: Target detected. We are targeting.\n");
+            return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
-            bratlogger.log ("Obstacle detected.\n");
+            bratlogger.log ("ReactiveConfigurator: Obstacle detected.\n");
             if (tm.taskWhichSentMessage->getTargetAngle ())
             {
                 if (tm.taskWhichSentMessage->getTargetAngle ().value () > 0)
                 {
-                    bratlogger.log (
-                        "Avoidance to the LEFT b/c target to the left.\n");
-                    auto t = std::make_shared<AvoidTask> (
-                        getCurrentTask (), AvoidTask::AvoidDirecton::LEFT);
-                    setCurrentTask (t);
+                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
+                                    "LEFT b/c target to the left.\n");
+                    return std::make_shared<AvoidTask> (
+                        tm.taskWhichSentMessage,
+                        AvoidTask::AvoidDirecton::LEFT);
                 }
                 else
                 {
-                    bratlogger.log (
-                        "Avoidance to the RIGHT b/c target to the right.\n");
-                    auto t = std::make_shared<AvoidTask> (
-                        getCurrentTask (), AvoidTask::AvoidDirecton::RIGHT);
-                    setCurrentTask (t);
+                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
+                                    "RIGHT b/c target to the right.\n");
+                    return std::make_shared<AvoidTask> (
+                        tm.taskWhichSentMessage,
+                        AvoidTask::AvoidDirecton::RIGHT);
                 }
             }
             else
             {
                 if (random () & 1)
                 {
-                    bratlogger.log (
-                        "Avoidance to the LEFT b/c random choice.\n");
-                    auto t = std::make_shared<AvoidTask> (
-                        getCurrentTask (), AvoidTask::AvoidDirecton::LEFT);
-                    setCurrentTask (t);
+                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
+                                    "LEFT b/c random choice.\n");
+                    return std::make_shared<AvoidTask> (
+                        tm.taskWhichSentMessage,
+                        AvoidTask::AvoidDirecton::LEFT);
                 }
                 else
                 {
-                    bratlogger.log (
-                        "Avoidance to the RIGHT b/c random choice.\n");
-                    auto t = std::make_shared<AvoidTask> (
-                        getCurrentTask (), AvoidTask::AvoidDirecton::LEFT);
-                    setCurrentTask (t);
+                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
+                                    "RIGHT b/c random choice.\n");
+                    return std::make_shared<AvoidTask> (
+                        tm.taskWhichSentMessage,
+                        AvoidTask::AvoidDirecton::LEFT);
                 }
             }
             break;
         case AbstractTask::TerminationMessage::ObstacleAvoided:
-            setCurrentTask (std::make_shared<TargetTask> (getCurrentTask ()));
-            bratlogger.log ("Obstacle avoided. Now targeting again.\n");
-            break;
+            bratlogger.log ("ReactiveConfigurator: Obstacle avoided. Now "
+                            "targeting again.\n");
+            return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::TargetReached:
+            bratlogger.log (
+                "ReactiveConfigurator: TargetReached: stopping.\n");
+            return std::make_shared<StopTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::NONE:
-            setCurrentTask (std::make_shared<StopTask> (getCurrentTask ()));
-            bratlogger.log ("Terminated: stopping.\n");
-            break;
+            bratlogger.log (
+                "ReactiveConfigurator: Message==NONE (BUG?): stopping.\n");
+            return std::make_shared<StopTask> (tm.taskWhichSentMessage);
         }
+        bratlogger.log (
+            "ReactiveConfigurator: Message==??? (BUG?): stopping.\n");
+        return std::make_shared<StopTask> (tm.taskWhichSentMessage);
+    }
+
+  protected:
+    virtual void
+    onTaskTerminated (AbstractTask::TerminationMessage tm) override
+    {
+        setCurrentTask (terminationMessage2task (tm));
     }
 };

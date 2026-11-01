@@ -23,12 +23,6 @@ CoordinateContainer loadLIDARdata (const char *filename)
 void avoid_obstacle_drive_to_arget ()
 {
     printf ("->>> Reactive configurator test:\n");
-    ReactiveConfigurator reactiveConfigurator;
-    reactiveConfigurator.registerMotorEvent (
-        [&] (const float l, const float r) {
-            printf ("Motor event: %f,%f\n", l, r);
-        });
-    reactiveConfigurator.setCurrentTask(std::make_shared<StopTask>());
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -40,15 +34,17 @@ void avoid_obstacle_drive_to_arget ()
         "/tmp/test_configur_close_obst_far_target_bodies_seq.tsv");
     BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
+    std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
+    task->registerMotorEvent (
+        [&] (const float l, const float r) {
+            printf ("Motor event: %f,%f\n", l, r);
+        });
     for (int i = 0; i < 2; i++)
     {
         char tmp[256];
-        sprintf (
-            tmp,
-            "/tmp/test_reactive_configur_simseq%d_target.tsv",
-            i);
-        auto msg = simulator.run (reactiveConfigurator.getCurrentTask(), tmp);
-        reactiveConfigurator.onTaskTerminated(msg);
+        sprintf (tmp, "/tmp/test_reactive_configur_simseq%d_target.tsv", i);
+        auto msg = simulator.run (task, tmp);
+        task = ReactiveConfigurator::terminationMessage2task (msg);
     }
 }
 
