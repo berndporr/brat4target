@@ -31,14 +31,7 @@ class BaseConfigurator
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world)
     {
-        if (currentState)
-        {
-            if (currentState->task)
-            {
-                currentState->task->onLIDARworld (
-                    world, std::make_shared<Robot> (world));
-            }
-        }
+        currentTask->onLIDARworld (world, std::make_shared<Robot> (world));
     }
 
     /**
@@ -46,41 +39,29 @@ class BaseConfigurator
      */
     virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
     {
-        currentState->task->onTargetDetected (r, phi, targetIndex);
+        currentTask->onTargetDetected (r, phi, targetIndex);
     }
 
     /**
      * Task needs to take into account the new gyro readings
      */
-    virtual void onGyroTurn (float dphi)
-    {
-        if (currentState)
-        {
-            if (currentState->task)
-            {
-                currentState->task->onGyroTurn (dphi);
-            }
-        }
-    }
+    virtual void onGyroTurn (float dphi) { currentTask->onGyroTurn (dphi); }
 
     /**
      * @brief changes tasks executing on the robot
      */
     virtual void setCurrentTask (std::shared_ptr<AbstractTask> task)
     {
-        currentState->task = task;
-        currentState->task->registerTerminated (
+        currentTask = task;
+        currentTask->registerTerminated (
             [&] (AbstractTask::TerminationMessage tm) {
                 onTaskTerminated (tm);
             });
-        currentState->task->registerMotorEvent (motorEvent);
-        currentState->task->onStart ();
+        currentTask->registerMotorEvent (motorEvent);
+        currentTask->onStart ();
     }
 
-    std::shared_ptr<AbstractTask> getCurrentTask ()
-    {
-        return currentState->task;
-    }
+    std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
 
     /**
      * Registers the motor event callback which sets the wheel speeds of the
@@ -146,10 +127,7 @@ class BaseConfigurator
     }
 
     AbstractTask::MotorEvent motorEvent;
-    // the root
-    std::shared_ptr<State> plan;
-    // the current position in the tree
-    std::shared_ptr<State> currentState;
+    std::shared_ptr<AbstractTask> currentTask;
     float defaultSpeed = 0.5;
 };
 
@@ -172,9 +150,9 @@ class ReactiveConfigurator : public BaseConfigurator
             break;
         case AbstractTask::TerminationMessage::ObstacleDetected:
             bratlogger.log ("Obstacle detected.\n");
-            if (tm.taskWhichSentMessage->getTargetAngle())
+            if (tm.taskWhichSentMessage->getTargetAngle ())
             {
-                if (tm.taskWhichSentMessage->getTargetAngle().value () > 0)
+                if (tm.taskWhichSentMessage->getTargetAngle ().value () > 0)
                 {
                     bratlogger.log (
                         "Avoidance to the LEFT b/c target to the left.\n");
@@ -221,19 +199,5 @@ class ReactiveConfigurator : public BaseConfigurator
             bratlogger.log ("Terminated: stopping.\n");
             break;
         }
-    }
-    void onTargetDetected (float r, float phi, int targetIndex = 0) override
-    {
-        // We have no plan. Let's create one.
-        if (nullptr == plan)
-        {
-            plan = std::make_shared<State> ();
-            currentState = plan;
-            plan->task = std::make_shared<TargetTask> ();
-            plan->task->setLinearSpeed (defaultSpeed);
-            setCurrentTask (plan->task);
-            bratlogger.log ("Created Target plan.\n");
-        }
-        BaseConfigurator::onTargetDetected (r, phi, targetIndex);
     }
 };
