@@ -39,6 +39,9 @@ constexpr float SIM_DURATION = int (BOX2DRANGE * 2 / MAX_SPEED);
 constexpr float WHEEL_SPEED_DEFAULT = 0.5f;
 constexpr float WHEEL_SPEED_TURN = (M_PI_2 * BETWEEN_WHEELS) / (MAX_SPEED);
 
+// maps the servo speed -1...+1 to actual speed on the ground
+constexpr float WHEEL_SPEED_TO_ACTUAL_SPEED_FACTOR = 1;
+
 static const b2Vec2 GRAVITY (0, 0);
 
 // Flags for the different bodies

@@ -45,7 +45,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
               taskWhichSentMessage (_taskWhichSentMessage)
         {
         }
-        TerminationMessage() = default;
+        TerminationMessage () = default;
     };
 
     using TerminatedEvent = std::function<void (TerminationMessage)>;
@@ -76,10 +76,19 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         emitTwoWheeledEvent ();
     }
 
+    /**
+     * Sets the linear speed in motor units of the cont servo which
+     * is usually -1...+1.
+     */
     void setLinearSpeed (const float s)
     {
         linearSpeed = s;
         emitTwoWheeledEvent ();
+    }
+
+    float getPhysRobotSpeed ()
+    {
+        return getLinearSpeed () * WHEEL_SPEED_TO_ACTUAL_SPEED_FACTOR;
     }
 
     /**

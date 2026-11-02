@@ -61,8 +61,8 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
         task->onLIDARworld (world, robot);
         task->onGyroTurn (task->getangularVelocity () / HZ);
         checkTarget (task);
-        instVelocity.x = task->getLinearSpeed () * cos (theta);
-        instVelocity.y = task->getLinearSpeed () * sin (theta);
+        instVelocity.x = task->getPhysRobotSpeed() * cos (theta);
+        instVelocity.y = task->getPhysRobotSpeed() * sin (theta);
         robot->body ()->SetLinearVelocity (instVelocity);
         robot->body ()->SetAngularVelocity (task->getangularVelocity ());
         robot->body ()->SetTransform (robot->body ()->GetPosition (), theta);

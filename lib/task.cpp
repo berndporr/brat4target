@@ -179,12 +179,6 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
     if (distance > maxDetectionRadius)
         return true;
 
-    // check if we are within the robot
-    if (distance < ROBOT_HALFLENGTH)
-        return true;
-    if (distance < ROBOT_HALFWIDTH)
-        return true;
-
     // Transform world delta vector into robot's local space
     b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
 
@@ -219,8 +213,7 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     {
         const float maxAngularVel = linearSpeed / BETWEEN_WHEELS;
         float targetSteeringAngle
-            = 0.75 * nearbyObstacleDetectionRadius
-              / braitenbergAvoider.getminThreatDistance () * maxAngularVel;
+            = 0.5 * maxAngularVel;
 
         if (RIGHT == avoidDirection)
         {
