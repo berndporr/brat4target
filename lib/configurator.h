@@ -183,9 +183,9 @@ class ReactiveConfigurator : public BaseConfigurator
             bratlogger.log (
                 "ReactiveConfigurator: TargetReached: stopping.\n");
             return std::make_shared<StopTask> (tm.taskWhichSentMessage);
-        case AbstractTask::TerminationMessage::NONE:
+        case AbstractTask::TerminationMessage::INVALID:
             bratlogger.log (
-                "ReactiveConfigurator: Message==NONE (BUG?): stopping.\n");
+                "ReactiveConfigurator: Message==INVALID (BUG?): stopping.\n");
             return std::make_shared<StopTask> (tm.taskWhichSentMessage);
         }
         bratlogger.log (

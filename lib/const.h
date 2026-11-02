@@ -60,8 +60,7 @@ static const float TARGET_ARRIVED_DISTANCE
     = std::max (ROBOT_HALFLENGTH, ROBOT_HALFWIDTH) * 2;
 
 // Avoidance task
-constexpr int MIN_LIDAR_AVOID_SAMPLES = 5;
-constexpr int AVOID_TASK_STEERING_GAIN = 2;
+constexpr int MIN_LIDAR_AVOID_SAMPLES = 3;
 
 // Targeting task
 constexpr float TARGET_STEERING_GAIN = 5;

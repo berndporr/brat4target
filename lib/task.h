@@ -11,33 +11,62 @@
 #include <optional>
 
 /**
- * @brief Turns sensorevents into motor outputs in a reactive way
- * This is an abstract task
+ * @brief Turns sensor events into motor outputs in a reactive way
+ * This is an abstract task which has all common features of the derived classes
+ * such as attracion or avoidance.
  */
 class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 {
   public:
+    /**
+     * Distance from which obstacles are detected in the LIDAR input (=world).
+     * Default value defined in const.h in meter.
+     */
     float nearbyObstacleDetectionRadius = NEARBY_OBSTACLE_DETECTION_RADIUS;
+
+    /**
+     * Viewing angle at which obstacles are detected.
+     * Default value defined in const. h in rad.
+     */
     float nearbyMaxObstacleDetectionAngle
         = NEARBY_MAX_OBSTACLE_DETECTION_ANGLE;
 
+    /**
+     * Distance to target which warrants arrival triggers the arrival event.
+     */
     float targetArrivedDistance = TARGET_ARRIVED_DISTANCE;
 
+    /**
+     * Motor event callback which drives the wheels of the robot. Values
+     * of l and r are between -1 and +1. Not physical speed.
+     */
     using MotorEvent = std::function<void (const float l, const float r)>;
+
+    /**
+     * Registers the motor callback with the physical robot.
+     */
     void registerMotorEvent (MotorEvent me) { motorEvent = me; }
 
+    /**
+     * Message emitted when the task decides to terminate for the reasons below.
+     */
     struct TerminationMessage
     {
+        // Termination reasons
         enum TerminationReason
         {
-            NONE,
+            INVALID,
             ObstacleDetected,
             ObstacleAvoided,
             TargetReached,
             TargetDetected
         };
-        TerminationReason terminationReason = NONE;
-        std::shared_ptr<AbstractTask> taskWhichSentMessage;
+        // The termination reason
+        TerminationReason terminationReason = INVALID;
+        // This task which has sent the termination message.
+        std::shared_ptr<AbstractTask> taskWhichSentMessage = nullptr;
+
+        // Constructor which fills both the reason and pointer to this class.
         TerminationMessage (
             TerminationReason _tr,
             std::shared_ptr<AbstractTask> _taskWhichSentMessage)
@@ -45,12 +74,22 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
               taskWhichSentMessage (_taskWhichSentMessage)
         {
         }
+
+        // Default constructor which constructs an invalid message.
         TerminationMessage () = default;
     };
 
+    /**
+     * Termination event with the termination message.
+     */
     using TerminatedEvent = std::function<void (TerminationMessage)>;
+
+    /**
+     * Register a callback of the termination event.
+     */
     void registerTerminated (TerminatedEvent te) { terminatedEvent = te; }
 
+  private:
     void emitTwoWheeledEvent ()
     {
         if (!motorEvent)
@@ -69,6 +108,10 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         motorEvent (l, r);
     }
 
+  public:
+    /**
+     * Sets the Angular velocity and triggers a motor event. 
+     */
     void setAngularVelocity (const float a)
     {
         bratlogger.log ("Setting angular vel to: %f\n", a);
@@ -86,6 +129,9 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         emitTwoWheeledEvent ();
     }
 
+    /**
+     * Get the robot physical speed by mapping the cont servo values to speed in m/s.
+     */
     float getPhysRobotSpeed ()
     {
         return getLinearSpeed () * WHEEL_SPEED_TO_ACTUAL_SPEED_FACTOR;
@@ -115,34 +161,18 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     virtual void onStart () = 0;
 
     /**
-    * Gets the velocity in x/y in the world coordinate system
-    **/
-    b2Vec2 getLinearVelocity (const float dt = 1) const
-    { // dt integrates
-        b2Vec2 velocity;
-        velocity.x = linearSpeed * cos (angularVelocity) * dt;
-        velocity.y = linearSpeed * sin (angularVelocity) * dt;
-        return velocity;
-    }
-
-    /**
-    * @brief Gets the ROBOT's displacement in the world frame after dt seconds
-    *
-    * @param dt delta time (in seconds)
-    **/
-    b2Transform getTransform (const float dt = 1) const
-    { // dt integrates
-        return b2Transform (getLinearVelocity (dt),
-                            b2Rot (getangularVelocity (dt)));
-    }
-
+     * Gets the linear speed in cont servo units -1..+1.
+     */
     float getLinearSpeed () const { return linearSpeed; }
 
-    float getangularVelocity (const float dt = 1) const
-    {
-        return angularVelocity * dt;
-    }
+    /**
+     * Gets the angular velocity.
+     */
+    float getangularVelocity () const { return angularVelocity; }
 
+    /**
+     * If the robot is moving (speed > 0).
+     */
     bool isMoving () const { return fabs (linearSpeed) > 0; }
 
   protected:
@@ -174,7 +204,16 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     };
 
   public:
+    /**
+     * To create the 1st task on a chain of tasks.
+     */
     AbstractTask () = default;
+
+    /**
+     * Creates a task based on a previous one receiving
+     * all the previous internal values such as linear speed
+     * or angular velocity.
+     */
     AbstractTask (std::shared_ptr<AbstractTask> at)
     {
         if (at)
@@ -189,8 +228,14 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     }
 
   public:
+    /**
+     * Returns the target angle as an optional as it might not know it (yet!).
+     */
     std::optional<float> getTargetAngle () { return targetAngle; };
 
+    /**
+     * Returns the target distance as an optional as it might not know it (yet!).
+     */
     std::optional<float> getTargetDistance () { return targetDistance; };
 
   protected:
@@ -215,6 +260,11 @@ class StopTask : public AbstractTask
                                std::shared_ptr<Robot> robot) override
     {
     }
+
+    /**
+     * Target is detected and that triggers the termination of the stop task
+     * and then emits a message that we have a target.
+     */
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
@@ -240,9 +290,22 @@ class TargetTask : public AbstractTask
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
     virtual void onStart () override { setLinearSpeed (WHEEL_SPEED_DEFAULT); }
+
+    /**
+     * Event checks if we have arrived or need to continue targeting.
+     */
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
+        if (r < targetArrivedDistance)
+        {
+            if (terminatedEvent)
+            {
+                TerminationMessage tm (TerminationMessage::TargetReached,
+                                       shared_from_this ());
+                terminatedEvent (tm);
+            }
+        }
         updateTargeting ();
     }
     /**
@@ -254,36 +317,61 @@ class TargetTask : public AbstractTask
         updateTargeting ();
     }
 
-  protected:
+  private:
+    // Adjusts steering angle that we drive towards the target.
     void updateTargeting ()
     {
         if (targetAngle)
             setAngularVelocity (targetAngle.value () * targetSteeringGain);
     }
-    float targetPhi = 0;
-    bool targetValid = false;
 };
 
+/**
+ * Task which is driving away from an obstacle either to the left or right.
+ */
 class AvoidTask : public AbstractTask
 {
   public:
-    float avoidTaskSteeringGain = AVOID_TASK_STEERING_GAIN;
+    /**
+     * Number of LIDAR/World callbacks till we decide we are really out of the woods.
+     */
     int minLidarAvoidSamples = MIN_LIDAR_AVOID_SAMPLES;
 
+    /**
+     * Direction of the avoidance behaviour: to the left or right.
+     */
     enum AvoidDirecton
     {
         LEFT,
         RIGHT
     };
 
+    /**
+     * Avoid task constructor with the direction (left or right).
+     */
     AvoidTask (AvoidDirecton ad) : AbstractTask (), avoidDirection (ad) {}
+
+    /**
+     * Avoid task constructor absorbing all variables from its predecessor.
+     */
     AvoidTask (std::shared_ptr<AbstractTask> a, AvoidDirecton ad)
         : AbstractTask (a), avoidDirection (ad)
     {
     }
+
+    /**
+     * No default constructor as we need to set the direction at least.
+     */
     AvoidTask () = delete;
 
+    /**
+     * Called when the task is starting.
+     */
     virtual void onStart () override { setLinearSpeed (WHEEL_SPEED_DEFAULT); }
+
+    /**
+     * Called with a fresh LIDAR scan as World and the robot in it for simulation.
+     */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot) override;
 
