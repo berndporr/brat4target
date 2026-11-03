@@ -20,14 +20,16 @@ struct State
     std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
 };
 
-// The base configurator does not plan.
+/**
+ * The base configurator which has all the common functionality.
+ */
 class BaseConfigurator
 {
   public:
     BaseConfigurator () = default;
 
     /**
-     * Needs to react to the LIDAR world
+     * Needs to react to the LIDAR world. Feeds this simply to the current task.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world)
     {
@@ -35,7 +37,8 @@ class BaseConfigurator
     }
 
     /**
-     * Task needs to incorporate new target angle info from the camera
+     * Task needs to incorporate new target angle info from the camera.
+     * Feeds it to the current task.
      */
     virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
     {
@@ -43,12 +46,15 @@ class BaseConfigurator
     }
 
     /**
-     * Task needs to take into account the new gyro readings
+     * Task needs to take into account the new gyro readings.
+     * Feeds it into the current task.
      */
     virtual void onGyroTurn (float dphi) { currentTask->onGyroTurn (dphi); }
 
     /**
-     * @brief changes tasks executing on the robot
+     * Changes the current task, registers the termination callback,
+     * the motor callback and calls the task's "onStart()" telling
+     * it's now running.
      */
     virtual void setCurrentTask (std::shared_ptr<AbstractTask> task)
     {
@@ -61,6 +67,9 @@ class BaseConfigurator
         currentTask->onStart ();
     }
 
+    /**
+     * Gets the current task as a shared pointer.
+     */
     std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
 
     /**
@@ -69,11 +78,25 @@ class BaseConfigurator
      */
     void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
+    /**
+     * Sets the default speed. That's mostly if we have a stop task and the next
+     * task needs an initial speed. Fixme: at the moment the speed is enforced.
+     */
     void setDefaultSpeed (float speed) { defaultSpeed = speed; }
 
+    /**
+     * Simulates a task in the gaming engine box2d till it terminates.
+     * Then returns the result. It's not suggesting the next task but
+     * just reports why it has terminated. The configurator flavour needs
+     * to then decide what to do next. The simulator can be called
+     * with a chain of tasks.
+     */
     class TaskSimulator
     {
       public:
+        /**
+         * The simulator it initialised with the world (LIDAR scan)
+         */
         TaskSimulator (std::shared_ptr<b2World> _world)
         {
             world = _world;
@@ -84,6 +107,10 @@ class BaseConfigurator
             instVelocity = { 0, 0 };
         }
 
+        /**
+         * Setting the target locaton. This will then be turned into
+         * callbacks to onTargetDetected.
+         */
         void setTarget (float r, float phi)
         {
             b2Vec2 t;
@@ -92,6 +119,10 @@ class BaseConfigurator
             targetPos = std::optional<b2Vec2> (t);
         }
 
+        /**
+         * Runs the task in box2d till it terminates.
+         * Optionally, one can add a file which logs the coordinates of the robot till it terminates.
+         */
         AbstractTask::TerminationMessage
         run (std::shared_ptr<AbstractTask> task,
              const char *plan_file = nullptr);
@@ -108,17 +139,18 @@ class BaseConfigurator
         std::optional<b2Vec2> targetPos;
     };
 
-  protected:
-    virtual void onTaskTerminated (AbstractTask::TerminationMessage tm)
-    {
-        setCurrentTask (std::make_shared<StopTask> ());
-        bratlogger.log ("Terminated: stopping.\n");
-    }
+    /**
+     * On task terminated needs to be filled with life when inheriting this
+     * base constructor. It needs to decide which task is next!
+     */
+    virtual void onTaskTerminated (AbstractTask::TerminationMessage tm) = 0;
 
+  private:
     AbstractTask::MotorEvent motorEvent;
     std::shared_ptr<AbstractTask> currentTask;
     float defaultSpeed = 0.5;
 };
+
 
 class ReactiveConfigurator : public BaseConfigurator
 {

@@ -8,6 +8,34 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
+struct TargetLocSettings
+{
+    /** 
+     * Camera width in pixels
+     */
+    int width = 1280;
+
+    /**
+     * Camera height in pixels
+     */
+    int height = 800;
+
+    /**
+     * Camera field of view. Here: 62.2 degrees.
+     */
+    float fieldOfView = 62.2 / 180.0 * M_PI;
+
+    /**
+     * Factor mapping from QR code size to distance.
+     * Distance is inferred from the height of the QR code.
+     * QR code height must be 8cm.
+     */
+    float QRcodeYsize2distance = 0.108;
+};
+
+/**
+ * Detects a QR code and calls a callback with its angle and distance.
+ */
 class TargetLoc
 {
   public:
@@ -23,7 +51,7 @@ class TargetLoc
     /**
      * Starts the camera
      */
-    void start ();
+    void start (TargetLocSettings settings = TargetLocSettings ());
 
     /**
      * Stops the camera
@@ -47,27 +75,16 @@ class TargetLoc
     {
         std::lock_guard<std::mutex> guard (contour_mutex);
         if (contoursRingbuffer.size () > 0)
+        {
+            std::vector<cv::Point> p;
+            for (auto const &v : contoursRingbuffer[0])
             {
-                std::vector<cv::Point> p;
-                for(auto const & v : contoursRingbuffer[0])
-                {
-                    p.push_back({(int)v.x,(int)v.y});
-                }
-                return p;
+                p.push_back ({ (int)v.x, (int)v.y });
             }
-        return std::vector<cv::Point>();
+            return p;
+        }
+        return std::vector<cv::Point> ();
     }
-
-    /**
-     * Camera field of view
-     */
-    static constexpr float fieldOfView = 62.2 / 180.0 * M_PI;
-
-    /**
-     * Factor mapping from QR code size to distance.
-     * QR code height must be 8cm.
-     */
-     static constexpr float QRcodeYsize2distance = 0.108;
 
   private:
     // current camera image
@@ -76,10 +93,8 @@ class TargetLoc
     // Callback when a target has been detected
     void onTargetDetected (const std::vector<cv::Point2f> &contour);
 
+    // Helper which maps libcamera to openCV
     Libcam2OpenCV camera;
-
-    // The common settings
-    Libcam2OpenCVSettings settings;
 
     // Cameramanager for both cameras
     libcamera::CameraManager cm;
@@ -87,8 +102,7 @@ class TargetLoc
     // callback from libcamera with an image
     void updateImage (const cv::Mat &l);
 
-    // Mutexes for the getters so that the
-    // data exists while getting it.
+    // keeping image data stable while processing
     std::mutex image_mutex;
     std::mutex contour_mutex;
 
@@ -110,4 +124,6 @@ class TargetLoc
     const float maxContourPixelErrorBetweenDetectionContours = 10;
 
     TargetDet targetDet;
+
+    TargetLocSettings targetLocSettings;
 };

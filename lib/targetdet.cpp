@@ -51,15 +51,3 @@ void TargetDet::detectAsync (const cv::Mat img)
         },
         img);
 }
-
-cv::Point2f TargetDet::calcCentre (const std::vector<cv::Point2f> points) const
-{
-
-    cv::Point2f centre{ 0, 0 };
-    for (const auto &p : points)
-        {
-            centre += p;
-        }
-    centre *= (1.0f / points.size ());
-    return centre;
-}

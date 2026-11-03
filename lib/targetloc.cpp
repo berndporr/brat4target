@@ -4,8 +4,9 @@
 #include <libcamera/libcamera/camera_manager.h>
 #include <opencv2/core/types.hpp>
 
-void TargetLoc::start ()
+void TargetLoc::start (TargetLocSettings settings)
 {
+    targetLocSettings = settings;
     cm.start ();
 
     camera.registerCallback (
@@ -18,10 +19,12 @@ void TargetLoc::start ()
             onTargetDetected (coords);
         });
 
-    settings.width = 1280;
-    settings.height = 800;
-    settings.cameraIndex = 0;
-    camera.start (cm, settings);
+    // The common settings
+    Libcam2OpenCVSettings libcam2OpenCVSettings;
+    libcam2OpenCVSettings.width = targetLocSettings.width;
+    libcam2OpenCVSettings.height = targetLocSettings.height;
+    libcam2OpenCVSettings.cameraIndex = 0;
+    camera.start (cm, libcam2OpenCVSettings);
 }
 
 void TargetLoc::stop ()
@@ -75,8 +78,8 @@ void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
     float maxY = 0;
     for (auto &c : contour)
     {
-        const float x = c.x / settings.width;
-        const float y = c.x / settings.height;
+        const float x = c.x / targetLocSettings.width;
+        const float y = c.x / targetLocSettings.height;
         avgX = avgX + x;
         i++;
         if (x > maxX)
@@ -89,12 +92,11 @@ void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
             minY = y;
     }
     avgX = (avgX / (float)i) - 0.5;
-    //const float phi = avgX * fieldOfView;
-    const float phi = -atan (avgX * 2 * tan (fieldOfView / 2));
+    const float phi = -atan (avgX * 2 * tan (targetLocSettings.fieldOfView / 2));
     float r = 1E38;
     if (maxY != minY)
     {
-        r = QRcodeYsize2distance / (maxY - minY);
+        r = targetLocSettings.QRcodeYsize2distance / (maxY - minY);
     }
     // printf ("avgX = %f, phi=%f, minX=%f, maxX=%f, minY=%f, maxY=%f, r = %f\n",
     //        avgX, phi, minX, maxX, minY, maxY, r);
