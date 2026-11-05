@@ -33,7 +33,8 @@ class BaseConfigurator
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world)
     {
-        currentTask->onLIDARworld (world, std::make_shared<Robot> (world));
+        if (currentTask)
+            currentTask->onLIDARworld (world, std::make_shared<Robot> (world));
     }
 
     /**
@@ -42,14 +43,19 @@ class BaseConfigurator
      */
     virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
     {
-        currentTask->onTargetDetected (r, phi, targetIndex);
+        if (currentTask)
+            currentTask->onTargetDetected (r, phi, targetIndex);
     }
 
     /**
      * Task needs to take into account the new gyro readings.
      * Feeds it into the current task.
      */
-    virtual void onGyroTurn (float dphi) { currentTask->onGyroTurn (dphi); }
+    virtual void onGyroTurn (float dphi)
+    {
+        if (currentTask)
+            currentTask->onGyroTurn (dphi);
+    }
 
     /**
      * Changes the current task, registers the termination callback,
@@ -150,7 +156,6 @@ class BaseConfigurator
     std::shared_ptr<AbstractTask> currentTask;
     float defaultSpeed = 0.5;
 };
-
 
 class ReactiveConfigurator : public BaseConfigurator
 {

@@ -50,8 +50,8 @@ int main (int nargs, char **argv)
 
     WorldClusterBuilder worldBuilder;
     worldBuilder.registerWorldReadyCallback (
-        [&] (std::shared_ptr<b2World> world, WorldBuilder::SpeedResult sr) {
-            configurator.onLIDARworld (world, sr);
+        [&] (std::shared_ptr<b2World> world) {
+            configurator.onLIDARworld (world);
             char tmp[256];
             sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
             worldBuilder.exportWorldToSVG (tmp);

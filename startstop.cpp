@@ -1,8 +1,6 @@
 #include "LSM6DSOX.h"
 #include "c1lidarrpi.h"
-#include "lib/configurator.h"
 #include "lib/targetloc.h"
-#include "lib/worldbuilder.h"
 #include "zetabot.h"
 #include <iostream>
 #include <unistd.h>
@@ -13,7 +11,6 @@ int main (int nargs, char **argv)
 
     C1Lidar lidar;
     TargetLoc targetLoc;
-    Configurator configurator;
     ZetaBot zetabot;
     LSM6DSOX lsm6dS0x;
 
