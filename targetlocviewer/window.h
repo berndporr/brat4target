@@ -36,7 +36,7 @@ private:
 
     TargetLoc targetLoc;
 
-    const cv::Size displayImageSize{1280, 800};
+    const cv::Size displayImageSize{1280/2, 800/2};
 
     virtual void newTargetDetected(const float r, const float phi);
 };

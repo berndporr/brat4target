@@ -41,6 +41,7 @@ include_directories(
 	${LIBCAMERA_INCLUDE_DIRS}
 	${OPENCV_INCLUDE_DIRS}
 	../lib
+	..
 )
 
 set(CMAKE_AUTOMOC ON)
@@ -54,6 +55,7 @@ add_executable(targetlocviewer
   main.cpp
   ../lib/targetdet.cpp
   ../lib/targetloc.cpp
+  ../lib/debug.cpp
 )
 
 target_link_libraries(targetlocviewer Qt6::Widgets QCustomPlotQt6)
@@ -61,4 +63,3 @@ target_link_libraries(targetlocviewer PkgConfig::LIBCAMERA)
 target_link_libraries(targetlocviewer ${OpenCV_LIBS})
 target_link_libraries(targetlocviewer cam2opencv)
 target_link_libraries(targetlocviewer ${TURBOJPEG_LINK_LIBRARIES})
-
