@@ -98,6 +98,9 @@ int main (int nargs, char **argv)
     targetLoc.start ();
     lsm6dS0x.start ();
 
+    // We are starting from the stoptask
+    configurator.setCurrentTask(std::make_shared<StopTask>());
+
     printf ("Up and running.\n");
 
     // waiting for a keypress
