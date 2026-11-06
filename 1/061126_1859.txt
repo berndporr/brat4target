@@ -1,0 +1,172 @@
+l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.000000, maxAngVel=0.000000
+
+Targetloc: Contour discarded.
+Reactive: onTaskTerminated
+ReactiveConfigurator: Target detected. We are targeting.
+
+l=0.500000, r=0.500000, linearSpeed=0.500000, angularVel=0.000000, maxAngVel=7.142857
+
+Target angle: -0.372601.
+Setting angular vel to: -1.881712
+
+l=0.763440, r=0.236560, linearSpeed=0.500000, angularVel=-1.881712, maxAngVel=7.142857
+
+Target angle: -0.376342.
+Setting angular vel to: -1.900419
+
+l=0.766059, r=0.233941, linearSpeed=0.500000, angularVel=-1.900419, maxAngVel=7.142857
+
+Target angle: -0.380084.
+Setting angular vel to: -1.918392
+
+l=0.768575, r=0.231425, linearSpeed=0.500000, angularVel=-1.918392, maxAngVel=7.142857
+
+Target angle: -0.383678.
+Setting angular vel to: -1.932330
+
+l=0.770526, r=0.229474, linearSpeed=0.500000, angularVel=-1.932330, maxAngVel=7.142857
+
+Reactive: onTaskTerminated
+ReactiveConfigurator: TargetReached: stopping.
+
+l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=-1.932330, maxAngVel=0.000000
+
+Setting angular vel to: -1.862971
+
+l=0.760816, r=0.239184, linearSpeed=0.500000, angularVel=-1.862971, maxAngVel=7.142857
+
+Target angle: -0.372594.
+Target angle: -0.375015.
+Target angle: -0.374355.
+Targetloc: Contour discarded.
+Target angle: -0.370100.
+Target angle: -0.361223.
+Target angle: -0.351026.
+Targetloc: Contour discarded.
+Target angle: -0.339289.
+Target angle: -0.325351.
+Target angle: -0.310972.
+Target angle: -0.296300.
+Targetloc: Contour discarded.
+Target angle: -0.281188.
+Target angle: -0.267176.
+Target angle: -0.253752.
+Target angle: -0.239960.
+Target angle: -0.226389.
+Targetloc: Contour discarded.
+Target angle: -0.212010.
+Target angle: -0.198732.
+Target angle: -0.187361.
+Targetloc: Contour discarded.
+Target angle: -0.175697.
+Target angle: -0.161832.
+Target angle: -0.146940.
+Target angle: -0.130141.
+Targetloc: Contour discarded.
+Target angle: -0.113048.
+Target angle: -0.095515.
+Target angle: -0.079009.
+Target angle: -0.062870.
+Target angle: -0.046804.
+Targetloc: Contour discarded.
+Target angle: -0.030959.
+Target angle: -0.014599.
+Target angle: 0.000439.
+Target angle: 0.013571.
+Target angle: 0.026922.
+Targetloc: Contour discarded.
+Target angle: 0.041447.
+Target angle: 0.057073.
+Target angle: 0.073359.
+Targetloc: Contour discarded.
+Target angle: 0.090011.
+Target angle: 0.106884.
+Target angle: 0.124784.
+Target angle: 0.142977.
+Targetloc: Contour discarded.
+Target angle: 0.160950.
+Target angle: 0.178703.
+Target angle: 0.195282.
+Target angle: 0.209294.
+Target angle: 0.221545.
+Target angle: 0.234750.
+Target angle: 0.249422.
+Target angle: 0.266734.
+Target angle: 0.283314.
+Target angle: 0.299600.
+Target angle: 0.314125.
+Target angle: 0.329163.
+Target angle: 0.343175.
+Targetloc: Contour discarded.
+Target angle: 0.359388.
+Target angle: 0.373326.
+Target angle: 0.387484.
+Target angle: 0.402083.
+Target angle: 0.418002.
+Target angle: 0.434214.
+Target angle: 0.449326.
+Target angle: 0.463852.
+Target angle: 0.479624.
+Target angle: 0.496350.
+Targetloc: Contour discarded.
+Target angle: 0.511535.
+Target angle: 0.524813.
+Target angle: 0.539852.
+Target angle: 0.556138.
+Target angle: 0.572937.
+Target angle: 0.589370.
+Target angle: 0.601474.
+Target angle: 0.612405.
+Target angle: 0.622969.
+Target angle: 0.637054.
+Target angle: 0.649818.
+Targetloc: Contour discarded.
+Target angle: 0.664857.
+Target angle: 0.676741.
+Target angle: 0.687232.
+Target angle: 0.697722.
+Target angle: 0.711880.
+Target angle: 0.726992.
+Target angle: 0.742104.
+Target angle: 0.755529.
+Target angle: 0.769908.
+Target angle: 0.784800.
+Target angle: 0.800279.
+Target angle: 0.814144.
+Target angle: 0.826395.
+Target angle: 0.837912.
+Target angle: 0.851190.
+Target angle: 0.864175.
+Target angle: 0.878186.
+Target angle: 0.891464.
+Target angle: 0.902909.
+Target angle: 0.913546.
+Targetloc: Contour discarded.
+Target angle: 0.925797.
+Target angle: 0.939515.
+Target angle: 0.951913.
+Target angle: 0.965484.
+Target angle: 0.978175.
+Target angle: 0.993214.
+Target angle: 1.005025.
+Targetloc: Contour discarded.
+Target angle: 1.017276.
+Target angle: 1.028353.
+Target angle: 1.040751.
+Target angle: 1.051828.
+Target angle: 1.064666.
+Target angle: 1.076330.
+Target angle: 1.086821.
+Target angle: 1.097238.
+Target angle: 1.110296.
+Target angle: 1.124674.
+Target angle: 1.140080.
+Target angle: 1.155265.
+Target angle: 1.168030.
+Target angle: 1.179034.
+Target angle: 1.191578.
+Target angle: 1.204710.
+Target angle: 1.220996.
+Target angle: 1.236988.
+Target angle: 1.254081.
+END

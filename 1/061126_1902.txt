@@ -1,0 +1,3800 @@
+l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.000000, maxAngVel=0.000000
+
+Reactive: onTaskTerminated
+ReactiveConfigurator: Target detected. We are targeting.
+
+l=0.500000, r=0.500000, linearSpeed=0.500000, angularVel=0.000000, maxAngVel=7.142857
+
+Target angle: -0.290135.
+Setting angular vel to: -1.469015
+
+l=0.705662, r=0.294338, linearSpeed=0.500000, angularVel=-1.469015, maxAngVel=7.142857
+
+Target angle: -0.293803.
+Setting angular vel to: -1.485154
+
+l=0.707922, r=0.292078, linearSpeed=0.500000, angularVel=-1.485154, maxAngVel=7.142857
+
+Target angle: -0.297031.
+Setting angular vel to: -1.496525
+
+l=0.709513, r=0.290487, linearSpeed=0.500000, angularVel=-1.496525, maxAngVel=7.142857
+
+Target angle: -0.299305.
+Setting angular vel to: -1.492490
+
+l=0.708949, r=0.291051, linearSpeed=0.500000, angularVel=-1.492490, maxAngVel=7.142857
+
+Target angle: -0.298498.
+Setting angular vel to: -1.466447
+
+l=0.705303, r=0.294697, linearSpeed=0.500000, angularVel=-1.466447, maxAngVel=7.142857
+
+Setting angular vel to: -1.449841
+
+l=0.702978, r=0.297022, linearSpeed=0.500000, angularVel=-1.449841, maxAngVel=7.142857
+
+Target angle: -0.289968.
+Setting angular vel to: -1.412061
+
+l=0.697689, r=0.302311, linearSpeed=0.500000, angularVel=-1.412061, maxAngVel=7.142857
+
+Target angle: -0.282412.
+Setting angular vel to: -1.358876
+
+l=0.690243, r=0.309757, linearSpeed=0.500000, angularVel=-1.358876, maxAngVel=7.142857
+
+Target angle: -0.271775.
+Setting angular vel to: -1.300922
+
+l=0.682129, r=0.317871, linearSpeed=0.500000, angularVel=-1.300922, maxAngVel=7.142857
+
+Target angle: -0.260184.
+Setting angular vel to: -1.234164
+
+l=0.672783, r=0.327217, linearSpeed=0.500000, angularVel=-1.234164, maxAngVel=7.142857
+
+Target angle: -0.246833.
+Setting angular vel to: -1.169975
+
+l=0.663796, r=0.336204, linearSpeed=0.500000, angularVel=-1.169975, maxAngVel=7.142857
+
+Target angle: -0.233995.
+Setting angular vel to: -1.110554
+
+l=0.655478, r=0.344522, linearSpeed=0.500000, angularVel=-1.110554, maxAngVel=7.142857
+
+Target angle: -0.222111.
+Setting angular vel to: -1.048198
+
+l=0.646748, r=0.353252, linearSpeed=0.500000, angularVel=-1.048198, maxAngVel=7.142857
+
+Target angle: -0.209640.
+Setting angular vel to: -0.992812
+
+l=0.638994, r=0.361006, linearSpeed=0.500000, angularVel=-0.992812, maxAngVel=7.142857
+
+Target angle: -0.198562.
+Setting angular vel to: -0.942927
+
+l=0.632010, r=0.367990, linearSpeed=0.500000, angularVel=-0.942927, maxAngVel=7.142857
+
+Target angle: -0.188585.
+Setting angular vel to: -0.905881
+
+l=0.626823, r=0.373177, linearSpeed=0.500000, angularVel=-0.905881, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.181176.
+Setting angular vel to: -0.878371
+
+l=0.622972, r=0.377028, linearSpeed=0.500000, angularVel=-0.878371, maxAngVel=7.142857
+
+Target angle: -0.175674.
+Setting angular vel to: -0.848293
+
+l=0.618761, r=0.381239, linearSpeed=0.500000, angularVel=-0.848293, maxAngVel=7.142857
+
+Target angle: -0.169659.
+Setting angular vel to: -0.813814
+
+l=0.613934, r=0.386066, linearSpeed=0.500000, angularVel=-0.813814, maxAngVel=7.142857
+
+Target angle: -0.162763.
+Setting angular vel to: -0.782270
+
+l=0.609518, r=0.390482, linearSpeed=0.500000, angularVel=-0.782270, maxAngVel=7.142857
+
+Target angle: -0.156454.
+Setting angular vel to: -0.750358
+
+l=0.605050, r=0.394950, linearSpeed=0.500000, angularVel=-0.750358, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.150072.
+Setting angular vel to: -0.715513
+
+l=0.600172, r=0.399828, linearSpeed=0.500000, angularVel=-0.715513, maxAngVel=7.142857
+
+Target angle: -0.143102.
+Setting angular vel to: -0.679199
+
+l=0.595088, r=0.404912, linearSpeed=0.500000, angularVel=-0.679199, maxAngVel=7.142857
+
+Target angle: -0.135840.
+Setting angular vel to: -0.638852
+
+l=0.589439, r=0.410561, linearSpeed=0.500000, angularVel=-0.638852, maxAngVel=7.142857
+
+Target angle: -0.127770.
+Setting angular vel to: -0.593002
+
+l=0.583020, r=0.416980, linearSpeed=0.500000, angularVel=-0.593002, maxAngVel=7.142857
+
+Target angle: -0.118600.
+Setting angular vel to: -0.554855
+
+l=0.577680, r=0.422320, linearSpeed=0.500000, angularVel=-0.554855, maxAngVel=7.142857
+
+Target angle: -0.110971.
+Setting angular vel to: -0.518175
+
+l=0.572545, r=0.427455, linearSpeed=0.500000, angularVel=-0.518175, maxAngVel=7.142857
+
+Target angle: -0.103635.
+Setting angular vel to: -0.480395
+
+l=0.567255, r=0.432745, linearSpeed=0.500000, angularVel=-0.480395, maxAngVel=7.142857
+
+Target angle: -0.096079.
+Setting angular vel to: -0.452152
+
+l=0.563301, r=0.436699, linearSpeed=0.500000, angularVel=-0.452152, maxAngVel=7.142857
+
+Target angle: -0.090430.
+Setting angular vel to: -0.428310
+
+l=0.559963, r=0.440037, linearSpeed=0.500000, angularVel=-0.428310, maxAngVel=7.142857
+
+Target angle: -0.085662.
+Setting angular vel to: -0.418040
+
+l=0.558526, r=0.441474, linearSpeed=0.500000, angularVel=-0.418040, maxAngVel=7.142857
+
+Target angle: -0.083608.
+Setting angular vel to: -0.400066
+
+l=0.556009, r=0.443991, linearSpeed=0.500000, angularVel=-0.400066, maxAngVel=7.142857
+
+Target angle: -0.080013.
+Setting angular vel to: -0.388329
+
+l=0.554366, r=0.445634, linearSpeed=0.500000, angularVel=-0.388329, maxAngVel=7.142857
+
+Target angle: -0.077666.
+Setting angular vel to: -0.381360
+
+l=0.553390, r=0.446610, linearSpeed=0.500000, angularVel=-0.381360, maxAngVel=7.142857
+
+Target angle: -0.076272.
+Setting angular vel to: -0.371456
+
+l=0.552004, r=0.447996, linearSpeed=0.500000, angularVel=-0.371456, maxAngVel=7.142857
+
+Target angle: -0.074291.
+Setting angular vel to: -0.359352
+
+l=0.550309, r=0.449691, linearSpeed=0.500000, angularVel=-0.359352, maxAngVel=7.142857
+
+Target angle: -0.071870.
+Setting angular vel to: -0.347247
+
+l=0.548615, r=0.451385, linearSpeed=0.500000, angularVel=-0.347247, maxAngVel=7.142857
+
+Target angle: -0.069449.
+Setting angular vel to: -0.332942
+
+l=0.546612, r=0.453388, linearSpeed=0.500000, angularVel=-0.332942, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.066588.
+Setting angular vel to: -0.321572
+
+l=0.545020, r=0.454980, linearSpeed=0.500000, angularVel=-0.321572, maxAngVel=7.142857
+
+Target angle: -0.064314.
+Setting angular vel to: -0.307633
+
+l=0.543069, r=0.456931, linearSpeed=0.500000, angularVel=-0.307633, maxAngVel=7.142857
+
+Target angle: -0.061527.
+Setting angular vel to: -0.290394
+
+l=0.540655, r=0.459345, linearSpeed=0.500000, angularVel=-0.290394, maxAngVel=7.142857
+
+Target angle: -0.058079.
+Setting angular vel to: -0.276089
+
+l=0.538652, r=0.461348, linearSpeed=0.500000, angularVel=-0.276089, maxAngVel=7.142857
+
+Target angle: -0.055218.
+Setting angular vel to: -0.261050
+
+l=0.536547, r=0.463453, linearSpeed=0.500000, angularVel=-0.261050, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.052210.
+Setting angular vel to: -0.256282
+
+l=0.535879, r=0.464121, linearSpeed=0.500000, angularVel=-0.256282, maxAngVel=7.142857
+
+Target angle: -0.051256.
+Setting angular vel to: -0.256282
+
+l=0.535879, r=0.464121, linearSpeed=0.500000, angularVel=-0.256282, maxAngVel=7.142857
+
+Target angle: -0.051256.
+Setting angular vel to: -0.250046
+
+l=0.535006, r=0.464994, linearSpeed=0.500000, angularVel=-0.250046, maxAngVel=7.142857
+
+Target angle: -0.050009.
+Setting angular vel to: -0.244911
+
+l=0.534288, r=0.465712, linearSpeed=0.500000, angularVel=-0.244911, maxAngVel=7.142857
+
+Target angle: -0.048982.
+Setting angular vel to: -0.241243
+
+l=0.533774, r=0.466226, linearSpeed=0.500000, angularVel=-0.241243, maxAngVel=7.142857
+
+Target angle: -0.048249.
+Setting angular vel to: -0.231706
+
+l=0.532439, r=0.467561, linearSpeed=0.500000, angularVel=-0.231706, maxAngVel=7.142857
+
+Target angle: -0.046341.
+Setting angular vel to: -0.228772
+
+l=0.532028, r=0.467972, linearSpeed=0.500000, angularVel=-0.228772, maxAngVel=7.142857
+
+Target angle: -0.045754.
+Setting angular vel to: -0.228038
+
+l=0.531925, r=0.468075, linearSpeed=0.500000, angularVel=-0.228038, maxAngVel=7.142857
+
+Target angle: -0.045608.
+Setting angular vel to: -0.230239
+
+l=0.532233, r=0.467767, linearSpeed=0.500000, angularVel=-0.230239, maxAngVel=7.142857
+
+Target angle: -0.046048.
+Setting angular vel to: -0.229139
+
+l=0.532079, r=0.467921, linearSpeed=0.500000, angularVel=-0.229139, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.045828.
+Setting angular vel to: -0.216667
+
+l=0.530333, r=0.469667, linearSpeed=0.500000, angularVel=-0.216667, maxAngVel=7.142857
+
+Target angle: -0.043333.
+Setting angular vel to: -0.200528
+
+l=0.528074, r=0.471926, linearSpeed=0.500000, angularVel=-0.200528, maxAngVel=7.142857
+
+Target angle: -0.040106.
+Setting angular vel to: -0.180354
+
+l=0.525250, r=0.474750, linearSpeed=0.500000, angularVel=-0.180354, maxAngVel=7.142857
+
+Target angle: -0.036071.
+Setting angular vel to: -0.155045
+
+l=0.521706, r=0.478294, linearSpeed=0.500000, angularVel=-0.155045, maxAngVel=7.142857
+
+Target angle: -0.031009.
+Setting angular vel to: -0.135238
+
+l=0.518933, r=0.481067, linearSpeed=0.500000, angularVel=-0.135238, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.027048.
+Setting angular vel to: -0.129003
+
+l=0.518060, r=0.481940, linearSpeed=0.500000, angularVel=-0.129003, maxAngVel=7.142857
+
+Target angle: -0.025801.
+Setting angular vel to: -0.140007
+
+l=0.519601, r=0.480399, linearSpeed=0.500000, angularVel=-0.140007, maxAngVel=7.142857
+
+Target angle: -0.028001.
+Setting angular vel to: -0.157980
+
+l=0.522117, r=0.477883, linearSpeed=0.500000, angularVel=-0.157980, maxAngVel=7.142857
+
+Target angle: -0.031596.
+Setting angular vel to: -0.162748
+
+l=0.522785, r=0.477215, linearSpeed=0.500000, angularVel=-0.162748, maxAngVel=7.142857
+
+Target angle: -0.032550.
+Setting angular vel to: -0.160547
+
+l=0.522477, r=0.477523, linearSpeed=0.500000, angularVel=-0.160547, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.032109.
+Setting angular vel to: -0.161281
+
+l=0.522579, r=0.477421, linearSpeed=0.500000, angularVel=-0.161281, maxAngVel=7.142857
+
+Target angle: -0.032256.
+Setting angular vel to: -0.163849
+
+l=0.522939, r=0.477061, linearSpeed=0.500000, angularVel=-0.163849, maxAngVel=7.142857
+
+Target angle: -0.032770.
+Setting angular vel to: -0.163115
+
+l=0.522836, r=0.477164, linearSpeed=0.500000, angularVel=-0.163115, maxAngVel=7.142857
+
+Target angle: -0.032623.
+Setting angular vel to: -0.157613
+
+l=0.522066, r=0.477934, linearSpeed=0.500000, angularVel=-0.157613, maxAngVel=7.142857
+
+Target angle: -0.031523.
+Setting angular vel to: -0.145509
+
+l=0.520371, r=0.479629, linearSpeed=0.500000, angularVel=-0.145509, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.029102.
+Setting angular vel to: -0.141107
+
+l=0.519755, r=0.480245, linearSpeed=0.500000, angularVel=-0.141107, maxAngVel=7.142857
+
+Target angle: -0.028221.
+Setting angular vel to: -0.145509
+
+l=0.520371, r=0.479629, linearSpeed=0.500000, angularVel=-0.145509, maxAngVel=7.142857
+
+Target angle: -0.029102.
+Setting angular vel to: -0.142574
+
+l=0.519960, r=0.480040, linearSpeed=0.500000, angularVel=-0.142574, maxAngVel=7.142857
+
+Target angle: -0.028515.
+Setting angular vel to: -0.137072
+
+l=0.519190, r=0.480810, linearSpeed=0.500000, angularVel=-0.137072, maxAngVel=7.142857
+
+Target angle: -0.027414.
+Setting angular vel to: -0.126068
+
+l=0.517650, r=0.482350, linearSpeed=0.500000, angularVel=-0.126068, maxAngVel=7.142857
+
+Target angle: -0.025214.
+Setting angular vel to: -0.110663
+
+l=0.515493, r=0.484507, linearSpeed=0.500000, angularVel=-0.110663, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.022133.
+Setting angular vel to: -0.112130
+
+l=0.515698, r=0.484302, linearSpeed=0.500000, angularVel=-0.112130, maxAngVel=7.142857
+
+Target angle: -0.022426.
+Setting angular vel to: -0.123501
+
+l=0.517290, r=0.482710, linearSpeed=0.500000, angularVel=-0.123501, maxAngVel=7.142857
+
+Target angle: -0.024700.
+Setting angular vel to: -0.138173
+
+l=0.519344, r=0.480656, linearSpeed=0.500000, angularVel=-0.138173, maxAngVel=7.142857
+
+Target angle: -0.027635.
+Setting angular vel to: -0.156513
+
+l=0.521912, r=0.478088, linearSpeed=0.500000, angularVel=-0.156513, maxAngVel=7.142857
+
+Target angle: -0.031303.
+Setting angular vel to: -0.172285
+
+l=0.524120, r=0.475880, linearSpeed=0.500000, angularVel=-0.172285, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.034457.
+Setting angular vel to: -0.184022
+
+l=0.525763, r=0.474237, linearSpeed=0.500000, angularVel=-0.184022, maxAngVel=7.142857
+
+Target angle: -0.036804.
+Setting angular vel to: -0.189524
+
+l=0.526533, r=0.473467, linearSpeed=0.500000, angularVel=-0.189524, maxAngVel=7.142857
+
+Target angle: -0.037905.
+Setting angular vel to: -0.186223
+
+l=0.526071, r=0.473929, linearSpeed=0.500000, angularVel=-0.186223, maxAngVel=7.142857
+
+Target angle: -0.037245.
+Setting angular vel to: -0.176320
+
+l=0.524685, r=0.475315, linearSpeed=0.500000, angularVel=-0.176320, maxAngVel=7.142857
+
+Target angle: -0.035264.
+Setting angular vel to: -0.168250
+
+l=0.523555, r=0.476445, linearSpeed=0.500000, angularVel=-0.168250, maxAngVel=7.142857
+
+Setting angular vel to: 0.435434
+
+l=0.439039, r=0.560961, linearSpeed=0.500000, angularVel=0.435434, maxAngVel=7.142857
+
+Target angle: 0.087087.
+Setting angular vel to: 0.439836
+
+l=0.438423, r=0.561577, linearSpeed=0.500000, angularVel=0.439836, maxAngVel=7.142857
+
+Target angle: 0.087967.
+Setting angular vel to: 0.443137
+
+l=0.437961, r=0.562039, linearSpeed=0.500000, angularVel=0.443137, maxAngVel=7.142857
+
+Target angle: 0.088627.
+Setting angular vel to: 0.428465
+
+l=0.440015, r=0.559985, linearSpeed=0.500000, angularVel=0.428465, maxAngVel=7.142857
+
+Target angle: 0.085693.
+Setting angular vel to: 0.409392
+
+l=0.442685, r=0.557315, linearSpeed=0.500000, angularVel=0.409392, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.723157, bodyflag=0
+Target angle: 0.081878.
+Setting angular vel to: 0.373446
+
+l=0.447718, r=0.552282, linearSpeed=0.500000, angularVel=0.373446, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.074689.
+Setting angular vel to: 0.331631
+
+l=0.453572, r=0.546428, linearSpeed=0.500000, angularVel=0.331631, maxAngVel=7.142857
+
+Target angle: 0.066326.
+Setting angular vel to: 0.289082
+
+l=0.459529, r=0.540471, linearSpeed=0.500000, angularVel=0.289082, maxAngVel=7.142857
+
+Target angle: 0.057816.
+Setting angular vel to: 0.255703
+
+l=0.464202, r=0.535798, linearSpeed=0.500000, angularVel=0.255703, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.716445, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.051141.
+Setting angular vel to: 0.221224
+
+l=0.469029, r=0.530971, linearSpeed=0.500000, angularVel=0.221224, maxAngVel=7.142857
+
+Target angle: 0.044245.
+Setting angular vel to: 0.188579
+
+l=0.473599, r=0.526401, linearSpeed=0.500000, angularVel=0.188579, maxAngVel=7.142857
+
+Setting angular vel to: 0.506293
+
+l=0.429119, r=0.570881, linearSpeed=0.500000, angularVel=0.506293, maxAngVel=7.142857
+
+Target angle: 0.101259.
+Setting angular vel to: 0.485753
+
+l=0.431995, r=0.568005, linearSpeed=0.500000, angularVel=0.485753, maxAngVel=7.142857
+
+Target angle: 0.097151.
+Setting angular vel to: 0.470347
+
+l=0.434151, r=0.565849, linearSpeed=0.500000, angularVel=0.470347, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.711176, bodyflag=0
+Target angle: 0.094069.
+Setting angular vel to: 0.446505
+
+l=0.437489, r=0.562511, linearSpeed=0.500000, angularVel=0.446505, maxAngVel=7.142857
+
+Target angle: 0.089301.
+Setting angular vel to: 0.422664
+
+l=0.440827, r=0.559173, linearSpeed=0.500000, angularVel=0.422664, maxAngVel=7.142857
+
+Target angle: 0.084533.
+Setting angular vel to: 0.406524
+
+l=0.443087, r=0.556913, linearSpeed=0.500000, angularVel=0.406524, maxAngVel=7.142857
+
+Setting angular vel to: 0.468304
+
+l=0.434437, r=0.565563, linearSpeed=0.500000, angularVel=0.468304, maxAngVel=7.142857
+
+Target angle: 0.093661.
+Setting angular vel to: 0.459868
+
+l=0.435619, r=0.564381, linearSpeed=0.500000, angularVel=0.459868, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.690438, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.091974.
+Setting angular vel to: 0.445196
+
+l=0.437673, r=0.562327, linearSpeed=0.500000, angularVel=0.445196, maxAngVel=7.142857
+
+Target angle: 0.089039.
+Setting angular vel to: 0.409250
+
+l=0.442705, r=0.557295, linearSpeed=0.500000, angularVel=0.409250, maxAngVel=7.142857
+
+Target angle: 0.081850.
+Setting angular vel to: 0.358632
+
+l=0.449792, r=0.550208, linearSpeed=0.500000, angularVel=0.358632, maxAngVel=7.142857
+
+Target angle: 0.071726.
+Setting angular vel to: 0.312048
+
+l=0.456313, r=0.543687, linearSpeed=0.500000, angularVel=0.312048, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.693449, bodyflag=0
+Targetloc: Contour discarded.
+Target angle: 0.062410.
+Setting angular vel to: 0.272067
+
+l=0.461911, r=0.538089, linearSpeed=0.500000, angularVel=0.272067, maxAngVel=7.142857
+
+Target angle: 0.054413.
+Setting angular vel to: 0.238689
+
+l=0.466584, r=0.533416, linearSpeed=0.500000, angularVel=0.238689, maxAngVel=7.142857
+
+Target angle: 0.047738.
+Setting angular vel to: 0.217414
+
+l=0.469562, r=0.530438, linearSpeed=0.500000, angularVel=0.217414, maxAngVel=7.142857
+
+Target angle: 0.043483.
+Setting angular vel to: 0.199808
+
+l=0.472027, r=0.527973, linearSpeed=0.500000, angularVel=0.199808, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.684139, bodyflag=0
+Target angle: 0.039962.
+Setting angular vel to: 0.175233
+
+l=0.475467, r=0.524533, linearSpeed=0.500000, angularVel=0.175233, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.035047.
+Setting angular vel to: 0.147356
+
+l=0.479370, r=0.520630, linearSpeed=0.500000, angularVel=0.147356, maxAngVel=7.142857
+
+Target angle: 0.029471.
+Setting angular vel to: 0.127182
+
+l=0.482195, r=0.517806, linearSpeed=0.500000, angularVel=0.127182, maxAngVel=7.142857
+
+Target angle: 0.025436.
+Setting angular vel to: 0.114711
+
+l=0.483940, r=0.516060, linearSpeed=0.500000, angularVel=0.114711, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.679608, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.022942.
+Setting angular vel to: 0.103707
+
+l=0.485481, r=0.514519, linearSpeed=0.500000, angularVel=0.103707, maxAngVel=7.142857
+
+Target angle: 0.020741.
+Setting angular vel to: 0.084267
+
+l=0.488203, r=0.511797, linearSpeed=0.500000, angularVel=0.084267, maxAngVel=7.142857
+
+Setting angular vel to: 0.395489
+
+l=0.444632, r=0.555368, linearSpeed=0.500000, angularVel=0.395489, maxAngVel=7.142857
+
+Target angle: 0.079098.
+Setting angular vel to: 0.377515
+
+l=0.447148, r=0.552852, linearSpeed=0.500000, angularVel=0.377515, maxAngVel=7.142857
+
+Target angle: 0.075503.
+Setting angular vel to: 0.358442
+
+l=0.449818, r=0.550182, linearSpeed=0.500000, angularVel=0.358442, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.685728, bodyflag=0
+Target angle: 0.071688.
+Setting angular vel to: 0.347805
+
+l=0.451307, r=0.548693, linearSpeed=0.500000, angularVel=0.347805, maxAngVel=7.142857
+
+Target angle: 0.069561.
+Setting angular vel to: 0.346704
+
+l=0.451461, r=0.548539, linearSpeed=0.500000, angularVel=0.346704, maxAngVel=7.142857
+
+Target angle: 0.069341.
+Setting angular vel to: 0.333867
+
+l=0.453259, r=0.546741, linearSpeed=0.500000, angularVel=0.333867, maxAngVel=7.142857
+
+Setting angular vel to: 0.403850
+
+l=0.443461, r=0.556539, linearSpeed=0.500000, angularVel=0.403850, maxAngVel=7.142857
+
+Target angle: 0.080770.
+Setting angular vel to: 0.372672
+
+l=0.447826, r=0.552174, linearSpeed=0.500000, angularVel=0.372672, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.675186, bodyflag=0
+Target angle: 0.074534.
+Setting angular vel to: 0.334158
+
+l=0.453218, r=0.546782, linearSpeed=0.500000, angularVel=0.334158, maxAngVel=7.142857
+
+Target angle: 0.066832.
+Setting angular vel to: 0.294178
+
+l=0.458815, r=0.541185, linearSpeed=0.500000, angularVel=0.294178, maxAngVel=7.142857
+
+Target angle: 0.058835.
+Setting angular vel to: 0.256031
+
+l=0.464156, r=0.535844, linearSpeed=0.500000, angularVel=0.256031, maxAngVel=7.142857
+
+Target angle: 0.051206.
+Setting angular vel to: 0.227420
+
+l=0.468161, r=0.531839, linearSpeed=0.500000, angularVel=0.227420, maxAngVel=7.142857
+
+Setting angular vel to: 0.414198
+
+l=0.442012, r=0.557988, linearSpeed=0.500000, angularVel=0.414198, maxAngVel=7.142857
+
+Target angle: 0.082840.
+Setting angular vel to: 0.392557
+
+l=0.445042, r=0.554958, linearSpeed=0.500000, angularVel=0.392557, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.676581, bodyflag=0
+Target angle: 0.078511.
+Setting angular vel to: 0.373850
+
+l=0.447661, r=0.552339, linearSpeed=0.500000, angularVel=0.373850, maxAngVel=7.142857
+
+Target angle: 0.074770.
+Setting angular vel to: 0.362846
+
+l=0.449202, r=0.550798, linearSpeed=0.500000, angularVel=0.362846, maxAngVel=7.142857
+
+Target angle: 0.072569.
+Setting angular vel to: 0.352576
+
+l=0.450639, r=0.549361, linearSpeed=0.500000, angularVel=0.352576, maxAngVel=7.142857
+
+Target angle: 0.070515.
+Setting angular vel to: 0.330934
+
+l=0.453669, r=0.546331, linearSpeed=0.500000, angularVel=0.330934, maxAngVel=7.142857
+
+Target angle: 0.066187.
+Setting angular vel to: 0.302691
+
+l=0.457623, r=0.542377, linearSpeed=0.500000, angularVel=0.302691, maxAngVel=7.142857
+
+Setting angular vel to: 0.373479
+
+l=0.447713, r=0.552287, linearSpeed=0.500000, angularVel=0.373479, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.674412, bodyflag=0
+Target angle: 0.074696.
+Setting angular vel to: 0.347069
+
+l=0.451410, r=0.548590, linearSpeed=0.500000, angularVel=0.347069, maxAngVel=7.142857
+
+Target angle: 0.069414.
+Setting angular vel to: 0.320293
+
+l=0.455159, r=0.544841, linearSpeed=0.500000, angularVel=0.320293, maxAngVel=7.142857
+
+Target angle: 0.064059.
+Setting angular vel to: 0.301953
+
+l=0.457727, r=0.542273, linearSpeed=0.500000, angularVel=0.301953, maxAngVel=7.142857
+
+Target angle: 0.060391.
+Setting angular vel to: 0.288748
+
+l=0.459575, r=0.540425, linearSpeed=0.500000, angularVel=0.288748, maxAngVel=7.142857
+
+Target angle: 0.057750.
+Setting angular vel to: 0.266374
+
+l=0.462708, r=0.537292, linearSpeed=0.500000, angularVel=0.266374, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.667205, bodyflag=0
+Target angle: 0.053275.
+Setting angular vel to: 0.234829
+
+l=0.467124, r=0.532876, linearSpeed=0.500000, angularVel=0.234829, maxAngVel=7.142857
+
+Setting angular vel to: 0.376022
+
+l=0.447357, r=0.552643, linearSpeed=0.500000, angularVel=0.376022, maxAngVel=7.142857
+
+Target angle: 0.075204.
+Setting angular vel to: 0.349613
+
+l=0.451054, r=0.548946, linearSpeed=0.500000, angularVel=0.349613, maxAngVel=7.142857
+
+Target angle: 0.069923.
+Setting angular vel to: 0.320269
+
+l=0.455162, r=0.544838, linearSpeed=0.500000, angularVel=0.320269, maxAngVel=7.142857
+
+Target angle: 0.064054.
+Setting angular vel to: 0.290192
+
+l=0.459373, r=0.540627, linearSpeed=0.500000, angularVel=0.290192, maxAngVel=7.142857
+
+Target angle: 0.058038.
+Setting angular vel to: 0.260114
+
+l=0.463584, r=0.536416, linearSpeed=0.500000, angularVel=0.260114, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.662061, bodyflag=0
+Target angle: 0.052023.
+Setting angular vel to: 0.230037
+
+l=0.467795, r=0.532205, linearSpeed=0.500000, angularVel=0.230037, maxAngVel=7.142857
+
+Setting angular vel to: 0.359764
+
+l=0.449633, r=0.550367, linearSpeed=0.500000, angularVel=0.359764, maxAngVel=7.142857
+
+Target angle: 0.071953.
+Setting angular vel to: 0.333721
+
+l=0.453279, r=0.546721, linearSpeed=0.500000, angularVel=0.333721, maxAngVel=7.142857
+
+Target angle: 0.066744.
+Setting angular vel to: 0.320150
+
+l=0.455179, r=0.544821, linearSpeed=0.500000, angularVel=0.320150, maxAngVel=7.142857
+
+Target angle: 0.064030.
+Setting angular vel to: 0.308412
+
+l=0.456822, r=0.543178, linearSpeed=0.500000, angularVel=0.308412, maxAngVel=7.142857
+
+Target angle: 0.061682.
+Setting angular vel to: 0.288238
+
+l=0.459647, r=0.540353, linearSpeed=0.500000, angularVel=0.288238, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.660809, bodyflag=0
+Target angle: 0.057648.
+Setting angular vel to: 0.268431
+
+l=0.462420, r=0.537580, linearSpeed=0.500000, angularVel=0.268431, maxAngVel=7.142857
+
+Setting angular vel to: 0.335187
+
+l=0.453074, r=0.546926, linearSpeed=0.500000, angularVel=0.335187, maxAngVel=7.142857
+
+Target angle: 0.067037.
+Setting angular vel to: 0.312813
+
+l=0.456206, r=0.543794, linearSpeed=0.500000, angularVel=0.312813, maxAngVel=7.142857
+
+Target angle: 0.062563.
+Setting angular vel to: 0.291538
+
+l=0.459185, r=0.540815, linearSpeed=0.500000, angularVel=0.291538, maxAngVel=7.142857
+
+Target angle: 0.058308.
+Setting angular vel to: 0.275032
+
+l=0.461495, r=0.538505, linearSpeed=0.500000, angularVel=0.275032, maxAngVel=7.142857
+
+Target angle: 0.055006.
+Setting angular vel to: 0.259260
+
+l=0.463704, r=0.536296, linearSpeed=0.500000, angularVel=0.259260, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.648395, bodyflag=0
+Target angle: 0.051852.
+Setting angular vel to: 0.243488
+
+l=0.465912, r=0.534088, linearSpeed=0.500000, angularVel=0.243488, maxAngVel=7.142857
+
+Target angle: 0.048698.
+Setting angular vel to: 0.229550
+
+l=0.467863, r=0.532137, linearSpeed=0.500000, angularVel=0.229550, maxAngVel=7.142857
+
+Setting angular vel to: 0.333471
+
+l=0.453314, r=0.546686, linearSpeed=0.500000, angularVel=0.333471, maxAngVel=7.142857
+
+Target angle: 0.066694.
+Setting angular vel to: 0.315864
+
+l=0.455779, r=0.544221, linearSpeed=0.500000, angularVel=0.315864, maxAngVel=7.142857
+
+Target angle: 0.063173.
+Setting angular vel to: 0.297891
+
+l=0.458295, r=0.541705, linearSpeed=0.500000, angularVel=0.297891, maxAngVel=7.142857
+
+Target angle: 0.059578.
+Setting angular vel to: 0.281752
+
+l=0.460555, r=0.539445, linearSpeed=0.500000, angularVel=0.281752, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.646449, bodyflag=0
+Target angle: 0.056350.
+Setting angular vel to: 0.256810
+
+l=0.464047, r=0.535953, linearSpeed=0.500000, angularVel=0.256810, maxAngVel=7.142857
+
+Target angle: 0.051362.
+Setting angular vel to: 0.224532
+
+l=0.468566, r=0.531434, linearSpeed=0.500000, angularVel=0.224532, maxAngVel=7.142857
+
+Setting angular vel to: 0.349786
+
+l=0.451030, r=0.548970, linearSpeed=0.500000, angularVel=0.349786, maxAngVel=7.142857
+
+Target angle: 0.069957.
+Setting angular vel to: 0.318608
+
+l=0.455395, r=0.544605, linearSpeed=0.500000, angularVel=0.318608, maxAngVel=7.142857
+
+Target angle: 0.063722.
+Setting angular vel to: 0.295866
+
+l=0.458579, r=0.541421, linearSpeed=0.500000, angularVel=0.295866, maxAngVel=7.142857
+
+Target angle: 0.059173.
+Setting angular vel to: 0.283762
+
+l=0.460273, r=0.539727, linearSpeed=0.500000, angularVel=0.283762, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.640760, bodyflag=0
+Target angle: 0.056752.
+Setting angular vel to: 0.279727
+
+l=0.460838, r=0.539162, linearSpeed=0.500000, angularVel=0.279727, maxAngVel=7.142857
+
+Target angle: 0.055945.
+Setting angular vel to: 0.274225
+
+l=0.461608, r=0.538392, linearSpeed=0.500000, angularVel=0.274225, maxAngVel=7.142857
+
+Setting angular vel to: 0.331365
+
+l=0.453609, r=0.546391, linearSpeed=0.500000, angularVel=0.331365, maxAngVel=7.142857
+
+Target angle: 0.066273.
+Setting angular vel to: 0.314126
+
+l=0.456022, r=0.543978, linearSpeed=0.500000, angularVel=0.314126, maxAngVel=7.142857
+
+Target angle: 0.062825.
+Setting angular vel to: 0.299087
+
+l=0.458128, r=0.541872, linearSpeed=0.500000, angularVel=0.299087, maxAngVel=7.142857
+
+Target angle: 0.059817.
+Setting angular vel to: 0.281481
+
+l=0.460593, r=0.539407, linearSpeed=0.500000, angularVel=0.281481, maxAngVel=7.142857
+
+Target angle: 0.056296.
+Setting angular vel to: 0.259473
+
+l=0.463674, r=0.536326, linearSpeed=0.500000, angularVel=0.259473, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.635605, bodyflag=0
+Target angle: 0.051895.
+Setting angular vel to: 0.243334
+
+l=0.465933, r=0.534067, linearSpeed=0.500000, angularVel=0.243334, maxAngVel=7.142857
+
+Setting angular vel to: 0.357927
+
+l=0.449890, r=0.550110, linearSpeed=0.500000, angularVel=0.357927, maxAngVel=7.142857
+
+Target angle: 0.071585.
+Setting angular vel to: 0.343255
+
+l=0.451944, r=0.548056, linearSpeed=0.500000, angularVel=0.343255, maxAngVel=7.142857
+
+Target angle: 0.068651.
+Setting angular vel to: 0.316112
+
+l=0.455744, r=0.544256, linearSpeed=0.500000, angularVel=0.316112, maxAngVel=7.142857
+
+Target angle: 0.063222.
+Setting angular vel to: 0.282000
+
+l=0.460520, r=0.539480, linearSpeed=0.500000, angularVel=0.282000, maxAngVel=7.142857
+
+Target angle: 0.056400.
+Setting angular vel to: 0.253757
+
+l=0.464474, r=0.535526, linearSpeed=0.500000, angularVel=0.253757, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.629615, bodyflag=0
+Target angle: 0.050751.
+Setting angular vel to: 0.229181
+
+l=0.467915, r=0.532085, linearSpeed=0.500000, angularVel=0.229181, maxAngVel=7.142857
+
+Setting angular vel to: 0.366838
+
+l=0.448643, r=0.551357, linearSpeed=0.500000, angularVel=0.366838, maxAngVel=7.142857
+
+Target angle: 0.073368.
+Setting angular vel to: 0.341529
+
+l=0.452186, r=0.547814, linearSpeed=0.500000, angularVel=0.341529, maxAngVel=7.142857
+
+Target angle: 0.068306.
+Setting angular vel to: 0.320621
+
+l=0.455113, r=0.544887, linearSpeed=0.500000, angularVel=0.320621, maxAngVel=7.142857
+
+Target angle: 0.064124.
+Setting angular vel to: 0.300814
+
+l=0.457886, r=0.542114, linearSpeed=0.500000, angularVel=0.300814, maxAngVel=7.142857
+
+Target angle: 0.060163.
+Setting angular vel to: 0.281741
+
+l=0.460556, r=0.539444, linearSpeed=0.500000, angularVel=0.281741, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.625449, bodyflag=0
+Target angle: 0.056348.
+Setting angular vel to: 0.256799
+
+l=0.464048, r=0.535952, linearSpeed=0.500000, angularVel=0.256799, maxAngVel=7.142857
+
+Setting angular vel to: 0.336546
+
+l=0.452884, r=0.547117, linearSpeed=0.500000, angularVel=0.336546, maxAngVel=7.142857
+
+Target angle: 0.067309.
+Setting angular vel to: 0.304635
+
+l=0.457351, r=0.542649, linearSpeed=0.500000, angularVel=0.304635, maxAngVel=7.142857
+
+Target angle: 0.060927.
+Setting angular vel to: 0.270890
+
+l=0.462075, r=0.537925, linearSpeed=0.500000, angularVel=0.270890, maxAngVel=7.142857
+
+Target angle: 0.054178.
+Setting angular vel to: 0.248515
+
+l=0.465208, r=0.534792, linearSpeed=0.500000, angularVel=0.248515, maxAngVel=7.142857
+
+Target angle: 0.049703.
+Setting angular vel to: 0.232009
+
+l=0.467519, r=0.532481, linearSpeed=0.500000, angularVel=0.232009, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.618982, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.046402.
+Setting angular vel to: 0.209634
+
+l=0.470651, r=0.529349, linearSpeed=0.500000, angularVel=0.209634, maxAngVel=7.142857
+
+Setting angular vel to: 0.318918
+
+l=0.455351, r=0.544649, linearSpeed=0.500000, angularVel=0.318918, maxAngVel=7.142857
+
+Target angle: 0.063784.
+Setting angular vel to: 0.298744
+
+l=0.458176, r=0.541824, linearSpeed=0.500000, angularVel=0.298744, maxAngVel=7.142857
+
+Target angle: 0.059749.
+Setting angular vel to: 0.283706
+
+l=0.460281, r=0.539719, linearSpeed=0.500000, angularVel=0.283706, maxAngVel=7.142857
+
+Target angle: 0.056741.
+Setting angular vel to: 0.272335
+
+l=0.461873, r=0.538127, linearSpeed=0.500000, angularVel=0.272335, maxAngVel=7.142857
+
+Target angle: 0.054467.
+Setting angular vel to: 0.263165
+
+l=0.463157, r=0.536843, linearSpeed=0.500000, angularVel=0.263165, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.616743, bodyflag=0
+Target angle: 0.052633.
+Setting angular vel to: 0.257296
+
+l=0.463979, r=0.536021, linearSpeed=0.500000, angularVel=0.257296, maxAngVel=7.142857
+
+Setting angular vel to: 0.315739
+
+l=0.455797, r=0.544203, linearSpeed=0.500000, angularVel=0.315739, maxAngVel=7.142857
+
+Target angle: 0.063148.
+Setting angular vel to: 0.303268
+
+l=0.457543, r=0.542458, linearSpeed=0.500000, angularVel=0.303268, maxAngVel=7.142857
+
+Target angle: 0.060654.
+Setting angular vel to: 0.288963
+
+l=0.459545, r=0.540455, linearSpeed=0.500000, angularVel=0.288963, maxAngVel=7.142857
+
+Target angle: 0.057793.
+Setting angular vel to: 0.277959
+
+l=0.461086, r=0.538914, linearSpeed=0.500000, angularVel=0.277959, maxAngVel=7.142857
+
+Target angle: 0.055592.
+Setting angular vel to: 0.259252
+
+l=0.463705, r=0.536295, linearSpeed=0.500000, angularVel=0.259252, maxAngVel=7.142857
+
+Target angle: 0.051850.
+Setting angular vel to: 0.230642
+
+l=0.467710, r=0.532290, linearSpeed=0.500000, angularVel=0.230642, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.610451, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.046128.
+Setting angular vel to: 0.197630
+
+l=0.472332, r=0.527668, linearSpeed=0.500000, angularVel=0.197630, maxAngVel=7.142857
+
+Target angle: 0.039526.
+Setting angular vel to: 0.172321
+
+l=0.475875, r=0.524125, linearSpeed=0.500000, angularVel=0.172321, maxAngVel=7.142857
+
+Setting angular vel to: 0.348866
+
+l=0.451159, r=0.548841, linearSpeed=0.500000, angularVel=0.348866, maxAngVel=7.142857
+
+Target angle: 0.069773.
+Setting angular vel to: 0.334561
+
+l=0.453162, r=0.546838, linearSpeed=0.500000, angularVel=0.334561, maxAngVel=7.142857
+
+Target angle: 0.066912.
+Setting angular vel to: 0.326124
+
+l=0.454343, r=0.545657, linearSpeed=0.500000, angularVel=0.326124, maxAngVel=7.142857
+
+Target angle: 0.065225.
+Setting angular vel to: 0.322456
+
+l=0.454856, r=0.545144, linearSpeed=0.500000, angularVel=0.322456, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.606673, bodyflag=0
+Target angle: 0.064491.
+Setting angular vel to: 0.315120
+
+l=0.455883, r=0.544117, linearSpeed=0.500000, angularVel=0.315120, maxAngVel=7.142857
+
+Target angle: 0.063024.
+Setting angular vel to: 0.305217
+
+l=0.457270, r=0.542730, linearSpeed=0.500000, angularVel=0.305217, maxAngVel=7.142857
+
+Setting angular vel to: 0.343656
+
+l=0.451888, r=0.548112, linearSpeed=0.500000, angularVel=0.343656, maxAngVel=7.142857
+
+Target angle: 0.068731.
+Setting angular vel to: 0.323482
+
+l=0.454713, r=0.545287, linearSpeed=0.500000, angularVel=0.323482, maxAngVel=7.142857
+
+Target angle: 0.064696.
+Setting angular vel to: 0.305142
+
+l=0.457280, r=0.542720, linearSpeed=0.500000, angularVel=0.305142, maxAngVel=7.142857
+
+Target angle: 0.061028.
+Setting angular vel to: 0.290837
+
+l=0.459283, r=0.540717, linearSpeed=0.500000, angularVel=0.290837, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.602055, bodyflag=0
+Target angle: 0.058167.
+Setting angular vel to: 0.267362
+
+l=0.462569, r=0.537431, linearSpeed=0.500000, angularVel=0.267362, maxAngVel=7.142857
+
+Target angle: 0.053472.
+Setting angular vel to: 0.236551
+
+l=0.466883, r=0.533117, linearSpeed=0.500000, angularVel=0.236551, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.047310.
+Setting angular vel to: 0.208307
+
+l=0.470837, r=0.529163, linearSpeed=0.500000, angularVel=0.208307, maxAngVel=7.142857
+
+Target angle: 0.041661.
+Setting angular vel to: 0.185199
+
+l=0.474072, r=0.525928, linearSpeed=0.500000, angularVel=0.185199, maxAngVel=7.142857
+
+Target angle: 0.037040.
+Setting angular vel to: 0.162091
+
+l=0.477307, r=0.522693, linearSpeed=0.500000, angularVel=0.162091, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.597438, bodyflag=0
+Target angle: 0.032418.
+Setting angular vel to: 0.147786
+
+l=0.479310, r=0.520690, linearSpeed=0.500000, angularVel=0.147786, maxAngVel=7.142857
+
+Target angle: 0.029557.
+Setting angular vel to: 0.132013
+
+l=0.481518, r=0.518482, linearSpeed=0.500000, angularVel=0.132013, maxAngVel=7.142857
+
+Setting angular vel to: 0.363936
+
+l=0.449049, r=0.550951, linearSpeed=0.500000, angularVel=0.363936, maxAngVel=7.142857
+
+Target angle: 0.072787.
+Setting angular vel to: 0.343762
+
+l=0.451873, r=0.548127, linearSpeed=0.500000, angularVel=0.343762, maxAngVel=7.142857
+
+Target angle: 0.068752.
+Setting angular vel to: 0.321388
+
+l=0.455006, r=0.544994, linearSpeed=0.500000, angularVel=0.321388, maxAngVel=7.142857
+
+Target angle: 0.064278.
+Setting angular vel to: 0.296445
+
+l=0.458498, r=0.541502, linearSpeed=0.500000, angularVel=0.296445, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.593836, bodyflag=0
+Target angle: 0.059289.
+Setting angular vel to: 0.264901
+
+l=0.462914, r=0.537086, linearSpeed=0.500000, angularVel=0.264901, maxAngVel=7.142857
+
+Target angle: 0.052980.
+Setting angular vel to: 0.237024
+
+l=0.466817, r=0.533183, linearSpeed=0.500000, angularVel=0.237024, maxAngVel=7.142857
+
+Setting angular vel to: 0.369100
+
+l=0.448326, r=0.551674, linearSpeed=0.500000, angularVel=0.369100, maxAngVel=7.142857
+
+Target angle: 0.073820.
+Setting angular vel to: 0.349659
+
+l=0.451048, r=0.548952, linearSpeed=0.500000, angularVel=0.349659, maxAngVel=7.142857
+
+Target angle: 0.069932.
+Setting angular vel to: 0.328385
+
+l=0.454026, r=0.545974, linearSpeed=0.500000, angularVel=0.328385, maxAngVel=7.142857
+
+Target angle: 0.065677.
+Setting angular vel to: 0.307478
+
+l=0.456953, r=0.543047, linearSpeed=0.500000, angularVel=0.307478, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.589849, bodyflag=0
+Target angle: 0.061496.
+Setting angular vel to: 0.286203
+
+l=0.459932, r=0.540068, linearSpeed=0.500000, angularVel=0.286203, maxAngVel=7.142857
+
+Target angle: 0.057241.
+Setting angular vel to: 0.264196
+
+l=0.463013, r=0.536987, linearSpeed=0.500000, angularVel=0.264196, maxAngVel=7.142857
+
+Setting angular vel to: 0.345878
+
+l=0.451577, r=0.548423, linearSpeed=0.500000, angularVel=0.345878, maxAngVel=7.142857
+
+Target angle: 0.069176.
+Setting angular vel to: 0.326804
+
+l=0.454247, r=0.545753, linearSpeed=0.500000, angularVel=0.326804, maxAngVel=7.142857
+
+Target angle: 0.065361.
+Setting angular vel to: 0.304429
+
+l=0.457380, r=0.542620, linearSpeed=0.500000, angularVel=0.304429, maxAngVel=7.142857
+
+Target angle: 0.060886.
+Setting angular vel to: 0.276553
+
+l=0.461283, r=0.538717, linearSpeed=0.500000, angularVel=0.276553, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.586591, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.055311.
+Setting angular vel to: 0.252344
+
+l=0.464672, r=0.535328, linearSpeed=0.500000, angularVel=0.252344, maxAngVel=7.142857
+
+Target angle: 0.050469.
+Setting angular vel to: 0.232904
+
+l=0.467393, r=0.532607, linearSpeed=0.500000, angularVel=0.232904, maxAngVel=7.142857
+
+Target angle: 0.046581.
+Setting angular vel to: 0.209796
+
+l=0.470629, r=0.529371, linearSpeed=0.500000, angularVel=0.209796, maxAngVel=7.142857
+
+Setting angular vel to: 0.343894
+
+l=0.451855, r=0.548145, linearSpeed=0.500000, angularVel=0.343894, maxAngVel=7.142857
+
+Target angle: 0.068779.
+Setting angular vel to: 0.323353
+
+l=0.454731, r=0.545269, linearSpeed=0.500000, angularVel=0.323353, maxAngVel=7.142857
+
+Target angle: 0.064671.
+Setting angular vel to: 0.300979
+
+l=0.457863, r=0.542137, linearSpeed=0.500000, angularVel=0.300979, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.581975, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.060196.
+Setting angular vel to: 0.275303
+
+l=0.461458, r=0.538542, linearSpeed=0.500000, angularVel=0.275303, maxAngVel=7.142857
+
+Target angle: 0.055061.
+Setting angular vel to: 0.253662
+
+l=0.464487, r=0.535513, linearSpeed=0.500000, angularVel=0.253662, maxAngVel=7.142857
+
+Target angle: 0.050732.
+Setting angular vel to: 0.230187
+
+l=0.467774, r=0.532226, linearSpeed=0.500000, angularVel=0.230187, maxAngVel=7.142857
+
+Setting angular vel to: 0.330646
+
+l=0.453710, r=0.546290, linearSpeed=0.500000, angularVel=0.330646, maxAngVel=7.142857
+
+Target angle: 0.066129.
+Setting angular vel to: 0.298734
+
+l=0.458177, r=0.541823, linearSpeed=0.500000, angularVel=0.298734, maxAngVel=7.142857
+
+Target angle: 0.059747.
+Setting angular vel to: 0.266823
+
+l=0.462645, r=0.537355, linearSpeed=0.500000, angularVel=0.266823, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.578461, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.053365.
+Setting angular vel to: 0.233444
+
+l=0.467318, r=0.532682, linearSpeed=0.500000, angularVel=0.233444, maxAngVel=7.142857
+
+Target angle: 0.046689.
+Setting angular vel to: 0.200799
+
+l=0.471888, r=0.528112, linearSpeed=0.500000, angularVel=0.200799, maxAngVel=7.142857
+
+Target angle: 0.040160.
+Setting angular vel to: 0.176591
+
+l=0.475277, r=0.524723, linearSpeed=0.500000, angularVel=0.176591, maxAngVel=7.142857
+
+Setting angular vel to: 0.311826
+
+l=0.456344, r=0.543656, linearSpeed=0.500000, angularVel=0.311826, maxAngVel=7.142857
+
+Target angle: 0.062365.
+Setting angular vel to: 0.298622
+
+l=0.458193, r=0.541807, linearSpeed=0.500000, angularVel=0.298622, maxAngVel=7.142857
+
+Target angle: 0.059724.
+Setting angular vel to: 0.290185
+
+l=0.459374, r=0.540626, linearSpeed=0.500000, angularVel=0.290185, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.574267, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.058037.
+Setting angular vel to: 0.273679
+
+l=0.461685, r=0.538315, linearSpeed=0.500000, angularVel=0.273679, maxAngVel=7.142857
+
+Target angle: 0.054736.
+Setting angular vel to: 0.251671
+
+l=0.464766, r=0.535234, linearSpeed=0.500000, angularVel=0.251671, maxAngVel=7.142857
+
+Target angle: 0.050334.
+Setting angular vel to: 0.219393
+
+l=0.469285, r=0.530715, linearSpeed=0.500000, angularVel=0.219393, maxAngVel=7.142857
+
+Setting angular vel to: 0.288984
+
+l=0.459542, r=0.540458, linearSpeed=0.500000, angularVel=0.288984, maxAngVel=7.142857
+
+Target angle: 0.057797.
+Setting angular vel to: 0.264041
+
+l=0.463034, r=0.536966, linearSpeed=0.500000, angularVel=0.264041, maxAngVel=7.142857
+
+Target angle: 0.052808.
+Setting angular vel to: 0.247902
+
+l=0.465294, r=0.534706, linearSpeed=0.500000, angularVel=0.247902, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.571960, bodyflag=0
+Target angle: 0.049580.
+Setting angular vel to: 0.225161
+
+l=0.468477, r=0.531523, linearSpeed=0.500000, angularVel=0.225161, maxAngVel=7.142857
+
+Target angle: 0.045032.
+Setting angular vel to: 0.193249
+
+l=0.472945, r=0.527055, linearSpeed=0.500000, angularVel=0.193249, maxAngVel=7.142857
+
+Target angle: 0.038650.
+Setting angular vel to: 0.164272
+
+l=0.477002, r=0.522998, linearSpeed=0.500000, angularVel=0.164272, maxAngVel=7.142857
+
+Setting angular vel to: 0.281532
+
+l=0.460585, r=0.539415, linearSpeed=0.500000, angularVel=0.281532, maxAngVel=7.142857
+
+Target angle: 0.056306.
+Setting angular vel to: 0.252189
+
+l=0.464694, r=0.535306, linearSpeed=0.500000, angularVel=0.252189, maxAngVel=7.142857
+
+Target angle: 0.050438.
+Setting angular vel to: 0.234582
+
+l=0.467158, r=0.532842, linearSpeed=0.500000, angularVel=0.234582, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.570149, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.046916.
+Setting angular vel to: 0.219910
+
+l=0.469213, r=0.530787, linearSpeed=0.500000, angularVel=0.219910, maxAngVel=7.142857
+
+Target angle: 0.043982.
+Setting angular vel to: 0.214042
+
+l=0.470034, r=0.529966, linearSpeed=0.500000, angularVel=0.214042, maxAngVel=7.142857
+
+Target angle: 0.042808.
+Setting angular vel to: 0.209273
+
+l=0.470702, r=0.529298, linearSpeed=0.500000, angularVel=0.209273, maxAngVel=7.142857
+
+Setting angular vel to: 0.257873
+
+l=0.463898, r=0.536102, linearSpeed=0.500000, angularVel=0.257873, maxAngVel=7.142857
+
+Target angle: 0.051575.
+Setting angular vel to: 0.254205
+
+l=0.464411, r=0.535589, linearSpeed=0.500000, angularVel=0.254205, maxAngVel=7.142857
+
+Target angle: 0.050841.
+Setting angular vel to: 0.244669
+
+l=0.465746, r=0.534254, linearSpeed=0.500000, angularVel=0.244669, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.565272, bodyflag=0
+Target angle: 0.048934.
+Setting angular vel to: 0.223028
+
+l=0.468776, r=0.531224, linearSpeed=0.500000, angularVel=0.223028, maxAngVel=7.142857
+
+Target angle: 0.044606.
+Setting angular vel to: 0.203221
+
+l=0.471549, r=0.528451, linearSpeed=0.500000, angularVel=0.203221, maxAngVel=7.142857
+
+Target angle: 0.040644.
+Setting angular vel to: 0.187081
+
+l=0.473809, r=0.526191, linearSpeed=0.500000, angularVel=0.187081, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.037416.
+Setting angular vel to: 0.189282
+
+l=0.473500, r=0.526500, linearSpeed=0.500000, angularVel=0.189282, maxAngVel=7.142857
+
+Target angle: 0.037856.
+Setting angular vel to: 0.199553
+
+l=0.472063, r=0.527937, linearSpeed=0.500000, angularVel=0.199553, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.562977, bodyflag=0
+Target angle: 0.039911.
+Setting angular vel to: 0.194784
+
+l=0.472730, r=0.527270, linearSpeed=0.500000, angularVel=0.194784, maxAngVel=7.142857
+
+Target angle: 0.038957.
+Setting angular vel to: 0.173510
+
+l=0.475709, r=0.524291, linearSpeed=0.500000, angularVel=0.173510, maxAngVel=7.142857
+
+Target angle: 0.034702.
+Setting angular vel to: 0.139765
+
+l=0.480433, r=0.519567, linearSpeed=0.500000, angularVel=0.139765, maxAngVel=7.142857
+
+Setting angular vel to: 0.332605
+
+l=0.453435, r=0.546565, linearSpeed=0.500000, angularVel=0.332605, maxAngVel=7.142857
+
+Target angle: 0.066521.
+Setting angular vel to: 0.303628
+
+l=0.457492, r=0.542508, linearSpeed=0.500000, angularVel=0.303628, maxAngVel=7.142857
+
+Target angle: 0.060726.
+Setting angular vel to: 0.281620
+
+l=0.460573, r=0.539427, linearSpeed=0.500000, angularVel=0.281620, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.561222, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.056324.
+Setting angular vel to: 0.265114
+
+l=0.462884, r=0.537116, linearSpeed=0.500000, angularVel=0.265114, maxAngVel=7.142857
+
+Target angle: 0.053023.
+Setting angular vel to: 0.245674
+
+l=0.465606, r=0.534394, linearSpeed=0.500000, angularVel=0.245674, maxAngVel=7.142857
+
+Target angle: 0.049135.
+Setting angular vel to: 0.228434
+
+l=0.468019, r=0.531981, linearSpeed=0.500000, angularVel=0.228434, maxAngVel=7.142857
+
+Setting angular vel to: 0.337057
+
+l=0.452812, r=0.547188, linearSpeed=0.500000, angularVel=0.337057, maxAngVel=7.142857
+
+Target angle: 0.067411.
+Setting angular vel to: 0.327153
+
+l=0.454199, r=0.545801, linearSpeed=0.500000, angularVel=0.327153, maxAngVel=7.142857
+
+Target angle: 0.065431.
+Setting angular vel to: 0.312481
+
+l=0.456253, r=0.543747, linearSpeed=0.500000, angularVel=0.312481, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.558063, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.062496.
+Setting angular vel to: 0.294875
+
+l=0.458717, r=0.541283, linearSpeed=0.500000, angularVel=0.294875, maxAngVel=7.142857
+
+Target angle: 0.058975.
+Setting angular vel to: 0.267732
+
+l=0.462517, r=0.537483, linearSpeed=0.500000, angularVel=0.267732, maxAngVel=7.142857
+
+Target angle: 0.053546.
+Setting angular vel to: 0.238021
+
+l=0.466677, r=0.533323, linearSpeed=0.500000, angularVel=0.238021, maxAngVel=7.142857
+
+Setting angular vel to: 0.349410
+
+l=0.451083, r=0.548917, linearSpeed=0.500000, angularVel=0.349410, maxAngVel=7.142857
+
+Target angle: 0.069882.
+Setting angular vel to: 0.320800
+
+l=0.455088, r=0.544912, linearSpeed=0.500000, angularVel=0.320800, maxAngVel=7.142857
+
+Target angle: 0.064160.
+Setting angular vel to: 0.292557
+
+l=0.459042, r=0.540958, linearSpeed=0.500000, angularVel=0.292557, maxAngVel=7.142857
+
+Target angle: 0.058511.
+Setting angular vel to: 0.265414
+
+l=0.462842, r=0.537158, linearSpeed=0.500000, angularVel=0.265414, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.555428, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.053083.
+Setting angular vel to: 0.247074
+
+l=0.465410, r=0.534590, linearSpeed=0.500000, angularVel=0.247074, maxAngVel=7.142857
+
+Target angle: 0.049415.
+Setting angular vel to: 0.238637
+
+l=0.466591, r=0.533409, linearSpeed=0.500000, angularVel=0.238637, maxAngVel=7.142857
+
+Setting angular vel to: 0.331798
+
+l=0.453548, r=0.546452, linearSpeed=0.500000, angularVel=0.331798, maxAngVel=7.142857
+
+Target angle: 0.066360.
+Setting angular vel to: 0.313824
+
+l=0.456065, r=0.543935, linearSpeed=0.500000, angularVel=0.313824, maxAngVel=7.142857
+
+Target angle: 0.062765.
+Setting angular vel to: 0.287782
+
+l=0.459711, r=0.540289, linearSpeed=0.500000, angularVel=0.287782, maxAngVel=7.142857
+
+Target angle: 0.057556.
+Setting angular vel to: 0.255870
+
+l=0.464178, r=0.535822, linearSpeed=0.500000, angularVel=0.255870, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.552860, bodyflag=0
+Target angle: 0.051174.
+Setting angular vel to: 0.223225
+
+l=0.468748, r=0.531252, linearSpeed=0.500000, angularVel=0.223225, maxAngVel=7.142857
+
+Target angle: 0.044645.
+Setting angular vel to: 0.194248
+
+l=0.472805, r=0.527195, linearSpeed=0.500000, angularVel=0.194248, maxAngVel=7.142857
+
+Target angle: 0.038850.
+Setting angular vel to: 0.167839
+
+l=0.476503, r=0.523497, linearSpeed=0.500000, angularVel=0.167839, maxAngVel=7.142857
+
+Setting angular vel to: 0.333379
+
+l=0.453327, r=0.546673, linearSpeed=0.500000, angularVel=0.333379, maxAngVel=7.142857
+
+Target angle: 0.066676.
+Setting angular vel to: 0.298533
+
+l=0.458205, r=0.541795, linearSpeed=0.500000, angularVel=0.298533, maxAngVel=7.142857
+
+Target angle: 0.059707.
+Setting angular vel to: 0.260020
+
+l=0.463597, r=0.536403, linearSpeed=0.500000, angularVel=0.260020, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.551558, bodyflag=0
+Target angle: 0.052004.
+Setting angular vel to: 0.229575
+
+l=0.467859, r=0.532141, linearSpeed=0.500000, angularVel=0.229575, maxAngVel=7.142857
+
+Target angle: 0.045915.
+Setting angular vel to: 0.210135
+
+l=0.470581, r=0.529419, linearSpeed=0.500000, angularVel=0.210135, maxAngVel=7.142857
+
+Target angle: 0.042027.
+Setting angular vel to: 0.196564
+
+l=0.472481, r=0.527519, linearSpeed=0.500000, angularVel=0.196564, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.039313.
+Setting angular vel to: 0.192529
+
+l=0.473046, r=0.526954, linearSpeed=0.500000, angularVel=0.192529, maxAngVel=7.142857
+
+Target angle: 0.038506.
+Setting angular vel to: 0.195463
+
+l=0.472635, r=0.527365, linearSpeed=0.500000, angularVel=0.195463, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.547721, bodyflag=0
+Target angle: 0.039093.
+Setting angular vel to: 0.191795
+
+l=0.473149, r=0.526851, linearSpeed=0.500000, angularVel=0.191795, maxAngVel=7.142857
+
+Target angle: 0.038359.
+Setting angular vel to: 0.172722
+
+l=0.475819, r=0.524181, linearSpeed=0.500000, angularVel=0.172722, maxAngVel=7.142857
+
+Target angle: 0.034544.
+Setting angular vel to: 0.140077
+
+l=0.480389, r=0.519611, linearSpeed=0.500000, angularVel=0.140077, maxAngVel=7.142857
+
+Setting angular vel to: 0.282176
+
+l=0.460495, r=0.539505, linearSpeed=0.500000, angularVel=0.282176, maxAngVel=7.142857
+
+Target angle: 0.056435.
+Setting angular vel to: 0.245497
+
+l=0.465630, r=0.534370, linearSpeed=0.500000, angularVel=0.245497, maxAngVel=7.142857
+
+Target angle: 0.049099.
+Setting angular vel to: 0.213952
+
+l=0.470047, r=0.529953, linearSpeed=0.500000, angularVel=0.213952, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.551741, bodyflag=0
+Target angle: 0.042790.
+Setting angular vel to: 0.181674
+
+l=0.474566, r=0.525434, linearSpeed=0.500000, angularVel=0.181674, maxAngVel=7.142857
+
+Target angle: 0.036335.
+Setting angular vel to: 0.152697
+
+l=0.478622, r=0.521378, linearSpeed=0.500000, angularVel=0.152697, maxAngVel=7.142857
+
+Target angle: 0.030539.
+Setting angular vel to: 0.126654
+
+l=0.482268, r=0.517732, linearSpeed=0.500000, angularVel=0.126654, maxAngVel=7.142857
+
+Setting angular vel to: 0.288560
+
+l=0.459602, r=0.540398, linearSpeed=0.500000, angularVel=0.288560, maxAngVel=7.142857
+
+Target angle: 0.057712.
+Setting angular vel to: 0.272421
+
+l=0.461861, r=0.538139, linearSpeed=0.500000, angularVel=0.272421, maxAngVel=7.142857
+
+Target angle: 0.054484.
+Setting angular vel to: 0.259583
+
+l=0.463658, r=0.536342, linearSpeed=0.500000, angularVel=0.259583, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.546513, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.051917.
+Setting angular vel to: 0.251513
+
+l=0.464788, r=0.535212, linearSpeed=0.500000, angularVel=0.251513, maxAngVel=7.142857
+
+Target angle: 0.050303.
+Setting angular vel to: 0.238309
+
+l=0.466637, r=0.533363, linearSpeed=0.500000, angularVel=0.238309, maxAngVel=7.142857
+
+Target angle: 0.047662.
+Setting angular vel to: 0.218135
+
+l=0.469461, r=0.530539, linearSpeed=0.500000, angularVel=0.218135, maxAngVel=7.142857
+
+Setting angular vel to: 0.264799
+
+l=0.462928, r=0.537072, linearSpeed=0.500000, angularVel=0.264799, maxAngVel=7.142857
+
+Target angle: 0.052960.
+Setting angular vel to: 0.243158
+
+l=0.465958, r=0.534042, linearSpeed=0.500000, angularVel=0.243158, maxAngVel=7.142857
+
+Target angle: 0.048632.
+Setting angular vel to: 0.219683
+
+l=0.469244, r=0.530756, linearSpeed=0.500000, angularVel=0.219683, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.546359, bodyflag=0
+Target angle: 0.043937.
+Setting angular vel to: 0.201710
+
+l=0.471761, r=0.528239, linearSpeed=0.500000, angularVel=0.201710, maxAngVel=7.142857
+
+Target angle: 0.040342.
+Setting angular vel to: 0.188505
+
+l=0.473609, r=0.526391, linearSpeed=0.500000, angularVel=0.188505, maxAngVel=7.142857
+
+Target angle: 0.037701.
+Setting angular vel to: 0.175667
+
+l=0.475407, r=0.524593, linearSpeed=0.500000, angularVel=0.175667, maxAngVel=7.142857
+
+Setting angular vel to: 0.280598
+
+l=0.460716, r=0.539284, linearSpeed=0.500000, angularVel=0.280598, maxAngVel=7.142857
+
+Target angle: 0.056120.
+Setting angular vel to: 0.262625
+
+l=0.463233, r=0.536767, linearSpeed=0.500000, angularVel=0.262625, maxAngVel=7.142857
+
+Target angle: 0.052525.
+Setting angular vel to: 0.235115
+
+l=0.467084, r=0.532916, linearSpeed=0.500000, angularVel=0.235115, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.544607, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.047023.
+Setting angular vel to: 0.192566
+
+l=0.473041, r=0.526959, linearSpeed=0.500000, angularVel=0.192566, maxAngVel=7.142857
+
+Target angle: 0.038513.
+Setting angular vel to: 0.152218
+
+l=0.478689, r=0.521311, linearSpeed=0.500000, angularVel=0.152218, maxAngVel=7.142857
+
+Target angle: 0.030444.
+Setting angular vel to: 0.119207
+
+l=0.483311, r=0.516689, linearSpeed=0.500000, angularVel=0.119207, maxAngVel=7.142857
+
+Setting angular vel to: 0.293732
+
+l=0.458878, r=0.541122, linearSpeed=0.500000, angularVel=0.293732, maxAngVel=7.142857
+
+Target angle: 0.058746.
+Setting angular vel to: 0.266222
+
+l=0.462729, r=0.537271, linearSpeed=0.500000, angularVel=0.266222, maxAngVel=7.142857
+
+Target angle: 0.053244.
+Setting angular vel to: 0.245681
+
+l=0.465605, r=0.534395, linearSpeed=0.500000, angularVel=0.245681, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.542143, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.049136.
+Setting angular vel to: 0.232843
+
+l=0.467402, r=0.532598, linearSpeed=0.500000, angularVel=0.232843, maxAngVel=7.142857
+
+Target angle: 0.046569.
+Setting angular vel to: 0.223307
+
+l=0.468737, r=0.531263, linearSpeed=0.500000, angularVel=0.223307, maxAngVel=7.142857
+
+Target angle: 0.044661.
+Setting angular vel to: 0.201666
+
+l=0.471767, r=0.528233, linearSpeed=0.500000, angularVel=0.201666, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.040333.
+Setting angular vel to: 0.182592
+
+l=0.474437, r=0.525563, linearSpeed=0.500000, angularVel=0.182592, maxAngVel=7.142857
+
+Target angle: 0.036518.
+Setting angular vel to: 0.164619
+
+l=0.476953, r=0.523047, linearSpeed=0.500000, angularVel=0.164619, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.541029, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.032924.
+Setting angular vel to: 0.151781
+
+l=0.478751, r=0.521249, linearSpeed=0.500000, angularVel=0.151781, maxAngVel=7.142857
+
+Target angle: 0.030356.
+Setting angular vel to: 0.140777
+
+l=0.480291, r=0.519709, linearSpeed=0.500000, angularVel=0.140777, maxAngVel=7.142857
+
+Target angle: 0.028155.
+Setting angular vel to: 0.123904
+
+l=0.482653, r=0.517347, linearSpeed=0.500000, angularVel=0.123904, maxAngVel=7.142857
+
+Setting angular vel to: 0.254503
+
+l=0.464370, r=0.535630, linearSpeed=0.500000, angularVel=0.254503, maxAngVel=7.142857
+
+Target angle: 0.050901.
+Setting angular vel to: 0.231028
+
+l=0.467656, r=0.532344, linearSpeed=0.500000, angularVel=0.231028, maxAngVel=7.142857
+
+Target angle: 0.046206.
+Setting angular vel to: 0.211221
+
+l=0.470429, r=0.529571, linearSpeed=0.500000, angularVel=0.211221, maxAngVel=7.142857
+
+Target angle: 0.042244.
+Setting angular vel to: 0.190313
+
+l=0.473356, r=0.526644, linearSpeed=0.500000, angularVel=0.190313, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.542551, bodyflag=0
+Target angle: 0.038063.
+Setting angular vel to: 0.161336
+
+l=0.477413, r=0.522587, linearSpeed=0.500000, angularVel=0.161336, maxAngVel=7.142857
+
+Target angle: 0.032267.
+Setting angular vel to: 0.132359
+
+l=0.481470, r=0.518530, linearSpeed=0.500000, angularVel=0.132359, maxAngVel=7.142857
+
+Setting angular vel to: 0.265480
+
+l=0.462833, r=0.537167, linearSpeed=0.500000, angularVel=0.265480, maxAngVel=7.142857
+
+Target angle: 0.053096.
+Setting angular vel to: 0.240171
+
+l=0.466376, r=0.533624, linearSpeed=0.500000, angularVel=0.240171, maxAngVel=7.142857
+
+Target angle: 0.048034.
+Setting angular vel to: 0.216695
+
+l=0.469663, r=0.530337, linearSpeed=0.500000, angularVel=0.216695, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.539724, bodyflag=0
+Target angle: 0.043339.
+Setting angular vel to: 0.198356
+
+l=0.472230, r=0.527770, linearSpeed=0.500000, angularVel=0.198356, maxAngVel=7.142857
+
+Target angle: 0.039671.
+Setting angular vel to: 0.183684
+
+l=0.474284, r=0.525716, linearSpeed=0.500000, angularVel=0.183684, maxAngVel=7.142857
+
+Target angle: 0.036737.
+Setting angular vel to: 0.160209
+
+l=0.477571, r=0.522429, linearSpeed=0.500000, angularVel=0.160209, maxAngVel=7.142857
+
+Setting angular vel to: 0.243932
+
+l=0.465850, r=0.534150, linearSpeed=0.500000, angularVel=0.243932, maxAngVel=7.142857
+
+Target angle: 0.048786.
+Setting angular vel to: 0.220824
+
+l=0.469085, r=0.530915, linearSpeed=0.500000, angularVel=0.220824, maxAngVel=7.142857
+
+Target angle: 0.044165.
+Setting angular vel to: 0.200650
+
+l=0.471909, r=0.528091, linearSpeed=0.500000, angularVel=0.200650, maxAngVel=7.142857
+
+Target angle: 0.040130.
+Setting angular vel to: 0.179742
+
+l=0.474836, r=0.525164, linearSpeed=0.500000, angularVel=0.179742, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.543424, bodyflag=0
+Target angle: 0.035948.
+Setting angular vel to: 0.161769
+
+l=0.477352, r=0.522648, linearSpeed=0.500000, angularVel=0.161769, maxAngVel=7.142857
+
+Target angle: 0.032354.
+Setting angular vel to: 0.141595
+
+l=0.480177, r=0.519823, linearSpeed=0.500000, angularVel=0.141595, maxAngVel=7.142857
+
+Setting angular vel to: 0.243665
+
+l=0.465887, r=0.534113, linearSpeed=0.500000, angularVel=0.243665, maxAngVel=7.142857
+
+Target angle: 0.048733.
+Setting angular vel to: 0.217622
+
+l=0.469533, r=0.530467, linearSpeed=0.500000, angularVel=0.217622, maxAngVel=7.142857
+
+Target angle: 0.043524.
+Setting angular vel to: 0.197082
+
+l=0.472409, r=0.527591, linearSpeed=0.500000, angularVel=0.197082, maxAngVel=7.142857
+
+Target angle: 0.039416.
+Setting angular vel to: 0.177641
+
+l=0.475130, r=0.524870, linearSpeed=0.500000, angularVel=0.177641, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.542891, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.035528.
+Setting angular vel to: 0.154166
+
+l=0.478417, r=0.521583, linearSpeed=0.500000, angularVel=0.154166, maxAngVel=7.142857
+
+Target angle: 0.030833.
+Setting angular vel to: 0.131058
+
+l=0.481652, r=0.518348, linearSpeed=0.500000, angularVel=0.131058, maxAngVel=7.142857
+
+Target angle: 0.026212.
+Setting angular vel to: 0.108683
+
+l=0.484784, r=0.515216, linearSpeed=0.500000, angularVel=0.108683, maxAngVel=7.142857
+
+Setting angular vel to: 0.242060
+
+l=0.466112, r=0.533888, linearSpeed=0.500000, angularVel=0.242060, maxAngVel=7.142857
+
+Target angle: 0.048412.
+Setting angular vel to: 0.216018
+
+l=0.469758, r=0.530242, linearSpeed=0.500000, angularVel=0.216018, maxAngVel=7.142857
+
+Target angle: 0.043204.
+Setting angular vel to: 0.189608
+
+l=0.473455, r=0.526545, linearSpeed=0.500000, angularVel=0.189608, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.540264, bodyflag=0
+Target angle: 0.037922.
+Setting angular vel to: 0.168701
+
+l=0.476382, r=0.523618, linearSpeed=0.500000, angularVel=0.168701, maxAngVel=7.142857
+
+Target angle: 0.033740.
+Setting angular vel to: 0.141558
+
+l=0.480182, r=0.519818, linearSpeed=0.500000, angularVel=0.141558, maxAngVel=7.142857
+
+Target angle: 0.028312.
+Setting angular vel to: 0.121017
+
+l=0.483058, r=0.516942, linearSpeed=0.500000, angularVel=0.121017, maxAngVel=7.142857
+
+Setting angular vel to: 0.233172
+
+l=0.467356, r=0.532644, linearSpeed=0.500000, angularVel=0.233172, maxAngVel=7.142857
+
+Target angle: 0.046634.
+Setting angular vel to: 0.222901
+
+l=0.468794, r=0.531206, linearSpeed=0.500000, angularVel=0.222901, maxAngVel=7.142857
+
+Target angle: 0.044580.
+Setting angular vel to: 0.215199
+
+l=0.469872, r=0.530128, linearSpeed=0.500000, angularVel=0.215199, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.542303, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.043040.
+Setting angular vel to: 0.199060
+
+l=0.472132, r=0.527868, linearSpeed=0.500000, angularVel=0.199060, maxAngVel=7.142857
+
+Target angle: 0.039812.
+Setting angular vel to: 0.184755
+
+l=0.474134, r=0.525866, linearSpeed=0.500000, angularVel=0.184755, maxAngVel=7.142857
+
+Target angle: 0.036951.
+Setting angular vel to: 0.164581
+
+l=0.476959, r=0.523041, linearSpeed=0.500000, angularVel=0.164581, maxAngVel=7.142857
+
+Setting angular vel to: 0.228403
+
+l=0.468024, r=0.531976, linearSpeed=0.500000, angularVel=0.228403, maxAngVel=7.142857
+
+Target angle: 0.045681.
+Setting angular vel to: 0.214097
+
+l=0.470026, r=0.529974, linearSpeed=0.500000, angularVel=0.214097, maxAngVel=7.142857
+
+Target angle: 0.042819.
+Setting angular vel to: 0.203094
+
+l=0.471567, r=0.528433, linearSpeed=0.500000, angularVel=0.203094, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.507113, bodyflag=0
+Target angle: 0.040619.
+Setting angular vel to: 0.189522
+
+l=0.473467, r=0.526533, linearSpeed=0.500000, angularVel=0.189522, maxAngVel=7.142857
+
+Target angle: 0.037904.
+Setting angular vel to: 0.173383
+
+l=0.475726, r=0.524274, linearSpeed=0.500000, angularVel=0.173383, maxAngVel=7.142857
+
+Target angle: 0.034677.
+Setting angular vel to: 0.152842
+
+l=0.478602, r=0.521398, linearSpeed=0.500000, angularVel=0.152842, maxAngVel=7.142857
+
+Setting angular vel to: 0.247891
+
+l=0.465295, r=0.534705, linearSpeed=0.500000, angularVel=0.247891, maxAngVel=7.142857
+
+Target angle: 0.049578.
+Setting angular vel to: 0.232119
+
+l=0.467503, r=0.532497, linearSpeed=0.500000, angularVel=0.232119, maxAngVel=7.142857
+
+Target angle: 0.046424.
+Setting angular vel to: 0.223316
+
+l=0.468736, r=0.531264, linearSpeed=0.500000, angularVel=0.223316, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.502496, bodyflag=0
+Target angle: 0.044663.
+Setting angular vel to: 0.207911
+
+l=0.470893, r=0.529107, linearSpeed=0.500000, angularVel=0.207911, maxAngVel=7.142857
+
+Target angle: 0.041582.
+Setting angular vel to: 0.183335
+
+l=0.474333, r=0.525667, linearSpeed=0.500000, angularVel=0.183335, maxAngVel=7.142857
+
+Target angle: 0.036667.
+Setting angular vel to: 0.158760
+
+l=0.477774, r=0.522226, linearSpeed=0.500000, angularVel=0.158760, maxAngVel=7.142857
+
+Setting angular vel to: 0.267354
+
+l=0.462570, r=0.537430, linearSpeed=0.500000, angularVel=0.267354, maxAngVel=7.142857
+
+Target angle: 0.053471.
+Setting angular vel to: 0.246447
+
+l=0.465497, r=0.534503, linearSpeed=0.500000, angularVel=0.246447, maxAngVel=7.142857
+
+Target angle: 0.049289.
+Setting angular vel to: 0.232142
+
+l=0.467500, r=0.532500, linearSpeed=0.500000, angularVel=0.232142, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.496944, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.046428.
+Setting angular vel to: 0.217836
+
+l=0.469503, r=0.530497, linearSpeed=0.500000, angularVel=0.217836, maxAngVel=7.142857
+
+Target angle: 0.043567.
+Setting angular vel to: 0.199130
+
+l=0.472122, r=0.527878, linearSpeed=0.500000, angularVel=0.199130, maxAngVel=7.142857
+
+Target angle: 0.039826.
+Setting angular vel to: 0.186659
+
+l=0.473868, r=0.526132, linearSpeed=0.500000, angularVel=0.186659, maxAngVel=7.142857
+
+Setting angular vel to: 0.272536
+
+l=0.461845, r=0.538155, linearSpeed=0.500000, angularVel=0.272536, maxAngVel=7.142857
+
+Target angle: 0.054507.
+Setting angular vel to: 0.263366
+
+l=0.463129, r=0.536871, linearSpeed=0.500000, angularVel=0.263366, maxAngVel=7.142857
+
+Target angle: 0.052673.
+Setting angular vel to: 0.247960
+
+l=0.465286, r=0.534714, linearSpeed=0.500000, angularVel=0.247960, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.492405, bodyflag=0
+Target angle: 0.049592.
+Setting angular vel to: 0.229987
+
+l=0.467802, r=0.532198, linearSpeed=0.500000, angularVel=0.229987, maxAngVel=7.142857
+
+Target angle: 0.045997.
+Setting angular vel to: 0.214581
+
+l=0.469959, r=0.530041, linearSpeed=0.500000, angularVel=0.214581, maxAngVel=7.142857
+
+Target angle: 0.042916.
+Setting angular vel to: 0.198442
+
+l=0.472218, r=0.527782, linearSpeed=0.500000, angularVel=0.198442, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.039688.
+Setting angular vel to: 0.179369
+
+l=0.474888, r=0.525112, linearSpeed=0.500000, angularVel=0.179369, maxAngVel=7.142857
+
+Target angle: 0.035874.
+Setting angular vel to: 0.161029
+
+l=0.477456, r=0.522544, linearSpeed=0.500000, angularVel=0.161029, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.520560, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.032206.
+Setting angular vel to: 0.142322
+
+l=0.480075, r=0.519925, linearSpeed=0.500000, angularVel=0.142322, maxAngVel=7.142857
+
+Target angle: 0.028464.
+Setting angular vel to: 0.132419
+
+l=0.481461, r=0.518539, linearSpeed=0.500000, angularVel=0.132419, maxAngVel=7.142857
+
+Target angle: 0.026484.
+Setting angular vel to: 0.134986
+
+l=0.481102, r=0.518898, linearSpeed=0.500000, angularVel=0.134986, maxAngVel=7.142857
+
+Setting angular vel to: 0.313769
+
+l=0.456072, r=0.543928, linearSpeed=0.500000, angularVel=0.313769, maxAngVel=7.142857
+
+Target angle: 0.062754.
+Setting angular vel to: 0.312302
+
+l=0.456278, r=0.543722, linearSpeed=0.500000, angularVel=0.312302, maxAngVel=7.142857
+
+Target angle: 0.062460.
+Setting angular vel to: 0.306433
+
+l=0.457099, r=0.542901, linearSpeed=0.500000, angularVel=0.306433, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.485483, bodyflag=0
+Target angle: 0.061287.
+Setting angular vel to: 0.293229
+
+l=0.458948, r=0.541052, linearSpeed=0.500000, angularVel=0.293229, maxAngVel=7.142857
+
+Target angle: 0.058646.
+Setting angular vel to: 0.269387
+
+l=0.462286, r=0.537714, linearSpeed=0.500000, angularVel=0.269387, maxAngVel=7.142857
+
+Target angle: 0.053877.
+Setting angular vel to: 0.249580
+
+l=0.465059, r=0.534941, linearSpeed=0.500000, angularVel=0.249580, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.049916.
+Setting angular vel to: 0.232707
+
+l=0.467421, r=0.532579, linearSpeed=0.500000, angularVel=0.232707, maxAngVel=7.142857
+
+Target angle: 0.046541.
+Setting angular vel to: 0.214000
+
+l=0.470040, r=0.529960, linearSpeed=0.500000, angularVel=0.214000, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.519425, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.042800.
+Setting angular vel to: 0.196027
+
+l=0.472556, r=0.527444, linearSpeed=0.500000, angularVel=0.196027, maxAngVel=7.142857
+
+Target angle: 0.039205.
+Setting angular vel to: 0.173286
+
+l=0.475740, r=0.524260, linearSpeed=0.500000, angularVel=0.173286, maxAngVel=7.142857
+
+Target angle: 0.034657.
+Setting angular vel to: 0.150178
+
+l=0.478975, r=0.521025, linearSpeed=0.500000, angularVel=0.150178, maxAngVel=7.142857
+
+Setting angular vel to: 0.375925
+
+l=0.447370, r=0.552630, linearSpeed=0.500000, angularVel=0.375925, maxAngVel=7.142857
+
+Target angle: 0.075185.
+Setting angular vel to: 0.355384
+
+l=0.450246, r=0.549754, linearSpeed=0.500000, angularVel=0.355384, maxAngVel=7.142857
+
+Target angle: 0.071077.
+Setting angular vel to: 0.334477
+
+l=0.453173, r=0.546827, linearSpeed=0.500000, angularVel=0.334477, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.518028, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.066895.
+Setting angular vel to: 0.305867
+
+l=0.457179, r=0.542821, linearSpeed=0.500000, angularVel=0.305867, maxAngVel=7.142857
+
+Target angle: 0.061173.
+Setting angular vel to: 0.275422
+
+l=0.461441, r=0.538559, linearSpeed=0.500000, angularVel=0.275422, maxAngVel=7.142857
+
+Target angle: 0.055084.
+Setting angular vel to: 0.246812
+
+l=0.465446, r=0.534554, linearSpeed=0.500000, angularVel=0.246812, maxAngVel=7.142857
+
+Setting angular vel to: 0.373353
+
+l=0.447731, r=0.552269, linearSpeed=0.500000, angularVel=0.373353, maxAngVel=7.142857
+
+Target angle: 0.074671.
+Setting angular vel to: 0.342909
+
+l=0.451993, r=0.548007, linearSpeed=0.500000, angularVel=0.342909, maxAngVel=7.142857
+
+Target angle: 0.068582.
+Setting angular vel to: 0.319801
+
+l=0.455228, r=0.544772, linearSpeed=0.500000, angularVel=0.319801, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.528107, bodyflag=0
+Target angle: 0.063960.
+Setting angular vel to: 0.299994
+
+l=0.458001, r=0.541999, linearSpeed=0.500000, angularVel=0.299994, maxAngVel=7.142857
+
+Target angle: 0.059999.
+Setting angular vel to: 0.277252
+
+l=0.461185, r=0.538815, linearSpeed=0.500000, angularVel=0.277252, maxAngVel=7.142857
+
+Target angle: 0.055450.
+Setting angular vel to: 0.253410
+
+l=0.464523, r=0.535477, linearSpeed=0.500000, angularVel=0.253410, maxAngVel=7.142857
+
+Target angle: 0.050682.
+Setting angular vel to: 0.236171
+
+l=0.466936, r=0.533064, linearSpeed=0.500000, angularVel=0.236171, maxAngVel=7.142857
+
+Setting angular vel to: 0.341585
+
+l=0.452178, r=0.547822, linearSpeed=0.500000, angularVel=0.341585, maxAngVel=7.142857
+
+Target angle: 0.068317.
+Setting angular vel to: 0.330948
+
+l=0.453667, r=0.546333, linearSpeed=0.500000, angularVel=0.330948, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.528897, bodyflag=0
+Target angle: 0.066190.
+Setting angular vel to: 0.323612
+
+l=0.454694, r=0.545306, linearSpeed=0.500000, angularVel=0.323612, maxAngVel=7.142857
+
+Target angle: 0.064722.
+Setting angular vel to: 0.312608
+
+l=0.456235, r=0.543765, linearSpeed=0.500000, angularVel=0.312608, maxAngVel=7.142857
+
+Target angle: 0.062522.
+Setting angular vel to: 0.301604
+
+l=0.457775, r=0.542225, linearSpeed=0.500000, angularVel=0.301604, maxAngVel=7.142857
+
+Target angle: 0.060321.
+Setting angular vel to: 0.293901
+
+l=0.458854, r=0.541146, linearSpeed=0.500000, angularVel=0.293901, maxAngVel=7.142857
+
+Setting angular vel to: 0.349502
+
+l=0.451070, r=0.548930, linearSpeed=0.500000, angularVel=0.349502, maxAngVel=7.142857
+
+Target angle: 0.069900.
+Setting angular vel to: 0.343266
+
+l=0.451943, r=0.548057, linearSpeed=0.500000, angularVel=0.343266, maxAngVel=7.142857
+
+Target angle: 0.068653.
+Setting angular vel to: 0.319791
+
+l=0.455229, r=0.544771, linearSpeed=0.500000, angularVel=0.319791, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.507849, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.063958.
+Setting angular vel to: 0.286412
+
+l=0.459902, r=0.540098, linearSpeed=0.500000, angularVel=0.286412, maxAngVel=7.142857
+
+Target angle: 0.057282.
+Setting angular vel to: 0.247899
+
+l=0.465294, r=0.534706, linearSpeed=0.500000, angularVel=0.247899, maxAngVel=7.142857
+
+Target angle: 0.049580.
+Setting angular vel to: 0.212686
+
+l=0.470224, r=0.529776, linearSpeed=0.500000, angularVel=0.212686, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.042537.
+Setting angular vel to: 0.185910
+
+l=0.473973, r=0.526027, linearSpeed=0.500000, angularVel=0.185910, maxAngVel=7.142857
+
+Target angle: 0.037182.
+Setting angular vel to: 0.159134
+
+l=0.477721, r=0.522279, linearSpeed=0.500000, angularVel=0.159134, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.519420, bodyflag=0
+Target angle: 0.031827.
+Setting angular vel to: 0.130890
+
+l=0.481675, r=0.518325, linearSpeed=0.500000, angularVel=0.130890, maxAngVel=7.142857
+
+Target angle: 0.026178.
+Setting angular vel to: 0.107782
+
+l=0.484911, r=0.515089, linearSpeed=0.500000, angularVel=0.107782, maxAngVel=7.142857
+
+Target angle: 0.021556.
+Setting angular vel to: 0.095311
+
+l=0.486657, r=0.513344, linearSpeed=0.500000, angularVel=0.095311, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.019062.
+Setting angular vel to: 0.086141
+
+l=0.487940, r=0.512060, linearSpeed=0.500000, angularVel=0.086141, maxAngVel=7.142857
+
+Target angle: 0.017228.
+Setting angular vel to: 0.074770
+
+l=0.489532, r=0.510468, linearSpeed=0.500000, angularVel=0.074770, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.467610, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.014954.
+Setting angular vel to: 0.062299
+
+l=0.491278, r=0.508722, linearSpeed=0.500000, angularVel=0.062299, maxAngVel=7.142857
+
+Target angle: 0.012460.
+Setting angular vel to: 0.047260
+
+l=0.493384, r=0.506616, linearSpeed=0.500000, angularVel=0.047260, maxAngVel=7.142857
+
+Target angle: 0.009452.
+Setting angular vel to: 0.031488
+
+l=0.495592, r=0.504408, linearSpeed=0.500000, angularVel=0.031488, maxAngVel=7.142857
+
+Setting angular vel to: 0.356443
+
+l=0.450098, r=0.549902, linearSpeed=0.500000, angularVel=0.356443, maxAngVel=7.142857
+
+Target angle: 0.071289.
+Setting angular vel to: 0.343239
+
+l=0.451947, r=0.548053, linearSpeed=0.500000, angularVel=0.343239, maxAngVel=7.142857
+
+Target angle: 0.068648.
+Setting angular vel to: 0.331868
+
+l=0.453538, r=0.546462, linearSpeed=0.500000, angularVel=0.331868, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.498597, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.066374.
+Setting angular vel to: 0.323065
+
+l=0.454771, r=0.545229, linearSpeed=0.500000, angularVel=0.323065, maxAngVel=7.142857
+
+Target angle: 0.064613.
+Setting angular vel to: 0.314995
+
+l=0.455901, r=0.544099, linearSpeed=0.500000, angularVel=0.314995, maxAngVel=7.142857
+
+Target angle: 0.062999.
+Setting angular vel to: 0.299223
+
+l=0.458109, r=0.541891, linearSpeed=0.500000, angularVel=0.299223, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.059845.
+Setting angular vel to: 0.283817
+
+l=0.460266, r=0.539734, linearSpeed=0.500000, angularVel=0.283817, maxAngVel=7.142857
+
+Target angle: 0.056763.
+Setting angular vel to: 0.265844
+
+l=0.462782, r=0.537218, linearSpeed=0.500000, angularVel=0.265844, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.505331, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.053169.
+Setting angular vel to: 0.237968
+
+l=0.466685, r=0.533315, linearSpeed=0.500000, angularVel=0.237968, maxAngVel=7.142857
+
+Target angle: 0.047594.
+Setting angular vel to: 0.205690
+
+l=0.471203, r=0.528797, linearSpeed=0.500000, angularVel=0.205690, maxAngVel=7.142857
+
+Target angle: 0.041138.
+Setting angular vel to: 0.174512
+
+l=0.475568, r=0.524432, linearSpeed=0.500000, angularVel=0.174512, maxAngVel=7.142857
+
+Setting angular vel to: 0.420410
+
+l=0.441143, r=0.558857, linearSpeed=0.500000, angularVel=0.420410, maxAngVel=7.142857
+
+Target angle: 0.084082.
+Setting angular vel to: 0.400970
+
+l=0.443864, r=0.556136, linearSpeed=0.500000, angularVel=0.400970, maxAngVel=7.142857
+
+Target angle: 0.080194.
+Setting angular vel to: 0.388499
+
+l=0.445610, r=0.554390, linearSpeed=0.500000, angularVel=0.388499, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.488673, bodyflag=0
+Target angle: 0.077700.
+Setting angular vel to: 0.383363
+
+l=0.446329, r=0.553671, linearSpeed=0.500000, angularVel=0.383363, maxAngVel=7.142857
+
+Target angle: 0.076673.
+Setting angular vel to: 0.369792
+
+l=0.448229, r=0.551771, linearSpeed=0.500000, angularVel=0.369792, maxAngVel=7.142857
+
+Target angle: 0.073958.
+Setting angular vel to: 0.343749
+
+l=0.451875, r=0.548125, linearSpeed=0.500000, angularVel=0.343749, maxAngVel=7.142857
+
+Setting angular vel to: 0.407372
+
+l=0.442968, r=0.557032, linearSpeed=0.500000, angularVel=0.407372, maxAngVel=7.142857
+
+Target angle: 0.081474.
+Setting angular vel to: 0.370692
+
+l=0.448103, r=0.551897, linearSpeed=0.500000, angularVel=0.370692, maxAngVel=7.142857
+
+Target angle: 0.074138.
+Setting angular vel to: 0.341715
+
+l=0.452160, r=0.547840, linearSpeed=0.500000, angularVel=0.341715, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.507610, bodyflag=0
+Target angle: 0.068343.
+Setting angular vel to: 0.327410
+
+l=0.454163, r=0.545837, linearSpeed=0.500000, angularVel=0.327410, maxAngVel=7.142857
+
+Target angle: 0.065482.
+Setting angular vel to: 0.323742
+
+l=0.454676, r=0.545324, linearSpeed=0.500000, angularVel=0.323742, maxAngVel=7.142857
+
+Target angle: 0.064748.
+Setting angular vel to: 0.312738
+
+l=0.456217, r=0.543783, linearSpeed=0.500000, angularVel=0.312738, maxAngVel=7.142857
+
+Setting angular vel to: 0.410587
+
+l=0.442518, r=0.557482, linearSpeed=0.500000, angularVel=0.410587, maxAngVel=7.142857
+
+Target angle: 0.082117.
+Setting angular vel to: 0.389679
+
+l=0.445445, r=0.554555, linearSpeed=0.500000, angularVel=0.389679, maxAngVel=7.142857
+
+Target angle: 0.077936.
+Setting angular vel to: 0.350799
+
+l=0.450888, r=0.549112, linearSpeed=0.500000, angularVel=0.350799, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.455272, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.070160.
+Setting angular vel to: 0.304582
+
+l=0.457358, r=0.542642, linearSpeed=0.500000, angularVel=0.304582, maxAngVel=7.142857
+
+Target angle: 0.060916.
+Setting angular vel to: 0.264601
+
+l=0.462956, r=0.537044, linearSpeed=0.500000, angularVel=0.264601, maxAngVel=7.142857
+
+Target angle: 0.052920.
+Setting angular vel to: 0.229389
+
+l=0.467886, r=0.532114, linearSpeed=0.500000, angularVel=0.229389, maxAngVel=7.142857
+
+Setting angular vel to: 0.425865
+
+l=0.440379, r=0.559621, linearSpeed=0.500000, angularVel=0.425865, maxAngVel=7.142857
+
+Target angle: 0.085173.
+Setting angular vel to: 0.399089
+
+l=0.444128, r=0.555872, linearSpeed=0.500000, angularVel=0.399089, maxAngVel=7.142857
+
+Target angle: 0.079818.
+Setting angular vel to: 0.386251
+
+l=0.445925, r=0.554075, linearSpeed=0.500000, angularVel=0.386251, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.489108, bodyflag=0
+Target angle: 0.077250.
+Setting angular vel to: 0.381482
+
+l=0.446592, r=0.553408, linearSpeed=0.500000, angularVel=0.381482, maxAngVel=7.142857
+
+Target angle: 0.076296.
+Setting angular vel to: 0.364976
+
+l=0.448903, r=0.551097, linearSpeed=0.500000, angularVel=0.364976, maxAngVel=7.142857
+
+Target angle: 0.072995.
+Setting angular vel to: 0.344436
+
+l=0.451779, r=0.548221, linearSpeed=0.500000, angularVel=0.344436, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.068887.
+Setting angular vel to: 0.328663
+
+l=0.453987, r=0.546013, linearSpeed=0.500000, angularVel=0.328663, maxAngVel=7.142857
+
+Target angle: 0.065733.
+Setting angular vel to: 0.306289
+
+l=0.457120, r=0.542880, linearSpeed=0.500000, angularVel=0.306289, maxAngVel=7.142857
+
+Target angle: 0.061258.
+Setting angular vel to: 0.293451
+
+l=0.458917, r=0.541083, linearSpeed=0.500000, angularVel=0.293451, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.507672, bodyflag=0
+Target angle: 0.058690.
+Setting angular vel to: 0.283914
+
+l=0.460252, r=0.539748, linearSpeed=0.500000, angularVel=0.283914, maxAngVel=7.142857
+
+Target angle: 0.056783.
+Setting angular vel to: 0.263740
+
+l=0.463076, r=0.536924, linearSpeed=0.500000, angularVel=0.263740, maxAngVel=7.142857
+
+Target angle: 0.052748.
+Setting angular vel to: 0.231829
+
+l=0.467544, r=0.532456, linearSpeed=0.500000, angularVel=0.231829, maxAngVel=7.142857
+
+Setting angular vel to: 0.391222
+
+l=0.445229, r=0.554771, linearSpeed=0.500000, angularVel=0.391222, maxAngVel=7.142857
+
+Target angle: 0.078244.
+Setting angular vel to: 0.350141
+
+l=0.450980, r=0.549020, linearSpeed=0.500000, angularVel=0.350141, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.483420, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Target angle: 0.070028.
+Setting angular vel to: 0.305025
+
+l=0.457297, r=0.542703, linearSpeed=0.500000, angularVel=0.305025, maxAngVel=7.142857
+
+Target angle: 0.061005.
+Setting angular vel to: 0.269812
+
+l=0.462226, r=0.537774, linearSpeed=0.500000, angularVel=0.269812, maxAngVel=7.142857
+
+Target angle: 0.053962.
+Setting angular vel to: 0.245603
+
+l=0.465616, r=0.534384, linearSpeed=0.500000, angularVel=0.245603, maxAngVel=7.142857
+
+Target angle: 0.049121.
+Setting angular vel to: 0.225429
+
+l=0.468440, r=0.531560, linearSpeed=0.500000, angularVel=0.225429, maxAngVel=7.142857
+
+Setting angular vel to: 0.391316
+
+l=0.445216, r=0.554784, linearSpeed=0.500000, angularVel=0.391316, maxAngVel=7.142857
+
+Target angle: 0.078263.
+Setting angular vel to: 0.374810
+
+l=0.447527, r=0.552473, linearSpeed=0.500000, angularVel=0.374810, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.463471, bodyflag=0
+Target angle: 0.074962.
+Setting angular vel to: 0.360872
+
+l=0.449478, r=0.550522, linearSpeed=0.500000, angularVel=0.360872, maxAngVel=7.142857
+
+Target angle: 0.072174.
+Setting angular vel to: 0.337397
+
+l=0.452764, r=0.547236, linearSpeed=0.500000, angularVel=0.337397, maxAngVel=7.142857
+
+Target angle: 0.067479.
+Setting angular vel to: 0.313188
+
+l=0.456154, r=0.543846, linearSpeed=0.500000, angularVel=0.313188, maxAngVel=7.142857
+
+Target angle: 0.062638.
+Setting angular vel to: 0.295215
+
+l=0.458670, r=0.541330, linearSpeed=0.500000, angularVel=0.295215, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.059043.
+Setting angular vel to: 0.274308
+
+l=0.461597, r=0.538403, linearSpeed=0.500000, angularVel=0.274308, maxAngVel=7.142857
+
+Target angle: 0.054862.
+Setting angular vel to: 0.251933
+
+l=0.464729, r=0.535271, linearSpeed=0.500000, angularVel=0.251933, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.462310, bodyflag=0
+Target angle: 0.050387.
+Setting angular vel to: 0.228091
+
+l=0.468067, r=0.531933, linearSpeed=0.500000, angularVel=0.228091, maxAngVel=7.142857
+
+Target angle: 0.045618.
+Setting angular vel to: 0.189578
+
+l=0.473459, r=0.526541, linearSpeed=0.500000, angularVel=0.189578, maxAngVel=7.142857
+
+Target angle: 0.037916.
+Setting angular vel to: 0.149597
+
+l=0.479056, r=0.520944, linearSpeed=0.500000, angularVel=0.149597, maxAngVel=7.142857
+
+Setting angular vel to: 0.379554
+
+l=0.446862, r=0.553138, linearSpeed=0.500000, angularVel=0.379554, maxAngVel=7.142857
+
+Target angle: 0.075911.
+Setting angular vel to: 0.350577
+
+l=0.450919, r=0.549081, linearSpeed=0.500000, angularVel=0.350577, maxAngVel=7.142857
+
+Target angle: 0.070115.
+Setting angular vel to: 0.331504
+
+l=0.453589, r=0.546411, linearSpeed=0.500000, angularVel=0.331504, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.468407, bodyflag=0
+Target angle: 0.066301.
+Setting angular vel to: 0.311330
+
+l=0.456414, r=0.543586, linearSpeed=0.500000, angularVel=0.311330, maxAngVel=7.142857
+
+Target angle: 0.062266.
+Setting angular vel to: 0.289322
+
+l=0.459495, r=0.540505, linearSpeed=0.500000, angularVel=0.289322, maxAngVel=7.142857
+
+Target angle: 0.057864.
+Setting angular vel to: 0.262179
+
+l=0.463295, r=0.536705, linearSpeed=0.500000, angularVel=0.262179, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.052436.
+Setting angular vel to: 0.236870
+
+l=0.466838, r=0.533162, linearSpeed=0.500000, angularVel=0.236870, maxAngVel=7.142857
+
+Target angle: 0.047374.
+Setting angular vel to: 0.213762
+
+l=0.470073, r=0.529927, linearSpeed=0.500000, angularVel=0.213762, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.469479, bodyflag=0
+Target angle: 0.042752.
+Setting angular vel to: 0.187719
+
+l=0.473719, r=0.526281, linearSpeed=0.500000, angularVel=0.187719, maxAngVel=7.142857
+
+Target angle: 0.037544.
+Setting angular vel to: 0.162043
+
+l=0.477314, r=0.522686, linearSpeed=0.500000, angularVel=0.162043, maxAngVel=7.142857
+
+Target angle: 0.032409.
+Setting angular vel to: 0.144437
+
+l=0.479779, r=0.520221, linearSpeed=0.500000, angularVel=0.144437, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.028887.
+Setting angular vel to: 0.135267
+
+l=0.481063, r=0.518937, linearSpeed=0.500000, angularVel=0.135267, maxAngVel=7.142857
+
+Target angle: 0.027053.
+Setting angular vel to: 0.124630
+
+l=0.482552, r=0.517448, linearSpeed=0.500000, angularVel=0.124630, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.392437, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.464134, bodyflag=0
+Target angle: 0.024926.
+Setting angular vel to: 0.114726
+
+l=0.483938, r=0.516062, linearSpeed=0.500000, angularVel=0.114726, maxAngVel=7.142857
+
+Target angle: 0.022945.
+Setting angular vel to: 0.101155
+
+l=0.485838, r=0.514162, linearSpeed=0.500000, angularVel=0.101155, maxAngVel=7.142857
+
+Target angle: 0.020231.
+Setting angular vel to: 0.094185
+
+l=0.486814, r=0.513186, linearSpeed=0.500000, angularVel=0.094185, maxAngVel=7.142857
+
+Setting angular vel to: 0.343891
+
+l=0.451855, r=0.548145, linearSpeed=0.500000, angularVel=0.343891, maxAngVel=7.142857
+
+Target angle: 0.068778.
+Setting angular vel to: 0.340589
+
+l=0.452317, r=0.547683, linearSpeed=0.500000, angularVel=0.340589, maxAngVel=7.142857
+
+Target angle: 0.068118.
+Setting angular vel to: 0.324084
+
+l=0.454628, r=0.545372, linearSpeed=0.500000, angularVel=0.324084, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.456755, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.368782, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.377394, bodyflag=0
+Target angle: 0.064817.
+Setting angular vel to: 0.292906
+
+l=0.458993, r=0.541007, linearSpeed=0.500000, angularVel=0.292906, maxAngVel=7.142857
+
+Target angle: 0.058581.
+Setting angular vel to: 0.267230
+
+l=0.462588, r=0.537412, linearSpeed=0.500000, angularVel=0.267230, maxAngVel=7.142857
+
+Target angle: 0.053446.
+Setting angular vel to: 0.240087
+
+l=0.466388, r=0.533612, linearSpeed=0.500000, angularVel=0.240087, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.048017.
+Setting angular vel to: 0.216245
+
+l=0.469726, r=0.530274, linearSpeed=0.500000, angularVel=0.216245, maxAngVel=7.142857
+
+Target angle: 0.043249.
+Setting angular vel to: 0.194971
+
+l=0.472704, r=0.527296, linearSpeed=0.500000, angularVel=0.194971, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.466751, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.359026, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.366857, bodyflag=0
+Target angle: 0.038994.
+Setting angular vel to: 0.170028
+
+l=0.476196, r=0.523804, linearSpeed=0.500000, angularVel=0.170028, maxAngVel=7.142857
+
+Target angle: 0.034006.
+Setting angular vel to: 0.146187
+
+l=0.479534, r=0.520466, linearSpeed=0.500000, angularVel=0.146187, maxAngVel=7.142857
+
+Target angle: 0.029237.
+Setting angular vel to: 0.128580
+
+l=0.481999, r=0.518001, linearSpeed=0.500000, angularVel=0.128580, maxAngVel=7.142857
+
+Setting angular vel to: 0.386171
+
+l=0.445936, r=0.554064, linearSpeed=0.500000, angularVel=0.386171, maxAngVel=7.142857
+
+Target angle: 0.077234.
+Setting angular vel to: 0.365630
+
+l=0.448812, r=0.551188, linearSpeed=0.500000, angularVel=0.365630, maxAngVel=7.142857
+
+Target angle: 0.073126.
+Setting angular vel to: 0.345456
+
+l=0.451636, r=0.548364, linearSpeed=0.500000, angularVel=0.345456, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.357658, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.349285, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.478803, bodyflag=0
+Target angle: 0.069091.
+Setting angular vel to: 0.329684
+
+l=0.453844, r=0.546156, linearSpeed=0.500000, angularVel=0.329684, maxAngVel=7.142857
+
+Target angle: 0.065937.
+Setting angular vel to: 0.306943
+
+l=0.457028, r=0.542972, linearSpeed=0.500000, angularVel=0.306943, maxAngVel=7.142857
+
+Target angle: 0.061389.
+Setting angular vel to: 0.287502
+
+l=0.459750, r=0.540250, linearSpeed=0.500000, angularVel=0.287502, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.057500.
+Setting angular vel to: 0.269529
+
+l=0.462266, r=0.537734, linearSpeed=0.500000, angularVel=0.269529, maxAngVel=7.142857
+
+Target angle: 0.053906.
+Setting angular vel to: 0.249355
+
+l=0.465090, r=0.534910, linearSpeed=0.500000, angularVel=0.249355, maxAngVel=7.142857
+
+Target angle: 0.049871.
+Setting angular vel to: 0.228448
+
+l=0.468017, r=0.531983, linearSpeed=0.500000, angularVel=0.228448, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.349285, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.479241, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.347692, bodyflag=0
+Target angle: 0.045690.
+Setting angular vel to: 0.211208
+
+l=0.470431, r=0.529569, linearSpeed=0.500000, angularVel=0.211208, maxAngVel=7.142857
+
+Target angle: 0.042242.
+Setting angular vel to: 0.195803
+
+l=0.472588, r=0.527412, linearSpeed=0.500000, angularVel=0.195803, maxAngVel=7.142857
+
+Target angle: 0.039161.
+Setting angular vel to: 0.187000
+
+l=0.473820, r=0.526180, linearSpeed=0.500000, angularVel=0.187000, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.037400.
+Setting angular vel to: 0.170494
+
+l=0.476131, r=0.523869, linearSpeed=0.500000, angularVel=0.170494, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.461600, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.329848, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.344879, bodyflag=0
+Target angle: 0.034099.
+Setting angular vel to: 0.147386
+
+l=0.479366, r=0.520634, linearSpeed=0.500000, angularVel=0.147386, maxAngVel=7.142857
+
+Target angle: 0.029477.
+Setting angular vel to: 0.123544
+
+l=0.482704, r=0.517296, linearSpeed=0.500000, angularVel=0.123544, maxAngVel=7.142857
+
+Target angle: 0.024709.
+Setting angular vel to: 0.097134
+
+l=0.486401, r=0.513599, linearSpeed=0.500000, angularVel=0.097134, maxAngVel=7.142857
+
+Target angle: 0.019427.
+Setting angular vel to: 0.078794
+
+l=0.488969, r=0.511031, linearSpeed=0.500000, angularVel=0.078794, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.015759.
+Setting angular vel to: 0.065590
+
+l=0.490817, r=0.509183, linearSpeed=0.500000, angularVel=0.065590, maxAngVel=7.142857
+
+Target angle: 0.013118.
+Setting angular vel to: 0.060088
+
+l=0.491588, r=0.508412, linearSpeed=0.500000, angularVel=0.060088, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.447703, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.329848, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.331074, bodyflag=0
+Target angle: 0.012018.
+Setting angular vel to: 0.053119
+
+l=0.492563, r=0.507437, linearSpeed=0.500000, angularVel=0.053119, maxAngVel=7.142857
+
+Target angle: 0.010624.
+Setting angular vel to: 0.047617
+
+l=0.493334, r=0.506666, linearSpeed=0.500000, angularVel=0.047617, maxAngVel=7.142857
+
+Target angle: 0.009523.
+Setting angular vel to: 0.042481
+
+l=0.494053, r=0.505947, linearSpeed=0.500000, angularVel=0.042481, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: 0.008496.
+Setting angular vel to: 0.031844
+
+l=0.495542, r=0.504458, linearSpeed=0.500000, angularVel=0.031844, maxAngVel=7.142857
+
+Target angle: 0.006369.
+Setting angular vel to: 0.014605
+
+l=0.497955, r=0.502045, linearSpeed=0.500000, angularVel=0.014605, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.320156, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.458943, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.323512, bodyflag=0
+Target angle: 0.002921.
+Setting angular vel to: -0.011805
+
+l=0.501653, r=0.498347, linearSpeed=0.500000, angularVel=-0.011805, maxAngVel=7.142857
+
+Target angle: -0.002361.
+Setting angular vel to: -0.036380
+
+l=0.505093, r=0.494907, linearSpeed=0.500000, angularVel=-0.036380, maxAngVel=7.142857
+
+Target angle: -0.007276.
+Setting angular vel to: -0.060956
+
+l=0.508534, r=0.491466, linearSpeed=0.500000, angularVel=-0.060956, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.012191.
+Setting angular vel to: -0.072693
+
+l=0.510177, r=0.489823, linearSpeed=0.500000, angularVel=-0.072693, maxAngVel=7.142857
+
+Target angle: -0.014539.
+Setting angular vel to: -0.077095
+
+l=0.510793, r=0.489207, linearSpeed=0.500000, angularVel=-0.077095, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.448821, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310484, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310484, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.316097, bodyflag=0
+Target angle: -0.015419.
+Setting angular vel to: -0.076361
+
+l=0.510691, r=0.489309, linearSpeed=0.500000, angularVel=-0.076361, maxAngVel=7.142857
+
+Target angle: -0.015272.
+Setting angular vel to: -0.076728
+
+l=0.510742, r=0.489258, linearSpeed=0.500000, angularVel=-0.076728, maxAngVel=7.142857
+
+Target angle: -0.015346.
+Setting angular vel to: -0.086265
+
+l=0.512077, r=0.487923, linearSpeed=0.500000, angularVel=-0.086265, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.017253.
+Setting angular vel to: -0.092500
+
+l=0.512950, r=0.487050, linearSpeed=0.500000, angularVel=-0.092500, maxAngVel=7.142857
+
+Target angle: -0.018500.
+Setting angular vel to: -0.105705
+
+l=0.514799, r=0.485201, linearSpeed=0.500000, angularVel=-0.105705, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.452820, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303645, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.313309, bodyflag=0
+Target angle: -0.021141.
+Setting angular vel to: -0.117809
+
+l=0.516493, r=0.483507, linearSpeed=0.500000, angularVel=-0.117809, maxAngVel=7.142857
+
+Target angle: -0.023562.
+Setting angular vel to: -0.127346
+
+l=0.517828, r=0.482172, linearSpeed=0.500000, angularVel=-0.127346, maxAngVel=7.142857
+
+Target angle: -0.025469.
+Setting angular vel to: -0.137616
+
+l=0.519266, r=0.480734, linearSpeed=0.500000, angularVel=-0.137616, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.027523.
+Setting angular vel to: -0.142018
+
+l=0.519883, r=0.480117, linearSpeed=0.500000, angularVel=-0.142018, maxAngVel=7.142857
+
+Target angle: -0.028404.
+Setting angular vel to: -0.144952
+
+l=0.520293, r=0.479707, linearSpeed=0.500000, angularVel=-0.144952, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.441237, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.284605, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.301040, bodyflag=0
+Target angle: -0.028990.
+Setting angular vel to: -0.153755
+
+l=0.521526, r=0.478474, linearSpeed=0.500000, angularVel=-0.153755, maxAngVel=7.142857
+
+Target angle: -0.030751.
+Setting angular vel to: -0.158157
+
+l=0.522142, r=0.477858, linearSpeed=0.500000, angularVel=-0.158157, maxAngVel=7.142857
+
+Target angle: -0.031631.
+Setting angular vel to: -0.160358
+
+l=0.522450, r=0.477550, linearSpeed=0.500000, angularVel=-0.160358, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.032072.
+Setting angular vel to: -0.162192
+
+l=0.522707, r=0.477293, linearSpeed=0.500000, angularVel=-0.162192, maxAngVel=7.142857
+
+Target angle: -0.032438.
+Setting angular vel to: -0.161825
+
+l=0.522655, r=0.477345, linearSpeed=0.500000, angularVel=-0.161825, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.444645, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.284605, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.298331, bodyflag=0
+Target angle: -0.032365.
+Setting angular vel to: -0.166226
+
+l=0.523272, r=0.476728, linearSpeed=0.500000, angularVel=-0.166226, maxAngVel=7.142857
+
+Target angle: -0.033245.
+Setting angular vel to: -0.169161
+
+l=0.523683, r=0.476317, linearSpeed=0.500000, angularVel=-0.169161, maxAngVel=7.142857
+
+Target angle: -0.033832.
+Setting angular vel to: -0.166593
+
+l=0.523323, r=0.476677, linearSpeed=0.500000, angularVel=-0.166593, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.033319.
+Setting angular vel to: -0.172462
+
+l=0.524145, r=0.475855, linearSpeed=0.500000, angularVel=-0.172462, maxAngVel=7.142857
+
+Target angle: -0.034492.
+Setting angular vel to: -0.179431
+
+l=0.525120, r=0.474880, linearSpeed=0.500000, angularVel=-0.179431, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.445109, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.265707, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.287384, bodyflag=0
+Target angle: -0.035886.
+Setting angular vel to: -0.178698
+
+l=0.525018, r=0.474982, linearSpeed=0.500000, angularVel=-0.178698, maxAngVel=7.142857
+
+Target angle: -0.035740.
+Setting angular vel to: -0.176864
+
+l=0.524761, r=0.475239, linearSpeed=0.500000, angularVel=-0.176864, maxAngVel=7.142857
+
+Target angle: -0.035373.
+Setting angular vel to: -0.175763
+
+l=0.524607, r=0.475393, linearSpeed=0.500000, angularVel=-0.175763, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.035153.
+Setting angular vel to: -0.176130
+
+l=0.524658, r=0.475342, linearSpeed=0.500000, angularVel=-0.176130, maxAngVel=7.142857
+
+Target angle: -0.035226.
+Setting angular vel to: -0.173562
+
+l=0.524299, r=0.475701, linearSpeed=0.500000, angularVel=-0.173562, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.350036, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.260000, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.440786, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.258257, bodyflag=0
+Target angle: -0.034712.
+Setting angular vel to: -0.166593
+
+l=0.523323, r=0.476677, linearSpeed=0.500000, angularVel=-0.166593, maxAngVel=7.142857
+
+Target angle: -0.033319.
+Setting angular vel to: -0.165126
+
+l=0.523118, r=0.476882, linearSpeed=0.500000, angularVel=-0.165126, maxAngVel=7.142857
+
+Target angle: -0.033025.
+Setting angular vel to: -0.162192
+
+l=0.522707, r=0.477293, linearSpeed=0.500000, angularVel=-0.162192, maxAngVel=7.142857
+
+Target angle: -0.032438.
+Setting angular vel to: -0.154489
+
+l=0.521628, r=0.478372, linearSpeed=0.500000, angularVel=-0.154489, maxAngVel=7.142857
+
+Targetloc: Contour discarded.
+Target angle: -0.030898.
+Setting angular vel to: -0.153389
+
+l=0.521474, r=0.478526, linearSpeed=0.500000, angularVel=-0.153389, maxAngVel=7.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.444153, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.330151, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.344006, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.250799, bodyflag=0
+AbstractTask::CloseObjectDetector: We are close!
+AbstractTask::CloseObjectDetector: In field of view: detected!
+Reactive: onTaskTerminated
+ReactiveConfigurator: Obstacle detected.
+
+ReactiveConfigurator: Avoidance to the RIGHT b/c target to the right.
+
+l=0.521474, r=0.478526, linearSpeed=0.500000, angularVel=-0.153389, maxAngVel=7.142857
+
+Target angle: -0.030678.
+Target angle: -0.029724.
+Target angle: -0.029211.
+Target angle: -0.029651.
+Targetloc: Contour discarded.
+Target angle: -0.029211.
+====> avoid(1, 0.255000 0.091889): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: -0.029064.
+Target angle: -0.030971.
+Target angle: -0.033465.
+Target angle: -0.033319.
+Targetloc: Contour discarded.
+Target angle: -0.028770.
+====> avoid(1, 0.255000 0.084290): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: -0.019674.
+Target angle: -0.005369.
+Target angle: 0.013191.
+Target angle: 0.030724.
+Targetloc: Contour discarded.
+Target angle: 0.045249.
+====> avoid(1, 0.255000 0.073276): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.058014.
+Target angle: 0.070632.
+Target angle: 0.084937.
+Target angle: 0.100489.
+Target angle: 0.115821.
+Target angle: 0.127999.
+====> avoid(1, 0.255000 0.060753): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.142157.
+Target angle: 0.158076.
+Target angle: 0.175389.
+Target angle: 0.190501.
+Target angle: 0.206640.
+====> avoid(1, 0.255000 0.051554): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.222339.
+Target angle: 0.237672.
+Target angle: 0.251316.
+Target angle: 0.265108.
+Target angle: 0.279707.
+====> avoid(1, 0.255000 0.039167): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.296286.
+Target angle: 0.313159.
+Target angle: 0.330105.
+Target angle: 0.346904.
+Target angle: 0.361649.
+====> avoid(1, 0.255000 0.034083): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.376615.
+Target angle: 0.391140.
+Target angle: 0.406692.
+Target angle: 0.418503.
+Target angle: 0.431781.
+====> avoid(1, 0.255000 0.027374): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.444399.
+Target angle: 0.459438.
+Target angle: 0.471982.
+Target angle: 0.485774.
+Target angle: 0.498318.
+====> avoid(1, 0.255000 0.020674): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.512110.
+Target angle: 0.524728.
+Target angle: 0.538226.
+Target angle: 0.550990.
+Target angle: 0.566249.
+====> avoid(1, 0.255000 0.018891): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.582168.
+Target angle: 0.597940.
+Target angle: 0.610632.
+Target angle: 0.624643.
+Target angle: 0.639902.
+====> avoid(1, 0.255000 0.013541): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.656628.
+Target angle: 0.672327.
+Target angle: 0.688539.
+Target angle: 0.701964.
+Target angle: 0.716196.
+====> avoid(1, 0.255000 0.012683): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.728741.
+Target angle: 0.742899.
+Target angle: 0.756691.
+Target angle: 0.772756.
+Target angle: 0.787868.
+====> avoid(1, 0.255000 0.016800): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.804741.
+Target angle: 0.818973.
+Target angle: 0.834745.
+Target angle: 0.847656.
+Target angle: 0.861374.
+====> avoid(1, 0.255000 0.024118): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.871351.
+Target angle: 0.884336.
+Target angle: 0.897908.
+Target angle: 0.914267.
+Target angle: 0.927692.
+====> avoid(1, 0.255000 0.030000): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 0.944051.
+Target angle: 0.958796.
+Target angle: 0.974275.
+Target angle: 0.986893.
+Target angle: 1.002738.
+Target angle: 1.016750.
+====> avoid(1, 0.255000 0.127046): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.032302.
+Target angle: 1.047268.
+Target angle: 1.064360.
+Target angle: 1.077932.
+====> avoid(1, 0.255000 0.118381): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.092897.
+Target angle: 1.104708.
+Target angle: 1.119747.
+Target angle: 1.132291.
+Target angle: 1.147770.
+Target angle: 1.161342.
+====> avoid(1, 0.255000 0.113863): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.177554.
+Target angle: 1.192593.
+Target angle: 1.209539.
+Target angle: 1.223551.
+Target angle: 1.236682.
+====> avoid(1, 0.255000 0.109407): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.249373.
+Target angle: 1.261698.
+Target angle: 1.273949.
+Target angle: 1.284586.
+Target angle: 1.296030.
+====> avoid(1, 0.255000 0.103563): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.310262.
+Target angle: 1.324200.
+Target angle: 1.340119.
+Target angle: 1.353764.
+Target angle: 1.369683.
+====> avoid(1, 0.255000 0.099750): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.382374.
+Target angle: 1.395652.
+Target angle: 1.409444.
+Target angle: 1.424116.
+Target angle: 1.442016.
+====> avoid(1, 0.255000 0.091462): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.458595.
+Target angle: 1.474954.
+Target angle: 1.487425.
+Target angle: 1.497622.
+Target angle: 1.510680.
+====> avoid(1, 0.255000 0.078509): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.526966.
+Target angle: 1.543985.
+Target angle: 1.562178.
+Target angle: 1.578904.
+Target angle: 1.595997.
+====> avoid(1, 0.255000 0.063915): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.609275.
+Target angle: 1.621820.
+Target angle: 1.636198.
+Target angle: 1.650357.
+Target angle: 1.664662.
+====> avoid(1, 0.255000 0.050831): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+Target angle: 1.680361.
+Target angle: 1.692612.
+Target angle: 1.702295.
+Target angle: 1.711979.
+====> avoid(1, 0.255000 0.041230): -1.785714 degrees
+
+Setting angular vel to: -1.785714
+
+l=0.750000, r=0.250000, linearSpeed=0.500000, angularVel=-1.785714, maxAngVel=7.142857
+
+END
