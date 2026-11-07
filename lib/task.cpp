@@ -15,10 +15,13 @@ void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
     CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
                                     nearbyMaxObstacleDetectionAngle);
 
-    if (nearbyBody.detect (world, robot))
+    threatAngle = nearbyBody.detect (world, robot);
+
+    if (threatAngle)
     {
         if (terminatedEvent)
         {
+            bratlogger.log("Task terminating because of obstacle at: %f",threatAngle.value());
             TerminationMessage tm (TerminationMessage::ObstacleDetected,
                                    shared_from_this ());
             terminatedEvent (tm);
@@ -50,8 +53,9 @@ void AbstractTask::onGyroTurn (float dphi)
     }
 }
 
-bool AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
-                                                std::shared_ptr<Robot> _robot)
+std::optional<float>
+AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
+                                           std::shared_ptr<Robot> _robot)
 {
     robot = _robot;
     robotPos = robot->getPosition ();
@@ -96,17 +100,18 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
-    relativeThreatAngle = b2Atan2 (localDelta.y, localDelta.x);
+    const float tmpRelativeThreatAngle = b2Atan2 (localDelta.y, localDelta.x);
 
-    if (fabs (relativeThreatAngle) > maxDetectionAngle)
+    if (fabs (tmpRelativeThreatAngle) > maxDetectionAngle)
     {
         bratlogger.log (
             "AbstractTask::CloseObjectDetector: But out of sight: %f > %f.",
-            relativeThreatAngle, maxDetectionAngle);
+            tmpRelativeThreatAngle, maxDetectionAngle);
         return true;
     }
 
     detectedBody = body;
+    relativeThreatAngle = tmpRelativeThreatAngle;
 
     bratlogger.log (
         "AbstractTask::CloseObjectDetector: In field of view: detected!");
