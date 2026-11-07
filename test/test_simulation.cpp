@@ -1,5 +1,6 @@
 #include "configurator.h"
 #include "const.h"
+#include "debug.h"
 #include "task.h"
 #include "worldbuilder.h"
 #include <memory>
@@ -23,6 +24,7 @@ CoordinateContainer loadLIDARdata (const char *filename)
 void drive_to_target ()
 {
     printf ("Drive to target:\n");
+    bratlogger.start ("/tmp","sim","drive2target.txt");
     auto task = std::make_shared<TargetTask> ();
     CoordinateContainer coords = loadLIDARdata ("lidar_scans/far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -101,8 +103,8 @@ void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
 int main (int, char **)
 {
     drive_to_target ();
-    avoid_obstacle (AvoidTask::LEFT);
-    avoid_obstacle (AvoidTask::RIGHT);
-    avoid_obstacle_drive_to_arget (AvoidTask::LEFT);
-    avoid_obstacle_drive_to_arget (AvoidTask::RIGHT);
+    //    avoid_obstacle (AvoidTask::LEFT);
+    //    avoid_obstacle (AvoidTask::RIGHT);
+    //    avoid_obstacle_drive_to_arget (AvoidTask::LEFT);
+    //    avoid_obstacle_drive_to_arget (AvoidTask::RIGHT);
 }

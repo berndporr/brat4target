@@ -1,0 +1,4188 @@
+emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.000000, maxAngVel=0.000000
+
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+onGyroTurn: dphi=0.015869
+Reactive: onTaskTerminated
+ReactiveConfigurator: Target detected. We are targeting.
+
+emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.216165.
+To target angle: 0.200296.
+Setting angular vel to: 0.200296
+
+emitTwoWheeledEvent: l=0.412371, r=0.587629, linearSpeed=0.080000, angularVel=0.200296, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.200296.
+To target angle: 0.184427.
+Setting angular vel to: 0.184427
+
+emitTwoWheeledEvent: l=0.419313, r=0.580687, linearSpeed=0.080000, angularVel=0.184427, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.184427.
+To target angle: 0.168557.
+Setting angular vel to: 0.168557
+
+emitTwoWheeledEvent: l=0.426256, r=0.573744, linearSpeed=0.080000, angularVel=0.168557, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.168557.
+To target angle: 0.152688.
+Setting angular vel to: 0.152688
+
+emitTwoWheeledEvent: l=0.433199, r=0.566801, linearSpeed=0.080000, angularVel=0.152688, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.152688.
+To target angle: 0.136819.
+Setting angular vel to: 0.136819
+
+emitTwoWheeledEvent: l=0.440142, r=0.559858, linearSpeed=0.080000, angularVel=0.136819, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.136819.
+To target angle: 0.120950.
+Setting angular vel to: 0.120950
+
+emitTwoWheeledEvent: l=0.447084, r=0.552916, linearSpeed=0.080000, angularVel=0.120950, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.120950.
+To target angle: 0.105081.
+Setting angular vel to: 0.105081
+
+emitTwoWheeledEvent: l=0.454027, r=0.545973, linearSpeed=0.080000, angularVel=0.105081, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018616
+Updating target angle: 0.105081.
+To target angle: 0.086465.
+Setting angular vel to: 0.086465
+
+emitTwoWheeledEvent: l=0.462172, r=0.537828, linearSpeed=0.080000, angularVel=0.086465, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018616
+Updating target angle: 0.086465.
+To target angle: 0.067849.
+Setting angular vel to: 0.067849
+
+emitTwoWheeledEvent: l=0.470316, r=0.529684, linearSpeed=0.080000, angularVel=0.067849, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018616
+Updating target angle: 0.067849.
+To target angle: 0.049234.
+Setting angular vel to: 0.049234
+
+emitTwoWheeledEvent: l=0.478460, r=0.521540, linearSpeed=0.080000, angularVel=0.049234, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018616
+Updating target angle: 0.049234.
+To target angle: 0.030618.
+Setting angular vel to: 0.030618
+
+emitTwoWheeledEvent: l=0.486605, r=0.513395, linearSpeed=0.080000, angularVel=0.030618, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.026245
+Updating target angle: 0.030618.
+To target angle: 0.004373.
+Setting angular vel to: 0.004373
+
+emitTwoWheeledEvent: l=0.498087, r=0.501913, linearSpeed=0.080000, angularVel=0.004373, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.026245
+Updating target angle: 0.004373.
+To target angle: -0.021872.
+Setting angular vel to: -0.021872
+
+emitTwoWheeledEvent: l=0.509569, r=0.490431, linearSpeed=0.080000, angularVel=-0.021872, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.026245
+Updating target angle: -0.021872.
+To target angle: -0.048117.
+Setting angular vel to: -0.048117
+
+emitTwoWheeledEvent: l=0.521051, r=0.478949, linearSpeed=0.080000, angularVel=-0.048117, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.026245
+Updating target angle: -0.048117.
+To target angle: -0.074363.
+Setting angular vel to: -0.074363
+
+emitTwoWheeledEvent: l=0.532534, r=0.467466, linearSpeed=0.080000, angularVel=-0.074363, maxAngVel=1.142857
+
+Setting angular vel to: 0.209761
+
+emitTwoWheeledEvent: l=0.408230, r=0.591770, linearSpeed=0.080000, angularVel=0.209761, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: 0.209761.
+To target angle: 0.196943.
+Setting angular vel to: 0.196943
+
+emitTwoWheeledEvent: l=0.413837, r=0.586163, linearSpeed=0.080000, angularVel=0.196943, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: 0.196943.
+To target angle: 0.184126.
+Setting angular vel to: 0.184126
+
+emitTwoWheeledEvent: l=0.419445, r=0.580555, linearSpeed=0.080000, angularVel=0.184126, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: 0.184126.
+To target angle: 0.171308.
+Setting angular vel to: 0.171308
+
+emitTwoWheeledEvent: l=0.425053, r=0.574947, linearSpeed=0.080000, angularVel=0.171308, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: 0.171308.
+To target angle: 0.158491.
+Setting angular vel to: 0.158491
+
+emitTwoWheeledEvent: l=0.430660, r=0.569340, linearSpeed=0.080000, angularVel=0.158491, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009155
+Updating target angle: 0.158491.
+To target angle: 0.149336.
+Setting angular vel to: 0.149336
+
+emitTwoWheeledEvent: l=0.434666, r=0.565334, linearSpeed=0.080000, angularVel=0.149336, maxAngVel=1.142857
+
+Setting angular vel to: 0.216882
+
+emitTwoWheeledEvent: l=0.405114, r=0.594886, linearSpeed=0.080000, angularVel=0.216882, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009155
+Updating target angle: 0.216882.
+To target angle: 0.207726.
+Setting angular vel to: 0.207726
+
+emitTwoWheeledEvent: l=0.409120, r=0.590880, linearSpeed=0.080000, angularVel=0.207726, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009155
+Updating target angle: 0.207726.
+To target angle: 0.198571.
+Setting angular vel to: 0.198571
+
+emitTwoWheeledEvent: l=0.413125, r=0.586875, linearSpeed=0.080000, angularVel=0.198571, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009155
+Updating target angle: 0.198571.
+To target angle: 0.189416.
+Setting angular vel to: 0.189416
+
+emitTwoWheeledEvent: l=0.417131, r=0.582869, linearSpeed=0.080000, angularVel=0.189416, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.189416.
+To target angle: 0.168664.
+Setting angular vel to: 0.168664
+
+emitTwoWheeledEvent: l=0.426210, r=0.573790, linearSpeed=0.080000, angularVel=0.168664, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.168664.
+To target angle: 0.147912.
+Setting angular vel to: 0.147912
+
+emitTwoWheeledEvent: l=0.435289, r=0.564711, linearSpeed=0.080000, angularVel=0.147912, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.147912.
+To target angle: 0.127160.
+Setting angular vel to: 0.127160
+
+emitTwoWheeledEvent: l=0.444368, r=0.555632, linearSpeed=0.080000, angularVel=0.127160, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.127160.
+To target angle: 0.106408.
+Setting angular vel to: 0.106408
+
+emitTwoWheeledEvent: l=0.453447, r=0.546553, linearSpeed=0.080000, angularVel=0.106408, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.106408.
+To target angle: 0.084130.
+Setting angular vel to: 0.084130
+
+emitTwoWheeledEvent: l=0.463193, r=0.536807, linearSpeed=0.080000, angularVel=0.084130, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.084130.
+To target angle: 0.061852.
+Setting angular vel to: 0.061852
+
+emitTwoWheeledEvent: l=0.472940, r=0.527060, linearSpeed=0.080000, angularVel=0.061852, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.061852.
+To target angle: 0.039574.
+Setting angular vel to: 0.039574
+
+emitTwoWheeledEvent: l=0.482686, r=0.517314, linearSpeed=0.080000, angularVel=0.039574, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.039574.
+To target angle: 0.017297.
+Setting angular vel to: 0.017297
+
+emitTwoWheeledEvent: l=0.492433, r=0.507567, linearSpeed=0.080000, angularVel=0.017297, maxAngVel=1.142857
+
+Setting angular vel to: 0.213232
+
+emitTwoWheeledEvent: l=0.406711, r=0.593289, linearSpeed=0.080000, angularVel=0.213232, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.213232.
+To target angle: 0.192785.
+Setting angular vel to: 0.192785
+
+emitTwoWheeledEvent: l=0.415656, r=0.584344, linearSpeed=0.080000, angularVel=0.192785, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.192785.
+To target angle: 0.172339.
+Setting angular vel to: 0.172339
+
+emitTwoWheeledEvent: l=0.424602, r=0.575398, linearSpeed=0.080000, angularVel=0.172339, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.172339.
+To target angle: 0.151892.
+Setting angular vel to: 0.151892
+
+emitTwoWheeledEvent: l=0.433547, r=0.566453, linearSpeed=0.080000, angularVel=0.151892, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.151892.
+To target angle: 0.131445.
+Setting angular vel to: 0.131445
+
+emitTwoWheeledEvent: l=0.442493, r=0.557507, linearSpeed=0.080000, angularVel=0.131445, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.131445.
+To target angle: 0.114355.
+Setting angular vel to: 0.114355
+
+emitTwoWheeledEvent: l=0.449970, r=0.550030, linearSpeed=0.080000, angularVel=0.114355, maxAngVel=1.142857
+
+Setting angular vel to: 0.212386
+
+emitTwoWheeledEvent: l=0.407081, r=0.592919, linearSpeed=0.080000, angularVel=0.212386, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.212386.
+To target angle: 0.195296.
+Setting angular vel to: 0.195296
+
+emitTwoWheeledEvent: l=0.414558, r=0.585442, linearSpeed=0.080000, angularVel=0.195296, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.195296.
+To target angle: 0.178206.
+Setting angular vel to: 0.178206
+
+emitTwoWheeledEvent: l=0.422035, r=0.577965, linearSpeed=0.080000, angularVel=0.178206, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.178206.
+To target angle: 0.161116.
+Setting angular vel to: 0.161116
+
+emitTwoWheeledEvent: l=0.429512, r=0.570488, linearSpeed=0.080000, angularVel=0.161116, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.011597
+Updating target angle: 0.161116.
+To target angle: 0.149519.
+Setting angular vel to: 0.149519
+
+emitTwoWheeledEvent: l=0.434585, r=0.565415, linearSpeed=0.080000, angularVel=0.149519, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.011597
+Updating target angle: 0.149519.
+To target angle: 0.137923.
+Setting angular vel to: 0.137923
+
+emitTwoWheeledEvent: l=0.439659, r=0.560341, linearSpeed=0.080000, angularVel=0.137923, maxAngVel=1.142857
+
+Setting angular vel to: 0.215004
+
+emitTwoWheeledEvent: l=0.405936, r=0.594064, linearSpeed=0.080000, angularVel=0.215004, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.011597
+Updating target angle: 0.215004.
+To target angle: 0.203407.
+Setting angular vel to: 0.203407
+
+emitTwoWheeledEvent: l=0.411009, r=0.588991, linearSpeed=0.080000, angularVel=0.203407, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.011597
+Updating target angle: 0.203407.
+To target angle: 0.191810.
+Setting angular vel to: 0.191810
+
+emitTwoWheeledEvent: l=0.416083, r=0.583917, linearSpeed=0.080000, angularVel=0.191810, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.019226
+Updating target angle: 0.191810.
+To target angle: 0.172584.
+Setting angular vel to: 0.172584
+
+emitTwoWheeledEvent: l=0.424494, r=0.575506, linearSpeed=0.080000, angularVel=0.172584, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.019226
+Updating target angle: 0.172584.
+To target angle: 0.153358.
+Setting angular vel to: 0.153358
+
+emitTwoWheeledEvent: l=0.432906, r=0.567094, linearSpeed=0.080000, angularVel=0.153358, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.019226
+Updating target angle: 0.153358.
+To target angle: 0.134132.
+Setting angular vel to: 0.134132
+
+emitTwoWheeledEvent: l=0.441317, r=0.558683, linearSpeed=0.080000, angularVel=0.134132, maxAngVel=1.142857
+
+Setting angular vel to: 0.214993
+
+emitTwoWheeledEvent: l=0.405941, r=0.594059, linearSpeed=0.080000, angularVel=0.214993, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.019226
+Updating target angle: 0.214993.
+To target angle: 0.195767.
+Setting angular vel to: 0.195767
+
+emitTwoWheeledEvent: l=0.414352, r=0.585648, linearSpeed=0.080000, angularVel=0.195767, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.195767.
+To target angle: 0.179897.
+Setting angular vel to: 0.179897
+
+emitTwoWheeledEvent: l=0.421295, r=0.578705, linearSpeed=0.080000, angularVel=0.179897, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.179897.
+To target angle: 0.164028.
+Setting angular vel to: 0.164028
+
+emitTwoWheeledEvent: l=0.428238, r=0.571762, linearSpeed=0.080000, angularVel=0.164028, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.164028.
+To target angle: 0.148159.
+Setting angular vel to: 0.148159
+
+emitTwoWheeledEvent: l=0.435180, r=0.564820, linearSpeed=0.080000, angularVel=0.148159, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.148159.
+To target angle: 0.132290.
+Setting angular vel to: 0.132290
+
+emitTwoWheeledEvent: l=0.442123, r=0.557877, linearSpeed=0.080000, angularVel=0.132290, maxAngVel=1.142857
+
+Setting angular vel to: 0.216873
+
+emitTwoWheeledEvent: l=0.405118, r=0.594882, linearSpeed=0.080000, angularVel=0.216873, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.216873.
+To target angle: 0.199783.
+Setting angular vel to: 0.199783
+
+emitTwoWheeledEvent: l=0.412595, r=0.587405, linearSpeed=0.080000, angularVel=0.199783, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.199783.
+To target angle: 0.182693.
+Setting angular vel to: 0.182693
+
+emitTwoWheeledEvent: l=0.420072, r=0.579928, linearSpeed=0.080000, angularVel=0.182693, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.182693.
+To target angle: 0.165604.
+Setting angular vel to: 0.165604
+
+emitTwoWheeledEvent: l=0.427548, r=0.572452, linearSpeed=0.080000, angularVel=0.165604, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017090
+Updating target angle: 0.165604.
+To target angle: 0.148514.
+Setting angular vel to: 0.148514
+
+emitTwoWheeledEvent: l=0.435025, r=0.564975, linearSpeed=0.080000, angularVel=0.148514, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.148514.
+To target angle: 0.128067.
+Setting angular vel to: 0.128067
+
+emitTwoWheeledEvent: l=0.443971, r=0.556029, linearSpeed=0.080000, angularVel=0.128067, maxAngVel=1.142857
+
+Setting angular vel to: 0.216604
+
+emitTwoWheeledEvent: l=0.405236, r=0.594764, linearSpeed=0.080000, angularVel=0.216604, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.216604.
+To target angle: 0.196157.
+Setting angular vel to: 0.196157
+
+emitTwoWheeledEvent: l=0.414181, r=0.585819, linearSpeed=0.080000, angularVel=0.196157, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.196157.
+To target angle: 0.175710.
+Setting angular vel to: 0.175710
+
+emitTwoWheeledEvent: l=0.423127, r=0.576873, linearSpeed=0.080000, angularVel=0.175710, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.175710.
+To target angle: 0.155263.
+Setting angular vel to: 0.155263
+
+emitTwoWheeledEvent: l=0.432072, r=0.567928, linearSpeed=0.080000, angularVel=0.155263, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021057
+Updating target angle: 0.155263.
+To target angle: 0.134206.
+Setting angular vel to: 0.134206
+
+emitTwoWheeledEvent: l=0.441285, r=0.558715, linearSpeed=0.080000, angularVel=0.134206, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021057
+Updating target angle: 0.134206.
+To target angle: 0.113149.
+Setting angular vel to: 0.113149
+
+emitTwoWheeledEvent: l=0.450497, r=0.549503, linearSpeed=0.080000, angularVel=0.113149, maxAngVel=1.142857
+
+Setting angular vel to: 0.212804
+
+emitTwoWheeledEvent: l=0.406898, r=0.593102, linearSpeed=0.080000, angularVel=0.212804, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021057
+Updating target angle: 0.212804.
+To target angle: 0.191747.
+Setting angular vel to: 0.191747
+
+emitTwoWheeledEvent: l=0.416111, r=0.583889, linearSpeed=0.080000, angularVel=0.191747, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021057
+Updating target angle: 0.191747.
+To target angle: 0.170690.
+Setting angular vel to: 0.170690
+
+emitTwoWheeledEvent: l=0.425323, r=0.574677, linearSpeed=0.080000, angularVel=0.170690, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018311
+Updating target angle: 0.170690.
+To target angle: 0.152379.
+Setting angular vel to: 0.152379
+
+emitTwoWheeledEvent: l=0.433334, r=0.566666, linearSpeed=0.080000, angularVel=0.152379, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018311
+Updating target angle: 0.152379.
+To target angle: 0.134069.
+Setting angular vel to: 0.134069
+
+emitTwoWheeledEvent: l=0.441345, r=0.558655, linearSpeed=0.080000, angularVel=0.134069, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018311
+Updating target angle: 0.134069.
+To target angle: 0.115758.
+Setting angular vel to: 0.115758
+
+emitTwoWheeledEvent: l=0.449356, r=0.550644, linearSpeed=0.080000, angularVel=0.115758, maxAngVel=1.142857
+
+Setting angular vel to: 0.213184
+
+emitTwoWheeledEvent: l=0.406732, r=0.593268, linearSpeed=0.080000, angularVel=0.213184, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018311
+Updating target angle: 0.213184.
+To target angle: 0.194873.
+Setting angular vel to: 0.194873
+
+emitTwoWheeledEvent: l=0.414743, r=0.585257, linearSpeed=0.080000, angularVel=0.194873, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.194873.
+To target angle: 0.166187.
+Setting angular vel to: 0.166187
+
+emitTwoWheeledEvent: l=0.427293, r=0.572707, linearSpeed=0.080000, angularVel=0.166187, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.166187.
+To target angle: 0.137500.
+Setting angular vel to: 0.137500
+
+emitTwoWheeledEvent: l=0.439844, r=0.560156, linearSpeed=0.080000, angularVel=0.137500, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.137500.
+To target angle: 0.108814.
+Setting angular vel to: 0.108814
+
+emitTwoWheeledEvent: l=0.452394, r=0.547606, linearSpeed=0.080000, angularVel=0.108814, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.108814.
+To target angle: 0.080127.
+Setting angular vel to: 0.080127
+
+emitTwoWheeledEvent: l=0.464944, r=0.535056, linearSpeed=0.080000, angularVel=0.080127, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.032654
+Updating target angle: 0.080127.
+To target angle: 0.047473.
+Setting angular vel to: 0.047473
+
+emitTwoWheeledEvent: l=0.479230, r=0.520770, linearSpeed=0.080000, angularVel=0.047473, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.032654
+Updating target angle: 0.047473.
+To target angle: 0.014819.
+Setting angular vel to: 0.014819
+
+emitTwoWheeledEvent: l=0.493516, r=0.506483, linearSpeed=0.080000, angularVel=0.014819, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.032654
+Updating target angle: 0.014819.
+To target angle: -0.017834.
+Setting angular vel to: -0.017834
+
+emitTwoWheeledEvent: l=0.507803, r=0.492197, linearSpeed=0.080000, angularVel=-0.017834, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.032654
+Updating target angle: -0.017834.
+To target angle: -0.050488.
+Setting angular vel to: -0.050488
+
+emitTwoWheeledEvent: l=0.522089, r=0.477911, linearSpeed=0.080000, angularVel=-0.050488, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.024414
+Updating target angle: -0.050488.
+To target angle: -0.074902.
+Setting angular vel to: -0.074902
+
+emitTwoWheeledEvent: l=0.532770, r=0.467230, linearSpeed=0.080000, angularVel=-0.074902, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.024414
+Updating target angle: -0.074902.
+To target angle: -0.099316.
+Setting angular vel to: -0.099316
+
+emitTwoWheeledEvent: l=0.543451, r=0.456549, linearSpeed=0.080000, angularVel=-0.099316, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.024414
+Updating target angle: -0.099316.
+To target angle: -0.123730.
+Setting angular vel to: -0.123730
+
+emitTwoWheeledEvent: l=0.554132, r=0.445868, linearSpeed=0.080000, angularVel=-0.123730, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.024414
+Updating target angle: -0.123730.
+To target angle: -0.148144.
+Setting angular vel to: -0.148144
+
+emitTwoWheeledEvent: l=0.564813, r=0.435187, linearSpeed=0.080000, angularVel=-0.148144, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: -0.148144.
+To target angle: -0.160962.
+Setting angular vel to: -0.160962
+
+emitTwoWheeledEvent: l=0.570421, r=0.429579, linearSpeed=0.080000, angularVel=-0.160962, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: -0.160962.
+To target angle: -0.173779.
+Setting angular vel to: -0.173779
+
+emitTwoWheeledEvent: l=0.576028, r=0.423972, linearSpeed=0.080000, angularVel=-0.173779, maxAngVel=1.142857
+
+Setting angular vel to: 0.194568
+
+emitTwoWheeledEvent: l=0.414877, r=0.585123, linearSpeed=0.080000, angularVel=0.194568, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: 0.194568.
+To target angle: 0.181751.
+Setting angular vel to: 0.181751
+
+emitTwoWheeledEvent: l=0.420484, r=0.579516, linearSpeed=0.080000, angularVel=0.181751, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012817
+Updating target angle: 0.181751.
+To target angle: 0.168933.
+Setting angular vel to: 0.168933
+
+emitTwoWheeledEvent: l=0.426092, r=0.573908, linearSpeed=0.080000, angularVel=0.168933, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.000916
+Updating target angle: 0.168933.
+To target angle: 0.169849.
+Setting angular vel to: 0.169849
+
+emitTwoWheeledEvent: l=0.425691, r=0.574309, linearSpeed=0.080000, angularVel=0.169849, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.000916
+Updating target angle: 0.169849.
+To target angle: 0.170764.
+Setting angular vel to: 0.170764
+
+emitTwoWheeledEvent: l=0.425291, r=0.574709, linearSpeed=0.080000, angularVel=0.170764, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.000916
+Updating target angle: 0.170764.
+To target angle: 0.171680.
+Setting angular vel to: 0.171680
+
+emitTwoWheeledEvent: l=0.424890, r=0.575110, linearSpeed=0.080000, angularVel=0.171680, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=-0.000916
+Updating target angle: 0.171680.
+To target angle: 0.172595.
+Setting angular vel to: 0.172595
+
+emitTwoWheeledEvent: l=0.424490, r=0.575510, linearSpeed=0.080000, angularVel=0.172595, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009460
+Updating target angle: 0.172595.
+To target angle: 0.163135.
+Setting angular vel to: 0.163135
+
+emitTwoWheeledEvent: l=0.428629, r=0.571371, linearSpeed=0.080000, angularVel=0.163135, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009460
+Updating target angle: 0.163135.
+To target angle: 0.153674.
+Setting angular vel to: 0.153674
+
+emitTwoWheeledEvent: l=0.432767, r=0.567233, linearSpeed=0.080000, angularVel=0.153674, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009460
+Updating target angle: 0.153674.
+To target angle: 0.144214.
+Setting angular vel to: 0.144214
+
+emitTwoWheeledEvent: l=0.436906, r=0.563094, linearSpeed=0.080000, angularVel=0.144214, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.009460
+Updating target angle: 0.144214.
+To target angle: 0.134754.
+Setting angular vel to: 0.134754
+
+emitTwoWheeledEvent: l=0.441045, r=0.558955, linearSpeed=0.080000, angularVel=0.134754, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031738
+Updating target angle: 0.134754.
+To target angle: 0.103015.
+Setting angular vel to: 0.103015
+
+emitTwoWheeledEvent: l=0.454931, r=0.545069, linearSpeed=0.080000, angularVel=0.103015, maxAngVel=1.142857
+
+Setting angular vel to: 0.208731
+
+emitTwoWheeledEvent: l=0.408680, r=0.591320, linearSpeed=0.080000, angularVel=0.208731, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031738
+Updating target angle: 0.208731.
+To target angle: 0.176992.
+Setting angular vel to: 0.176992
+
+emitTwoWheeledEvent: l=0.422566, r=0.577434, linearSpeed=0.080000, angularVel=0.176992, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031738
+Updating target angle: 0.176992.
+To target angle: 0.145254.
+Setting angular vel to: 0.145254
+
+emitTwoWheeledEvent: l=0.436451, r=0.563549, linearSpeed=0.080000, angularVel=0.145254, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031738
+Updating target angle: 0.145254.
+To target angle: 0.113516.
+Setting angular vel to: 0.113516
+
+emitTwoWheeledEvent: l=0.450337, r=0.549663, linearSpeed=0.080000, angularVel=0.113516, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00000.svg
+Saving /tmp/reactive_bodies00000.tsv
+onGyroTurn: dphi=0.020142
+Updating target angle: 0.113516.
+To target angle: 0.093374.
+Setting angular vel to: 0.093374
+
+emitTwoWheeledEvent: l=0.459149, r=0.540851, linearSpeed=0.080000, angularVel=0.093374, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020142
+Updating target angle: 0.093374.
+To target angle: 0.073233.
+Setting angular vel to: 0.073233
+
+emitTwoWheeledEvent: l=0.467961, r=0.532039, linearSpeed=0.080000, angularVel=0.073233, maxAngVel=1.142857
+
+Setting angular vel to: 0.202374
+
+emitTwoWheeledEvent: l=0.411461, r=0.588539, linearSpeed=0.080000, angularVel=0.202374, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020142
+Updating target angle: 0.202374.
+To target angle: 0.182232.
+Setting angular vel to: 0.182232
+
+emitTwoWheeledEvent: l=0.420273, r=0.579727, linearSpeed=0.080000, angularVel=0.182232, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020142
+Updating target angle: 0.182232.
+To target angle: 0.162091.
+Setting angular vel to: 0.162091
+
+emitTwoWheeledEvent: l=0.429085, r=0.570915, linearSpeed=0.080000, angularVel=0.162091, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00001.svg
+Saving /tmp/reactive_bodies00001.tsv
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.162091.
+To target angle: 0.141339.
+Setting angular vel to: 0.141339
+
+emitTwoWheeledEvent: l=0.438164, r=0.561836, linearSpeed=0.080000, angularVel=0.141339, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.141339.
+To target angle: 0.120587.
+Setting angular vel to: 0.120587
+
+emitTwoWheeledEvent: l=0.447243, r=0.552757, linearSpeed=0.080000, angularVel=0.120587, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.120587.
+To target angle: 0.099835.
+Setting angular vel to: 0.099835
+
+emitTwoWheeledEvent: l=0.456322, r=0.543678, linearSpeed=0.080000, angularVel=0.099835, maxAngVel=1.142857
+
+Setting angular vel to: 0.200630
+
+emitTwoWheeledEvent: l=0.412225, r=0.587775, linearSpeed=0.080000, angularVel=0.200630, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00002.svg
+Saving /tmp/reactive_bodies00002.tsv
+onGyroTurn: dphi=0.020752
+Updating target angle: 0.200630.
+To target angle: 0.179878.
+Setting angular vel to: 0.179878
+
+emitTwoWheeledEvent: l=0.421303, r=0.578696, linearSpeed=0.080000, angularVel=0.179878, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.179878.
+To target angle: 0.154243.
+Setting angular vel to: 0.154243
+
+emitTwoWheeledEvent: l=0.432519, r=0.567481, linearSpeed=0.080000, angularVel=0.154243, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.154243.
+To target angle: 0.128608.
+Setting angular vel to: 0.128608
+
+emitTwoWheeledEvent: l=0.443734, r=0.556266, linearSpeed=0.080000, angularVel=0.128608, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.128608.
+To target angle: 0.102973.
+Setting angular vel to: 0.102973
+
+emitTwoWheeledEvent: l=0.454949, r=0.545051, linearSpeed=0.080000, angularVel=0.102973, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00003.svg
+Saving /tmp/reactive_bodies00003.tsv
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.102973.
+To target angle: 0.077339.
+Setting angular vel to: 0.077339
+
+emitTwoWheeledEvent: l=0.466164, r=0.533836, linearSpeed=0.080000, angularVel=0.077339, maxAngVel=1.142857
+
+Setting angular vel to: 0.193822
+
+emitTwoWheeledEvent: l=0.415203, r=0.584797, linearSpeed=0.080000, angularVel=0.193822, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.029297
+Updating target angle: 0.193822.
+To target angle: 0.164525.
+Setting angular vel to: 0.164525
+
+emitTwoWheeledEvent: l=0.428020, r=0.571980, linearSpeed=0.080000, angularVel=0.164525, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.029297
+Updating target angle: 0.164525.
+To target angle: 0.135228.
+Setting angular vel to: 0.135228
+
+emitTwoWheeledEvent: l=0.440838, r=0.559162, linearSpeed=0.080000, angularVel=0.135228, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.029297
+Updating target angle: 0.135228.
+To target angle: 0.105931.
+Setting angular vel to: 0.105931
+
+emitTwoWheeledEvent: l=0.453655, r=0.546345, linearSpeed=0.080000, angularVel=0.105931, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00004.svg
+Saving /tmp/reactive_bodies00004.tsv
+onGyroTurn: dphi=0.029297
+Updating target angle: 0.105931.
+To target angle: 0.076634.
+Setting angular vel to: 0.076634
+
+emitTwoWheeledEvent: l=0.466472, r=0.533528, linearSpeed=0.080000, angularVel=0.076634, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.076634.
+To target angle: 0.047948.
+Setting angular vel to: 0.047948
+
+emitTwoWheeledEvent: l=0.479023, r=0.520977, linearSpeed=0.080000, angularVel=0.047948, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.047948.
+To target angle: 0.019261.
+Setting angular vel to: 0.019261
+
+emitTwoWheeledEvent: l=0.491573, r=0.508427, linearSpeed=0.080000, angularVel=0.019261, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.019261.
+To target angle: -0.009425.
+Setting angular vel to: -0.009425
+
+emitTwoWheeledEvent: l=0.504124, r=0.495876, linearSpeed=0.080000, angularVel=-0.009425, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00005.svg
+Saving /tmp/reactive_bodies00005.tsv
+onGyroTurn: dphi=0.028687
+Updating target angle: -0.009425.
+To target angle: -0.038112.
+Setting angular vel to: -0.038112
+
+emitTwoWheeledEvent: l=0.516674, r=0.483326, linearSpeed=0.080000, angularVel=-0.038112, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: -0.038112.
+To target angle: -0.060084.
+Setting angular vel to: -0.060084
+
+emitTwoWheeledEvent: l=0.526287, r=0.473713, linearSpeed=0.080000, angularVel=-0.060084, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: -0.060084.
+To target angle: -0.082057.
+Setting angular vel to: -0.082057
+
+emitTwoWheeledEvent: l=0.535900, r=0.464100, linearSpeed=0.080000, angularVel=-0.082057, maxAngVel=1.142857
+
+Setting angular vel to: 0.177370
+
+emitTwoWheeledEvent: l=0.422401, r=0.577599, linearSpeed=0.080000, angularVel=0.177370, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.177370.
+To target angle: 0.155397.
+Setting angular vel to: 0.155397
+
+emitTwoWheeledEvent: l=0.432014, r=0.567986, linearSpeed=0.080000, angularVel=0.155397, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00006.svg
+Saving /tmp/reactive_bodies00006.tsv
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.155397.
+To target angle: 0.133424.
+Setting angular vel to: 0.133424
+
+emitTwoWheeledEvent: l=0.441627, r=0.558373, linearSpeed=0.080000, angularVel=0.133424, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012512
+Updating target angle: 0.133424.
+To target angle: 0.120912.
+Setting angular vel to: 0.120912
+
+emitTwoWheeledEvent: l=0.447101, r=0.552899, linearSpeed=0.080000, angularVel=0.120912, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012512
+Updating target angle: 0.120912.
+To target angle: 0.108400.
+Setting angular vel to: 0.108400
+
+emitTwoWheeledEvent: l=0.452575, r=0.547425, linearSpeed=0.080000, angularVel=0.108400, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.012512
+Updating target angle: 0.108400.
+To target angle: 0.095888.
+Setting angular vel to: 0.095888
+
+emitTwoWheeledEvent: l=0.458049, r=0.541951, linearSpeed=0.080000, angularVel=0.095888, maxAngVel=1.142857
+
+Setting angular vel to: 0.180716
+
+emitTwoWheeledEvent: l=0.420937, r=0.579063, linearSpeed=0.080000, angularVel=0.180716, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00007.svg
+Saving /tmp/reactive_bodies00007.tsv
+onGyroTurn: dphi=0.012512
+Updating target angle: 0.180716.
+To target angle: 0.168204.
+Setting angular vel to: 0.168204
+
+emitTwoWheeledEvent: l=0.426411, r=0.573589, linearSpeed=0.080000, angularVel=0.168204, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.168204.
+To target angle: 0.145926.
+Setting angular vel to: 0.145926
+
+emitTwoWheeledEvent: l=0.436157, r=0.563843, linearSpeed=0.080000, angularVel=0.145926, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.145926.
+To target angle: 0.123648.
+Setting angular vel to: 0.123648
+
+emitTwoWheeledEvent: l=0.445904, r=0.554096, linearSpeed=0.080000, angularVel=0.123648, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.123648.
+To target angle: 0.101371.
+Setting angular vel to: 0.101371
+
+emitTwoWheeledEvent: l=0.455650, r=0.544350, linearSpeed=0.080000, angularVel=0.101371, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00008.svg
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.101371.
+To target angle: 0.079093.
+Setting angular vel to: 0.079093
+
+emitTwoWheeledEvent: l=0.465397, r=0.534603, linearSpeed=0.080000, angularVel=0.079093, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00008.tsv
+Setting angular vel to: 0.177385
+
+emitTwoWheeledEvent: l=0.422394, r=0.577606, linearSpeed=0.080000, angularVel=0.177385, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.177385.
+To target angle: 0.155107.
+Setting angular vel to: 0.155107
+
+emitTwoWheeledEvent: l=0.432140, r=0.567860, linearSpeed=0.080000, angularVel=0.155107, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.155107.
+To target angle: 0.132830.
+Setting angular vel to: 0.132830
+
+emitTwoWheeledEvent: l=0.441887, r=0.558113, linearSpeed=0.080000, angularVel=0.132830, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.132830.
+To target angle: 0.110552.
+Setting angular vel to: 0.110552
+
+emitTwoWheeledEvent: l=0.451634, r=0.548366, linearSpeed=0.080000, angularVel=0.110552, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022278
+Updating target angle: 0.110552.
+To target angle: 0.088274.
+Setting angular vel to: 0.088274
+
+emitTwoWheeledEvent: l=0.461380, r=0.538620, linearSpeed=0.080000, angularVel=0.088274, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00009.svg
+Saving /tmp/reactive_bodies00009.tsv
+onGyroTurn: dphi=0.024414
+Updating target angle: 0.088274.
+To target angle: 0.063860.
+Setting angular vel to: 0.063860
+
+emitTwoWheeledEvent: l=0.472061, r=0.527939, linearSpeed=0.080000, angularVel=0.063860, maxAngVel=1.142857
+
+Setting angular vel to: 0.172377
+
+emitTwoWheeledEvent: l=0.424585, r=0.575415, linearSpeed=0.080000, angularVel=0.172377, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.024414
+Updating target angle: 0.172377.
+To target angle: 0.147963.
+Setting angular vel to: 0.147963
+
+emitTwoWheeledEvent: l=0.435266, r=0.564734, linearSpeed=0.080000, angularVel=0.147963, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.024414
+Updating target angle: 0.147963.
+To target angle: 0.123549.
+Setting angular vel to: 0.123549
+
+emitTwoWheeledEvent: l=0.445947, r=0.554053, linearSpeed=0.080000, angularVel=0.123549, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.024414
+Updating target angle: 0.123549.
+To target angle: 0.099135.
+Setting angular vel to: 0.099135
+
+emitTwoWheeledEvent: l=0.456628, r=0.543372, linearSpeed=0.080000, angularVel=0.099135, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.099135.
+To target angle: 0.073500.
+Setting angular vel to: 0.073500
+
+emitTwoWheeledEvent: l=0.467844, r=0.532156, linearSpeed=0.080000, angularVel=0.073500, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00010.svg
+Saving /tmp/reactive_bodies00010.tsv
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.073500.
+To target angle: 0.047866.
+Setting angular vel to: 0.047866
+
+emitTwoWheeledEvent: l=0.479059, r=0.520941, linearSpeed=0.080000, angularVel=0.047866, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.047866.
+To target angle: 0.022231.
+Setting angular vel to: 0.022231
+
+emitTwoWheeledEvent: l=0.490274, r=0.509726, linearSpeed=0.080000, angularVel=0.022231, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025635
+Updating target angle: 0.022231.
+To target angle: -0.003404.
+Setting angular vel to: -0.003404
+
+emitTwoWheeledEvent: l=0.501489, r=0.498511, linearSpeed=0.080000, angularVel=-0.003404, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018311
+Updating target angle: -0.003404.
+To target angle: -0.021714.
+Setting angular vel to: -0.021714
+
+emitTwoWheeledEvent: l=0.509500, r=0.490500, linearSpeed=0.080000, angularVel=-0.021714, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00011.svg
+onGyroTurn: dphi=0.018311
+Updating target angle: -0.021714.
+To target angle: -0.040025.
+Setting angular vel to: -0.040025
+
+emitTwoWheeledEvent: l=0.517511, r=0.482489, linearSpeed=0.080000, angularVel=-0.040025, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00011.tsv
+onGyroTurn: dphi=0.018311
+Updating target angle: -0.040025.
+To target angle: -0.058336.
+Setting angular vel to: -0.058336
+
+emitTwoWheeledEvent: l=0.525522, r=0.474478, linearSpeed=0.080000, angularVel=-0.058336, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018311
+Updating target angle: -0.058336.
+To target angle: -0.076646.
+Setting angular vel to: -0.076646
+
+emitTwoWheeledEvent: l=0.533533, r=0.466467, linearSpeed=0.080000, angularVel=-0.076646, maxAngVel=1.142857
+
+Setting angular vel to: 0.164331
+
+emitTwoWheeledEvent: l=0.428105, r=0.571895, linearSpeed=0.080000, angularVel=0.164331, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006409
+Updating target angle: 0.164331.
+To target angle: 0.157923.
+Setting angular vel to: 0.157923
+
+emitTwoWheeledEvent: l=0.430909, r=0.569091, linearSpeed=0.080000, angularVel=0.157923, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006409
+Updating target angle: 0.157923.
+To target angle: 0.151514.
+Setting angular vel to: 0.151514
+
+emitTwoWheeledEvent: l=0.433713, r=0.566287, linearSpeed=0.080000, angularVel=0.151514, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006409
+Updating target angle: 0.151514.
+To target angle: 0.145105.
+Setting angular vel to: 0.145105
+
+emitTwoWheeledEvent: l=0.436516, r=0.563484, linearSpeed=0.080000, angularVel=0.145105, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00012.svg
+Saving /tmp/reactive_bodies00012.tsv
+onGyroTurn: dphi=0.006409
+Updating target angle: 0.145105.
+To target angle: 0.138697.
+Setting angular vel to: 0.138697
+
+emitTwoWheeledEvent: l=0.439320, r=0.560680, linearSpeed=0.080000, angularVel=0.138697, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.003357
+Updating target angle: 0.138697.
+To target angle: 0.135340.
+Setting angular vel to: 0.135340
+
+emitTwoWheeledEvent: l=0.440789, r=0.559211, linearSpeed=0.080000, angularVel=0.135340, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.003357
+Updating target angle: 0.135340.
+To target angle: 0.131983.
+Setting angular vel to: 0.131983
+
+emitTwoWheeledEvent: l=0.442258, r=0.557742, linearSpeed=0.080000, angularVel=0.131983, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.003357
+Updating target angle: 0.131983.
+To target angle: 0.128626.
+Setting angular vel to: 0.128626
+
+emitTwoWheeledEvent: l=0.443726, r=0.556274, linearSpeed=0.080000, angularVel=0.128626, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.003357
+Updating target angle: 0.128626.
+To target angle: 0.125269.
+Setting angular vel to: 0.125269
+
+emitTwoWheeledEvent: l=0.445195, r=0.554805, linearSpeed=0.080000, angularVel=0.125269, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00013.svg
+Saving /tmp/reactive_bodies00013.tsv
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.125269.
+To target angle: 0.103296.
+Setting angular vel to: 0.103296
+
+emitTwoWheeledEvent: l=0.454808, r=0.545192, linearSpeed=0.080000, angularVel=0.103296, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.103296.
+To target angle: 0.081324.
+Setting angular vel to: 0.081324
+
+emitTwoWheeledEvent: l=0.464421, r=0.535579, linearSpeed=0.080000, angularVel=0.081324, maxAngVel=1.142857
+
+Setting angular vel to: 0.180439
+
+emitTwoWheeledEvent: l=0.421058, r=0.578942, linearSpeed=0.080000, angularVel=0.180439, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.180439.
+To target angle: 0.158466.
+Setting angular vel to: 0.158466
+
+emitTwoWheeledEvent: l=0.430671, r=0.569329, linearSpeed=0.080000, angularVel=0.158466, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.158466.
+To target angle: 0.136493.
+Setting angular vel to: 0.136493
+
+emitTwoWheeledEvent: l=0.440284, r=0.559716, linearSpeed=0.080000, angularVel=0.136493, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.136493.
+To target angle: 0.114521.
+Setting angular vel to: 0.114521
+
+emitTwoWheeledEvent: l=0.449897, r=0.550103, linearSpeed=0.080000, angularVel=0.114521, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310846, bodyflag=0
+Saving /tmp/reactive_bodies00014.svg
+Saving /tmp/reactive_bodies00014.tsv
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.114521.
+To target angle: 0.092548.
+Setting angular vel to: 0.092548
+
+emitTwoWheeledEvent: l=0.459510, r=0.540490, linearSpeed=0.080000, angularVel=0.092548, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.092548.
+To target angle: 0.070576.
+Setting angular vel to: 0.070576
+
+emitTwoWheeledEvent: l=0.469123, r=0.530877, linearSpeed=0.080000, angularVel=0.070576, maxAngVel=1.142857
+
+Setting angular vel to: 0.176066
+
+emitTwoWheeledEvent: l=0.422971, r=0.577029, linearSpeed=0.080000, angularVel=0.176066, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: 0.176066.
+To target angle: 0.154093.
+Setting angular vel to: 0.154093
+
+emitTwoWheeledEvent: l=0.432584, r=0.567416, linearSpeed=0.080000, angularVel=0.154093, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.016174
+Updating target angle: 0.154093.
+To target angle: 0.137919.
+Setting angular vel to: 0.137919
+
+emitTwoWheeledEvent: l=0.439660, r=0.560340, linearSpeed=0.080000, angularVel=0.137919, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.016174
+Updating target angle: 0.137919.
+To target angle: 0.121745.
+Setting angular vel to: 0.121745
+
+emitTwoWheeledEvent: l=0.446737, r=0.553263, linearSpeed=0.080000, angularVel=0.121745, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.016174
+Updating target angle: 0.121745.
+To target angle: 0.105571.
+Setting angular vel to: 0.105571
+
+emitTwoWheeledEvent: l=0.453813, r=0.546187, linearSpeed=0.080000, angularVel=0.105571, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.305941, bodyflag=0
+Saving /tmp/reactive_bodies00015.svg
+Saving /tmp/reactive_bodies00015.tsv
+onGyroTurn: dphi=0.016174
+Updating target angle: 0.105571.
+To target angle: 0.089396.
+Setting angular vel to: 0.089396
+
+emitTwoWheeledEvent: l=0.460889, r=0.539111, linearSpeed=0.080000, angularVel=0.089396, maxAngVel=1.142857
+
+Setting angular vel to: 0.177652
+
+emitTwoWheeledEvent: l=0.422277, r=0.577723, linearSpeed=0.080000, angularVel=0.177652, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.177652.
+To target angle: 0.158731.
+Setting angular vel to: 0.158731
+
+emitTwoWheeledEvent: l=0.430555, r=0.569445, linearSpeed=0.080000, angularVel=0.158731, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.158731.
+To target angle: 0.139810.
+Setting angular vel to: 0.139810
+
+emitTwoWheeledEvent: l=0.438833, r=0.561167, linearSpeed=0.080000, angularVel=0.139810, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.139810.
+To target angle: 0.120889.
+Setting angular vel to: 0.120889
+
+emitTwoWheeledEvent: l=0.447111, r=0.552889, linearSpeed=0.080000, angularVel=0.120889, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.120889.
+To target angle: 0.101968.
+Setting angular vel to: 0.101968
+
+emitTwoWheeledEvent: l=0.455389, r=0.544611, linearSpeed=0.080000, angularVel=0.101968, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.296142, bodyflag=0
+Saving /tmp/reactive_bodies00016.svg
+Saving /tmp/reactive_bodies00016.tsv
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.101968.
+To target angle: 0.083047.
+Setting angular vel to: 0.083047
+
+emitTwoWheeledEvent: l=0.463667, r=0.536333, linearSpeed=0.080000, angularVel=0.083047, maxAngVel=1.142857
+
+Setting angular vel to: 0.175178
+
+emitTwoWheeledEvent: l=0.423360, r=0.576640, linearSpeed=0.080000, angularVel=0.175178, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.175178.
+To target angle: 0.156257.
+Setting angular vel to: 0.156257
+
+emitTwoWheeledEvent: l=0.431637, r=0.568363, linearSpeed=0.080000, angularVel=0.156257, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.156257.
+To target angle: 0.137336.
+Setting angular vel to: 0.137336
+
+emitTwoWheeledEvent: l=0.439915, r=0.560085, linearSpeed=0.080000, angularVel=0.137336, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.018921
+Updating target angle: 0.137336.
+To target angle: 0.118415.
+Setting angular vel to: 0.118415
+
+emitTwoWheeledEvent: l=0.448193, r=0.551807, linearSpeed=0.080000, angularVel=0.118415, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022583
+Updating target angle: 0.118415.
+To target angle: 0.095832.
+Setting angular vel to: 0.095832
+
+emitTwoWheeledEvent: l=0.458073, r=0.541927, linearSpeed=0.080000, angularVel=0.095832, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.281469, bodyflag=0
+Saving /tmp/reactive_bodies00017.svg
+Saving /tmp/reactive_bodies00017.tsv
+onGyroTurn: dphi=0.022583
+Updating target angle: 0.095832.
+To target angle: 0.073249.
+Setting angular vel to: 0.073249
+
+emitTwoWheeledEvent: l=0.467953, r=0.532047, linearSpeed=0.080000, angularVel=0.073249, maxAngVel=1.142857
+
+Setting angular vel to: 0.175464
+
+emitTwoWheeledEvent: l=0.423234, r=0.576766, linearSpeed=0.080000, angularVel=0.175464, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022583
+Updating target angle: 0.175464.
+To target angle: 0.152881.
+Setting angular vel to: 0.152881
+
+emitTwoWheeledEvent: l=0.433114, r=0.566886, linearSpeed=0.080000, angularVel=0.152881, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.022583
+Updating target angle: 0.152881.
+To target angle: 0.130298.
+Setting angular vel to: 0.130298
+
+emitTwoWheeledEvent: l=0.442995, r=0.557005, linearSpeed=0.080000, angularVel=0.130298, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.030518
+Updating target angle: 0.130298.
+To target angle: 0.099781.
+Setting angular vel to: 0.099781
+
+emitTwoWheeledEvent: l=0.456346, r=0.543654, linearSpeed=0.080000, angularVel=0.099781, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.030518
+Updating target angle: 0.099781.
+To target angle: 0.069263.
+Setting angular vel to: 0.069263
+
+emitTwoWheeledEvent: l=0.469697, r=0.530303, linearSpeed=0.080000, angularVel=0.069263, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.030518
+Updating target angle: 0.069263.
+To target angle: 0.038745.
+Setting angular vel to: 0.038745
+
+emitTwoWheeledEvent: l=0.483049, r=0.516951, linearSpeed=0.080000, angularVel=0.038745, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.272855, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.260192, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00018.svg
+Saving /tmp/reactive_bodies00018.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.030518
+Updating target angle: 0.038745.
+To target angle: 0.008228.
+Setting angular vel to: 0.008228
+
+emitTwoWheeledEvent: l=0.496400, r=0.503600, linearSpeed=0.080000, angularVel=0.008228, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: 0.008228.
+To target angle: -0.005810.
+Setting angular vel to: -0.005810
+
+emitTwoWheeledEvent: l=0.502542, r=0.497458, linearSpeed=0.080000, angularVel=-0.005810, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: -0.005810.
+To target angle: -0.019848.
+Setting angular vel to: -0.019848
+
+emitTwoWheeledEvent: l=0.508684, r=0.491316, linearSpeed=0.080000, angularVel=-0.019848, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: -0.019848.
+To target angle: -0.033886.
+Setting angular vel to: -0.033886
+
+emitTwoWheeledEvent: l=0.514825, r=0.485175, linearSpeed=0.080000, angularVel=-0.033886, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: -0.033886.
+To target angle: -0.047924.
+Setting angular vel to: -0.047924
+
+emitTwoWheeledEvent: l=0.520967, r=0.479033, linearSpeed=0.080000, angularVel=-0.047924, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.263154, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.250200, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.250200, bodyflag=0
+Saving /tmp/reactive_bodies00019.svg
+Saving /tmp/reactive_bodies00019.tsv
+Setting angular vel to: 0.166669
+
+emitTwoWheeledEvent: l=0.427082, r=0.572918, linearSpeed=0.080000, angularVel=0.166669, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.166669.
+To target angle: 0.148969.
+Setting angular vel to: 0.148969
+
+emitTwoWheeledEvent: l=0.434826, r=0.565174, linearSpeed=0.080000, angularVel=0.148969, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.148969.
+To target angle: 0.131269.
+Setting angular vel to: 0.131269
+
+emitTwoWheeledEvent: l=0.442570, r=0.557430, linearSpeed=0.080000, angularVel=0.131269, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.131269.
+To target angle: 0.113569.
+Setting angular vel to: 0.113569
+
+emitTwoWheeledEvent: l=0.450314, r=0.549686, linearSpeed=0.080000, angularVel=0.113569, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.113569.
+To target angle: 0.095869.
+Setting angular vel to: 0.095869
+
+emitTwoWheeledEvent: l=0.458057, r=0.541942, linearSpeed=0.080000, angularVel=0.095869, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: 0.095869.
+To target angle: 0.081830.
+Setting angular vel to: 0.081830
+
+emitTwoWheeledEvent: l=0.464199, r=0.535801, linearSpeed=0.080000, angularVel=0.081830, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.250648, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.251794, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.240832, bodyflag=0
+Saving /tmp/reactive_bodies00020.svg
+Saving /tmp/reactive_bodies00020.tsv
+onGyroTurn: dphi=0.014038
+Updating target angle: 0.081830.
+To target angle: 0.067792.
+Setting angular vel to: 0.067792
+
+emitTwoWheeledEvent: l=0.470341, r=0.529659, linearSpeed=0.080000, angularVel=0.067792, maxAngVel=1.142857
+
+Setting angular vel to: 0.168264
+
+emitTwoWheeledEvent: l=0.426385, r=0.573615, linearSpeed=0.080000, angularVel=0.168264, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: 0.168264.
+To target angle: 0.154226.
+Setting angular vel to: 0.154226
+
+emitTwoWheeledEvent: l=0.432526, r=0.567474, linearSpeed=0.080000, angularVel=0.154226, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.014038
+Updating target angle: 0.154226.
+To target angle: 0.140188.
+Setting angular vel to: 0.140188
+
+emitTwoWheeledEvent: l=0.438668, r=0.561332, linearSpeed=0.080000, angularVel=0.140188, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.140188.
+To target angle: 0.111501.
+Setting angular vel to: 0.111501
+
+emitTwoWheeledEvent: l=0.451218, r=0.548782, linearSpeed=0.080000, angularVel=0.111501, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.111501.
+To target angle: 0.082815.
+Setting angular vel to: 0.082815
+
+emitTwoWheeledEvent: l=0.463769, r=0.536231, linearSpeed=0.080000, angularVel=0.082815, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.241868, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.230868, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.240416, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.230217, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.240208, bodyflag=0
+Saving /tmp/reactive_bodies00021.svg
+Saving /tmp/reactive_bodies00021.tsv
+Setting angular vel to: 0.163387
+
+emitTwoWheeledEvent: l=0.428518, r=0.571482, linearSpeed=0.080000, angularVel=0.163387, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.163387.
+To target angle: 0.134701.
+Setting angular vel to: 0.134701
+
+emitTwoWheeledEvent: l=0.441068, r=0.558932, linearSpeed=0.080000, angularVel=0.134701, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028687
+Updating target angle: 0.134701.
+To target angle: 0.106014.
+Setting angular vel to: 0.106014
+
+emitTwoWheeledEvent: l=0.453619, r=0.546381, linearSpeed=0.080000, angularVel=0.106014, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028076
+Updating target angle: 0.106014.
+To target angle: 0.077938.
+Setting angular vel to: 0.077938
+
+emitTwoWheeledEvent: l=0.465902, r=0.534098, linearSpeed=0.080000, angularVel=0.077938, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028076
+Updating target angle: 0.077938.
+To target angle: 0.049862.
+Setting angular vel to: 0.049862
+
+emitTwoWheeledEvent: l=0.478185, r=0.521815, linearSpeed=0.080000, angularVel=0.049862, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.028076
+Updating target angle: 0.049862.
+To target angle: 0.021786.
+Setting angular vel to: 0.021786
+
+emitTwoWheeledEvent: l=0.490469, r=0.509531, linearSpeed=0.080000, angularVel=0.021786, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.233444, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.220227, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.220227, bodyflag=0
+Saving /tmp/reactive_bodies00022.svg
+Targetloc: Contour discarded.
+Saving /tmp/reactive_bodies00022.tsv
+onGyroTurn: dphi=0.028076
+Updating target angle: 0.021786.
+To target angle: -0.006291.
+Setting angular vel to: -0.006291
+
+emitTwoWheeledEvent: l=0.502752, r=0.497248, linearSpeed=0.080000, angularVel=-0.006291, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: -0.006291.
+To target angle: -0.028263.
+Setting angular vel to: -0.028263
+
+emitTwoWheeledEvent: l=0.512365, r=0.487635, linearSpeed=0.080000, angularVel=-0.028263, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: -0.028263.
+To target angle: -0.050236.
+Setting angular vel to: -0.050236
+
+emitTwoWheeledEvent: l=0.521978, r=0.478022, linearSpeed=0.080000, angularVel=-0.050236, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: -0.050236.
+To target angle: -0.072208.
+Setting angular vel to: -0.072208
+
+emitTwoWheeledEvent: l=0.531591, r=0.468409, linearSpeed=0.080000, angularVel=-0.072208, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.021973
+Updating target angle: -0.072208.
+To target angle: -0.094181.
+Setting angular vel to: -0.094181
+
+emitTwoWheeledEvent: l=0.541204, r=0.458796, linearSpeed=0.080000, angularVel=-0.094181, maxAngVel=1.142857
+
+Setting angular vel to: 0.150882
+
+emitTwoWheeledEvent: l=0.433989, r=0.566011, linearSpeed=0.080000, angularVel=0.150882, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.150882.
+To target angle: 0.135013.
+Setting angular vel to: 0.135013
+
+emitTwoWheeledEvent: l=0.440932, r=0.559068, linearSpeed=0.080000, angularVel=0.135013, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.221359, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.210238, bodyflag=0
+Saving /tmp/reactive_bodies00023.svg
+Saving /tmp/reactive_bodies00023.tsv
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.135013.
+To target angle: 0.119144.
+Setting angular vel to: 0.119144
+
+emitTwoWheeledEvent: l=0.447875, r=0.552125, linearSpeed=0.080000, angularVel=0.119144, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.119144.
+To target angle: 0.103275.
+Setting angular vel to: 0.103275
+
+emitTwoWheeledEvent: l=0.454817, r=0.545183, linearSpeed=0.080000, angularVel=0.103275, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.015869
+Updating target angle: 0.103275.
+To target angle: 0.087405.
+Setting angular vel to: 0.087405
+
+emitTwoWheeledEvent: l=0.461760, r=0.538240, linearSpeed=0.080000, angularVel=0.087405, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.013123
+Updating target angle: 0.087405.
+To target angle: 0.074283.
+Setting angular vel to: 0.074283
+
+emitTwoWheeledEvent: l=0.467501, r=0.532499, linearSpeed=0.080000, angularVel=0.074283, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.211896, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.200250, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00024.svg
+Saving /tmp/reactive_bodies00024.tsv
+onGyroTurn: dphi=0.013123
+Updating target angle: 0.074283.
+To target angle: 0.061160.
+Setting angular vel to: 0.061160
+
+emitTwoWheeledEvent: l=0.473242, r=0.526758, linearSpeed=0.080000, angularVel=0.061160, maxAngVel=1.142857
+
+Setting angular vel to: 0.155656
+
+emitTwoWheeledEvent: l=0.431900, r=0.568100, linearSpeed=0.080000, angularVel=0.155656, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.013123
+Updating target angle: 0.155656.
+To target angle: 0.142534.
+Setting angular vel to: 0.142534
+
+emitTwoWheeledEvent: l=0.437642, r=0.562358, linearSpeed=0.080000, angularVel=0.142534, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.013123
+Updating target angle: 0.142534.
+To target angle: 0.129411.
+Setting angular vel to: 0.129411
+
+emitTwoWheeledEvent: l=0.443383, r=0.556617, linearSpeed=0.080000, angularVel=0.129411, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.129411.
+To target angle: 0.108964.
+Setting angular vel to: 0.108964
+
+emitTwoWheeledEvent: l=0.452328, r=0.547672, linearSpeed=0.080000, angularVel=0.108964, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.108964.
+To target angle: 0.088518.
+Setting angular vel to: 0.088518
+
+emitTwoWheeledEvent: l=0.461274, r=0.538726, linearSpeed=0.080000, angularVel=0.088518, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.088518.
+To target angle: 0.068071.
+Setting angular vel to: 0.068071
+
+emitTwoWheeledEvent: l=0.470219, r=0.529781, linearSpeed=0.080000, angularVel=0.068071, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.190263, bodyflag=0
+AbstractTask::CloseObjectDetector: We are close!
+AbstractTask::CloseObjectDetector: In field of view: detected!
+Detected more than two threats at: -0.052583
+Task terminating because of obstacle at: -0.052583
+Reactive: onTaskTerminated
+ReactiveConfigurator: Obstacle detected.
+
+ReactiveConfigurator: Avoidance to the LEFT b/c obstacle to the right.
+
+emitTwoWheeledEvent: l=0.470219, r=0.529781, linearSpeed=0.080000, angularVel=0.068071, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00025.svg
+Camera target detection: r=%, phi=%
+Saving /tmp/reactive_bodies00025.tsv
+onGyroTurn: dphi=0.020447
+Updating target angle: 0.154512.
+To target angle: 0.134065.
+onGyroTurn: dphi=0.023804
+Updating target angle: 0.134065.
+To target angle: 0.110262.
+onGyroTurn: dphi=0.023804
+Updating target angle: 0.110262.
+To target angle: 0.086458.
+onGyroTurn: dphi=0.023804
+Updating target angle: 0.086458.
+To target angle: 0.062654.
+onGyroTurn: dphi=0.023804
+Updating target angle: 0.062654.
+To target angle: 0.038850.
+====> avoid(0, 0.191250 0.054500): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00026.svg
+Saving /tmp/reactive_bodies00026.tsv
+Camera target detection: r=%, phi=%
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.149161.
+To target angle: 0.131461.
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.131461.
+To target angle: 0.113761.
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.113761.
+To target angle: 0.096061.
+onGyroTurn: dphi=0.017700
+Updating target angle: 0.096061.
+To target angle: 0.078360.
+onGyroTurn: dphi=0.042725
+Updating target angle: 0.078360.
+To target angle: 0.035636.
+====> avoid(0, 0.191250 0.037977): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00027.svg
+Saving /tmp/reactive_bodies00027.tsv
+Camera target detection: r=%, phi=%
+onGyroTurn: dphi=0.042725
+Updating target angle: 0.148834.
+To target angle: 0.106109.
+onGyroTurn: dphi=0.042725
+Updating target angle: 0.106109.
+To target angle: 0.063384.
+onGyroTurn: dphi=0.042725
+Updating target angle: 0.063384.
+To target angle: 0.020660.
+onGyroTurn: dphi=0.096436
+Updating target angle: 0.020660.
+To target angle: -0.075776.
+onGyroTurn: dphi=0.096436
+Updating target angle: -0.075776.
+To target angle: -0.172211.
+====> avoid(0, 0.191250 0.028757): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00028.svg
+Saving /tmp/reactive_bodies00028.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.096436
+Updating target angle: -0.172211.
+To target angle: -0.268647.
+onGyroTurn: dphi=0.096436
+Updating target angle: -0.268647.
+To target angle: -0.365082.
+onGyroTurn: dphi=0.104675
+Updating target angle: -0.365082.
+To target angle: -0.469758.
+onGyroTurn: dphi=0.104675
+Updating target angle: -0.469758.
+To target angle: -0.574433.
+onGyroTurn: dphi=0.104675
+Updating target angle: -0.574433.
+To target angle: -0.679108.
+====> avoid(0, 0.191250 0.017812): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00029.svg
+Saving /tmp/reactive_bodies00029.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.104675
+Updating target angle: -0.679108.
+To target angle: -0.783784.
+onGyroTurn: dphi=0.104370
+Updating target angle: -0.783784.
+To target angle: -0.888154.
+onGyroTurn: dphi=0.104370
+Updating target angle: -0.888154.
+To target angle: -0.992524.
+onGyroTurn: dphi=0.104370
+Updating target angle: -0.992524.
+To target angle: -1.096894.
+onGyroTurn: dphi=0.104370
+Updating target angle: -1.096894.
+To target angle: -1.201264.
+====> avoid(0, 0.191250 0.006679): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00030.svg
+Saving /tmp/reactive_bodies00030.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.104370
+Updating target angle: -1.201264.
+To target angle: -1.305634.
+onGyroTurn: dphi=0.104370
+Updating target angle: -1.305634.
+To target angle: -1.410004.
+onGyroTurn: dphi=0.104370
+Updating target angle: -1.410004.
+To target angle: -1.514374.
+onGyroTurn: dphi=0.104370
+Updating target angle: -1.514374.
+To target angle: -1.618744.
+onGyroTurn: dphi=0.106812
+Updating target angle: -1.618744.
+To target angle: -1.725556.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00031.svg
+Saving /tmp/reactive_bodies00031.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.106812
+Updating target angle: -1.725556.
+To target angle: -1.832368.
+onGyroTurn: dphi=0.106812
+Updating target angle: -1.832368.
+To target angle: -1.939179.
+onGyroTurn: dphi=0.106812
+Updating target angle: -1.939179.
+To target angle: -2.045990.
+onGyroTurn: dphi=0.093994
+Updating target angle: -2.045990.
+To target angle: -2.139985.
+onGyroTurn: dphi=0.093994
+Updating target angle: -2.139985.
+To target angle: -2.233979.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00032.svg
+Saving /tmp/reactive_bodies00032.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.093994
+Updating target angle: -2.233979.
+To target angle: -2.327973.
+onGyroTurn: dphi=0.093994
+Updating target angle: -2.327973.
+To target angle: -2.421967.
+onGyroTurn: dphi=0.096130
+Updating target angle: -2.421967.
+To target angle: -2.518097.
+onGyroTurn: dphi=0.096130
+Updating target angle: -2.518097.
+To target angle: -2.614228.
+onGyroTurn: dphi=0.096130
+Updating target angle: -2.614228.
+To target angle: -2.710358.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00033.svg
+Saving /tmp/reactive_bodies00033.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.096130
+Updating target angle: -2.710358.
+To target angle: -2.806489.
+onGyroTurn: dphi=0.100098
+Updating target angle: -2.806489.
+To target angle: -2.906586.
+onGyroTurn: dphi=0.100098
+Updating target angle: -2.906586.
+To target angle: -3.006684.
+onGyroTurn: dphi=0.100098
+Updating target angle: -3.006684.
+To target angle: -3.106781.
+onGyroTurn: dphi=0.100098
+Updating target angle: -3.106781.
+To target angle: -3.206879.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00034.svg
+Saving /tmp/reactive_bodies00034.tsv
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.100098
+Updating target angle: -3.206879.
+To target angle: -3.306977.
+onGyroTurn: dphi=0.100098
+Updating target angle: -3.306977.
+To target angle: -3.407074.
+onGyroTurn: dphi=0.100098
+Updating target angle: -3.407074.
+To target angle: -3.507172.
+onGyroTurn: dphi=0.100098
+Updating target angle: -3.507172.
+To target angle: -3.607270.
+onGyroTurn: dphi=0.103760
+Updating target angle: -3.607270.
+To target angle: -3.711030.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00035.svg
+Saving /tmp/reactive_bodies00035.tsv
+onGyroTurn: dphi=0.103760
+Updating target angle: -3.711030.
+To target angle: -3.814789.
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.103760
+Updating target angle: -3.814789.
+To target angle: -3.918549.
+onGyroTurn: dphi=0.103760
+Updating target angle: -3.918549.
+To target angle: -4.022309.
+onGyroTurn: dphi=0.099487
+Updating target angle: -4.022309.
+To target angle: -4.121796.
+onGyroTurn: dphi=0.099487
+Updating target angle: -4.121796.
+To target angle: -4.221283.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00036.svg
+Saving /tmp/reactive_bodies00036.tsv
+onGyroTurn: dphi=0.099487
+Updating target angle: -4.221283.
+To target angle: -4.320771.
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.099487
+Updating target angle: -4.320771.
+To target angle: -4.420258.
+onGyroTurn: dphi=0.111694
+Updating target angle: -4.420258.
+To target angle: -4.531952.
+onGyroTurn: dphi=0.111694
+Updating target angle: -4.531952.
+To target angle: -4.643647.
+onGyroTurn: dphi=0.111694
+Updating target angle: -4.643647.
+To target angle: -4.755341.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00037.svg
+Saving /tmp/reactive_bodies00037.tsv
+onGyroTurn: dphi=0.111694
+Updating target angle: -4.755341.
+To target angle: -4.867035.
+onGyroTurn: dphi=0.106201
+Updating target angle: -4.867035.
+To target angle: -4.973237.
+onGyroTurn: dphi=0.106201
+Updating target angle: -4.973237.
+To target angle: -5.079438.
+onGyroTurn: dphi=0.106201
+Updating target angle: -5.079438.
+To target angle: -5.185639.
+onGyroTurn: dphi=0.106201
+Updating target angle: -5.185639.
+To target angle: -5.291840.
+====> avoid(0, 0.191250 0.005379): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.111389
+Updating target angle: -5.291840.
+To target angle: -5.403229.
+Saving /tmp/reactive_bodies00038.svg
+Saving /tmp/reactive_bodies00038.tsv
+onGyroTurn: dphi=0.111389
+Updating target angle: -5.403229.
+To target angle: -5.514618.
+onGyroTurn: dphi=0.111389
+Updating target angle: -5.514618.
+To target angle: -5.626008.
+onGyroTurn: dphi=0.111389
+Updating target angle: -5.626008.
+To target angle: -5.737397.
+onGyroTurn: dphi=0.103760
+Updating target angle: -5.737397.
+To target angle: -5.841156.
+onGyroTurn: dphi=0.103760
+Updating target angle: -5.841156.
+To target angle: -5.944916.
+====> avoid(0, 0.191250 0.010000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00039.svg
+Saving /tmp/reactive_bodies00039.tsv
+onGyroTurn: dphi=0.103760
+Updating target angle: -5.944916.
+To target angle: -6.048676.
+onGyroTurn: dphi=0.103760
+Updating target angle: -6.048676.
+To target angle: -6.152436.
+onGyroTurn: dphi=0.109253
+Updating target angle: -6.152436.
+To target angle: -6.261689.
+onGyroTurn: dphi=0.109253
+Updating target angle: -6.261689.
+To target angle: -6.370942.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00040.svg
+onGyroTurn: dphi=0.109253
+Updating target angle: -6.370942.
+To target angle: -6.480195.
+Saving /tmp/reactive_bodies00040.tsv
+onGyroTurn: dphi=0.109253
+Updating target angle: -6.480195.
+To target angle: -6.589447.
+onGyroTurn: dphi=0.101929
+Updating target angle: -6.589447.
+To target angle: -6.691376.
+onGyroTurn: dphi=0.101929
+Updating target angle: -6.691376.
+To target angle: -6.793305.
+onGyroTurn: dphi=0.101929
+Updating target angle: -6.793305.
+To target angle: -6.895234.
+onGyroTurn: dphi=0.101929
+Updating target angle: -6.895234.
+To target angle: -6.997162.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00041.svg
+Saving /tmp/reactive_bodies00041.tsv
+onGyroTurn: dphi=0.101318
+Updating target angle: -6.997162.
+To target angle: -7.098481.
+onGyroTurn: dphi=0.101318
+Updating target angle: -7.098481.
+To target angle: -7.199799.
+onGyroTurn: dphi=0.101318
+Updating target angle: -7.199799.
+To target angle: -7.301117.
+onGyroTurn: dphi=0.101318
+Updating target angle: -7.301117.
+To target angle: -7.402436.
+onGyroTurn: dphi=0.110779
+Updating target angle: -7.402436.
+To target angle: -7.513215.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00042.svg
+Saving /tmp/reactive_bodies00042.tsv
+onGyroTurn: dphi=0.110779
+Updating target angle: -7.513215.
+To target angle: -7.623993.
+onGyroTurn: dphi=0.110779
+Updating target angle: -7.623993.
+To target angle: -7.734772.
+onGyroTurn: dphi=0.110779
+Updating target angle: -7.734772.
+To target angle: -7.845551.
+onGyroTurn: dphi=0.114746
+Updating target angle: -7.845551.
+To target angle: -7.960297.
+onGyroTurn: dphi=0.114746
+Updating target angle: -7.960297.
+To target angle: -8.075043.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00043.svg
+Saving /tmp/reactive_bodies00043.tsv
+onGyroTurn: dphi=0.114746
+Updating target angle: -8.075043.
+To target angle: -8.189789.
+onGyroTurn: dphi=0.114746
+Updating target angle: -8.189789.
+To target angle: -8.304535.
+onGyroTurn: dphi=0.112000
+Updating target angle: -8.304535.
+To target angle: -8.416534.
+onGyroTurn: dphi=0.112000
+Updating target angle: -8.416534.
+To target angle: -8.528534.
+onGyroTurn: dphi=0.112000
+Updating target angle: -8.528534.
+To target angle: -8.640533.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00044.svg
+Saving /tmp/reactive_bodies00044.tsv
+onGyroTurn: dphi=0.112000
+Updating target angle: -8.640533.
+To target angle: -8.752533.
+onGyroTurn: dphi=0.095215
+Updating target angle: -8.752533.
+To target angle: -8.847748.
+onGyroTurn: dphi=0.095215
+Updating target angle: -8.847748.
+To target angle: -8.942963.
+onGyroTurn: dphi=0.095215
+Updating target angle: -8.942963.
+To target angle: -9.038177.
+onGyroTurn: dphi=0.095215
+Updating target angle: -9.038177.
+To target angle: -9.133392.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00045.svg
+Saving /tmp/reactive_bodies00045.tsv
+onGyroTurn: dphi=0.098267
+Updating target angle: -9.133392.
+To target angle: -9.231659.
+onGyroTurn: dphi=0.098267
+Updating target angle: -9.231659.
+To target angle: -9.329926.
+onGyroTurn: dphi=0.098267
+Updating target angle: -9.329926.
+To target angle: -9.428192.
+onGyroTurn: dphi=0.098267
+Updating target angle: -9.428192.
+To target angle: -9.526459.
+onGyroTurn: dphi=0.099487
+Updating target angle: -9.526459.
+To target angle: -9.625946.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00046.svg
+Saving /tmp/reactive_bodies00046.tsv
+onGyroTurn: dphi=0.099487
+Updating target angle: -9.625946.
+To target angle: -9.725433.
+onGyroTurn: dphi=0.099487
+Updating target angle: -9.725433.
+To target angle: -9.824921.
+onGyroTurn: dphi=0.099487
+Updating target angle: -9.824921.
+To target angle: -9.924408.
+onGyroTurn: dphi=0.098572
+Updating target angle: -9.924408.
+To target angle: -10.022980.
+onGyroTurn: dphi=0.098572
+Updating target angle: -10.022980.
+To target angle: -10.121552.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00047.svg
+Saving /tmp/reactive_bodies00047.tsv
+onGyroTurn: dphi=0.098572
+Updating target angle: -10.121552.
+To target angle: -10.220123.
+onGyroTurn: dphi=0.098572
+Updating target angle: -10.220123.
+To target angle: -10.318695.
+onGyroTurn: dphi=0.092468
+Updating target angle: -10.318695.
+To target angle: -10.411163.
+onGyroTurn: dphi=0.092468
+Updating target angle: -10.411163.
+To target angle: -10.503632.
+onGyroTurn: dphi=0.092468
+Updating target angle: -10.503632.
+To target angle: -10.596100.
+onGyroTurn: dphi=0.092468
+Updating target angle: -10.596100.
+To target angle: -10.688568.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00048.svg
+Saving /tmp/reactive_bodies00048.tsv
+onGyroTurn: dphi=0.093689
+Updating target angle: -10.688568.
+To target angle: -10.782257.
+onGyroTurn: dphi=0.093689
+Updating target angle: -10.782257.
+To target angle: -10.875946.
+onGyroTurn: dphi=0.093689
+Updating target angle: -10.875946.
+To target angle: -10.969635.
+onGyroTurn: dphi=0.093689
+Updating target angle: -10.969635.
+To target angle: -11.063324.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00049.svg
+Saving /tmp/reactive_bodies00049.tsv
+onGyroTurn: dphi=0.084534
+Updating target angle: -11.063324.
+To target angle: -11.147858.
+onGyroTurn: dphi=0.084534
+Updating target angle: -11.147858.
+To target angle: -11.232391.
+onGyroTurn: dphi=0.084534
+Updating target angle: -11.232391.
+To target angle: -11.316925.
+onGyroTurn: dphi=0.084534
+Updating target angle: -11.316925.
+To target angle: -11.401459.
+onGyroTurn: dphi=0.042114
+Updating target angle: -11.401459.
+To target angle: -11.443573.
+onGyroTurn: dphi=0.042114
+Updating target angle: -11.443573.
+To target angle: -11.485687.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00050.svg
+Saving /tmp/reactive_bodies00050.tsv
+onGyroTurn: dphi=0.042114
+Updating target angle: -11.485687.
+To target angle: -11.527802.
+onGyroTurn: dphi=0.042114
+Updating target angle: -11.527802.
+To target angle: -11.569916.
+onGyroTurn: dphi=0.035095
+Updating target angle: -11.569916.
+To target angle: -11.605011.
+onGyroTurn: dphi=0.035095
+Updating target angle: -11.605011.
+To target angle: -11.640106.
+onGyroTurn: dphi=0.035095
+Updating target angle: -11.640106.
+To target angle: -11.675201.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00051.svg
+Saving /tmp/reactive_bodies00051.tsv
+onGyroTurn: dphi=0.035095
+Updating target angle: -11.675201.
+To target angle: -11.710297.
+onGyroTurn: dphi=0.051270
+Updating target angle: -11.710297.
+To target angle: -11.761566.
+onGyroTurn: dphi=0.051270
+Updating target angle: -11.761566.
+To target angle: -11.812836.
+onGyroTurn: dphi=0.051270
+Updating target angle: -11.812836.
+To target angle: -11.864105.
+onGyroTurn: dphi=0.051270
+Updating target angle: -11.864105.
+To target angle: -11.915375.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00052.svg
+Saving /tmp/reactive_bodies00052.tsv
+onGyroTurn: dphi=0.075073
+Updating target angle: -11.915375.
+To target angle: -11.990448.
+onGyroTurn: dphi=0.075073
+Updating target angle: -11.990448.
+To target angle: -12.065521.
+onGyroTurn: dphi=0.075073
+Updating target angle: -12.065521.
+To target angle: -12.140594.
+onGyroTurn: dphi=0.075073
+Updating target angle: -12.140594.
+To target angle: -12.215668.
+onGyroTurn: dphi=0.090027
+Updating target angle: -12.215668.
+To target angle: -12.305695.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00053.svg
+Saving /tmp/reactive_bodies00053.tsv
+onGyroTurn: dphi=0.090027
+Updating target angle: -12.305695.
+To target angle: -12.395721.
+onGyroTurn: dphi=0.090027
+Updating target angle: -12.395721.
+To target angle: -12.485748.
+onGyroTurn: dphi=0.090027
+Updating target angle: -12.485748.
+To target angle: -12.575775.
+onGyroTurn: dphi=0.086670
+Updating target angle: -12.575775.
+To target angle: -12.662445.
+onGyroTurn: dphi=0.086670
+Updating target angle: -12.662445.
+To target angle: -12.749115.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00054.svg
+Saving /tmp/reactive_bodies00054.tsv
+onGyroTurn: dphi=0.086670
+Updating target angle: -12.749115.
+To target angle: -12.835785.
+onGyroTurn: dphi=0.086670
+Updating target angle: -12.835785.
+To target angle: -12.922455.
+onGyroTurn: dphi=0.089417
+Updating target angle: -12.922455.
+To target angle: -13.011871.
+onGyroTurn: dphi=0.089417
+Updating target angle: -13.011871.
+To target angle: -13.101288.
+onGyroTurn: dphi=0.089417
+Updating target angle: -13.101288.
+To target angle: -13.190704.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00055.svg
+Saving /tmp/reactive_bodies00055.tsv
+onGyroTurn: dphi=0.089417
+Updating target angle: -13.190704.
+To target angle: -13.280121.
+onGyroTurn: dphi=0.069275
+Updating target angle: -13.280121.
+To target angle: -13.349396.
+onGyroTurn: dphi=0.069275
+Updating target angle: -13.349396.
+To target angle: -13.418671.
+onGyroTurn: dphi=0.069275
+Updating target angle: -13.418671.
+To target angle: -13.487946.
+onGyroTurn: dphi=0.069275
+Updating target angle: -13.487946.
+To target angle: -13.557220.
+====> avoid(0, 0.191250 0.017812): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00056.svg
+Saving /tmp/reactive_bodies00056.tsv
+onGyroTurn: dphi=0.051880
+Updating target angle: -13.557220.
+To target angle: -13.609100.
+onGyroTurn: dphi=0.051880
+Updating target angle: -13.609100.
+To target angle: -13.660980.
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.051880
+Updating target angle: -13.660980.
+To target angle: -13.712860.
+onGyroTurn: dphi=0.051880
+Updating target angle: -13.712860.
+To target angle: -13.764740.
+onGyroTurn: dphi=0.068970
+Updating target angle: -13.764740.
+To target angle: -13.833710.
+====> avoid(0, 0.191250 0.017017): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00057.svg
+Saving /tmp/reactive_bodies00057.tsv
+onGyroTurn: dphi=0.068970
+Updating target angle: -13.833710.
+To target angle: -13.902679.
+onGyroTurn: dphi=0.068970
+Updating target angle: -13.902679.
+To target angle: -13.971649.
+onGyroTurn: dphi=0.068970
+Updating target angle: -13.971649.
+To target angle: -14.040619.
+onGyroTurn: dphi=0.082092
+Updating target angle: -14.040619.
+To target angle: -14.122711.
+onGyroTurn: dphi=0.082092
+Updating target angle: -14.122711.
+To target angle: -14.204803.
+====> avoid(0, 0.191250 0.036569): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00058.svg
+Saving /tmp/reactive_bodies00058.tsv
+onGyroTurn: dphi=0.082092
+Updating target angle: -14.204803.
+To target angle: -14.286896.
+onGyroTurn: dphi=0.082092
+Updating target angle: -14.286896.
+To target angle: -14.368988.
+onGyroTurn: dphi=0.090942
+Updating target angle: -14.368988.
+To target angle: -14.459930.
+onGyroTurn: dphi=0.090942
+Updating target angle: -14.459930.
+To target angle: -14.550873.
+onGyroTurn: dphi=0.090942
+Updating target angle: -14.550873.
+To target angle: -14.641815.
+====> avoid(0, 0.191250 0.043600): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00059.svg
+Saving /tmp/reactive_bodies00059.tsv
+onGyroTurn: dphi=0.090942
+Updating target angle: -14.641815.
+To target angle: -14.732758.
+onGyroTurn: dphi=0.090027
+Updating target angle: -14.732758.
+To target angle: -14.822784.
+onGyroTurn: dphi=0.090027
+Updating target angle: -14.822784.
+To target angle: -14.912811.
+onGyroTurn: dphi=0.090027
+Updating target angle: -14.912811.
+To target angle: -15.002838.
+onGyroTurn: dphi=0.090027
+Updating target angle: -15.002838.
+To target angle: -15.092865.
+====> avoid(0, 0.191250 0.056000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00060.svg
+Saving /tmp/reactive_bodies00060.tsv
+onGyroTurn: dphi=0.095825
+Updating target angle: -15.092865.
+To target angle: -15.188690.
+onGyroTurn: dphi=0.095825
+Updating target angle: -15.188690.
+To target angle: -15.284515.
+onGyroTurn: dphi=0.095825
+Updating target angle: -15.284515.
+To target angle: -15.380341.
+onGyroTurn: dphi=0.095825
+Updating target angle: -15.380341.
+To target angle: -15.476166.
+onGyroTurn: dphi=0.090942
+Updating target angle: -15.476166.
+To target angle: -15.567108.
+====> avoid(0, 0.191250 0.069500): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00061.svg
+Saving /tmp/reactive_bodies00061.tsv
+onGyroTurn: dphi=0.090942
+Updating target angle: -15.567108.
+To target angle: -15.658051.
+onGyroTurn: dphi=0.090942
+Updating target angle: -15.658051.
+To target angle: -15.748993.
+onGyroTurn: dphi=0.090942
+Updating target angle: -15.748993.
+To target angle: -15.839935.
+onGyroTurn: dphi=0.101624
+Updating target angle: -15.839935.
+To target angle: -15.941559.
+onGyroTurn: dphi=0.101624
+Updating target angle: -15.941559.
+To target angle: -16.043182.
+====> avoid(0, 0.191250 0.079646): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00062.svg
+Saving /tmp/reactive_bodies00062.tsv
+onGyroTurn: dphi=0.101624
+Updating target angle: -16.043182.
+To target angle: -16.144806.
+onGyroTurn: dphi=0.101624
+Updating target angle: -16.144806.
+To target angle: -16.246429.
+onGyroTurn: dphi=0.098877
+Updating target angle: -16.246429.
+To target angle: -16.345306.
+onGyroTurn: dphi=0.098877
+Updating target angle: -16.345306.
+To target angle: -16.444183.
+onGyroTurn: dphi=0.098877
+Updating target angle: -16.444183.
+To target angle: -16.543060.
+====> avoid(0, 0.191250 0.089646): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00063.svg
+Saving /tmp/reactive_bodies00063.tsv
+onGyroTurn: dphi=0.098877
+Updating target angle: -16.543060.
+To target angle: -16.641937.
+onGyroTurn: dphi=0.103760
+Updating target angle: -16.641937.
+To target angle: -16.745697.
+onGyroTurn: dphi=0.103760
+Updating target angle: -16.745697.
+To target angle: -16.849457.
+onGyroTurn: dphi=0.103760
+Updating target angle: -16.849457.
+To target angle: -16.953217.
+onGyroTurn: dphi=0.103760
+Updating target angle: -16.953217.
+To target angle: -17.056976.
+Saving /tmp/reactive_bodies00064.svg
+Saving /tmp/reactive_bodies00064.tsv
+onGyroTurn: dphi=0.091248
+Updating target angle: -17.056976.
+To target angle: -17.148224.
+onGyroTurn: dphi=0.091248
+Updating target angle: -17.148224.
+To target angle: -17.239471.
+onGyroTurn: dphi=0.091248
+Updating target angle: -17.239471.
+To target angle: -17.330719.
+onGyroTurn: dphi=0.091248
+Updating target angle: -17.330719.
+To target angle: -17.421967.
+onGyroTurn: dphi=0.092468
+Updating target angle: -17.421967.
+To target angle: -17.514435.
+onGyroTurn: dphi=0.092468
+Updating target angle: -17.514435.
+To target angle: -17.606903.
+Setting angular vel to: 0.000000
+
+emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00065.svg
+Saving /tmp/reactive_bodies00065.tsv
+onGyroTurn: dphi=0.092468
+Updating target angle: -17.606903.
+To target angle: -17.699371.
+onGyroTurn: dphi=0.092468
+Updating target angle: -17.699371.
+To target angle: -17.791840.
+onGyroTurn: dphi=0.097961
+Updating target angle: -17.791840.
+To target angle: -17.889801.
+onGyroTurn: dphi=0.097961
+Updating target angle: -17.889801.
+To target angle: -17.987762.
+Setting angular vel to: 0.000000
+
+emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+
+Reactive: onTaskTerminated
+ReactiveConfigurator: Obstacle avoided. Now targeting again.
+
+emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00066.svg
+Saving /tmp/reactive_bodies00066.tsv
+onGyroTurn: dphi=0.097961
+Updating target angle: -17.987762.
+To target angle: -18.085724.
+Setting angular vel to: -18.085724
+
+emitTwoWheeledEvent: l=8.412504, r=-7.412505, linearSpeed=0.080000, angularVel=-18.085724, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.097961
+Updating target angle: -18.085724.
+To target angle: -18.183685.
+Setting angular vel to: -18.183685
+
+emitTwoWheeledEvent: l=8.455362, r=-7.455363, linearSpeed=0.080000, angularVel=-18.183685, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.061035
+Updating target angle: -18.183685.
+To target angle: -18.244720.
+Setting angular vel to: -18.244720
+
+emitTwoWheeledEvent: l=8.482065, r=-7.482066, linearSpeed=0.080000, angularVel=-18.244720, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.061035
+Updating target angle: -18.244720.
+To target angle: -18.305756.
+Setting angular vel to: -18.305756
+
+emitTwoWheeledEvent: l=8.508769, r=-7.508769, linearSpeed=0.080000, angularVel=-18.305756, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.061035
+Updating target angle: -18.305756.
+To target angle: -18.366791.
+Setting angular vel to: -18.366791
+
+emitTwoWheeledEvent: l=8.535472, r=-7.535472, linearSpeed=0.080000, angularVel=-18.366791, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.325730, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+onGyroTurn: dphi=0.061035
+Saving /tmp/reactive_bodies00067.svg
+Updating target angle: -18.366791.
+To target angle: -18.427826.
+Setting angular vel to: -18.427826
+
+emitTwoWheeledEvent: l=8.562175, r=-7.562175, linearSpeed=0.080000, angularVel=-18.427826, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00067.tsv
+onGyroTurn: dphi=-0.027466
+Updating target angle: -18.427826.
+To target angle: -18.400360.
+Setting angular vel to: -18.400360
+
+emitTwoWheeledEvent: l=8.550159, r=-7.550159, linearSpeed=0.080000, angularVel=-18.400360, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.027466
+Updating target angle: -18.400360.
+To target angle: -18.372894.
+Setting angular vel to: -18.372894
+
+emitTwoWheeledEvent: l=8.538142, r=-7.538142, linearSpeed=0.080000, angularVel=-18.372894, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.027466
+Updating target angle: -18.372894.
+To target angle: -18.345428.
+Setting angular vel to: -18.345428
+
+emitTwoWheeledEvent: l=8.526126, r=-7.526126, linearSpeed=0.080000, angularVel=-18.345428, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.027466
+Updating target angle: -18.345428.
+To target angle: -18.317963.
+Setting angular vel to: -18.317963
+
+emitTwoWheeledEvent: l=8.514110, r=-7.514110, linearSpeed=0.080000, angularVel=-18.317963, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.135803
+Updating target angle: -18.317963.
+To target angle: -18.182159.
+Setting angular vel to: -18.182159
+
+emitTwoWheeledEvent: l=8.454695, r=-7.454695, linearSpeed=0.080000, angularVel=-18.182159, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.325525, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.301496, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.301496, bodyflag=0
+Saving /tmp/reactive_bodies00068.svg
+Saving /tmp/reactive_bodies00068.tsv
+onGyroTurn: dphi=-0.135803
+Updating target angle: -18.182159.
+To target angle: -18.046356.
+Setting angular vel to: -18.046356
+
+emitTwoWheeledEvent: l=8.395281, r=-7.395281, linearSpeed=0.080000, angularVel=-18.046356, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.135803
+Updating target angle: -18.046356.
+To target angle: -17.910553.
+Setting angular vel to: -17.910553
+
+emitTwoWheeledEvent: l=8.335867, r=-7.335867, linearSpeed=0.080000, angularVel=-17.910553, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.135803
+Updating target angle: -17.910553.
+To target angle: -17.774750.
+Setting angular vel to: -17.774750
+
+emitTwoWheeledEvent: l=8.276453, r=-7.276453, linearSpeed=0.080000, angularVel=-17.774750, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.197144
+Updating target angle: -17.774750.
+To target angle: -17.577606.
+Setting angular vel to: -17.577606
+
+emitTwoWheeledEvent: l=8.190203, r=-7.190203, linearSpeed=0.080000, angularVel=-17.577606, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.197144
+Updating target angle: -17.577606.
+To target angle: -17.380463.
+Setting angular vel to: -17.380463
+
+emitTwoWheeledEvent: l=8.103952, r=-7.103953, linearSpeed=0.080000, angularVel=-17.380463, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 1.136595, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.326156, bodyflag=0
+Saving /tmp/reactive_bodies00069.svg
+Saving /tmp/reactive_bodies00069.tsv
+onGyroTurn: dphi=-0.197144
+Updating target angle: -17.380463.
+To target angle: -17.183319.
+Setting angular vel to: -17.183319
+
+emitTwoWheeledEvent: l=8.017702, r=-7.017703, linearSpeed=0.080000, angularVel=-17.183319, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.197144
+Updating target angle: -17.183319.
+To target angle: -16.986176.
+Setting angular vel to: -16.986176
+
+emitTwoWheeledEvent: l=7.931452, r=-6.931452, linearSpeed=0.080000, angularVel=-16.986176, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.220947
+Updating target angle: -16.986176.
+To target angle: -16.765228.
+Setting angular vel to: -16.765228
+
+emitTwoWheeledEvent: l=7.834788, r=-6.834788, linearSpeed=0.080000, angularVel=-16.765228, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.220947
+Updating target angle: -16.765228.
+To target angle: -16.544281.
+Setting angular vel to: -16.544281
+
+emitTwoWheeledEvent: l=7.738123, r=-6.738123, linearSpeed=0.080000, angularVel=-16.544281, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.220947
+Updating target angle: -16.544281.
+To target angle: -16.323334.
+Setting angular vel to: -16.323334
+
+emitTwoWheeledEvent: l=7.641459, r=-6.641459, linearSpeed=0.080000, angularVel=-16.323334, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.321971, bodyflag=0
+Saving /tmp/reactive_bodies00070.svg
+onGyroTurn: dphi=-0.220947
+Updating target angle: -16.323334.
+To target angle: -16.102386.
+Setting angular vel to: -16.102386
+
+emitTwoWheeledEvent: l=7.544795, r=-6.544795, linearSpeed=0.080000, angularVel=-16.102386, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00070.tsv
+onGyroTurn: dphi=-0.224915
+Updating target angle: -16.102386.
+To target angle: -15.877472.
+Setting angular vel to: -15.877472
+
+emitTwoWheeledEvent: l=7.446394, r=-6.446394, linearSpeed=0.080000, angularVel=-15.877472, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.224915
+Updating target angle: -15.877472.
+To target angle: -15.652557.
+Setting angular vel to: -15.652557
+
+emitTwoWheeledEvent: l=7.347994, r=-6.347994, linearSpeed=0.080000, angularVel=-15.652557, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.224915
+Updating target angle: -15.652557.
+To target angle: -15.427643.
+Setting angular vel to: -15.427643
+
+emitTwoWheeledEvent: l=7.249594, r=-6.249594, linearSpeed=0.080000, angularVel=-15.427643, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.224915
+Updating target angle: -15.427643.
+To target angle: -15.202728.
+Setting angular vel to: -15.202728
+
+emitTwoWheeledEvent: l=7.151194, r=-6.151194, linearSpeed=0.080000, angularVel=-15.202728, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.228271
+Updating target angle: -15.202728.
+To target angle: -14.974457.
+Setting angular vel to: -14.974457
+
+emitTwoWheeledEvent: l=7.051325, r=-6.051325, linearSpeed=0.080000, angularVel=-14.974457, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.322127, bodyflag=0
+Saving /tmp/reactive_bodies00071.svg
+Saving /tmp/reactive_bodies00071.tsv
+onGyroTurn: dphi=-0.228271
+Updating target angle: -14.974457.
+To target angle: -14.746185.
+Setting angular vel to: -14.746185
+
+emitTwoWheeledEvent: l=6.951457, r=-5.951457, linearSpeed=0.080000, angularVel=-14.746185, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.228271
+Updating target angle: -14.746185.
+To target angle: -14.517914.
+Setting angular vel to: -14.517914
+
+emitTwoWheeledEvent: l=6.851588, r=-5.851588, linearSpeed=0.080000, angularVel=-14.517914, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.228271
+Updating target angle: -14.517914.
+To target angle: -14.289642.
+Setting angular vel to: -14.289642
+
+emitTwoWheeledEvent: l=6.751719, r=-5.751719, linearSpeed=0.080000, angularVel=-14.289642, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -14.289642.
+To target angle: -14.060455.
+Setting angular vel to: -14.060455
+
+emitTwoWheeledEvent: l=6.651450, r=-5.651450, linearSpeed=0.080000, angularVel=-14.060455, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.296816, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.300000, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.318729, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.354683, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.302324, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.294109, bodyflag=0
+Saving /tmp/reactive_bodies00072.svg
+onGyroTurn: dphi=-0.229187
+Updating target angle: -14.060455.
+Saving /tmp/reactive_bodies00072.tsv
+To target angle: -13.831268.
+Setting angular vel to: -13.831268
+
+emitTwoWheeledEvent: l=6.551180, r=-5.551180, linearSpeed=0.080000, angularVel=-13.831268, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -13.831268.
+To target angle: -13.602081.
+Setting angular vel to: -13.602081
+
+emitTwoWheeledEvent: l=6.450911, r=-5.450911, linearSpeed=0.080000, angularVel=-13.602081, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -13.602081.
+To target angle: -13.372894.
+Setting angular vel to: -13.372894
+
+emitTwoWheeledEvent: l=6.350642, r=-5.350642, linearSpeed=0.080000, angularVel=-13.372894, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.227356
+Updating target angle: -13.372894.
+To target angle: -13.145538.
+Setting angular vel to: -13.145538
+
+emitTwoWheeledEvent: l=6.251173, r=-5.251173, linearSpeed=0.080000, angularVel=-13.145538, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.227356
+Updating target angle: -13.145538.
+To target angle: -12.918182.
+Setting angular vel to: -12.918182
+
+emitTwoWheeledEvent: l=6.151705, r=-5.151705, linearSpeed=0.080000, angularVel=-12.918182, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.227356
+Updating target angle: -12.918182.
+To target angle: -12.690826.
+Setting angular vel to: -12.690826
+
+emitTwoWheeledEvent: l=6.052237, r=-5.052237, linearSpeed=0.080000, angularVel=-12.690826, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.319077, bodyflag=0
+Saving /tmp/reactive_bodies00073.svg
+Saving /tmp/reactive_bodies00073.tsv
+onGyroTurn: dphi=-0.227356
+Updating target angle: -12.690826.
+To target angle: -12.463470.
+Setting angular vel to: -12.463470
+
+emitTwoWheeledEvent: l=5.952769, r=-4.952769, linearSpeed=0.080000, angularVel=-12.463470, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.227966
+Updating target angle: -12.463470.
+To target angle: -12.235504.
+Setting angular vel to: -12.235504
+
+emitTwoWheeledEvent: l=5.853034, r=-4.853034, linearSpeed=0.080000, angularVel=-12.235504, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.227966
+Updating target angle: -12.235504.
+To target angle: -12.007538.
+Setting angular vel to: -12.007538
+
+emitTwoWheeledEvent: l=5.753298, r=-4.753298, linearSpeed=0.080000, angularVel=-12.007538, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.227966
+Updating target angle: -12.007538.
+To target angle: -11.779572.
+Setting angular vel to: -11.779572
+
+emitTwoWheeledEvent: l=5.653563, r=-4.653563, linearSpeed=0.080000, angularVel=-11.779572, maxAngVel=1.142857
+
+Targetloc: Contour discarded.
+onGyroTurn: dphi=-0.227966
+Updating target angle: -11.779572.
+To target angle: -11.551605.
+Setting angular vel to: -11.551605
+
+emitTwoWheeledEvent: l=5.553828, r=-4.553828, linearSpeed=0.080000, angularVel=-11.551605, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.312061, bodyflag=0
+Saving /tmp/reactive_bodies00074.svg
+Saving /tmp/reactive_bodies00074.tsv
+onGyroTurn: dphi=-0.234680
+Updating target angle: -11.551605.
+To target angle: -11.316925.
+Setting angular vel to: -11.316925
+
+emitTwoWheeledEvent: l=5.451155, r=-4.451155, linearSpeed=0.080000, angularVel=-11.316925, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.234680
+Updating target angle: -11.316925.
+To target angle: -11.082245.
+Setting angular vel to: -11.082245
+
+emitTwoWheeledEvent: l=5.348483, r=-4.348483, linearSpeed=0.080000, angularVel=-11.082245, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.234680
+Updating target angle: -11.082245.
+To target angle: -10.847565.
+Setting angular vel to: -10.847565
+
+emitTwoWheeledEvent: l=5.245810, r=-4.245810, linearSpeed=0.080000, angularVel=-10.847565, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.234680
+Updating target angle: -10.847565.
+To target angle: -10.612885.
+Setting angular vel to: -10.612885
+
+emitTwoWheeledEvent: l=5.143137, r=-4.143137, linearSpeed=0.080000, angularVel=-10.612885, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.232849
+Updating target angle: -10.612885.
+To target angle: -10.380035.
+Setting angular vel to: -10.380035
+
+emitTwoWheeledEvent: l=5.041266, r=-4.041266, linearSpeed=0.080000, angularVel=-10.380035, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.312331, bodyflag=0
+Saving /tmp/reactive_bodies00075.svg
+Saving /tmp/reactive_bodies00075.tsv
+onGyroTurn: dphi=-0.232849
+Updating target angle: -10.380035.
+To target angle: -10.147186.
+Setting angular vel to: -10.147186
+
+emitTwoWheeledEvent: l=4.939394, r=-3.939394, linearSpeed=0.080000, angularVel=-10.147186, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.232849
+Updating target angle: -10.147186.
+To target angle: -9.914337.
+Setting angular vel to: -9.914337
+
+emitTwoWheeledEvent: l=4.837523, r=-3.837523, linearSpeed=0.080000, angularVel=-9.914337, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.232849
+Updating target angle: -9.914337.
+To target angle: -9.681488.
+Setting angular vel to: -9.681488
+
+emitTwoWheeledEvent: l=4.735651, r=-3.735651, linearSpeed=0.080000, angularVel=-9.681488, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.231323
+Updating target angle: -9.681488.
+To target angle: -9.450165.
+Setting angular vel to: -9.450165
+
+emitTwoWheeledEvent: l=4.634448, r=-3.634448, linearSpeed=0.080000, angularVel=-9.450165, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.231323
+Updating target angle: -9.450165.
+To target angle: -9.218842.
+Setting angular vel to: -9.218842
+
+emitTwoWheeledEvent: l=4.533244, r=-3.533244, linearSpeed=0.080000, angularVel=-9.218842, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.284429, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.292746, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.308208, bodyflag=0
+Saving /tmp/reactive_bodies00076.svg
+Saving /tmp/reactive_bodies00076.tsv
+onGyroTurn: dphi=-0.231323
+Updating target angle: -9.218842.
+To target angle: -8.987518.
+Setting angular vel to: -8.987518
+
+emitTwoWheeledEvent: l=4.432039, r=-3.432039, linearSpeed=0.080000, angularVel=-8.987518, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.231323
+Updating target angle: -8.987518.
+To target angle: -8.756195.
+Setting angular vel to: -8.756195
+
+emitTwoWheeledEvent: l=4.330835, r=-3.330836, linearSpeed=0.080000, angularVel=-8.756195, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.230713
+Updating target angle: -8.756195.
+To target angle: -8.525482.
+Setting angular vel to: -8.525482
+
+emitTwoWheeledEvent: l=4.229898, r=-3.229899, linearSpeed=0.080000, angularVel=-8.525482, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.230713
+Updating target angle: -8.525482.
+To target angle: -8.294769.
+Setting angular vel to: -8.294769
+
+emitTwoWheeledEvent: l=4.128962, r=-3.128962, linearSpeed=0.080000, angularVel=-8.294769, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.230713
+Updating target angle: -8.294769.
+To target angle: -8.064056.
+Setting angular vel to: -8.064056
+
+emitTwoWheeledEvent: l=4.028025, r=-3.028025, linearSpeed=0.080000, angularVel=-8.064056, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306366, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.280000, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.280179, bodyflag=0
+Saving /tmp/reactive_bodies00077.svg
+Saving /tmp/reactive_bodies00077.tsv
+onGyroTurn: dphi=-0.230713
+Updating target angle: -8.064056.
+To target angle: -7.833344.
+Setting angular vel to: -7.833344
+
+emitTwoWheeledEvent: l=3.927088, r=-2.927088, linearSpeed=0.080000, angularVel=-7.833344, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.235596
+Updating target angle: -7.833344.
+To target angle: -7.597748.
+Setting angular vel to: -7.597748
+
+emitTwoWheeledEvent: l=3.824015, r=-2.824015, linearSpeed=0.080000, angularVel=-7.597748, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.235596
+Updating target angle: -7.597748.
+To target angle: -7.362152.
+Setting angular vel to: -7.362152
+
+emitTwoWheeledEvent: l=3.720942, r=-2.720942, linearSpeed=0.080000, angularVel=-7.362152, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.235596
+Updating target angle: -7.362152.
+To target angle: -7.126556.
+Setting angular vel to: -7.126556
+
+emitTwoWheeledEvent: l=3.617869, r=-2.617869, linearSpeed=0.080000, angularVel=-7.126556, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.235596
+Updating target angle: -7.126556.
+To target angle: -6.890961.
+Setting angular vel to: -6.890961
+
+emitTwoWheeledEvent: l=3.514796, r=-2.514796, linearSpeed=0.080000, angularVel=-6.890961, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.308302, bodyflag=0
+Saving /tmp/reactive_bodies00078.svg
+Saving /tmp/reactive_bodies00078.tsv
+onGyroTurn: dphi=-0.240479
+Updating target angle: -6.890961.
+To target angle: -6.650482.
+Setting angular vel to: -6.650482
+
+emitTwoWheeledEvent: l=3.409586, r=-2.409586, linearSpeed=0.080000, angularVel=-6.650482, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.240479
+Updating target angle: -6.650482.
+To target angle: -6.410004.
+Setting angular vel to: -6.410004
+
+emitTwoWheeledEvent: l=3.304377, r=-2.304377, linearSpeed=0.080000, angularVel=-6.410004, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.240479
+Updating target angle: -6.410004.
+To target angle: -6.169525.
+Setting angular vel to: -6.169525
+
+emitTwoWheeledEvent: l=3.199167, r=-2.199167, linearSpeed=0.080000, angularVel=-6.169525, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.240479
+Updating target angle: -6.169525.
+To target angle: -5.929047.
+Setting angular vel to: -5.929047
+
+emitTwoWheeledEvent: l=3.093958, r=-2.093958, linearSpeed=0.080000, angularVel=-5.929047, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.240173
+Updating target angle: -5.929047.
+To target angle: -5.688873.
+Setting angular vel to: -5.688873
+
+emitTwoWheeledEvent: l=2.988882, r=-1.988882, linearSpeed=0.080000, angularVel=-5.688873, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.311356, bodyflag=0
+Saving /tmp/reactive_bodies00079.svg
+Saving /tmp/reactive_bodies00079.tsv
+onGyroTurn: dphi=-0.240173
+Updating target angle: -5.688873.
+To target angle: -5.448700.
+Setting angular vel to: -5.448700
+
+emitTwoWheeledEvent: l=2.883806, r=-1.883806, linearSpeed=0.080000, angularVel=-5.448700, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.240173
+Updating target angle: -5.448700.
+To target angle: -5.208527.
+Setting angular vel to: -5.208527
+
+emitTwoWheeledEvent: l=2.778731, r=-1.778731, linearSpeed=0.080000, angularVel=-5.208527, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.240173
+Updating target angle: -5.208527.
+To target angle: -4.968353.
+Setting angular vel to: -4.968353
+
+emitTwoWheeledEvent: l=2.673655, r=-1.673655, linearSpeed=0.080000, angularVel=-4.968353, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.238953
+Updating target angle: -4.968353.
+To target angle: -4.729401.
+Setting angular vel to: -4.729401
+
+emitTwoWheeledEvent: l=2.569113, r=-1.569113, linearSpeed=0.080000, angularVel=-4.729401, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.238953
+Updating target angle: -4.729401.
+To target angle: -4.490448.
+Setting angular vel to: -4.490448
+
+emitTwoWheeledEvent: l=2.464571, r=-1.464571, linearSpeed=0.080000, angularVel=-4.490448, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.308707, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.283019, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.288444, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.312671, bodyflag=0
+Saving /tmp/reactive_bodies00080.svg
+Saving /tmp/reactive_bodies00080.tsv
+onGyroTurn: dphi=-0.238953
+Updating target angle: -4.490448.
+To target angle: -4.251495.
+Setting angular vel to: -4.251495
+
+emitTwoWheeledEvent: l=2.360029, r=-1.360029, linearSpeed=0.080000, angularVel=-4.251495, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.238953
+Updating target angle: -4.251495.
+To target angle: -4.012543.
+Setting angular vel to: -4.012543
+
+emitTwoWheeledEvent: l=2.255487, r=-1.255488, linearSpeed=0.080000, angularVel=-4.012543, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.239868
+Updating target angle: -4.012543.
+To target angle: -3.772675.
+Setting angular vel to: -3.772675
+
+emitTwoWheeledEvent: l=2.150545, r=-1.150545, linearSpeed=0.080000, angularVel=-3.772675, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.239868
+Updating target angle: -3.772675.
+To target angle: -3.532806.
+Setting angular vel to: -3.532806
+
+emitTwoWheeledEvent: l=2.045603, r=-1.045603, linearSpeed=0.080000, angularVel=-3.532806, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.239868
+Updating target angle: -3.532806.
+To target angle: -3.292938.
+Setting angular vel to: -3.292938
+
+emitTwoWheeledEvent: l=1.940661, r=-0.940661, linearSpeed=0.080000, angularVel=-3.292938, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.294215, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Saving /tmp/reactive_bodies00081.svg
+Saving /tmp/reactive_bodies00081.tsv
+onGyroTurn: dphi=-0.239868
+Updating target angle: -3.292938.
+To target angle: -3.053070.
+Setting angular vel to: -3.053070
+
+emitTwoWheeledEvent: l=1.835718, r=-0.835718, linearSpeed=0.080000, angularVel=-3.053070, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -3.053070.
+To target angle: -2.823883.
+Setting angular vel to: -2.823883
+
+emitTwoWheeledEvent: l=1.735449, r=-0.735449, linearSpeed=0.080000, angularVel=-2.823883, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -2.823883.
+To target angle: -2.594696.
+Setting angular vel to: -2.594696
+
+emitTwoWheeledEvent: l=1.635180, r=-0.635180, linearSpeed=0.080000, angularVel=-2.594696, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -2.594696.
+To target angle: -2.365509.
+Setting angular vel to: -2.365509
+
+emitTwoWheeledEvent: l=1.534910, r=-0.534910, linearSpeed=0.080000, angularVel=-2.365509, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.229187
+Updating target angle: -2.365509.
+To target angle: -2.136322.
+Setting angular vel to: -2.136322
+
+emitTwoWheeledEvent: l=1.434641, r=-0.434641, linearSpeed=0.080000, angularVel=-2.136322, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.301040, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.276134, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.277849, bodyflag=0
+Saving /tmp/reactive_bodies00082.svg
+Saving /tmp/reactive_bodies00082.tsv
+onGyroTurn: dphi=-0.214844
+Updating target angle: -2.136322.
+To target angle: -1.921478.
+Setting angular vel to: -1.921478
+
+emitTwoWheeledEvent: l=1.340647, r=-0.340647, linearSpeed=0.080000, angularVel=-1.921478, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.214844
+Updating target angle: -1.921478.
+To target angle: -1.706635.
+Setting angular vel to: -1.706635
+
+emitTwoWheeledEvent: l=1.246653, r=-0.246653, linearSpeed=0.080000, angularVel=-1.706635, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.214844
+Updating target angle: -1.706635.
+To target angle: -1.491791.
+Setting angular vel to: -1.491791
+
+emitTwoWheeledEvent: l=1.152658, r=-0.152659, linearSpeed=0.080000, angularVel=-1.491791, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.214844
+Updating target angle: -1.491791.
+To target angle: -1.276947.
+Setting angular vel to: -1.276947
+
+emitTwoWheeledEvent: l=1.058664, r=-0.058664, linearSpeed=0.080000, angularVel=-1.276947, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.187683
+Updating target angle: -1.276947.
+To target angle: -1.089264.
+Setting angular vel to: -1.089264
+
+emitTwoWheeledEvent: l=0.976553, r=0.023447, linearSpeed=0.080000, angularVel=-1.089264, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.301702, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.273130, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.287924, bodyflag=0
+Saving /tmp/reactive_bodies00083.svg
+Saving /tmp/reactive_bodies00083.tsv
+onGyroTurn: dphi=-0.187683
+Updating target angle: -1.089264.
+To target angle: -0.901581.
+Setting angular vel to: -0.901581
+
+emitTwoWheeledEvent: l=0.894442, r=0.105558, linearSpeed=0.080000, angularVel=-0.901581, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.187683
+Updating target angle: -0.901581.
+To target angle: -0.713898.
+Setting angular vel to: -0.713898
+
+emitTwoWheeledEvent: l=0.812330, r=0.187670, linearSpeed=0.080000, angularVel=-0.713898, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.187683
+Updating target angle: -0.713898.
+To target angle: -0.526215.
+Setting angular vel to: -0.526215
+
+emitTwoWheeledEvent: l=0.730219, r=0.269781, linearSpeed=0.080000, angularVel=-0.526215, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.138245
+Updating target angle: -0.526215.
+To target angle: -0.387970.
+Setting angular vel to: -0.387970
+
+emitTwoWheeledEvent: l=0.669737, r=0.330263, linearSpeed=0.080000, angularVel=-0.387970, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.138245
+Updating target angle: -0.387970.
+To target angle: -0.249725.
+Setting angular vel to: -0.249725
+
+emitTwoWheeledEvent: l=0.609255, r=0.390745, linearSpeed=0.080000, angularVel=-0.249725, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.289920, bodyflag=0
+Saving /tmp/reactive_bodies00084.svg
+Saving /tmp/reactive_bodies00084.tsv
+onGyroTurn: dphi=-0.138245
+Updating target angle: -0.249725.
+To target angle: -0.111481.
+Setting angular vel to: -0.111481
+
+emitTwoWheeledEvent: l=0.548773, r=0.451227, linearSpeed=0.080000, angularVel=-0.111481, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.138245
+Updating target angle: -0.111481.
+To target angle: 0.026764.
+Setting angular vel to: 0.026764
+
+emitTwoWheeledEvent: l=0.488291, r=0.511709, linearSpeed=0.080000, angularVel=0.026764, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.075073
+Updating target angle: 0.026764.
+To target angle: 0.101837.
+Setting angular vel to: 0.101837
+
+emitTwoWheeledEvent: l=0.455446, r=0.544554, linearSpeed=0.080000, angularVel=0.101837, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.075073
+Updating target angle: 0.101837.
+To target angle: 0.176910.
+Setting angular vel to: 0.176910
+
+emitTwoWheeledEvent: l=0.422602, r=0.577398, linearSpeed=0.080000, angularVel=0.176910, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.075073
+Updating target angle: 0.176910.
+To target angle: 0.251984.
+Setting angular vel to: 0.251984
+
+emitTwoWheeledEvent: l=0.389757, r=0.610243, linearSpeed=0.080000, angularVel=0.251984, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.261725, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.286171, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.263059, bodyflag=0
+Saving /tmp/reactive_bodies00085.svg
+Saving /tmp/reactive_bodies00085.tsv
+onGyroTurn: dphi=-0.075073
+Updating target angle: 0.251984.
+To target angle: 0.327057.
+Setting angular vel to: 0.327057
+
+emitTwoWheeledEvent: l=0.356913, r=0.643087, linearSpeed=0.080000, angularVel=0.327057, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.012512
+Updating target angle: 0.327057.
+To target angle: 0.339569.
+Setting angular vel to: 0.339569
+
+emitTwoWheeledEvent: l=0.351439, r=0.648561, linearSpeed=0.080000, angularVel=0.339569, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.012512
+Updating target angle: 0.339569.
+To target angle: 0.352081.
+Setting angular vel to: 0.352081
+
+emitTwoWheeledEvent: l=0.345964, r=0.654036, linearSpeed=0.080000, angularVel=0.352081, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.012512
+Updating target angle: 0.352081.
+To target angle: 0.364594.
+Setting angular vel to: 0.364594
+
+emitTwoWheeledEvent: l=0.340490, r=0.659510, linearSpeed=0.080000, angularVel=0.364594, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.012512
+Updating target angle: 0.364594.
+To target angle: 0.377106.
+Setting angular vel to: 0.377106
+
+emitTwoWheeledEvent: l=0.335016, r=0.664984, linearSpeed=0.080000, angularVel=0.377106, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.279942, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.261199, bodyflag=0
+Saving /tmp/reactive_bodies00086.svg
+Saving /tmp/reactive_bodies00086.tsv
+onGyroTurn: dphi=0.031433
+Updating target angle: 0.377106.
+To target angle: 0.345673.
+Setting angular vel to: 0.345673
+
+emitTwoWheeledEvent: l=0.348768, r=0.651232, linearSpeed=0.080000, angularVel=0.345673, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031433
+Updating target angle: 0.345673.
+To target angle: 0.314240.
+Setting angular vel to: 0.314240
+
+emitTwoWheeledEvent: l=0.362520, r=0.637480, linearSpeed=0.080000, angularVel=0.314240, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031433
+Updating target angle: 0.314240.
+To target angle: 0.282806.
+Setting angular vel to: 0.282806
+
+emitTwoWheeledEvent: l=0.376272, r=0.623728, linearSpeed=0.080000, angularVel=0.282806, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.031433
+Updating target angle: 0.282806.
+To target angle: 0.251373.
+Setting angular vel to: 0.251373
+
+emitTwoWheeledEvent: l=0.390024, r=0.609976, linearSpeed=0.080000, angularVel=0.251373, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.045471
+Updating target angle: 0.251373.
+To target angle: 0.205902.
+Setting angular vel to: 0.205902
+
+emitTwoWheeledEvent: l=0.409918, r=0.590082, linearSpeed=0.080000, angularVel=0.205902, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.266221, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.246830, bodyflag=0
+Saving /tmp/reactive_bodies00087.svg
+Saving /tmp/reactive_bodies00087.tsv
+onGyroTurn: dphi=0.045471
+Updating target angle: 0.205902.
+To target angle: 0.160431.
+Setting angular vel to: 0.160431
+
+emitTwoWheeledEvent: l=0.429811, r=0.570189, linearSpeed=0.080000, angularVel=0.160431, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.045471
+Updating target angle: 0.160431.
+To target angle: 0.114960.
+Setting angular vel to: 0.114960
+
+emitTwoWheeledEvent: l=0.449705, r=0.550295, linearSpeed=0.080000, angularVel=0.114960, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.045471
+Updating target angle: 0.114960.
+To target angle: 0.069489.
+Setting angular vel to: 0.069489
+
+emitTwoWheeledEvent: l=0.469599, r=0.530401, linearSpeed=0.080000, angularVel=0.069489, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.038757
+Updating target angle: 0.069489.
+To target angle: 0.030731.
+Setting angular vel to: 0.030731
+
+emitTwoWheeledEvent: l=0.486555, r=0.513445, linearSpeed=0.080000, angularVel=0.030731, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.038757
+Updating target angle: 0.030731.
+To target angle: -0.008026.
+Setting angular vel to: -0.008026
+
+emitTwoWheeledEvent: l=0.503511, r=0.496489, linearSpeed=0.080000, angularVel=-0.008026, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.253500, bodyflag=0
+Saving /tmp/reactive_bodies00088.svg
+Saving /tmp/reactive_bodies00088.tsv
+onGyroTurn: dphi=0.038757
+Updating target angle: -0.008026.
+To target angle: -0.046783.
+Setting angular vel to: -0.046783
+
+emitTwoWheeledEvent: l=0.520468, r=0.479532, linearSpeed=0.080000, angularVel=-0.046783, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.038757
+Updating target angle: -0.046783.
+To target angle: -0.085541.
+Setting angular vel to: -0.085541
+
+emitTwoWheeledEvent: l=0.537424, r=0.462576, linearSpeed=0.080000, angularVel=-0.085541, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025024
+Updating target angle: -0.085541.
+To target angle: -0.110565.
+Setting angular vel to: -0.110565
+
+emitTwoWheeledEvent: l=0.548372, r=0.451628, linearSpeed=0.080000, angularVel=-0.110565, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025024
+Updating target angle: -0.110565.
+To target angle: -0.135590.
+Setting angular vel to: -0.135590
+
+emitTwoWheeledEvent: l=0.559320, r=0.440680, linearSpeed=0.080000, angularVel=-0.135590, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.025024
+Updating target angle: -0.135590.
+To target angle: -0.160614.
+Setting angular vel to: -0.160614
+
+emitTwoWheeledEvent: l=0.570269, r=0.429731, linearSpeed=0.080000, angularVel=-0.160614, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.245493, bodyflag=0
+Saving /tmp/reactive_bodies00089.svg
+Saving /tmp/reactive_bodies00089.tsv
+onGyroTurn: dphi=0.025024
+Updating target angle: -0.160614.
+To target angle: -0.185638.
+Setting angular vel to: -0.185638
+
+emitTwoWheeledEvent: l=0.581217, r=0.418783, linearSpeed=0.080000, angularVel=-0.185638, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006714
+Updating target angle: -0.185638.
+To target angle: -0.192352.
+Setting angular vel to: -0.192352
+
+emitTwoWheeledEvent: l=0.584154, r=0.415846, linearSpeed=0.080000, angularVel=-0.192352, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006714
+Updating target angle: -0.192352.
+To target angle: -0.199066.
+Setting angular vel to: -0.199066
+
+emitTwoWheeledEvent: l=0.587091, r=0.412909, linearSpeed=0.080000, angularVel=-0.199066, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006714
+Updating target angle: -0.199066.
+To target angle: -0.205780.
+Setting angular vel to: -0.205780
+
+emitTwoWheeledEvent: l=0.590029, r=0.409971, linearSpeed=0.080000, angularVel=-0.205780, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.006714
+Updating target angle: -0.205780.
+To target angle: -0.212494.
+Setting angular vel to: -0.212494
+
+emitTwoWheeledEvent: l=0.592966, r=0.407034, linearSpeed=0.080000, angularVel=-0.212494, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.009766
+Updating target angle: -0.212494.
+To target angle: -0.202728.
+Setting angular vel to: -0.202728
+
+emitTwoWheeledEvent: l=0.588694, r=0.411306, linearSpeed=0.080000, angularVel=-0.202728, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.237576, bodyflag=0
+Saving /tmp/reactive_bodies00090.svg
+Saving /tmp/reactive_bodies00090.tsv
+onGyroTurn: dphi=-0.009766
+Updating target angle: -0.202728.
+To target angle: -0.192963.
+Setting angular vel to: -0.192963
+
+emitTwoWheeledEvent: l=0.584421, r=0.415579, linearSpeed=0.080000, angularVel=-0.192963, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.009766
+Updating target angle: -0.192963.
+To target angle: -0.183197.
+Setting angular vel to: -0.183197
+
+emitTwoWheeledEvent: l=0.580149, r=0.419851, linearSpeed=0.080000, angularVel=-0.183197, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.009766
+Updating target angle: -0.183197.
+To target angle: -0.173431.
+Setting angular vel to: -0.173431
+
+emitTwoWheeledEvent: l=0.575876, r=0.424124, linearSpeed=0.080000, angularVel=-0.173431, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.014648
+Updating target angle: -0.173431.
+To target angle: -0.158783.
+Setting angular vel to: -0.158783
+
+emitTwoWheeledEvent: l=0.569468, r=0.430532, linearSpeed=0.080000, angularVel=-0.158783, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.229158, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.270740, bodyflag=0
+Saving /tmp/reactive_bodies00091.svg
+Saving /tmp/reactive_bodies00091.tsv
+onGyroTurn: dphi=-0.014648
+Updating target angle: -0.158783.
+To target angle: -0.144135.
+Setting angular vel to: -0.144135
+
+emitTwoWheeledEvent: l=0.563059, r=0.436941, linearSpeed=0.080000, angularVel=-0.144135, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.014648
+Updating target angle: -0.144135.
+To target angle: -0.129486.
+Setting angular vel to: -0.129486
+
+emitTwoWheeledEvent: l=0.556650, r=0.443350, linearSpeed=0.080000, angularVel=-0.129486, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.014648
+Updating target angle: -0.129486.
+To target angle: -0.114838.
+Setting angular vel to: -0.114838
+
+emitTwoWheeledEvent: l=0.550241, r=0.449759, linearSpeed=0.080000, angularVel=-0.114838, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.013123
+Updating target angle: -0.114838.
+To target angle: -0.101715.
+Setting angular vel to: -0.101715
+
+emitTwoWheeledEvent: l=0.544500, r=0.455500, linearSpeed=0.080000, angularVel=-0.101715, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.013123
+Updating target angle: -0.101715.
+To target angle: -0.088593.
+Setting angular vel to: -0.088593
+
+emitTwoWheeledEvent: l=0.538759, r=0.461241, linearSpeed=0.080000, angularVel=-0.088593, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.013123
+Updating target angle: -0.088593.
+To target angle: -0.075470.
+Setting angular vel to: -0.075470
+
+emitTwoWheeledEvent: l=0.533018, r=0.466982, linearSpeed=0.080000, angularVel=-0.075470, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.216622, bodyflag=0
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.280179, bodyflag=0
+Saving /tmp/reactive_bodies00092.svg
+Saving /tmp/reactive_bodies00092.tsv
+onGyroTurn: dphi=-0.013123
+Updating target angle: -0.075470.
+To target angle: -0.062347.
+Setting angular vel to: -0.062347
+
+emitTwoWheeledEvent: l=0.527277, r=0.472723, linearSpeed=0.080000, angularVel=-0.062347, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005493
+Updating target angle: -0.062347.
+To target angle: -0.056854.
+Setting angular vel to: -0.056854
+
+emitTwoWheeledEvent: l=0.524874, r=0.475126, linearSpeed=0.080000, angularVel=-0.056854, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005493
+Updating target angle: -0.056854.
+To target angle: -0.051361.
+Setting angular vel to: -0.051361
+
+emitTwoWheeledEvent: l=0.522470, r=0.477530, linearSpeed=0.080000, angularVel=-0.051361, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005493
+Updating target angle: -0.051361.
+To target angle: -0.045868.
+Setting angular vel to: -0.045868
+
+emitTwoWheeledEvent: l=0.520067, r=0.479933, linearSpeed=0.080000, angularVel=-0.045868, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005493
+Updating target angle: -0.045868.
+To target angle: -0.040375.
+Setting angular vel to: -0.040375
+
+emitTwoWheeledEvent: l=0.517664, r=0.482336, linearSpeed=0.080000, angularVel=-0.040375, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.216482, bodyflag=0
+Saving /tmp/reactive_bodies00093.svg
+Saving /tmp/reactive_bodies00093.tsv
+onGyroTurn: dphi=-0.002136
+Updating target angle: -0.040375.
+To target angle: -0.038239.
+Setting angular vel to: -0.038239
+
+emitTwoWheeledEvent: l=0.516729, r=0.483271, linearSpeed=0.080000, angularVel=-0.038239, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.002136
+Updating target angle: -0.038239.
+To target angle: -0.036102.
+Setting angular vel to: -0.036102
+
+emitTwoWheeledEvent: l=0.515795, r=0.484205, linearSpeed=0.080000, angularVel=-0.036102, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.002136
+Updating target angle: -0.036102.
+To target angle: -0.033966.
+Setting angular vel to: -0.033966
+
+emitTwoWheeledEvent: l=0.514860, r=0.485140, linearSpeed=0.080000, angularVel=-0.033966, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.002136
+Updating target angle: -0.033966.
+To target angle: -0.031830.
+Setting angular vel to: -0.031830
+
+emitTwoWheeledEvent: l=0.513926, r=0.486074, linearSpeed=0.080000, angularVel=-0.031830, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.003357
+Updating target angle: -0.031830.
+To target angle: -0.028473.
+Setting angular vel to: -0.028473
+
+emitTwoWheeledEvent: l=0.512457, r=0.487543, linearSpeed=0.080000, angularVel=-0.028473, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.204448, bodyflag=0
+Saving /tmp/reactive_bodies00094.svg
+Saving /tmp/reactive_bodies00094.tsv
+onGyroTurn: dphi=-0.003357
+Updating target angle: -0.028473.
+To target angle: -0.025116.
+Setting angular vel to: -0.025116
+
+emitTwoWheeledEvent: l=0.510988, r=0.489012, linearSpeed=0.080000, angularVel=-0.025116, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.003357
+Updating target angle: -0.025116.
+To target angle: -0.021759.
+Setting angular vel to: -0.021759
+
+emitTwoWheeledEvent: l=0.509520, r=0.490480, linearSpeed=0.080000, angularVel=-0.021759, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.003357
+Updating target angle: -0.021759.
+To target angle: -0.018402.
+Setting angular vel to: -0.018402
+
+emitTwoWheeledEvent: l=0.508051, r=0.491949, linearSpeed=0.080000, angularVel=-0.018402, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005188
+Updating target angle: -0.018402.
+To target angle: -0.013214.
+Setting angular vel to: -0.013214
+
+emitTwoWheeledEvent: l=0.505781, r=0.494219, linearSpeed=0.080000, angularVel=-0.013214, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005188
+Updating target angle: -0.013214.
+To target angle: -0.008026.
+Setting angular vel to: -0.008026
+
+emitTwoWheeledEvent: l=0.503511, r=0.496489, linearSpeed=0.080000, angularVel=-0.008026, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.196818, bodyflag=0
+Saving /tmp/reactive_bodies00095.svg
+Saving /tmp/reactive_bodies00095.tsv
+onGyroTurn: dphi=-0.005188
+Updating target angle: -0.008026.
+To target angle: -0.002838.
+Setting angular vel to: -0.002838
+
+emitTwoWheeledEvent: l=0.501242, r=0.498758, linearSpeed=0.080000, angularVel=-0.002838, maxAngVel=1.142857
+
+onGyroTurn: dphi=-0.005188
+Updating target angle: -0.002838.
+To target angle: 0.002350.
+Setting angular vel to: 0.002350
+
+emitTwoWheeledEvent: l=0.498972, r=0.501028, linearSpeed=0.080000, angularVel=0.002350, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.005798
+Updating target angle: 0.002350.
+To target angle: -0.003448.
+Setting angular vel to: -0.003448
+
+emitTwoWheeledEvent: l=0.501509, r=0.498491, linearSpeed=0.080000, angularVel=-0.003448, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.005798
+Updating target angle: -0.003448.
+To target angle: -0.009247.
+Setting angular vel to: -0.009247
+
+emitTwoWheeledEvent: l=0.504045, r=0.495955, linearSpeed=0.080000, angularVel=-0.009247, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.005798
+Updating target angle: -0.009247.
+To target angle: -0.015045.
+Setting angular vel to: -0.015045
+
+emitTwoWheeledEvent: l=0.506582, r=0.493418, linearSpeed=0.080000, angularVel=-0.015045, maxAngVel=1.142857
+
+Running: AbstractTask::CloseObjectDetector::detect.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+Running: AbstractTask::CloseObjectDetector::ReportFixture.
+AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.185540, bodyflag=0
+AbstractTask::CloseObjectDetector: We are close!
+AbstractTask::CloseObjectDetector: In field of view: detected!
+Detected more than two threats at: -0.244979
+Task terminating because of obstacle at: -0.244979
+Reactive: onTaskTerminated
+ReactiveConfigurator: Obstacle detected.
+
+ReactiveConfigurator: Avoidance to the LEFT b/c obstacle to the right.
+
+emitTwoWheeledEvent: l=0.506582, r=0.493418, linearSpeed=0.080000, angularVel=-0.015045, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00096.svg
+Saving /tmp/reactive_bodies00096.tsv
+onGyroTurn: dphi=0.005798
+Updating target angle: -0.015045.
+To target angle: -0.020844.
+onGyroTurn: dphi=0.009766
+Updating target angle: -0.020844.
+To target angle: -0.030609.
+onGyroTurn: dphi=0.009766
+Updating target angle: -0.030609.
+To target angle: -0.040375.
+onGyroTurn: dphi=0.009766
+Updating target angle: -0.040375.
+To target angle: -0.050140.
+onGyroTurn: dphi=0.009766
+Updating target angle: -0.050140.
+To target angle: -0.059906.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+onGyroTurn: dphi=0.011902
+Updating target angle: -0.059906.
+To target angle: -0.071808.
+Saving /tmp/reactive_bodies00097.svg
+Saving /tmp/reactive_bodies00097.tsv
+onGyroTurn: dphi=0.011902
+Updating target angle: -0.071808.
+To target angle: -0.083710.
+onGyroTurn: dphi=0.011902
+Updating target angle: -0.083710.
+To target angle: -0.095612.
+onGyroTurn: dphi=0.011902
+Updating target angle: -0.095612.
+To target angle: -0.107513.
+onGyroTurn: dphi=0.021667
+Updating target angle: -0.107513.
+To target angle: -0.129181.
+onGyroTurn: dphi=0.021667
+Updating target angle: -0.129181.
+To target angle: -0.150848.
+====> avoid(0, 0.191250 0.009615): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00098.svg
+Saving /tmp/reactive_bodies00098.tsv
+onGyroTurn: dphi=0.021667
+Updating target angle: -0.150848.
+To target angle: -0.172516.
+onGyroTurn: dphi=0.021667
+Updating target angle: -0.172516.
+To target angle: -0.194183.
+onGyroTurn: dphi=0.077820
+Updating target angle: -0.194183.
+To target angle: -0.272003.
+onGyroTurn: dphi=0.077820
+Updating target angle: -0.272003.
+To target angle: -0.349823.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00099.svg
+onGyroTurn: dphi=0.077820
+Updating target angle: -0.349823.
+To target angle: -0.427643.
+Saving /tmp/reactive_bodies00099.tsv
+onGyroTurn: dphi=0.077820
+Updating target angle: -0.427643.
+To target angle: -0.505463.
+Targetloc: Contour discarded.
+onGyroTurn: dphi=0.103760
+Updating target angle: -0.505463.
+To target angle: -0.609222.
+onGyroTurn: dphi=0.103760
+Updating target angle: -0.609222.
+To target angle: -0.712982.
+onGyroTurn: dphi=0.103760
+Updating target angle: -0.712982.
+To target angle: -0.816742.
+onGyroTurn: dphi=0.103760
+Updating target angle: -0.816742.
+To target angle: -0.920502.
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00100.svg
+Saving /tmp/reactive_bodies00100.tsv
+====> avoid(0, 0.191250 0.000000): 0.857143 degrees
+
+Setting angular vel to: 0.857143
+
+emitTwoWheeledEvent: l=0.125000, r=0.875000, linearSpeed=0.080000, angularVel=0.857143, maxAngVel=1.142857
+
+Saving /tmp/reactive_bodies00101.svg
+Saving /tmp/reactive_bodies00101.tsv
+END

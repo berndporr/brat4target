@@ -21,7 +21,8 @@ void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
     {
         if (terminatedEvent)
         {
-            bratlogger.log("Task terminating because of obstacle at: %f",threatAngle.value());
+            bratlogger.log ("Task terminating because of obstacle at: %f",
+                            threatAngle.value ());
             TerminationMessage tm (TerminationMessage::ObstacleDetected,
                                    shared_from_this ());
             terminatedEvent (tm);
@@ -33,6 +34,7 @@ void AbstractTask::onTargetDetected (float r, float phi, int)
 {
     targetDistance = r;
     targetAngle = phi;
+    bratlogger.log ("Camera target detection: r=%, phi=%", r, phi);
     if (targetDistance <= targetArrivedDistance)
     {
         if (terminatedEvent)
@@ -46,10 +48,12 @@ void AbstractTask::onTargetDetected (float r, float phi, int)
 
 void AbstractTask::onGyroTurn (float dphi)
 {
+    bratlogger.log ("onGyroTurn: dphi=%f", dphi);
     if (targetAngle.has_value ())
     {
-        bratlogger.log ("Target angle: %f.", targetAngle.value ());
+        bratlogger.log ("Updating target angle: %f.", targetAngle.value ());
         targetAngle = targetAngle.value () - dphi;
+        bratlogger.log ("To target angle: %f.", targetAngle.value ());
     }
 }
 
@@ -65,8 +69,17 @@ AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
         = robotPos - b2Vec2 (maxDetectionRadius, maxDetectionRadius);
     aabb.upperBound
         = robotPos + b2Vec2 (maxDetectionRadius, maxDetectionRadius);
+    nThreats = 0;
+    avgThreatAngle = 0;
     world->QueryAABB (this, aabb);
-    return nullptr != detectedBody;
+    std::optional<float> threatAngle;
+    if (nThreats > 0)
+    {
+        threatAngle = avgThreatAngle / nThreats;
+        bratlogger.log ("Detected more than two threats at: %f",
+                        threatAngle.value ());
+    }
+    return threatAngle;
 }
 
 bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
@@ -110,8 +123,8 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
         return true;
     }
 
-    detectedBody = body;
-    relativeThreatAngle = tmpRelativeThreatAngle;
+    avgThreatAngle += tmpRelativeThreatAngle;
+    nThreats++;
 
     bratlogger.log (
         "AbstractTask::CloseObjectDetector: In field of view: detected!");
@@ -217,7 +230,7 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     if (threatsDetected)
     {
         float escapeAngularVel
-            = RELATIVE_AVOID_STEERING_GAIN * getMaxAngularVelocity();
+            = RELATIVE_AVOID_STEERING_GAIN * getMaxAngularVelocity ();
 
         if (RIGHT == avoidDirection)
         {

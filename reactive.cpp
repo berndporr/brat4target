@@ -54,8 +54,10 @@ int main (int nargs, char **argv)
             configurator.onLIDARworld (world);
             char tmp[256];
             sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
+	    bratlogger.log("Saving %s",tmp);
             worldBuilder.exportWorldToSVG (tmp);
             sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
+	    bratlogger.log("Saving %s",tmp);
             worldBuilder.bodies_dump (tmp);
             nWorld++;
         });

@@ -106,7 +106,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         float r = 0;
         float l = 0;
         // max angular possible velocity at a given linear speed
-        const float maxAngularVel = getMaxAngularVelocity();
+        const float maxAngularVel = getMaxAngularVelocity ();
         if (fabs (linearSpeed) > 0)
         {
             // turning behaviour the robot from -1..+1
@@ -115,8 +115,8 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
             // speed in continous servo units from -1..+1
             const float contServoSpeed
                 = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED;
-            l = contServoSpeed - servoAngularVelocity;
-            r = contServoSpeed + servoAngularVelocity;
+            l = contServoSpeed - contServoSpeed * servoAngularVelocity;
+            r = contServoSpeed + contServoSpeed * servoAngularVelocity;
         }
         bratlogger.log ("emitTwoWheeledEvent: l=%f, r=%f, linearSpeed=%f, "
                         "angularVel=%f, maxAngVel=%f\n",
@@ -193,13 +193,6 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         {
         }
 
-        std::optional<float> getRelativeThreatAngle () const
-        {
-            return relativeThreatAngle;
-        }
-
-        b2Body *getBody () const { return detectedBody; }
-
         // returns the threat angle if detected
         std::optional<float> detect (std::shared_ptr<b2World> world,
                                      std::shared_ptr<Robot> robot);
@@ -210,11 +203,11 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
       private:
         std::shared_ptr<Robot> robot;
-        b2Body *detectedBody = nullptr;
         const float maxDetectionRadius;
         const float maxDetectionAngle;
         b2Vec2 robotPos;
-        std::optional<float> relativeThreatAngle = 0;
+        float avgThreatAngle = 0;
+        int nThreats = 0;
     };
 
   public:
