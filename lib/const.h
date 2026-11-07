@@ -12,7 +12,6 @@ constexpr float ROBOT_BOX_OFFSET_X = 0.105 - ROBOT_HALFWIDTH;
 constexpr float ROBOT_BOX_OFFSET_Y = 0;
 constexpr float ROBOT_BOX_OFFSET_ANGLE = 0;
 constexpr float BETWEEN_WHEELS = .14;
-constexpr float MAX_SPEED = .78;
 constexpr float MAX_OMEGA = 1.8; //radians
 constexpr float ANGLE_ERROR_TOLERANCE = 5 * M_PI / 180;
 constexpr float BOX2DRANGE = 5.0;
@@ -32,16 +31,14 @@ static const b2Transform b2Transform_inf
 constexpr float ANGLE_RESOLUTION = M_PI / (2 * HZ);
 constexpr float MIN_BODY_DIMENSION = 0.0005;
 constexpr float DEG_TO_RAD_K = 0.01745329252;
-constexpr float SIM_DURATION = int (BOX2DRANGE * 2 / MAX_SPEED);
 
-//KINEMATICS
-
-constexpr float WHEEL_SPEED_DEFAULT = 0.5f;
-constexpr float WHEEL_SPEED_TURN = (M_PI_2 * BETWEEN_WHEELS) / (MAX_SPEED);
+// default linear speed in m/s
+constexpr float LINEAR_SPEED_DEFAULT = 0.07; // m/s
 
 // maps the servo speed -1...+1 to actual speed on the ground
-constexpr float WHEEL_SPEED_TO_ACTUAL_SPEED_FACTOR = 1;
+constexpr float REAL_SPEED_TO_CONT_SERVO_SPEED = 0.5 / 0.08;
 
+// we have no gravity
 static const b2Vec2 GRAVITY (0, 0);
 
 // Flags for the different bodies
@@ -59,7 +56,8 @@ static const float NEARBY_OBSTACLE_DETECTION_RADIUS
 static const float TARGET_ARRIVED_DISTANCE = 0.3; // m
 
 // Avoidance task
-constexpr int MIN_LIDAR_AVOID_SAMPLES = 3;
+constexpr int MIN_LIDAR_AVOID_SAMPLES = 20;
+constexpr float RELATIVE_AVOID_STEERING_GAIN = 0.75;
 
 // Targeting task
-constexpr float TARGET_STEERING_GAIN = 5;
+constexpr float TARGET_STEERING_GAIN = 1;

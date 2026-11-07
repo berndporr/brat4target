@@ -213,7 +213,7 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     {
         const float maxAngularVel = linearSpeed / BETWEEN_WHEELS;
         float targetSteeringAngle
-            = 0.5 * maxAngularVel;
+            = RELATIVE_AVOID_STEERING_GAIN * maxAngularVel;
 
         if (RIGHT == avoidDirection)
         {

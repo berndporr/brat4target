@@ -14,6 +14,8 @@
  * @brief Turns sensor events into motor outputs in a reactive way
  * This is an abstract task which has all common features of the derived classes
  * such as attracion or avoidance.
+ * Units are physical units. The Speed it m/s and converted here to
+ * motor units. The angular velocity is rad/s.
  */
 class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 {
@@ -90,6 +92,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     void registerTerminated (TerminatedEvent te) { terminatedEvent = te; }
 
   private:
+    // Converts the phys speeds into servo speeds and sends them to the motors.
     void emitTwoWheeledEvent ()
     {
         if (!motorEvent)
@@ -99,8 +102,8 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         float l = 0;
         if (maxAngularVel > 0)
         {
-            l = linearSpeed - angularVelocity / maxAngularVel;
-            r = linearSpeed + angularVelocity / maxAngularVel;
+            l = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED - angularVelocity / maxAngularVel;
+            r = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED + angularVelocity / maxAngularVel;
         }
         bratlogger.log (
             "l=%f, r=%f, linearSpeed=%f, angularVel=%f, maxAngVel=%f\n", l, r,
@@ -120,21 +123,12 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     }
 
     /**
-     * Sets the linear speed in motor units of the cont servo which
-     * is usually -1...+1.
+     * Sets the linear speed in m/s. It's converted here to motor units.
      */
     void setLinearSpeed (const float s)
     {
         linearSpeed = s;
         emitTwoWheeledEvent ();
-    }
-
-    /**
-     * Get the robot physical speed by mapping the cont servo values to speed in m/s.
-     */
-    float getPhysRobotSpeed ()
-    {
-        return getLinearSpeed () * WHEEL_SPEED_TO_ACTUAL_SPEED_FACTOR;
     }
 
     /**
@@ -289,7 +283,7 @@ class TargetTask : public AbstractTask
 
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
-    virtual void onStart () override { setLinearSpeed (WHEEL_SPEED_DEFAULT); }
+    virtual void onStart () override { setLinearSpeed (LINEAR_SPEED_DEFAULT); }
 
     /**
      * Event checks if we have arrived or need to continue targeting.
@@ -367,7 +361,7 @@ class AvoidTask : public AbstractTask
     /**
      * Called when the task is starting.
      */
-    virtual void onStart () override { setLinearSpeed (WHEEL_SPEED_DEFAULT); }
+    virtual void onStart () override { setLinearSpeed (LINEAR_SPEED_DEFAULT); }
 
     /**
      * Called with a fresh LIDAR scan as World and the robot in it for simulation.
