@@ -397,11 +397,8 @@ class AvoidTask : public AbstractTask
             : maxDetectionRadius (maxDetectionRadius),
               maxDetectionAngle (maxDetectionAngle) {};
 
-        bool detect (std::shared_ptr<b2World> world,
-                     std::shared_ptr<Robot> _robot);
-        float getAverageThreatAngle () const { return averageThreatAngle; }
-        float getminThreatDistance () const { return minThreatDistance; }
-        bool hasDetectedThreats () { return totalWeight > 0; }
+        std::optional<float> detect (std::shared_ptr<b2World> world,
+                                     std::shared_ptr<Robot> _robot);
 
       protected:
         // This is called by Box2D for every fixture found in the AABB
@@ -413,10 +410,8 @@ class AvoidTask : public AbstractTask
         const float maxDetectionAngle;
         b2Vec2 robotPos;
         float robotAngle = 0;
-        float totalWeightedAngle = 0.0f;
-        float totalWeight = 0.0f;
-        float averageThreatAngle = 0.0f;
-        float minThreatDistance = 100000;
+        float accDistance = 0;
+        int nDistance = 0;
     };
     int nSamplesWithoutThreat = 0;
     const AvoidDirecton avoidDirection;

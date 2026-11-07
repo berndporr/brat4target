@@ -134,8 +134,9 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-bool AvoidTask::BraitenbergAvoider::detect (std::shared_ptr<b2World> world,
-                                            std::shared_ptr<Robot> _robot)
+std::optional<float>
+AvoidTask::BraitenbergAvoider::detect (std::shared_ptr<b2World> world,
+                                       std::shared_ptr<Robot> _robot)
 {
     robot = _robot;
     robotPos = robot->getPosition ();
@@ -149,14 +150,18 @@ bool AvoidTask::BraitenbergAvoider::detect (std::shared_ptr<b2World> world,
 
     assert (aabb.IsValid ());
 
+    accDistance = 0;
+    nDistance = 0;
+
     world->QueryAABB (this, aabb);
 
-    if (totalWeight > 0.0f)
+    std::optional<float> normdistance;
+
+    if (nDistance > 1)
     {
-        averageThreatAngle = totalWeightedAngle / totalWeight;
-        return true;
+        normdistance = accDistance / nDistance;
     }
-    return false;
+    return normdistance;
 }
 
 bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
@@ -206,15 +211,8 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
     if (relativeAngle > maxDetectionAngle)
         return true;
 
-    float weight = 1.0f - (distance / maxDetectionRadius);
-    if (weight < 0)
-        weight = 0;
-    totalWeightedAngle += relativeAngle * weight;
-    totalWeight += weight;
-    if (distance < minThreatDistance)
-    {
-        minThreatDistance = distance;
-    }
+    accDistance += (1.0f - (distance / maxDetectionRadius));
+    nDistance++;
     return true;
 }
 
@@ -225,22 +223,22 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
                                            M_PI / 8);
 
-    const bool threatsDetected = braitenbergAvoider.detect (world, robot);
+    auto threatsDetected = braitenbergAvoider.detect (world, robot);
 
     if (threatsDetected)
     {
         float escapeAngularVel
-            = RELATIVE_AVOID_STEERING_GAIN * getMaxAngularVelocity ();
+            = RELATIVE_AVOID_STEERING_GAIN * getMaxAngularVelocity () * threatsDetected.value();
 
         if (RIGHT == avoidDirection)
         {
             escapeAngularVel = -escapeAngularVel;
         }
 
-        bratlogger.log ("====> avoid(%d, %f %f): %f degrees\n", avoidDirection,
-                        nearbyObstacleDetectionRadius,
-                        braitenbergAvoider.getminThreatDistance (),
-                        escapeAngularVel);
+        bratlogger.log (
+            "====> avoid, dir=%d, detrad=%f, threat=%f: ang vel = %f\n",
+            avoidDirection, nearbyObstacleDetectionRadius,
+            threatsDetected.value (), escapeAngularVel);
 
         setAngularVelocity (escapeAngularVel);
         nSamplesWithoutThreat = 0;
