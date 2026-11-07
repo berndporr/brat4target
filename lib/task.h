@@ -3,6 +3,7 @@
 #include "const.h"
 #include "debug.h"
 #include "robot.h"
+#include <box2d/b2_body.h>
 #include <box2d/b2_fixture.h>
 #include <box2d/b2_world.h>
 #include <box2d/b2_world_callbacks.h>
@@ -97,17 +98,24 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     {
         if (!motorEvent)
             return;
+        // speed in continous servo units from -1..+1
+        const float contServoSpeed
+            = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED;
+        // max angular possible velocity at a given linear speed
         const float maxAngularVel = 2.0f * linearSpeed / BETWEEN_WHEELS;
+        // turning behaviour the robot from -1..+1
+        // -1 or +1 the robot rotates on its spot with max angular velocity
+        const float contServoAngularVelocity = angularVelocity / maxAngularVel;
         float r = 0;
         float l = 0;
         if (maxAngularVel > 0)
         {
-            l = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED - angularVelocity / maxAngularVel;
-            r = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED + angularVelocity / maxAngularVel;
+            l = contServoSpeed - contServoAngularVelocity;
+            r = contServoSpeed + contServoAngularVelocity;
         }
-        bratlogger.log (
-            "l=%f, r=%f, linearSpeed=%f, angularVel=%f, maxAngVel=%f\n", l, r,
-            linearSpeed, angularVelocity, maxAngularVel);
+        bratlogger.log ("emitTwoWheeledEvent: l=%f, r=%f, linearSpeed=%f, "
+                        "angularVel=%f, maxAngVel=%f\n",
+                        l, r, linearSpeed, angularVelocity, maxAngularVel);
         motorEvent (l, r);
     }
 
@@ -180,10 +188,16 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         {
         }
 
-        float relativeThreatAngle = 0;
+        std::optional<float> getRelativeThreatAngle () const
+        {
+            return relativeThreatAngle;
+        }
 
-        bool detect (std::shared_ptr<b2World> world,
-                     std::shared_ptr<Robot> robot);
+        b2Body *getBody () const { return detectedBody; }
+
+        // returns the threat angle if detected
+        std::optional<float> detect (std::shared_ptr<b2World> world,
+                                     std::shared_ptr<Robot> robot);
 
       protected:
         // This is called by Box2D for every fixture found in the AABB
@@ -195,6 +209,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         const float maxDetectionRadius;
         const float maxDetectionAngle;
         b2Vec2 robotPos;
+        std::optional<float> relativeThreatAngle = 0;
     };
 
   public:
@@ -232,6 +247,11 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     std::optional<float> getTargetDistance () { return targetDistance; };
 
+    /**
+     * Get the angle of a potential threat
+     */
+     std::optional<float > getThreatAngle() { return  threatAngle;}
+
   protected:
     float linearSpeed = 0;
     float angularVelocity = 0;
@@ -239,6 +259,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     TerminatedEvent terminatedEvent;
     std::optional<float> targetAngle;
     std::optional<float> targetDistance;
+    std::optional<float> threatAngle;
 };
 
 /**

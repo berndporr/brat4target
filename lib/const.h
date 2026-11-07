@@ -33,7 +33,7 @@ constexpr float MIN_BODY_DIMENSION = 0.0005;
 constexpr float DEG_TO_RAD_K = 0.01745329252;
 
 // default linear speed in m/s
-constexpr float LINEAR_SPEED_DEFAULT = 0.07; // m/s
+constexpr float LINEAR_SPEED_DEFAULT = 0.08; // m/s
 
 // maps the servo speed -1...+1 to actual speed on the ground
 constexpr float REAL_SPEED_TO_CONT_SERVO_SPEED = 0.5 / 0.08;

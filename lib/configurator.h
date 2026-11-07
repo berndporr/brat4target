@@ -173,23 +173,23 @@ class ReactiveConfigurator : public BaseConfigurator
             return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
             bratlogger.log ("ReactiveConfigurator: Obstacle detected.\n");
-            if (tm.taskWhichSentMessage->getTargetAngle ())
+            if (tm.taskWhichSentMessage->getThreatAngle())
             {
-                if (tm.taskWhichSentMessage->getTargetAngle ().value () > 0)
+                if (tm.taskWhichSentMessage->getThreatAngle().value () > 0)
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "LEFT b/c target to the left.\n");
+                                    "RIGHT b/c obstacle to the left.\n");
                     return std::make_shared<AvoidTask> (
                         tm.taskWhichSentMessage,
-                        AvoidTask::AvoidDirecton::LEFT);
+                        AvoidTask::AvoidDirecton::RIGHT);
                 }
                 else
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "RIGHT b/c target to the right.\n");
+                                    "LEFT b/c obstacle to the right.\n");
                     return std::make_shared<AvoidTask> (
                         tm.taskWhichSentMessage,
-                        AvoidTask::AvoidDirecton::RIGHT);
+                        AvoidTask::AvoidDirecton::LEFT);
                 }
             }
             else
