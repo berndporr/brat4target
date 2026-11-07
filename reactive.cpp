@@ -26,10 +26,10 @@ int main (int nargs, char **argv)
     ReactiveConfigurator configurator;
     ZetaBot zetabot;
     LSM6DSOX lsm6dS0x;
+    lsm6dS0x.setGyroSamplingRate(GyroSettings::GYRO_ODR_12_5);
+    const float gyrofs = 12.5;
 
     long int nWorld = 0;
-
-    float gyrofs = 52;
 
     lsm6dS0x.registerCallback (
         [&] (const LSM6DSOXSample &s) { configurator.onGyroTurn (-s.gz/gyrofs); });

@@ -210,27 +210,26 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
 {
     // We create a Braitenberg escape behaviour
     BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
-                                           M_PI / 2);
+                                           M_PI / 8);
 
     const bool threatsDetected = braitenbergAvoider.detect (world, robot);
 
     if (threatsDetected)
     {
-        const float maxAngularVel = linearSpeed / BETWEEN_WHEELS;
-        float targetSteeringAngle
-            = RELATIVE_AVOID_STEERING_GAIN * maxAngularVel;
+        float escapeAngularVel
+            = RELATIVE_AVOID_STEERING_GAIN * getMaxAngularVelocity();
 
         if (RIGHT == avoidDirection)
         {
-            targetSteeringAngle = -targetSteeringAngle;
+            escapeAngularVel = -escapeAngularVel;
         }
 
         bratlogger.log ("====> avoid(%d, %f %f): %f degrees\n", avoidDirection,
                         nearbyObstacleDetectionRadius,
                         braitenbergAvoider.getminThreatDistance (),
-                        targetSteeringAngle);
+                        escapeAngularVel);
 
-        setAngularVelocity (targetSteeringAngle);
+        setAngularVelocity (escapeAngularVel);
         nSamplesWithoutThreat = 0;
     }
     else

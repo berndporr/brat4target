@@ -92,26 +92,31 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     void registerTerminated (TerminatedEvent te) { terminatedEvent = te; }
 
+    float getMaxAngularVelocity () const
+    {
+        return 2.0f * linearSpeed / BETWEEN_WHEELS;
+    }
+
   private:
     // Converts the phys speeds into servo speeds and sends them to the motors.
     void emitTwoWheeledEvent ()
     {
         if (!motorEvent)
             return;
-        // speed in continous servo units from -1..+1
-        const float contServoSpeed
-            = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED;
-        // max angular possible velocity at a given linear speed
-        const float maxAngularVel = 2.0f * linearSpeed / BETWEEN_WHEELS;
-        // turning behaviour the robot from -1..+1
-        // -1 or +1 the robot rotates on its spot with max angular velocity
-        const float contServoAngularVelocity = angularVelocity / maxAngularVel;
         float r = 0;
         float l = 0;
-        if (maxAngularVel > 0)
+        // max angular possible velocity at a given linear speed
+        const float maxAngularVel = getMaxAngularVelocity();
+        if (fabs (linearSpeed) > 0)
         {
-            l = contServoSpeed - contServoAngularVelocity;
-            r = contServoSpeed + contServoAngularVelocity;
+            // turning behaviour the robot from -1..+1
+            // -1 or +1 the robot rotates on its spot with max angular velocity
+            const float servoAngularVelocity = angularVelocity / maxAngularVel;
+            // speed in continous servo units from -1..+1
+            const float contServoSpeed
+                = linearSpeed * REAL_SPEED_TO_CONT_SERVO_SPEED;
+            l = contServoSpeed - servoAngularVelocity;
+            r = contServoSpeed + servoAngularVelocity;
         }
         bratlogger.log ("emitTwoWheeledEvent: l=%f, r=%f, linearSpeed=%f, "
                         "angularVel=%f, maxAngVel=%f\n",
@@ -250,7 +255,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     /**
      * Get the angle of a potential threat
      */
-     std::optional<float > getThreatAngle() { return  threatAngle;}
+    std::optional<float> getThreatAngle () { return threatAngle; }
 
   protected:
     float linearSpeed = 0;
