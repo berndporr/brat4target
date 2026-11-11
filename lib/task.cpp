@@ -8,28 +8,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-void AbstractTask::onLIDARworld (std::shared_ptr<b2World> world,
-                                 std::shared_ptr<Robot> robot)
-{
-    // Do we need to terminate the task?
-    CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
-                                    nearbyMaxObstacleDetectionAngle);
-
-    threatAngle = nearbyBody.detect (world, robot);
-
-    if (threatAngle)
-    {
-        if (terminatedEvent)
-        {
-            bratlogger.log ("Task terminating because of obstacle at: %f",
-                            threatAngle.value ());
-            TerminationMessage tm (TerminationMessage::ObstacleDetected,
-                                   shared_from_this ());
-            terminatedEvent (tm);
-        }
-    }
-}
-
 void AbstractTask::onTargetDetected (float r, float phi, int)
 {
     targetDistance = r;

@@ -51,10 +51,10 @@ constexpr float HALF_WINDOW_WIDTH = 0.15;
 // Abstract task
 constexpr float NEARBY_MAX_OBSTACLE_DETECTION_ANGLE = M_PI / 2;
 static const float NEARBY_OBSTACLE_DETECTION_RADIUS
-    = std::max (ROBOT_HALFLENGTH, ROBOT_HALFWIDTH) * 1.5;
+    = std::max (ROBOT_HALFLENGTH, ROBOT_HALFWIDTH) * 2;
 
 static const float TARGET_ARRIVED_DISTANCE
-    = NEARBY_OBSTACLE_DETECTION_RADIUS * 2; // m
+    = NEARBY_OBSTACLE_DETECTION_RADIUS * 2.5; // m
 
 // Avoidance task
 constexpr int MIN_LIDAR_AVOID_SAMPLES = 2;

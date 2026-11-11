@@ -145,12 +145,12 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     }
 
     /**
-     * Task needs to react to the LIDAR world.
-     * This has already a working functionality where it detects close objects
-     * which would lead to an imminent crash or might be the target itself.
+     * Task needs to react to the LIDAR world. Needs to be fille with content
+     * by its derives classes.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               std::shared_ptr<Robot> robot);
+                               std::shared_ptr<Robot> robot)
+        = 0;
 
     /**
     * Task needs to incorporate new target angle info from the camera.
@@ -354,6 +354,32 @@ class TargetTask : public AbstractTask
         bratlogger.logVariable ("dphi", dphi);
         AbstractTask::onGyroTurn (dphi);
         updateTargeting ();
+    }
+
+    /**
+     * We need to check if we are crashing into an obstacle and to terminate
+     * the task!
+     */
+    void onLIDARworld (std::shared_ptr<b2World> world,
+                       std::shared_ptr<Robot> robot) override
+    {
+        // Do we need to terminate the task?
+        CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
+                                        nearbyMaxObstacleDetectionAngle);
+
+        threatAngle = nearbyBody.detect (world, robot);
+
+        if (threatAngle)
+        {
+            if (terminatedEvent)
+            {
+                bratlogger.log ("Task terminating because of obstacle at: %f",
+                                threatAngle.value ());
+                TerminationMessage tm (TerminationMessage::ObstacleDetected,
+                                       shared_from_this ());
+                terminatedEvent (tm);
+            }
+        }
     }
 
   private:
