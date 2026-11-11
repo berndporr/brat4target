@@ -27,8 +27,7 @@ class Logger
 	 * @param _newFolder folder where files will be dumped (no / at the end)
 	 * @param _filename the filename of the log file
 	 */
-    void start (const std::string _dir = "/tmp",
-                std::string _newFolder = {},
+    void start (const std::string _dir = "/tmp", std::string _newFolder = {},
                 const std::string _filename = dateTime () + ".txt");
 
     void stop ();
@@ -42,6 +41,18 @@ class Logger
 	  * @param ... other parameters
 	  */
     void log (const char *format, ...);
+
+    const char* variableindicator = "<<<VAR";
+
+    void logVariable (const char *variable, int val)
+    {
+        log ("%s\t%d%s", variable, val, variableindicator);
+    }
+
+    void logVariable (const char *variable, float val)
+    {
+        log ("%s\t%f%s", variable, val, variableindicator);
+    }
 
     const std::string get_fileName () const { return fileName; };
 

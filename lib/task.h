@@ -261,7 +261,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 };
 
 /**
- * Task which is doing nothing and just stopping the robot.
+ * Task which is doing nothing and just stopping the robot. But it terminates if a target is detected.
  */
 class StopTask : public AbstractTask
 {
@@ -288,6 +288,29 @@ class StopTask : public AbstractTask
                                    shared_from_this ());
             terminatedEvent (tm);
         }
+    }
+};
+
+/**
+ * Task which is doing nothing and won't terminate.
+ */
+class EndTask : public AbstractTask
+{
+  public:
+    EndTask () : AbstractTask () {}
+    EndTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
+    virtual void onStart () override { setLinearSpeed (0); }
+    virtual void onLIDARworld (std::shared_ptr<b2World> world,
+                               std::shared_ptr<Robot> robot) override
+    {
+    }
+
+    /**
+     * Target is detected and that triggers the termination of the stop task
+     * and then emits a message that we have a target.
+     */
+    virtual void onTargetDetected (float r, float phi, int index = 0) override
+    {
     }
 };
 
@@ -319,13 +342,16 @@ class TargetTask : public AbstractTask
                 terminatedEvent (tm);
             }
         }
+        bratlogger.logVariable ("targetAngle", targetAngle.value ());
         updateTargeting ();
     }
+
     /**
      * Task needs to take into account the new gyro readings
      */
     virtual void onGyroTurn (float dphi) override
     {
+        bratlogger.logVariable ("dphi", dphi);
         AbstractTask::onGyroTurn (dphi);
         updateTargeting ();
     }
@@ -335,7 +361,9 @@ class TargetTask : public AbstractTask
     void updateTargeting ()
     {
         if (targetAngle)
+        {
             setAngularVelocity (targetAngle.value () * targetSteeringGain);
+        }
     }
 };
 

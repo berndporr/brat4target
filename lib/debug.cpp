@@ -36,6 +36,7 @@ void Logger::log (const char *format, ...)
         {
             va_list args;
             va_start (args, format);
+            fprintf(f,"%s\t",dateTime().c_str());
             vfprintf (f, format, args);
             va_end (args);
             fprintf (f, "\n");

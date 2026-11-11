@@ -153,7 +153,7 @@ class BaseConfigurator
 
   private:
     AbstractTask::MotorEvent motorEvent;
-    std::shared_ptr<AbstractTask> currentTask;
+    std::shared_ptr<AbstractTask> currentTask = std::make_shared<StopTask> ();
     float defaultSpeed = 0.5;
 };
 
@@ -173,9 +173,9 @@ class ReactiveConfigurator : public BaseConfigurator
             return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
             bratlogger.log ("ReactiveConfigurator: Obstacle detected.\n");
-            if (tm.taskWhichSentMessage->getThreatAngle())
+            if (tm.taskWhichSentMessage->getThreatAngle ())
             {
-                if (tm.taskWhichSentMessage->getThreatAngle().value () > 0)
+                if (tm.taskWhichSentMessage->getThreatAngle ().value () > 0)
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
                                     "RIGHT b/c obstacle to the left.\n");
@@ -230,10 +230,21 @@ class ReactiveConfigurator : public BaseConfigurator
         return std::make_shared<StopTask> (tm.taskWhichSentMessage);
     }
 
+    void setMaxTasks (int mt) { maxTasks = mt; }
+
   protected:
     virtual void
     onTaskTerminated (AbstractTask::TerminationMessage tm) override
     {
+        if (nTasks > maxTasks)
+        {
+            setCurrentTask (std::make_shared<EndTask> ());
+            bratlogger.log ("Reached max tasks. Stopping!");
+        }
         setCurrentTask (terminationMessage2task (tm));
     }
+
+  private:
+    int maxTasks = 0xfffffff;
+    int nTasks = 1;
 };

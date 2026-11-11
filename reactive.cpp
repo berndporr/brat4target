@@ -14,51 +14,46 @@ int main (int nargs, char **argv)
 
     if (nargs < 2)
     {
-        fprintf (stderr, "%s 0=no motor ctrl, 1=motor ctrl\n", argv[0]);
-        return 1;
+        fprintf (stderr, "%s [number of tasks generated]\n", argv[0]);
+        return -1;
     }
-    bool motorOutput = atoi (argv[1]) > 0;
+    const int nTasks = atoi (argv[1]);
 
-    bratlogger.start("/tmp","reactive");
+    bratlogger.start ("/tmp", "reactive");
 
     C1Lidar lidar;
     TargetLoc targetLoc;
     ReactiveConfigurator configurator;
     ZetaBot zetabot;
     LSM6DSOX lsm6dS0x;
-    lsm6dS0x.setGyroSamplingRate(GyroSettings::GYRO_ODR_12_5);
+    lsm6dS0x.setGyroSamplingRate (GyroSettings::GYRO_ODR_12_5);
     const float gyrofs = 12.5;
 
-    long int nWorld = 0;
-
-    lsm6dS0x.registerCallback (
-        [&] (const LSM6DSOXSample &s) { configurator.onGyroTurn (-s.gz/gyrofs); });
-
-    configurator.registerMotorEvent ([&] (float l, float r) {
-        if (motorOutput)
-        {
-            zetabot.setLeftWheelSpeed (l);
-            zetabot.setRightWheelSpeed (r);
-        }
-        fprintf (stderr, "Motor out: %f,%f\n", l, r);
+    lsm6dS0x.registerCallback ([&] (const LSM6DSOXSample &s) {
+        configurator.onGyroTurn (-s.gz / gyrofs);
     });
 
+    configurator.registerMotorEvent ([&] (float l, float r) {
+        zetabot.setLeftWheelSpeed (l);
+        zetabot.setRightWheelSpeed (r);
+        bratlogger.log ("Motor out: %f,%f\n", l, r);
+    });
+
+    configurator.setMaxTasks (nTasks);
+
     targetLoc.registerDetectionEvent ([&] (const float r, const float phi) {
-        fprintf (stderr, "Detection: %f,%f\n", r, phi);
+        bratlogger.log ("Target detected:%f,%f\n", r, phi);
         configurator.onTargetDetected (r, phi);
     });
 
     WorldClusterBuilder worldBuilder;
+    long int nWorld = 0;
     worldBuilder.registerWorldReadyCallback (
         [&] (std::shared_ptr<b2World> world) {
+            bratlogger.log ("nWorld = %ld", nWorld);
             configurator.onLIDARworld (world);
             char tmp[256];
             sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
-	    bratlogger.log("Saving %s",tmp);
-            worldBuilder.exportWorldToSVG (tmp);
-            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
-	    bratlogger.log("Saving %s",tmp);
-            worldBuilder.bodies_dump (tmp);
             nWorld++;
         });
 
@@ -101,7 +96,7 @@ int main (int nargs, char **argv)
     lsm6dS0x.start ();
 
     // We are starting from the stoptask
-    configurator.setCurrentTask(std::make_shared<StopTask>());
+    configurator.setCurrentTask (std::make_shared<StopTask> ());
 
     printf ("Up and running.\n");
 
@@ -116,7 +111,7 @@ int main (int nargs, char **argv)
     worldBuilder.stop ();
     zetabot.stop ();
 
-    bratlogger.log("END");
+    bratlogger.log ("END");
 
     return 0;
 }
