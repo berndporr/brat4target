@@ -63,9 +63,9 @@ def plot_combined(log_data, variables_to_plot=None):
     for var_name in keys:
         if var_name in log_data:
             plt.plot(
-                log_data[var_name]["timestamps"],
+#                log_data[var_name]["timestamps"],
                 log_data[var_name]["values"],
-                marker=".",
+#                marker=".",
                 label=var_name
             )
 
@@ -76,8 +76,8 @@ def plot_combined(log_data, variables_to_plot=None):
     plt.legend()
 
     # Format x-axis timestamps
-    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%y-%m-%d %H:%M"))
-    plt.gcf().autofmt_xdate()
+#    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%y-%m-%d %H:%M"))
+#    plt.gcf().autofmt_xdate()
 
     plt.tight_layout()
     plt.show()

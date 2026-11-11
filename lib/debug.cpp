@@ -1,8 +1,11 @@
 #include "debug.h"
 #include <box2d/b2_math.h>
 #include <box2d/b2_world.h>
+#include <chrono>
 #include <cstdio>
+#include <iostream>
 #include <opencv2/core/mat.hpp>
+#include <string>
 
 const std::string Logger::dateTime ()
 {
@@ -17,6 +20,24 @@ const std::string Logger::dateTime ()
     char name[256];
     sprintf (name, "%02i%02i%02i_%02i%02i", d, m, y, h, min);
     return std::string (name);
+}
+
+// elapsed time since the start of the program
+std::string Logger::get_elapsed_ms ()
+{
+    // 1. Get the current steady time point
+    auto now = std::chrono::steady_clock::now ();
+
+    // 2. Calculate the difference since the program started
+    auto elapsed = now - program_start;
+
+    // 3. Cast the duration to milliseconds
+    auto millis
+        = std::chrono::duration_cast<std::chrono::milliseconds> (elapsed)
+              .count ();
+
+    // 4. Convert to string
+    return std::to_string (millis);
 }
 
 void Logger::log (const char *format, ...)
@@ -36,7 +57,7 @@ void Logger::log (const char *format, ...)
         {
             va_list args;
             va_start (args, format);
-            fprintf(f,"%s\t",dateTime().c_str());
+            fprintf (f, "%s\t", get_elapsed_ms ().c_str ());
             vfprintf (f, format, args);
             va_end (args);
             fprintf (f, "\n");
@@ -46,7 +67,7 @@ void Logger::log (const char *format, ...)
     catch (std::exception &e)
     {
         f = nullptr;
-        fprintf(stderr,"Logger exeption: %s\n",e.what());
+        fprintf (stderr, "Logger exeption: %s\n", e.what ());
     }
 }
 

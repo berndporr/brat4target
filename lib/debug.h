@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 #include <box2d/b2_body.h>
 #include <box2d/b2_math.h>
+#include <chrono>
 #include <cstddef>
 #include <dirent.h>
 #include <opencv2/core/mat.hpp>
@@ -42,13 +43,16 @@ class Logger
 	  */
     void log (const char *format, ...);
 
-    const char* variableindicator = "<<<VAR";
+    // If we log a variable then we end the line of the logfile with "<<<VAR"
+    const char *variableindicator = "<<<VAR";
 
+    // Logging an integer variable
     void logVariable (const char *variable, int val)
     {
         log ("%s\t%d%s", variable, val, variableindicator);
     }
 
+    // Logging a float variable
     void logVariable (const char *variable, float val)
     {
         log ("%s\t%f%s", variable, val, variableindicator);
@@ -70,8 +74,13 @@ class Logger
     static const std::string dateTime ();
 
   private:
+    // ms since the start of the program
+    std::string get_elapsed_ms ();
     std::string fileName;
     FILE *f = NULL;
+    const std::chrono::time_point<std::chrono::steady_clock> program_start
+        = std::chrono::steady_clock::now ();
 };
 
+// global logger
 inline Logger bratlogger;
