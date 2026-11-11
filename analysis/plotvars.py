@@ -50,6 +50,41 @@ def parse_logfile(filepath):
         
     return mapped_arrays
 
+
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+def plot_combined(log_data, variables_to_plot=None):
+    plt.figure(figsize=(10, 5))
+
+    # Plot all variables unless a specific list is provided
+    keys = variables_to_plot if variables_to_plot else log_data.keys()
+
+    for var_name in keys:
+        if var_name in log_data:
+            plt.plot(
+                log_data[var_name]["timestamps"],
+                log_data[var_name]["values"],
+                marker=".",
+                label=var_name
+            )
+
+    plt.title("Log Variables Over Time")
+    plt.xlabel("Time")
+    plt.ylabel("Value")
+    plt.grid(True, linestyle="--", alpha=0.6)
+    plt.legend()
+
+    # Format x-axis timestamps
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%y-%m-%d %H:%M"))
+    plt.gcf().autofmt_xdate()
+
+    plt.tight_layout()
+    plt.show()
+
+# --- Usage ---
+
+
 # --- Example Usage ---
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -66,3 +101,4 @@ if __name__ == "__main__":
         print(f"Extracted {len(angles)} entries for targetAngle:")
         print("Timestamps:", times)
         print("Values:", angles)
+        plot_combined(log_data, variables_to_plot=["targetAngle", "dphi"])
