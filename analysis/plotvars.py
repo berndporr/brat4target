@@ -1,6 +1,7 @@
 import numpy as np
 from collections import defaultdict
 from datetime import datetime
+import sys
 
 def parse_logfile(filepath):
     # Store lists of timestamps and values mapped by variable name
@@ -51,7 +52,11 @@ def parse_logfile(filepath):
 
 # --- Example Usage ---
 if __name__ == "__main__":
-    log_data = parse_logfile("your_logfile.log")
+    if len(sys.argv) < 2:
+        print("Usage: {} logfile.txt".format(sys.argv[0]))
+        exit(1)
+        
+    log_data = parse_logfile(sys.argv[1])
     
     # Access a specific variable's arrays
     if "targetAngle" in log_data:
