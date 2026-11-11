@@ -6,6 +6,43 @@
 #include <box2d/b2_math.h>
 #include <box2d/box2d.h>
 
+#include <box2d/box2d.h>
+#include <cmath>
+
+float getFixtureArea(const b2Fixture* fixture) {
+    if (!fixture) return 0.0f;
+
+    const b2Shape* shape = fixture->GetShape();
+    
+    switch (shape->GetType()) {
+        case b2Shape::e_circle: {
+            const b2CircleShape* circle = static_cast<const b2CircleShape*>(shape);
+            return b2_pi * circle->m_radius * circle->m_radius;
+        }
+        
+        case b2Shape::e_polygon: {
+            const b2PolygonShape* poly = static_cast<const b2PolygonShape*>(shape);
+            float area = 0.0f;
+            int32 count = poly->m_count;
+            
+            // Shoelace formula
+            for (int32 i = 0; i < count; ++i) {
+                b2Vec2 p1 = poly->m_vertices[i];
+                b2Vec2 p2 = poly->m_vertices[(i + 1) % count];
+                area += b2Cross(p1, p2); // p1.x * p2.y - p1.y * p2.x
+            }
+            
+            return std::abs(area) * 0.5f;
+        }
+        
+        case b2Shape::e_edge:
+        case b2Shape::e_chain:
+        default:
+            return 0.0f;
+    }
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 void AbstractTask::onTargetDetected (float r, float phi, int)
@@ -54,8 +91,9 @@ AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
     if (nThreats > 0)
     {
         threatAngle = avgThreatAngle / nThreats;
-        bratlogger.log ("Detected more than two threats at: %f",
-                        threatAngle.value ());
+        bratlogger.log ("Detected threats at: %f", threatAngle.value ());
+        bratlogger.logVariable("threatAngle",threatAngle.value());
+        bratlogger.logVariable("nThreats",nThreats);
     }
     return threatAngle;
 }
@@ -78,8 +116,8 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     float distance = delta.Length ();
     bratlogger.log (
         "AbstractTask::CloseObjectDetector::ReportFixture: Distance = "
-        "%f, bodyflag=%d",
-        distance, (int)(body->GetUserData ().pointer));
+        "%f, bodyflag=%d, area=%f",
+        distance, (int)(body->GetUserData ().pointer), getFixtureArea(fixture));
 
     // beyond detection radius
     if (distance > maxDetectionRadius)
@@ -205,8 +243,9 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
 
     if (threatsDetected)
     {
-        float escapeAngularVel
-            = RELATIVE_AVOID_STEERING_GAIN * getMaxAngularVelocity () * threatsDetected.value();
+        float escapeAngularVel = RELATIVE_AVOID_STEERING_GAIN
+                                 * getMaxAngularVelocity ()
+                                 * threatsDetected.value ();
 
         if (RIGHT == avoidDirection)
         {

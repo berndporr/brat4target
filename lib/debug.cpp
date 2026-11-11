@@ -44,15 +44,6 @@ void Logger::log (const char *format, ...)
 {
     try
     {
-        if (DEBUG)
-        {
-            va_list args;
-            va_start (args, format);
-            vfprintf (stderr, format, args);
-            va_end (args);
-            fprintf (stderr, "\n");
-            fflush (stderr);
-        }
         if (f)
         {
             va_list args;
