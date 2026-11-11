@@ -14,8 +14,6 @@ CoordinateContainer loadLIDARdata (const char *filename)
     float x, y, q;
     while (fscanf (f, "%f\t%f\t%f\n", &x, &y, &q) > 1)
     {
-//	x += 0.1;
-//	y -= 0.05;
         cc.push_back ({ x, y });
     };
     fclose (f);
@@ -37,10 +35,9 @@ void avoid_obstacle_drive_to_arget ()
     BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
     std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
-    task->registerMotorEvent (
-        [&] (const float l, const float r) {
-            printf ("Motor event: %f,%f\n", l, r);
-        });
+    task->registerMotorEvent ([&] (const float l, const float r) {
+        printf ("Motor event: %f,%f\n", l, r);
+    });
     for (int i = 0; i < 4; i++)
     {
         char tmp[256];

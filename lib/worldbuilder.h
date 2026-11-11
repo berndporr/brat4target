@@ -1,5 +1,6 @@
 #pragma once
 #include "const.h"
+#include "lib/debug.h"
 #include <algorithm>
 #include <atomic>
 #include <box2d/b2_math.h>
@@ -410,7 +411,7 @@ class WorldBuilder
         nPastWorlds++;
         if (isWorldBuilding)
         {
-            fprintf (stderr, "Still worldbuilding.\n");
+            bratlogger.log ("Async World building: dropping LIDAR scan. Still worldbuilding.");
             return;
         }
         if (asyncThread.joinable ())

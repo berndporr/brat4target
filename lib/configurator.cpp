@@ -16,24 +16,15 @@ void BaseConfigurator::TaskSimulator::checkTarget (
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
     float relativeTargetAngle = b2Atan2 (localDelta.y, localDelta.x);
-    if (DEBUG)
-    {
-        fprintf (stderr, "Relative target angle: %f\n", relativeTargetAngle);
-    }
+    bratlogger.log ("SIM: Relative target angle: %f", relativeTargetAngle);
     if (fabs (relativeTargetAngle) > cameraAngle)
     {
-        if (DEBUG)
-        {
-            fprintf (stderr, "SIM: target out of sight: %f > %f\n",
-                     relativeTargetAngle, cameraAngle);
-        }
+        bratlogger.log ("SIM: target out of sight: %f > %f",
+                        relativeTargetAngle, cameraAngle);
         return;
     }
-    if (DEBUG)
-    {
-        fprintf (stderr, "SIM: Target det at r=%f, phi=%f\n",
-                 localDelta.Length (), relativeTargetAngle);
-    }
+    bratlogger.log("SIM: Target det at r=%f, phi=%f\n", localDelta.Length (),
+             relativeTargetAngle);
     task->onTargetDetected (localDelta.Length (), relativeTargetAngle);
 }
 
@@ -47,7 +38,8 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
     task->registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
         running = false;
         simResult = tm;
-        bratlogger.log ("BaseConfigurator::TaskSimulator::run Simulation terminating.");
+        bratlogger.log (
+            "BaseConfigurator::TaskSimulator::run Simulation terminating.");
     });
     if (plan_file)
     {
@@ -61,8 +53,8 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
         task->onLIDARworld (world, robot);
         task->onGyroTurn (task->getangularVelocity () / HZ);
         checkTarget (task);
-        instVelocity.x = task->getLinearSpeed() * cos (theta);
-        instVelocity.y = task->getLinearSpeed() * sin (theta);
+        instVelocity.x = task->getLinearSpeed () * cos (theta);
+        instVelocity.y = task->getLinearSpeed () * sin (theta);
         robot->body ()->SetLinearVelocity (instVelocity);
         robot->body ()->SetAngularVelocity (task->getangularVelocity ());
         robot->body ()->SetTransform (robot->body ()->GetPosition (), theta);

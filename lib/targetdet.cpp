@@ -1,4 +1,5 @@
 #include "targetdet.h"
+#include "lib/debug.h"
 
 TargetDet::~TargetDet ()
 {
@@ -13,7 +14,7 @@ const std::vector<cv::Point2f> TargetDet::detectSync (const cv::Mat img)
     std::vector<cv::Point2f> points;
     if (img.empty ())
         {
-            fprintf (stderr, "TargetDetSync: image empty\n");
+            bratlogger.log("TargetDetSync: image empty.");
             return points;
         }
     bool r = false;
@@ -30,7 +31,7 @@ void TargetDet::detectAsync (const cv::Mat img)
 {
     if (img.empty ())
         {
-            fprintf (stderr, "TargetDetASync: image empty\n");
+            bratlogger.log("TargetDetASync: image empty.");
             return;
         }
     if (isDetecting)
