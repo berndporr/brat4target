@@ -5,7 +5,7 @@
 #include <memory>
 
 constexpr float target_angle = 0.44;
-constexpr float target_distance = 0.93;
+constexpr float target_distance = 1;
 
 CoordinateContainer loadLIDARdata (const char *filename)
 {
@@ -14,6 +14,8 @@ CoordinateContainer loadLIDARdata (const char *filename)
     float x, y, q;
     while (fscanf (f, "%f\t%f\t%f\n", &x, &y, &q) > 1)
     {
+//	x += 0.1;
+//	y -= 0.05;
         cc.push_back ({ x, y });
     };
     fclose (f);
