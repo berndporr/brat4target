@@ -52,11 +52,11 @@ int main (int nargs, char **argv)
         [&] (std::shared_ptr<b2World> world) {
             bratlogger.log ("nWorld = %ld", nWorld);
             configurator.onLIDARworld (world);
-            char tmp[256];
-            sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
-            worldBuilder.exportWorldToSVG (tmp);
-            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
-            worldBuilder.bodies_dump (tmp);
+//            char tmp[256];
+//            sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
+//            worldBuilder.exportWorldToSVG (tmp);
+//            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
+//            worldBuilder.bodies_dump (tmp);
             nWorld++;
         });
 
