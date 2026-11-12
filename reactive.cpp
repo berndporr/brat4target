@@ -36,13 +36,13 @@ int main (int nargs, char **argv)
     configurator.registerMotorEvent ([&] (float l, float r) {
         zetabot.setLeftWheelSpeed (l);
         zetabot.setRightWheelSpeed (r);
-        bratlogger.log ("Motor out: %f,%f\n", l, r);
+        bratlogger.log ("Motor out: %f,%f", l, r);
     });
 
     configurator.setMaxTasks (nTasks);
 
     targetLoc.registerDetectionEvent ([&] (const float r, const float phi) {
-        bratlogger.log ("Target detected:%f,%f\n", r, phi);
+        bratlogger.log ("Target detected:%f,%f", r, phi);
         configurator.onTargetDetected (r, phi);
     });
 

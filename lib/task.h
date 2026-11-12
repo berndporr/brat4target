@@ -119,7 +119,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
             r = contServoSpeed + contServoSpeed * servoAngularVelocity;
         }
         bratlogger.log ("emitTwoWheeledEvent: l=%f, r=%f, linearSpeed=%f, "
-                        "angularVel=%f, maxAngVel=%f\n",
+                        "angularVel=%f, maxAngVel=%f",
                         l, r, linearSpeed, angularVelocity, maxAngularVel);
         motorEvent (l, r);
     }
