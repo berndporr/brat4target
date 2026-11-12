@@ -54,6 +54,9 @@ int main (int nargs, char **argv)
             configurator.onLIDARworld (world);
             char tmp[256];
             sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
+            worldBuilder.exportWorldToSVG (tmp);
+            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
+            worldBuilder.bodies_dump (tmp);
             nWorld++;
         });
 
