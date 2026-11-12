@@ -103,8 +103,8 @@ void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
 int main (int, char **)
 {
     drive_to_target ();
-    //    avoid_obstacle (AvoidTask::LEFT);
-    //    avoid_obstacle (AvoidTask::RIGHT);
-    //    avoid_obstacle_drive_to_arget (AvoidTask::LEFT);
-    //    avoid_obstacle_drive_to_arget (AvoidTask::RIGHT);
+    avoid_obstacle (AvoidTask::LEFT);
+    avoid_obstacle (AvoidTask::RIGHT);
+    avoid_obstacle_drive_to_arget (AvoidTask::LEFT);
+    avoid_obstacle_drive_to_arget (AvoidTask::RIGHT);
 }
