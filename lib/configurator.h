@@ -44,7 +44,10 @@ class BaseConfigurator
     virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
     {
         if (currentTask)
+        {
             currentTask->onTargetDetected (r, phi, targetIndex);
+            bratlogger.logVariable ("onTargetDetected", phi);
+        }
     }
 
     /**
@@ -54,7 +57,10 @@ class BaseConfigurator
     virtual void onGyroTurn (float dphi)
     {
         if (currentTask)
+        {
+            bratlogger.logVariable ("dphi", dphi);
             currentTask->onGyroTurn (dphi);
+        }
     }
 
     /**

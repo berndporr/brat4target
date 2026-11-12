@@ -342,7 +342,6 @@ class TargetTask : public AbstractTask
                 terminatedEvent (tm);
             }
         }
-        bratlogger.logVariable ("targetAngle", targetAngle.value ());
         updateTargeting ();
     }
 
@@ -351,7 +350,6 @@ class TargetTask : public AbstractTask
      */
     virtual void onGyroTurn (float dphi) override
     {
-        bratlogger.logVariable ("dphi", dphi);
         AbstractTask::onGyroTurn (dphi);
         updateTargeting ();
     }
@@ -389,6 +387,7 @@ class TargetTask : public AbstractTask
         if (targetAngle)
         {
             setAngularVelocity (targetAngle.value () * targetSteeringGain);
+            bratlogger.logVariable("angularVelocity",angularVelocity);
         }
     }
 };
