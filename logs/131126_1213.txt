@@ -1,0 +1,1760 @@
+1008	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.000000, maxAngVel=0.000000
+1008	Motor out: 0.000000,0.000000
+1044	dphi	0.015869<<<VAR
+1123	dphi	0.015869<<<VAR
+1201	dphi	0.015869<<<VAR
+1280	dphi	0.015869<<<VAR
+1298	Target detected:1.252174,0.312265
+1298	Reactive: onTaskTerminated
+1298	ReactiveConfigurator: Target detected. We are targeting.
+
+1298	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+1298	Motor out: 0.500000,0.500000
+1298	onTargetDetected	0.312265<<<VAR
+1359	dphi	0.015564<<<VAR
+1359	onGyroTurn: dphi=0.015564
+1359	Updating target angle: 0.312265.
+1359	To target angle: 0.296701.
+1359	targetAngle	0.296701<<<VAR
+1359	Setting angular vel to: 0.296701
+
+1359	emitTwoWheeledEvent: l=0.370193, r=0.629807, linearSpeed=0.080000, angularVel=0.296701, maxAngVel=1.142857
+1359	Motor out: 0.370193,0.629807
+1359	angularVelocity	0.296701<<<VAR
+1398	Target detected:1.252174,0.312265
+1398	Setting angular vel to: 0.312265
+
+1398	emitTwoWheeledEvent: l=0.363384, r=0.636616, linearSpeed=0.080000, angularVel=0.312265, maxAngVel=1.142857
+1398	Motor out: 0.363384,0.636616
+1398	angularVelocity	0.312265<<<VAR
+1398	onTargetDetected	0.312265<<<VAR
+1437	dphi	0.019226<<<VAR
+1437	onGyroTurn: dphi=0.019226
+1437	Updating target angle: 0.312265.
+1437	To target angle: 0.293039.
+1437	targetAngle	0.293039<<<VAR
+1437	Setting angular vel to: 0.293039
+
+1437	emitTwoWheeledEvent: l=0.371795, r=0.628205, linearSpeed=0.080000, angularVel=0.293039, maxAngVel=1.142857
+1437	Motor out: 0.371795,0.628205
+1437	angularVelocity	0.293039<<<VAR
+1498	Target detected:1.233828,0.311831
+1498	Setting angular vel to: 0.311831
+
+1498	emitTwoWheeledEvent: l=0.363574, r=0.636426, linearSpeed=0.080000, angularVel=0.311831, maxAngVel=1.142857
+1498	Motor out: 0.363574,0.636426
+1498	angularVelocity	0.311831<<<VAR
+1498	onTargetDetected	0.311831<<<VAR
+1516	dphi	0.036926<<<VAR
+1516	onGyroTurn: dphi=0.036926
+1516	Updating target angle: 0.311831.
+1516	To target angle: 0.274905.
+1516	targetAngle	0.274905<<<VAR
+1516	Setting angular vel to: 0.274905
+
+1516	emitTwoWheeledEvent: l=0.379729, r=0.620271, linearSpeed=0.080000, angularVel=0.274905, maxAngVel=1.142857
+1516	Motor out: 0.379729,0.620271
+1516	angularVelocity	0.274905<<<VAR
+1594	dphi	0.039368<<<VAR
+1594	onGyroTurn: dphi=0.039368
+1594	Updating target angle: 0.274905.
+1594	To target angle: 0.235537.
+1594	targetAngle	0.235537<<<VAR
+1594	Setting angular vel to: 0.235537
+
+1594	emitTwoWheeledEvent: l=0.396952, r=0.603048, linearSpeed=0.080000, angularVel=0.235537, maxAngVel=1.142857
+1595	Motor out: 0.396952,0.603048
+1595	angularVelocity	0.235537<<<VAR
+1605	Targetloc: Contour discarded.
+1673	dphi	0.033264<<<VAR
+1673	onGyroTurn: dphi=0.033264
+1673	Updating target angle: 0.235537.
+1673	To target angle: 0.202273.
+1673	targetAngle	0.202273<<<VAR
+1673	Setting angular vel to: 0.202273
+
+1673	emitTwoWheeledEvent: l=0.411505, r=0.588495, linearSpeed=0.080000, angularVel=0.202273, maxAngVel=1.142857
+1673	Motor out: 0.411505,0.588495
+1673	angularVelocity	0.202273<<<VAR
+1698	Targetloc: Contour discarded.
+1752	dphi	0.028687<<<VAR
+1752	onGyroTurn: dphi=0.028687
+1752	Updating target angle: 0.202273.
+1752	To target angle: 0.173587.
+1752	targetAngle	0.173587<<<VAR
+1752	Setting angular vel to: 0.173587
+
+1752	emitTwoWheeledEvent: l=0.424056, r=0.575944, linearSpeed=0.080000, angularVel=0.173587, maxAngVel=1.142857
+1752	Motor out: 0.424056,0.575944
+1752	angularVelocity	0.173587<<<VAR
+1798	Targetloc: Contour discarded.
+1830	dphi	0.025024<<<VAR
+1830	onGyroTurn: dphi=0.025024
+1830	Updating target angle: 0.173587.
+1830	To target angle: 0.148562.
+1830	targetAngle	0.148562<<<VAR
+1830	Setting angular vel to: 0.148562
+
+1830	emitTwoWheeledEvent: l=0.435004, r=0.564996, linearSpeed=0.080000, angularVel=0.148562, maxAngVel=1.142857
+1830	Motor out: 0.435004,0.564996
+1830	angularVelocity	0.148562<<<VAR
+1896	Target detected:1.150431,0.267020
+1896	Setting angular vel to: 0.267020
+
+1896	emitTwoWheeledEvent: l=0.383179, r=0.616821, linearSpeed=0.080000, angularVel=0.267020, maxAngVel=1.142857
+1896	Motor out: 0.383179,0.616821
+1896	angularVelocity	0.267020<<<VAR
+1896	onTargetDetected	0.267020<<<VAR
+1909	dphi	0.029297<<<VAR
+1909	onGyroTurn: dphi=0.029297
+1909	Updating target angle: 0.267020.
+1909	To target angle: 0.237723.
+1909	targetAngle	0.237723<<<VAR
+1909	Setting angular vel to: 0.237723
+
+1909	emitTwoWheeledEvent: l=0.395996, r=0.604004, linearSpeed=0.080000, angularVel=0.237723, maxAngVel=1.142857
+1909	Motor out: 0.395996,0.604004
+1909	angularVelocity	0.237723<<<VAR
+1988	dphi	0.024719<<<VAR
+1988	onGyroTurn: dphi=0.024719
+1988	Updating target angle: 0.237723.
+1988	To target angle: 0.213004.
+1988	targetAngle	0.213004<<<VAR
+1988	Setting angular vel to: 0.213004
+
+1988	emitTwoWheeledEvent: l=0.406811, r=0.593189, linearSpeed=0.080000, angularVel=0.213004, maxAngVel=1.142857
+1988	Motor out: 0.406811,0.593189
+1988	angularVelocity	0.213004<<<VAR
+1996	Targetloc: Contour discarded.
+2066	dphi	0.028381<<<VAR
+2066	onGyroTurn: dphi=0.028381
+2066	Updating target angle: 0.213004.
+2066	To target angle: 0.184623.
+2066	targetAngle	0.184623<<<VAR
+2066	Setting angular vel to: 0.184623
+
+2066	emitTwoWheeledEvent: l=0.419228, r=0.580772, linearSpeed=0.080000, angularVel=0.184623, maxAngVel=1.142857
+2066	Motor out: 0.419228,0.580772
+2066	angularVelocity	0.184623<<<VAR
+2097	Targetloc: Contour discarded.
+2145	dphi	0.024109<<<VAR
+2145	onGyroTurn: dphi=0.024109
+2145	Updating target angle: 0.184623.
+2145	To target angle: 0.160514.
+2145	targetAngle	0.160514<<<VAR
+2145	Setting angular vel to: 0.160514
+
+2145	emitTwoWheeledEvent: l=0.429775, r=0.570225, linearSpeed=0.080000, angularVel=0.160514, maxAngVel=1.142857
+2145	Motor out: 0.429775,0.570225
+2145	angularVelocity	0.160514<<<VAR
+2198	Target detected:1.151701,0.246319
+2198	Setting angular vel to: 0.246319
+
+2198	emitTwoWheeledEvent: l=0.392235, r=0.607765, linearSpeed=0.080000, angularVel=0.246319, maxAngVel=1.142857
+2198	Motor out: 0.392235,0.607765
+2198	angularVelocity	0.246319<<<VAR
+2198	onTargetDetected	0.246319<<<VAR
+2224	dphi	0.023193<<<VAR
+2224	onGyroTurn: dphi=0.023193
+2224	Updating target angle: 0.246319.
+2224	To target angle: 0.223126.
+2224	targetAngle	0.223126<<<VAR
+2224	Setting angular vel to: 0.223126
+
+2224	emitTwoWheeledEvent: l=0.402383, r=0.597617, linearSpeed=0.080000, angularVel=0.223126, maxAngVel=1.142857
+2224	Motor out: 0.402383,0.597617
+2224	angularVelocity	0.223126<<<VAR
+2297	Target detected:1.121544,0.242988
+2297	Setting angular vel to: 0.242988
+
+2297	emitTwoWheeledEvent: l=0.393693, r=0.606307, linearSpeed=0.080000, angularVel=0.242988, maxAngVel=1.142857
+2297	Motor out: 0.393693,0.606307
+2297	angularVelocity	0.242988<<<VAR
+2297	onTargetDetected	0.242988<<<VAR
+2302	dphi	0.025635<<<VAR
+2302	onGyroTurn: dphi=0.025635
+2302	Updating target angle: 0.242988.
+2302	To target angle: 0.217353.
+2302	targetAngle	0.217353<<<VAR
+2302	Setting angular vel to: 0.217353
+
+2302	emitTwoWheeledEvent: l=0.404908, r=0.595092, linearSpeed=0.080000, angularVel=0.217353, maxAngVel=1.142857
+2302	Motor out: 0.404908,0.595092
+2302	angularVelocity	0.217353<<<VAR
+2381	dphi	0.032959<<<VAR
+2381	onGyroTurn: dphi=0.032959
+2381	Updating target angle: 0.217353.
+2381	To target angle: 0.184395.
+2381	targetAngle	0.184395<<<VAR
+2381	Setting angular vel to: 0.184395
+
+2381	emitTwoWheeledEvent: l=0.419327, r=0.580673, linearSpeed=0.080000, angularVel=0.184395, maxAngVel=1.142857
+2381	Motor out: 0.419327,0.580673
+2381	angularVelocity	0.184395<<<VAR
+2396	Targetloc: Contour discarded.
+2460	dphi	0.029602<<<VAR
+2460	onGyroTurn: dphi=0.029602
+2460	Updating target angle: 0.184395.
+2460	To target angle: 0.154792.
+2460	targetAngle	0.154792<<<VAR
+2460	Setting angular vel to: 0.154792
+
+2460	emitTwoWheeledEvent: l=0.432278, r=0.567722, linearSpeed=0.080000, angularVel=0.154792, maxAngVel=1.142857
+2460	Motor out: 0.432278,0.567722
+2460	angularVelocity	0.154792<<<VAR
+2496	Targetloc: Contour discarded.
+2538	dphi	0.030212<<<VAR
+2538	onGyroTurn: dphi=0.030212
+2538	Updating target angle: 0.154792.
+2538	To target angle: 0.124580.
+2538	targetAngle	0.124580<<<VAR
+2538	Setting angular vel to: 0.124580
+
+2538	emitTwoWheeledEvent: l=0.445496, r=0.554504, linearSpeed=0.080000, angularVel=0.124580, maxAngVel=1.142857
+2538	Motor out: 0.445496,0.554504
+2538	angularVelocity	0.124580<<<VAR
+2596	Targetloc: Contour discarded.
+2617	dphi	0.024109<<<VAR
+2617	onGyroTurn: dphi=0.024109
+2617	Updating target angle: 0.124580.
+2617	To target angle: 0.100471.
+2617	targetAngle	0.100471<<<VAR
+2617	Setting angular vel to: 0.100471
+
+2617	emitTwoWheeledEvent: l=0.456044, r=0.543956, linearSpeed=0.080000, angularVel=0.100471, maxAngVel=1.142857
+2617	Motor out: 0.456044,0.543956
+2617	angularVelocity	0.100471<<<VAR
+2695	dphi	0.015259<<<VAR
+2695	onGyroTurn: dphi=0.015259
+2695	Updating target angle: 0.100471.
+2695	To target angle: 0.085212.
+2695	targetAngle	0.085212<<<VAR
+2695	Setting angular vel to: 0.085212
+
+2695	emitTwoWheeledEvent: l=0.462720, r=0.537280, linearSpeed=0.080000, angularVel=0.085212, maxAngVel=1.142857
+2696	Motor out: 0.462720,0.537280
+2696	angularVelocity	0.085212<<<VAR
+2697	Target detected:1.089992,0.210499
+2697	Setting angular vel to: 0.210499
+
+2697	emitTwoWheeledEvent: l=0.407907, r=0.592093, linearSpeed=0.080000, angularVel=0.210499, maxAngVel=1.142857
+2697	Motor out: 0.407907,0.592093
+2697	angularVelocity	0.210499<<<VAR
+2697	onTargetDetected	0.210499<<<VAR
+2774	dphi	0.015259<<<VAR
+2774	onGyroTurn: dphi=0.015259
+2774	Updating target angle: 0.210499.
+2774	To target angle: 0.195241.
+2774	targetAngle	0.195241<<<VAR
+2774	Setting angular vel to: 0.195241
+
+2774	emitTwoWheeledEvent: l=0.414582, r=0.585418, linearSpeed=0.080000, angularVel=0.195241, maxAngVel=1.142857
+2774	Motor out: 0.414582,0.585418
+2774	angularVelocity	0.195241<<<VAR
+2796	Target detected:1.079147,0.213923
+2796	Setting angular vel to: 0.213923
+
+2796	emitTwoWheeledEvent: l=0.406409, r=0.593591, linearSpeed=0.080000, angularVel=0.213923, maxAngVel=1.142857
+2796	Motor out: 0.406409,0.593591
+2796	angularVelocity	0.213923<<<VAR
+2796	onTargetDetected	0.213923<<<VAR
+2853	dphi	0.024719<<<VAR
+2853	onGyroTurn: dphi=0.024719
+2853	Updating target angle: 0.213923.
+2853	To target angle: 0.189204.
+2853	targetAngle	0.189204<<<VAR
+2853	Setting angular vel to: 0.189204
+
+2853	emitTwoWheeledEvent: l=0.417223, r=0.582777, linearSpeed=0.080000, angularVel=0.189204, maxAngVel=1.142857
+2853	Motor out: 0.417223,0.582777
+2853	angularVelocity	0.189204<<<VAR
+2896	Target detected:1.066438,0.210779
+2896	Setting angular vel to: 0.210779
+
+2896	emitTwoWheeledEvent: l=0.407784, r=0.592216, linearSpeed=0.080000, angularVel=0.210779, maxAngVel=1.142857
+2896	Motor out: 0.407784,0.592216
+2896	angularVelocity	0.210779<<<VAR
+2896	onTargetDetected	0.210779<<<VAR
+2931	dphi	0.027466<<<VAR
+2931	onGyroTurn: dphi=0.027466
+2931	Updating target angle: 0.210779.
+2931	To target angle: 0.183313.
+2931	targetAngle	0.183313<<<VAR
+2931	Setting angular vel to: 0.183313
+
+2931	emitTwoWheeledEvent: l=0.419800, r=0.580200, linearSpeed=0.080000, angularVel=0.183313, maxAngVel=1.142857
+2931	Motor out: 0.419800,0.580200
+2931	angularVelocity	0.183313<<<VAR
+2996	Targetloc: Contour discarded.
+3010	dphi	0.022278<<<VAR
+3010	onGyroTurn: dphi=0.022278
+3010	Updating target angle: 0.183313.
+3010	To target angle: 0.161035.
+3010	targetAngle	0.161035<<<VAR
+3010	Setting angular vel to: 0.161035
+
+3010	emitTwoWheeledEvent: l=0.429547, r=0.570453, linearSpeed=0.080000, angularVel=0.161035, maxAngVel=1.142857
+3010	Motor out: 0.429547,0.570453
+3010	angularVelocity	0.161035<<<VAR
+3089	dphi	0.028992<<<VAR
+3089	onGyroTurn: dphi=0.028992
+3089	Updating target angle: 0.161035.
+3089	To target angle: 0.132044.
+3089	targetAngle	0.132044<<<VAR
+3089	Setting angular vel to: 0.132044
+
+3089	emitTwoWheeledEvent: l=0.442231, r=0.557769, linearSpeed=0.080000, angularVel=0.132044, maxAngVel=1.142857
+3089	Motor out: 0.442231,0.557769
+3089	angularVelocity	0.132044<<<VAR
+3096	Target detected:1.027521,0.197889
+3096	Setting angular vel to: 0.197889
+
+3096	emitTwoWheeledEvent: l=0.413423, r=0.586577, linearSpeed=0.080000, angularVel=0.197889, maxAngVel=1.142857
+3096	Motor out: 0.413423,0.586577
+3096	angularVelocity	0.197889<<<VAR
+3096	onTargetDetected	0.197889<<<VAR
+3110	nWorld = 0
+3110	Running: AbstractTask::CloseObjectDetector::detect.
+3110	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3167	dphi	0.033264<<<VAR
+3167	onGyroTurn: dphi=0.033264
+3167	Updating target angle: 0.197889.
+3167	To target angle: 0.164625.
+3167	targetAngle	0.164625<<<VAR
+3167	Setting angular vel to: 0.164625
+
+3167	emitTwoWheeledEvent: l=0.427977, r=0.572024, linearSpeed=0.080000, angularVel=0.164625, maxAngVel=1.142857
+3167	Motor out: 0.427977,0.572024
+3167	angularVelocity	0.164625<<<VAR
+3181	nWorld = 1
+3181	Running: AbstractTask::CloseObjectDetector::detect.
+3181	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3199	Targetloc: Contour discarded.
+3246	dphi	0.028381<<<VAR
+3246	onGyroTurn: dphi=0.028381
+3246	Updating target angle: 0.164625.
+3246	To target angle: 0.136244.
+3246	targetAngle	0.136244<<<VAR
+3246	Setting angular vel to: 0.136244
+
+3246	emitTwoWheeledEvent: l=0.440393, r=0.559607, linearSpeed=0.080000, angularVel=0.136244, maxAngVel=1.142857
+3246	Motor out: 0.440393,0.559607
+3246	angularVelocity	0.136244<<<VAR
+3259	nWorld = 2
+3259	Running: AbstractTask::CloseObjectDetector::detect.
+3259	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3297	Targetloc: Contour discarded.
+3325	dphi	0.024719<<<VAR
+3325	onGyroTurn: dphi=0.024719
+3325	Updating target angle: 0.136244.
+3325	To target angle: 0.111525.
+3325	targetAngle	0.111525<<<VAR
+3325	Setting angular vel to: 0.111525
+
+3325	emitTwoWheeledEvent: l=0.451208, r=0.548792, linearSpeed=0.080000, angularVel=0.111525, maxAngVel=1.142857
+3325	Motor out: 0.451208,0.548792
+3325	angularVelocity	0.111525<<<VAR
+3330	nWorld = 3
+3330	Running: AbstractTask::CloseObjectDetector::detect.
+3330	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3397	Target detected:1.003673,0.170561
+3397	Setting angular vel to: 0.170561
+
+3397	emitTwoWheeledEvent: l=0.425380, r=0.574620, linearSpeed=0.080000, angularVel=0.170561, maxAngVel=1.142857
+3397	Motor out: 0.425380,0.574620
+3397	angularVelocity	0.170561<<<VAR
+3397	onTargetDetected	0.170561<<<VAR
+3401	nWorld = 4
+3401	Running: AbstractTask::CloseObjectDetector::detect.
+3401	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3403	dphi	0.019531<<<VAR
+3403	onGyroTurn: dphi=0.019531
+3403	Updating target angle: 0.170561.
+3403	To target angle: 0.151030.
+3403	targetAngle	0.151030<<<VAR
+3403	Setting angular vel to: 0.151030
+
+3403	emitTwoWheeledEvent: l=0.433925, r=0.566075, linearSpeed=0.080000, angularVel=0.151030, maxAngVel=1.142857
+3403	Motor out: 0.433925,0.566075
+3403	angularVelocity	0.151030<<<VAR
+3471	nWorld = 5
+3471	Running: AbstractTask::CloseObjectDetector::detect.
+3471	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3482	dphi	0.022888<<<VAR
+3482	onGyroTurn: dphi=0.022888
+3482	Updating target angle: 0.151030.
+3482	To target angle: 0.128141.
+3482	targetAngle	0.128141<<<VAR
+3482	Setting angular vel to: 0.128141
+
+3482	emitTwoWheeledEvent: l=0.443938, r=0.556062, linearSpeed=0.080000, angularVel=0.128141, maxAngVel=1.142857
+3482	Motor out: 0.443938,0.556062
+3482	angularVelocity	0.128141<<<VAR
+3496	Target detected:0.980798,0.167822
+3496	Setting angular vel to: 0.167822
+
+3496	emitTwoWheeledEvent: l=0.426578, r=0.573422, linearSpeed=0.080000, angularVel=0.167822, maxAngVel=1.142857
+3497	Motor out: 0.426578,0.573422
+3497	angularVelocity	0.167822<<<VAR
+3497	onTargetDetected	0.167822<<<VAR
+3542	nWorld = 6
+3542	Running: AbstractTask::CloseObjectDetector::detect.
+3542	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3561	dphi	0.021362<<<VAR
+3561	onGyroTurn: dphi=0.021362
+3561	Updating target angle: 0.167822.
+3561	To target angle: 0.146460.
+3561	targetAngle	0.146460<<<VAR
+3561	Setting angular vel to: 0.146460
+
+3561	emitTwoWheeledEvent: l=0.435924, r=0.564076, linearSpeed=0.080000, angularVel=0.146460, maxAngVel=1.142857
+3561	Motor out: 0.435924,0.564076
+3561	angularVelocity	0.146460<<<VAR
+3601	Target detected:0.991651,0.164370
+3601	Setting angular vel to: 0.164370
+
+3601	emitTwoWheeledEvent: l=0.428088, r=0.571912, linearSpeed=0.080000, angularVel=0.164370, maxAngVel=1.142857
+3601	Motor out: 0.428088,0.571912
+3601	angularVelocity	0.164370<<<VAR
+3601	onTargetDetected	0.164370<<<VAR
+3621	nWorld = 7
+3621	Running: AbstractTask::CloseObjectDetector::detect.
+3621	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3639	dphi	0.024109<<<VAR
+3639	onGyroTurn: dphi=0.024109
+3639	Updating target angle: 0.164370.
+3639	To target angle: 0.140261.
+3639	targetAngle	0.140261<<<VAR
+3639	Setting angular vel to: 0.140261
+
+3639	emitTwoWheeledEvent: l=0.438636, r=0.561364, linearSpeed=0.080000, angularVel=0.140261, maxAngVel=1.142857
+3639	Motor out: 0.438636,0.561364
+3639	angularVelocity	0.140261<<<VAR
+3699	nWorld = 8
+3699	Running: AbstractTask::CloseObjectDetector::detect.
+3699	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3718	dphi	0.029602<<<VAR
+3718	onGyroTurn: dphi=0.029602
+3718	Updating target angle: 0.140261.
+3718	To target angle: 0.110659.
+3718	targetAngle	0.110659<<<VAR
+3718	Setting angular vel to: 0.110659
+
+3718	emitTwoWheeledEvent: l=0.451587, r=0.548413, linearSpeed=0.080000, angularVel=0.110659, maxAngVel=1.142857
+3718	Motor out: 0.451587,0.548413
+3718	angularVelocity	0.110659<<<VAR
+3785	nWorld = 9
+3785	Running: AbstractTask::CloseObjectDetector::detect.
+3785	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3796	dphi	0.025024<<<VAR
+3796	onGyroTurn: dphi=0.025024
+3796	Updating target angle: 0.110659.
+3796	To target angle: 0.085634.
+3796	targetAngle	0.085634<<<VAR
+3796	Setting angular vel to: 0.085634
+
+3796	emitTwoWheeledEvent: l=0.462535, r=0.537465, linearSpeed=0.080000, angularVel=0.085634, maxAngVel=1.142857
+3797	Motor out: 0.462535,0.537465
+3797	angularVelocity	0.085634<<<VAR
+3797	Targetloc: Contour discarded.
+3872	nWorld = 10
+3872	Running: AbstractTask::CloseObjectDetector::detect.
+3872	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3875	dphi	0.027466<<<VAR
+3875	onGyroTurn: dphi=0.027466
+3875	Updating target angle: 0.085634.
+3875	To target angle: 0.058168.
+3875	targetAngle	0.058168<<<VAR
+3875	Setting angular vel to: 0.058168
+
+3875	emitTwoWheeledEvent: l=0.474551, r=0.525449, linearSpeed=0.080000, angularVel=0.058168, maxAngVel=1.142857
+3875	Motor out: 0.474551,0.525449
+3875	angularVelocity	0.058168<<<VAR
+3897	Target detected:0.958706,0.139969
+3897	Setting angular vel to: 0.139969
+
+3897	emitTwoWheeledEvent: l=0.438764, r=0.561236, linearSpeed=0.080000, angularVel=0.139969, maxAngVel=1.142857
+3897	Motor out: 0.438764,0.561236
+3897	angularVelocity	0.139969<<<VAR
+3897	onTargetDetected	0.139969<<<VAR
+3954	dphi	0.024719<<<VAR
+3954	onGyroTurn: dphi=0.024719
+3954	Updating target angle: 0.139969.
+3954	To target angle: 0.115250.
+3954	targetAngle	0.115250<<<VAR
+3954	Setting angular vel to: 0.115250
+
+3954	emitTwoWheeledEvent: l=0.449578, r=0.550422, linearSpeed=0.080000, angularVel=0.115250, maxAngVel=1.142857
+3954	Motor out: 0.449578,0.550422
+3954	angularVelocity	0.115250<<<VAR
+3966	nWorld = 11
+3966	Running: AbstractTask::CloseObjectDetector::detect.
+3966	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+3997	Target detected:0.937983,0.133730
+3997	Setting angular vel to: 0.133730
+
+3997	emitTwoWheeledEvent: l=0.441493, r=0.558507, linearSpeed=0.080000, angularVel=0.133730, maxAngVel=1.142857
+3997	Motor out: 0.441493,0.558507
+3997	angularVelocity	0.133730<<<VAR
+3997	onTargetDetected	0.133730<<<VAR
+4032	dphi	0.021667<<<VAR
+4032	onGyroTurn: dphi=0.021667
+4032	Updating target angle: 0.133730.
+4032	To target angle: 0.112063.
+4032	targetAngle	0.112063<<<VAR
+4032	Setting angular vel to: 0.112063
+
+4032	emitTwoWheeledEvent: l=0.450972, r=0.549028, linearSpeed=0.080000, angularVel=0.112063, maxAngVel=1.142857
+4032	Motor out: 0.450972,0.549028
+4032	angularVelocity	0.112063<<<VAR
+4060	nWorld = 12
+4060	Running: AbstractTask::CloseObjectDetector::detect.
+4060	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4098	Target detected:0.927945,0.130482
+4098	Setting angular vel to: 0.130482
+
+4098	emitTwoWheeledEvent: l=0.442914, r=0.557086, linearSpeed=0.080000, angularVel=0.130482, maxAngVel=1.142857
+4098	Motor out: 0.442914,0.557086
+4098	angularVelocity	0.130482<<<VAR
+4098	onTargetDetected	0.130482<<<VAR
+4111	dphi	0.024414<<<VAR
+4111	onGyroTurn: dphi=0.024414
+4111	Updating target angle: 0.130482.
+4111	To target angle: 0.106068.
+4111	targetAngle	0.106068<<<VAR
+4111	Setting angular vel to: 0.106068
+
+4111	emitTwoWheeledEvent: l=0.453595, r=0.546405, linearSpeed=0.080000, angularVel=0.106068, maxAngVel=1.142857
+4111	Motor out: 0.453595,0.546405
+4111	angularVelocity	0.106068<<<VAR
+4155	nWorld = 13
+4155	Running: AbstractTask::CloseObjectDetector::detect.
+4155	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4190	dphi	0.024719<<<VAR
+4190	onGyroTurn: dphi=0.024719
+4190	Updating target angle: 0.106068.
+4190	To target angle: 0.081349.
+4190	targetAngle	0.081349<<<VAR
+4190	Setting angular vel to: 0.081349
+
+4190	emitTwoWheeledEvent: l=0.464410, r=0.535590, linearSpeed=0.080000, angularVel=0.081349, maxAngVel=1.142857
+4190	Motor out: 0.464410,0.535590
+4190	angularVelocity	0.081349<<<VAR
+4197	Target detected:0.908369,0.123063
+4197	Setting angular vel to: 0.123063
+
+4197	emitTwoWheeledEvent: l=0.446160, r=0.553840, linearSpeed=0.080000, angularVel=0.123063, maxAngVel=1.142857
+4197	Motor out: 0.446160,0.553840
+4197	angularVelocity	0.123063<<<VAR
+4197	onTargetDetected	0.123063<<<VAR
+4257	nWorld = 14
+4257	Running: AbstractTask::CloseObjectDetector::detect.
+4257	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4268	dphi	0.020142<<<VAR
+4268	onGyroTurn: dphi=0.020142
+4268	Updating target angle: 0.123063.
+4268	To target angle: 0.102922.
+4268	targetAngle	0.102922<<<VAR
+4268	Setting angular vel to: 0.102922
+
+4268	emitTwoWheeledEvent: l=0.454972, r=0.545028, linearSpeed=0.080000, angularVel=0.102922, maxAngVel=1.142857
+4268	Motor out: 0.454972,0.545028
+4268	angularVelocity	0.102922<<<VAR
+4298	Target detected:0.908108,0.117716
+4298	Setting angular vel to: 0.117716
+
+4298	emitTwoWheeledEvent: l=0.448499, r=0.551501, linearSpeed=0.080000, angularVel=0.117716, maxAngVel=1.142857
+4298	Motor out: 0.448499,0.551501
+4298	angularVelocity	0.117716<<<VAR
+4298	onTargetDetected	0.117716<<<VAR
+4347	dphi	0.015259<<<VAR
+4347	onGyroTurn: dphi=0.015259
+4347	Updating target angle: 0.117716.
+4347	To target angle: 0.102457.
+4347	targetAngle	0.102457<<<VAR
+4347	Setting angular vel to: 0.102457
+
+4347	emitTwoWheeledEvent: l=0.455175, r=0.544825, linearSpeed=0.080000, angularVel=0.102457, maxAngVel=1.142857
+4347	Motor out: 0.455175,0.544825
+4347	angularVelocity	0.102457<<<VAR
+4367	nWorld = 15
+4367	Running: AbstractTask::CloseObjectDetector::detect.
+4367	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4398	Target detected:0.899072,0.120974
+4398	Setting angular vel to: 0.120974
+
+4398	emitTwoWheeledEvent: l=0.447074, r=0.552926, linearSpeed=0.080000, angularVel=0.120974, maxAngVel=1.142857
+4398	Motor out: 0.447074,0.552926
+4398	angularVelocity	0.120974<<<VAR
+4398	onTargetDetected	0.120974<<<VAR
+4426	dphi	0.018616<<<VAR
+4426	onGyroTurn: dphi=0.018616
+4426	Updating target angle: 0.120974.
+4426	To target angle: 0.102359.
+4426	targetAngle	0.102359<<<VAR
+4426	Setting angular vel to: 0.102359
+
+4426	emitTwoWheeledEvent: l=0.455218, r=0.544782, linearSpeed=0.080000, angularVel=0.102359, maxAngVel=1.142857
+4426	Motor out: 0.455218,0.544782
+4426	angularVelocity	0.102359<<<VAR
+4469	nWorld = 16
+4469	Running: AbstractTask::CloseObjectDetector::detect.
+4469	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4497	Target detected:0.880658,0.120053
+4497	Setting angular vel to: 0.120053
+
+4497	emitTwoWheeledEvent: l=0.447477, r=0.552523, linearSpeed=0.080000, angularVel=0.120053, maxAngVel=1.142857
+4497	Motor out: 0.447477,0.552523
+4497	angularVelocity	0.120053<<<VAR
+4497	onTargetDetected	0.120053<<<VAR
+4504	dphi	0.018921<<<VAR
+4504	onGyroTurn: dphi=0.018921
+4504	Updating target angle: 0.120053.
+4504	To target angle: 0.101132.
+4504	targetAngle	0.101132<<<VAR
+4504	Setting angular vel to: 0.101132
+
+4504	emitTwoWheeledEvent: l=0.455755, r=0.544245, linearSpeed=0.080000, angularVel=0.101132, maxAngVel=1.142857
+4504	Motor out: 0.455755,0.544245
+4504	angularVelocity	0.101132<<<VAR
+4579	nWorld = 17
+4579	Running: AbstractTask::CloseObjectDetector::detect.
+4579	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4583	dphi	0.026550<<<VAR
+4583	onGyroTurn: dphi=0.026550
+4583	Updating target angle: 0.101132.
+4583	To target angle: 0.074582.
+4583	targetAngle	0.074582<<<VAR
+4583	Setting angular vel to: 0.074582
+
+4583	emitTwoWheeledEvent: l=0.467370, r=0.532630, linearSpeed=0.080000, angularVel=0.074582, maxAngVel=1.142857
+4583	Motor out: 0.467370,0.532630
+4583	angularVelocity	0.074582<<<VAR
+4597	Target detected:0.880664,0.114469
+4597	Setting angular vel to: 0.114469
+
+4597	emitTwoWheeledEvent: l=0.449920, r=0.550080, linearSpeed=0.080000, angularVel=0.114469, maxAngVel=1.142857
+4597	Motor out: 0.449920,0.550080
+4597	angularVelocity	0.114469<<<VAR
+4597	onTargetDetected	0.114469<<<VAR
+4661	dphi	0.024109<<<VAR
+4662	onGyroTurn: dphi=0.024109
+4662	Updating target angle: 0.114469.
+4662	To target angle: 0.090361.
+4662	targetAngle	0.090361<<<VAR
+4662	Setting angular vel to: 0.090361
+
+4662	emitTwoWheeledEvent: l=0.460467, r=0.539533, linearSpeed=0.080000, angularVel=0.090361, maxAngVel=1.142857
+4662	Motor out: 0.460467,0.539533
+4662	angularVelocity	0.090361<<<VAR
+4681	nWorld = 18
+4681	Running: AbstractTask::CloseObjectDetector::detect.
+4681	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4740	dphi	0.025024<<<VAR
+4740	onGyroTurn: dphi=0.025024
+4740	Updating target angle: 0.090361.
+4740	To target angle: 0.065336.
+4740	targetAngle	0.065336<<<VAR
+4740	Setting angular vel to: 0.065336
+
+4740	emitTwoWheeledEvent: l=0.471415, r=0.528585, linearSpeed=0.080000, angularVel=0.065336, maxAngVel=1.142857
+4740	Motor out: 0.471415,0.528585
+4740	angularVelocity	0.065336<<<VAR
+4783	nWorld = 19
+4783	Running: AbstractTask::CloseObjectDetector::detect.
+4783	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4797	Targetloc: Contour discarded.
+4822	dphi	0.017700<<<VAR
+4822	onGyroTurn: dphi=0.017700
+4822	Updating target angle: 0.065336.
+4822	To target angle: 0.047636.
+4822	targetAngle	0.047636<<<VAR
+4822	Setting angular vel to: 0.047636
+
+4822	emitTwoWheeledEvent: l=0.479159, r=0.520841, linearSpeed=0.080000, angularVel=0.047636, maxAngVel=1.142857
+4822	Motor out: 0.479159,0.520841
+4822	angularVelocity	0.047636<<<VAR
+4893	nWorld = 20
+4893	Running: AbstractTask::CloseObjectDetector::detect.
+4893	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4897	Target detected:0.837612,0.100947
+4897	Setting angular vel to: 0.100947
+
+4897	emitTwoWheeledEvent: l=0.455836, r=0.544164, linearSpeed=0.080000, angularVel=0.100947, maxAngVel=1.142857
+4897	Motor out: 0.455836,0.544164
+4897	angularVelocity	0.100947<<<VAR
+4897	onTargetDetected	0.100947<<<VAR
+4897	dphi	0.021362<<<VAR
+4897	onGyroTurn: dphi=0.021362
+4897	Updating target angle: 0.100947.
+4897	To target angle: 0.079585.
+4897	targetAngle	0.079585<<<VAR
+4897	Setting angular vel to: 0.079585
+
+4897	emitTwoWheeledEvent: l=0.465182, r=0.534818, linearSpeed=0.080000, angularVel=0.079585, maxAngVel=1.142857
+4897	Motor out: 0.465182,0.534818
+4898	angularVelocity	0.079585<<<VAR
+4976	dphi	0.008240<<<VAR
+4976	onGyroTurn: dphi=0.008240
+4976	Updating target angle: 0.079585.
+4976	To target angle: 0.071345.
+4976	targetAngle	0.071345<<<VAR
+4976	Setting angular vel to: 0.071345
+
+4976	emitTwoWheeledEvent: l=0.468786, r=0.531214, linearSpeed=0.080000, angularVel=0.071345, maxAngVel=1.142857
+4976	Motor out: 0.468786,0.531214
+4976	angularVelocity	0.071345<<<VAR
+4995	nWorld = 21
+4995	Running: AbstractTask::CloseObjectDetector::detect.
+4995	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4997	Target detected:0.829514,0.102588
+4997	Setting angular vel to: 0.102588
+
+4997	emitTwoWheeledEvent: l=0.455118, r=0.544882, linearSpeed=0.080000, angularVel=0.102588, maxAngVel=1.142857
+4997	Motor out: 0.455118,0.544882
+4997	angularVelocity	0.102588<<<VAR
+4997	onTargetDetected	0.102588<<<VAR
+5055	dphi	0.013733<<<VAR
+5055	onGyroTurn: dphi=0.013733
+5055	Updating target angle: 0.102588.
+5055	To target angle: 0.088855.
+5055	targetAngle	0.088855<<<VAR
+5055	Setting angular vel to: 0.088855
+
+5055	emitTwoWheeledEvent: l=0.461126, r=0.538874, linearSpeed=0.080000, angularVel=0.088855, maxAngVel=1.142857
+5055	Motor out: 0.461126,0.538874
+5055	angularVelocity	0.088855<<<VAR
+5097	Target detected:0.821861,0.107489
+5097	Setting angular vel to: 0.107489
+
+5097	emitTwoWheeledEvent: l=0.452974, r=0.547026, linearSpeed=0.080000, angularVel=0.107489, maxAngVel=1.142857
+5097	Motor out: 0.452974,0.547026
+5097	angularVelocity	0.107489<<<VAR
+5097	onTargetDetected	0.107489<<<VAR
+5097	nWorld = 22
+5097	Running: AbstractTask::CloseObjectDetector::detect.
+5097	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5133	dphi	0.010986<<<VAR
+5133	onGyroTurn: dphi=0.010986
+5133	Updating target angle: 0.107489.
+5133	To target angle: 0.096502.
+5133	targetAngle	0.096502<<<VAR
+5133	Setting angular vel to: 0.096502
+
+5133	emitTwoWheeledEvent: l=0.457780, r=0.542220, linearSpeed=0.080000, angularVel=0.096502, maxAngVel=1.142857
+5134	Motor out: 0.457780,0.542220
+5134	angularVelocity	0.096502<<<VAR
+5199	Target detected:0.821896,0.113065
+5199	Setting angular vel to: 0.113065
+
+5199	emitTwoWheeledEvent: l=0.450534, r=0.549466, linearSpeed=0.080000, angularVel=0.113065, maxAngVel=1.142857
+5199	Motor out: 0.450534,0.549466
+5199	angularVelocity	0.113065<<<VAR
+5199	onTargetDetected	0.113065<<<VAR
+5200	nWorld = 23
+5200	Running: AbstractTask::CloseObjectDetector::detect.
+5200	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5212	dphi	0.017395<<<VAR
+5212	onGyroTurn: dphi=0.017395
+5212	Updating target angle: 0.113065.
+5212	To target angle: 0.095670.
+5212	targetAngle	0.095670<<<VAR
+5212	Setting angular vel to: 0.095670
+
+5212	emitTwoWheeledEvent: l=0.458144, r=0.541856, linearSpeed=0.080000, angularVel=0.095670, maxAngVel=1.142857
+5212	Motor out: 0.458144,0.541856
+5212	angularVelocity	0.095670<<<VAR
+5291	dphi	0.021973<<<VAR
+5291	onGyroTurn: dphi=0.021973
+5291	Updating target angle: 0.095670.
+5291	To target angle: 0.073698.
+5291	targetAngle	0.073698<<<VAR
+5291	Setting angular vel to: 0.073698
+
+5291	emitTwoWheeledEvent: l=0.467757, r=0.532243, linearSpeed=0.080000, angularVel=0.073698, maxAngVel=1.142857
+5291	Motor out: 0.467757,0.532243
+5291	angularVelocity	0.073698<<<VAR
+5294	nWorld = 24
+5294	Running: AbstractTask::CloseObjectDetector::detect.
+5294	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5296	Target detected:0.806350,0.111433
+5296	Setting angular vel to: 0.111433
+
+5297	emitTwoWheeledEvent: l=0.451248, r=0.548752, linearSpeed=0.080000, angularVel=0.111433, maxAngVel=1.142857
+5297	Motor out: 0.451248,0.548752
+5297	angularVelocity	0.111433<<<VAR
+5297	onTargetDetected	0.111433<<<VAR
+5369	dphi	0.017090<<<VAR
+5369	onGyroTurn: dphi=0.017090
+5369	Updating target angle: 0.111433.
+5369	To target angle: 0.094343.
+5369	targetAngle	0.094343<<<VAR
+5369	Setting angular vel to: 0.094343
+
+5369	emitTwoWheeledEvent: l=0.458725, r=0.541275, linearSpeed=0.080000, angularVel=0.094343, maxAngVel=1.142857
+5369	Motor out: 0.458725,0.541275
+5369	angularVelocity	0.094343<<<VAR
+5396	nWorld = 25
+5396	Running: AbstractTask::CloseObjectDetector::detect.
+5396	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5397	Target detected:0.791532,0.107704
+5397	Setting angular vel to: 0.107704
+
+5397	emitTwoWheeledEvent: l=0.452879, r=0.547121, linearSpeed=0.080000, angularVel=0.107704, maxAngVel=1.142857
+5397	Motor out: 0.452879,0.547121
+5397	angularVelocity	0.107704<<<VAR
+5397	onTargetDetected	0.107704<<<VAR
+5448	dphi	0.015869<<<VAR
+5448	onGyroTurn: dphi=0.015869
+5448	Updating target angle: 0.107704.
+5448	To target angle: 0.091835.
+5448	targetAngle	0.091835<<<VAR
+5448	Setting angular vel to: 0.091835
+
+5448	emitTwoWheeledEvent: l=0.459822, r=0.540178, linearSpeed=0.080000, angularVel=0.091835, maxAngVel=1.142857
+5448	Motor out: 0.459822,0.540178
+5448	angularVelocity	0.091835<<<VAR
+5497	Target detected:0.784437,0.110035
+5497	Setting angular vel to: 0.110035
+
+5497	emitTwoWheeledEvent: l=0.451860, r=0.548140, linearSpeed=0.080000, angularVel=0.110035, maxAngVel=1.142857
+5497	Motor out: 0.451860,0.548140
+5497	angularVelocity	0.110035<<<VAR
+5497	onTargetDetected	0.110035<<<VAR
+5498	nWorld = 26
+5498	Running: AbstractTask::CloseObjectDetector::detect.
+5498	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5527	dphi	0.012512<<<VAR
+5527	onGyroTurn: dphi=0.012512
+5527	Updating target angle: 0.110035.
+5527	To target angle: 0.097523.
+5527	targetAngle	0.097523<<<VAR
+5527	Setting angular vel to: 0.097523
+
+5527	emitTwoWheeledEvent: l=0.457334, r=0.542666, linearSpeed=0.080000, angularVel=0.097523, maxAngVel=1.142857
+5527	Motor out: 0.457334,0.542666
+5527	angularVelocity	0.097523<<<VAR
+5592	nWorld = 27
+5592	Running: AbstractTask::CloseObjectDetector::detect.
+5592	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5595	Target detected:0.777501,0.114041
+5595	Setting angular vel to: 0.114041
+
+5595	emitTwoWheeledEvent: l=0.450107, r=0.549893, linearSpeed=0.080000, angularVel=0.114041, maxAngVel=1.142857
+5596	Motor out: 0.450107,0.549893
+5596	angularVelocity	0.114041<<<VAR
+5596	onTargetDetected	0.114041<<<VAR
+5605	dphi	0.015259<<<VAR
+5605	onGyroTurn: dphi=0.015259
+5605	Updating target angle: 0.114041.
+5605	To target angle: 0.098782.
+5605	targetAngle	0.098782<<<VAR
+5605	Setting angular vel to: 0.098782
+
+5605	emitTwoWheeledEvent: l=0.456783, r=0.543217, linearSpeed=0.080000, angularVel=0.098782, maxAngVel=1.142857
+5605	Motor out: 0.456783,0.543217
+5605	angularVelocity	0.098782<<<VAR
+5684	dphi	0.018616<<<VAR
+5684	onGyroTurn: dphi=0.018616
+5684	Updating target angle: 0.098782.
+5684	To target angle: 0.080166.
+5684	targetAngle	0.080166<<<VAR
+5684	Setting angular vel to: 0.080166
+
+5684	emitTwoWheeledEvent: l=0.464927, r=0.535073, linearSpeed=0.080000, angularVel=0.080166, maxAngVel=1.142857
+5684	Motor out: 0.464927,0.535073
+5684	angularVelocity	0.080166<<<VAR
+5694	nWorld = 28
+5694	Running: AbstractTask::CloseObjectDetector::detect.
+5694	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5703	Target detected:0.763535,0.114234
+5703	Setting angular vel to: 0.114234
+
+5703	emitTwoWheeledEvent: l=0.450023, r=0.549977, linearSpeed=0.080000, angularVel=0.114234, maxAngVel=1.142857
+5703	Motor out: 0.450023,0.549977
+5703	angularVelocity	0.114234<<<VAR
+5703	onTargetDetected	0.114234<<<VAR
+5763	dphi	0.019836<<<VAR
+5763	onGyroTurn: dphi=0.019836
+5763	Updating target angle: 0.114234.
+5763	To target angle: 0.094397.
+5763	targetAngle	0.094397<<<VAR
+5763	Setting angular vel to: 0.094397
+
+5763	emitTwoWheeledEvent: l=0.458701, r=0.541299, linearSpeed=0.080000, angularVel=0.094397, maxAngVel=1.142857
+5763	Motor out: 0.458701,0.541299
+5763	angularVelocity	0.094397<<<VAR
+5796	nWorld = 29
+5796	Running: AbstractTask::CloseObjectDetector::detect.
+5796	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5798	Target detected:0.748339,0.113134
+5798	Setting angular vel to: 0.113134
+
+5798	emitTwoWheeledEvent: l=0.450504, r=0.549496, linearSpeed=0.080000, angularVel=0.113134, maxAngVel=1.142857
+5798	Motor out: 0.450504,0.549496
+5798	angularVelocity	0.113134<<<VAR
+5798	onTargetDetected	0.113134<<<VAR
+5841	dphi	0.022583<<<VAR
+5841	onGyroTurn: dphi=0.022583
+5841	Updating target angle: 0.113134.
+5841	To target angle: 0.090551.
+5841	targetAngle	0.090551<<<VAR
+5841	Setting angular vel to: 0.090551
+
+5841	emitTwoWheeledEvent: l=0.460384, r=0.539616, linearSpeed=0.080000, angularVel=0.090551, maxAngVel=1.142857
+5841	Motor out: 0.460384,0.539616
+5841	angularVelocity	0.090551<<<VAR
+5891	nWorld = 30
+5891	Running: AbstractTask::CloseObjectDetector::detect.
+5891	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5898	Target detected:0.743705,0.108868
+5898	Setting angular vel to: 0.108868
+
+5898	emitTwoWheeledEvent: l=0.452370, r=0.547630, linearSpeed=0.080000, angularVel=0.108868, maxAngVel=1.142857
+5898	Motor out: 0.452370,0.547630
+5898	angularVelocity	0.108868<<<VAR
+5898	onTargetDetected	0.108868<<<VAR
+5922	dphi	0.019226<<<VAR
+5922	onGyroTurn: dphi=0.019226
+5922	Updating target angle: 0.108868.
+5922	To target angle: 0.089642.
+5922	targetAngle	0.089642<<<VAR
+5922	Setting angular vel to: 0.089642
+
+5922	emitTwoWheeledEvent: l=0.460782, r=0.539218, linearSpeed=0.080000, angularVel=0.089642, maxAngVel=1.142857
+5922	Motor out: 0.460782,0.539218
+5922	angularVelocity	0.089642<<<VAR
+5993	nWorld = 31
+5993	Running: AbstractTask::CloseObjectDetector::detect.
+5993	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5998	Target detected:0.737480,0.108646
+5998	Setting angular vel to: 0.108646
+
+5998	emitTwoWheeledEvent: l=0.452467, r=0.547533, linearSpeed=0.080000, angularVel=0.108646, maxAngVel=1.142857
+5998	Motor out: 0.452467,0.547533
+5998	angularVelocity	0.108646<<<VAR
+5998	onTargetDetected	0.108646<<<VAR
+5998	dphi	0.023804<<<VAR
+5998	onGyroTurn: dphi=0.023804
+5998	Updating target angle: 0.108646.
+5998	To target angle: 0.084842.
+5998	targetAngle	0.084842<<<VAR
+5998	Setting angular vel to: 0.084842
+
+5998	emitTwoWheeledEvent: l=0.462881, r=0.537118, linearSpeed=0.080000, angularVel=0.084842, maxAngVel=1.142857
+5998	Motor out: 0.462881,0.537118
+5998	angularVelocity	0.084842<<<VAR
+6077	dphi	0.018311<<<VAR
+6077	onGyroTurn: dphi=0.018311
+6077	Updating target angle: 0.084842.
+6077	To target angle: 0.066532.
+6077	targetAngle	0.066532<<<VAR
+6077	Setting angular vel to: 0.066532
+
+6077	emitTwoWheeledEvent: l=0.470892, r=0.529108, linearSpeed=0.080000, angularVel=0.066532, maxAngVel=1.142857
+6077	Motor out: 0.470892,0.529108
+6077	angularVelocity	0.066532<<<VAR
+6087	nWorld = 32
+6087	Running: AbstractTask::CloseObjectDetector::detect.
+6087	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6098	Target detected:0.718897,0.102816
+6098	Setting angular vel to: 0.102816
+
+6098	emitTwoWheeledEvent: l=0.455018, r=0.544982, linearSpeed=0.080000, angularVel=0.102816, maxAngVel=1.142857
+6098	Motor out: 0.455018,0.544982
+6098	angularVelocity	0.102816<<<VAR
+6098	onTargetDetected	0.102816<<<VAR
+6156	dphi	0.015564<<<VAR
+6156	onGyroTurn: dphi=0.015564
+6156	Updating target angle: 0.102816.
+6156	To target angle: 0.087252.
+6156	targetAngle	0.087252<<<VAR
+6156	Setting angular vel to: 0.087252
+
+6156	emitTwoWheeledEvent: l=0.461827, r=0.538173, linearSpeed=0.080000, angularVel=0.087252, maxAngVel=1.142857
+6156	Motor out: 0.461827,0.538173
+6156	angularVelocity	0.087252<<<VAR
+6189	nWorld = 33
+6189	Running: AbstractTask::CloseObjectDetector::detect.
+6189	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6198	Target detected:0.712913,0.104705
+6198	Setting angular vel to: 0.104705
+
+6198	emitTwoWheeledEvent: l=0.454191, r=0.545809, linearSpeed=0.080000, angularVel=0.104705, maxAngVel=1.142857
+6198	Motor out: 0.454191,0.545809
+6198	angularVelocity	0.104705<<<VAR
+6198	onTargetDetected	0.104705<<<VAR
+6234	dphi	0.012512<<<VAR
+6234	onGyroTurn: dphi=0.012512
+6234	Updating target angle: 0.104705.
+6234	To target angle: 0.092193.
+6234	targetAngle	0.092193<<<VAR
+6234	Setting angular vel to: 0.092193
+
+6234	emitTwoWheeledEvent: l=0.459666, r=0.540334, linearSpeed=0.080000, angularVel=0.092193, maxAngVel=1.142857
+6234	Motor out: 0.459666,0.540334
+6234	angularVelocity	0.092193<<<VAR
+6291	nWorld = 34
+6291	Running: AbstractTask::CloseObjectDetector::detect.
+6291	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6298	Target detected:0.707187,0.109333
+6298	Setting angular vel to: 0.109333
+
+6298	emitTwoWheeledEvent: l=0.452167, r=0.547833, linearSpeed=0.080000, angularVel=0.109333, maxAngVel=1.142857
+6298	Motor out: 0.452167,0.547833
+6298	angularVelocity	0.109333<<<VAR
+6298	onTargetDetected	0.109333<<<VAR
+6313	dphi	0.009155<<<VAR
+6313	onGyroTurn: dphi=0.009155
+6313	Updating target angle: 0.109333.
+6313	To target angle: 0.100178.
+6313	targetAngle	0.100178<<<VAR
+6313	Setting angular vel to: 0.100178
+
+6313	emitTwoWheeledEvent: l=0.456172, r=0.543828, linearSpeed=0.080000, angularVel=0.100178, maxAngVel=1.142857
+6313	Motor out: 0.456172,0.543828
+6313	angularVelocity	0.100178<<<VAR
+6386	nWorld = 35
+6386	Running: AbstractTask::CloseObjectDetector::detect.
+6386	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6392	dphi	0.022583<<<VAR
+6392	onGyroTurn: dphi=0.022583
+6392	Updating target angle: 0.100178.
+6392	To target angle: 0.077595.
+6392	targetAngle	0.077595<<<VAR
+6392	Setting angular vel to: 0.077595
+
+6392	emitTwoWheeledEvent: l=0.466052, r=0.533948, linearSpeed=0.080000, angularVel=0.077595, maxAngVel=1.142857
+6392	Motor out: 0.466052,0.533948
+6392	angularVelocity	0.077595<<<VAR
+6398	Target detected:0.695651,0.115850
+6398	Setting angular vel to: 0.115850
+
+6398	emitTwoWheeledEvent: l=0.449316, r=0.550684, linearSpeed=0.080000, angularVel=0.115850, maxAngVel=1.142857
+6398	Motor out: 0.449316,0.550684
+6398	angularVelocity	0.115850<<<VAR
+6398	onTargetDetected	0.115850<<<VAR
+6470	dphi	0.015869<<<VAR
+6470	onGyroTurn: dphi=0.015869
+6470	Updating target angle: 0.115850.
+6470	To target angle: 0.099980.
+6470	targetAngle	0.099980<<<VAR
+6470	Setting angular vel to: 0.099980
+
+6470	emitTwoWheeledEvent: l=0.456259, r=0.543741, linearSpeed=0.080000, angularVel=0.099980, maxAngVel=1.142857
+6470	Motor out: 0.456259,0.543741
+6470	angularVelocity	0.099980<<<VAR
+6487	nWorld = 36
+6488	Running: AbstractTask::CloseObjectDetector::detect.
+6488	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6498	Targetloc: Contour discarded.
+6549	dphi	0.011597<<<VAR
+6549	onGyroTurn: dphi=0.011597
+6549	Updating target angle: 0.099980.
+6549	To target angle: 0.088384.
+6549	targetAngle	0.088384<<<VAR
+6549	Setting angular vel to: 0.088384
+
+6549	emitTwoWheeledEvent: l=0.461332, r=0.538668, linearSpeed=0.080000, angularVel=0.088384, maxAngVel=1.142857
+6549	Motor out: 0.461332,0.538668
+6549	angularVelocity	0.088384<<<VAR
+6582	nWorld = 37
+6582	Running: AbstractTask::CloseObjectDetector::detect.
+6582	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6599	Targetloc: Contour discarded.
+6628	dphi	0.018311<<<VAR
+6628	onGyroTurn: dphi=0.018311
+6628	Updating target angle: 0.088384.
+6628	To target angle: 0.070073.
+6628	targetAngle	0.070073<<<VAR
+6628	Setting angular vel to: 0.070073
+
+6628	emitTwoWheeledEvent: l=0.469343, r=0.530657, linearSpeed=0.080000, angularVel=0.070073, maxAngVel=1.142857
+6628	Motor out: 0.469343,0.530657
+6628	angularVelocity	0.070073<<<VAR
+6684	nWorld = 38
+6684	Running: AbstractTask::CloseObjectDetector::detect.
+6684	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6698	Target detected:0.658577,0.118629
+6698	Setting angular vel to: 0.118629
+
+6698	emitTwoWheeledEvent: l=0.448100, r=0.551900, linearSpeed=0.080000, angularVel=0.118629, maxAngVel=1.142857
+6698	Motor out: 0.448100,0.551900
+6698	angularVelocity	0.118629<<<VAR
+6698	onTargetDetected	0.118629<<<VAR
+6706	dphi	0.013733<<<VAR
+6706	onGyroTurn: dphi=0.013733
+6706	Updating target angle: 0.118629.
+6706	To target angle: 0.104896.
+6706	targetAngle	0.104896<<<VAR
+6706	Setting angular vel to: 0.104896
+
+6706	emitTwoWheeledEvent: l=0.454108, r=0.545892, linearSpeed=0.080000, angularVel=0.104896, maxAngVel=1.142857
+6706	Motor out: 0.454108,0.545892
+6706	angularVelocity	0.104896<<<VAR
+6785	dphi	0.015259<<<VAR
+6785	onGyroTurn: dphi=0.015259
+6785	Updating target angle: 0.104896.
+6785	To target angle: 0.089637.
+6785	targetAngle	0.089637<<<VAR
+6785	Setting angular vel to: 0.089637
+
+6785	emitTwoWheeledEvent: l=0.460784, r=0.539216, linearSpeed=0.080000, angularVel=0.089637, maxAngVel=1.142857
+6785	Motor out: 0.460784,0.539216
+6785	angularVelocity	0.089637<<<VAR
+6786	nWorld = 39
+6786	Running: AbstractTask::CloseObjectDetector::detect.
+6786	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6798	Target detected:0.648538,0.123266
+6798	Setting angular vel to: 0.123266
+
+6798	emitTwoWheeledEvent: l=0.446071, r=0.553929, linearSpeed=0.080000, angularVel=0.123266, maxAngVel=1.142857
+6799	Motor out: 0.446071,0.553929
+6799	angularVelocity	0.123266<<<VAR
+6799	onTargetDetected	0.123266<<<VAR
+6864	dphi	0.013428<<<VAR
+6864	onGyroTurn: dphi=0.013428
+6864	Updating target angle: 0.123266.
+6864	To target angle: 0.109838.
+6864	targetAngle	0.109838<<<VAR
+6864	Setting angular vel to: 0.109838
+
+6864	emitTwoWheeledEvent: l=0.451946, r=0.548054, linearSpeed=0.080000, angularVel=0.109838, maxAngVel=1.142857
+6864	Motor out: 0.451946,0.548054
+6864	angularVelocity	0.109838<<<VAR
+6880	nWorld = 40
+6880	Running: AbstractTask::CloseObjectDetector::detect.
+6880	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6898	Target detected:0.643607,0.123507
+6898	Setting angular vel to: 0.123507
+
+6898	emitTwoWheeledEvent: l=0.445966, r=0.554034, linearSpeed=0.080000, angularVel=0.123507, maxAngVel=1.142857
+6898	Motor out: 0.445966,0.554034
+6898	angularVelocity	0.123507<<<VAR
+6898	onTargetDetected	0.123507<<<VAR
+6942	dphi	0.010681<<<VAR
+6942	onGyroTurn: dphi=0.010681
+6942	Updating target angle: 0.123507.
+6942	To target angle: 0.112826.
+6942	targetAngle	0.112826<<<VAR
+6942	Setting angular vel to: 0.112826
+
+6942	emitTwoWheeledEvent: l=0.450639, r=0.549361, linearSpeed=0.080000, angularVel=0.112826, maxAngVel=1.142857
+6942	Motor out: 0.450639,0.549361
+6942	angularVelocity	0.112826<<<VAR
+6982	nWorld = 41
+6982	Running: AbstractTask::CloseObjectDetector::detect.
+6982	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6998	Targetloc: Contour discarded.
+7022	dphi	0.022583<<<VAR
+7022	onGyroTurn: dphi=0.022583
+7022	Updating target angle: 0.112826.
+7022	To target angle: 0.090243.
+7022	targetAngle	0.090243<<<VAR
+7022	Setting angular vel to: 0.090243
+
+7022	emitTwoWheeledEvent: l=0.460519, r=0.539481, linearSpeed=0.080000, angularVel=0.090243, maxAngVel=1.142857
+7022	Motor out: 0.460519,0.539481
+7022	angularVelocity	0.090243<<<VAR
+7084	nWorld = 42
+7084	Running: AbstractTask::CloseObjectDetector::detect.
+7084	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7098	Target detected:0.629722,0.126543
+7098	Reactive: onTaskTerminated
+7098	ReactiveConfigurator: TargetReached: stopping.
+
+7098	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.090243, maxAngVel=0.000000
+7098	Motor out: 0.000000,0.000000
+7098	Setting angular vel to: 0.126543
+
+7098	emitTwoWheeledEvent: l=0.444637, r=0.555363, linearSpeed=0.080000, angularVel=0.126543, maxAngVel=1.142857
+7098	Motor out: 0.444637,0.555363
+7098	angularVelocity	0.126543<<<VAR
+7098	onTargetDetected	0.126543<<<VAR
+7099	dphi	0.021362<<<VAR
+7178	dphi	0.015259<<<VAR
+7187	nWorld = 43
+7198	Target detected:0.616310,0.127222
+7198	Reactive: onTaskTerminated
+7198	ReactiveConfigurator: Target detected. We are targeting.
+
+7198	emitTwoWheeledEvent: l=0.460519, r=0.539481, linearSpeed=0.080000, angularVel=0.090243, maxAngVel=1.142857
+7198	Motor out: 0.460519,0.539481
+7198	onTargetDetected	0.127222<<<VAR
+7257	dphi	0.018005<<<VAR
+7257	onGyroTurn: dphi=0.018005
+7257	Updating target angle: 0.127222.
+7257	To target angle: 0.109217.
+7257	targetAngle	0.109217<<<VAR
+7257	Setting angular vel to: 0.109217
+
+7257	emitTwoWheeledEvent: l=0.452218, r=0.547782, linearSpeed=0.080000, angularVel=0.109217, maxAngVel=1.142857
+7257	Motor out: 0.452218,0.547782
+7257	angularVelocity	0.109217<<<VAR
+7289	nWorld = 44
+7289	Running: AbstractTask::CloseObjectDetector::detect.
+7289	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7298	Target detected:0.607538,0.127455
+7299	Reactive: onTaskTerminated
+7299	ReactiveConfigurator: TargetReached: stopping.
+
+7299	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.109217, maxAngVel=0.000000
+7299	Motor out: 0.000000,0.000000
+7299	Setting angular vel to: 0.127455
+
+7299	emitTwoWheeledEvent: l=0.444239, r=0.555761, linearSpeed=0.080000, angularVel=0.127455, maxAngVel=1.142857
+7299	Motor out: 0.444239,0.555761
+7299	angularVelocity	0.127455<<<VAR
+7299	onTargetDetected	0.127455<<<VAR
+7335	dphi	0.016785<<<VAR
+7383	nWorld = 45
+7398	Target detected:0.594812,0.128824
+7398	Reactive: onTaskTerminated
+7398	ReactiveConfigurator: Target detected. We are targeting.
+
+7398	emitTwoWheeledEvent: l=0.452218, r=0.547782, linearSpeed=0.080000, angularVel=0.109217, maxAngVel=1.142857
+7398	Motor out: 0.452218,0.547782
+7398	onTargetDetected	0.128824<<<VAR
+7414	dphi	0.017700<<<VAR
+7414	onGyroTurn: dphi=0.017700
+7414	Updating target angle: 0.128824.
+7414	To target angle: 0.111124.
+7414	targetAngle	0.111124<<<VAR
+7414	Setting angular vel to: 0.111124
+
+7414	emitTwoWheeledEvent: l=0.451383, r=0.548617, linearSpeed=0.080000, angularVel=0.111124, maxAngVel=1.142857
+7414	Motor out: 0.451383,0.548617
+7414	angularVelocity	0.111124<<<VAR
+7485	nWorld = 46
+7485	Running: AbstractTask::CloseObjectDetector::detect.
+7485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7493	dphi	0.014954<<<VAR
+7493	onGyroTurn: dphi=0.014954
+7493	Updating target angle: 0.111124.
+7493	To target angle: 0.096170.
+7493	targetAngle	0.096170<<<VAR
+7493	Setting angular vel to: 0.096170
+
+7493	emitTwoWheeledEvent: l=0.457925, r=0.542075, linearSpeed=0.080000, angularVel=0.096170, maxAngVel=1.142857
+7493	Motor out: 0.457925,0.542075
+7493	angularVelocity	0.096170<<<VAR
+7498	Target detected:0.586647,0.127510
+7498	Reactive: onTaskTerminated
+7498	ReactiveConfigurator: TargetReached: stopping.
+
+7498	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.096170, maxAngVel=0.000000
+7498	Motor out: 0.000000,0.000000
+7498	Setting angular vel to: 0.127510
+
+7498	emitTwoWheeledEvent: l=0.444214, r=0.555786, linearSpeed=0.080000, angularVel=0.127510, maxAngVel=1.142857
+7498	Motor out: 0.444214,0.555786
+7498	angularVelocity	0.127510<<<VAR
+7498	onTargetDetected	0.127510<<<VAR
+7571	dphi	0.012512<<<VAR
+7587	nWorld = 47
+7598	Target detected:0.578703,0.133446
+7598	Reactive: onTaskTerminated
+7598	ReactiveConfigurator: Target detected. We are targeting.
+
+7598	emitTwoWheeledEvent: l=0.457925, r=0.542075, linearSpeed=0.080000, angularVel=0.096170, maxAngVel=1.142857
+7598	Motor out: 0.457925,0.542075
+7598	onTargetDetected	0.133446<<<VAR
+7650	dphi	0.018616<<<VAR
+7650	onGyroTurn: dphi=0.018616
+7650	Updating target angle: 0.133446.
+7650	To target angle: 0.114831.
+7650	targetAngle	0.114831<<<VAR
+7650	Setting angular vel to: 0.114831
+
+7650	emitTwoWheeledEvent: l=0.449762, r=0.550238, linearSpeed=0.080000, angularVel=0.114831, maxAngVel=1.142857
+7650	Motor out: 0.449762,0.550238
+7650	angularVelocity	0.114831<<<VAR
+7689	nWorld = 48
+7689	Running: AbstractTask::CloseObjectDetector::detect.
+7689	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7701	Target detected:0.567146,0.134834
+7701	Reactive: onTaskTerminated
+7701	ReactiveConfigurator: TargetReached: stopping.
+
+7701	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.114831, maxAngVel=0.000000
+7701	Motor out: 0.000000,0.000000
+7701	Setting angular vel to: 0.134834
+
+7701	emitTwoWheeledEvent: l=0.441010, r=0.558990, linearSpeed=0.080000, angularVel=0.134834, maxAngVel=1.142857
+7701	Motor out: 0.441010,0.558990
+7701	angularVelocity	0.134834<<<VAR
+7701	onTargetDetected	0.134834<<<VAR
+7729	dphi	0.014343<<<VAR
+7791	nWorld = 49
+7799	Target detected:0.559993,0.137612
+7799	Reactive: onTaskTerminated
+7799	ReactiveConfigurator: Target detected. We are targeting.
+
+7799	emitTwoWheeledEvent: l=0.449762, r=0.550238, linearSpeed=0.080000, angularVel=0.114831, maxAngVel=1.142857
+7799	Motor out: 0.449762,0.550238
+7799	onTargetDetected	0.137612<<<VAR
+7807	dphi	0.020142<<<VAR
+7807	onGyroTurn: dphi=0.020142
+7807	Updating target angle: 0.137612.
+7807	To target angle: 0.117470.
+7807	targetAngle	0.117470<<<VAR
+7807	Setting angular vel to: 0.117470
+
+7807	emitTwoWheeledEvent: l=0.448607, r=0.551393, linearSpeed=0.080000, angularVel=0.117470, maxAngVel=1.142857
+7807	Motor out: 0.448607,0.551393
+7807	angularVelocity	0.117470<<<VAR
+7885	nWorld = 50
+7885	Running: AbstractTask::CloseObjectDetector::detect.
+7885	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7886	dphi	0.025024<<<VAR
+7886	onGyroTurn: dphi=0.025024
+7886	Updating target angle: 0.117470.
+7886	To target angle: 0.092446.
+7886	targetAngle	0.092446<<<VAR
+7886	Setting angular vel to: 0.092446
+
+7886	emitTwoWheeledEvent: l=0.459555, r=0.540445, linearSpeed=0.080000, angularVel=0.092446, maxAngVel=1.142857
+7886	Motor out: 0.459555,0.540445
+7886	angularVelocity	0.092446<<<VAR
+7898	Targetloc: Contour discarded.
+7964	dphi	0.013123<<<VAR
+7965	onGyroTurn: dphi=0.013123
+7965	Updating target angle: 0.092446.
+7965	To target angle: 0.079323.
+7965	targetAngle	0.079323<<<VAR
+7965	Setting angular vel to: 0.079323
+
+7965	emitTwoWheeledEvent: l=0.465296, r=0.534704, linearSpeed=0.080000, angularVel=0.079323, maxAngVel=1.142857
+7965	Motor out: 0.465296,0.534704
+7965	angularVelocity	0.079323<<<VAR
+7988	nWorld = 51
+7988	Running: AbstractTask::CloseObjectDetector::detect.
+7988	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7999	Target detected:0.542543,0.135309
+7999	Reactive: onTaskTerminated
+7999	ReactiveConfigurator: TargetReached: stopping.
+
+7999	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.079323, maxAngVel=0.000000
+7999	Motor out: 0.000000,0.000000
+7999	Setting angular vel to: 0.135309
+
+7999	emitTwoWheeledEvent: l=0.440802, r=0.559198, linearSpeed=0.080000, angularVel=0.135309, maxAngVel=1.142857
+7999	Motor out: 0.440802,0.559198
+7999	angularVelocity	0.135309<<<VAR
+7999	onTargetDetected	0.135309<<<VAR
+8043	dphi	0.020752<<<VAR
+8090	nWorld = 52
+8098	Target detected:0.529042,0.135539
+8099	Reactive: onTaskTerminated
+8099	ReactiveConfigurator: Target detected. We are targeting.
+
+8099	emitTwoWheeledEvent: l=0.465296, r=0.534704, linearSpeed=0.080000, angularVel=0.079323, maxAngVel=1.142857
+8099	Motor out: 0.465296,0.534704
+8099	onTargetDetected	0.135539<<<VAR
+8122	dphi	0.023804<<<VAR
+8122	onGyroTurn: dphi=0.023804
+8122	Updating target angle: 0.135539.
+8122	To target angle: 0.111735.
+8122	targetAngle	0.111735<<<VAR
+8122	Setting angular vel to: 0.111735
+
+8122	emitTwoWheeledEvent: l=0.451116, r=0.548884, linearSpeed=0.080000, angularVel=0.111735, maxAngVel=1.142857
+8122	Motor out: 0.451116,0.548884
+8122	angularVelocity	0.111735<<<VAR
+8184	nWorld = 53
+8184	Running: AbstractTask::CloseObjectDetector::detect.
+8184	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8199	Target detected:0.522767,0.130688
+8199	Reactive: onTaskTerminated
+8199	ReactiveConfigurator: TargetReached: stopping.
+
+8199	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.111735, maxAngVel=0.000000
+8199	Motor out: 0.000000,0.000000
+8199	Setting angular vel to: 0.130688
+
+8199	emitTwoWheeledEvent: l=0.442824, r=0.557176, linearSpeed=0.080000, angularVel=0.130688, maxAngVel=1.142857
+8199	Motor out: 0.442824,0.557176
+8199	angularVelocity	0.130688<<<VAR
+8199	onTargetDetected	0.130688<<<VAR
+8200	dphi	0.026550<<<VAR
+8279	dphi	0.013733<<<VAR
+8286	nWorld = 54
+8298	Target detected:0.513439,0.123515
+8298	Reactive: onTaskTerminated
+8298	ReactiveConfigurator: Target detected. We are targeting.
+
+8298	emitTwoWheeledEvent: l=0.451116, r=0.548884, linearSpeed=0.080000, angularVel=0.111735, maxAngVel=1.142857
+8299	Motor out: 0.451116,0.548884
+8299	onTargetDetected	0.123515<<<VAR
+8358	dphi	0.010071<<<VAR
+8358	onGyroTurn: dphi=0.010071
+8358	Updating target angle: 0.123515.
+8358	To target angle: 0.113445.
+8358	targetAngle	0.113445<<<VAR
+8358	Setting angular vel to: 0.113445
+
+8358	emitTwoWheeledEvent: l=0.450368, r=0.549632, linearSpeed=0.080000, angularVel=0.113445, maxAngVel=1.142857
+8358	Motor out: 0.450368,0.549632
+8358	angularVelocity	0.113445<<<VAR
+8388	nWorld = 55
+8388	Running: AbstractTask::CloseObjectDetector::detect.
+8388	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8399	Targetloc: Contour discarded.
+8436	dphi	0.020447<<<VAR
+8436	onGyroTurn: dphi=0.020447
+8436	Updating target angle: 0.113445.
+8436	To target angle: 0.092998.
+8436	targetAngle	0.092998<<<VAR
+8436	Setting angular vel to: 0.092998
+
+8436	emitTwoWheeledEvent: l=0.459313, r=0.540687, linearSpeed=0.080000, angularVel=0.092998, maxAngVel=1.142857
+8436	Motor out: 0.459313,0.540687
+8436	angularVelocity	0.092998<<<VAR
+8490	nWorld = 56
+8490	Running: AbstractTask::CloseObjectDetector::detect.
+8490	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8499	Target detected:0.492892,0.132752
+8499	Reactive: onTaskTerminated
+8499	ReactiveConfigurator: TargetReached: stopping.
+
+8499	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.092998, maxAngVel=0.000000
+8499	Motor out: 0.000000,0.000000
+8499	Setting angular vel to: 0.132752
+
+8499	emitTwoWheeledEvent: l=0.441921, r=0.558079, linearSpeed=0.080000, angularVel=0.132752, maxAngVel=1.142857
+8499	Motor out: 0.441921,0.558079
+8499	angularVelocity	0.132752<<<VAR
+8499	onTargetDetected	0.132752<<<VAR
+8515	dphi	0.027466<<<VAR
+8585	nWorld = 57
+8594	dphi	0.019836<<<VAR
+8599	Targetloc: Contour discarded.
+8672	dphi	0.025330<<<VAR
+8686	nWorld = 58
+8699	Target detected:0.473786,0.124162
+8699	Reactive: onTaskTerminated
+8699	ReactiveConfigurator: Target detected. We are targeting.
+
+8699	emitTwoWheeledEvent: l=0.459313, r=0.540687, linearSpeed=0.080000, angularVel=0.092998, maxAngVel=1.142857
+8699	Motor out: 0.459313,0.540687
+8699	onTargetDetected	0.124162<<<VAR
+8751	dphi	0.018311<<<VAR
+8751	onGyroTurn: dphi=0.018311
+8751	Updating target angle: 0.124162.
+8751	To target angle: 0.105852.
+8751	targetAngle	0.105852<<<VAR
+8751	Setting angular vel to: 0.105852
+
+8751	emitTwoWheeledEvent: l=0.453690, r=0.546310, linearSpeed=0.080000, angularVel=0.105852, maxAngVel=1.142857
+8751	Motor out: 0.453690,0.546310
+8751	angularVelocity	0.105852<<<VAR
+8789	nWorld = 59
+8789	Running: AbstractTask::CloseObjectDetector::detect.
+8789	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8799	Target detected:0.463635,0.121017
+8799	Reactive: onTaskTerminated
+8799	ReactiveConfigurator: TargetReached: stopping.
+
+8799	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.105852, maxAngVel=0.000000
+8799	Motor out: 0.000000,0.000000
+8799	Setting angular vel to: 0.121017
+
+8799	emitTwoWheeledEvent: l=0.447055, r=0.552945, linearSpeed=0.080000, angularVel=0.121017, maxAngVel=1.142857
+8799	Motor out: 0.447055,0.552945
+8799	angularVelocity	0.121017<<<VAR
+8799	onTargetDetected	0.121017<<<VAR
+8830	dphi	0.015564<<<VAR
+8883	nWorld = 60
+8900	Target detected:0.456390,0.123011
+8900	Reactive: onTaskTerminated
+8900	ReactiveConfigurator: Target detected. We are targeting.
+
+8900	emitTwoWheeledEvent: l=0.453690, r=0.546310, linearSpeed=0.080000, angularVel=0.105852, maxAngVel=1.142857
+8900	Motor out: 0.453690,0.546310
+8900	onTargetDetected	0.123011<<<VAR
+8908	dphi	0.028687<<<VAR
+8908	onGyroTurn: dphi=0.028687
+8908	Updating target angle: 0.123011.
+8908	To target angle: 0.094324.
+8908	targetAngle	0.094324<<<VAR
+8908	Setting angular vel to: 0.094324
+
+8908	emitTwoWheeledEvent: l=0.458733, r=0.541267, linearSpeed=0.080000, angularVel=0.094324, maxAngVel=1.142857
+8908	Motor out: 0.458733,0.541267
+8908	angularVelocity	0.094324<<<VAR
+8985	nWorld = 61
+8985	Running: AbstractTask::CloseObjectDetector::detect.
+8985	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8987	dphi	0.009155<<<VAR
+8987	onGyroTurn: dphi=0.009155
+8987	Updating target angle: 0.094324.
+8987	To target angle: 0.085169.
+8987	targetAngle	0.085169<<<VAR
+8987	Setting angular vel to: 0.085169
+
+8987	emitTwoWheeledEvent: l=0.462739, r=0.537261, linearSpeed=0.080000, angularVel=0.085169, maxAngVel=1.142857
+8987	Motor out: 0.462739,0.537261
+8987	angularVelocity	0.085169<<<VAR
+8999	Targetloc: Contour discarded.
+9066	dphi	0.003357<<<VAR
+9066	onGyroTurn: dphi=0.003357
+9066	Updating target angle: 0.085169.
+9066	To target angle: 0.081812.
+9066	targetAngle	0.081812<<<VAR
+9066	Setting angular vel to: 0.081812
+
+9066	emitTwoWheeledEvent: l=0.464207, r=0.535793, linearSpeed=0.080000, angularVel=0.081812, maxAngVel=1.142857
+9066	Motor out: 0.464207,0.535793
+9066	angularVelocity	0.081812<<<VAR
+9087	nWorld = 62
+9087	Running: AbstractTask::CloseObjectDetector::detect.
+9087	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9099	Targetloc: Contour discarded.
+9144	dphi	0.018921<<<VAR
+9144	onGyroTurn: dphi=0.018921
+9144	Updating target angle: 0.081812.
+9144	To target angle: 0.062891.
+9144	targetAngle	0.062891<<<VAR
+9144	Setting angular vel to: 0.062891
+
+9144	emitTwoWheeledEvent: l=0.472485, r=0.527515, linearSpeed=0.080000, angularVel=0.062891, maxAngVel=1.142857
+9144	Motor out: 0.472485,0.527515
+9144	angularVelocity	0.062891<<<VAR
+9181	nWorld = 63
+9181	Running: AbstractTask::CloseObjectDetector::detect.
+9181	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9199	Targetloc: Contour discarded.
+9224	dphi	0.014954<<<VAR
+9224	onGyroTurn: dphi=0.014954
+9224	Updating target angle: 0.062891.
+9224	To target angle: 0.047937.
+9224	targetAngle	0.047937<<<VAR
+9224	Setting angular vel to: 0.047937
+
+9224	emitTwoWheeledEvent: l=0.479027, r=0.520973, linearSpeed=0.080000, angularVel=0.047937, maxAngVel=1.142857
+9224	Motor out: 0.479027,0.520973
+9224	angularVelocity	0.047937<<<VAR
+9284	nWorld = 64
+9284	Running: AbstractTask::CloseObjectDetector::detect.
+9284	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9300	Target detected:0.430692,0.141985
+9300	Reactive: onTaskTerminated
+9300	ReactiveConfigurator: TargetReached: stopping.
+
+9300	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.047937, maxAngVel=0.000000
+9301	Motor out: 0.000000,0.000000
+9301	Setting angular vel to: 0.141985
+
+9301	emitTwoWheeledEvent: l=0.437882, r=0.562118, linearSpeed=0.080000, angularVel=0.141985, maxAngVel=1.142857
+9301	Motor out: 0.437882,0.562118
+9301	angularVelocity	0.141985<<<VAR
+9301	onTargetDetected	0.141985<<<VAR
+9301	dphi	0.015869<<<VAR
+9380	dphi	0.016479<<<VAR
+9386	nWorld = 65
+9400	Targetloc: Contour discarded.
+9459	dphi	0.019226<<<VAR
+9480	nWorld = 66
+9500	Target detected:0.410397,0.147038
+9500	Reactive: onTaskTerminated
+9500	ReactiveConfigurator: Target detected. We are targeting.
+
+9500	emitTwoWheeledEvent: l=0.479027, r=0.520973, linearSpeed=0.080000, angularVel=0.047937, maxAngVel=1.142857
+9500	Motor out: 0.479027,0.520973
+9500	onTargetDetected	0.147038<<<VAR
+9537	dphi	0.029907<<<VAR
+9537	onGyroTurn: dphi=0.029907
+9537	Updating target angle: 0.147038.
+9537	To target angle: 0.117131.
+9537	targetAngle	0.117131<<<VAR
+9537	Setting angular vel to: 0.117131
+
+9537	emitTwoWheeledEvent: l=0.448755, r=0.551245, linearSpeed=0.080000, angularVel=0.117131, maxAngVel=1.142857
+9537	Motor out: 0.448755,0.551245
+9537	angularVelocity	0.117131<<<VAR
+9582	nWorld = 67
+9582	Running: AbstractTask::CloseObjectDetector::detect.
+9582	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9600	Targetloc: Contour discarded.
+9616	dphi	0.020142<<<VAR
+9616	onGyroTurn: dphi=0.020142
+9616	Updating target angle: 0.117131.
+9616	To target angle: 0.096989.
+9616	targetAngle	0.096989<<<VAR
+9616	Setting angular vel to: 0.096989
+
+9616	emitTwoWheeledEvent: l=0.457567, r=0.542433, linearSpeed=0.080000, angularVel=0.096989, maxAngVel=1.142857
+9616	Motor out: 0.457567,0.542433
+9616	angularVelocity	0.096989<<<VAR
+9684	nWorld = 68
+9684	Running: AbstractTask::CloseObjectDetector::detect.
+9684	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9695	dphi	0.019836<<<VAR
+9695	onGyroTurn: dphi=0.019836
+9695	Updating target angle: 0.096989.
+9695	To target angle: 0.077153.
+9695	targetAngle	0.077153<<<VAR
+9695	Setting angular vel to: 0.077153
+
+9695	emitTwoWheeledEvent: l=0.466246, r=0.533754, linearSpeed=0.080000, angularVel=0.077153, maxAngVel=1.142857
+9695	Motor out: 0.466246,0.533754
+9695	angularVelocity	0.077153<<<VAR
+9700	Target detected:0.391443,0.136885
+9700	Reactive: onTaskTerminated
+9700	ReactiveConfigurator: TargetReached: stopping.
+
+9700	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.077153, maxAngVel=0.000000
+9700	Motor out: 0.000000,0.000000
+9700	Setting angular vel to: 0.136885
+
+9700	emitTwoWheeledEvent: l=0.440113, r=0.559887, linearSpeed=0.080000, angularVel=0.136885, maxAngVel=1.142857
+9701	Motor out: 0.440113,0.559887
+9701	angularVelocity	0.136885<<<VAR
+9701	onTargetDetected	0.136885<<<VAR
+9773	dphi	0.013428<<<VAR
+9786	nWorld = 69
+9806	Targetloc: Contour discarded.
+9852	dphi	0.019836<<<VAR
+9888	nWorld = 70
+9901	Targetloc: Contour discarded.
+9931	dphi	0.018616<<<VAR
+9983	nWorld = 71
+10001	Targetloc: Contour discarded.
+10009	dphi	0.022278<<<VAR
+10085	nWorld = 72
+10088	dphi	0.027466<<<VAR
+10100	Targetloc: Contour discarded.
+10167	dphi	0.022888<<<VAR
+10187	nWorld = 73
+10200	Targetloc: Contour discarded.
+10245	dphi	0.021973<<<VAR
+10289	nWorld = 74
+10302	Targetloc: Contour discarded.
+10325	dphi	0.019836<<<VAR
+10391	nWorld = 75
+10402	Target detected:0.318783,0.132718
+10402	Reactive: onTaskTerminated
+10402	ReactiveConfigurator: Target detected. We are targeting.
+
+10402	emitTwoWheeledEvent: l=0.466246, r=0.533754, linearSpeed=0.080000, angularVel=0.077153, maxAngVel=1.142857
+10402	Motor out: 0.466246,0.533754
+10402	onTargetDetected	0.132718<<<VAR
+10402	dphi	0.021667<<<VAR
+10402	onGyroTurn: dphi=0.021667
+10402	Updating target angle: 0.132718.
+10402	To target angle: 0.111050.
+10402	targetAngle	0.111050<<<VAR
+10402	Setting angular vel to: 0.111050
+
+10402	emitTwoWheeledEvent: l=0.451415, r=0.548585, linearSpeed=0.080000, angularVel=0.111050, maxAngVel=1.142857
+10402	Motor out: 0.451415,0.548585
+10402	angularVelocity	0.111050<<<VAR
+10481	dphi	0.026855<<<VAR
+10481	onGyroTurn: dphi=0.026855
+10481	Updating target angle: 0.111050.
+10481	To target angle: 0.084195.
+10481	targetAngle	0.084195<<<VAR
+10481	Setting angular vel to: 0.084195
+
+10481	emitTwoWheeledEvent: l=0.463165, r=0.536835, linearSpeed=0.080000, angularVel=0.084195, maxAngVel=1.142857
+10481	Motor out: 0.463165,0.536835
+10481	angularVelocity	0.084195<<<VAR
+10485	nWorld = 76
+10485	Running: AbstractTask::CloseObjectDetector::detect.
+10485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10485	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.334073, bodyflag=0, area=0.007800
+10485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10485	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.339559, bodyflag=0, area=0.000001
+10485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10485	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.339559, bodyflag=0, area=0.000020
+10485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10485	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.332415, bodyflag=0, area=0.000001
+10485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10485	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.738376, bodyflag=0, area=0.008934
+10485	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10502	Targetloc: Contour discarded.
+10560	dphi	0.027466<<<VAR
+10560	onGyroTurn: dphi=0.027466
+10560	Updating target angle: 0.084195.
+10560	To target angle: 0.056729.
+10560	targetAngle	0.056729<<<VAR
+10560	Setting angular vel to: 0.056729
+
+10560	emitTwoWheeledEvent: l=0.475181, r=0.524819, linearSpeed=0.080000, angularVel=0.056729, maxAngVel=1.142857
+10560	Motor out: 0.475181,0.524819
+10560	angularVelocity	0.056729<<<VAR
+10587	nWorld = 77
+10587	Running: AbstractTask::CloseObjectDetector::detect.
+10587	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10587	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.332415, bodyflag=0, area=0.000001
+10587	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10587	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310618, bodyflag=0, area=0.004471
+10587	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10587	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.734672, bodyflag=0, area=0.009546
+10587	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10638	dphi	0.018921<<<VAR
+10638	onGyroTurn: dphi=0.018921
+10638	Updating target angle: 0.056729.
+10638	To target angle: 0.037808.
+10638	targetAngle	0.037808<<<VAR
+10638	Setting angular vel to: 0.037808
+
+10638	emitTwoWheeledEvent: l=0.483459, r=0.516541, linearSpeed=0.080000, angularVel=0.037808, maxAngVel=1.142857
+10638	Motor out: 0.483459,0.516541
+10638	angularVelocity	0.037808<<<VAR
+10689	nWorld = 78
+10689	Running: AbstractTask::CloseObjectDetector::detect.
+10689	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10689	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.722206, bodyflag=0, area=0.011236
+10689	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10689	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.351746, bodyflag=0, area=0.000041
+10689	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10689	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.322800, bodyflag=0, area=0.000001
+10689	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10689	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.293100, bodyflag=0, area=0.004300
+10689	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10720	dphi	0.004272<<<VAR
+10720	onGyroTurn: dphi=0.004272
+10720	Updating target angle: 0.037808.
+10720	To target angle: 0.033536.
+10720	targetAngle	0.033536<<<VAR
+10720	Setting angular vel to: 0.033536
+
+10720	emitTwoWheeledEvent: l=0.485328, r=0.514672, linearSpeed=0.080000, angularVel=0.033536, maxAngVel=1.142857
+10720	Motor out: 0.485328,0.514672
+10720	angularVelocity	0.033536<<<VAR
+10791	nWorld = 79
+10791	Running: AbstractTask::CloseObjectDetector::detect.
+10791	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10791	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.313209, bodyflag=0, area=0.000001
+10792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.313209, bodyflag=0, area=0.000001
+10792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.704817, bodyflag=0, area=0.009869
+10792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.352278, bodyflag=0, area=0.000001
+10792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.301281, bodyflag=0, area=0.006000
+10796	dphi	0.005798<<<VAR
+10796	onGyroTurn: dphi=0.005798
+10796	Updating target angle: 0.033536.
+10796	To target angle: 0.027737.
+10796	targetAngle	0.027737<<<VAR
+10796	Setting angular vel to: 0.027737
+
+10796	emitTwoWheeledEvent: l=0.487865, r=0.512135, linearSpeed=0.080000, angularVel=0.027737, maxAngVel=1.142857
+10796	Motor out: 0.487865,0.512135
+10796	angularVelocity	0.027737<<<VAR
+10886	nWorld = 80
+10886	Running: AbstractTask::CloseObjectDetector::detect.
+10886	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10886	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.300832, bodyflag=0, area=0.000020
+10886	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10886	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303645, bodyflag=0, area=0.000001
+10886	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10886	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.682577, bodyflag=0, area=0.008188
+10886	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10886	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10886	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.294083, bodyflag=0, area=0.007800
+12186	END

@@ -158,9 +158,16 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     virtual void onTargetDetected (float r, float phi, int targetIndex = 0);
 
     /**
-    * Task needs to take into account the new gyro readings
+     * Gyro rotation of the robot. Called from the gyro driver.
+     * Needs to be implemented by tasks below.
+     */
+    virtual void onGyroTurn (float dphi) = 0;
+
+    /**
+    * Task takes into account the new gyro reading and corrects the target pos.
+    * Can be called by onGyroTurn.
     */
-    virtual void onGyroTurn (float dphi);
+    void correctTargetAngleWithGyro(float dphi);
 
     /**
     * Callback when the task is started
@@ -273,6 +280,9 @@ class StopTask : public AbstractTask
                                std::shared_ptr<Robot> robot) override
     {
     }
+    
+    virtual void onGyroTurn(float dphi) override {
+    }
 
     /**
      * Target is detected and that triggers the termination of the stop task
@@ -312,6 +322,9 @@ class EndTask : public AbstractTask
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
     }
+
+    virtual void onGyroTurn(float dphi) override {
+    }
 };
 
 /**
@@ -342,7 +355,7 @@ class TargetTask : public AbstractTask
                 terminatedEvent (tm);
             }
         }
-        updateTargeting ();
+        targetAngle2MotorAngularVelocity ();
     }
 
     /**
@@ -350,8 +363,8 @@ class TargetTask : public AbstractTask
      */
     virtual void onGyroTurn (float dphi) override
     {
-        AbstractTask::onGyroTurn (dphi);
-        updateTargeting ();
+        correctTargetAngleWithGyro(dphi);
+        targetAngle2MotorAngularVelocity ();
     }
 
     /**
@@ -382,7 +395,7 @@ class TargetTask : public AbstractTask
 
   private:
     // Adjusts steering angle that we drive towards the target.
-    void updateTargeting ()
+    void targetAngle2MotorAngularVelocity ()
     {
         if (targetAngle)
         {
@@ -440,6 +453,13 @@ class AvoidTask : public AbstractTask
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot) override;
+
+    /**
+     * gyroEvent
+     */
+     void onGyroTurn(float dphi) override {
+        correctTargetAngleWithGyro(dphi);
+     }
 
   protected:
     class BraitenbergAvoider : public b2QueryCallback

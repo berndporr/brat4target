@@ -68,7 +68,7 @@ void AbstractTask::onTargetDetected (float r, float phi, int)
     }
 }
 
-void AbstractTask::onGyroTurn (float dphi)
+void AbstractTask::correctTargetAngleWithGyro(float dphi)
 {
     bratlogger.log ("onGyroTurn: dphi=%f", dphi);
     if (targetAngle.has_value ())
