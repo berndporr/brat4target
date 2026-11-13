@@ -6,6 +6,7 @@
 #include "lib/targetloc.h"
 #include "lib/worldbuilder.h"
 #include "zetabot.h"
+#include <LSM6DSOXSample.h>
 #include <iostream>
 
 int main (int nargs, char **argv)
@@ -26,11 +27,11 @@ int main (int nargs, char **argv)
     ReactiveConfigurator configurator;
     ZetaBot zetabot;
     LSM6DSOX lsm6dS0x;
-    lsm6dS0x.setGyroSamplingRate (GyroSettings::GYRO_ODR_12_5);
-    const float gyrofs = 12.5;
+    LSMSettings lsmsettings;
+    lsmsettings.samplingRate = LSMSettings::ODR_12_5;
 
     lsm6dS0x.registerCallback ([&] (const LSM6DSOXSample &s) {
-        configurator.onGyroTurn (-s.gz / gyrofs);
+        configurator.onGyroTurn (-s.gz / lsm6dS0x.getODR());
     });
 
     configurator.registerMotorEvent ([&] (float l, float r) {
@@ -96,7 +97,7 @@ int main (int nargs, char **argv)
     }
 
     targetLoc.start ();
-    lsm6dS0x.start ();
+    lsm6dS0x.start (lsmsettings);
 
     // We are starting from the stoptask
     configurator.setCurrentTask (std::make_shared<StopTask> ());
