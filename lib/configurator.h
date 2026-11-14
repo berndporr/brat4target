@@ -168,9 +168,8 @@ class ReactiveConfigurator : public BaseConfigurator
   public:
     /**
      * Translates termination reasons from the termination message into
-     * a new task following the task which has has been terminated.
-     * It constructs a new task and returns it.
-     * This method is static so that the tests can test it without
+     * a new task. It constructs that new task and returns it.
+     * This method is static so that unit tests can test it without
      * creating an instance of the configurator.
      **/
     static std::shared_ptr<AbstractTask>
@@ -181,16 +180,16 @@ class ReactiveConfigurator : public BaseConfigurator
         {
         case AbstractTask::TerminationMessage::TargetDetected:
             bratlogger.log (
-                "ReactiveConfigurator: Target detected. We are targeting.\n");
+                "ReactiveConfigurator: Target detected. We are targeting.");
             return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
-            bratlogger.log ("ReactiveConfigurator: Obstacle detected.\n");
+            bratlogger.log ("ReactiveConfigurator: Obstacle detected.");
             if (tm.taskWhichSentMessage->getThreatAngle ())
             {
                 if (tm.taskWhichSentMessage->getThreatAngle ().value () > 0)
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "RIGHT b/c obstacle to the left.\n");
+                                    "RIGHT b/c obstacle to the left.");
                     return std::make_shared<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::RIGHT);
@@ -198,7 +197,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 else
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "LEFT b/c obstacle to the right.\n");
+                                    "LEFT b/c obstacle to the right.");
                     return std::make_shared<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::LEFT);
@@ -209,7 +208,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 if (random () & 1)
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "LEFT b/c random choice.\n");
+                                    "LEFT b/c random choice.");
                     return std::make_shared<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::LEFT);
@@ -217,7 +216,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 else
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "RIGHT b/c random choice.\n");
+                                    "RIGHT b/c random choice.");
                     return std::make_shared<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::LEFT);
@@ -226,19 +225,19 @@ class ReactiveConfigurator : public BaseConfigurator
             break;
         case AbstractTask::TerminationMessage::ObstacleAvoided:
             bratlogger.log ("ReactiveConfigurator: Obstacle avoided. Now "
-                            "targeting again.\n");
+                            "targeting again.");
             return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::TargetReached:
             bratlogger.log (
-                "ReactiveConfigurator: TargetReached: stopping.\n");
+                "ReactiveConfigurator: TargetReached: stopping.");
             return std::make_shared<StopTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::INVALID:
             bratlogger.log (
-                "ReactiveConfigurator: Message==INVALID (BUG?): stopping.\n");
+                "ReactiveConfigurator: Message==INVALID (BUG?): stopping.");
             return std::make_shared<StopTask> (tm.taskWhichSentMessage);
         }
         bratlogger.log (
-            "ReactiveConfigurator: Message==??? (BUG?): stopping.\n");
+            "ReactiveConfigurator: Message==??? (BUG?): stopping.");
         return std::make_shared<StopTask> (tm.taskWhichSentMessage);
     }
 
