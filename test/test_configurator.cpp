@@ -22,6 +22,7 @@ CoordinateContainer loadLIDARdata (const char *filename)
 
 void avoid_obstacle_drive_to_arget ()
 {
+    bratlogger.start ("/tmp", "test_configurator");
     printf ("->>> Reactive configurator test:\n");
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");

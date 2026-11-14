@@ -25,7 +25,7 @@ void BaseConfigurator::TaskSimulator::checkTarget (
     }
     bratlogger.log("SIM: Target det at r=%f, phi=%f\n", localDelta.Length (),
              relativeTargetAngle);
-    task->onTargetDetected (localDelta.Length (), relativeTargetAngle);
+    task->onTargetDetected (delta.Length (), relativeTargetAngle);
 }
 
 AbstractTask::TerminationMessage

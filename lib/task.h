@@ -72,7 +72,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
         /**
          * @brief The termination reason why this has happened here.
-         */ 
+         */
         TerminationReason terminationReason = INVALID;
 
         /** 
@@ -409,6 +409,9 @@ class TargetTask : public AbstractTask
         targetAngle = phi;
         if (r < targetArrivedDistance)
         {
+            bratlogger.log (
+                "onTargetDetected in TargetTask: We have arrived. r=%f < %f",
+                r, targetArrivedDistance);
             if (terminatedEvent)
             {
                 TerminationMessage tm (TerminationMessage::TargetReached,
