@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classWorldBuilder.html" title=" " alt="" coords="5,5,100,32"/>
-<area shape="rect" id="Node000001" href="$classWorldClusterBuilder.html" title=" " alt="" coords="148,5,284,32"/>
-<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="115,16,150,18,145,19,116,21"/>
-<area shape="rect" id="Node000002" href="$classFocusedBuilder.html" title=" " alt="" coords="332,5,443,32"/>
-<area shape="poly" id="edge11_Node000001_Node000002" title=" " alt="" coords="300,16,334,19,329,19,300,21"/>
+<area shape="rect" id="Node000000" href="$classWorldBuilder.html" title=" " alt="" coords="5,5,110,33"/>
+<area shape="rect" id="Node000001" href="$classWorldClusterBuilder.html" title=" " alt="" coords="158,5,308,33"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="125,17,160,19,154,19,126,22"/>
+<area shape="rect" id="Node000002" href="$classFocusedBuilder.html" title=" " alt="" coords="356,5,476,33"/>
+<area shape="poly" id="edge11_Node000001_Node000002" title=" " alt="" coords="323,17,358,19,353,19,324,22"/>
 </map>

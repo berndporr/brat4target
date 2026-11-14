@@ -91,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a22fb9abbea894c311bc6c5c509cf62d8" id="r_a22fb9abbea894c311bc6c5c509cf62d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22fb9abbea894c311bc6c5c509cf62d8">run</a> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; task, const char *plan_file=nullptr)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simulates a task in the gaming engine box2d till it terminates. Then returns the result. It's not suggesting the next task but just reports why it has terminated. The configurator flavour needs to then decide what to do next. The simulator can be called with a chain of tasks. </p>
+<div class="textblock"><p>Simulates a task in the gaming engine box2d till it terminates. Then returns the termination message. It's not suggesting the next task but just reports why it has terminated. The configurator flavour needs to then decide what to do next. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a53e976cc009595a36a9e31a4021d4563" name="a53e976cc009595a36a9e31a4021d4563"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53e976cc009595a36a9e31a4021d4563">&#9670;&#160;</a></span>TaskSimulator()</h2>
@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The simulator it initialised with the world (LIDAR scan) </p>
+<p>The simulator it initialised with the world (LIDAR scan). The LIDAR scan stay the same while <a class="el" href="#a22fb9abbea894c311bc6c5c509cf62d8">run()</a> can be called with different tasks. </p>
 
 </div>
 </div>
@@ -168,7 +168,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Setting the target locaton. This will then be turned into callbacks to onTargetDetected. </p>
+<p>Setting the target locaton. This will then be turned into callbacks to onTargetDetected for the task being executed. </p>
 
 </div>
 </div>

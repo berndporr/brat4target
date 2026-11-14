@@ -19,7 +19,10 @@ The navigation problem is broken down into attraction and avoidance Braitenberg 
 
 ## Hardware
 
-[Zetabot](https://github.com/berndporr/zetabot))
+- [Zetabot](https://github.com/berndporr/zetabot)
+- [LSM6DSOX](https://github.com/berndporr/LSM6DSOX_RPi)
+- [Slamtec RPLIDAR C1](https://github.com/berndporr/c1lidar)
+- OV9281 global shutter camera
 
 ## Software
 ### Development packages

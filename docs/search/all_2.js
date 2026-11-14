@@ -8,6 +8,5 @@ var searchData=
   ['comparex_5',['CompareX',['../structCompareX.html',1,'']]],
   ['comparey_6',['CompareY',['../structCompareY.html',1,'']]],
   ['coordinatecontainer_7',['CoordinateContainer',['../worldbuilder_8h.html#a15cb8a93bbcef95d669c3c39ed27ca90',1,'worldbuilder.h']]],
-  ['correcttargetanglewithgyro_8',['correctTargetAngleWithGyro',['../classAbstractTask.html#a7615a73314f8785e7a16946d860ea68a',1,'AbstractTask']]],
-  ['credits_9',['Credits',['../index.html#autotoc_md7',1,'']]]
+  ['credits_8',['Credits',['../index.html#autotoc_md7',1,'']]]
 ];

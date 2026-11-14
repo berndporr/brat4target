@@ -12,7 +12,7 @@
 #include <optional>
 
 /**
- * @brief Turns sensor events into motor outputs in a reactive way
+ * Turns sensor events into motor outputs in a reactive way
  * This is an abstract task which has all common features of the derived classes
  * such as attracion or avoidance.
  * Units are physical units. The Speed it m/s and converted here to
@@ -41,7 +41,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
     /**
      * Motor event callback which drives the wheels of the robot. Values
-     * of l and r are between -1 and +1. Not physical speed.
+     * of l and r are between -1 and +1. Not physical speed but servo speed.
      */
     using MotorEvent = std::function<void (const float l, const float r)>;
 
@@ -92,6 +92,10 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     void registerTerminated (TerminatedEvent te) { terminatedEvent = te; }
 
+    /**
+     * Gets the max anglular velocity of the robot which depends on its wheel
+     * speed. At max angular velocity the robot just rotates around its axis.
+     */
     float getMaxAngularVelocity () const
     {
         return 2.0f * linearSpeed / BETWEEN_WHEELS;
@@ -130,13 +134,14 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     void setAngularVelocity (const float a)
     {
-        bratlogger.log ("Setting angular vel to: %f\n", a);
+        bratlogger.log ("Setting angular vel to: %f.", a);
         angularVelocity = a;
         emitTwoWheeledEvent ();
     }
 
     /**
      * Sets the linear speed in m/s. It's converted here to motor units.
+     * This triggers a motor event.
      */
     void setLinearSpeed (const float s)
     {
@@ -145,32 +150,29 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     }
 
     /**
+     * Event: new LIDAR scan.
      * Task needs to react to the LIDAR world. Needs to be fille with content
-     * by its derives classes.
+     * by its derived classes.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot)
         = 0;
 
     /**
+    * Event: new target angle.
     * Task needs to incorporate new target angle info from the camera.
     */
     virtual void onTargetDetected (float r, float phi, int targetIndex = 0);
 
     /**
+     * Event: new gyro rotation.
      * Gyro rotation of the robot. Called from the gyro driver.
      * Needs to be implemented by tasks below.
      */
     virtual void onGyroTurn (float dphi) = 0;
 
     /**
-    * Task takes into account the new gyro reading and corrects the target pos.
-    * Can be called by onGyroTurn.
-    */
-    void correctTargetAngleWithGyro(float dphi);
-
-    /**
-    * Callback when the task is started
+    * Event: called when the task is started.
     */
     virtual void onStart () = 0;
 
@@ -190,6 +192,8 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     bool isMoving () const { return fabs (linearSpeed) > 0; }
 
   protected:
+    void correctTargetAngleWithGyro (float dphi);
+
     class CloseObjectDetector : public b2QueryCallback
     {
       public:
@@ -219,14 +223,16 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
   public:
     /**
-     * To create the 1st task on a chain of tasks.
+     * To create the 1st task in a chain of tasks.
+     * This won't inherit anything from previous tasks so uses default values.
      */
     AbstractTask () = default;
 
     /**
      * Creates a task based on a previous one receiving
      * all the previous internal values such as linear speed
-     * or angular velocity.
+     * or angular velocity. And most importantly where the
+     * target is!
      */
     AbstractTask (std::shared_ptr<AbstractTask> at)
     {
@@ -253,7 +259,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     std::optional<float> getTargetDistance () { return targetDistance; };
 
     /**
-     * Get the angle of a potential threat
+     * Gets the angle of a potential threat. It's optional as there might be no threat.
      */
     std::optional<float> getThreatAngle () { return threatAngle; }
 
@@ -275,16 +281,27 @@ class StopTask : public AbstractTask
   public:
     StopTask () : AbstractTask () {}
     StopTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
+
+    /**
+     * Event: when the task is starting we set the robot's speed to zero.
+     */
     virtual void onStart () override { setLinearSpeed (0); }
+
+    /**
+     * Event: New LIDAR scan. Ignore!
+     */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                std::shared_ptr<Robot> robot) override
     {
     }
-    
-    virtual void onGyroTurn(float dphi) override {
-    }
 
     /**
+     * Event: new gyro rotation. Ignore!
+     */
+    virtual void onGyroTurn (float dphi) override {}
+
+    /**
+     * Event: target detected.
      * Target is detected and that triggers the termination of the stop task
      * and then emits a message that we have a target.
      */
@@ -302,7 +319,8 @@ class StopTask : public AbstractTask
 };
 
 /**
- * Task which is doing nothing and won't terminate.
+ * Task which is doing nothing and won't terminate. This can be created
+ * once a target has been reached.
  */
 class EndTask : public AbstractTask
 {
@@ -323,8 +341,7 @@ class EndTask : public AbstractTask
     {
     }
 
-    virtual void onGyroTurn(float dphi) override {
-    }
+    virtual void onGyroTurn (float dphi) override {}
 };
 
 /**
@@ -336,8 +353,16 @@ class TargetTask : public AbstractTask
     TargetTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
     TargetTask () = default;
 
+    /** 
+     * Steering gain turning the target angle into a steering angle.
+     * Default is defined in const.h.
+     */
     float targetSteeringGain = TARGET_STEERING_GAIN;
 
+    /**
+     * Event: called when the task is starting. We set the linear speed
+     * to the default speed defined in const.h (fixme!).
+     */
     virtual void onStart () override { setLinearSpeed (LINEAR_SPEED_DEFAULT); }
 
     /**
@@ -359,15 +384,19 @@ class TargetTask : public AbstractTask
     }
 
     /**
+     * Event: new robot rotation info.
      * Task needs to take into account the new gyro readings
      */
     virtual void onGyroTurn (float dphi) override
     {
-        correctTargetAngleWithGyro(dphi);
+        // We correct the target angle with the robot rotation.
+        correctTargetAngleWithGyro (dphi);
+        // We generate a new motor event based on the new target angle.
         targetAngle2MotorAngularVelocity ();
     }
 
     /**
+     * Event: New LIDAR scan.
      * We need to check if we are crashing into an obstacle and to terminate
      * the task!
      */
@@ -400,7 +429,7 @@ class TargetTask : public AbstractTask
         if (targetAngle)
         {
             setAngularVelocity (targetAngle.value () * targetSteeringGain);
-            bratlogger.logVariable("angularVelocity",angularVelocity);
+            bratlogger.logVariable ("angularVelocity", angularVelocity);
         }
     }
 };
@@ -444,7 +473,8 @@ class AvoidTask : public AbstractTask
     AvoidTask () = delete;
 
     /**
-     * Called when the task is starting.
+     * Event: Called when the task is starting.
+     * Sets the default speed based on const.h.
      */
     virtual void onStart () override { setLinearSpeed (LINEAR_SPEED_DEFAULT); }
 
@@ -455,11 +485,13 @@ class AvoidTask : public AbstractTask
                                std::shared_ptr<Robot> robot) override;
 
     /**
-     * gyroEvent
+     * gyroEvent: most likely the camera can't see the target so
+     * we correct the target angle with the gyro readings.
      */
-     void onGyroTurn(float dphi) override {
-        correctTargetAngleWithGyro(dphi);
-     }
+    void onGyroTurn (float dphi) override
+    {
+        correctTargetAngleWithGyro (dphi);
+    }
 
   protected:
     class BraitenbergAvoider : public b2QueryCallback

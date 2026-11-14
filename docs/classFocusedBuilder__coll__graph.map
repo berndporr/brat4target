@@ -1,9 +1,9 @@
 <map id="FocusedBuilder" name="FocusedBuilder">
-<area shape="rect" id="Node000001" title=" " alt="" coords="24,277,135,304"/>
-<area shape="rect" id="Node000002" href="$classWorldClusterBuilder.html" title=" " alt="" coords="11,201,148,228"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,241,82,278,77,276,78,245"/>
-<area shape="rect" id="Node000003" href="$classWorldBuilder.html" title=" " alt="" coords="32,125,127,152"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,165,82,202,77,200,78,170"/>
-<area shape="rect" id="Node000004" href="$classSpeedAvgFilter.html" title=" " alt="" coords="5,5,154,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="80,45,82,125,77,125,79,50"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,282,148,310"/>
+<area shape="rect" id="Node000002" href="$classWorldClusterBuilder.html" title=" " alt="" coords="12,205,163,233"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,247,90,283,85,281,86,250"/>
+<area shape="rect" id="Node000003" href="$classWorldBuilder.html" title=" " alt="" coords="35,128,140,156"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,169,90,206,85,204,86,174"/>
+<area shape="rect" id="Node000004" href="$classSpeedAvgFilter.html" title=" " alt="" coords="5,5,170,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,46,90,128,85,127,87,51"/>
 </map>

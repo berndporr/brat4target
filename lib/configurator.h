@@ -29,6 +29,7 @@ class BaseConfigurator
     BaseConfigurator () = default;
 
     /**
+     * Event: new LIDAR scan.
      * Needs to react to the LIDAR world. Feeds this simply to the current task.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world)
@@ -38,6 +39,7 @@ class BaseConfigurator
     }
 
     /**
+     * Event: new target detected.
      * Task needs to incorporate new target angle info from the camera.
      * Feeds it to the current task.
      */
@@ -51,6 +53,7 @@ class BaseConfigurator
     }
 
     /**
+     * Event: New robot rotation event detected.
      * Task needs to take into account the new gyro readings.
      * Feeds it into the current task.
      */
@@ -91,23 +94,17 @@ class BaseConfigurator
     void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
     /**
-     * Sets the default speed. That's mostly if we have a stop task and the next
-     * task needs an initial speed. Fixme: at the moment the speed is enforced.
-     */
-    void setDefaultSpeed (float speed) { defaultSpeed = speed; }
-
-    /**
      * Simulates a task in the gaming engine box2d till it terminates.
-     * Then returns the result. It's not suggesting the next task but
+     * Then returns the termination message. It's not suggesting the next task but
      * just reports why it has terminated. The configurator flavour needs
-     * to then decide what to do next. The simulator can be called
-     * with a chain of tasks.
+     * to then decide what to do next.
      */
     class TaskSimulator
     {
       public:
         /**
-         * The simulator it initialised with the world (LIDAR scan)
+         * The simulator it initialised with the world (LIDAR scan). The LIDAR
+         * scan stay the same while run() can be called with different tasks.
          */
         TaskSimulator (std::shared_ptr<b2World> _world)
         {
@@ -121,7 +118,7 @@ class BaseConfigurator
 
         /**
          * Setting the target locaton. This will then be turned into
-         * callbacks to onTargetDetected.
+         * callbacks to onTargetDetected for the task being executed.
          */
         void setTarget (float r, float phi)
         {
@@ -160,13 +157,22 @@ class BaseConfigurator
   private:
     AbstractTask::MotorEvent motorEvent;
     std::shared_ptr<AbstractTask> currentTask = std::make_shared<StopTask> ();
-    float defaultSpeed = 0.5;
 };
 
+/**
+ * The reactive configurator won't use the simulation engine and directly
+ * decides on a new task without imagining what might happen in the future.
+ */
 class ReactiveConfigurator : public BaseConfigurator
 {
   public:
-    // static so that the tests can test it without touching the configurator state.
+    /**
+     * Translates termination reasons from the termination message into
+     * a new task following the task which has has been terminated.
+     * It constructs a new task and returns it.
+     * This method is static so that the tests can test it without
+     * creating an instance of the configurator.
+     **/
     static std::shared_ptr<AbstractTask>
     terminationMessage2task (AbstractTask::TerminationMessage tm)
     {
@@ -236,9 +242,17 @@ class ReactiveConfigurator : public BaseConfigurator
         return std::make_shared<StopTask> (tm.taskWhichSentMessage);
     }
 
+    /**
+     * Max number of tasks in a sequence. If it's more than max tasks the
+     * configurator will stop the robot with a EndTask.
+     */
     void setMaxTasks (int mt) { maxTasks = mt; }
 
   protected:
+    /**
+     * Event: the current task has signalled that it's terminated.
+     * Create a new task if the number of max tasks hasn't been reached.
+     */
     virtual void
     onTaskTerminated (AbstractTask::TerminationMessage tm) override
     {
