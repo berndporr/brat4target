@@ -1,0 +1,7 @@
+<map id="WorldClusterBuilder" name="WorldClusterBuilder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,201,148,228"/>
+<area shape="rect" id="Node000002" href="$classWorldBuilder.html" title=" " alt="" coords="32,125,127,152"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,165,82,202,77,200,78,169"/>
+<area shape="rect" id="Node000003" href="$classSpeedAvgFilter.html" title=" " alt="" coords="5,5,154,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,46,82,125,77,124,78,50"/>
+</map>

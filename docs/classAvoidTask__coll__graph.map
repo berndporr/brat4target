@@ -1,0 +1,7 @@
+<map id="AvoidTask" name="AvoidTask">
+<area shape="rect" id="Node000001" title=" " alt="" coords="55,171,138,197"/>
+<area shape="rect" id="Node000002" href="$classAbstractTask.html" title="Turns sensor events into motor outputs in a reactive way This is an abstract task which has all commo..." alt="" coords="47,96,146,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,137,99,171,94,169,95,140"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,188,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,62,99,96,94,95,95,66"/>
+</map>

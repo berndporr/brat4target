@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,73,137,116"/>
+<area shape="rect" id="Node000001" href="$classAbstractTask.html" title="Turns sensor events into motor outputs in a reactive way This is an abstract task which has all commo..." alt="" coords="185,81,283,108"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="151,92,187,94,182,96,153,97"/>
+<area shape="rect" id="Node000002" href="$classAvoidTask.html" title=" " alt="" coords="332,5,415,32"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="272,71,345,34,350,31,275,76"/>
+<area shape="rect" id="Node000003" href="$classEndTask.html" title=" " alt="" coords="338,56,410,83"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="298,80,339,75,334,77,299,86"/>
+<area shape="rect" id="Node000004" href="$classStopTask.html" title=" " alt="" coords="336,107,412,133"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="299,104,338,113,333,113,299,109"/>
+<area shape="rect" id="Node000005" href="$classTargetTask.html" title=" " alt="" coords="331,157,416,184"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="274,113,350,157,345,157,273,118"/>
+</map>
