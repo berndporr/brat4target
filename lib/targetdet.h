@@ -6,7 +6,7 @@
 #include <vector>
 
 /**
- * Sync or async QR code detector.
+ * @brief Sync or async QR code detector.
  * Class allows async QR code detection so that if it takes too long it
  * can run in a different thread.
  */
@@ -17,22 +17,24 @@ class TargetDet
     cv::QRCodeDetector qrDetector;
 
     /**
-     * Callback for the contour surrounding the QR code
+     * @brief Callback for the contour surrounding the QR code
      */
     using OnDetected = std::function<void (const std::vector<cv::Point2f> &)>;
 
     /**
-     * Synchronous detection of the QR code. Might take longer than the framerate.
+     * @brief Synchronous detection of the QR code. 
+     * Might take longer than the framerate so better not calling this directly.
      */
     const std::vector<cv::Point2f> detectSync (const cv::Mat img);
 
     /**
-     * Async detection of the QR code. Calls then the callback with the contour.
+     * @brief Async detection of the QR code. 
+     * This is a non-blocking call and when finished it calls then the callback with the contour.
      */
     void detectAsync (const cv::Mat img);
 
     /**
-     * Registers callback which receives the contour of the QR code.
+     * @brief Registers callback which receives the contour of the QR code.
      */
     void registerDetCallback (OnDetected cb) { onDetected = cb; }
 

@@ -80,17 +80,28 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Sync or async QR code detector. Class allows async QR code detection so that if it takes too long it can run in a different thread.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="targetdet_8h_source.html">targetdet.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac066640e2d59eab0e837b969639da087" id="r_ac066640e2d59eab0e837b969639da087"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac066640e2d59eab0e837b969639da087">OnDetected</a> = std::function&lt;void (const std::vector&lt;cv::Point2f&gt; &amp;)&gt;</td></tr>
+<tr class="memitem:ac066640e2d59eab0e837b969639da087" id="r_ac066640e2d59eab0e837b969639da087"><td class="memItemLeft" align="right" valign="top"><a id="ac066640e2d59eab0e837b969639da087" name="ac066640e2d59eab0e837b969639da087"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>OnDetected</b> = std::function&lt;void (const std::vector&lt;cv::Point2f&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ac066640e2d59eab0e837b969639da087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for the contour surrounding the QR code. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a72866ca99fdca4157f501239821ab3da" id="r_a72866ca99fdca4157f501239821ab3da"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72866ca99fdca4157f501239821ab3da">detectSync</a> (const cv::Mat img)</td></tr>
-<tr class="memitem:a42d7faf7f46d6851969bbde0fee6acc0" id="r_a42d7faf7f46d6851969bbde0fee6acc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d7faf7f46d6851969bbde0fee6acc0">detectAsync</a> (const cv::Mat img)</td></tr>
-<tr class="memitem:a3a47f7a236cd5275250550796a3fcf36" id="r_a3a47f7a236cd5275250550796a3fcf36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a47f7a236cd5275250550796a3fcf36">registerDetCallback</a> (<a class="el" href="#ac066640e2d59eab0e837b969639da087">OnDetected</a> cb)</td></tr>
+<tr class="memitem:a72866ca99fdca4157f501239821ab3da" id="r_a72866ca99fdca4157f501239821ab3da"><td class="memItemLeft" align="right" valign="top"><a id="a72866ca99fdca4157f501239821ab3da" name="a72866ca99fdca4157f501239821ab3da"></a>
+const std::vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>detectSync</b> (const cv::Mat img)</td></tr>
+<tr class="memdesc:a72866ca99fdca4157f501239821ab3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronous detection of the QR code. Might take longer than the framerate so better not calling this directly. <br /></td></tr>
+<tr class="memitem:a42d7faf7f46d6851969bbde0fee6acc0" id="r_a42d7faf7f46d6851969bbde0fee6acc0"><td class="memItemLeft" align="right" valign="top"><a id="a42d7faf7f46d6851969bbde0fee6acc0" name="a42d7faf7f46d6851969bbde0fee6acc0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>detectAsync</b> (const cv::Mat img)</td></tr>
+<tr class="memdesc:a42d7faf7f46d6851969bbde0fee6acc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Async detection of the QR code. This is a non-blocking call and when finished it calls then the callback with the contour. <br /></td></tr>
+<tr class="memitem:a3a47f7a236cd5275250550796a3fcf36" id="r_a3a47f7a236cd5275250550796a3fcf36"><td class="memItemLeft" align="right" valign="top"><a id="a3a47f7a236cd5275250550796a3fcf36" name="a3a47f7a236cd5275250550796a3fcf36"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>registerDetCallback</b> (<a class="el" href="#ac066640e2d59eab0e837b969639da087">OnDetected</a> cb)</td></tr>
+<tr class="memdesc:a3a47f7a236cd5275250550796a3fcf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers callback which receives the contour of the QR code. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -99,86 +110,7 @@ cv::QRCodeDetector&#160;</td><td class="memItemRight" valign="bottom"><b>qrDetec
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sync or async QR code detector. Class allows async QR code detection so that if it takes too long it can run in a different thread. </p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="ac066640e2d59eab0e837b969639da087" name="ac066640e2d59eab0e837b969639da087"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac066640e2d59eab0e837b969639da087">&#9670;&#160;</a></span>OnDetected</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#ac066640e2d59eab0e837b969639da087">TargetDet::OnDetected</a> = std::function&lt;void (const std::vector&lt;cv::Point2f&gt; &amp;)&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Callback for the contour surrounding the QR code </p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a42d7faf7f46d6851969bbde0fee6acc0" name="a42d7faf7f46d6851969bbde0fee6acc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42d7faf7f46d6851969bbde0fee6acc0">&#9670;&#160;</a></span>detectAsync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TargetDet::detectAsync </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Mat</td>          <td class="paramname"><span class="paramname"><em>img</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Async detection of the QR code. Calls then the callback with the contour. </p>
-
-</div>
-</div>
-<a id="a72866ca99fdca4157f501239821ab3da" name="a72866ca99fdca4157f501239821ab3da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72866ca99fdca4157f501239821ab3da">&#9670;&#160;</a></span>detectSync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt; cv::Point2f &gt; TargetDet::detectSync </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Mat</td>          <td class="paramname"><span class="paramname"><em>img</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Synchronous detection of the QR code. Might take longer than the framerate. </p>
-
-</div>
-</div>
-<a id="a3a47f7a236cd5275250550796a3fcf36" name="a3a47f7a236cd5275250550796a3fcf36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a47f7a236cd5275250550796a3fcf36">&#9670;&#160;</a></span>registerDetCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TargetDet::registerDetCallback </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#ac066640e2d59eab0e837b969639da087">OnDetected</a></td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Registers callback which receives the contour of the QR code. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>lib/<a class="el" href="targetdet_8h_source.html">targetdet.h</a></li>
 <li>lib/<b>targetdet.cpp</b></li>
 </ul>

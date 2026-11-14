@@ -1,5 +1,5 @@
 <map id="BaseConfigurator" name="BaseConfigurator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="18,5,151,33"/>
-<area shape="rect" id="Node000002" href="$classReactiveConfigurator.html" title=" " alt="" coords="5,81,164,109"/>
+<area shape="rect" id="Node000001" title="Decides which task is next after it has terminated. The configurator hosts the current task and decid..." alt="" coords="18,5,151,33"/>
+<area shape="rect" id="Node000002" href="$classReactiveConfigurator.html" title="The simplest configurator: a reactive one. The reactive configurator won&#39;t use the simulation engine ..." alt="" coords="5,81,164,109"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,47,87,81,82,80,83,51"/>
 </map>

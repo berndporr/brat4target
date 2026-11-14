@@ -13,8 +13,7 @@
 static constexpr bool DEBUG = true;
 
 /**
- * @brief Class used to load data from the configurator
- * 
+ * @brief Logger to a file in a subdir with timestamps in ms.
  */
 class Logger
 {
@@ -46,13 +45,21 @@ class Logger
     // If we log a variable then we end the line of the logfile with "<<<VAR"
     const char *variableindicator = "<<<VAR";
 
-    // Logging an integer variable
+    /** 
+     * @brief Logging an integer variable.
+     * @param variable The variable name.
+     * @param val The value of the variable.
+     */
     void logVariable (const char *variable, int val)
     {
         log ("%s\t%d%s", variable, val, variableindicator);
     }
 
-    // Logging a float variable
+    /** 
+     * @brief Logging an integer variable.
+     * @param variable The variable name.
+     * @param val The value of the variable.
+     */
     void logVariable (const char *variable, float val)
     {
         log ("%s\t%f%s", variable, val, variableindicator);

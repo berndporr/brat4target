@@ -12,7 +12,7 @@
 #include <vector>
 
 /** 
- * Cognitive map node.
+ * @brief Cognitive map node.
  */
 struct State
 {
@@ -21,6 +21,7 @@ struct State
 };
 
 /**
+ * @brief Decides which task is next after it has terminated.
  * The configurator hosts the current task and decides which
  * task to create next after the task has terminated.
  * The base configurator has all the common functionality transmitting
@@ -34,7 +35,7 @@ class BaseConfigurator
     BaseConfigurator () = default;
 
     /**
-     * Event: new LIDAR scan.
+     * @brief Event: new LIDAR scan.
      * Needs to react to the LIDAR world. Feeds this simply to the current task.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world)
@@ -44,7 +45,7 @@ class BaseConfigurator
     }
 
     /**
-     * Event: new target detected.
+     * @brief Event: new target detected.
      * Task needs to incorporate new target angle info from the camera.
      * Feeds it to the current task.
      */
@@ -58,7 +59,7 @@ class BaseConfigurator
     }
 
     /**
-     * Event: New robot rotation event detected.
+     * @brief Event: New robot rotation event detected.
      * Task needs to take into account the new gyro readings.
      * Feeds it into the current task.
      */
@@ -72,7 +73,7 @@ class BaseConfigurator
     }
 
     /**
-     * Changes the current task, registers the termination callback,
+     * @brief Changes the current task, registers the termination callback,
      * the motor callback and calls the task's "onStart()" telling
      * it's now running.
      */
@@ -88,17 +89,19 @@ class BaseConfigurator
     }
 
     /**
-     * Gets the current task as a shared pointer.
+     * @brief Gets the current task as a shared pointer.
      */
     std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
 
     /**
-     * Registers the motor event callback which sets the wheel speeds of the
+     * @brief Registers the motor event callback.
+     * This in turn then is registered with the current task and sets the wheel speeds of the
      * real robot.
      */
     void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
     /**
+     * @brief Simulating one or a chain of tasks in a LIDAR scan.
      * Simulates a task in the gaming engine box2d till it terminates.
      * Then returns the termination message. It's not suggesting the next task but
      * just reports why it has terminated. The configurator flavour needs
@@ -108,8 +111,10 @@ class BaseConfigurator
     {
       public:
         /**
+         * @brief Constructor receiving the world (=LIDAR scan)
          * The simulator it initialised with the world (LIDAR scan). The LIDAR
-         * scan stay the same while run() can be called with different tasks.
+         * scan stays always the same while run() can be called multiple times
+         * with different tasks.
          */
         TaskSimulator (std::shared_ptr<b2World> _world)
         {
@@ -122,8 +127,9 @@ class BaseConfigurator
         }
 
         /**
-         * Setting the target locaton. This will then be turned into
-         * callbacks to onTargetDetected for the task being executed.
+         * @brief Setting the target locaton (radius and angle).
+         * This will then be turned into callbacks onTargetDetected 
+         * by the simulator for the task being executed.
          */
         void setTarget (float r, float phi)
         {
@@ -134,7 +140,7 @@ class BaseConfigurator
         }
 
         /**
-         * Runs the task in box2d till it terminates.
+         * @brief Runs the task in box2d till it terminates.
          * Optionally, one can add a file which logs the coordinates of the robot till it terminates.
          */
         AbstractTask::TerminationMessage
@@ -154,7 +160,7 @@ class BaseConfigurator
     };
 
     /**
-     * On task terminated needs to be filled with life when inheriting this
+     * @brief On task terminated needs to be filled with life when inheriting this
      * base constructor. It needs to decide which task is next!
      */
     virtual void onTaskTerminated (AbstractTask::TerminationMessage tm) = 0;
@@ -165,7 +171,7 @@ class BaseConfigurator
 };
 
 /**
- * The simplest configurator: a reactive one.
+ * @brief The simplest configurator: a reactive one.
  * The reactive configurator won't use the simulation engine and directly
  * decides which taks is next without imagining what might happen in the future.
  * This implements "onTaskTerminated" which is called after a task has
@@ -175,6 +181,7 @@ class ReactiveConfigurator : public BaseConfigurator
 {
   public:
     /**
+     * @brief Turns termination reason into a task.
      * Translates termination reasons from the termination message into
      * a new task. It constructs that new task and returns it.
      * This method is static so that unit tests can test it without
@@ -236,8 +243,7 @@ class ReactiveConfigurator : public BaseConfigurator
                             "targeting again.");
             return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::TargetReached:
-            bratlogger.log (
-                "ReactiveConfigurator: TargetReached: stopping.");
+            bratlogger.log ("ReactiveConfigurator: TargetReached: stopping.");
             return std::make_shared<StopTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::INVALID:
             bratlogger.log (
@@ -250,14 +256,14 @@ class ReactiveConfigurator : public BaseConfigurator
     }
 
     /**
-     * Max number of tasks in a sequence. If it's more than max tasks the
-     * configurator will stop the robot with a EndTask.
+     * @brief Max number of tasks in a sequence. 
+     * If it's more than max tasks the configurator will stop the robot with a EndTask.
      */
     void setMaxTasks (int mt) { maxTasks = mt; }
 
   protected:
     /**
-     * Event: the current task has signalled that it's terminated.
+     * @brief Event: the current task has signalled that it's terminated.
      * Create a new task if the number of max tasks hasn't been reached.
      */
     virtual void

@@ -12,5 +12,5 @@ var searchData=
   ['start_9',['start',['../classLogger.html#a22389527084298297895f0ae6c363b9f',1,'Logger::start()'],['../classTargetLoc.html#aa941559f5f707c2498ee2b3c6f476080',1,'TargetLoc::start()']]],
   ['state_10',['State',['../structState.html',1,'']]],
   ['stop_11',['stop',['../classTargetLoc.html#ada0beb5e1e286a2f348794ac455f0477',1,'TargetLoc']]],
-  ['stoptask_12',['StopTask',['../classStopTask.html',1,'']]]
+  ['stoptask_12',['StopTask',['../classStopTask.html',1,'StopTask'],['../classStopTask.html#a701b9dc2533d63f8262915e45e1a84e6',1,'StopTask::StopTask()'],['../classStopTask.html#a241d230f9c3239f0ee3f53d5dca03f34',1,'StopTask::StopTask(std::shared_ptr&lt; AbstractTask &gt; at)']]]
 ];

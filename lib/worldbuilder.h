@@ -38,10 +38,11 @@ template <size_t WindowSize> class SpeedAvgFilter
             return 0;
         }
         float sum = 0;
-        for(auto &v : window) {
+        for (auto &v : window)
+        {
             sum += v;
         }
-        sum /= (float)(window.size());
+        sum /= (float)(window.size ());
         return sum;
     }
 };
@@ -369,34 +370,25 @@ std::pair<bool, BodyFeatures> bounding_box (std::vector<Pt> &nb)
     return result;
 }
 
-/*
- * Each point is an object and turns into a tiny body. Not very effective for
- * simulation or collision detection.
+/**
+ * @brief Turns raw LIDAR scans into a box2d world.
+ * This conversion might take an unpredictable time so this is done async.
  */
 class WorldBuilder
 {
   public:
     WorldBuilder () = default;
 
-    using OnWorldReady
-        = std::function<void (std::shared_ptr<b2World>)>;
+    /**
+     * @brief Callback containing a box2d world.
+     */
+    using OnWorldReady = std::function<void (std::shared_ptr<b2World>)>;
 
-  protected:
-    float simulationStep = BOX2DRANGE;
-    int bodies = 0;
-    std::vector<BodyFeatures> world_objects;
-    friend class Configurator;
-    std::shared_ptr<b2World> world;
-    std::thread asyncThread;
-    std::atomic<bool> isWorldBuilding;
-    OnWorldReady onWorldReady;
-    SpeedAvgFilter<10> linearSpeedXfilter;
-    SpeedAvgFilter<10> linearSpeedYfilter;
-
-  public:
+    /**
+     * @brief Registers callback when the world is ready.
+     */
     void registerWorldReadyCallback (OnWorldReady cb) { onWorldReady = cb; }
 
-  public:
     enum CLUSTERING
     {
         BOX = 0,
@@ -404,6 +396,9 @@ class WorldBuilder
         PARTITION = 2
     }; //BOX: bounding box around points
 
+    /**
+     * @brief Converts async a LIDAR scan into a box2d World.
+     */
     void doAsyncBuildWorld (CoordinateContainer coords, b2Transform start,
                             float halfWindowWidth = HALF_WINDOW_WIDTH,
                             CLUSTERING clustering = PARTITION)
@@ -411,7 +406,8 @@ class WorldBuilder
         nPastWorlds++;
         if (isWorldBuilding)
         {
-            bratlogger.log ("Async World building: dropping LIDAR scan. Still worldbuilding.");
+            bratlogger.log ("Async World building: dropping LIDAR scan. Still "
+                            "worldbuilding.");
             return;
         }
         if (asyncThread.joinable ())
@@ -443,6 +439,19 @@ class WorldBuilder
 
     void stop () { wait4Async (); }
 
+  protected:
+    float simulationStep = BOX2DRANGE;
+    int bodies = 0;
+    std::vector<BodyFeatures> world_objects;
+    friend class Configurator;
+    std::shared_ptr<b2World> world;
+    std::thread asyncThread;
+    std::atomic<bool> isWorldBuilding;
+    OnWorldReady onWorldReady;
+    SpeedAvgFilter<10> linearSpeedXfilter;
+    SpeedAvgFilter<10> linearSpeedYfilter;
+
+  public:
     struct CompareCluster
     {
         CompareCluster () = default;
@@ -514,8 +523,8 @@ class WorldBuilder
                 CLUSTERING clustering = CLUSTERING::PARTITION);
 
     //returns top and bottom of rotated rectangle (not side-specific)
-    static std::pair<Pointf, Pointf>
-    bounds (b2Transform t, float boxLength, float halfWindowWidth);
+    static std::pair<Pointf, Pointf> bounds (b2Transform t, float boxLength,
+                                             float halfWindowWidth);
     /**
      * @brief Makes a box 
      * 

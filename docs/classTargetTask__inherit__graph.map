@@ -1,6 +1,6 @@
 <map id="TargetTask" name="TargetTask">
-<area shape="rect" id="Node000001" title=" " alt="" coords="62,174,152,201"/>
-<area shape="rect" id="Node000002" href="$classAbstractTask.html" title=" " alt="" coords="55,98,159,126"/>
+<area shape="rect" id="Node000001" title="Task which is driving towards a target." alt="" coords="62,174,152,201"/>
+<area shape="rect" id="Node000002" href="$classAbstractTask.html" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="55,98,159,126"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,140,109,174,105,172,105,143"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,5,209,50"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,63,110,98,104,97,106,68"/>

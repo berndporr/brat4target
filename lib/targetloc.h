@@ -11,22 +11,23 @@
 struct TargetLocSettings
 {
     /** 
-     * Camera width in pixels
+     * @brief Camera width in pixels
      */
     int width = 1280;
 
     /**
-     * Camera height in pixels
+     * @brief Camera height in pixels
      */
     int height = 800;
 
     /**
-     * Camera field of view. Here: 62.2 degrees.
+     * @brief Camera field of view. 
+     * Default: 62.2 degrees.
      */
     float fieldOfView = 62.2 / 180.0 * M_PI;
 
     /**
-     * Factor mapping from QR code size to distance.
+     * @brief Factor mapping from QR code size to distance.
      * Distance is inferred from the height of the QR code.
      * QR code height must be 8cm.
      */
@@ -34,7 +35,7 @@ struct TargetLocSettings
 };
 
 /**
- * Detects a QR code and calls a callback with its angle and distance.
+ * @brief Detects a QR code and calls a callback with its angle and distance.
  */
 class TargetLoc
 {
@@ -42,24 +43,25 @@ class TargetLoc
     TargetLoc () = default;
 
     /**
-     * Callback interface which reports a new target location.
+     * @brief Callback interface which reports a new target location.
      */
     using DetectionEvent
         = std::function<void (const float r, const float phi)>;
     void registerDetectionEvent (DetectionEvent de) { detectionEvent = de; }
 
     /**
-     * Starts the camera
+     * @brief Starts the camera
      */
     void start (TargetLocSettings settings = TargetLocSettings ());
 
     /**
-     * Stops the camera
+     * @brief Stops the camera
      */
     void stop ();
 
     /**
-     * For debugging purposes we can get the current left camera
+     * @brief Debug getter of the current camera image.
+     * For debugging purposes we can get the current camera
      * image.
      */
     const cv::Mat getCurrentCameraImage ()
@@ -69,7 +71,7 @@ class TargetLoc
     }
 
     /**
-     * Gets the countour around the detected target.
+     * @brief Debug getter of the countour around the detected QR code.
      */
     const std::vector<cv::Point> getQRcodeContour ()
     {
