@@ -13,11 +13,12 @@ The navigation problem is broken down into attraction and avoidance Braitenberg 
 
 * Mapless navigation
 
-* Plans are made up of multiple Tasks, not trajectories
-
 * Pure event driven processing where the tasks receive sensor events and emit both motor actions and termination events to hand over to the next task!
 
 ## Hardware
+
+The planner is not hardware specific but development is happening
+with these components:
 
 - [Zetabot](https://github.com/berndporr/zetabot)
 - [LSM6DSOX](https://github.com/berndporr/LSM6DSOX_RPi)
