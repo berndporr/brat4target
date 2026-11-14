@@ -207,97 +207,97 @@ $(function() {
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html">  166</a></span><span class="keyword">class </span><a class="code hl_class" href="classReactiveConfigurator.html">ReactiveConfigurator</a> : <span class="keyword">public</span> BaseConfigurator</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>{</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keyword">static</span> std::shared_ptr&lt;AbstractTask&gt;</div>
-<div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">  177</a></span>    <a class="code hl_function" href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">terminationMessage2task</a> (<a class="code hl_struct" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm)</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        bratlogger.log (<span class="stringliteral">&quot;Reactive: onTaskTerminated&quot;</span>);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">switch</span> (tm.terminationReason)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::TargetDetected:</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            bratlogger.log (</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <span class="stringliteral">&quot;ReactiveConfigurator: Target detected. We are targeting.\n&quot;</span>);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">return</span> std::make_shared&lt;TargetTask&gt; (tm.taskWhichSentMessage);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::ObstacleDetected:</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Obstacle detected.\n&quot;</span>);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">if</span> (tm.taskWhichSentMessage-&gt;getThreatAngle ())</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                <span class="keywordflow">if</span> (tm.taskWhichSentMessage-&gt;getThreatAngle ().value () &gt; 0)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                                    <span class="stringliteral">&quot;RIGHT b/c obstacle to the left.\n&quot;</span>);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                        tm.taskWhichSentMessage,</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                        AvoidTask::AvoidDirecton::RIGHT);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                                    <span class="stringliteral">&quot;LEFT b/c obstacle to the right.\n&quot;</span>);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                        tm.taskWhichSentMessage,</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                        AvoidTask::AvoidDirecton::LEFT);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            }</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            {</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                <span class="keywordflow">if</span> (random () &amp; 1)</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                                    <span class="stringliteral">&quot;LEFT b/c random choice.\n&quot;</span>);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                        tm.taskWhichSentMessage,</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                        AvoidTask::AvoidDirecton::LEFT);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                    <span class="stringliteral">&quot;RIGHT b/c random choice.\n&quot;</span>);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                        tm.taskWhichSentMessage,</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                        AvoidTask::AvoidDirecton::LEFT);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            }</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::ObstacleAvoided:</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Obstacle avoided. Now &quot;</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                            <span class="stringliteral">&quot;targeting again.\n&quot;</span>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">return</span> std::make_shared&lt;TargetTask&gt; (tm.taskWhichSentMessage);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::TargetReached:</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            bratlogger.log (</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="stringliteral">&quot;ReactiveConfigurator: TargetReached: stopping.\n&quot;</span>);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">return</span> std::make_shared&lt;StopTask&gt; (tm.taskWhichSentMessage);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::INVALID:</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            bratlogger.log (</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                <span class="stringliteral">&quot;ReactiveConfigurator: Message==INVALID (BUG?): stopping.\n&quot;</span>);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">return</span> std::make_shared&lt;StopTask&gt; (tm.taskWhichSentMessage);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        bratlogger.log (</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="stringliteral">&quot;ReactiveConfigurator: Message==??? (BUG?): stopping.\n&quot;</span>);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordflow">return</span> std::make_shared&lt;StopTask&gt; (tm.taskWhichSentMessage);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keyword">static</span> std::shared_ptr&lt;AbstractTask&gt;</div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">  176</a></span>    <a class="code hl_function" href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">terminationMessage2task</a> (<a class="code hl_struct" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        bratlogger.log (<span class="stringliteral">&quot;Reactive: onTaskTerminated&quot;</span>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">switch</span> (tm.terminationReason)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::TargetDetected:</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            bratlogger.log (</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                <span class="stringliteral">&quot;ReactiveConfigurator: Target detected. We are targeting.&quot;</span>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keywordflow">return</span> std::make_shared&lt;TargetTask&gt; (tm.taskWhichSentMessage);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::ObstacleDetected:</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Obstacle detected.&quot;</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keywordflow">if</span> (tm.taskWhichSentMessage-&gt;getThreatAngle ())</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                <span class="keywordflow">if</span> (tm.taskWhichSentMessage-&gt;getThreatAngle ().value () &gt; 0)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                                    <span class="stringliteral">&quot;RIGHT b/c obstacle to the left.&quot;</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                        tm.taskWhichSentMessage,</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                        AvoidTask::AvoidDirecton::RIGHT);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                                    <span class="stringliteral">&quot;LEFT b/c obstacle to the right.&quot;</span>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                        tm.taskWhichSentMessage,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                        AvoidTask::AvoidDirecton::LEFT);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                <span class="keywordflow">if</span> (random () &amp; 1)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                                    <span class="stringliteral">&quot;LEFT b/c random choice.&quot;</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                        tm.taskWhichSentMessage,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                        AvoidTask::AvoidDirecton::LEFT);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                    bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Avoidance to the &quot;</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                                    <span class="stringliteral">&quot;RIGHT b/c random choice.&quot;</span>);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                    <span class="keywordflow">return</span> std::make_shared&lt;AvoidTask&gt; (</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                        tm.taskWhichSentMessage,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                        AvoidTask::AvoidDirecton::LEFT);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::ObstacleAvoided:</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            bratlogger.log (<span class="stringliteral">&quot;ReactiveConfigurator: Obstacle avoided. Now &quot;</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                            <span class="stringliteral">&quot;targeting again.&quot;</span>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">return</span> std::make_shared&lt;TargetTask&gt; (tm.taskWhichSentMessage);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::TargetReached:</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            bratlogger.log (</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                <span class="stringliteral">&quot;ReactiveConfigurator: TargetReached: stopping.&quot;</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">return</span> std::make_shared&lt;StopTask&gt; (tm.taskWhichSentMessage);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">case</span> AbstractTask::TerminationMessage::INVALID:</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            bratlogger.log (</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="stringliteral">&quot;ReactiveConfigurator: Message==INVALID (BUG?): stopping.&quot;</span>);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordflow">return</span> std::make_shared&lt;StopTask&gt; (tm.taskWhichSentMessage);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        bratlogger.log (</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="stringliteral">&quot;ReactiveConfigurator: Message==??? (BUG?): stopping.&quot;</span>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">return</span> std::make_shared&lt;StopTask&gt; (tm.taskWhichSentMessage);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
 </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587">  249</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587">setMaxTasks</a> (<span class="keywordtype">int</span> mt) { maxTasks = mt; }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00257" data-start="{" data-end="}">
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">  257</a></span>    <a class="code hl_function" href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">onTaskTerminated</a> (<a class="code hl_struct" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">if</span> (nTasks &gt; maxTasks)</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <a class="code hl_function" href="classBaseConfigurator.html#a9b9c2ca653f6e739e4b485185162a7f9">setCurrentTask</a> (std::make_shared&lt;EndTask&gt; ());</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            bratlogger.log (<span class="stringliteral">&quot;Reached max tasks. Stopping!&quot;</span>);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <a class="code hl_function" href="classBaseConfigurator.html#a9b9c2ca653f6e739e4b485185162a7f9">setCurrentTask</a> (<a class="code hl_function" href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">terminationMessage2task</a> (tm));</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587">  248</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587">setMaxTasks</a> (<span class="keywordtype">int</span> mt) { maxTasks = mt; }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00256" data-start="{" data-end="}">
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">  256</a></span>    <a class="code hl_function" href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">onTaskTerminated</a> (<a class="code hl_struct" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keywordflow">if</span> (nTasks &gt; maxTasks)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <a class="code hl_function" href="classBaseConfigurator.html#a9b9c2ca653f6e739e4b485185162a7f9">setCurrentTask</a> (std::make_shared&lt;EndTask&gt; ());</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            bratlogger.log (<span class="stringliteral">&quot;Reached max tasks. Stopping!&quot;</span>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <a class="code hl_function" href="classBaseConfigurator.html#a9b9c2ca653f6e739e4b485185162a7f9">setCurrentTask</a> (<a class="code hl_function" href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">terminationMessage2task</a> (tm));</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    }</div>
 </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordtype">int</span> maxTasks = 0xfffffff;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordtype">int</span> nTasks = 1;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>};</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">int</span> maxTasks = 0xfffffff;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordtype">int</span> nTasks = 1;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>};</div>
 </div>
 <div class="ttc" id="aclassAbstractTask_html_a6081edc70419f663deac5c97b3ae38e6"><div class="ttname"><a href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">AbstractTask::MotorEvent</a></div><div class="ttdeci">std::function&lt; void(const float l, const float r)&gt; MotorEvent</div><div class="ttdef"><b>Definition</b> task.h:46</div></div>
 <div class="ttc" id="aclassBaseConfigurator_1_1TaskSimulator_html_a22fb9abbea894c311bc6c5c509cf62d8"><div class="ttname"><a href="classBaseConfigurator_1_1TaskSimulator.html#a22fb9abbea894c311bc6c5c509cf62d8">BaseConfigurator::TaskSimulator::run</a></div><div class="ttdeci">AbstractTask::TerminationMessage run(std::shared_ptr&lt; AbstractTask &gt; task, const char *plan_file=nullptr)</div><div class="ttdef"><b>Definition</b> configurator.cpp:32</div></div>
@@ -311,9 +311,9 @@ $(function() {
 <div class="ttc" id="aclassBaseConfigurator_html_ae271a77d9da6a9730147413f637d5ef2"><div class="ttname"><a href="classBaseConfigurator.html#ae271a77d9da6a9730147413f637d5ef2">BaseConfigurator::registerMotorEvent</a></div><div class="ttdeci">void registerMotorEvent(AbstractTask::MotorEvent me)</div><div class="ttdef"><b>Definition</b> configurator.h:94</div></div>
 <div class="ttc" id="aclassBaseConfigurator_html_af150aad94750bed2d0cb33598ccab3fe"><div class="ttname"><a href="classBaseConfigurator.html#af150aad94750bed2d0cb33598ccab3fe">BaseConfigurator::onGyroTurn</a></div><div class="ttdeci">virtual void onGyroTurn(float dphi)</div><div class="ttdef"><b>Definition</b> configurator.h:60</div></div>
 <div class="ttc" id="aclassReactiveConfigurator_html"><div class="ttname"><a href="classReactiveConfigurator.html">ReactiveConfigurator</a></div><div class="ttdef"><b>Definition</b> configurator.h:167</div></div>
-<div class="ttc" id="aclassReactiveConfigurator_html_a99ca82c2ac754b06d6715cdf50d6e2ff"><div class="ttname"><a href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">ReactiveConfigurator::onTaskTerminated</a></div><div class="ttdeci">virtual void onTaskTerminated(AbstractTask::TerminationMessage tm) override</div><div class="ttdef"><b>Definition</b> configurator.h:257</div></div>
-<div class="ttc" id="aclassReactiveConfigurator_html_aa6ef113420cdd7d79115fa239418487d"><div class="ttname"><a href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">ReactiveConfigurator::terminationMessage2task</a></div><div class="ttdeci">static std::shared_ptr&lt; AbstractTask &gt; terminationMessage2task(AbstractTask::TerminationMessage tm)</div><div class="ttdef"><b>Definition</b> configurator.h:177</div></div>
-<div class="ttc" id="aclassReactiveConfigurator_html_acf8725123bf4563426e12a9922a2a587"><div class="ttname"><a href="classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587">ReactiveConfigurator::setMaxTasks</a></div><div class="ttdeci">void setMaxTasks(int mt)</div><div class="ttdef"><b>Definition</b> configurator.h:249</div></div>
+<div class="ttc" id="aclassReactiveConfigurator_html_a99ca82c2ac754b06d6715cdf50d6e2ff"><div class="ttname"><a href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">ReactiveConfigurator::onTaskTerminated</a></div><div class="ttdeci">virtual void onTaskTerminated(AbstractTask::TerminationMessage tm) override</div><div class="ttdef"><b>Definition</b> configurator.h:256</div></div>
+<div class="ttc" id="aclassReactiveConfigurator_html_aa6ef113420cdd7d79115fa239418487d"><div class="ttname"><a href="classReactiveConfigurator.html#aa6ef113420cdd7d79115fa239418487d">ReactiveConfigurator::terminationMessage2task</a></div><div class="ttdeci">static std::shared_ptr&lt; AbstractTask &gt; terminationMessage2task(AbstractTask::TerminationMessage tm)</div><div class="ttdef"><b>Definition</b> configurator.h:176</div></div>
+<div class="ttc" id="aclassReactiveConfigurator_html_acf8725123bf4563426e12a9922a2a587"><div class="ttname"><a href="classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587">ReactiveConfigurator::setMaxTasks</a></div><div class="ttdeci">void setMaxTasks(int mt)</div><div class="ttdef"><b>Definition</b> configurator.h:248</div></div>
 <div class="ttc" id="astructAbstractTask_1_1TerminationMessage_html"><div class="ttname"><a href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a></div><div class="ttdef"><b>Definition</b> task.h:57</div></div>
 <div class="ttc" id="astructState_html"><div class="ttname"><a href="structState.html">State</a></div><div class="ttdef"><b>Definition</b> configurator.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
