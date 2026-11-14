@@ -106,7 +106,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7179517d9208bbc480110fdcc2aa5402" id="r_a7179517d9208bbc480110fdcc2aa5402"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7179517d9208bbc480110fdcc2aa5402">onTaskTerminated</a> (<a class="el" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm)=0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The base configurator which has all the common functionality. </p>
+<div class="textblock"><p>The configurator hosts the current task and decides which task to create next after the task has terminated. The base configurator has all the common functionality transmitting the sensor events to the task but has a pure virual function for the task termination message which needs to be implemented by its children. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a935a2a45ffa4e1d6be6a8a86ea4bea16" name="a935a2a45ffa4e1d6be6a8a86ea4bea16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a935a2a45ffa4e1d6be6a8a86ea4bea16">&#9670;&#160;</a></span>getCurrentTask()</h2>

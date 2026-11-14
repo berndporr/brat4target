@@ -122,7 +122,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a99ca82c2ac754b06d6715cdf50d6e2ff" id="r_a99ca82c2ac754b06d6715cdf50d6e2ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99ca82c2ac754b06d6715cdf50d6e2ff">onTaskTerminated</a> (<a class="el" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm) override</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The reactive configurator won't use the simulation engine and directly decides on a new task without imagining what might happen in the future. </p>
+<div class="textblock"><p>The simplest configurator: a reactive one. The reactive configurator won't use the simulation engine and directly decides which taks is next without imagining what might happen in the future. This implements "onTaskTerminated" which is called after a task has terminated, decides which task is next and then sets a new current task. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a99ca82c2ac754b06d6715cdf50d6e2ff" name="a99ca82c2ac754b06d6715cdf50d6e2ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99ca82c2ac754b06d6715cdf50d6e2ff">&#9670;&#160;</a></span>onTaskTerminated()</h2>

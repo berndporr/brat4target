@@ -21,7 +21,12 @@ struct State
 };
 
 /**
- * The base configurator which has all the common functionality.
+ * The configurator hosts the current task and decides which
+ * task to create next after the task has terminated.
+ * The base configurator has all the common functionality transmitting
+ * the sensor events to the task but has a pure virual function for the
+ * task termination message which needs to be implemented by its
+ * children.
  */
 class BaseConfigurator
 {
@@ -160,8 +165,11 @@ class BaseConfigurator
 };
 
 /**
+ * The simplest configurator: a reactive one.
  * The reactive configurator won't use the simulation engine and directly
- * decides on a new task without imagining what might happen in the future.
+ * decides which taks is next without imagining what might happen in the future.
+ * This implements "onTaskTerminated" which is called after a task has
+ * terminated, decides which task is next and then sets a new current task.
  */
 class ReactiveConfigurator : public BaseConfigurator
 {
