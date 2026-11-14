@@ -407,6 +407,7 @@ class TargetTask : public AbstractTask
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
+        bratlogger.logVariable("targetDistance",r);
         if (r < targetArrivedDistance)
         {
             bratlogger.log (
