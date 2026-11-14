@@ -31,7 +31,7 @@ int main (int nargs, char **argv)
     lsmsettings.samplingRate = LSMSettings::ODR_12_5;
 
     lsm6dS0x.registerCallback ([&] (const LSM6DSOXSample &s) {
-        configurator.onGyroTurn (-s.gz / lsm6dS0x.getODR());
+        configurator.onGyroTurn (-s.gz / lsm6dS0x.getODR ());
     });
 
     configurator.registerMotorEvent ([&] (float l, float r) {
@@ -49,17 +49,17 @@ int main (int nargs, char **argv)
 
     WorldClusterBuilder worldBuilder;
     long int nWorld = 0;
-    worldBuilder.registerWorldReadyCallback (
-        [&] (std::shared_ptr<b2World> world) {
-            bratlogger.log ("nWorld = %ld", nWorld);
-            configurator.onLIDARworld (world);
-//            char tmp[256];
-//            sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
-//            worldBuilder.exportWorldToSVG (tmp);
-//            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
-//            worldBuilder.bodies_dump (tmp);
-            nWorld++;
-        });
+    worldBuilder.registerWorldReadyCallback ([&] (std::shared_ptr<b2World>
+                                                      world) {
+        bratlogger.log ("nWorld = %ld", nWorld);
+        configurator.onLIDARworld (world);
+        //            char tmp[256];
+        //            sprintf (tmp, "/tmp/reactive_bodies%05ld.svg", nWorld);
+        //            worldBuilder.exportWorldToSVG (tmp);
+        //            sprintf (tmp, "/tmp/reactive_bodies%05ld.tsv", nWorld);
+        //            worldBuilder.bodies_dump (tmp);
+        nWorld++;
+    });
 
     lidar.registerCallbackFunction (
         [&] (C1LidarData (&data)[C1Lidar::nDistance]) {
@@ -81,7 +81,18 @@ int main (int nargs, char **argv)
     catch (const char *tmp)
     {
         fprintf (stderr, "\nZetabot error: %s\n", tmp);
-        return 1;
+        return -1;
+    }
+
+    try
+    {
+        lsm6dS0x.start (lsmsettings);
+    }
+    catch (const char *msg)
+    {
+        std::cerr << "Gyro ERROR: " << msg << std::endl;
+        zetabot.stop ();
+        return -1;
     }
 
     try
@@ -90,14 +101,14 @@ int main (int nargs, char **argv)
     }
     catch (const char *msg)
     {
-        std::cerr << "ERROR: " << msg << std::endl;
+        std::cerr << "LIDAR ERROR: " << msg << std::endl;
         lidar.stop (); // Make sure motor and scan stop
         zetabot.stop ();
-        return 1;
+        lsm6dS0x.stop ();
+        return -1;
     }
 
     targetLoc.start ();
-    lsm6dS0x.start (lsmsettings);
 
     // We are starting from the stoptask
     configurator.setCurrentTask (std::make_shared<StopTask> ());
