@@ -1,0 +1,7 @@
+<map id="WorldClusterBuilder" name="WorldClusterBuilder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,142,107"/>
+<area shape="rect" id="Node000003" href="$classFocusedBuilder.html" title=" " alt="" coords="18,155,129,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="75,121,76,155,71,153,72,124"/>
+<area shape="rect" id="Node000002" href="$classWorldBuilder.html" title=" " alt="" coords="26,5,121,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,45,76,80,71,79,72,50"/>
+</map>

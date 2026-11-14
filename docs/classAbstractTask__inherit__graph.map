@@ -1,0 +1,13 @@
+<map id="AbstractTask" name="AbstractTask">
+<area shape="rect" id="Node000001" title="Turns sensor events into motor outputs in a reactive way This is an abstract task which has all commo..." alt="" coords="148,96,246,123"/>
+<area shape="rect" id="Node000003" href="$classAvoidTask.html" title=" " alt="" coords="5,171,88,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,132,74,172,72,168,156,127"/>
+<area shape="rect" id="Node000004" href="$classEndTask.html" title=" " alt="" coords="112,171,184,197"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,135,158,172,155,168,178,137"/>
+<area shape="rect" id="Node000005" href="$classStopTask.html" title=" " alt="" coords="208,171,285,197"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="216,133,241,171,235,170,213,138"/>
+<area shape="rect" id="Node000006" href="$classTargetTask.html" title=" " alt="" coords="309,171,394,197"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="239,127,327,170,322,170,237,132"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="106,5,288,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,62,200,97,195,94,196,66"/>
+</map>
