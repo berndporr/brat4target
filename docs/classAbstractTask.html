@@ -151,8 +151,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setLinearSpeed</b> (c
 <tr class="memitem:acceb02f51ea57df29fec9ce4bb923c5a" id="r_acceb02f51ea57df29fec9ce4bb923c5a"><td class="memItemLeft" align="right" valign="top"><a id="acceb02f51ea57df29fec9ce4bb923c5a" name="acceb02f51ea57df29fec9ce4bb923c5a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getLinearSpeed</b> () const</td></tr>
 <tr class="memdesc:acceb02f51ea57df29fec9ce4bb923c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the linear speed in m/s. <br /></td></tr>
-<tr class="memitem:ad3a431fa51b728eeb5f49f974acb6b2a" id="r_ad3a431fa51b728eeb5f49f974acb6b2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3a431fa51b728eeb5f49f974acb6b2a">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt; robot)=0</td></tr>
-<tr class="memdesc:ad3a431fa51b728eeb5f49f974acb6b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes.  <br /></td></tr>
+<tr class="memitem:a8ce63367f8f2be9d1b4398b2ac764bd8" id="r_a8ce63367f8f2be9d1b4398b2ac764bd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ce63367f8f2be9d1b4398b2ac764bd8">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot)=0</td></tr>
+<tr class="memdesc:a8ce63367f8f2be9d1b4398b2ac764bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes.  <br /></td></tr>
 <tr class="memitem:ab5b2fc42ef703b466af3684a9e5c40ed" id="r_ab5b2fc42ef703b466af3684a9e5c40ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b2fc42ef703b466af3684a9e5c40ed">onTargetDetected</a> (float r, float phi, int targetIndex=0)</td></tr>
 <tr class="memdesc:ab5b2fc42ef703b466af3684a9e5c40ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
 <tr class="memitem:a831a032aa6cd652aa1e40a5f63b44e46" id="r_a831a032aa6cd652aa1e40a5f63b44e46"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a831a032aa6cd652aa1e40a5f63b44e46">onGyroTurn</a> (float dphi)=0</td></tr>
@@ -247,8 +247,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="ad3a431fa51b728eeb5f49f974acb6b2a" name="ad3a431fa51b728eeb5f49f974acb6b2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3a431fa51b728eeb5f49f974acb6b2a">&#9670;&#160;</a></span>onLIDARworld()</h2>
+<a id="a8ce63367f8f2be9d1b4398b2ac764bd8" name="a8ce63367f8f2be9d1b4398b2ac764bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce63367f8f2be9d1b4398b2ac764bd8">&#9670;&#160;</a></span>onLIDARworld()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +264,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a></td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -276,7 +276,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes. </p>
 
-<p>Implemented in <a class="el" href="classAvoidTask.html#a34b53fc00ca5568d76906a4241896fbe">AvoidTask</a>, <a class="el" href="classEndTask.html#afee8b4ca415a34b5a45d486f5fe88af8">EndTask</a>, <a class="el" href="classStopTask.html#aa342c9e7c17dba56c1a9f443f2333b13">StopTask</a>, and <a class="el" href="classTargetTask.html#a9ad27b5c30059f3bda97847f1f7e51aa">TargetTask</a>.</p>
+<p>Implemented in <a class="el" href="classAvoidTask.html#a6498749a73a2bcdf6fb8807911c65ba0">AvoidTask</a>, <a class="el" href="classEndTask.html#a92a9451ec2eda4d885c8de9846690e88">EndTask</a>, <a class="el" href="classStopTask.html#a436c3dde37068ddc507f8c46c3ca98bc">StopTask</a>, and <a class="el" href="classTargetTask.html#af171236eed06d6b49bb153e5a1aeed86">TargetTask</a>.</p>
 
 </div>
 </div>

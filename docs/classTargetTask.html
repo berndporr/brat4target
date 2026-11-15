@@ -122,8 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:add935f75275879c57ae5aa94c30b2f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event checks if we have arrived or need to continue targeting.  <br /></td></tr>
 <tr class="memitem:a470d34bf914fcea04ee4ac26c36c982b" id="r_a470d34bf914fcea04ee4ac26c36c982b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a470d34bf914fcea04ee4ac26c36c982b">onGyroTurn</a> (float dphi) override</td></tr>
 <tr class="memdesc:a470d34bf914fcea04ee4ac26c36c982b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new robot rotation info. Task needs to take into account the new gyro readings.  <br /></td></tr>
-<tr class="memitem:a9ad27b5c30059f3bda97847f1f7e51aa" id="r_a9ad27b5c30059f3bda97847f1f7e51aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad27b5c30059f3bda97847f1f7e51aa">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt; robot) override</td></tr>
-<tr class="memdesc:a9ad27b5c30059f3bda97847f1f7e51aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New LIDAR scan. We need to check if we are crashing into an obstacle and to terminate the task!  <br /></td></tr>
+<tr class="memitem:af171236eed06d6b49bb153e5a1aeed86" id="r_af171236eed06d6b49bb153e5a1aeed86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af171236eed06d6b49bb153e5a1aeed86">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
+<tr class="memdesc:af171236eed06d6b49bb153e5a1aeed86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New LIDAR scan. We need to check if we are crashing into an obstacle and to terminate the task!  <br /></td></tr>
 <tr class="inherit_header pub_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
 <tr class="memitem:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
@@ -241,8 +241,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="a9ad27b5c30059f3bda97847f1f7e51aa" name="a9ad27b5c30059f3bda97847f1f7e51aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ad27b5c30059f3bda97847f1f7e51aa">&#9670;&#160;</a></span>onLIDARworld()</h2>
+<a id="af171236eed06d6b49bb153e5a1aeed86" name="af171236eed06d6b49bb153e5a1aeed86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af171236eed06d6b49bb153e5a1aeed86">&#9670;&#160;</a></span>onLIDARworld()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +258,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a></td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -270,7 +270,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: New LIDAR scan. We need to check if we are crashing into an obstacle and to terminate the task! </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#ad3a431fa51b728eeb5f49f974acb6b2a">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a8ce63367f8f2be9d1b4398b2ac764bd8">AbstractTask</a>.</p>
 
 </div>
 </div>

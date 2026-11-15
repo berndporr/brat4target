@@ -117,8 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af0dc80bb7d367e05f4d0383e242a8051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving info from previous task. <br /></td></tr>
 <tr class="memitem:a6594ebf6d66b7f627d34115d0fbb18a5" id="r_a6594ebf6d66b7f627d34115d0fbb18a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6594ebf6d66b7f627d34115d0fbb18a5">onStart</a> () override</td></tr>
 <tr class="memdesc:a6594ebf6d66b7f627d34115d0fbb18a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is being started.  <br /></td></tr>
-<tr class="memitem:afee8b4ca415a34b5a45d486f5fe88af8" id="r_afee8b4ca415a34b5a45d486f5fe88af8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee8b4ca415a34b5a45d486f5fe88af8">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt; robot) override</td></tr>
-<tr class="memdesc:afee8b4ca415a34b5a45d486f5fe88af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes.  <br /></td></tr>
+<tr class="memitem:a92a9451ec2eda4d885c8de9846690e88" id="r_a92a9451ec2eda4d885c8de9846690e88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92a9451ec2eda4d885c8de9846690e88">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
+<tr class="memdesc:a92a9451ec2eda4d885c8de9846690e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes.  <br /></td></tr>
 <tr class="memitem:a2ece70605b8c0e3c59e1e9daccf8d0c9" id="r_a2ece70605b8c0e3c59e1e9daccf8d0c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ece70605b8c0e3c59e1e9daccf8d0c9">onTargetDetected</a> (float r, float phi, int index=0) override</td></tr>
 <tr class="memdesc:a2ece70605b8c0e3c59e1e9daccf8d0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
 <tr class="memitem:a2bb8d14b8b4fa5b60e4e41865a635a74" id="r_a2bb8d14b8b4fa5b60e4e41865a635a74"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bb8d14b8b4fa5b60e4e41865a635a74">onGyroTurn</a> (float dphi) override</td></tr>
@@ -234,8 +234,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="afee8b4ca415a34b5a45d486f5fe88af8" name="afee8b4ca415a34b5a45d486f5fe88af8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afee8b4ca415a34b5a45d486f5fe88af8">&#9670;&#160;</a></span>onLIDARworld()</h2>
+<a id="a92a9451ec2eda4d885c8de9846690e88" name="a92a9451ec2eda4d885c8de9846690e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a9451ec2eda4d885c8de9846690e88">&#9670;&#160;</a></span>onLIDARworld()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +251,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a></td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -263,7 +263,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes. </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#ad3a431fa51b728eeb5f49f974acb6b2a">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a8ce63367f8f2be9d1b4398b2ac764bd8">AbstractTask</a>.</p>
 
 </div>
 </div>

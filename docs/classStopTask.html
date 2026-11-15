@@ -117,8 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a241d230f9c3239f0ee3f53d5dca03f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving info from previous task. <br /></td></tr>
 <tr class="memitem:a3fa9cf9953a9df4fe2bf939d728d1591" id="r_a3fa9cf9953a9df4fe2bf939d728d1591"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa9cf9953a9df4fe2bf939d728d1591">onStart</a> () override</td></tr>
 <tr class="memdesc:a3fa9cf9953a9df4fe2bf939d728d1591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: when the task is starting we set the robot's speed to zero.  <br /></td></tr>
-<tr class="memitem:aa342c9e7c17dba56c1a9f443f2333b13" id="r_aa342c9e7c17dba56c1a9f443f2333b13"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa342c9e7c17dba56c1a9f443f2333b13">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt; robot) override</td></tr>
-<tr class="memdesc:aa342c9e7c17dba56c1a9f443f2333b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New LIDAR scan. Ignore!  <br /></td></tr>
+<tr class="memitem:a436c3dde37068ddc507f8c46c3ca98bc" id="r_a436c3dde37068ddc507f8c46c3ca98bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a436c3dde37068ddc507f8c46c3ca98bc">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
+<tr class="memdesc:a436c3dde37068ddc507f8c46c3ca98bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New LIDAR scan. Ignore!  <br /></td></tr>
 <tr class="memitem:a531df011bcc4fa8d477713fdcf900478" id="r_a531df011bcc4fa8d477713fdcf900478"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a531df011bcc4fa8d477713fdcf900478">onGyroTurn</a> (float dphi) override</td></tr>
 <tr class="memdesc:a531df011bcc4fa8d477713fdcf900478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro rotation. Ignore!  <br /></td></tr>
 <tr class="memitem:a125ee596df78393433e62280d0fe0eb8" id="r_a125ee596df78393433e62280d0fe0eb8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a125ee596df78393433e62280d0fe0eb8">onTargetDetected</a> (float r, float phi, int index=0) override</td></tr>
@@ -234,8 +234,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="aa342c9e7c17dba56c1a9f443f2333b13" name="aa342c9e7c17dba56c1a9f443f2333b13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa342c9e7c17dba56c1a9f443f2333b13">&#9670;&#160;</a></span>onLIDARworld()</h2>
+<a id="a436c3dde37068ddc507f8c46c3ca98bc" name="a436c3dde37068ddc507f8c46c3ca98bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436c3dde37068ddc507f8c46c3ca98bc">&#9670;&#160;</a></span>onLIDARworld()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +251,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classRobot.html">Robot</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a></td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -263,7 +263,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: New LIDAR scan. Ignore! </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#ad3a431fa51b728eeb5f49f974acb6b2a">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a8ce63367f8f2be9d1b4398b2ac764bd8">AbstractTask</a>.</p>
 
 </div>
 </div>

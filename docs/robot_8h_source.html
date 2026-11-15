@@ -83,48 +83,88 @@ $(function() {
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;const.h&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;box2d/b2_body.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;box2d/b2_fixture.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;box2d/b2_polygon_shape.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;box2d/b2_world.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classRobot.html">   17</a></span><span class="keyword">class </span>Robot</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    b2FixtureDef fixtureDef;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    b2Body *m_body = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    b2PolygonShape m_box;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    Robot () = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    Robot (std::shared_ptr&lt;b2World&gt; world,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>           b2Transform start = b2Transform_zero)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        b2BodyDef m_bodyDef;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        m_bodyDef.type = b2_dynamicBody;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        m_bodyDef.position.Set (0.0f, 0.0f);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        m_body = world-&gt;CreateBody (&amp;m_bodyDef);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        m_body-&gt;GetUserData ().pointer</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            = <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (ROBOT_FLAG);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        b2Vec2 center (ROBOT_BOX_OFFSET_X, ROBOT_BOX_OFFSET_Y);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        m_box.SetAsBox (ROBOT_HALFWIDTH, ROBOT_HALFLENGTH, center,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        ROBOT_BOX_OFFSET_ANGLE);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        fixtureDef.shape = &amp;m_box;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        fixtureDef.friction = 0;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        m_body-&gt;CreateFixture (&amp;fixtureDef);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        body ()-&gt;SetTransform (start.p, start.q.GetAngle ());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    b2Body *body ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body; }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    b2Fixture *getFixtureList ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body-&gt;GetFixtureList (); }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    b2Vec2 getPosition ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body-&gt;GetPosition (); }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">float</span> getAngle ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body-&gt;GetAngle (); }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;box2d/b2_math.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;box2d/b2_polygon_shape.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;box2d/b2_world.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classRobot.html">   19</a></span><span class="keyword">class </span>Robot</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Robot() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    Robot (std::shared_ptr&lt;b2World&gt; world,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>           b2Transform start = b2Transform_zero)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        b2BodyDef m_bodyDef;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        m_bodyDef.type = b2_dynamicBody;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        m_bodyDef.position.Set (0.0f, 0.0f);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        m_body = world-&gt;CreateBody (&amp;m_bodyDef);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        m_body-&gt;GetUserData ().pointer</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            = <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (ROBOT_FLAG);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        b2Vec2 center (ROBOT_BOX_OFFSET_X, ROBOT_BOX_OFFSET_Y);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        b2PolygonShape m_box;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        m_box.SetAsBox (ROBOT_HALFWIDTH, ROBOT_HALFLENGTH, center,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                        ROBOT_BOX_OFFSET_ANGLE);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        b2FixtureDef fixtureDef;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        fixtureDef.shape = &amp;m_box;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        fixtureDef.friction = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        m_body-&gt;CreateFixture (&amp;fixtureDef);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        m_body-&gt;SetTransform (start.p, start.q.GetAngle ());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classRobot.html#a90619d167d34899080d651f2053d84a1">   48</a></span>    b2Transform <a class="code hl_function" href="classRobot.html#a90619d167d34899080d651f2053d84a1">getTransform</a>() {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">return</span> m_body-&gt;GetTransform();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classRobot.html#affcfd7ff1191c59261a7f5741d6f3633">   55</a></span>    b2Body *<a class="code hl_function" href="classRobot.html#affcfd7ff1191c59261a7f5741d6f3633">body</a> ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classRobot.html#a3e4cd86eec95787ad3b08e9a40ea05a5">   60</a></span>    b2Fixture *<a class="code hl_function" href="classRobot.html#a3e4cd86eec95787ad3b08e9a40ea05a5">getFixtureList</a> ()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (m_body)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> m_body-&gt;GetFixtureList ();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classRobot.html#a228d785da30bc62a0d3aee74b628b0b4">   70</a></span>    b2Vec2 <a class="code hl_function" href="classRobot.html#a228d785da30bc62a0d3aee74b628b0b4">getPosition</a> ()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (m_body)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> m_body-&gt;GetPosition ();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> b2Vec2 (0, 0);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classRobot.html#aa43e84216ed4b6e924738a5b6ae12d45">   80</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classRobot.html#aa43e84216ed4b6e924738a5b6ae12d45">getAngle</a> ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body-&gt;GetAngle (); }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classRobot.html#a7eb322bec6e1c99de1406d426b547e0c">   85</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRobot.html#a7eb322bec6e1c99de1406d426b547e0c">destruct</a> ()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">if</span> (m_body)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            m_body-&gt;GetWorld ()-&gt;DestroyBody (m_body);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            m_body = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    b2Body *m_body = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
+</div>
+<div class="ttc" id="aclassRobot_html_a228d785da30bc62a0d3aee74b628b0b4"><div class="ttname"><a href="classRobot.html#a228d785da30bc62a0d3aee74b628b0b4">Robot::getPosition</a></div><div class="ttdeci">b2Vec2 getPosition() const</div><div class="ttdoc">Gets the position of the robot.</div><div class="ttdef"><b>Definition</b> robot.h:70</div></div>
+<div class="ttc" id="aclassRobot_html_a3e4cd86eec95787ad3b08e9a40ea05a5"><div class="ttname"><a href="classRobot.html#a3e4cd86eec95787ad3b08e9a40ea05a5">Robot::getFixtureList</a></div><div class="ttdeci">b2Fixture * getFixtureList() const</div><div class="ttdoc">Gets a list of the fixtures. Can be a nullptr.</div><div class="ttdef"><b>Definition</b> robot.h:60</div></div>
+<div class="ttc" id="aclassRobot_html_a7eb322bec6e1c99de1406d426b547e0c"><div class="ttname"><a href="classRobot.html#a7eb322bec6e1c99de1406d426b547e0c">Robot::destruct</a></div><div class="ttdeci">void destruct()</div><div class="ttdoc">Removes the robot from its world.</div><div class="ttdef"><b>Definition</b> robot.h:85</div></div>
+<div class="ttc" id="aclassRobot_html_a90619d167d34899080d651f2053d84a1"><div class="ttname"><a href="classRobot.html#a90619d167d34899080d651f2053d84a1">Robot::getTransform</a></div><div class="ttdeci">b2Transform getTransform()</div><div class="ttdoc">Gets the robot position and angle in the world. The transform contains all the info about the robot s...</div><div class="ttdef"><b>Definition</b> robot.h:48</div></div>
+<div class="ttc" id="aclassRobot_html_aa43e84216ed4b6e924738a5b6ae12d45"><div class="ttname"><a href="classRobot.html#aa43e84216ed4b6e924738a5b6ae12d45">Robot::getAngle</a></div><div class="ttdeci">float getAngle() const</div><div class="ttdoc">Gets the angle of the robot.</div><div class="ttdef"><b>Definition</b> robot.h:80</div></div>
+<div class="ttc" id="aclassRobot_html_affcfd7ff1191c59261a7f5741d6f3633"><div class="ttname"><a href="classRobot.html#affcfd7ff1191c59261a7f5741d6f3633">Robot::body</a></div><div class="ttdeci">b2Body * body() const</div><div class="ttdoc">Gets the robot body. Can be a nullptr.</div><div class="ttdef"><b>Definition</b> robot.h:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
