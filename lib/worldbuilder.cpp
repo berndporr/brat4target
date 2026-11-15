@@ -653,26 +653,3 @@ WorldClusterBuilder::getFeatures (const CoordinateContainer &current,
     }
     return features;
 }
-
-std::shared_ptr<b2World>
-FocusedBuilder::buildWorld (CoordinateContainer coords, b2Transform start,
-                            float halfWindowWidth, CLUSTERING clustering)
-{
-    world = std::make_shared<b2World> (GRAVITY);
-    world_objects
-        = getFeatures (coords, b2Transform_zero, WorldBuilder::PARTITION);
-    float boxLength = simulationStep - ROBOT_BOX_OFFSET_X;
-    std::vector<cv::Point2f> points_to_track;
-    b2PolygonShape filter_box
-        = object_filtering_box (halfWindowWidth, boxLength, start);
-    for (BodyFeatures f : world_objects)
-    {
-        b2PolygonShape feature_shape;
-        feature_shape.SetAsBox (f.halfWidth, f.halfLength);
-        if (b2TestOverlap (&filter_box, 0, &feature_shape, 0, start, f.pose))
-        {
-            makeBody (f);
-        }
-    }
-    return world;
-}

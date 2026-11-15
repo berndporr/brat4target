@@ -86,7 +86,8 @@ struct Pointf : public cv::Point2f
 typedef std::vector<Pointf> CoordinateContainer;
 
 /**
- * Gets the area of the bounding box of a body. That's useful to determine how
+ * @brief Gets the area of the bounding box of a body. 
+ * That's useful to determine how
  * big an obstacle is for Braitenberg avoidance.
  */
 float getBodyBoundingBoxArea (b2Body *body);
@@ -116,7 +117,7 @@ template <typename C> std::vector<C> arrayToVec (C *c, int ct)
 }
 
 /**
-*Struct for conveniently grouping weights/threshold associated to BodyFeatures
+* @brief Struct for conveniently grouping weights/threshold associated to BodyFeatures.
 **/
 class Bundle
 {
@@ -371,8 +372,10 @@ std::pair<bool, BodyFeatures> bounding_box (std::vector<Pt> &nb)
 }
 
 /**
- * @brief Turns raw LIDAR scans into a box2d world.
- * This conversion might take an unpredictable time so this is done async.
+ * @brief Turns raw LIDAR scans into a box2d world point by point.
+ * This is the base World builder which does just a brute force
+ * conversion with a lot of tiny box2D bodies.
+ * This conversion might take an unpredictable time so this can be done async.
  */
 class WorldBuilder
 {
@@ -398,6 +401,7 @@ class WorldBuilder
 
     /**
      * @brief Converts async a LIDAR scan into a box2d World.
+     * When ready the callback OnWorldReady is called with the box2d World.
      */
     void doAsyncBuildWorld (CoordinateContainer coords, b2Transform start,
                             float halfWindowWidth = HALF_WINDOW_WIDTH,
@@ -602,8 +606,11 @@ class WorldBuilder
 };
 
 /**
+ * @brief Turns the LIDAR point cloud into box2D bodies.
  * The LIDAR scan is clustered and differently sized
- * bodies are created containing these clusters.
+ * bodies are created containing these clusters. This
+ * dramatically reduces the number of bodies compared to
+ * just creating a body for every LIDAR point.
  */
 class WorldClusterBuilder : public WorldBuilder
 {
@@ -611,17 +618,4 @@ class WorldClusterBuilder : public WorldBuilder
     virtual std::vector<BodyFeatures>
     getFeatures (const CoordinateContainer &current, b2Transform start,
                  CLUSTERING clustering) override;
-};
-
-/**
- * The LIDAR scan is clustered and only those bodies
- * are exported which are in the way.
- */
-class FocusedBuilder : public virtual WorldClusterBuilder
-{
-  protected:
-    virtual std::shared_ptr<b2World>
-    buildWorld (CoordinateContainer coords, b2Transform start,
-                float halfWindowWidth = HALF_WINDOW_WIDTH,
-                CLUSTERING clustering = CLUSTERING::PARTITION) override;
 };

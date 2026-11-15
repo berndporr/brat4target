@@ -72,9 +72,6 @@ int main (int, char **)
                             "/tmp/world_cluster_bodies.tsv",
                             "/tmp/world_cluster_obj.tsv",
                             "/tmp/world_cluster.svg");
-    test_worldbuilder_sync (
-        std::make_shared<FocusedBuilder> (), "/tmp/world_focused_bodies.tsv",
-        "/tmp/world_focused_obj.tsv", "/tmp/world_focused.svg");
     test_worldbuilder_async (std::make_shared<WorldClusterBuilder> (),
                              "/tmp/async_world_cluster_bodies.tsv",
                              "/tmp/async_world_cluster_bodies.svg");
