@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['reactiveconfigurator_0',['ReactiveConfigurator',['../classReactiveConfigurator.html',1,'']]],
-  ['robot_1',['Robot',['../classRobot.html',1,'']]]
+  ['speedavgfilter_0',['SpeedAvgFilter',['../classSpeedAvgFilter.html',1,'']]],
+  ['speedavgfilter_3c_2010_20_3e_1',['SpeedAvgFilter&lt; 10 &gt;',['../classSpeedAvgFilter.html',1,'']]],
+  ['state_2',['State',['../structState.html',1,'']]],
+  ['stoptask_3',['StopTask',['../classStopTask.html',1,'']]]
 ];

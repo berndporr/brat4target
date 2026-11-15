@@ -1,9 +1,0 @@
-<map id="FocusedBuilder" name="FocusedBuilder">
-<area shape="rect" id="Node000001" title=" " alt="" coords="27,282,148,310"/>
-<area shape="rect" id="Node000002" href="$classWorldClusterBuilder.html" title=" " alt="" coords="12,205,163,233"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,247,90,283,85,281,86,250"/>
-<area shape="rect" id="Node000003" href="$classWorldBuilder.html" title="Turns raw LIDAR scans into a box2d world. This conversion might take an unpredictable time so this is..." alt="" coords="35,128,140,156"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,169,90,206,85,204,86,174"/>
-<area shape="rect" id="Node000004" href="$classSpeedAvgFilter.html" title=" " alt="" coords="5,5,170,33"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,46,90,128,85,127,87,51"/>
-</map>

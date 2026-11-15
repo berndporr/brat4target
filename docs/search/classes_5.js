@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['focusedbuilder_0',['FocusedBuilder',['../classFocusedBuilder.html',1,'']]]
+  ['logger_0',['Logger',['../classLogger.html',1,'']]]
 ];

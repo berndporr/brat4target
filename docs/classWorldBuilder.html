@@ -83,7 +83,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Turns raw LIDAR scans into a box2d world. This conversion might take an unpredictable time so this is done async.  
+<p>Turns raw LIDAR scans into a box2d world point by point. This is the base World builder which does just a brute force conversion with a lot of tiny box2D bodies. This conversion might take an unpredictable time so this can be done async.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="worldbuilder_8h_source.html">worldbuilder.h</a>&gt;</code></p>
@@ -92,11 +92,9 @@ Inheritance diagram for WorldBuilder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWorldBuilder__inherit__graph.png" border="0" usemap="#aWorldBuilder_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aWorldBuilder_inherit__map" id="aWorldBuilder_inherit__map">
-<area shape="rect" title="Turns raw LIDAR scans into a box2d world. This conversion might take an unpredictable time so this is..." alt="" coords="28,5,133,33"/>
-<area shape="rect" href="classWorldClusterBuilder.html" title=" " alt="" coords="5,81,156,109"/>
-<area shape="poly" title=" " alt="" coords="82,46,83,81,78,80,79,51"/>
-<area shape="rect" href="classFocusedBuilder.html" title=" " alt="" coords="20,157,141,184"/>
-<area shape="poly" title=" " alt="" coords="82,123,83,157,78,155,79,126"/>
+<area shape="rect" title="Turns raw LIDAR scans into a box2d world point by point. This is the base World builder which does ju..." alt="" coords="28,5,133,33"/>
+<area shape="rect" href="classWorldClusterBuilder.html" title="Turns the LIDAR point cloud into box2D bodies. The LIDAR scan is clustered and differently sized bodi..." alt="" coords="5,81,156,109"/>
+<area shape="poly" title=" " alt="" coords="82,47,83,81,78,80,79,51"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -104,7 +102,7 @@ Collaboration diagram for WorldBuilder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWorldBuilder__coll__graph.png" border="0" usemap="#aWorldBuilder_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aWorldBuilder_coll__map" id="aWorldBuilder_coll__map">
-<area shape="rect" title="Turns raw LIDAR scans into a box2d world. This conversion might take an unpredictable time so this is..." alt="" coords="35,128,140,156"/>
+<area shape="rect" title="Turns raw LIDAR scans into a box2d world point by point. This is the base World builder which does ju..." alt="" coords="35,128,140,156"/>
 <area shape="rect" href="classSpeedAvgFilter.html" title=" " alt="" coords="5,5,170,33"/>
 <area shape="poly" title=" " alt="" coords="90,47,90,128,85,127,85,50"/>
 </map>
@@ -131,7 +129,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>registerWorldReadyCal
 <tr class="memdesc:a6287752321b5894e87a5b150d2033a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers callback when the world is ready. <br /></td></tr>
 <tr class="memitem:adc6b291c9d4ff61842469dfe2ce405b0" id="r_adc6b291c9d4ff61842469dfe2ce405b0"><td class="memItemLeft" align="right" valign="top"><a id="adc6b291c9d4ff61842469dfe2ce405b0" name="adc6b291c9d4ff61842469dfe2ce405b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>doAsyncBuildWorld</b> (<a class="el" href="worldbuilder_8h.html#a15cb8a93bbcef95d669c3c39ed27ca90">CoordinateContainer</a> coords, b2Transform start, float halfWindowWidth=HALF_WINDOW_WIDTH, CLUSTERING clustering=PARTITION)</td></tr>
-<tr class="memdesc:adc6b291c9d4ff61842469dfe2ce405b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts async a LIDAR scan into a box2d World. <br /></td></tr>
+<tr class="memdesc:adc6b291c9d4ff61842469dfe2ce405b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts async a LIDAR scan into a box2d World. When ready the callback <a class="el" href="#a9e52e27dcde2d33a6e802a8b1c9c5947" title="Callback containing a box2d world.">OnWorldReady</a> is called with the box2d World. <br /></td></tr>
 <tr class="memitem:a0a8b6695d4841acd58b650e2222eb62a" id="r_a0a8b6695d4841acd58b650e2222eb62a"><td class="memItemLeft" align="right" valign="top"><a id="a0a8b6695d4841acd58b650e2222eb62a" name="a0a8b6695d4841acd58b650e2222eb62a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wait4Async</b> ()</td></tr>
 <tr class="memitem:af77d7b8579b5af2d0ee75b56027b0ac5" id="r_af77d7b8579b5af2d0ee75b56027b0ac5"><td class="memItemLeft" align="right" valign="top"><a id="af77d7b8579b5af2d0ee75b56027b0ac5" name="af77d7b8579b5af2d0ee75b56027b0ac5"></a>
@@ -144,8 +142,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 <tr class="memdesc:a9ed07118a0c36df5064ba63b00fc09d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cluster point cloud data using a custom algorithm.  <br /></td></tr>
 <tr class="memitem:a69d61ce1ac9ec3091fc2c9114b43d67e" id="r_a69d61ce1ac9ec3091fc2c9114b43d67e"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="structBodyFeatures.html">BodyFeatures</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69d61ce1ac9ec3091fc2c9114b43d67e">getFeatures</a> (const <a class="el" href="worldbuilder_8h.html#a15cb8a93bbcef95d669c3c39ed27ca90">CoordinateContainer</a> &amp;current, b2Transform start, CLUSTERING clustering=PARTITION)</td></tr>
 <tr class="memdesc:a69d61ce1ac9ec3091fc2c9114b43d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">clusters point clouds into objects and returns a vector of body features  <br /></td></tr>
-<tr class="memitem:a1d52f6197d84176dba478da7f4b1e42c" id="r_a1d52f6197d84176dba478da7f4b1e42c"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; b2World &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d52f6197d84176dba478da7f4b1e42c">buildWorld</a> (<a class="el" href="worldbuilder_8h.html#a15cb8a93bbcef95d669c3c39ed27ca90">CoordinateContainer</a> coords, b2Transform, float halfWindowWidth=0.15, CLUSTERING clustering=CLUSTERING::PARTITION)</td></tr>
-<tr class="memdesc:a1d52f6197d84176dba478da7f4b1e42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates bodies (objects) in the box2d world.  <br /></td></tr>
+<tr class="memitem:a1d52f6197d84176dba478da7f4b1e42c" id="r_a1d52f6197d84176dba478da7f4b1e42c"><td class="memItemLeft" align="right" valign="top"><a id="a1d52f6197d84176dba478da7f4b1e42c" name="a1d52f6197d84176dba478da7f4b1e42c"></a>
+virtual std::shared_ptr&lt; b2World &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buildWorld</b> (<a class="el" href="worldbuilder_8h.html#a15cb8a93bbcef95d669c3c39ed27ca90">CoordinateContainer</a> coords, b2Transform, float halfWindowWidth=0.15, CLUSTERING clustering=CLUSTERING::PARTITION)</td></tr>
+<tr class="memdesc:a1d52f6197d84176dba478da7f4b1e42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates bodies (objects) in the box2d world. <br /></td></tr>
 <tr class="memitem:a028581b1964b10ee2b4aeec744047c1a" id="r_a028581b1964b10ee2b4aeec744047c1a"><td class="memItemLeft" align="right" valign="top">b2PolygonShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a028581b1964b10ee2b4aeec744047c1a">object_filtering_box</a> (float halfWindowWidth, float boxLength, b2Transform start)</td></tr>
 <tr class="memdesc:a028581b1964b10ee2b4aeec744047c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a box.  <br /></td></tr>
 <tr class="memitem:a6bf828a56cd18105b9b7293cd612b7ed" id="r_a6bf828a56cd18105b9b7293cd612b7ed"><td class="memItemLeft" align="right" valign="top"><a id="a6bf828a56cd18105b9b7293cd612b7ed" name="a6bf828a56cd18105b9b7293cd612b7ed"></a>
@@ -205,7 +204,7 @@ Friends</h2></td></tr>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>Configurator</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Turns raw LIDAR scans into a box2d world. This conversion might take an unpredictable time so this is done async. </p>
+<div class="textblock"><p>Turns raw LIDAR scans into a box2d world point by point. This is the base World builder which does just a brute force conversion with a lot of tiny box2D bodies. This conversion might take an unpredictable time so this can be done async. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa609552ced299a2f7646d707aebff063" name="aa609552ced299a2f7646d707aebff063"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa609552ced299a2f7646d707aebff063">&#9670;&#160;</a></span>bodies_dump() <span class="overload">[1/2]</span></h2>
@@ -260,49 +259,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Configurator</b></td
 </table>
 </div><div class="memdoc">
 <p>Saves the bodies in the box2D world. Dataformat: x,y,area. </p>
-
-</div>
-</div>
-<a id="a1d52f6197d84176dba478da7f4b1e42c" name="a1d52f6197d84176dba478da7f4b1e42c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d52f6197d84176dba478da7f4b1e42c">&#9670;&#160;</a></span>buildWorld()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; b2World &gt; WorldBuilder::buildWorld </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="worldbuilder_8h.html#a15cb8a93bbcef95d669c3c39ed27ca90">CoordinateContainer</a></td>          <td class="paramname"><span class="paramname"><em>coords</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">b2Transform</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>halfWindowWidth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.15</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">CLUSTERING</td>          <td class="paramname"><span class="paramname"><em>clustering</em></span><span class="paramdefsep"> = </span><span class="paramdefval">CLUSTERING::PARTITION</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates bodies (objects) in the box2d world. </p>
-
-<p>Reimplemented in <a class="el" href="classFocusedBuilder.html#ac58cc67fd99dd030386af11360e10749">FocusedBuilder</a>.</p>
 
 </div>
 </div>

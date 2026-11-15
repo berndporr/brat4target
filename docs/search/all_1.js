@@ -7,6 +7,6 @@ var searchData=
   ['braitenbergavoider_4',['BraitenbergAvoider',['../classAvoidTask_1_1BraitenbergAvoider.html',1,'AvoidTask']]],
   ['bratmobile_20v4_5',['Bratmobile V4',['../index.html',1,'']]],
   ['build_6',['Build',['../index.html#autotoc_md6',1,'']]],
-  ['buildworld_7',['buildWorld',['../classWorldBuilder.html#a1d52f6197d84176dba478da7f4b1e42c',1,'WorldBuilder::buildWorld()'],['../classFocusedBuilder.html#ac58cc67fd99dd030386af11360e10749',1,'FocusedBuilder::buildWorld()']]],
+  ['buildworld_7',['buildWorld',['../classWorldBuilder.html#a1d52f6197d84176dba478da7f4b1e42c',1,'WorldBuilder']]],
   ['bundle_8',['Bundle',['../classBundle.html',1,'']]]
 ];
