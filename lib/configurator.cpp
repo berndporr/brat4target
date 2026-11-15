@@ -10,10 +10,10 @@ void BaseConfigurator::TaskSimulator::checkTarget (
 {
     if (!targetPos->IsValid ())
         return;
-    b2Vec2 robotPos = robot.body ()->GetPosition ();
+    b2Vec2 robotPos = robot.getPosition ();
     b2Vec2 delta = targetPos.value () - robotPos;
     // Transform world delta vector into robot's local space
-    b2Vec2 localDelta = b2MulT (robot.body ()->GetTransform ().q, delta);
+    b2Vec2 localDelta = b2MulT (robot.getTransform ().q, delta);
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
     float relativeTargetAngle = b2Atan2 (localDelta.y, localDelta.x);
@@ -59,21 +59,18 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
         checkTarget (robot, task);
         b2Vec2 instVelocity{ task->getLinearSpeed () * cos (theta),
                              task->getLinearSpeed () * sin (theta) };
-        robot.body ()->SetLinearVelocity (instVelocity);
-        robot.body ()->SetAngularVelocity (task->getangularVelocity ());
-        robot.body ()->SetTransform (robot.body ()->GetPosition (), theta);
+        robot.setLinearVelocity (instVelocity);
+        robot.setAngularVelocity (task->getangularVelocity ());
+        robot.setAngle (theta);
         if (robotPath)
         {
             fprintf (robotPath, "%f\t%f\t%f\t%f\t%f\t%f\n",
-                     robot.body ()->GetPosition ().x,
-                     robot.body ()->GetPosition ().y, instVelocity.x,
-                     instVelocity.y, theta,
+                     robot.getPosition ().x, robot.getPosition ().y,
+                     instVelocity.x, instVelocity.y, theta,
                      task->getangularVelocity () / HZ); //save predictions/
         }
-        bool out_x = fabs (robot.body ()->GetTransform ().p.x)
-                     >= (BOX2DRANGE - 0.001);
-        bool out_y = fabs (robot.body ()->GetTransform ().p.y)
-                     >= (BOX2DRANGE - 0.001);
+        bool out_x = fabs (robot.getTransform ().p.x) >= (BOX2DRANGE - 0.001);
+        bool out_y = fabs (robot.getTransform ().p.y) >= (BOX2DRANGE - 0.001);
         out = (out_x || out_y);
         world->Step (
             1.0f / HZ, 3,
