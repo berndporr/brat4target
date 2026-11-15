@@ -1,18 +1,19 @@
 #include "configurator.h"
 #include "debug.h"
 #include "lib/const.h"
+#include "lib/robot.h"
 #include "task.h"
 #include <memory>
 
 void BaseConfigurator::TaskSimulator::checkTarget (
-    std::shared_ptr<AbstractTask> task)
+    Robot &robot, std::shared_ptr<AbstractTask> task)
 {
     if (!targetPos->IsValid ())
         return;
-    b2Vec2 robotPos = robot->body ()->GetPosition ();
+    b2Vec2 robotPos = robot.body ()->GetPosition ();
     b2Vec2 delta = targetPos.value () - robotPos;
     // Transform world delta vector into robot's local space
-    b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
+    b2Vec2 localDelta = b2MulT (robot.body ()->GetTransform ().q, delta);
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
     float relativeTargetAngle = b2Atan2 (localDelta.y, localDelta.x);
@@ -23,8 +24,8 @@ void BaseConfigurator::TaskSimulator::checkTarget (
                         relativeTargetAngle, cameraAngle);
         return;
     }
-    bratlogger.log("SIM: Target det at r=%f, phi=%f\n", localDelta.Length (),
-             relativeTargetAngle);
+    bratlogger.log ("SIM: Target det at r=%f, phi=%f\n", localDelta.Length (),
+                    relativeTargetAngle);
     task->onTargetDetected (delta.Length (), relativeTargetAngle);
 }
 
@@ -33,6 +34,8 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
                                       const char *plan_file)
 {
     FILE *robotPath = nullptr;
+    Robot robot (world, start);
+    theta = start.q.GetAngle ();
     AbstractTask::TerminationMessage simResult;
     bool running = true;
     task->registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
@@ -48,27 +51,28 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
     // needs to be called before it can be used. Sets for example the wheel speed.
     task->onStart ();
     bool out = false;
-    for (stepb2d = 0; running && (!out); stepb2d++)
+    int stepb2d = 0;
+    for (; running && (!out); stepb2d++)
     {
         task->onLIDARworld (world, robot);
         task->onGyroTurn (task->getangularVelocity () / HZ);
-        checkTarget (task);
-        instVelocity.x = task->getLinearSpeed () * cos (theta);
-        instVelocity.y = task->getLinearSpeed () * sin (theta);
-        robot->body ()->SetLinearVelocity (instVelocity);
-        robot->body ()->SetAngularVelocity (task->getangularVelocity ());
-        robot->body ()->SetTransform (robot->body ()->GetPosition (), theta);
+        checkTarget (robot, task);
+        b2Vec2 instVelocity{ task->getLinearSpeed () * cos (theta),
+                             task->getLinearSpeed () * sin (theta) };
+        robot.body ()->SetLinearVelocity (instVelocity);
+        robot.body ()->SetAngularVelocity (task->getangularVelocity ());
+        robot.body ()->SetTransform (robot.body ()->GetPosition (), theta);
         if (robotPath)
         {
             fprintf (robotPath, "%f\t%f\t%f\t%f\t%f\t%f\n",
-                     robot->body ()->GetPosition ().x,
-                     robot->body ()->GetPosition ().y, instVelocity.x,
+                     robot.body ()->GetPosition ().x,
+                     robot.body ()->GetPosition ().y, instVelocity.x,
                      instVelocity.y, theta,
                      task->getangularVelocity () / HZ); //save predictions/
         }
-        bool out_x = fabs (robot->body ()->GetTransform ().p.x)
+        bool out_x = fabs (robot.body ()->GetTransform ().p.x)
                      >= (BOX2DRANGE - 0.001);
-        bool out_y = fabs (robot->body ()->GetTransform ().p.y)
+        bool out_y = fabs (robot.body ()->GetTransform ().p.y)
                      >= (BOX2DRANGE - 0.001);
         out = (out_x || out_y);
         world->Step (
@@ -83,5 +87,7 @@ BaseConfigurator::TaskSimulator::run (std::shared_ptr<AbstractTask> task,
     {
         fclose (robotPath);
     }
+    start = robot.getTransform ();
+    robot.destruct ();
     return simResult;
 }

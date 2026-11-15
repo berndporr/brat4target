@@ -176,7 +176,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      * by its derived classes.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               std::shared_ptr<Robot> robot)
+                               Robot robot)
         = 0;
 
     /**
@@ -222,14 +222,14 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
         // returns the threat angle if detected
         std::optional<float> detect (std::shared_ptr<b2World> world,
-                                     std::shared_ptr<Robot> robot);
+                                     Robot robot);
 
       protected:
         // This is called by Box2D for every fixture found in the AABB
         bool ReportFixture (b2Fixture *fixture) override;
 
       private:
-        std::shared_ptr<Robot> robot;
+        Robot robot;
         const float maxDetectionRadius;
         const float maxDetectionAngle;
         b2Vec2 robotPos;
@@ -319,7 +319,7 @@ class StopTask : public AbstractTask
      * @brief Event: New LIDAR scan. Ignore!
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               std::shared_ptr<Robot> robot) override
+                               Robot robot) override
     {
     }
 
@@ -364,7 +364,7 @@ class EndTask : public AbstractTask
     EndTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
     virtual void onStart () override { setLinearSpeed (0); }
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               std::shared_ptr<Robot> robot) override
+                               Robot robot) override
     {
     }
     virtual void onTargetDetected (float r, float phi, int index = 0) override
@@ -441,7 +441,7 @@ class TargetTask : public AbstractTask
      * the task!
      */
     void onLIDARworld (std::shared_ptr<b2World> world,
-                       std::shared_ptr<Robot> robot) override
+                       Robot robot) override
     {
         // Do we need to terminate the task?
         CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
@@ -522,7 +522,7 @@ class AvoidTask : public AbstractTask
      * @brief Event: Called with a fresh LIDAR scan as World and the robot in it for simulation.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               std::shared_ptr<Robot> robot) override;
+                               Robot robot) override;
 
     /**
      * @brief gyroEvent allowing to update the target angle.
@@ -544,14 +544,14 @@ class AvoidTask : public AbstractTask
               maxDetectionAngle (maxDetectionAngle) {};
 
         std::optional<float> detect (std::shared_ptr<b2World> world,
-                                     std::shared_ptr<Robot> _robot);
+                                     Robot _robot);
 
       protected:
         // This is called by Box2D for every fixture found in the AABB
         bool ReportFixture (b2Fixture *fixture) override;
 
       private:
-        std::shared_ptr<Robot> robot;
+        Robot robot;
         const float maxDetectionRadius;
         const float maxDetectionAngle;
         b2Vec2 robotPos;

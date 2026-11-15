@@ -41,7 +41,7 @@ class BaseConfigurator
     virtual void onLIDARworld (std::shared_ptr<b2World> world)
     {
         if (currentTask)
-            currentTask->onLIDARworld (world, std::make_shared<Robot> (world));
+            currentTask->onLIDARworld (world, Robot (world));
     }
 
     /**
@@ -112,7 +112,7 @@ class BaseConfigurator
       public:
         /**
          * @brief Constructor receiving the world (=LIDAR scan)
-         * The simulator it initialised with the world (LIDAR scan). The LIDAR
+         * The simulator is initialised with the world (LIDAR scan). The LIDAR
          * scan stays always the same while run() can be called multiple times
          * with different tasks.
          */
@@ -120,10 +120,6 @@ class BaseConfigurator
         {
             world = _world;
             start = b2Transform_zero;
-            robot = std::make_shared<Robot> (world, start);
-            stepb2d = 0;
-            theta = start.q.GetAngle ();
-            instVelocity = { 0, 0 };
         }
 
         /**
@@ -149,12 +145,9 @@ class BaseConfigurator
 
       private:
         float cameraAngle = M_PI / 2;
-        void checkTarget (std::shared_ptr<AbstractTask> task);
+        void checkTarget (Robot &robot, std::shared_ptr<AbstractTask> task);
         std::shared_ptr<b2World> world;
-        std::shared_ptr<Robot> robot;
         float theta = 0;
-        b2Vec2 instVelocity = { 0, 0 };
-        int stepb2d = 0;
         b2Transform start = b2Transform_zero;
         std::optional<b2Vec2> targetPos;
     };

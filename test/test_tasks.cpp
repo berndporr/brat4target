@@ -36,7 +36,7 @@ void test_target_task_close ()
     task.registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
         printf ("Task terminated. Reason: %d\n", tm.terminationReason);
     });
-    std::shared_ptr<Robot> robot = std::make_shared<Robot> (world);
+    Robot robot (world);
     task.onLIDARworld (world, robot);
     printf ("\n");
 }
@@ -44,7 +44,7 @@ void test_target_task_close ()
 void test_avoid_task_close ()
 {
     printf ("Avoid test close.\n");
-    AvoidTask task(AvoidTask::AvoidDirecton::LEFT);
+    AvoidTask task (AvoidTask::AvoidDirecton::LEFT);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -57,7 +57,7 @@ void test_avoid_task_close ()
     task.registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
         printf ("Task terminated. Reason: %d\n", tm.terminationReason);
     });
-    std::shared_ptr<Robot> robot = std::make_shared<Robot> (world);
+    Robot robot (world);
     task.setLinearSpeed (0.5);
     task.onLIDARworld (world, robot);
     printf ("\n");
@@ -78,7 +78,7 @@ void test_target_task_far ()
     task.registerTerminated ([&] (AbstractTask::TerminationMessage tm) {
         printf ("Task terminated. Reason: %d\n", tm.terminationReason);
     });
-    std::shared_ptr<Robot> robot = std::make_shared<Robot> (world);
+    Robot robot(world);
     task.setLinearSpeed (0.5);
     task.onLIDARworld (world, robot);
     task.onTargetDetected (target_distance, target_angle);

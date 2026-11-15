@@ -82,10 +82,10 @@ void AbstractTask::correctTargetAngleWithGyro(float dphi)
 
 std::optional<float>
 AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
-                                           std::shared_ptr<Robot> _robot)
+                                           Robot _robot)
 {
     robot = _robot;
-    robotPos = robot->getPosition ();
+    robotPos = robot.getPosition ();
     bratlogger.log ("Running: AbstractTask::CloseObjectDetector::detect.");
     b2AABB aabb;
     aabb.lowerBound
@@ -113,7 +113,7 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     b2Body *body = fixture->GetBody ();
 
     // Skip sensors or the robot's own chassis
-    if ((fixture->IsSensor ()) || (body == robot->body ())
+    if ((fixture->IsSensor ()) || (body == robot.body ())
         || (body->GetUserData ().pointer == ROBOT_FLAG))
     {
         return true; // Keep searching
@@ -135,7 +135,7 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
     bratlogger.log ("AbstractTask::CloseObjectDetector: We are close!");
 
     // Transform world delta vector into robot's local space
-    b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
+    b2Vec2 localDelta = b2MulT (robot.body ()->GetTransform ().q, delta);
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
     const float tmpRelativeThreatAngle = b2Atan2 (localDelta.y, localDelta.x);
@@ -161,11 +161,11 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
 std::optional<float>
 AvoidTask::BraitenbergAvoider::detect (std::shared_ptr<b2World> world,
-                                       std::shared_ptr<Robot> _robot)
+                                       Robot _robot)
 {
     robot = _robot;
-    robotPos = robot->getPosition ();
-    robotAngle = robot->getAngle ();
+    robotPos = robot.getPosition ();
+    robotAngle = robot.getAngle ();
 
     b2AABB aabb;
     aabb.lowerBound
@@ -194,7 +194,7 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
     b2Body *body = fixture->GetBody ();
 
     // Skip sensors or the robot's own chassis
-    if ((fixture->IsSensor ()) || (body == robot->body ())
+    if ((fixture->IsSensor ()) || (body == robot.body ())
         || (body->GetUserData ().pointer == ROBOT_FLAG))
     {
         return true; // Keep searching
@@ -205,10 +205,10 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
     // distance = delta.Length ();
 
     b2DistanceInput input;
-    input.proxyA.Set (robot->getFixtureList ()->GetShape (),
+    input.proxyA.Set (robot.getFixtureList ()->GetShape (),
                       0); // Sets up GJK shape representation
     input.proxyB.Set (fixture->GetShape (), 0);
-    input.transformA = robot->body ()->GetTransform ();
+    input.transformA = robot.body ()->GetTransform ();
     input.transformB = fixture->GetBody ()->GetTransform ();
     input.useRadii = true;
 
@@ -228,7 +228,7 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
         return true;
 
     // Transform world delta vector into robot's local space
-    b2Vec2 localDelta = b2MulT (robot->body ()->GetTransform ().q, delta);
+    b2Vec2 localDelta = b2MulT (robot.body ()->GetTransform ().q, delta);
 
     // Calculate relative angle (-PI to +PI). 0 is dead ahead.
     float relativeAngle = b2Atan2 (localDelta.y, localDelta.x);
@@ -242,7 +242,7 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
 }
 
 void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
-                              std::shared_ptr<Robot> robot)
+                              Robot robot)
 {
     // We create a Braitenberg escape behaviour
     BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
