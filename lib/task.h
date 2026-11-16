@@ -210,9 +210,16 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
   protected:
     void correctTargetAngleWithGyro (float dphi);
 
+    /**
+     * @brief Detects objects which the robot will crash into.
+     * This is used to terminate a task and signal an obstacle.
+     */
     class CloseObjectDetector : public b2QueryCallback
     {
       public:
+        /**
+         * @brief Constructor which sets the detection radius and field of view.
+         */
         CloseObjectDetector (const float maxDetectionRadius,
                              const float maxDetectionAngle)
             : maxDetectionRadius (maxDetectionRadius),
@@ -220,7 +227,10 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         {
         }
 
-        // returns the threat angle if detected
+        /**
+         * @brief Returns the threat angle if there is a threat.
+         * Detects threats close to the robot in its world.
+         **/
         std::optional<float> detect (std::shared_ptr<b2World> world,
                                      Robot robot);
 
@@ -535,14 +545,25 @@ class AvoidTask : public AbstractTask
     }
 
   protected:
+    /**
+     * @brief Detects obstacles close to the robot in world.
+     */
     class BraitenbergAvoider : public b2QueryCallback
     {
       public:
+        /**
+         * @brief Constructor which inits the detection radius & angle.
+         */
         BraitenbergAvoider (const float maxDetectionRadius,
                             const float maxDetectionAngle)
             : maxDetectionRadius (maxDetectionRadius),
               maxDetectionAngle (maxDetectionAngle) {};
 
+        /**
+         * @brief Performs detection of obstacles and returns a normalised distance 0..1.
+         * If there are no obstacles within the detection radius or outwidth the detection
+         * angle the optional will be empty.
+         */
         std::optional<float> detect (std::shared_ptr<b2World> world,
                                      Robot _robot);
 

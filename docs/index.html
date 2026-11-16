@@ -105,8 +105,9 @@ Development packages</h2>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Install powersave service</h2>
 <p>The rpi5 draws too much current under load to run off the battery so we need to enable powersave:</p>
-<p>sudo cp powersave.service /etc/systemd/system sudo systemctl enable &ndash;now powersave.service</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<div class="fragment"><div class="line">sudo cp powersave.service /etc/systemd/system</div>
+<div class="line">sudo systemctl enable --now powersave.service</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Build</h1>
 <div class="fragment"><div class="line">git checkout brat4target</div>
 <div class="line">cd brat4target</div>

@@ -9,11 +9,9 @@ This is work in progress towards true mapless navigation using insights from neu
 The navigation problem is broken down into attraction and avoidance Braitenberg behaviours, called Tasks. A supervising module, called the Configurator, can simulate sequences of Tasks to build up a plan and represents the robot's 
 
 ## Features:
-* Hybrid state-space representation
-
-* Mapless navigation
-
-* Pure event driven processing where the tasks receive sensor events and emit both motor actions and termination events to hand over to the next task!
+- Hybrid state-space representation
+- Mapless navigation
+- Pure event driven processing where the tasks receive sensor events and emit both motor actions and termination events to hand over to the next task!
 
 ## Hardware
 
@@ -36,9 +34,10 @@ sudo apt install g++ cmake libopencv-dev libboost-all-dev xorg-dev libglu1-mesa-
 
 The rpi5 draws too much current under load to run off the battery so we need to enable powersave:
 
+```
 sudo cp powersave.service /etc/systemd/system
 sudo systemctl enable --now powersave.service
-
+```
 
 ## Build
 
