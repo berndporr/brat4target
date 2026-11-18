@@ -4,6 +4,7 @@
 #include "lib/const.h"
 #include "lib/debug.h"
 #include "lib/targetloc.h"
+#include "lib/task.h"
 #include "lib/worldbuilder.h"
 #include "zetabot.h"
 #include <LSM6DSOXSample.h>
@@ -111,7 +112,7 @@ int main (int nargs, char **argv)
     targetLoc.start ();
 
     // We are starting from the stoptask
-    configurator.setCurrentTask (std::make_shared<StopTask> ());
+    configurator.setCurrentTask (std::make_shared<Waiting4TargetTask> ());
 
     printf ("Up and running.\n");
 

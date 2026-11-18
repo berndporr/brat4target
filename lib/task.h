@@ -307,18 +307,18 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
  * about the target. Then this task terminates and it emits a message
  * that a target has been detected.
  */
-class StopTask : public AbstractTask
+class Waiting4TargetTask : public AbstractTask
 {
   public:
     /**
      * @brief Default constructor with default values.
      */
-    StopTask () : AbstractTask () {}
+    Waiting4TargetTask () : AbstractTask () {}
 
     /**
      * @brief Constructor receiving info from previous task.
      */
-    StopTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
+    Waiting4TargetTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
 
     /**
      * @brief Event: when the task is starting we set the robot's speed to zero.

@@ -17,7 +17,7 @@
 struct State
 {
     std::vector<std::shared_ptr<State> > children;
-    std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
+    std::shared_ptr<AbstractTask> task = std::make_shared<EndTask> ();
 };
 
 /**
@@ -160,7 +160,7 @@ class BaseConfigurator
 
   private:
     AbstractTask::MotorEvent motorEvent;
-    std::shared_ptr<AbstractTask> currentTask = std::make_shared<StopTask> ();
+    std::shared_ptr<AbstractTask> currentTask = std::make_shared<EndTask> ();
 };
 
 /**
@@ -241,11 +241,11 @@ class ReactiveConfigurator : public BaseConfigurator
         case AbstractTask::TerminationMessage::INVALID:
             bratlogger.log (
                 "ReactiveConfigurator: Message==INVALID (BUG?): stopping.");
-            return std::make_shared<StopTask> (tm.taskWhichSentMessage);
+            return std::make_shared<EndTask> (tm.taskWhichSentMessage);
         }
         bratlogger.log (
             "ReactiveConfigurator: Message==??? (BUG?): stopping.");
-        return std::make_shared<StopTask> (tm.taskWhichSentMessage);
+        return std::make_shared<EndTask> (tm.taskWhichSentMessage);
     }
 
     /**

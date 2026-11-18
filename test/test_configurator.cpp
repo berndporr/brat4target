@@ -35,7 +35,7 @@ void avoid_obstacle_drive_to_arget ()
         "/tmp/test_configur_close_obst_far_target_bodies_seq.tsv");
     BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
-    std::shared_ptr<AbstractTask> task = std::make_shared<StopTask> ();
+    std::shared_ptr<AbstractTask> task = std::make_shared<Waiting4TargetTask> ();
     task->registerMotorEvent ([&] (const float l, const float r) {
         printf ("Motor event: %f,%f\n", l, r);
     });
