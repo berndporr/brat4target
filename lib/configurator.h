@@ -54,7 +54,7 @@ class BaseConfigurator
         if (currentTask)
         {
             currentTask->onTargetDetected (r, phi, targetIndex);
-            bratlogger.logVariable ("onTargetDetected", phi);
+            bratlogger.logVariable ("targetPhi", phi);
         }
     }
 
@@ -67,8 +67,8 @@ class BaseConfigurator
     {
         if (currentTask)
         {
-            bratlogger.logVariable ("dphi", dphi);
             currentTask->onGyroTurn (dphi);
+            bratlogger.logVariable ("dphi", dphi);
         }
     }
 

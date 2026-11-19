@@ -175,15 +175,15 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      * Task needs to react to the LIDAR world. Needs to be fille with content
      * by its derived classes.
      */
-    virtual void onLIDARworld (std::shared_ptr<b2World> world,
-                               Robot robot)
+    virtual void onLIDARworld (std::shared_ptr<b2World> world, Robot robot)
         = 0;
 
     /**
     * @brief Event: new target distance and angle.
     * Task needs to incorporate new target direction from the camera.
     */
-    virtual void onTargetDetected (float r, float phi, int targetIndex = 0);
+    virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
+        = 0;
 
     /**
      * @brief Event: new gyro rotation.
@@ -318,12 +318,18 @@ class Waiting4TargetTask : public AbstractTask
     /**
      * @brief Constructor receiving info from previous task.
      */
-    Waiting4TargetTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
+    Waiting4TargetTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at)
+    {
+    }
 
     /**
      * @brief Event: when the task is starting we set the robot's speed to zero.
      */
-    virtual void onStart () override { setLinearSpeed (0); }
+    virtual void onStart () override
+    {
+        setLinearSpeed (0);
+        bratlogger.log ("onStart: Waiting4TargetTask");
+    }
 
     /**
      * @brief Event: New LIDAR scan. Ignore!
@@ -372,7 +378,11 @@ class EndTask : public AbstractTask
      * @brief Constructor receiving info from previous task.
      */
     EndTask (std::shared_ptr<AbstractTask> at) : AbstractTask (at) {}
-    virtual void onStart () override { setLinearSpeed (0); }
+    virtual void onStart () override
+    {
+        setLinearSpeed (0);
+        bratlogger.log ("onStart: EndTask");
+    }
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                Robot robot) override
     {
@@ -409,7 +419,11 @@ class TargetTask : public AbstractTask
      * @brief Event: called when the task is starting. 
      * We set the linear speed to the default speed defined in const.h (fixme!).
      */
-    virtual void onStart () override { setLinearSpeed (LINEAR_SPEED_DEFAULT); }
+    virtual void onStart () override
+    {
+        setLinearSpeed (LINEAR_SPEED_DEFAULT);
+        bratlogger.log ("onStart: TargetTask");
+    }
 
     /**
      * @brief Event checks if we have arrived or need to continue targeting.
@@ -417,7 +431,8 @@ class TargetTask : public AbstractTask
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
-        bratlogger.logVariable("targetDistance",r);
+        targetDistance = r;
+        bratlogger.logVariable ("targetDistance", r);
         if (r < targetArrivedDistance)
         {
             bratlogger.log (
@@ -429,6 +444,7 @@ class TargetTask : public AbstractTask
                                        shared_from_this ());
                 terminatedEvent (tm);
             }
+            return;
         }
         targetAngle2MotorAngularVelocity ();
     }
@@ -450,8 +466,7 @@ class TargetTask : public AbstractTask
      * We need to check if we are crashing into an obstacle and to terminate
      * the task!
      */
-    void onLIDARworld (std::shared_ptr<b2World> world,
-                       Robot robot) override
+    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) override
     {
         // Do we need to terminate the task?
         CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
@@ -526,7 +541,11 @@ class AvoidTask : public AbstractTask
      * @brief Event: Called when the task is starting.
      * Sets the default speed based on const.h.
      */
-    virtual void onStart () override { setLinearSpeed (LINEAR_SPEED_DEFAULT); }
+    virtual void onStart () override
+    {
+        setLinearSpeed (LINEAR_SPEED_DEFAULT);
+        bratlogger.log ("onStart: AvoidTask");
+    }
 
     /**
      * @brief Event: Called with a fresh LIDAR scan as World and the robot in it for simulation.
@@ -542,6 +561,11 @@ class AvoidTask : public AbstractTask
     void onGyroTurn (float dphi) override
     {
         correctTargetAngleWithGyro (dphi);
+    }
+
+    void onTargetDetected (float r, float phi, int) override
+    {
+        // losing track so not registering anything here
     }
 
   protected:

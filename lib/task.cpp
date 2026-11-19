@@ -52,22 +52,6 @@ float getFixtureArea (const b2Fixture *fixture)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-void AbstractTask::onTargetDetected (float r, float phi, int)
-{
-    targetDistance = r;
-    targetAngle = phi;
-    bratlogger.log ("Camera target detection: r=%, phi=%", r, phi);
-    if (targetDistance <= targetArrivedDistance)
-    {
-        if (terminatedEvent)
-        {
-            TerminationMessage tm (TerminationMessage::TargetReached,
-                                   shared_from_this ());
-            terminatedEvent (tm);
-        }
-    }
-}
-
 void AbstractTask::correctTargetAngleWithGyro(float dphi)
 {
     bratlogger.log ("onGyroTurn: dphi=%f", dphi);
@@ -76,7 +60,7 @@ void AbstractTask::correctTargetAngleWithGyro(float dphi)
         bratlogger.log ("Updating target angle: %f.", targetAngle.value ());
         targetAngle = targetAngle.value () - dphi;
         bratlogger.log ("To target angle: %f.", targetAngle.value ());
-        bratlogger.logVariable ("targetAngle", targetAngle.value ());
+        bratlogger.logVariable ("estTargetPhi", targetAngle.value ());
     }
 }
 
