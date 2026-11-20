@@ -565,7 +565,8 @@ class AvoidTask : public AbstractTask
 
     void onTargetDetected (float r, float phi, int) override
     {
-        // losing track so not registering anything here
+        targetDistance = r;
+        targetAngle = phi;
     }
 
   protected:
