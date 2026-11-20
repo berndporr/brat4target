@@ -45,16 +45,16 @@ void TargetLoc::updateImage (const cv::Mat &l)
 void TargetLoc::onTargetDetected (const std::vector<cv::Point2f> &contour)
 {
     std::lock_guard<std::mutex> guard (contour_mutex);
-    // We put the detection contours into a double ended queue of 3
+    // We put the detection contours into a double ended queue of ringbuffersize
     // and check if all the detection points are within an error margin
     // of maxContourPixelErrorBetweenDetectionContours.
     contoursRingbuffer.push_front (contour);
-    if (contoursRingbuffer.size () < 3)
+    if (contoursRingbuffer.size () < (unsigned long)ringBufferSize)
     {
         return;
     }
     contoursRingbuffer.pop_back ();
-    for (int i = 1; i < 3; i++)
+    for (int i = 1; i < ringBufferSize; i++)
     {
         std::vector<cv::Point2f> contour1 = contoursRingbuffer[i - 1];
         std::vector<cv::Point2f> contour2 = contoursRingbuffer[i];

@@ -435,16 +435,22 @@ class TargetTask : public AbstractTask
         bratlogger.logVariable ("targetDistance", r);
         if (r < targetArrivedDistance)
         {
-            bratlogger.log (
-                "onTargetDetected in TargetTask: We have arrived. r=%f < %f",
-                r, targetArrivedDistance);
-            if (terminatedEvent)
+            nArrived--;
+            if (0 == nArrived)
             {
-                TerminationMessage tm (TerminationMessage::TargetReached,
-                                       shared_from_this ());
-                terminatedEvent (tm);
+                bratlogger.log ("onTargetDetected in TargetTask: We have "
+                                "arrived. r=%f < %f",
+                                r, targetArrivedDistance);
+                if (terminatedEvent)
+                {
+                    TerminationMessage tm (TerminationMessage::TargetReached,
+                                           shared_from_this ());
+                    terminatedEvent (tm);
+                }
+                return;
             }
-            return;
+        } else {
+            nArrived = numArrivedBelowThres;
         }
         targetAngle2MotorAngularVelocity ();
     }
@@ -497,6 +503,11 @@ class TargetTask : public AbstractTask
             bratlogger.logVariable ("angularVelocity", angularVelocity);
         }
     }
+
+    int nArrived = 0;
+
+    // Number of targetdet events signalling arrival at the target.
+    const int numArrivedBelowThres = 2;
 };
 
 /**

@@ -125,6 +125,9 @@ class TargetLoc
     // Max error in pixels between consecutive contours
     const float maxContourPixelErrorBetweenDetectionContours = 10;
 
+    // Size of ringbuffer
+    const int ringBufferSize = 3;
+
     TargetDet targetDet;
 
     TargetLocSettings targetLocSettings;
