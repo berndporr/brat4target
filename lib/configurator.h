@@ -1,6 +1,7 @@
 #pragma once
 
 #include "debug.h"
+#include "lib/targettracker.h"
 #include "robot.h"
 #include "task.h"
 #include <box2d/b2_math.h>
@@ -73,9 +74,18 @@ class BaseConfigurator
     }
 
     /**
+     * @brief Registers the motor event callback.
+     * This in turn then is registered with the current task and sets the wheel speeds of the
+     * real robot.
+     */
+    void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
+
+    /**
      * @brief Changes the current task, registers the termination callback,
      * the motor callback and calls the task's "onStart()" telling
      * it's now running.
+     * @param task New task which shall be runnung
+     * @param targetTracker Sets a new target tracker. Will be passed on.
      */
     virtual void setCurrentTask (std::shared_ptr<AbstractTask> task)
     {
@@ -92,13 +102,6 @@ class BaseConfigurator
      * @brief Gets the current task as a shared pointer.
      */
     std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
-
-    /**
-     * @brief Registers the motor event callback.
-     * This in turn then is registered with the current task and sets the wheel speeds of the
-     * real robot.
-     */
-    void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
     /**
      * @brief Simulating one or a chain of tasks in a LIDAR scan.

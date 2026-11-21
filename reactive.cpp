@@ -111,7 +111,7 @@ int main (int nargs, char **argv)
 
     targetLoc.start ();
 
-    // We are starting from the stoptask
+    // We are starting from the task which is waiting for a target.
     configurator.setCurrentTask (std::make_shared<Waiting4TargetTask> ());
 
     printf ("Up and running.\n");
