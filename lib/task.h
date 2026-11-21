@@ -2,6 +2,7 @@
 
 #include "const.h"
 #include "debug.h"
+#include "lib/ico_tracker.h"
 #include "robot.h"
 #include <box2d/b2_body.h>
 #include <box2d/b2_fixture.h>
@@ -10,6 +11,27 @@
 #include <functional>
 #include <memory>
 #include <optional>
+#include <unistd.h>
+#include "targettracker.h"
+
+class SimpleTargetTracker : public TargetTrackerInterface
+{
+  public:
+    void onTargetDetected (float r, float phi, int index = 0)
+    {
+        targetAngle = phi;
+    };
+    void onGyroTurn (float dphi)
+    {
+        if (targetAngle)
+        {
+            targetAngle = targetAngle.value () - dphi;
+        }
+    }
+    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) {};
+};
+
+using TargetTracker = std::variant<SimpleTargetTracker, ICO_tracker>;
 
 /**
  * @brief Turns sensor events into motor outputs.

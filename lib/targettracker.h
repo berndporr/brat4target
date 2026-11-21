@@ -1,40 +1,19 @@
-#include "lib/robot.h"
-class AbstractTargetTracker
-{
+#pragma once
 
+#include "lib/robot.h"
+#include <optional>
+
+class TargetTrackerInterface
+{
   public:
-    AbstractTargetTracker ();
-    virtual void onTargetDetected (float r, float phi, int index = 0) = 0;
-    virtual void onGyroTurn (float dphi) = 0;
-    virtual void onLIDARworld (std::shared_ptr<b2World> world, Robot robot)
-        = 0;
-    using UpdateTargetEvent = std::function<void (float)>;
-    void registerUpdateTargetEvent (UpdateTargetEvent te) { targetEvent = te; }
+    TargetTrackerInterface ();
+    void onTargetDetected (float r, float phi, int index = 0) const = delete;
+    void onGyroTurn (float dphi) const = delete;
+    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) const
+        = delete;
+
+    inline std::optional<float> getAngle () const { return targetAngle; }
 
   protected:
-    UpdateTargetEvent targetEvent;
-};
-
-class SimpleTargetTracker : public AbstractTargetTracker
-{
-  public:
-    virtual void onTargetDetected (float r, float phi, int index = 0)
-    {
-        targetAngle = phi;
-        if (targetEvent)
-            targetEvent (targetAngle.value ());
-    };
-    virtual void onGyroTurn (float dphi)
-    {
-        if (targetAngle)
-        {
-            targetAngle = targetAngle.value () - dphi;
-            if (targetEvent)
-                targetEvent (targetAngle.value ());
-        }
-    }
-    virtual void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) {};
-
-  private:
-    std::optional<float> targetAngle = 0;
+    std::optional<float> targetAngle;
 };
