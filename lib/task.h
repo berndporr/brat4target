@@ -2,8 +2,8 @@
 
 #include "const.h"
 #include "debug.h"
-#include "lib/ico_tracker.h"
 #include "robot.h"
+#include "targettracker.h"
 #include <box2d/b2_body.h>
 #include <box2d/b2_fixture.h>
 #include <box2d/b2_world.h>
@@ -12,26 +12,26 @@
 #include <memory>
 #include <optional>
 #include <unistd.h>
-#include "targettracker.h"
 
 class SimpleTargetTracker : public TargetTrackerInterface
 {
   public:
-    void onTargetDetected (float r, float phi, int index = 0)
+    void onTargetDetected (float r, float phi, int index = 0) override
     {
         targetAngle = phi;
     };
-    void onGyroTurn (float dphi)
+    void onGyroTurn (float dphi) override
     {
         if (targetAngle)
         {
             targetAngle = targetAngle.value () - dphi;
         }
     }
-    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) {};
+    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) override {
+    };
 };
 
-using TargetTracker = std::variant<SimpleTargetTracker, ICO_tracker>;
+////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Turns sensor events into motor outputs.
@@ -292,7 +292,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
             angularVelocity = at->angularVelocity;
             motorEvent = at->motorEvent;
             terminatedEvent = at->terminatedEvent;
-            targetAngle = at->targetAngle;
+            targetTracker = at->targetTracker;
             targetDistance = at->targetDistance;
         }
     }
@@ -301,7 +301,10 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     /**
      * @brief Returns the target angle as an optional as it might not know it (yet!).
      */
-    std::optional<float> getTargetAngle () { return targetAngle; };
+    std::optional<float> getTargetAngle ()
+    {
+        return targetTracker->getAngle ();
+    };
 
     /**
      * @brief Returns the target distance as an optional as it might not know it (yet!).
@@ -313,12 +316,27 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     std::optional<float> getThreatAngle () { return threatAngle; }
 
+    /**
+     * @brief Replaces the default target tracker with a fancier one!
+     * 
+     * @param tt The new target tracker which is handed over here.
+     */
+    void setTargetTracker (std::unique_ptr<TargetTrackerInterface> tt)
+    {
+        if (!tt) {
+            bratlogger.log("BUG! setTargetTracker called with nullptr!");
+            return;
+        }
+        targetTracker = std::move (tt);
+    }
+
   protected:
     float linearSpeed = 0;
     float angularVelocity = 0;
     MotorEvent motorEvent;
     TerminatedEvent terminatedEvent;
-    std::optional<float> targetAngle;
+    std::shared_ptr<TargetTrackerInterface> targetTracker
+        = std::make_shared<SimpleTargetTracker> ();
     std::optional<float> targetDistance;
     std::optional<float> threatAngle;
 };
@@ -373,7 +391,7 @@ class Waiting4TargetTask : public AbstractTask
      */
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
-        targetAngle = phi;
+        targetTracker->onTargetDetected (r, phi);
         targetDistance = r;
         if (terminatedEvent)
         {
@@ -452,7 +470,7 @@ class TargetTask : public AbstractTask
      */
     virtual void onTargetDetected (float r, float phi, int index = 0) override
     {
-        targetAngle = phi;
+        targetTracker->onTargetDetected (r, phi);
         targetDistance = r;
         bratlogger.logVariable ("targetDistance", r);
         if (r < targetArrivedDistance)
@@ -471,7 +489,9 @@ class TargetTask : public AbstractTask
                 }
                 return;
             }
-        } else {
+        }
+        else
+        {
             nArrived = numArrivedBelowThres;
         }
         targetAngle2MotorAngularVelocity ();
@@ -519,11 +539,11 @@ class TargetTask : public AbstractTask
     // Adjusts steering angle that we drive towards the target.
     void targetAngle2MotorAngularVelocity ()
     {
-        if (targetAngle)
-        {
-            setAngularVelocity (targetAngle.value () * targetSteeringGain);
-            bratlogger.logVariable ("angularVelocity", angularVelocity);
-        }
+        if (!targetTracker->getAngle ())
+            return;
+        setAngularVelocity (targetTracker->getAngle ().value ()
+                            * targetSteeringGain);
+        bratlogger.logVariable ("angularVelocity", angularVelocity);
     }
 
     int nArrived = 0;
@@ -599,7 +619,7 @@ class AvoidTask : public AbstractTask
     void onTargetDetected (float r, float phi, int) override
     {
         targetDistance = r;
-        targetAngle = phi;
+        targetTracker->onTargetDetected (r, phi);
     }
 
   protected:

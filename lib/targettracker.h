@@ -6,11 +6,10 @@
 class TargetTrackerInterface
 {
   public:
-    TargetTrackerInterface ();
-    void onTargetDetected (float r, float phi, int index = 0) const = delete;
-    void onGyroTurn (float dphi) const = delete;
-    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) const
-        = delete;
+    TargetTrackerInterface () = default;
+    virtual void onTargetDetected (float r, float phi, int index = 0) = 0;
+    virtual void onGyroTurn (float dphi) = 0;
+    virtual void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) = 0;
 
     inline std::optional<float> getAngle () const { return targetAngle; }
 
