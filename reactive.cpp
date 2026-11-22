@@ -31,6 +31,7 @@ int main (int nargs, char **argv)
     LSM6DSOX lsm6dS0x;
     LSMSettings lsmsettings;
     lsmsettings.samplingRate = LSMSettings::ODR_12_5;
+    lsmsettings.gyro_scale = LSMSettings::GYRO_1000_DPS;
 
     lsm6dS0x.registerCallback ([&] (const LSM6DSOXSample &s) {
         configurator.onGyroTurn (-s.gz / lsm6dS0x.getODR ());

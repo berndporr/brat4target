@@ -26,10 +26,7 @@ class SimpleTargetTracker : public TargetTrackerInterface
      * 
      * @param phi Angle of the target
      */
-    void onTargetDetected (const float phi) override
-    {
-        targetAngle = phi;
-    };
+    void onTargetDetected (const float phi) override { targetAngle = phi; };
 
     /**
      * @brief Event: new gyro readings (robot's rotation)
@@ -227,7 +224,8 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     * @brief Event: new target distance and angle.
     * Task needs to incorporate new target direction from the camera.
     */
-    virtual void onTargetDetected (const float r, const float phi, const int targetIndex = 0)
+    virtual void onTargetDetected (const float r, const float phi,
+                                   const int targetIndex = 0)
         = 0;
 
     /**
@@ -344,14 +342,25 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     void setTargetTracker (std::unique_ptr<TargetTrackerInterface> tt)
     {
-        if (!tt) {
-            bratlogger.log("BUG! setTargetTracker called with nullptr!");
+        if (!tt)
+        {
+            bratlogger.log ("BUG! setTargetTracker called with nullptr!");
             return;
         }
         targetTracker = std::move (tt);
     }
 
   protected:
+    // safe logging
+    void logTargetAngle ()
+    {
+        if (targetTracker->getAngle ())
+        {
+            bratlogger.logVariable ("targetTrackerAngle",
+                                    targetTracker->getAngle ().value ());
+        }
+    }
+
     float linearSpeed = 0;
     float angularVelocity = 0;
     MotorEvent motorEvent;
@@ -410,10 +419,16 @@ class Waiting4TargetTask : public AbstractTask
      * Target is detected and that triggers the termination of the stop task
      * and then emits a message that we have a target.
      */
-    virtual void onTargetDetected (const float r, const float phi, const int index = 0) override
+    virtual void onTargetDetected (const float r, const float phi,
+                                   const int index = 0) override
     {
         targetTracker->onTargetDetected (phi);
         targetDistance = r;
+        if (!(targetTracker->getAngle ()))
+        {
+            bratlogger.log ("BUG in the TargetTracker: No Angle stored after "
+                            "onTargetDetected() !");
+        }
         if (terminatedEvent)
         {
             TerminationMessage tm (TerminationMessage::TargetDetected,
@@ -448,7 +463,8 @@ class EndTask : public AbstractTask
                                Robot robot) override
     {
     }
-    virtual void onTargetDetected (const float r, const float phi, const int index = 0) override
+    virtual void onTargetDetected (const float r, const float phi,
+                                   const int index = 0) override
     {
     }
     virtual void onGyroTurn (const float dphi) override {}
@@ -489,11 +505,13 @@ class TargetTask : public AbstractTask
     /**
      * @brief Event checks if we have arrived or need to continue targeting.
      */
-    virtual void onTargetDetected (const float r, const float phi, const int index = 0) override
+    virtual void onTargetDetected (const float r, const float phi,
+                                   const int index = 0) override
     {
         targetTracker->onTargetDetected (phi);
         targetDistance = r;
         bratlogger.logVariable ("targetDistance", r);
+        logTargetAngle();
         if (r < targetArrivedDistance)
         {
             nArrived--;
@@ -525,7 +543,9 @@ class TargetTask : public AbstractTask
     virtual void onGyroTurn (const float dphi) override
     {
         // We correct the target angle with the robot rotation.
-        targetTracker->onGyroTurn(dphi);
+        targetTracker->onGyroTurn (dphi);
+        // loging how that was corrected
+        logTargetAngle();
         // We generate a new motor event based on the new target angle.
         targetAngle2MotorAngularVelocity ();
     }
@@ -537,7 +557,7 @@ class TargetTask : public AbstractTask
      */
     void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) override
     {
-        targetTracker->onLIDARworld(world, robot);
+        targetTracker->onLIDARworld (world, robot);
         // Do we need to terminate the task?
         CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
                                         nearbyMaxObstacleDetectionAngle);
@@ -635,13 +655,15 @@ class AvoidTask : public AbstractTask
      */
     void onGyroTurn (const float dphi) override
     {
-        targetTracker->onGyroTurn(dphi);
+        targetTracker->onGyroTurn (dphi);
+        logTargetAngle ();
     }
 
     void onTargetDetected (const float r, const float phi, const int) override
     {
         targetDistance = r;
         targetTracker->onTargetDetected (phi);
+        logTargetAngle ();
     }
 
   protected:
