@@ -52,18 +52,6 @@ float getFixtureArea (const b2Fixture *fixture)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-void AbstractTask::correctTargetAngleWithGyro(float dphi)
-{
-    bratlogger.log ("onGyroTurn: dphi=%f", dphi);
-    if (targetAngle.has_value ())
-    {
-        bratlogger.log ("Updating target angle: %f.", targetAngle.value ());
-        targetAngle = targetAngle.value () - dphi;
-        bratlogger.log ("To target angle: %f.", targetAngle.value ());
-        bratlogger.logVariable ("estTargetPhi", targetAngle.value ());
-    }
-}
-
 std::optional<float>
 AbstractTask::CloseObjectDetector::detect (std::shared_ptr<b2World> world,
                                            Robot _robot)
@@ -228,6 +216,8 @@ bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
 void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
                               Robot robot)
 {
+    targetTracker->onLIDARworld(world, robot);
+    
     // We create a Braitenberg escape behaviour
     BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
                                            M_PI / 8);

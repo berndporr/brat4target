@@ -230,8 +230,6 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     bool isMoving () const { return fabs (linearSpeed) > 0; }
 
   protected:
-    void correctTargetAngleWithGyro (float dphi);
-
     /**
      * @brief Detects objects which the robot will crash into.
      * This is used to terminate a task and signal an obstacle.
@@ -319,7 +317,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     /**
      * @brief Replaces the default target tracker with a fancier one!
      * 
-     * @param tt The new target tracker which is handed over here.
+     * @param tt The new target tracker.
      */
     void setTargetTracker (std::unique_ptr<TargetTrackerInterface> tt)
     {
@@ -504,7 +502,7 @@ class TargetTask : public AbstractTask
     virtual void onGyroTurn (float dphi) override
     {
         // We correct the target angle with the robot rotation.
-        correctTargetAngleWithGyro (dphi);
+        targetTracker->onGyroTurn(dphi);
         // We generate a new motor event based on the new target angle.
         targetAngle2MotorAngularVelocity ();
     }
@@ -516,6 +514,7 @@ class TargetTask : public AbstractTask
      */
     void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) override
     {
+        targetTracker->onLIDARworld(world, robot);
         // Do we need to terminate the task?
         CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
                                         nearbyMaxObstacleDetectionAngle);
@@ -613,7 +612,7 @@ class AvoidTask : public AbstractTask
      */
     void onGyroTurn (float dphi) override
     {
-        correctTargetAngleWithGyro (dphi);
+        targetTracker->onGyroTurn(dphi);
     }
 
     void onTargetDetected (float r, float phi, int) override

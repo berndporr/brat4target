@@ -9,6 +9,7 @@
 #include "zetabot.h"
 #include <LSM6DSOXSample.h>
 #include <iostream>
+#include <memory>
 
 int main (int nargs, char **argv)
 {
@@ -112,7 +113,10 @@ int main (int nargs, char **argv)
     targetLoc.start ();
 
     // We are starting from the task which is waiting for a target.
-    configurator.setCurrentTask (std::make_shared<Waiting4TargetTask> ());
+    auto task = std::make_unique<Waiting4TargetTask> ();
+    // You can also set here alternative trackers:
+    // task->setTargetTracker(std::make_unique<SimpleTargetTracker>());
+    configurator.setInitialTask (std::move(task));
 
     printf ("Up and running.\n");
 

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "debug.h"
-#include "lib/targettracker.h"
 #include "robot.h"
 #include "task.h"
 #include <box2d/b2_math.h>
@@ -81,13 +80,31 @@ class BaseConfigurator
     void registerMotorEvent (AbstractTask::MotorEvent me) { motorEvent = me; }
 
     /**
+     * @brief Gets the current task as a shared pointer.
+     */
+    std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
+
+    /**
+     * @brief Sets the initial task of the configurator.
+     * This sets the initital task from which the configurator then creates
+     * the follow up tasks either reactive or as a plan.
+     * 
+     * @param initialTask The initial task. That's usually one which is waiting for a target.
+     */
+    void setInitialTask (std::unique_ptr<AbstractTask> initialTask)
+    {
+        setCurrentTask (std::move (initialTask));
+    }
+
+  protected:
+    /**
      * @brief Changes the current task, registers the termination callback,
      * the motor callback and calls the task's "onStart()" telling
      * it's now running.
      * @param task New task which shall be runnung
      * @param targetTracker Sets a new target tracker. Will be passed on.
      */
-    virtual void setCurrentTask (std::shared_ptr<AbstractTask> task)
+    void setCurrentTask (std::shared_ptr<AbstractTask> task)
     {
         currentTask = task;
         currentTask->registerTerminated (
@@ -98,11 +115,7 @@ class BaseConfigurator
         currentTask->onStart ();
     }
 
-    /**
-     * @brief Gets the current task as a shared pointer.
-     */
-    std::shared_ptr<AbstractTask> getCurrentTask () { return currentTask; }
-
+  public:
     /**
      * @brief Simulating one or a chain of tasks in a LIDAR scan.
      * Simulates a task in the gaming engine box2d till it terminates.
@@ -183,7 +196,7 @@ class ReactiveConfigurator : public BaseConfigurator
      * This method is static so that unit tests can test it without
      * creating an instance of the configurator.
      **/
-    static std::shared_ptr<AbstractTask>
+    static std::unique_ptr<AbstractTask>
     terminationMessage2task (AbstractTask::TerminationMessage tm)
     {
         bratlogger.log ("Reactive: onTaskTerminated");
@@ -192,7 +205,7 @@ class ReactiveConfigurator : public BaseConfigurator
         case AbstractTask::TerminationMessage::TargetDetected:
             bratlogger.log (
                 "ReactiveConfigurator: Target detected. We are targeting.");
-            return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
+            return std::make_unique<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
             bratlogger.log ("ReactiveConfigurator: Obstacle detected.");
             if (tm.taskWhichSentMessage->getThreatAngle ())
@@ -201,7 +214,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
                                     "RIGHT b/c obstacle to the left.");
-                    return std::make_shared<AvoidTask> (
+                    return std::make_unique<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::RIGHT);
                 }
@@ -209,7 +222,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
                                     "LEFT b/c obstacle to the right.");
-                    return std::make_shared<AvoidTask> (
+                    return std::make_unique<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::LEFT);
                 }
@@ -220,7 +233,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
                                     "LEFT b/c random choice.");
-                    return std::make_shared<AvoidTask> (
+                    return std::make_unique<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::LEFT);
                 }
@@ -228,7 +241,7 @@ class ReactiveConfigurator : public BaseConfigurator
                 {
                     bratlogger.log ("ReactiveConfigurator: Avoidance to the "
                                     "RIGHT b/c random choice.");
-                    return std::make_shared<AvoidTask> (
+                    return std::make_unique<AvoidTask> (
                         tm.taskWhichSentMessage,
                         AvoidTask::AvoidDirecton::LEFT);
                 }
@@ -237,18 +250,18 @@ class ReactiveConfigurator : public BaseConfigurator
         case AbstractTask::TerminationMessage::ObstacleAvoided:
             bratlogger.log ("ReactiveConfigurator: Obstacle avoided. Now "
                             "targeting again.");
-            return std::make_shared<TargetTask> (tm.taskWhichSentMessage);
+            return std::make_unique<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::TargetReached:
             bratlogger.log ("ReactiveConfigurator: TargetReached: stopping.");
-            return std::make_shared<EndTask> (tm.taskWhichSentMessage);
+            return std::make_unique<EndTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::INVALID:
             bratlogger.log (
                 "ReactiveConfigurator: Message==INVALID (BUG?): stopping.");
-            return std::make_shared<EndTask> (tm.taskWhichSentMessage);
+            return std::make_unique<EndTask> (tm.taskWhichSentMessage);
         }
         bratlogger.log (
             "ReactiveConfigurator: Message==??? (BUG?): stopping.");
-        return std::make_shared<EndTask> (tm.taskWhichSentMessage);
+        return std::make_unique<EndTask> (tm.taskWhichSentMessage);
     }
 
     /**
