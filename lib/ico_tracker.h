@@ -10,7 +10,7 @@ class ICO_tracker : public TargetTrackerInterface
     ICO_tracker (const int _numNeurons, const float _learningRate);
     void onTargetDetected (float phi);
     void onGyroTurn (float dphi);
-    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot);
+    void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) {};
 
   private:
     int numNeurons{};
