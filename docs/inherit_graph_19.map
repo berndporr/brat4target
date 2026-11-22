@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classWorldBuilder.html" title="Turns raw LIDAR scans into a box2d world point by point. This is the base World builder which does ju..." alt="" coords="5,5,110,33"/>
-<area shape="rect" id="Node000001" href="$classWorldClusterBuilder.html" title="Turns the LIDAR point cloud into box2D bodies. The LIDAR scan is clustered and differently sized bodi..." alt="" coords="158,5,308,33"/>
-<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="125,17,160,19,154,19,126,22"/>
+<area shape="rect" id="Node000000" href="$classTargetTrackerInterface.html" title=" " alt="" coords="5,32,171,60"/>
+<area shape="rect" id="Node000001" href="$classICO__tracker.html" title=" " alt="" coords="247,5,343,33"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="186,31,249,25,244,26,187,36"/>
+<area shape="rect" id="Node000002" href="$classSimpleTargetTracker.html" title=" " alt="" coords="219,57,371,85"/>
+<area shape="poly" id="edge11_Node000000_Node000002" title=" " alt="" coords="186,55,221,62,216,62,186,61"/>
 </map>

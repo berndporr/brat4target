@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointf_0',['Pointf',['../structPointf.html',1,'']]]
+  ['logger_0',['Logger',['../classLogger.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_0',['Logger',['../classLogger.html',1,'']]]
+  ['ico_5ftracker_0',['ICO_tracker',['../classICO__tracker.html',1,'']]]
 ];

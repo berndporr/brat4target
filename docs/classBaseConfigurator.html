@@ -74,6 +74,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classBaseConfigurator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BaseConfigurator Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
@@ -110,17 +111,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onTargetDetec
 <tr class="memitem:af150aad94750bed2d0cb33598ccab3fe" id="r_af150aad94750bed2d0cb33598ccab3fe"><td class="memItemLeft" align="right" valign="top"><a id="af150aad94750bed2d0cb33598ccab3fe" name="af150aad94750bed2d0cb33598ccab3fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onGyroTurn</b> (float dphi)</td></tr>
 <tr class="memdesc:af150aad94750bed2d0cb33598ccab3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New robot rotation event detected. Task needs to take into account the new gyro readings. Feeds it into the current task. <br /></td></tr>
-<tr class="memitem:a9b9c2ca653f6e739e4b485185162a7f9" id="r_a9b9c2ca653f6e739e4b485185162a7f9"><td class="memItemLeft" align="right" valign="top"><a id="a9b9c2ca653f6e739e4b485185162a7f9" name="a9b9c2ca653f6e739e4b485185162a7f9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setCurrentTask</b> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; task)</td></tr>
-<tr class="memdesc:a9b9c2ca653f6e739e4b485185162a7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current task, registers the termination callback, the motor callback and calls the task's "onStart()" telling it's now running. <br /></td></tr>
-<tr class="memitem:a935a2a45ffa4e1d6be6a8a86ea4bea16" id="r_a935a2a45ffa4e1d6be6a8a86ea4bea16"><td class="memItemLeft" align="right" valign="top"><a id="a935a2a45ffa4e1d6be6a8a86ea4bea16" name="a935a2a45ffa4e1d6be6a8a86ea4bea16"></a>
-std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentTask</b> ()</td></tr>
-<tr class="memdesc:a935a2a45ffa4e1d6be6a8a86ea4bea16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current task as a shared pointer. <br /></td></tr>
 <tr class="memitem:ae271a77d9da6a9730147413f637d5ef2" id="r_ae271a77d9da6a9730147413f637d5ef2"><td class="memItemLeft" align="right" valign="top"><a id="ae271a77d9da6a9730147413f637d5ef2" name="ae271a77d9da6a9730147413f637d5ef2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">AbstractTask::MotorEvent</a> me)</td></tr>
 <tr class="memdesc:ae271a77d9da6a9730147413f637d5ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the motor event callback. This in turn then is registered with the current task and sets the wheel speeds of the real robot. <br /></td></tr>
+<tr class="memitem:a935a2a45ffa4e1d6be6a8a86ea4bea16" id="r_a935a2a45ffa4e1d6be6a8a86ea4bea16"><td class="memItemLeft" align="right" valign="top"><a id="a935a2a45ffa4e1d6be6a8a86ea4bea16" name="a935a2a45ffa4e1d6be6a8a86ea4bea16"></a>
+std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentTask</b> ()</td></tr>
+<tr class="memdesc:a935a2a45ffa4e1d6be6a8a86ea4bea16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current task as a shared pointer. <br /></td></tr>
+<tr class="memitem:af38f6e00737873cf8af48f9d9d2ae544" id="r_af38f6e00737873cf8af48f9d9d2ae544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af38f6e00737873cf8af48f9d9d2ae544">setInitialTask</a> (std::unique_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; initialTask)</td></tr>
+<tr class="memdesc:af38f6e00737873cf8af48f9d9d2ae544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the initial task of the configurator. This sets the initital task from which the configurator then creates the follow up tasks either reactive or as a plan.  <br /></td></tr>
 <tr class="memitem:a7179517d9208bbc480110fdcc2aa5402" id="r_a7179517d9208bbc480110fdcc2aa5402"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7179517d9208bbc480110fdcc2aa5402">onTaskTerminated</a> (<a class="el" href="structAbstractTask_1_1TerminationMessage.html">AbstractTask::TerminationMessage</a> tm)=0</td></tr>
 <tr class="memdesc:a7179517d9208bbc480110fdcc2aa5402"><td class="mdescLeft">&#160;</td><td class="mdescRight">On task terminated needs to be filled with life when inheriting this base constructor. It needs to decide which task is next!  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a509171993d3bfa57644f95e37cb61a5e" id="r_a509171993d3bfa57644f95e37cb61a5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a509171993d3bfa57644f95e37cb61a5e">setCurrentTask</a> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; task)</td></tr>
+<tr class="memdesc:a509171993d3bfa57644f95e37cb61a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current task, registers the termination callback, the motor callback and calls the task's "onStart()" telling it's now running.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Decides which task is next after it has terminated. The configurator hosts the current task and decides which task to create next after the task has terminated. The base configurator has all the common functionality transmitting the sensor events to the task but has a pure virual function for the task termination message which needs to be implemented by its children. </p>
@@ -151,6 +156,73 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b
 <p>On task terminated needs to be filled with life when inheriting this base constructor. It needs to decide which task is next! </p>
 
 <p>Implemented in <a class="el" href="classReactiveConfigurator.html#a99ca82c2ac754b06d6715cdf50d6e2ff">ReactiveConfigurator</a>.</p>
+
+</div>
+</div>
+<a id="a509171993d3bfa57644f95e37cb61a5e" name="a509171993d3bfa57644f95e37cb61a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a509171993d3bfa57644f95e37cb61a5e">&#9670;&#160;</a></span>setCurrentTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BaseConfigurator::setCurrentTask </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>task</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Changes the current task, registers the termination callback, the motor callback and calls the task's "onStart()" telling it's now running. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>New task which shall be runnung </td></tr>
+    <tr><td class="paramname">targetTracker</td><td>Sets a new target tracker. Will be passed on. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af38f6e00737873cf8af48f9d9d2ae544" name="af38f6e00737873cf8af48f9d9d2ae544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38f6e00737873cf8af48f9d9d2ae544">&#9670;&#160;</a></span>setInitialTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BaseConfigurator::setInitialTask </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>initialTask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the initial task of the configurator. This sets the initital task from which the configurator then creates the follow up tasks either reactive or as a plan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initialTask</td><td>The initial task. That's usually one which is waiting for a target. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

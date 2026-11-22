@@ -179,10 +179,13 @@ $(function() {
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">// Max error in pixels between consecutive contours</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> maxContourPixelErrorBetweenDetectionContours = 10;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    TargetDet targetDet;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    TargetLocSettings targetLocSettings;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>};</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// Size of ringbuffer</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> ringBufferSize = 3;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    TargetDet targetDet;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    TargetLocSettings targetLocSettings;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>};</div>
 </div>
 <div class="ttc" id="aclassTargetLoc_html_a2059a0ca30ced506088b56d60a27e97d"><div class="ttname"><a href="classTargetLoc.html#a2059a0ca30ced506088b56d60a27e97d">TargetLoc::DetectionEvent</a></div><div class="ttdeci">std::function&lt; void(const float r, const float phi)&gt; DetectionEvent</div><div class="ttdoc">Callback interface which reports a new target location.</div><div class="ttdef"><b>Definition</b> targetloc.h:48</div></div>
 <div class="ttc" id="aclassTargetLoc_html_a7c6bca0606572afb4e12c456ee35583f"><div class="ttname"><a href="classTargetLoc.html#a7c6bca0606572afb4e12c456ee35583f">TargetLoc::getCurrentCameraImage</a></div><div class="ttdeci">const cv::Mat getCurrentCameraImage()</div><div class="ttdoc">Debug getter of the current camera image. For debugging purposes we can get the current camera image.</div><div class="ttdef"><b>Definition</b> targetloc.h:66</div></div>

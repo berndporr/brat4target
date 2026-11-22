@@ -147,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6498749a73a2bcdf6fb8807911c65ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: Called with a fresh LIDAR scan as World and the robot in it for simulation.  <br /></td></tr>
 <tr class="memitem:ae1ce0d4d4a28ea6e86f4fe4d94363fb8" id="r_ae1ce0d4d4a28ea6e86f4fe4d94363fb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1ce0d4d4a28ea6e86f4fe4d94363fb8">onGyroTurn</a> (float dphi) override</td></tr>
 <tr class="memdesc:ae1ce0d4d4a28ea6e86f4fe4d94363fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">gyroEvent allowing to update the target angle. Most likely the camera can't see the target so we correct the target angle with the gyro readings.  <br /></td></tr>
+<tr class="memitem:ad4241e92749d3fdc707e3e5515b7f7e7" id="r_ad4241e92749d3fdc707e3e5515b7f7e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4241e92749d3fdc707e3e5515b7f7e7">onTargetDetected</a> (float r, float phi, int) override</td></tr>
+<tr class="memdesc:ad4241e92749d3fdc707e3e5515b7f7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
 <tr class="memitem:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
@@ -166,8 +168,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setLinearSpeed</b> (c
 <tr class="memitem:acceb02f51ea57df29fec9ce4bb923c5a inherit pub_methods_classAbstractTask" id="r_acceb02f51ea57df29fec9ce4bb923c5a"><td class="memItemLeft" align="right" valign="top">
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getLinearSpeed</b> () const</td></tr>
 <tr class="memdesc:acceb02f51ea57df29fec9ce4bb923c5a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the linear speed in m/s. <br /></td></tr>
-<tr class="memitem:ab5b2fc42ef703b466af3684a9e5c40ed inherit pub_methods_classAbstractTask" id="r_ab5b2fc42ef703b466af3684a9e5c40ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#ab5b2fc42ef703b466af3684a9e5c40ed">onTargetDetected</a> (float r, float phi, int targetIndex=0)</td></tr>
-<tr class="memdesc:ab5b2fc42ef703b466af3684a9e5c40ed inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
 <tr class="memitem:afcbd517ed1b4fab46e093321614fde4f inherit pub_methods_classAbstractTask" id="r_afcbd517ed1b4fab46e093321614fde4f"><td class="memItemLeft" align="right" valign="top">
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getangularVelocity</b> () const</td></tr>
 <tr class="memdesc:afcbd517ed1b4fab46e093321614fde4f inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angular velocity. <br /></td></tr>
@@ -189,6 +189,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memitem:aee5575ee8fb13140953022888bff522a inherit pub_methods_classAbstractTask" id="r_aee5575ee8fb13140953022888bff522a"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getThreatAngle</b> ()</td></tr>
 <tr class="memdesc:aee5575ee8fb13140953022888bff522a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angle of a potential threat. It's optional as there might be no threat. <br /></td></tr>
+<tr class="memitem:ab91208d8cb058112d0844bcc0ef503fd inherit pub_methods_classAbstractTask" id="r_ab91208d8cb058112d0844bcc0ef503fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#ab91208d8cb058112d0844bcc0ef503fd">setTargetTracker</a> (std::unique_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt; tt)</td></tr>
+<tr class="memdesc:ab91208d8cb058112d0844bcc0ef503fd inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the default target tracker with a fancier one!  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -221,18 +223,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angularVelocity</b> 
 <a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>motorEvent</b></td></tr>
 <tr class="memitem:a6bf96b608a844a3596981b951d5931ad inherit pro_attribs_classAbstractTask" id="r_a6bf96b608a844a3596981b951d5931ad"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classAbstractTask.html#aa4201923b367a0cafdb58591f83e65c4">TerminatedEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>terminatedEvent</b></td></tr>
-<tr class="memitem:a4f229aecc4a48a7b6f7e49b841905d6e inherit pro_attribs_classAbstractTask" id="r_a4f229aecc4a48a7b6f7e49b841905d6e"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetAngle</b></td></tr>
+<tr class="memitem:a4cf1a02d869ef24f083b2e106d262aa5 inherit pro_attribs_classAbstractTask" id="r_a4cf1a02d869ef24f083b2e106d262aa5"><td class="memItemLeft" align="right" valign="top">
+std::shared_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetTracker</b> = std::make_shared&lt;<a class="el" href="classSimpleTargetTracker.html">SimpleTargetTracker</a>&gt; ()</td></tr>
 <tr class="memitem:a6de276cc5ee1e3ceb0979b56a0316725 inherit pro_attribs_classAbstractTask" id="r_a6de276cc5ee1e3ceb0979b56a0316725"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetDistance</b></td></tr>
 <tr class="memitem:a513e9b16df93edc2d8fe1149946738ec inherit pro_attribs_classAbstractTask" id="r_a513e9b16df93edc2d8fe1149946738ec"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threatAngle</b></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
-<tr class="memitem:a7615a73314f8785e7a16946d860ea68a inherit pro_methods_classAbstractTask" id="r_a7615a73314f8785e7a16946d860ea68a"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>correctTargetAngleWithGyro</b> (float dphi)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Task which is driving away from an obstacle either to the left or right. </p>
@@ -325,6 +321,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>correctTargetAngleWit
 <p>Event: Called when the task is starting. Sets the default speed based on <a class="el" href="const_8h_source.html">const.h</a>. </p>
 
 <p>Implements <a class="el" href="classAbstractTask.html#a13ab1e6d34fb6b0915cf34daca98f2d0">AbstractTask</a>.</p>
+
+</div>
+</div>
+<a id="ad4241e92749d3fdc707e3e5515b7f7e7" name="ad4241e92749d3fdc707e3e5515b7f7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4241e92749d3fdc707e3e5515b7f7e7">&#9670;&#160;</a></span>onTargetDetected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvoidTask::onTargetDetected </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Event: new target distance and angle. Task needs to incorporate new target direction from the camera. </p>
+
+<p>Implements <a class="el" href="classAbstractTask.html#ac130806aab760902c8374ed8e31845a3">AbstractTask</a>.</p>
 
 </div>
 </div>

@@ -164,6 +164,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memitem:aee5575ee8fb13140953022888bff522a inherit pub_methods_classAbstractTask" id="r_aee5575ee8fb13140953022888bff522a"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getThreatAngle</b> ()</td></tr>
 <tr class="memdesc:aee5575ee8fb13140953022888bff522a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angle of a potential threat. It's optional as there might be no threat. <br /></td></tr>
+<tr class="memitem:ab91208d8cb058112d0844bcc0ef503fd inherit pub_methods_classAbstractTask" id="r_ab91208d8cb058112d0844bcc0ef503fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#ab91208d8cb058112d0844bcc0ef503fd">setTargetTracker</a> (std::unique_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt; tt)</td></tr>
+<tr class="memdesc:ab91208d8cb058112d0844bcc0ef503fd inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the default target tracker with a fancier one!  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -190,9 +192,6 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>MotorEvent</b> = std
 <tr class="memitem:aa4201923b367a0cafdb58591f83e65c4 inherit pub_types_classAbstractTask" id="r_aa4201923b367a0cafdb58591f83e65c4"><td class="memItemLeft" align="right" valign="top">
 using&#160;</td><td class="memItemRight" valign="bottom"><b>TerminatedEvent</b> = std::function&lt;void (<a class="el" href="structAbstractTask_1_1TerminationMessage.html">TerminationMessage</a>)&gt;</td></tr>
 <tr class="memdesc:aa4201923b367a0cafdb58591f83e65c4 inherit pub_types_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Termination event with the termination message. <br /></td></tr>
-<tr class="inherit_header pro_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
-<tr class="memitem:a7615a73314f8785e7a16946d860ea68a inherit pro_methods_classAbstractTask" id="r_a7615a73314f8785e7a16946d860ea68a"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>correctTargetAngleWithGyro</b> (float dphi)</td></tr>
 <tr class="inherit_header pro_attribs_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
 <tr class="memitem:a057452d6436599eb1faace86004aef58 inherit pro_attribs_classAbstractTask" id="r_a057452d6436599eb1faace86004aef58"><td class="memItemLeft" align="right" valign="top">
 float&#160;</td><td class="memItemRight" valign="bottom"><b>linearSpeed</b> = 0</td></tr>
@@ -202,8 +201,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angularVelocity</b> 
 <a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>motorEvent</b></td></tr>
 <tr class="memitem:a6bf96b608a844a3596981b951d5931ad inherit pro_attribs_classAbstractTask" id="r_a6bf96b608a844a3596981b951d5931ad"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classAbstractTask.html#aa4201923b367a0cafdb58591f83e65c4">TerminatedEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>terminatedEvent</b></td></tr>
-<tr class="memitem:a4f229aecc4a48a7b6f7e49b841905d6e inherit pro_attribs_classAbstractTask" id="r_a4f229aecc4a48a7b6f7e49b841905d6e"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetAngle</b></td></tr>
+<tr class="memitem:a4cf1a02d869ef24f083b2e106d262aa5 inherit pro_attribs_classAbstractTask" id="r_a4cf1a02d869ef24f083b2e106d262aa5"><td class="memItemLeft" align="right" valign="top">
+std::shared_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetTracker</b> = std::make_shared&lt;<a class="el" href="classSimpleTargetTracker.html">SimpleTargetTracker</a>&gt; ()</td></tr>
 <tr class="memitem:a6de276cc5ee1e3ceb0979b56a0316725 inherit pro_attribs_classAbstractTask" id="r_a6de276cc5ee1e3ceb0979b56a0316725"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetDistance</b></td></tr>
 <tr class="memitem:a513e9b16df93edc2d8fe1149946738ec inherit pro_attribs_classAbstractTask" id="r_a513e9b16df93edc2d8fe1149946738ec"><td class="memItemLeft" align="right" valign="top">
@@ -337,7 +336,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event checks if we have arrived or need to continue targeting. </p>
 
-<p>Reimplemented from <a class="el" href="classAbstractTask.html#ab5b2fc42ef703b466af3684a9e5c40ed">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#ac130806aab760902c8374ed8e31845a3">AbstractTask</a>.</p>
 
 </div>
 </div>
