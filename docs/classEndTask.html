@@ -119,10 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6594ebf6d66b7f627d34115d0fbb18a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is being started.  <br /></td></tr>
 <tr class="memitem:a92a9451ec2eda4d885c8de9846690e88" id="r_a92a9451ec2eda4d885c8de9846690e88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92a9451ec2eda4d885c8de9846690e88">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
 <tr class="memdesc:a92a9451ec2eda4d885c8de9846690e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes.  <br /></td></tr>
-<tr class="memitem:a2ece70605b8c0e3c59e1e9daccf8d0c9" id="r_a2ece70605b8c0e3c59e1e9daccf8d0c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ece70605b8c0e3c59e1e9daccf8d0c9">onTargetDetected</a> (float r, float phi, int index=0) override</td></tr>
-<tr class="memdesc:a2ece70605b8c0e3c59e1e9daccf8d0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
-<tr class="memitem:a2bb8d14b8b4fa5b60e4e41865a635a74" id="r_a2bb8d14b8b4fa5b60e4e41865a635a74"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bb8d14b8b4fa5b60e4e41865a635a74">onGyroTurn</a> (float dphi) override</td></tr>
-<tr class="memdesc:a2bb8d14b8b4fa5b60e4e41865a635a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro rotation. Gyro rotation of the robot. Called from the gyro driver. Needs to be implemented by actual tasks below.  <br /></td></tr>
+<tr class="memitem:a6a477816a3e672d48260a55b7cfac815" id="r_a6a477816a3e672d48260a55b7cfac815"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a477816a3e672d48260a55b7cfac815">onTargetDetected</a> (const float r, const float phi, const int index=0) override</td></tr>
+<tr class="memdesc:a6a477816a3e672d48260a55b7cfac815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
+<tr class="memitem:a19081f29df97d87553e266e499e0d438" id="r_a19081f29df97d87553e266e499e0d438"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19081f29df97d87553e266e499e0d438">onGyroTurn</a> (const float dphi) override</td></tr>
+<tr class="memdesc:a19081f29df97d87553e266e499e0d438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro rotation. Gyro rotation of the robot. Called from the gyro driver. Needs to be implemented by actual tasks below.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
 <tr class="memitem:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
@@ -204,8 +204,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Final task not terminating ever. Task which is doing nothing and won't terminate. This can be created once a target has been reached. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a2bb8d14b8b4fa5b60e4e41865a635a74" name="a2bb8d14b8b4fa5b60e4e41865a635a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bb8d14b8b4fa5b60e4e41865a635a74">&#9670;&#160;</a></span>onGyroTurn()</h2>
+<a id="a19081f29df97d87553e266e499e0d438" name="a19081f29df97d87553e266e499e0d438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19081f29df97d87553e266e499e0d438">&#9670;&#160;</a></span>onGyroTurn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +216,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">virtual void EndTask::onGyroTurn </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -229,7 +229,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: new gyro rotation. Gyro rotation of the robot. Called from the gyro driver. Needs to be implemented by actual tasks below. </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#a831a032aa6cd652aa1e40a5f63b44e46">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a6f26bbceee3a61896a7a0c19776c2c0b">AbstractTask</a>.</p>
 
 </div>
 </div>
@@ -295,8 +295,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="a2ece70605b8c0e3c59e1e9daccf8d0c9" name="a2ece70605b8c0e3c59e1e9daccf8d0c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ece70605b8c0e3c59e1e9daccf8d0c9">&#9670;&#160;</a></span>onTargetDetected()</h2>
+<a id="a6a477816a3e672d48260a55b7cfac815" name="a6a477816a3e672d48260a55b7cfac815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a477816a3e672d48260a55b7cfac815">&#9670;&#160;</a></span>onTargetDetected()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,17 +307,17 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">virtual void EndTask::onTargetDetected </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>targetIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -329,7 +329,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: new target distance and angle. Task needs to incorporate new target direction from the camera. </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#ac130806aab760902c8374ed8e31845a3">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a48d941a5f1b314dc47e6fa7389a1e19a">AbstractTask</a>.</p>
 
 </div>
 </div>

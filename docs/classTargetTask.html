@@ -118,10 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7143702fc7e779739ab099bfa76f518a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving info from previous task. <br /></td></tr>
 <tr class="memitem:acd123deec46372c29600c112973f530b" id="r_acd123deec46372c29600c112973f530b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd123deec46372c29600c112973f530b">onStart</a> () override</td></tr>
 <tr class="memdesc:acd123deec46372c29600c112973f530b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is starting. We set the linear speed to the default speed defined in <a class="el" href="const_8h_source.html">const.h</a> (fixme!).  <br /></td></tr>
-<tr class="memitem:add935f75275879c57ae5aa94c30b2f93" id="r_add935f75275879c57ae5aa94c30b2f93"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add935f75275879c57ae5aa94c30b2f93">onTargetDetected</a> (float r, float phi, int index=0) override</td></tr>
-<tr class="memdesc:add935f75275879c57ae5aa94c30b2f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event checks if we have arrived or need to continue targeting.  <br /></td></tr>
-<tr class="memitem:a470d34bf914fcea04ee4ac26c36c982b" id="r_a470d34bf914fcea04ee4ac26c36c982b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a470d34bf914fcea04ee4ac26c36c982b">onGyroTurn</a> (float dphi) override</td></tr>
-<tr class="memdesc:a470d34bf914fcea04ee4ac26c36c982b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new robot rotation info. Task needs to take into account the new gyro readings.  <br /></td></tr>
+<tr class="memitem:accbd0daf95d8891aaaa4131203924d48" id="r_accbd0daf95d8891aaaa4131203924d48"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accbd0daf95d8891aaaa4131203924d48">onTargetDetected</a> (const float r, const float phi, const int index=0) override</td></tr>
+<tr class="memdesc:accbd0daf95d8891aaaa4131203924d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event checks if we have arrived or need to continue targeting.  <br /></td></tr>
+<tr class="memitem:a308794c9decd3bd98464d9bfdf723dea" id="r_a308794c9decd3bd98464d9bfdf723dea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a308794c9decd3bd98464d9bfdf723dea">onGyroTurn</a> (const float dphi) override</td></tr>
+<tr class="memdesc:a308794c9decd3bd98464d9bfdf723dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new robot rotation info. Task needs to take into account the new gyro readings.  <br /></td></tr>
 <tr class="memitem:af171236eed06d6b49bb153e5a1aeed86" id="r_af171236eed06d6b49bb153e5a1aeed86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af171236eed06d6b49bb153e5a1aeed86">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
 <tr class="memdesc:af171236eed06d6b49bb153e5a1aeed86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New LIDAR scan. We need to check if we are crashing into an obstacle and to terminate the task!  <br /></td></tr>
 <tr class="inherit_header pub_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
@@ -211,8 +211,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Task which is driving towards a target. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a470d34bf914fcea04ee4ac26c36c982b" name="a470d34bf914fcea04ee4ac26c36c982b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a470d34bf914fcea04ee4ac26c36c982b">&#9670;&#160;</a></span>onGyroTurn()</h2>
+<a id="a308794c9decd3bd98464d9bfdf723dea" name="a308794c9decd3bd98464d9bfdf723dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308794c9decd3bd98464d9bfdf723dea">&#9670;&#160;</a></span>onGyroTurn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +223,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">virtual void TargetTask::onGyroTurn </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -236,7 +236,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: new robot rotation info. Task needs to take into account the new gyro readings. </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#a831a032aa6cd652aa1e40a5f63b44e46">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a6f26bbceee3a61896a7a0c19776c2c0b">AbstractTask</a>.</p>
 
 </div>
 </div>
@@ -302,8 +302,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="add935f75275879c57ae5aa94c30b2f93" name="add935f75275879c57ae5aa94c30b2f93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add935f75275879c57ae5aa94c30b2f93">&#9670;&#160;</a></span>onTargetDetected()</h2>
+<a id="accbd0daf95d8891aaaa4131203924d48" name="accbd0daf95d8891aaaa4131203924d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbd0daf95d8891aaaa4131203924d48">&#9670;&#160;</a></span>onTargetDetected()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,17 +314,17 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">virtual void TargetTask::onTargetDetected </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -336,7 +336,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event checks if we have arrived or need to continue targeting. </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#ac130806aab760902c8374ed8e31845a3">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a48d941a5f1b314dc47e6fa7389a1e19a">AbstractTask</a>.</p>
 
 </div>
 </div>

@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Task which is doing nothing till it receives target info. The task idles till the event <a class="el" href="#aa6eee11871919e851f1264b2debc69b1" title="Event: target detected. Target is detected and that triggers the termination of the stop task and the...">onTargetDetected()</a> recieves info about the target. Then this task terminates and it emits a message that a target has been detected.  
+<p>Task which is doing nothing till it receives target info. The task idles till the event <a class="el" href="#a776e93eeeb3c13110ed40354a0ce4d79" title="Event: target detected. Target is detected and that triggers the termination of the stop task and the...">onTargetDetected()</a> recieves info about the target. Then this task terminates and it emits a message that a target has been detected.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="task_8h_source.html">task.h</a>&gt;</code></p>
@@ -119,10 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5276d08a04da02ebc3ce4b4ac4be82f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: when the task is starting we set the robot's speed to zero.  <br /></td></tr>
 <tr class="memitem:ad9099a758200fa32baca6804f8ae646c" id="r_ad9099a758200fa32baca6804f8ae646c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9099a758200fa32baca6804f8ae646c">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
 <tr class="memdesc:ad9099a758200fa32baca6804f8ae646c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: New LIDAR scan. Ignore!  <br /></td></tr>
-<tr class="memitem:ab049bfdaf60c802fc921f99ec1b187cc" id="r_ab049bfdaf60c802fc921f99ec1b187cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab049bfdaf60c802fc921f99ec1b187cc">onGyroTurn</a> (float dphi) override</td></tr>
-<tr class="memdesc:ab049bfdaf60c802fc921f99ec1b187cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro rotation. Ignore!  <br /></td></tr>
-<tr class="memitem:aa6eee11871919e851f1264b2debc69b1" id="r_aa6eee11871919e851f1264b2debc69b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6eee11871919e851f1264b2debc69b1">onTargetDetected</a> (float r, float phi, int index=0) override</td></tr>
-<tr class="memdesc:aa6eee11871919e851f1264b2debc69b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: target detected. Target is detected and that triggers the termination of the stop task and then emits a message that we have a target.  <br /></td></tr>
+<tr class="memitem:ae9ce426b3a5103a185109611105d6225" id="r_ae9ce426b3a5103a185109611105d6225"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9ce426b3a5103a185109611105d6225">onGyroTurn</a> (const float dphi) override</td></tr>
+<tr class="memdesc:ae9ce426b3a5103a185109611105d6225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro rotation. Ignore!  <br /></td></tr>
+<tr class="memitem:a776e93eeeb3c13110ed40354a0ce4d79" id="r_a776e93eeeb3c13110ed40354a0ce4d79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a776e93eeeb3c13110ed40354a0ce4d79">onTargetDetected</a> (const float r, const float phi, const int index=0) override</td></tr>
+<tr class="memdesc:a776e93eeeb3c13110ed40354a0ce4d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: target detected. Target is detected and that triggers the termination of the stop task and then emits a message that we have a target.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
 <tr class="memitem:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
@@ -202,10 +202,10 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threatAngle</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Task which is doing nothing till it receives target info. The task idles till the event <a class="el" href="#aa6eee11871919e851f1264b2debc69b1" title="Event: target detected. Target is detected and that triggers the termination of the stop task and the...">onTargetDetected()</a> recieves info about the target. Then this task terminates and it emits a message that a target has been detected. </p>
+<div class="textblock"><p>Task which is doing nothing till it receives target info. The task idles till the event <a class="el" href="#a776e93eeeb3c13110ed40354a0ce4d79" title="Event: target detected. Target is detected and that triggers the termination of the stop task and the...">onTargetDetected()</a> recieves info about the target. Then this task terminates and it emits a message that a target has been detected. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ab049bfdaf60c802fc921f99ec1b187cc" name="ab049bfdaf60c802fc921f99ec1b187cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab049bfdaf60c802fc921f99ec1b187cc">&#9670;&#160;</a></span>onGyroTurn()</h2>
+<a id="ae9ce426b3a5103a185109611105d6225" name="ae9ce426b3a5103a185109611105d6225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ce426b3a5103a185109611105d6225">&#9670;&#160;</a></span>onGyroTurn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +216,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">virtual void Waiting4TargetTask::onGyroTurn </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -229,7 +229,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: new gyro rotation. Ignore! </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#a831a032aa6cd652aa1e40a5f63b44e46">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a6f26bbceee3a61896a7a0c19776c2c0b">AbstractTask</a>.</p>
 
 </div>
 </div>
@@ -295,8 +295,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="aa6eee11871919e851f1264b2debc69b1" name="aa6eee11871919e851f1264b2debc69b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6eee11871919e851f1264b2debc69b1">&#9670;&#160;</a></span>onTargetDetected()</h2>
+<a id="a776e93eeeb3c13110ed40354a0ce4d79" name="a776e93eeeb3c13110ed40354a0ce4d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776e93eeeb3c13110ed40354a0ce4d79">&#9670;&#160;</a></span>onTargetDetected()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,17 +307,17 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">virtual void Waiting4TargetTask::onTargetDetected </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -329,7 +329,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 
 <p>Event: target detected. Target is detected and that triggers the termination of the stop task and then emits a message that we have a target. </p>
 
-<p>Implements <a class="el" href="classAbstractTask.html#ac130806aab760902c8374ed8e31845a3">AbstractTask</a>.</p>
+<p>Implements <a class="el" href="classAbstractTask.html#a48d941a5f1b314dc47e6fa7389a1e19a">AbstractTask</a>.</p>
 
 </div>
 </div>

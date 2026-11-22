@@ -1,7 +1,7 @@
 <map id="TargetTrackerInterface" name="TargetTrackerInterface">
-<area shape="rect" id="Node000001" title=" " alt="" coords="44,5,210,33"/>
+<area shape="rect" id="Node000001" title="Interface definition of a Target Tracker. The tracker has the same event names as throughout and they..." alt="" coords="44,5,210,33"/>
 <area shape="rect" id="Node000002" href="$classICO__tracker.html" title=" " alt="" coords="5,81,102,109"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,44,68,83,65,79,100,45"/>
-<area shape="rect" id="Node000003" href="$classSimpleTargetTracker.html" title=" " alt="" coords="125,81,278,109"/>
+<area shape="rect" id="Node000003" href="$classSimpleTargetTracker.html" title="Target tracker using the gyro to correct the target angle This tracker gets its target angles from th..." alt="" coords="125,81,278,109"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,42,191,81,186,81,150,47"/>
 </map>

@@ -13,20 +13,43 @@
 #include <optional>
 #include <unistd.h>
 
+/**
+ * @brief Target tracker using the gyro to correct the target angle
+ * This tracker gets its target angles from the event onTargetDetected
+ * but if that's not happening it's corrected by onGyroTurn.
+ */
 class SimpleTargetTracker : public TargetTrackerInterface
 {
   public:
-    void onTargetDetected (float r, float phi, int index = 0) override
+    /**
+     * @brief Event: new target detected
+     * 
+     * @param phi Angle of the target
+     */
+    void onTargetDetected (const float phi) override
     {
         targetAngle = phi;
     };
-    void onGyroTurn (float dphi) override
+
+    /**
+     * @brief Event: new gyro readings (robot's rotation)
+     * 
+     * @param dphi The robot's rotation in rad reflecting its turning behaviour.
+     */
+    void onGyroTurn (const float dphi) override
     {
         if (targetAngle)
         {
             targetAngle = targetAngle.value () - dphi;
         }
     }
+
+    /**
+     * @brief Event: new LIDAR scan
+     * 
+     * @param world The box2d World generated from the LIDAR scan.
+     * @param robot The location of the robot in the world.
+     */
     void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) override {
     };
 };
@@ -204,7 +227,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     * @brief Event: new target distance and angle.
     * Task needs to incorporate new target direction from the camera.
     */
-    virtual void onTargetDetected (float r, float phi, int targetIndex = 0)
+    virtual void onTargetDetected (const float r, const float phi, const int targetIndex = 0)
         = 0;
 
     /**
@@ -212,7 +235,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      * Gyro rotation of the robot. Called from the gyro driver.
      * Needs to be implemented by actual tasks below.
      */
-    virtual void onGyroTurn (float dphi) = 0;
+    virtual void onGyroTurn (const float dphi) = 0;
 
     /**
     * @brief Event: called when the task is being started.
@@ -380,16 +403,16 @@ class Waiting4TargetTask : public AbstractTask
     /**
      * @brief Event: new gyro rotation. Ignore!
      */
-    virtual void onGyroTurn (float dphi) override {}
+    virtual void onGyroTurn (const float dphi) override {}
 
     /**
      * @brief Event: target detected.
      * Target is detected and that triggers the termination of the stop task
      * and then emits a message that we have a target.
      */
-    virtual void onTargetDetected (float r, float phi, int index = 0) override
+    virtual void onTargetDetected (const float r, const float phi, const int index = 0) override
     {
-        targetTracker->onTargetDetected (r, phi);
+        targetTracker->onTargetDetected (phi);
         targetDistance = r;
         if (terminatedEvent)
         {
@@ -425,10 +448,10 @@ class EndTask : public AbstractTask
                                Robot robot) override
     {
     }
-    virtual void onTargetDetected (float r, float phi, int index = 0) override
+    virtual void onTargetDetected (const float r, const float phi, const int index = 0) override
     {
     }
-    virtual void onGyroTurn (float dphi) override {}
+    virtual void onGyroTurn (const float dphi) override {}
 };
 
 /**
@@ -466,9 +489,9 @@ class TargetTask : public AbstractTask
     /**
      * @brief Event checks if we have arrived or need to continue targeting.
      */
-    virtual void onTargetDetected (float r, float phi, int index = 0) override
+    virtual void onTargetDetected (const float r, const float phi, const int index = 0) override
     {
-        targetTracker->onTargetDetected (r, phi);
+        targetTracker->onTargetDetected (phi);
         targetDistance = r;
         bratlogger.logVariable ("targetDistance", r);
         if (r < targetArrivedDistance)
@@ -499,7 +522,7 @@ class TargetTask : public AbstractTask
      * @brief Event: new robot rotation info.
      * Task needs to take into account the new gyro readings
      */
-    virtual void onGyroTurn (float dphi) override
+    virtual void onGyroTurn (const float dphi) override
     {
         // We correct the target angle with the robot rotation.
         targetTracker->onGyroTurn(dphi);
@@ -610,15 +633,15 @@ class AvoidTask : public AbstractTask
      * Most likely the camera can't see the target so
      * we correct the target angle with the gyro readings.
      */
-    void onGyroTurn (float dphi) override
+    void onGyroTurn (const float dphi) override
     {
         targetTracker->onGyroTurn(dphi);
     }
 
-    void onTargetDetected (float r, float phi, int) override
+    void onTargetDetected (const float r, const float phi, const int) override
     {
         targetDistance = r;
-        targetTracker->onTargetDetected (r, phi);
+        targetTracker->onTargetDetected (phi);
     }
 
   protected:

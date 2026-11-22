@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getangle_0',['getAngle',['../classRobot.html#aa43e84216ed4b6e924738a5b6ae12d45',1,'Robot']]],
+  ['getangle_0',['getAngle',['../classRobot.html#aa43e84216ed4b6e924738a5b6ae12d45',1,'Robot::getAngle()'],['../classTargetTrackerInterface.html#ab36b62b72c81acf7440e769a2c133a22',1,'TargetTrackerInterface::getAngle()']]],
   ['getangularvelocity_1',['getangularVelocity',['../classAbstractTask.html#afcbd517ed1b4fab46e093321614fde4f',1,'AbstractTask']]],
   ['getb2vec2_2',['getb2Vec2',['../worldbuilder_8h.html#a14674f2576e9b1ec603faf42f355ea7c',1,'worldbuilder.cpp']]],
   ['getbodyboundingboxarea_3',['getBodyBoundingBoxArea',['../worldbuilder_8h.html#af555f82e430fef767b7e66c1d1961d68',1,'worldbuilder.cpp']]],

@@ -17,7 +17,7 @@ ICO_tracker::ICO_tracker (const int _numNeurons, const float _learningRate)
 
 void onLIDARworld (std::shared_ptr<b2World> world, Robot robot);
 
-void ICO_tracker::onTargetDetected (float r, float phi, int index)
+void ICO_tracker::onTargetDetected (float phi)
 {
     learningStep (phi);
     setTargetAngle (phi);

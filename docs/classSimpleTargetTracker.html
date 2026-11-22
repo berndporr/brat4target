@@ -77,13 +77,18 @@ $(function() {
   <div class="headertitle"><div class="title">SimpleTargetTracker Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Target tracker using the gyro to correct the target angle This tracker gets its target angles from the event onTargetDetected but if that's not happening it's corrected by onGyroTurn.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="task_8h_source.html">task.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SimpleTargetTracker:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSimpleTargetTracker__inherit__graph.png" border="0" usemap="#aSimpleTargetTracker_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aSimpleTargetTracker_inherit__map" id="aSimpleTargetTracker_inherit__map">
-<area shape="rect" title=" " alt="" coords="12,81,164,109"/>
-<area shape="rect" href="classTargetTrackerInterface.html" title=" " alt="" coords="5,5,171,33"/>
+<area shape="rect" title="Target tracker using the gyro to correct the target angle This tracker gets its target angles from th..." alt="" coords="12,81,164,109"/>
+<area shape="rect" href="classTargetTrackerInterface.html" title="Interface definition of a Target Tracker. The tracker has the same event names as throughout and they..." alt="" coords="5,5,171,33"/>
 <area shape="poly" title=" " alt="" coords="90,47,90,82,86,80,86,51"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -92,30 +97,36 @@ Collaboration diagram for SimpleTargetTracker:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSimpleTargetTracker__coll__graph.png" border="0" usemap="#aSimpleTargetTracker_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aSimpleTargetTracker_coll__map" id="aSimpleTargetTracker_coll__map">
-<area shape="rect" title=" " alt="" coords="12,81,164,109"/>
-<area shape="rect" href="classTargetTrackerInterface.html" title=" " alt="" coords="5,5,171,33"/>
+<area shape="rect" title="Target tracker using the gyro to correct the target angle This tracker gets its target angles from th..." alt="" coords="12,81,164,109"/>
+<area shape="rect" href="classTargetTrackerInterface.html" title="Interface definition of a Target Tracker. The tracker has the same event names as throughout and they..." alt="" coords="5,5,171,33"/>
 <area shape="poly" title=" " alt="" coords="90,47,90,82,86,80,86,51"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14696e52351d6384c3b533338242dc1c" id="r_a14696e52351d6384c3b533338242dc1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14696e52351d6384c3b533338242dc1c">onTargetDetected</a> (float r, float phi, int index=0) override</td></tr>
-<tr class="memitem:a7d40c1edb500ce1817e4fdb81addc6f3" id="r_a7d40c1edb500ce1817e4fdb81addc6f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d40c1edb500ce1817e4fdb81addc6f3">onGyroTurn</a> (float dphi) override</td></tr>
+<tr class="memitem:a3fe9d8e0be466f5a4949d3e2bb1ad7a8" id="r_a3fe9d8e0be466f5a4949d3e2bb1ad7a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fe9d8e0be466f5a4949d3e2bb1ad7a8">onTargetDetected</a> (const float phi) override</td></tr>
+<tr class="memdesc:a3fe9d8e0be466f5a4949d3e2bb1ad7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target detected.  <br /></td></tr>
+<tr class="memitem:a4ae84db17c2d48d261a058e94d942db6" id="r_a4ae84db17c2d48d261a058e94d942db6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ae84db17c2d48d261a058e94d942db6">onGyroTurn</a> (const float dphi) override</td></tr>
+<tr class="memdesc:a4ae84db17c2d48d261a058e94d942db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro readings (robot's rotation).  <br /></td></tr>
 <tr class="memitem:ab2e0afdb7612af530f05f8bd8ec1fe65" id="r_ab2e0afdb7612af530f05f8bd8ec1fe65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2e0afdb7612af530f05f8bd8ec1fe65">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot) override</td></tr>
+<tr class="memdesc:ab2e0afdb7612af530f05f8bd8ec1fe65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classTargetTrackerInterface"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classTargetTrackerInterface')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a></td></tr>
-<tr class="memitem:ab36b62b72c81acf7440e769a2c133a22 inherit pub_methods_classTargetTrackerInterface" id="r_ab36b62b72c81acf7440e769a2c133a22"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAngle</b> () const</td></tr>
+<tr class="memitem:ab36b62b72c81acf7440e769a2c133a22 inherit pub_methods_classTargetTrackerInterface" id="r_ab36b62b72c81acf7440e769a2c133a22"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTargetTrackerInterface.html#ab36b62b72c81acf7440e769a2c133a22">getAngle</a> () const</td></tr>
+<tr class="memdesc:ab36b62b72c81acf7440e769a2c133a22 inherit pub_methods_classTargetTrackerInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the estimated Angle of the target.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classTargetTrackerInterface"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classTargetTrackerInterface')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a></td></tr>
 <tr class="memitem:aee01ebef65367815d4c49b3750dabffb inherit pro_attribs_classTargetTrackerInterface" id="r_aee01ebef65367815d4c49b3750dabffb"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetAngle</b></td></tr>
+<tr class="memdesc:aee01ebef65367815d4c49b3750dabffb inherit pro_attribs_classTargetTrackerInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current estimated target angle Needs to be updated by the derived classes. <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a7d40c1edb500ce1817e4fdb81addc6f3" name="a7d40c1edb500ce1817e4fdb81addc6f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d40c1edb500ce1817e4fdb81addc6f3">&#9670;&#160;</a></span>onGyroTurn()</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Target tracker using the gyro to correct the target angle This tracker gets its target angles from the event onTargetDetected but if that's not happening it's corrected by onGyroTurn. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a4ae84db17c2d48d261a058e94d942db6" name="a4ae84db17c2d48d261a058e94d942db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae84db17c2d48d261a058e94d942db6">&#9670;&#160;</a></span>onGyroTurn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +137,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">void SimpleTargetTracker::onGyroTurn </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -137,7 +148,15 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a>.</p>
+<p>Event: new gyro readings (robot's rotation). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dphi</td><td>The robot's rotation in rad reflecting its turning behaviour. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classTargetTrackerInterface.html#aa9c4daa6f38e153f1a41f93f296b348d">TargetTrackerInterface</a>.</p>
 
 </div>
 </div>
@@ -168,12 +187,21 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a>.</p>
+<p>Event: new LIDAR scan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The box2d World generated from the LIDAR scan. </td></tr>
+    <tr><td class="paramname">robot</td><td>The location of the robot in the world. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classTargetTrackerInterface.html#af233d1e2aac97489e063a5ab7ee270eb">TargetTrackerInterface</a>.</p>
 
 </div>
 </div>
-<a id="a14696e52351d6384c3b533338242dc1c" name="a14696e52351d6384c3b533338242dc1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14696e52351d6384c3b533338242dc1c">&#9670;&#160;</a></span>onTargetDetected()</h2>
+<a id="a3fe9d8e0be466f5a4949d3e2bb1ad7a8" name="a3fe9d8e0be466f5a4949d3e2bb1ad7a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe9d8e0be466f5a4949d3e2bb1ad7a8">&#9670;&#160;</a></span>onTargetDetected()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,17 +212,8 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
         <tr>
           <td class="memname">void SimpleTargetTracker::onTargetDetected </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -204,7 +223,15 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a>.</p>
+<p>Event: new target detected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phi</td><td>Angle of the target </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classTargetTrackerInterface.html#a282ce32968652355c291bd25ae00ccc0">TargetTrackerInterface</a>.</p>
 
 </div>
 </div>

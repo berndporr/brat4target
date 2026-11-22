@@ -82,23 +82,33 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;lib/robot.h&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html">    6</a></span><span class="keyword">class </span>TargetTrackerInterface</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    TargetTrackerInterface () = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTargetDetected (<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> phi, <span class="keywordtype">int</span> index = 0) = 0;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onGyroTurn (<span class="keywordtype">float</span> dphi) = 0;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onLIDARworld (std::shared_ptr&lt;b2World&gt; world, <a class="code hl_class" href="classRobot.html">Robot</a> robot) = 0;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">inline</span> std::optional&lt;float&gt; getAngle ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> targetAngle; }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::optional&lt;float&gt; targetAngle;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html">   11</a></span><span class="keyword">class </span>TargetTrackerInterface</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    TargetTrackerInterface () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html#a282ce32968652355c291bd25ae00ccc0">   21</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTargetTrackerInterface.html#a282ce32968652355c291bd25ae00ccc0">onTargetDetected</a> (<span class="keyword">const</span> <span class="keywordtype">float</span> phi) = 0;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html#aa9c4daa6f38e153f1a41f93f296b348d">   28</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTargetTrackerInterface.html#aa9c4daa6f38e153f1a41f93f296b348d">onGyroTurn</a> (<span class="keyword">const</span> <span class="keywordtype">float</span> dphi) = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html#af233d1e2aac97489e063a5ab7ee270eb">   36</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTargetTrackerInterface.html#af233d1e2aac97489e063a5ab7ee270eb">onLIDARworld</a> (std::shared_ptr&lt;b2World&gt; world, <a class="code hl_class" href="classRobot.html">Robot</a> robot) = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html#ab36b62b72c81acf7440e769a2c133a22">   43</a></span>    <span class="keyword">inline</span> std::optional&lt;float&gt; <a class="code hl_function" href="classTargetTrackerInterface.html#ab36b62b72c81acf7440e769a2c133a22">getAngle</a> ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classTargetTrackerInterface.html#aee01ebef65367815d4c49b3750dabffb">targetAngle</a>; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classTargetTrackerInterface.html#aee01ebef65367815d4c49b3750dabffb">   50</a></span>    std::optional&lt;float&gt; <a class="code hl_variable" href="classTargetTrackerInterface.html#aee01ebef65367815d4c49b3750dabffb">targetAngle</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
 </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// Note the simple target tracker just using the gyro is implemented in task.h</span></div>
 <div class="ttc" id="aclassRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdoc">Robot class for Box2D simulation. Creates the robot in the world. This acts as a container of the 2D ...</div><div class="ttdef"><b>Definition</b> robot.h:23</div></div>
+<div class="ttc" id="aclassTargetTrackerInterface_html_a282ce32968652355c291bd25ae00ccc0"><div class="ttname"><a href="classTargetTrackerInterface.html#a282ce32968652355c291bd25ae00ccc0">TargetTrackerInterface::onTargetDetected</a></div><div class="ttdeci">virtual void onTargetDetected(const float phi)=0</div><div class="ttdoc">Event: new target detected.</div></div>
+<div class="ttc" id="aclassTargetTrackerInterface_html_aa9c4daa6f38e153f1a41f93f296b348d"><div class="ttname"><a href="classTargetTrackerInterface.html#aa9c4daa6f38e153f1a41f93f296b348d">TargetTrackerInterface::onGyroTurn</a></div><div class="ttdeci">virtual void onGyroTurn(const float dphi)=0</div><div class="ttdoc">Event: new gyro readings (robot&#39;s rotation).</div></div>
+<div class="ttc" id="aclassTargetTrackerInterface_html_ab36b62b72c81acf7440e769a2c133a22"><div class="ttname"><a href="classTargetTrackerInterface.html#ab36b62b72c81acf7440e769a2c133a22">TargetTrackerInterface::getAngle</a></div><div class="ttdeci">std::optional&lt; float &gt; getAngle() const</div><div class="ttdoc">Get the estimated Angle of the target.</div><div class="ttdef"><b>Definition</b> targettracker.h:43</div></div>
+<div class="ttc" id="aclassTargetTrackerInterface_html_aee01ebef65367815d4c49b3750dabffb"><div class="ttname"><a href="classTargetTrackerInterface.html#aee01ebef65367815d4c49b3750dabffb">TargetTrackerInterface::targetAngle</a></div><div class="ttdeci">std::optional&lt; float &gt; targetAngle</div><div class="ttdoc">The current estimated target angle Needs to be updated by the derived classes.</div><div class="ttdef"><b>Definition</b> targettracker.h:50</div></div>
+<div class="ttc" id="aclassTargetTrackerInterface_html_af233d1e2aac97489e063a5ab7ee270eb"><div class="ttname"><a href="classTargetTrackerInterface.html#af233d1e2aac97489e063a5ab7ee270eb">TargetTrackerInterface::onLIDARworld</a></div><div class="ttdeci">virtual void onLIDARworld(std::shared_ptr&lt; b2World &gt; world, Robot robot)=0</div><div class="ttdoc">Event: new LIDAR scan.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

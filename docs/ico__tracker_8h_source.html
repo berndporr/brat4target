@@ -89,9 +89,9 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    ICO_tracker (<span class="keyword">const</span> <span class="keywordtype">int</span> _numNeurons, <span class="keyword">const</span> <span class="keywordtype">float</span> _learningRate);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">void</span> onTargetDetected (<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> phi, <span class="keywordtype">int</span> index = 0);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> onGyroTurn (<span class="keywordtype">float</span> dphi);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> onLIDARworld (std::shared_ptr&lt;b2World&gt; world, <a class="code hl_class" href="classRobot.html">Robot</a> robot);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classICO__tracker.html#ad6668da077c38f3de8f1c16c4533a796">onTargetDetected</a> (<span class="keywordtype">float</span> phi);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classICO__tracker.html#a05ab3810d5cc3924115bb4e8b595aebd">onGyroTurn</a> (<span class="keywordtype">float</span> dphi);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classICO__tracker.html#a2b9746b8981c889164c9a1b17a2d275c">   13</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classICO__tracker.html#a2b9746b8981c889164c9a1b17a2d275c">onLIDARworld</a> (std::shared_ptr&lt;b2World&gt; world, <a class="code hl_class" href="classRobot.html">Robot</a> robot);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> numNeurons{};</div>
@@ -105,6 +105,9 @@ $(function() {
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> setTargetAngle (<span class="keyword">const</span> <span class="keywordtype">float</span> phi);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
 </div>
+<div class="ttc" id="aclassICO__tracker_html_a05ab3810d5cc3924115bb4e8b595aebd"><div class="ttname"><a href="classICO__tracker.html#a05ab3810d5cc3924115bb4e8b595aebd">ICO_tracker::onGyroTurn</a></div><div class="ttdeci">void onGyroTurn(float dphi)</div><div class="ttdoc">Event: new gyro readings (robot&#39;s rotation).</div><div class="ttdef"><b>Definition</b> ico_tracker.cpp:30</div></div>
+<div class="ttc" id="aclassICO__tracker_html_a2b9746b8981c889164c9a1b17a2d275c"><div class="ttname"><a href="classICO__tracker.html#a2b9746b8981c889164c9a1b17a2d275c">ICO_tracker::onLIDARworld</a></div><div class="ttdeci">void onLIDARworld(std::shared_ptr&lt; b2World &gt; world, Robot robot)</div><div class="ttdoc">Event: new LIDAR scan.</div></div>
+<div class="ttc" id="aclassICO__tracker_html_ad6668da077c38f3de8f1c16c4533a796"><div class="ttname"><a href="classICO__tracker.html#ad6668da077c38f3de8f1c16c4533a796">ICO_tracker::onTargetDetected</a></div><div class="ttdeci">void onTargetDetected(float phi)</div><div class="ttdoc">Event: new target detected.</div><div class="ttdef"><b>Definition</b> ico_tracker.cpp:20</div></div>
 <div class="ttc" id="aclassRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdoc">Robot class for Box2D simulation. Creates the robot in the world. This acts as a container of the 2D ...</div><div class="ttdef"><b>Definition</b> robot.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

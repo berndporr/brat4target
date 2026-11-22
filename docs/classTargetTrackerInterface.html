@@ -78,35 +78,182 @@ $(function() {
   <div class="headertitle"><div class="title">TargetTrackerInterface Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface definition of a Target Tracker. The tracker has the same event names as throughout and they are being called from within the task.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="targettracker_8h_source.html">targettracker.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for TargetTrackerInterface:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTargetTrackerInterface__inherit__graph.png" border="0" usemap="#aTargetTrackerInterface_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aTargetTrackerInterface_inherit__map" id="aTargetTrackerInterface_inherit__map">
-<area shape="rect" title=" " alt="" coords="44,5,210,33"/>
+<area shape="rect" title="Interface definition of a Target Tracker. The tracker has the same event names as throughout and they..." alt="" coords="44,5,210,33"/>
 <area shape="rect" href="classICO__tracker.html" title=" " alt="" coords="5,81,102,109"/>
 <area shape="poly" title=" " alt="" coords="106,44,68,83,65,79,100,45"/>
-<area shape="rect" href="classSimpleTargetTracker.html" title=" " alt="" coords="125,81,278,109"/>
+<area shape="rect" href="classSimpleTargetTracker.html" title="Target tracker using the gyro to correct the target angle This tracker gets its target angles from th..." alt="" coords="125,81,278,109"/>
 <area shape="poly" title=" " alt="" coords="152,42,191,81,186,81,150,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ac17c6f859b21c6a7a3191e777d00be" id="r_a7ac17c6f859b21c6a7a3191e777d00be"><td class="memItemLeft" align="right" valign="top"><a id="a7ac17c6f859b21c6a7a3191e777d00be" name="a7ac17c6f859b21c6a7a3191e777d00be"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onTargetDetected</b> (float r, float phi, int index=0)=0</td></tr>
-<tr class="memitem:acd00ffeed7bb25dae123f258e85f3a8b" id="r_acd00ffeed7bb25dae123f258e85f3a8b"><td class="memItemLeft" align="right" valign="top"><a id="acd00ffeed7bb25dae123f258e85f3a8b" name="acd00ffeed7bb25dae123f258e85f3a8b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onGyroTurn</b> (float dphi)=0</td></tr>
-<tr class="memitem:af233d1e2aac97489e063a5ab7ee270eb" id="r_af233d1e2aac97489e063a5ab7ee270eb"><td class="memItemLeft" align="right" valign="top"><a id="af233d1e2aac97489e063a5ab7ee270eb" name="af233d1e2aac97489e063a5ab7ee270eb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onLIDARworld</b> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot)=0</td></tr>
-<tr class="memitem:ab36b62b72c81acf7440e769a2c133a22" id="r_ab36b62b72c81acf7440e769a2c133a22"><td class="memItemLeft" align="right" valign="top"><a id="ab36b62b72c81acf7440e769a2c133a22" name="ab36b62b72c81acf7440e769a2c133a22"></a>
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAngle</b> () const</td></tr>
+<tr class="memitem:a282ce32968652355c291bd25ae00ccc0" id="r_a282ce32968652355c291bd25ae00ccc0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a282ce32968652355c291bd25ae00ccc0">onTargetDetected</a> (const float phi)=0</td></tr>
+<tr class="memdesc:a282ce32968652355c291bd25ae00ccc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target detected.  <br /></td></tr>
+<tr class="memitem:aa9c4daa6f38e153f1a41f93f296b348d" id="r_aa9c4daa6f38e153f1a41f93f296b348d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9c4daa6f38e153f1a41f93f296b348d">onGyroTurn</a> (const float dphi)=0</td></tr>
+<tr class="memdesc:aa9c4daa6f38e153f1a41f93f296b348d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro readings (robot's rotation).  <br /></td></tr>
+<tr class="memitem:af233d1e2aac97489e063a5ab7ee270eb" id="r_af233d1e2aac97489e063a5ab7ee270eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af233d1e2aac97489e063a5ab7ee270eb">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot)=0</td></tr>
+<tr class="memdesc:af233d1e2aac97489e063a5ab7ee270eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan.  <br /></td></tr>
+<tr class="memitem:ab36b62b72c81acf7440e769a2c133a22" id="r_ab36b62b72c81acf7440e769a2c133a22"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab36b62b72c81acf7440e769a2c133a22">getAngle</a> () const</td></tr>
+<tr class="memdesc:ab36b62b72c81acf7440e769a2c133a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the estimated Angle of the target.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aee01ebef65367815d4c49b3750dabffb" id="r_aee01ebef65367815d4c49b3750dabffb"><td class="memItemLeft" align="right" valign="top"><a id="aee01ebef65367815d4c49b3750dabffb" name="aee01ebef65367815d4c49b3750dabffb"></a>
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetAngle</b></td></tr>
+<tr class="memdesc:aee01ebef65367815d4c49b3750dabffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current estimated target angle Needs to be updated by the derived classes. <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface definition of a Target Tracker. The tracker has the same event names as throughout and they are being called from within the task. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab36b62b72c81acf7440e769a2c133a22" name="ab36b62b72c81acf7440e769a2c133a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36b62b72c81acf7440e769a2c133a22">&#9670;&#160;</a></span>getAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; float &gt; TargetTrackerInterface::getAngle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the estimated Angle of the target. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::optional&lt;float&gt; The angle of the target if it exists. </dd></dl>
+
+</div>
+</div>
+<a id="aa9c4daa6f38e153f1a41f93f296b348d" name="aa9c4daa6f38e153f1a41f93f296b348d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c4daa6f38e153f1a41f93f296b348d">&#9670;&#160;</a></span>onGyroTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TargetTrackerInterface::onGyroTurn </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>dphi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Event: new gyro readings (robot's rotation). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dphi</td><td>The robot's rotation in rad reflecting its turning behaviour. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classICO__tracker.html#a05ab3810d5cc3924115bb4e8b595aebd">ICO_tracker</a>, and <a class="el" href="classSimpleTargetTracker.html#a4ae84db17c2d48d261a058e94d942db6">SimpleTargetTracker</a>.</p>
+
+</div>
+</div>
+<a id="af233d1e2aac97489e063a5ab7ee270eb" name="af233d1e2aac97489e063a5ab7ee270eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af233d1e2aac97489e063a5ab7ee270eb">&#9670;&#160;</a></span>onLIDARworld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TargetTrackerInterface::onLIDARworld </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; b2World &gt;</td>          <td class="paramname"><span class="paramname"><em>world</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a></td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Event: new LIDAR scan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The box2d World generated from the LIDAR scan. </td></tr>
+    <tr><td class="paramname">robot</td><td>The location of the robot in the world. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classICO__tracker.html#a2b9746b8981c889164c9a1b17a2d275c">ICO_tracker</a>, and <a class="el" href="classSimpleTargetTracker.html#ab2e0afdb7612af530f05f8bd8ec1fe65">SimpleTargetTracker</a>.</p>
+
+</div>
+</div>
+<a id="a282ce32968652355c291bd25ae00ccc0" name="a282ce32968652355c291bd25ae00ccc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282ce32968652355c291bd25ae00ccc0">&#9670;&#160;</a></span>onTargetDetected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TargetTrackerInterface::onTargetDetected </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>phi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Event: new target detected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phi</td><td>Angle of the target </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classICO__tracker.html#ad6668da077c38f3de8f1c16c4533a796">ICO_tracker</a>, and <a class="el" href="classSimpleTargetTracker.html#a3fe9d8e0be466f5a4949d3e2bb1ad7a8">SimpleTargetTracker</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="targettracker_8h_source.html">targettracker.h</a></li>
 </ul>
