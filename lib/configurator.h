@@ -207,48 +207,25 @@ class ReactiveConfigurator : public BaseConfigurator
                 "ReactiveConfigurator: Target detected. We are targeting.");
             return std::make_unique<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
+        {
             bratlogger.log ("ReactiveConfigurator: Obstacle detected.");
-            if (tm.taskWhichSentMessage->threats.hasThreats ())
+            const AbstractTask::Threats thr = tm.taskWhichSentMessage->getThreats ();
+            if (thr.nLeft > thr.nRight)
             {
-                AbstractTask::Threats thr
-                    = tm.taskWhichSentMessage->getThreats ();
-                if (thr.threatsLeft > thr.threatsRight)
-                {
-                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "RIGHT b/c obstacle to the left.");
-                    return std::make_unique<AvoidTask> (
-                        tm.taskWhichSentMessage,
-                        AvoidTask::AvoidDirecton::RIGHT);
-                }
-                else
-                {
-                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "LEFT b/c obstacle to the right.");
-                    return std::make_unique<AvoidTask> (
-                        tm.taskWhichSentMessage,
-                        AvoidTask::AvoidDirecton::LEFT);
-                }
+                bratlogger.log ("ReactiveConfigurator: Avoidance to the "
+                                "RIGHT b/c obstacle to the left.");
+                return std::make_unique<AvoidTask> (
+                    tm.taskWhichSentMessage, AvoidTask::AvoidDirecton::RIGHT);
             }
             else
             {
-                if (random () & 1)
-                {
-                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "LEFT b/c random choice.");
-                    return std::make_unique<AvoidTask> (
-                        tm.taskWhichSentMessage,
-                        AvoidTask::AvoidDirecton::LEFT);
-                }
-                else
-                {
-                    bratlogger.log ("ReactiveConfigurator: Avoidance to the "
-                                    "RIGHT b/c random choice.");
-                    return std::make_unique<AvoidTask> (
-                        tm.taskWhichSentMessage,
-                        AvoidTask::AvoidDirecton::LEFT);
-                }
+                bratlogger.log ("ReactiveConfigurator: Avoidance to the "
+                                "LEFT b/c obstacle to the right.");
+                return std::make_unique<AvoidTask> (
+                    tm.taskWhichSentMessage, AvoidTask::AvoidDirecton::LEFT);
             }
-            break;
+        }
+        break;
         case AbstractTask::TerminationMessage::ObstacleAvoided:
             bratlogger.log ("ReactiveConfigurator: Obstacle avoided. Now "
                             "targeting again.");
