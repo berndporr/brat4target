@@ -250,6 +250,18 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      */
     bool isMoving () const { return fabs (linearSpeed) > 0; }
 
+    struct Threats
+    {
+        int threatsLeft = 0;
+        int threatsRight = 0;
+        bool hasThreats () const
+        {
+            return (threatsLeft > 0) && (threatsRight > 0);
+        }
+    };
+
+    Threats threats;
+
   protected:
     /**
      * @brief Detects objects which the robot will crash into.
@@ -272,8 +284,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
          * @brief Returns the threat angle if there is a threat.
          * Detects threats close to the robot in its world.
          **/
-        std::optional<float> detect (std::shared_ptr<b2World> world,
-                                     Robot robot);
+        Threats detect (std::shared_ptr<b2World> world, Robot robot);
 
       protected:
         // This is called by Box2D for every fixture found in the AABB
@@ -284,8 +295,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         const float maxDetectionRadius;
         const float maxDetectionAngle;
         b2Vec2 robotPos;
-        float avgThreatAngle = 0;
-        int nThreats = 0;
+        Threats threats;
     };
 
   public:
@@ -333,7 +343,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     /**
      * @brief Gets the angle of a potential threat. It's optional as there might be no threat.
      */
-    std::optional<float> getThreatAngle () { return threatAngle; }
+    Threats getThreats () { return threats; }
 
     /**
      * @brief Replaces the default target tracker with a fancier one!
@@ -368,7 +378,6 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     std::shared_ptr<TargetTrackerInterface> targetTracker
         = std::make_shared<SimpleTargetTracker> ();
     std::optional<float> targetDistance;
-    std::optional<float> threatAngle;
 };
 
 /**
@@ -511,7 +520,7 @@ class TargetTask : public AbstractTask
         targetTracker->onTargetDetected (phi);
         targetDistance = r;
         bratlogger.logVariable ("targetDistance", r);
-        logTargetAngle();
+        logTargetAngle ();
         if (r < targetArrivedDistance)
         {
             nArrived--;
@@ -545,7 +554,7 @@ class TargetTask : public AbstractTask
         // We correct the target angle with the robot rotation.
         targetTracker->onGyroTurn (dphi);
         // loging how that was corrected
-        logTargetAngle();
+        logTargetAngle ();
         // We generate a new motor event based on the new target angle.
         targetAngle2MotorAngularVelocity ();
     }
@@ -562,14 +571,13 @@ class TargetTask : public AbstractTask
         CloseObjectDetector nearbyBody (nearbyObstacleDetectionRadius,
                                         nearbyMaxObstacleDetectionAngle);
 
-        threatAngle = nearbyBody.detect (world, robot);
+        auto threatResult = nearbyBody.detect (world, robot);
 
-        if (threatAngle)
+        if ((threatResult.threatsLeft > 0) || (threatResult.threatsRight > 0))
         {
             if (terminatedEvent)
             {
-                bratlogger.log ("Task terminating because of obstacle at: %f",
-                                threatAngle.value ());
+                bratlogger.log ("Task terminating because of obstacle.");
                 TerminationMessage tm (TerminationMessage::ObstacleDetected,
                                        shared_from_this ());
                 terminatedEvent (tm);
@@ -667,41 +675,6 @@ class AvoidTask : public AbstractTask
     }
 
   protected:
-    /**
-     * @brief Detects obstacles close to the robot in world.
-     */
-    class BraitenbergAvoider : public b2QueryCallback
-    {
-      public:
-        /**
-         * @brief Constructor which inits the detection radius & angle.
-         */
-        BraitenbergAvoider (const float maxDetectionRadius,
-                            const float maxDetectionAngle)
-            : maxDetectionRadius (maxDetectionRadius),
-              maxDetectionAngle (maxDetectionAngle) {};
-
-        /**
-         * @brief Performs detection of obstacles and returns a normalised distance 0..1.
-         * If there are no obstacles within the detection radius or outwidth the detection
-         * angle the optional will be empty.
-         */
-        std::optional<float> detect (std::shared_ptr<b2World> world,
-                                     Robot _robot);
-
-      protected:
-        // This is called by Box2D for every fixture found in the AABB
-        bool ReportFixture (b2Fixture *fixture) override;
-
-      private:
-        Robot robot;
-        const float maxDetectionRadius;
-        const float maxDetectionAngle;
-        b2Vec2 robotPos;
-        float robotAngle = 0;
-        float accDistance = 0;
-        int nDistance = 0;
-    };
     int nSamplesWithoutThreat = 0;
     const AvoidDirecton avoidDirection;
 };
