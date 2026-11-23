@@ -254,10 +254,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     {
         int nLeft = 0;
         int nRight = 0;
-        bool hasThreats () const
-        {
-            return (nLeft > 0) || (nRight > 0);
-        }
+        bool hasThreats () const { return (nLeft > 0) || (nRight > 0); }
     };
 
   protected:
@@ -572,11 +569,13 @@ class TargetTask : public AbstractTask
 
         threats = nearbyBody.detect (world, robot);
 
-        if (threats.hasThreats() > 0)
+        if (threats.hasThreats () > 0)
         {
             if (terminatedEvent)
             {
-                bratlogger.log ("Task terminating because of obstacle.");
+                bratlogger.log (
+                    "Task terminating because of obstacle: l=%d, r=%d",
+                    threats.nLeft, threats.nRight);
                 TerminationMessage tm (TerminationMessage::ObstacleDetected,
                                        shared_from_this ());
                 terminatedEvent (tm);

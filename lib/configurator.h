@@ -208,8 +208,11 @@ class ReactiveConfigurator : public BaseConfigurator
             return std::make_unique<TargetTask> (tm.taskWhichSentMessage);
         case AbstractTask::TerminationMessage::ObstacleDetected:
         {
-            bratlogger.log ("ReactiveConfigurator: Obstacle detected.");
-            const AbstractTask::Threats thr = tm.taskWhichSentMessage->getThreats ();
+            const AbstractTask::Threats thr
+                = tm.taskWhichSentMessage->getThreats ();
+            bratlogger.log (
+                "ReactiveConfigurator: Obstacle detected: l=%d, r=%d",
+                thr.nLeft, thr.nRight);
             if (thr.nLeft > thr.nRight)
             {
                 bratlogger.log ("ReactiveConfigurator: Avoidance to the "
