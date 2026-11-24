@@ -125,104 +125,21 @@ bool AbstractTask::CloseObjectDetector::ReportFixture (b2Fixture *fixture)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-std::optional<float>
-AvoidTask::BraitenbergAvoider::detect (std::shared_ptr<b2World> world,
-                                       Robot _robot)
-{
-    robot = _robot;
-    robotPos = robot.getPosition ();
-    robotAngle = robot.getAngle ();
-
-    b2AABB aabb;
-    aabb.lowerBound
-        = robotPos - b2Vec2 (maxDetectionRadius, maxDetectionRadius);
-    aabb.upperBound
-        = robotPos + b2Vec2 (maxDetectionRadius, maxDetectionRadius);
-
-    assert (aabb.IsValid ());
-
-    accDistance = 0;
-    nDistance = 0;
-
-    world->QueryAABB (this, aabb);
-
-    std::optional<float> normdistance;
-
-    if (nDistance > 1)
-    {
-        normdistance = accDistance / nDistance;
-    }
-    return normdistance;
-}
-
-bool AvoidTask::BraitenbergAvoider::ReportFixture (b2Fixture *fixture)
-{
-    b2Body *body = fixture->GetBody ();
-
-    // Skip sensors or the robot's own chassis
-    if ((fixture->IsSensor ()) || robot.isItMe(body)
-        || (body->GetUserData ().pointer == ROBOT_FLAG))
-    {
-        return true; // Keep searching
-    }
-
-    b2Vec2 obstaclePos = body->GetPosition ();
-    b2Vec2 delta = obstaclePos - robotPos;
-    // distance = delta.Length ();
-
-    b2DistanceInput input;
-    input.proxyA.Set (robot.getFixtureList ()->GetShape (),
-                      0); // Sets up GJK shape representation
-    input.proxyB.Set (fixture->GetShape (), 0);
-    input.transformA = robot.getTransform ();
-    input.transformB = fixture->GetBody ()->GetTransform ();
-    input.useRadii = true;
-
-    b2SimplexCache cache;
-    cache.count = 0; // Fresh cache triggers the base GJK loop
-
-    b2DistanceOutput output;
-
-    // This is the geometry-based GJK execution call
-    b2Distance (&output, &cache, &input);
-
-    // This now yields the accurate shape boundary distance!
-    const float distance = output.distance;
-
-    // beyond detection radius
-    if (distance > maxDetectionRadius)
-        return true;
-
-    // Transform world delta vector into robot's local space
-    b2Vec2 localDelta = b2MulT (robot.getTransform ().q, delta);
-
-    // Calculate relative angle (-PI to +PI). 0 is dead ahead.
-    float relativeAngle = b2Atan2 (localDelta.y, localDelta.x);
-
-    if (relativeAngle > maxDetectionAngle)
-        return true;
-
-    accDistance += (1.0f - (distance / maxDetectionRadius));
-    nDistance++;
-    return true;
-}
-
 void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
                               Robot robot)
 {
     targetTracker->onLIDARworld(world, robot);
     
     // We create a Braitenberg escape behaviour
-    BraitenbergAvoider braitenbergAvoider (nearbyObstacleDetectionRadius,
-                                           M_PI / 8);
+    CloseObjectDetector braitenbergAvoider (nearbyObstacleDetectionRadius * 1.5,
+                                           nearbyMaxObstacleDetectionAngle);
 
     auto threatsDetected = braitenbergAvoider.detect (world, robot);
 
-    if (threatsDetected)
+    if (threatsDetected.hasThreats())
     {
         float escapeAngularVel = RELATIVE_AVOID_STEERING_GAIN
-                                 * getMaxAngularVelocity ()
-                                 * threatsDetected.value ();
+                                 * getMaxAngularVelocity ();
 
         if (RIGHT == avoidDirection)
         {
@@ -230,9 +147,9 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
         }
 
         bratlogger.log (
-            "====> avoid, dir=%d, detrad=%f, threat=%f: ang vel = %f\n",
+            "====> avoid, dir=%d, detrad=%f, ang vel = %f\n",
             avoidDirection, nearbyObstacleDetectionRadius,
-            threatsDetected.value (), escapeAngularVel);
+            escapeAngularVel);
 
         setAngularVelocity (escapeAngularVel);
         nSamplesWithoutThreat = 0;

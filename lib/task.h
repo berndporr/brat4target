@@ -672,42 +672,6 @@ class AvoidTask : public AbstractTask
         logTargetAngle ();
     }
 
-    /**
-     * @brief Detects obstacles close to the robot in world.
-     */
-    class BraitenbergAvoider : public b2QueryCallback
-    {
-      public:
-        /**
-         * @brief Constructor which inits the detection radius & angle.
-         */
-        BraitenbergAvoider (const float maxDetectionRadius,
-                            const float maxDetectionAngle)
-            : maxDetectionRadius (maxDetectionRadius),
-              maxDetectionAngle (maxDetectionAngle) {};
-
-        /**
-         * @brief Performs detection of obstacles and returns a normalised distance 0..1.
-         * If there are no obstacles within the detection radius or outwidth the detection
-         * angle the optional will be empty.
-         */
-        std::optional<float> detect (std::shared_ptr<b2World> world,
-                                     Robot _robot);
-
-      protected:
-        // This is called by Box2D for every fixture found in the AABB
-        bool ReportFixture (b2Fixture *fixture) override;
-
-      private:
-        Robot robot;
-        const float maxDetectionRadius;
-        const float maxDetectionAngle;
-        b2Vec2 robotPos;
-        float robotAngle = 0;
-        float accDistance = 0;
-        int nDistance = 0;
-    };
-
   protected:
     int nSamplesWithoutThreat = 0;
     const AvoidDirecton avoidDirection;

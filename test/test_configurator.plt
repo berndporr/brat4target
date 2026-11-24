@@ -181,5 +181,5 @@ VoxelDistance = 0.0
 GridDistance = 0.0
 ## Last datafile plotted: "/tmp/test_reactive_configur_simseq3_target.tsv"
 ## Last plot command
-plot "/tmp/test_configur_close_obst_far_target_bodies_seq.tsv", "/tmp/test_reactive_configur_simseq1_target.tsv", "/tmp/test_reactive_configur_simseq2_target.tsv", "/tmp/test_reactive_configur_simseq3_target.tsv"
+plot "/tmp/test_configur_close_obst_far_target_bodies_seq.tsv", "/tmp/test_reactive_configur_simseq1_target.tsv", "/tmp/test_reactive_configur_simseq2_target.tsv", "/tmp/test_reactive_configur_simseq3_target.tsv", "/tmp/test_reactive_configur_simseq4_target.tsv", "/tmp/test_reactive_configur_simseq5_target.tsv", "/tmp/test_reactive_configur_simseq6_target.tsv", "/tmp/test_reactive_configur_simseq7_target.tsv", "/tmp/test_reactive_configur_simseq8_target.tsv"
 pause(-1)

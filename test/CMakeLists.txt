@@ -5,8 +5,10 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 project(Tests LANGUAGES CXX)
+
 include(GNUInstallDirs)
-set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_CXX_STANDARD 20)
 
 include_directories(.. ../lib)
 

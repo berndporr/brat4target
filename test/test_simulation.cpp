@@ -3,6 +3,7 @@
 #include "debug.h"
 #include "task.h"
 #include "worldbuilder.h"
+#include <format>
 #include <memory>
 
 constexpr float target_angle = 0.44;
@@ -24,7 +25,7 @@ CoordinateContainer loadLIDARdata (const char *filename)
 void drive_to_target ()
 {
     printf ("Drive to target:\n");
-    bratlogger.start ("/tmp","sim","drive2target.txt");
+    bratlogger.start ("/tmp", "sim", "drive2target.txt");
     auto task = std::make_shared<TargetTask> ();
     CoordinateContainer coords = loadLIDARdata ("lidar_scans/far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -44,6 +45,8 @@ void drive_to_target ()
 void avoid_obstacle (AvoidTask::AvoidDirecton ad)
 {
     printf ("Avoid obstacle:\n");
+    auto filename = std::format ("avoid_obstacle{}.txt", (int)ad);
+    bratlogger.start ("/tmp", "sim", filename);
     auto task = std::make_shared<AvoidTask> (ad);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
@@ -59,16 +62,18 @@ void avoid_obstacle (AvoidTask::AvoidDirecton ad)
     });
     BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
-    char tmp[256];
-    sprintf (tmp, "/tmp/test_configur_close_obst_far_target_sim_dir_ad%d.tsv",
-             ad);
-    simulator.run (task, tmp);
+    filename = std::format (
+        "/tmp/test_configur_close_obst_far_target_sim_dir_ad{}.tsv", (int)ad);
+    simulator.run (task, filename.c_str());
     printf ("\n");
 }
 
 void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
 {
     printf ("->>> Avoid obstacle & drive to target:\n");
+    auto filename
+        = std::format ("avoid_obstacle_drive_to_arget{}.txt", (int)ad);
+    bratlogger.start ("/tmp/", "sim", filename);
     auto taskAvoid = std::make_shared<AvoidTask> (ad);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
@@ -85,18 +90,16 @@ void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
     BaseConfigurator::TaskSimulator simulator (world);
     simulator.setTarget (target_distance, target_angle);
     printf ("->Avoid obstacle:\n");
-    char tmp[256];
-    sprintf (tmp,
-             "/tmp/test_configur_close_obst_far_target_sim_ad%d_seq_avoid.tsv",
-             ad);
-    simulator.run (taskAvoid, tmp);
+    filename = std::format (
+        "/tmp/test_configur_close_obst_far_target_sim_ad{}_seq_avoid.tsv",
+        (int)ad);
+    simulator.run (taskAvoid, filename.c_str ());
     auto taskTarget = std::make_shared<TargetTask> (taskAvoid);
     printf ("->>> Drive to target:\n");
-    sprintf (
-        tmp,
-        "/tmp/test_configur_close_obst_far_target_sim_ad%d_seq_target.tsv",
-        ad);
-    simulator.run (taskTarget, tmp);
+    filename = std::string (
+        "/tmp/test_configur_close_obst_far_target_sim_ad{}_seq_target.tsv",
+        (int)ad);
+    simulator.run (taskTarget, filename.c_str ());
     printf ("\n");
 }
 
