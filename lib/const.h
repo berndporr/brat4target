@@ -57,7 +57,7 @@ static const float NEARBY_OBSTACLE_DETECTION_RADIUS
 constexpr float TARGET_ARRIVED_DISTANCE = 0.35; // m
 
 // Avoidance task
-constexpr int MIN_LIDAR_AVOID_SAMPLES = 2;
+constexpr int MIN_LIDAR_AVOID_SAMPLES = 10;
 constexpr float RELATIVE_AVOID_STEERING_GAIN = 1;
 
 // Targeting task

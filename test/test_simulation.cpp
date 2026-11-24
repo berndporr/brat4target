@@ -68,11 +68,11 @@ void avoid_obstacle (AvoidTask::AvoidDirecton ad)
     printf ("\n");
 }
 
-void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
+void avoid_obstacle_drive_to_target (AvoidTask::AvoidDirecton ad)
 {
     printf ("->>> Avoid obstacle & drive to target:\n");
     auto filename
-        = std::format ("avoid_obstacle_drive_to_arget{}.txt", (int)ad);
+        = std::format ("avoid_obstacle_drive_to_target{}.txt", (int)ad);
     bratlogger.start ("/tmp/", "sim", filename);
     auto taskAvoid = std::make_shared<AvoidTask> (ad);
     CoordinateContainer coords
@@ -96,7 +96,7 @@ void avoid_obstacle_drive_to_arget (AvoidTask::AvoidDirecton ad)
     simulator.run (taskAvoid, filename.c_str ());
     auto taskTarget = std::make_shared<TargetTask> (taskAvoid);
     printf ("->>> Drive to target:\n");
-    filename = std::string (
+    filename = std::format (
         "/tmp/test_configur_close_obst_far_target_sim_ad{}_seq_target.tsv",
         (int)ad);
     simulator.run (taskTarget, filename.c_str ());
@@ -108,6 +108,6 @@ int main (int, char **)
     drive_to_target ();
     avoid_obstacle (AvoidTask::LEFT);
     avoid_obstacle (AvoidTask::RIGHT);
-    avoid_obstacle_drive_to_arget (AvoidTask::LEFT);
-    avoid_obstacle_drive_to_arget (AvoidTask::RIGHT);
+    avoid_obstacle_drive_to_target (AvoidTask::LEFT);
+    avoid_obstacle_drive_to_target (AvoidTask::RIGHT);
 }

@@ -181,5 +181,5 @@ VoxelDistance = 0.0
 GridDistance = 0.0
 ## Last datafile plotted: "/tmp/test_configur_close_obst_far_target_sim_ad0_seq_target.tsv"
 ## Last plot command
-plot "/tmp/test_configur_close_obst_far_target_bodies_seq.tsv", "/tmp/test_configur_close_obst_far_target_sim_ad0_seq_avoid.tsv", "/tmp/test_configur_close_obst_far_target_sim_ad0_seq_target.tsv"
+plot "/tmp/test_configur_close_obst_far_target_bodies_seq.tsv", "/tmp/test_configur_close_obst_far_target_sim_ad0_seq_avoid.tsv", "/tmp/test_configur_close_obst_far_target_sim_ad0_seq_target.tsv",  "/tmp/test_configur_close_obst_far_target_sim_ad1_seq_avoid.tsv", "/tmp/test_configur_close_obst_far_target_sim_ad1_seq_target.tsv"
 pause(-1)
