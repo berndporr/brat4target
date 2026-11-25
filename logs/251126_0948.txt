@@ -1,0 +1,2029 @@
+1207	dphi	0.000049<<<VAR
+1286	dphi	0.000049<<<VAR
+1364	dphi	0.000049<<<VAR
+1443	dphi	0.000049<<<VAR
+1522	dphi	0.000049<<<VAR
+1600	dphi	0.000049<<<VAR
+1679	dphi	0.000049<<<VAR
+1758	dphi	0.000049<<<VAR
+1836	dphi	0.000049<<<VAR
+1915	dphi	0.000049<<<VAR
+1994	dphi	0.000049<<<VAR
+2008	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.000000, maxAngVel=0.000000
+2008	Motor out: 0.000000,0.000000
+2008	onStart: Waiting4TargetTask
+2072	dphi	-0.000000<<<VAR
+2151	dphi	-0.000782<<<VAR
+2230	dphi	-0.001124<<<VAR
+2301	Target detected:0.323086,-0.355137
+2301	Reactive: onTaskTerminated
+2301	ReactiveConfigurator: Target detected. We are targeting.
+2301	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+2301	Motor out: 0.500000,0.500000
+2301	onStart: TargetTask
+2301	targetPhi	-0.355137<<<VAR
+2308	targetTrackerAngle	-0.354404<<<VAR
+2308	Setting angular vel to: -0.531607.
+2308	emitTwoWheeledEvent: l=0.732578, r=0.267422, linearSpeed=0.080000, angularVel=-0.531607, maxAngVel=1.142857
+2308	Motor out: 0.732578,0.267422
+2308	angularVelocity	-0.531607<<<VAR
+2308	dphi	-0.000733<<<VAR
+2387	targetTrackerAngle	-0.353818<<<VAR
+2387	Setting angular vel to: -0.530727.
+2387	emitTwoWheeledEvent: l=0.732193, r=0.267807, linearSpeed=0.080000, angularVel=-0.530727, maxAngVel=1.142857
+2387	Motor out: 0.732193,0.267807
+2387	angularVelocity	-0.530727<<<VAR
+2387	dphi	-0.000586<<<VAR
+2465	targetTrackerAngle	-0.340819<<<VAR
+2465	Setting angular vel to: -0.511228.
+2465	emitTwoWheeledEvent: l=0.723662, r=0.276338, linearSpeed=0.080000, angularVel=-0.511228, maxAngVel=1.142857
+2466	Motor out: 0.723662,0.276338
+2466	angularVelocity	-0.511228<<<VAR
+2466	dphi	-0.012999<<<VAR
+2501	Target detected:0.330665,-0.350012
+2501	targetDistance	0.330665<<<VAR
+2501	targetTrackerAngle	-0.350012<<<VAR
+2501	Setting angular vel to: -0.525018.
+2501	emitTwoWheeledEvent: l=0.729696, r=0.270304, linearSpeed=0.080000, angularVel=-0.525018, maxAngVel=1.142857
+2501	Motor out: 0.729696,0.270304
+2501	angularVelocity	-0.525018<<<VAR
+2501	targetPhi	-0.350012<<<VAR
+2544	targetTrackerAngle	-0.309353<<<VAR
+2544	Setting angular vel to: -0.464030.
+2544	emitTwoWheeledEvent: l=0.703013, r=0.296987, linearSpeed=0.080000, angularVel=-0.464030, maxAngVel=1.142857
+2544	Motor out: 0.703013,0.296987
+2544	angularVelocity	-0.464030<<<VAR
+2544	dphi	-0.040659<<<VAR
+2601	Targetloc: Contour discarded.
+2625	targetTrackerAngle	-0.268205<<<VAR
+2625	Setting angular vel to: -0.402308.
+2625	emitTwoWheeledEvent: l=0.676010, r=0.323990, linearSpeed=0.080000, angularVel=-0.402308, maxAngVel=1.142857
+2625	Motor out: 0.676010,0.323990
+2625	angularVelocity	-0.402308<<<VAR
+2625	dphi	-0.041148<<<VAR
+2701	Targetloc: Contour discarded.
+2701	targetTrackerAngle	-0.225591<<<VAR
+2701	Setting angular vel to: -0.338387.
+2701	emitTwoWheeledEvent: l=0.648044, r=0.351956, linearSpeed=0.080000, angularVel=-0.338387, maxAngVel=1.142857
+2701	Motor out: 0.648044,0.351956
+2701	angularVelocity	-0.338387<<<VAR
+2701	dphi	-0.042614<<<VAR
+2780	targetTrackerAngle	-0.187327<<<VAR
+2780	Setting angular vel to: -0.280990.
+2780	emitTwoWheeledEvent: l=0.622933, r=0.377067, linearSpeed=0.080000, angularVel=-0.280990, maxAngVel=1.142857
+2780	Motor out: 0.622933,0.377067
+2780	angularVelocity	-0.280990<<<VAR
+2780	dphi	-0.038265<<<VAR
+2800	Targetloc: Contour discarded.
+2859	targetTrackerAngle	-0.152239<<<VAR
+2859	Setting angular vel to: -0.228358.
+2859	emitTwoWheeledEvent: l=0.599907, r=0.400093, linearSpeed=0.080000, angularVel=-0.228358, maxAngVel=1.142857
+2859	Motor out: 0.599907,0.400093
+2859	angularVelocity	-0.228358<<<VAR
+2859	dphi	-0.035088<<<VAR
+2900	Targetloc: Contour discarded.
+2937	targetTrackerAngle	-0.120327<<<VAR
+2937	Setting angular vel to: -0.180490.
+2937	emitTwoWheeledEvent: l=0.578965, r=0.421035, linearSpeed=0.080000, angularVel=-0.180490, maxAngVel=1.142857
+2937	Motor out: 0.578965,0.421035
+2937	angularVelocity	-0.180490<<<VAR
+2937	dphi	-0.031912<<<VAR
+3004	Targetloc: Contour discarded.
+3016	targetTrackerAngle	-0.097798<<<VAR
+3016	Setting angular vel to: -0.146697.
+3016	emitTwoWheeledEvent: l=0.564180, r=0.435820, linearSpeed=0.080000, angularVel=-0.146697, maxAngVel=1.142857
+3016	Motor out: 0.564180,0.435820
+3016	angularVelocity	-0.146697<<<VAR
+3016	dphi	-0.022529<<<VAR
+3095	targetTrackerAngle	-0.075465<<<VAR
+3095	Setting angular vel to: -0.113198.
+3095	emitTwoWheeledEvent: l=0.549524, r=0.450476, linearSpeed=0.080000, angularVel=-0.113198, maxAngVel=1.142857
+3095	Motor out: 0.549524,0.450476
+3095	angularVelocity	-0.113198<<<VAR
+3095	dphi	-0.022333<<<VAR
+3100	Targetloc: Contour discarded.
+3173	targetTrackerAngle	-0.055673<<<VAR
+3173	Setting angular vel to: -0.083510.
+3173	emitTwoWheeledEvent: l=0.536535, r=0.463465, linearSpeed=0.080000, angularVel=-0.083510, maxAngVel=1.142857
+3173	Motor out: 0.536535,0.463465
+3173	angularVelocity	-0.083510<<<VAR
+3173	dphi	-0.019792<<<VAR
+3200	Targetloc: Contour discarded.
+3252	targetTrackerAngle	-0.038422<<<VAR
+3252	Setting angular vel to: -0.057633.
+3252	emitTwoWheeledEvent: l=0.525215, r=0.474785, linearSpeed=0.080000, angularVel=-0.057633, maxAngVel=1.142857
+3252	Motor out: 0.525215,0.474785
+3252	angularVelocity	-0.057633<<<VAR
+3252	dphi	-0.017251<<<VAR
+3300	Targetloc: Contour discarded.
+3330	targetTrackerAngle	-0.021562<<<VAR
+3330	Setting angular vel to: -0.032343.
+3330	emitTwoWheeledEvent: l=0.514150, r=0.485850, linearSpeed=0.080000, angularVel=-0.032343, maxAngVel=1.142857
+3331	Motor out: 0.514150,0.485850
+3331	angularVelocity	-0.032343<<<VAR
+3331	dphi	-0.016860<<<VAR
+3400	Targetloc: Contour discarded.
+3409	targetTrackerAngle	-0.008954<<<VAR
+3409	Setting angular vel to: -0.013431.
+3409	emitTwoWheeledEvent: l=0.505876, r=0.494124, linearSpeed=0.080000, angularVel=-0.013431, maxAngVel=1.142857
+3409	Motor out: 0.505876,0.494124
+3409	angularVelocity	-0.013431<<<VAR
+3409	dphi	-0.012608<<<VAR
+3488	targetTrackerAngle	0.002775<<<VAR
+3488	Setting angular vel to: 0.004162.
+3488	emitTwoWheeledEvent: l=0.498179, r=0.501821, linearSpeed=0.080000, angularVel=0.004162, maxAngVel=1.142857
+3488	Motor out: 0.498179,0.501821
+3488	angularVelocity	0.004162<<<VAR
+3488	dphi	-0.011729<<<VAR
+3500	Targetloc: Contour discarded.
+3566	targetTrackerAngle	0.011767<<<VAR
+3566	Setting angular vel to: 0.017650.
+3566	emitTwoWheeledEvent: l=0.492278, r=0.507722, linearSpeed=0.080000, angularVel=0.017650, maxAngVel=1.142857
+3566	Motor out: 0.492278,0.507722
+3566	angularVelocity	0.017650<<<VAR
+3566	dphi	-0.008992<<<VAR
+3600	Targetloc: Contour discarded.
+3645	targetTrackerAngle	0.020954<<<VAR
+3645	Setting angular vel to: 0.031431.
+3645	emitTwoWheeledEvent: l=0.486249, r=0.513751, linearSpeed=0.080000, angularVel=0.031431, maxAngVel=1.142857
+3645	Motor out: 0.486249,0.513751
+3645	angularVelocity	0.031431<<<VAR
+3645	dphi	-0.009187<<<VAR
+3700	Targetloc: Contour discarded.
+3725	targetTrackerAngle	0.033660<<<VAR
+3725	Setting angular vel to: 0.050490.
+3725	emitTwoWheeledEvent: l=0.477911, r=0.522089, linearSpeed=0.080000, angularVel=0.050490, maxAngVel=1.142857
+3726	Motor out: 0.477911,0.522089
+3726	angularVelocity	0.050490<<<VAR
+3726	dphi	-0.012706<<<VAR
+3800	Targetloc: Contour discarded.
+3802	targetTrackerAngle	0.042359<<<VAR
+3802	Setting angular vel to: 0.063538.
+3802	emitTwoWheeledEvent: l=0.472202, r=0.527798, linearSpeed=0.080000, angularVel=0.063538, maxAngVel=1.142857
+3802	Motor out: 0.472202,0.527798
+3802	angularVelocity	0.063538<<<VAR
+3802	dphi	-0.008699<<<VAR
+3881	targetTrackerAngle	0.051644<<<VAR
+3881	Setting angular vel to: 0.077466.
+3881	emitTwoWheeledEvent: l=0.466109, r=0.533891, linearSpeed=0.080000, angularVel=0.077466, maxAngVel=1.142857
+3881	Motor out: 0.466109,0.533891
+3881	angularVelocity	0.077466<<<VAR
+3881	dphi	-0.009285<<<VAR
+3960	targetTrackerAngle	0.056873<<<VAR
+3960	Setting angular vel to: 0.085309.
+3960	emitTwoWheeledEvent: l=0.462677, r=0.537323, linearSpeed=0.080000, angularVel=0.085309, maxAngVel=1.142857
+3960	Motor out: 0.462677,0.537323
+3960	angularVelocity	0.085309<<<VAR
+3960	dphi	-0.005229<<<VAR
+4000	Targetloc: Contour discarded.
+4038	targetTrackerAngle	0.065962<<<VAR
+4038	Setting angular vel to: 0.098944.
+4038	emitTwoWheeledEvent: l=0.456712, r=0.543288, linearSpeed=0.080000, angularVel=0.098944, maxAngVel=1.142857
+4038	Motor out: 0.456712,0.543288
+4038	angularVelocity	0.098944<<<VAR
+4038	dphi	-0.009090<<<VAR
+4103	Targetloc: Contour discarded.
+4117	targetTrackerAngle	0.077105<<<VAR
+4117	Setting angular vel to: 0.115657.
+4117	emitTwoWheeledEvent: l=0.449400, r=0.550600, linearSpeed=0.080000, angularVel=0.115657, maxAngVel=1.142857
+4117	Motor out: 0.449400,0.550600
+4117	angularVelocity	0.115657<<<VAR
+4117	dphi	-0.011142<<<VAR
+4125	nWorld = 0
+4125	Running: AbstractTask::CloseObjectDetector::detect.
+4125	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4195	targetTrackerAngle	0.081063<<<VAR
+4195	Setting angular vel to: 0.121595.
+4195	emitTwoWheeledEvent: l=0.446802, r=0.553198, linearSpeed=0.080000, angularVel=0.121595, maxAngVel=1.142857
+4196	Motor out: 0.446802,0.553198
+4196	angularVelocity	0.121595<<<VAR
+4196	dphi	-0.003958<<<VAR
+4203	Targetloc: Contour discarded.
+4204	nWorld = 1
+4204	Running: AbstractTask::CloseObjectDetector::detect.
+4204	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4266	nWorld = 2
+4266	Running: AbstractTask::CloseObjectDetector::detect.
+4266	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4274	targetTrackerAngle	0.078766<<<VAR
+4274	Setting angular vel to: 0.118149.
+4274	emitTwoWheeledEvent: l=0.448310, r=0.551690, linearSpeed=0.080000, angularVel=0.118149, maxAngVel=1.142857
+4274	Motor out: 0.448310,0.551690
+4274	angularVelocity	0.118149<<<VAR
+4274	dphi	0.002297<<<VAR
+4304	Target detected:1.039333,0.092176
+4304	targetDistance	1.039333<<<VAR
+4304	targetTrackerAngle	0.092176<<<VAR
+4304	Setting angular vel to: 0.138264.
+4304	emitTwoWheeledEvent: l=0.439509, r=0.560491, linearSpeed=0.080000, angularVel=0.138264, maxAngVel=1.142857
+4304	Motor out: 0.439509,0.560491
+4304	angularVelocity	0.138264<<<VAR
+4304	targetPhi	0.092176<<<VAR
+4337	nWorld = 3
+4337	Running: AbstractTask::CloseObjectDetector::detect.
+4337	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4353	targetTrackerAngle	0.098285<<<VAR
+4353	Setting angular vel to: 0.147427.
+4353	emitTwoWheeledEvent: l=0.435501, r=0.564499, linearSpeed=0.080000, angularVel=0.147427, maxAngVel=1.142857
+4353	Motor out: 0.435501,0.564499
+4353	angularVelocity	0.147427<<<VAR
+4353	dphi	-0.006109<<<VAR
+4403	Targetloc: Contour discarded.
+4408	nWorld = 4
+4408	Running: AbstractTask::CloseObjectDetector::detect.
+4408	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4431	targetTrackerAngle	0.097845<<<VAR
+4431	Setting angular vel to: 0.146768.
+4431	emitTwoWheeledEvent: l=0.435789, r=0.564211, linearSpeed=0.080000, angularVel=0.146768, maxAngVel=1.142857
+4431	Motor out: 0.435789,0.564211
+4432	angularVelocity	0.146768<<<VAR
+4432	dphi	0.000440<<<VAR
+4478	nWorld = 5
+4478	Running: AbstractTask::CloseObjectDetector::detect.
+4478	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4503	Target detected:1.024137,0.101611
+4503	targetDistance	1.024137<<<VAR
+4503	targetTrackerAngle	0.101611<<<VAR
+4503	Setting angular vel to: 0.152417.
+4503	emitTwoWheeledEvent: l=0.433318, r=0.566682, linearSpeed=0.080000, angularVel=0.152417, maxAngVel=1.142857
+4504	Motor out: 0.433318,0.566682
+4504	angularVelocity	0.152417<<<VAR
+4504	targetPhi	0.101611<<<VAR
+4510	targetTrackerAngle	0.099901<<<VAR
+4510	Setting angular vel to: 0.149851.
+4510	emitTwoWheeledEvent: l=0.434440, r=0.565560, linearSpeed=0.080000, angularVel=0.149851, maxAngVel=1.142857
+4510	Motor out: 0.434440,0.565560
+4510	angularVelocity	0.149851<<<VAR
+4510	dphi	0.001710<<<VAR
+4549	nWorld = 6
+4549	Running: AbstractTask::CloseObjectDetector::detect.
+4549	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4589	targetTrackerAngle	0.094476<<<VAR
+4589	Setting angular vel to: 0.141714.
+4589	emitTwoWheeledEvent: l=0.438000, r=0.562000, linearSpeed=0.080000, angularVel=0.141714, maxAngVel=1.142857
+4589	Motor out: 0.438000,0.562000
+4589	angularVelocity	0.141714<<<VAR
+4589	dphi	0.005424<<<VAR
+4603	Target detected:1.008576,0.095761
+4603	targetDistance	1.008576<<<VAR
+4603	targetTrackerAngle	0.095761<<<VAR
+4603	Setting angular vel to: 0.143642.
+4603	emitTwoWheeledEvent: l=0.437157, r=0.562843, linearSpeed=0.080000, angularVel=0.143642, maxAngVel=1.142857
+4603	Motor out: 0.437157,0.562843
+4603	angularVelocity	0.143642<<<VAR
+4603	targetPhi	0.095761<<<VAR
+4628	nWorld = 7
+4628	Running: AbstractTask::CloseObjectDetector::detect.
+4628	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4667	targetTrackerAngle	0.094588<<<VAR
+4667	Setting angular vel to: 0.141883.
+4667	emitTwoWheeledEvent: l=0.437926, r=0.562074, linearSpeed=0.080000, angularVel=0.141883, maxAngVel=1.142857
+4667	Motor out: 0.437926,0.562074
+4667	angularVelocity	0.141883<<<VAR
+4667	dphi	0.001173<<<VAR
+4703	Target detected:0.995909,0.096029
+4703	targetDistance	0.995909<<<VAR
+4703	targetTrackerAngle	0.096029<<<VAR
+4703	Setting angular vel to: 0.144043.
+4703	emitTwoWheeledEvent: l=0.436981, r=0.563019, linearSpeed=0.080000, angularVel=0.144043, maxAngVel=1.142857
+4703	Motor out: 0.436981,0.563019
+4703	angularVelocity	0.144043<<<VAR
+4703	targetPhi	0.096029<<<VAR
+4706	nWorld = 8
+4706	Running: AbstractTask::CloseObjectDetector::detect.
+4706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4706	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.444377, bodyflag=0, area=0.000879
+4706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4706	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.456070, bodyflag=0, area=0.000001
+4746	targetTrackerAngle	0.090165<<<VAR
+4746	Setting angular vel to: 0.135247.
+4746	emitTwoWheeledEvent: l=0.440829, r=0.559171, linearSpeed=0.080000, angularVel=0.135247, maxAngVel=1.142857
+4746	Motor out: 0.440829,0.559171
+4746	angularVelocity	0.135247<<<VAR
+4746	dphi	0.005864<<<VAR
+4792	nWorld = 9
+4792	Running: AbstractTask::CloseObjectDetector::detect.
+4792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.456070, bodyflag=0, area=0.000001
+4792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.448219, bodyflag=0, area=0.000001
+4792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4792	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4792	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.437199, bodyflag=0, area=0.000780
+4803	Target detected:0.988919,0.089288
+4803	targetDistance	0.988919<<<VAR
+4803	targetTrackerAngle	0.089288<<<VAR
+4803	Setting angular vel to: 0.133933.
+4803	emitTwoWheeledEvent: l=0.441405, r=0.558595, linearSpeed=0.080000, angularVel=0.133933, maxAngVel=1.142857
+4803	Motor out: 0.441405,0.558595
+4803	angularVelocity	0.133933<<<VAR
+4803	targetPhi	0.089288<<<VAR
+4826	targetTrackerAngle	0.086454<<<VAR
+4826	Setting angular vel to: 0.129681.
+4826	emitTwoWheeledEvent: l=0.443265, r=0.556735, linearSpeed=0.080000, angularVel=0.129681, maxAngVel=1.142857
+4826	Motor out: 0.443265,0.556735
+4826	angularVelocity	0.129681<<<VAR
+4826	dphi	0.002834<<<VAR
+4878	nWorld = 10
+4878	Running: AbstractTask::CloseObjectDetector::detect.
+4878	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4878	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4878	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.429514, bodyflag=0, area=0.000900
+4878	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4878	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.440454, bodyflag=0, area=0.000001
+4903	targetTrackerAngle	0.088653<<<VAR
+4903	Setting angular vel to: 0.132980.
+4903	emitTwoWheeledEvent: l=0.441821, r=0.558179, linearSpeed=0.080000, angularVel=0.132980, maxAngVel=1.142857
+4903	Motor out: 0.441821,0.558179
+4903	angularVelocity	0.132980<<<VAR
+4903	dphi	-0.002199<<<VAR
+4903	Target detected:0.977249,0.086865
+4903	targetDistance	0.977249<<<VAR
+4903	targetTrackerAngle	0.086865<<<VAR
+4903	Setting angular vel to: 0.130297.
+4903	emitTwoWheeledEvent: l=0.442995, r=0.557005, linearSpeed=0.080000, angularVel=0.130297, maxAngVel=1.142857
+4903	Motor out: 0.442995,0.557005
+4903	angularVelocity	0.130297<<<VAR
+4903	targetPhi	0.086865<<<VAR
+4973	nWorld = 11
+4973	Running: AbstractTask::CloseObjectDetector::detect.
+4973	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4973	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.421156, bodyflag=0, area=0.000900
+4973	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4973	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.432782, bodyflag=0, area=0.000001
+4973	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+4982	targetTrackerAngle	0.086963<<<VAR
+4982	Setting angular vel to: 0.130444.
+4982	emitTwoWheeledEvent: l=0.442931, r=0.557069, linearSpeed=0.080000, angularVel=0.130444, maxAngVel=1.142857
+4982	Motor out: 0.442931,0.557069
+4982	angularVelocity	0.130444<<<VAR
+4982	dphi	-0.000098<<<VAR
+5003	Target detected:0.957661,0.091576
+5003	targetDistance	0.957661<<<VAR
+5003	targetTrackerAngle	0.091576<<<VAR
+5003	Setting angular vel to: 0.137364.
+5003	emitTwoWheeledEvent: l=0.439903, r=0.560097, linearSpeed=0.080000, angularVel=0.137364, maxAngVel=1.142857
+5003	Motor out: 0.439903,0.560097
+5003	angularVelocity	0.137364<<<VAR
+5003	targetPhi	0.091576<<<VAR
+5060	targetTrackerAngle	0.087129<<<VAR
+5060	Setting angular vel to: 0.130693.
+5060	emitTwoWheeledEvent: l=0.442822, r=0.557178, linearSpeed=0.080000, angularVel=0.130693, maxAngVel=1.142857
+5061	Motor out: 0.442822,0.557178
+5061	angularVelocity	0.130693<<<VAR
+5061	dphi	0.004447<<<VAR
+5067	nWorld = 12
+5067	Running: AbstractTask::CloseObjectDetector::detect.
+5067	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5067	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5067	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.414638, bodyflag=0, area=0.000810
+5067	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5067	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.432782, bodyflag=0, area=0.000001
+5103	Target detected:0.958535,0.089100
+5103	targetDistance	0.958535<<<VAR
+5103	targetTrackerAngle	0.089100<<<VAR
+5103	Setting angular vel to: 0.133649.
+5103	emitTwoWheeledEvent: l=0.441528, r=0.558472, linearSpeed=0.080000, angularVel=0.133649, maxAngVel=1.142857
+5103	Motor out: 0.441528,0.558472
+5103	angularVelocity	0.133649<<<VAR
+5103	targetPhi	0.089100<<<VAR
+5139	targetTrackerAngle	0.085141<<<VAR
+5139	Setting angular vel to: 0.127712.
+5139	emitTwoWheeledEvent: l=0.444126, r=0.555874, linearSpeed=0.080000, angularVel=0.127712, maxAngVel=1.142857
+5139	Motor out: 0.444126,0.555874
+5139	angularVelocity	0.127712<<<VAR
+5139	dphi	0.003958<<<VAR
+5169	nWorld = 13
+5169	Running: AbstractTask::CloseObjectDetector::detect.
+5169	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5169	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5169	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.405705, bodyflag=0, area=0.000936
+5169	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5169	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.425206, bodyflag=0, area=0.000001
+5203	Target detected:0.943153,0.083948
+5203	targetDistance	0.943153<<<VAR
+5203	targetTrackerAngle	0.083948<<<VAR
+5203	Setting angular vel to: 0.125921.
+5203	emitTwoWheeledEvent: l=0.444909, r=0.555091, linearSpeed=0.080000, angularVel=0.125921, maxAngVel=1.142857
+5203	Motor out: 0.444909,0.555091
+5203	angularVelocity	0.125921<<<VAR
+5203	targetPhi	0.083948<<<VAR
+5218	targetTrackerAngle	0.084534<<<VAR
+5218	Setting angular vel to: 0.126801.
+5218	emitTwoWheeledEvent: l=0.444525, r=0.555475, linearSpeed=0.080000, angularVel=0.126801, maxAngVel=1.142857
+5218	Motor out: 0.444525,0.555475
+5218	angularVelocity	0.126801<<<VAR
+5218	dphi	-0.000586<<<VAR
+5271	nWorld = 14
+5271	Running: AbstractTask::CloseObjectDetector::detect.
+5271	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5271	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.397834, bodyflag=0, area=0.001042
+5271	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5271	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.410366, bodyflag=0, area=0.000001
+5271	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5296	targetTrackerAngle	0.082384<<<VAR
+5296	Setting angular vel to: 0.123576.
+5296	emitTwoWheeledEvent: l=0.445936, r=0.554064, linearSpeed=0.080000, angularVel=0.123576, maxAngVel=1.142857
+5296	Motor out: 0.445936,0.554064
+5296	angularVelocity	0.123576<<<VAR
+5296	dphi	0.002150<<<VAR
+5303	Target detected:0.941362,0.084490
+5303	targetDistance	0.941362<<<VAR
+5303	targetTrackerAngle	0.084490<<<VAR
+5303	Setting angular vel to: 0.126735.
+5303	emitTwoWheeledEvent: l=0.444553, r=0.555447, linearSpeed=0.080000, angularVel=0.126735, maxAngVel=1.142857
+5303	Motor out: 0.444553,0.555447
+5303	angularVelocity	0.126735<<<VAR
+5303	targetPhi	0.084490<<<VAR
+5375	targetTrackerAngle	0.082095<<<VAR
+5375	Setting angular vel to: 0.123143.
+5375	emitTwoWheeledEvent: l=0.446125, r=0.553875, linearSpeed=0.080000, angularVel=0.123143, maxAngVel=1.142857
+5375	Motor out: 0.446125,0.553875
+5375	angularVelocity	0.123143<<<VAR
+5375	dphi	0.002395<<<VAR
+5381	nWorld = 15
+5381	Running: AbstractTask::CloseObjectDetector::detect.
+5381	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5381	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.389005, bodyflag=0, area=0.000870
+5381	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5381	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5381	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.403113, bodyflag=0, area=0.000001
+5403	Target detected:0.929329,0.081963
+5403	targetDistance	0.929329<<<VAR
+5403	targetTrackerAngle	0.081963<<<VAR
+5403	Setting angular vel to: 0.122945.
+5403	emitTwoWheeledEvent: l=0.446212, r=0.553788, linearSpeed=0.080000, angularVel=0.122945, maxAngVel=1.142857
+5403	Motor out: 0.446212,0.553788
+5403	angularVelocity	0.122945<<<VAR
+5403	targetPhi	0.081963<<<VAR
+5454	targetTrackerAngle	0.079666<<<VAR
+5454	Setting angular vel to: 0.119499.
+5454	emitTwoWheeledEvent: l=0.447719, r=0.552281, linearSpeed=0.080000, angularVel=0.119499, maxAngVel=1.142857
+5454	Motor out: 0.447719,0.552281
+5454	angularVelocity	0.119499<<<VAR
+5454	dphi	0.002297<<<VAR
+5491	nWorld = 16
+5491	Running: AbstractTask::CloseObjectDetector::detect.
+5491	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5491	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.377508, bodyflag=0, area=0.000900
+5491	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5491	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.403113, bodyflag=0, area=0.000001
+5491	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5503	Target detected:0.917470,0.079758
+5503	targetDistance	0.917470<<<VAR
+5503	targetTrackerAngle	0.079758<<<VAR
+5503	Setting angular vel to: 0.119637.
+5503	emitTwoWheeledEvent: l=0.447659, r=0.552341, linearSpeed=0.080000, angularVel=0.119637, maxAngVel=1.142857
+5503	Motor out: 0.447659,0.552341
+5503	angularVelocity	0.119637<<<VAR
+5503	targetPhi	0.079758<<<VAR
+5532	targetTrackerAngle	0.078879<<<VAR
+5532	Setting angular vel to: 0.118318.
+5532	emitTwoWheeledEvent: l=0.448236, r=0.551764, linearSpeed=0.080000, angularVel=0.118318, maxAngVel=1.142857
+5532	Motor out: 0.448236,0.551764
+5532	angularVelocity	0.118318<<<VAR
+5532	dphi	0.000880<<<VAR
+5592	nWorld = 17
+5592	Running: AbstractTask::CloseObjectDetector::detect.
+5592	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5592	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.368324, bodyflag=0, area=0.000758
+5592	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5592	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.381838, bodyflag=0, area=0.000001
+5592	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5603	Target detected:0.910528,0.079988
+5603	targetDistance	0.910528<<<VAR
+5603	targetTrackerAngle	0.079988<<<VAR
+5603	Setting angular vel to: 0.119982.
+5603	emitTwoWheeledEvent: l=0.447508, r=0.552492, linearSpeed=0.080000, angularVel=0.119982, maxAngVel=1.142857
+5603	Motor out: 0.447508,0.552492
+5603	angularVelocity	0.119982<<<VAR
+5603	targetPhi	0.079988<<<VAR
+5611	targetTrackerAngle	0.081503<<<VAR
+5611	Setting angular vel to: 0.122255.
+5611	emitTwoWheeledEvent: l=0.446513, r=0.553487, linearSpeed=0.080000, angularVel=0.122255, maxAngVel=1.142857
+5611	Motor out: 0.446513,0.553487
+5611	angularVelocity	0.122255<<<VAR
+5611	dphi	-0.001515<<<VAR
+5690	targetTrackerAngle	0.083409<<<VAR
+5690	Setting angular vel to: 0.125114.
+5690	emitTwoWheeledEvent: l=0.445263, r=0.554737, linearSpeed=0.080000, angularVel=0.125114, maxAngVel=1.142857
+5690	Motor out: 0.445263,0.554737
+5690	angularVelocity	0.125114<<<VAR
+5690	dphi	-0.001906<<<VAR
+5702	nWorld = 18
+5702	Running: AbstractTask::CloseObjectDetector::detect.
+5702	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5702	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.382099, bodyflag=0, area=0.000001
+5702	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5702	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5702	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.359753, bodyflag=0, area=0.000900
+5703	Target detected:0.906485,0.083793
+5703	targetDistance	0.906485<<<VAR
+5703	targetTrackerAngle	0.083793<<<VAR
+5703	Setting angular vel to: 0.125690.
+5703	emitTwoWheeledEvent: l=0.445011, r=0.554989, linearSpeed=0.080000, angularVel=0.125690, maxAngVel=1.142857
+5703	Motor out: 0.445011,0.554989
+5703	angularVelocity	0.125690<<<VAR
+5703	targetPhi	0.083793<<<VAR
+5768	targetTrackerAngle	0.081643<<<VAR
+5768	Setting angular vel to: 0.122465.
+5768	emitTwoWheeledEvent: l=0.446422, r=0.553578, linearSpeed=0.080000, angularVel=0.122465, maxAngVel=1.142857
+5768	Motor out: 0.446422,0.553578
+5768	angularVelocity	0.122465<<<VAR
+5768	dphi	0.002150<<<VAR
+5803	Target detected:0.885911,0.084474
+5803	targetDistance	0.885911<<<VAR
+5803	targetTrackerAngle	0.084474<<<VAR
+5803	Setting angular vel to: 0.126711.
+5803	emitTwoWheeledEvent: l=0.444564, r=0.555436, linearSpeed=0.080000, angularVel=0.126711, maxAngVel=1.142857
+5803	Motor out: 0.444564,0.555436
+5803	angularVelocity	0.126711<<<VAR
+5803	targetPhi	0.084474<<<VAR
+5805	nWorld = 19
+5805	Running: AbstractTask::CloseObjectDetector::detect.
+5805	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5805	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.351461, bodyflag=0, area=0.000930
+5805	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5805	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.375366, bodyflag=0, area=0.000001
+5805	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5847	targetTrackerAngle	0.079831<<<VAR
+5847	Setting angular vel to: 0.119747.
+5847	emitTwoWheeledEvent: l=0.447611, r=0.552389, linearSpeed=0.080000, angularVel=0.119747, maxAngVel=1.142857
+5847	Motor out: 0.447611,0.552389
+5847	angularVelocity	0.119747<<<VAR
+5847	dphi	0.004643<<<VAR
+5903	Target detected:0.873998,0.079756
+5903	targetDistance	0.873998<<<VAR
+5903	targetTrackerAngle	0.079756<<<VAR
+5903	Setting angular vel to: 0.119634.
+5903	emitTwoWheeledEvent: l=0.447660, r=0.552340, linearSpeed=0.080000, angularVel=0.119634, maxAngVel=1.142857
+5903	Motor out: 0.447660,0.552340
+5903	angularVelocity	0.119634<<<VAR
+5903	targetPhi	0.079756<<<VAR
+5906	nWorld = 20
+5906	Running: AbstractTask::CloseObjectDetector::detect.
+5906	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5906	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5906	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.345135, bodyflag=0, area=0.000911
+5906	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+5906	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.367967, bodyflag=0, area=0.000001
+5928	targetTrackerAngle	0.075847<<<VAR
+5928	Setting angular vel to: 0.113770.
+5928	emitTwoWheeledEvent: l=0.450226, r=0.549774, linearSpeed=0.080000, angularVel=0.113770, maxAngVel=1.142857
+5928	Motor out: 0.450226,0.549774
+5928	angularVelocity	0.113770<<<VAR
+5928	dphi	0.003910<<<VAR
+6002	Target detected:0.879277,0.075934
+6002	targetDistance	0.879277<<<VAR
+6002	targetTrackerAngle	0.075934<<<VAR
+6002	Setting angular vel to: 0.113901.
+6002	emitTwoWheeledEvent: l=0.450168, r=0.549832, linearSpeed=0.080000, angularVel=0.113901, maxAngVel=1.142857
+6002	Motor out: 0.450168,0.549832
+6002	angularVelocity	0.113901<<<VAR
+6002	targetPhi	0.075934<<<VAR
+6004	targetTrackerAngle	0.079209<<<VAR
+6004	Setting angular vel to: 0.118813.
+6004	emitTwoWheeledEvent: l=0.448019, r=0.551981, linearSpeed=0.080000, angularVel=0.118813, maxAngVel=1.142857
+6004	Motor out: 0.448019,0.551981
+6004	angularVelocity	0.118813<<<VAR
+6004	dphi	-0.003274<<<VAR
+6016	nWorld = 21
+6016	Running: AbstractTask::CloseObjectDetector::detect.
+6016	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6016	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6016	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.362353, bodyflag=0, area=0.000001
+6016	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6016	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.338215, bodyflag=0, area=0.001042
+6016	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6016	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.403113, bodyflag=0, area=0.000001
+6083	targetTrackerAngle	0.079746<<<VAR
+6083	Setting angular vel to: 0.119619.
+6083	emitTwoWheeledEvent: l=0.447667, r=0.552333, linearSpeed=0.080000, angularVel=0.119619, maxAngVel=1.142857
+6083	Motor out: 0.447667,0.552333
+6083	angularVelocity	0.119619<<<VAR
+6083	dphi	-0.000538<<<VAR
+6101	Target detected:0.857194,0.082890
+6101	targetDistance	0.857194<<<VAR
+6101	targetTrackerAngle	0.082890<<<VAR
+6101	Setting angular vel to: 0.124335.
+6101	emitTwoWheeledEvent: l=0.445603, r=0.554397, linearSpeed=0.080000, angularVel=0.124335, maxAngVel=1.142857
+6101	Motor out: 0.445603,0.554397
+6101	angularVelocity	0.124335<<<VAR
+6101	targetPhi	0.082890<<<VAR
+6111	nWorld = 22
+6111	Running: AbstractTask::CloseObjectDetector::detect.
+6111	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6111	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.394462, bodyflag=0, area=0.000001
+6111	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6111	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.356090, bodyflag=0, area=0.000001
+6111	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6111	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.330597, bodyflag=0, area=0.000921
+6111	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6161	targetTrackerAngle	0.084209<<<VAR
+6161	Setting angular vel to: 0.126314.
+6161	emitTwoWheeledEvent: l=0.444738, r=0.555262, linearSpeed=0.080000, angularVel=0.126314, maxAngVel=1.142857
+6161	Motor out: 0.444738,0.555262
+6161	angularVelocity	0.126314<<<VAR
+6161	dphi	-0.001319<<<VAR
+6200	Target detected:0.849647,0.084727
+6200	targetDistance	0.849647<<<VAR
+6200	targetTrackerAngle	0.084727<<<VAR
+6200	Setting angular vel to: 0.127091.
+6200	emitTwoWheeledEvent: l=0.444398, r=0.555602, linearSpeed=0.080000, angularVel=0.127091, maxAngVel=1.142857
+6200	Motor out: 0.444398,0.555602
+6200	angularVelocity	0.127091<<<VAR
+6200	targetPhi	0.084727<<<VAR
+6212	nWorld = 23
+6212	Running: AbstractTask::CloseObjectDetector::detect.
+6212	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6212	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.364726, bodyflag=0, area=0.000054
+6212	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6212	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.323917, bodyflag=0, area=0.000900
+6212	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6212	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6212	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.350000, bodyflag=0, area=0.000001
+6240	targetTrackerAngle	0.084043<<<VAR
+6240	Setting angular vel to: 0.126065.
+6240	emitTwoWheeledEvent: l=0.444847, r=0.555153, linearSpeed=0.080000, angularVel=0.126065, maxAngVel=1.142857
+6240	Motor out: 0.444847,0.555153
+6240	angularVelocity	0.126065<<<VAR
+6240	dphi	0.000684<<<VAR
+6301	Target detected:0.842428,0.084344
+6301	targetDistance	0.842428<<<VAR
+6301	targetTrackerAngle	0.084344<<<VAR
+6301	Setting angular vel to: 0.126516.
+6301	emitTwoWheeledEvent: l=0.444649, r=0.555351, linearSpeed=0.080000, angularVel=0.126516, maxAngVel=1.142857
+6301	Motor out: 0.444649,0.555351
+6301	angularVelocity	0.126516<<<VAR
+6301	targetPhi	0.084344<<<VAR
+6315	nWorld = 24
+6315	Running: AbstractTask::CloseObjectDetector::detect.
+6315	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6315	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.374433, bodyflag=0, area=0.000001
+6315	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6315	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.317012, bodyflag=0, area=0.002535
+6315	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6315	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.344093, bodyflag=0, area=0.000001
+6315	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6319	targetTrackerAngle	0.086690<<<VAR
+6319	Setting angular vel to: 0.130035.
+6319	emitTwoWheeledEvent: l=0.443110, r=0.556890, linearSpeed=0.080000, angularVel=0.130035, maxAngVel=1.142857
+6319	Motor out: 0.443110,0.556890
+6319	angularVelocity	0.130035<<<VAR
+6319	dphi	-0.002346<<<VAR
+6397	targetTrackerAngle	0.085371<<<VAR
+6397	Setting angular vel to: 0.128056.
+6397	emitTwoWheeledEvent: l=0.443976, r=0.556024, linearSpeed=0.080000, angularVel=0.128056, maxAngVel=1.142857
+6397	Motor out: 0.443976,0.556024
+6397	angularVelocity	0.128056<<<VAR
+6397	dphi	0.001319<<<VAR
+6400	Target detected:0.836835,0.089663
+6400	targetDistance	0.836835<<<VAR
+6400	targetTrackerAngle	0.089663<<<VAR
+6400	Setting angular vel to: 0.134494.
+6400	emitTwoWheeledEvent: l=0.441159, r=0.558841, linearSpeed=0.080000, angularVel=0.134494, maxAngVel=1.142857
+6400	Motor out: 0.441159,0.558841
+6400	angularVelocity	0.134494<<<VAR
+6400	targetPhi	0.089663<<<VAR
+6416	nWorld = 25
+6416	Running: AbstractTask::CloseObjectDetector::detect.
+6416	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6416	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306837, bodyflag=0, area=0.002900
+6416	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6416	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.336006, bodyflag=0, area=0.000001
+6416	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6476	targetTrackerAngle	0.087415<<<VAR
+6476	Setting angular vel to: 0.131122.
+6476	emitTwoWheeledEvent: l=0.442634, r=0.557366, linearSpeed=0.080000, angularVel=0.131122, maxAngVel=1.142857
+6476	Motor out: 0.442634,0.557366
+6476	angularVelocity	0.131122<<<VAR
+6476	dphi	0.002248<<<VAR
+6499	Target detected:0.820911,0.086645
+6499	targetDistance	0.820911<<<VAR
+6499	targetTrackerAngle	0.086645<<<VAR
+6499	Setting angular vel to: 0.129967.
+6499	emitTwoWheeledEvent: l=0.443139, r=0.556861, linearSpeed=0.080000, angularVel=0.129967, maxAngVel=1.142857
+6499	Motor out: 0.443139,0.556861
+6499	angularVelocity	0.129967<<<VAR
+6499	targetPhi	0.086645<<<VAR
+6511	nWorld = 26
+6511	Running: AbstractTask::CloseObjectDetector::detect.
+6511	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6511	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.360555, bodyflag=0, area=0.000001
+6511	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6511	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.330151, bodyflag=0, area=0.000001
+6511	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6511	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.298710, bodyflag=0, area=0.002700
+6511	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6511	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6511	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.324500, bodyflag=0, area=0.000001
+6555	targetTrackerAngle	0.078728<<<VAR
+6555	Setting angular vel to: 0.118092.
+6555	emitTwoWheeledEvent: l=0.448335, r=0.551665, linearSpeed=0.080000, angularVel=0.118092, maxAngVel=1.142857
+6555	Motor out: 0.448335,0.551665
+6555	angularVelocity	0.118092<<<VAR
+6555	dphi	0.007917<<<VAR
+6602	Targetloc: Contour discarded.
+6612	nWorld = 27
+6612	Running: AbstractTask::CloseObjectDetector::detect.
+6612	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6612	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310892, bodyflag=0, area=0.009900
+6612	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6612	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6612	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.324500, bodyflag=0, area=0.000001
+6633	targetTrackerAngle	0.079119<<<VAR
+6633	Setting angular vel to: 0.118678.
+6633	emitTwoWheeledEvent: l=0.448078, r=0.551922, linearSpeed=0.080000, angularVel=0.118678, maxAngVel=1.142857
+6633	Motor out: 0.448078,0.551922
+6633	angularVelocity	0.118678<<<VAR
+6633	dphi	-0.000391<<<VAR
+6699	Target detected:0.794942,0.079995
+6699	targetDistance	0.794942<<<VAR
+6699	targetTrackerAngle	0.079995<<<VAR
+6699	Setting angular vel to: 0.119993.
+6699	emitTwoWheeledEvent: l=0.447503, r=0.552497, linearSpeed=0.080000, angularVel=0.119993, maxAngVel=1.142857
+6699	Motor out: 0.447503,0.552497
+6699	angularVelocity	0.119993<<<VAR
+6699	targetPhi	0.079995<<<VAR
+6706	nWorld = 28
+6706	Running: AbstractTask::CloseObjectDetector::detect.
+6706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6706	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.319061, bodyflag=0, area=0.000001
+6706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6706	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.296070, bodyflag=0, area=0.007800
+6712	targetTrackerAngle	0.081657<<<VAR
+6712	Setting angular vel to: 0.122485.
+6712	emitTwoWheeledEvent: l=0.446413, r=0.553587, linearSpeed=0.080000, angularVel=0.122485, maxAngVel=1.142857
+6712	Motor out: 0.446413,0.553587
+6712	angularVelocity	0.122485<<<VAR
+6712	dphi	-0.001662<<<VAR
+6790	targetTrackerAngle	0.076477<<<VAR
+6791	Setting angular vel to: 0.114715.
+6791	emitTwoWheeledEvent: l=0.449812, r=0.550188, linearSpeed=0.080000, angularVel=0.114715, maxAngVel=1.142857
+6791	Motor out: 0.449812,0.550188
+6791	angularVelocity	0.114715<<<VAR
+6791	dphi	0.005180<<<VAR
+6800	Target detected:0.791374,0.080768
+6800	targetDistance	0.791374<<<VAR
+6800	targetTrackerAngle	0.080768<<<VAR
+6800	Setting angular vel to: 0.121153.
+6800	emitTwoWheeledEvent: l=0.446996, r=0.553004, linearSpeed=0.080000, angularVel=0.121153, maxAngVel=1.142857
+6800	Motor out: 0.446996,0.553004
+6800	angularVelocity	0.121153<<<VAR
+6800	targetPhi	0.080768<<<VAR
+6809	nWorld = 29
+6809	Running: AbstractTask::CloseObjectDetector::detect.
+6809	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6809	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.294139, bodyflag=0, area=0.009600
+6809	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6809	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6809	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.313847, bodyflag=0, area=0.000001
+6869	targetTrackerAngle	0.080866<<<VAR
+6869	Setting angular vel to: 0.121299.
+6869	emitTwoWheeledEvent: l=0.446932, r=0.553068, linearSpeed=0.080000, angularVel=0.121299, maxAngVel=1.142857
+6869	Motor out: 0.446932,0.553068
+6869	angularVelocity	0.121299<<<VAR
+6869	dphi	-0.000098<<<VAR
+6899	Target detected:0.779714,0.076557
+6899	targetDistance	0.779714<<<VAR
+6899	targetTrackerAngle	0.076557<<<VAR
+6899	Setting angular vel to: 0.114835.
+6899	emitTwoWheeledEvent: l=0.449759, r=0.550241, linearSpeed=0.080000, angularVel=0.114835, maxAngVel=1.142857
+6899	Motor out: 0.449759,0.550241
+6899	angularVelocity	0.114835<<<VAR
+6899	targetPhi	0.076557<<<VAR
+6911	nWorld = 30
+6911	Running: AbstractTask::CloseObjectDetector::detect.
+6911	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6911	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.282312, bodyflag=0, area=0.007800
+6911	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6911	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+6911	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.308869, bodyflag=0, area=0.000001
+6948	targetTrackerAngle	0.078512<<<VAR
+6948	Setting angular vel to: 0.117768.
+6948	emitTwoWheeledEvent: l=0.448477, r=0.551523, linearSpeed=0.080000, angularVel=0.117768, maxAngVel=1.142857
+6948	Motor out: 0.448477,0.551523
+6948	angularVelocity	0.117768<<<VAR
+6948	dphi	-0.001955<<<VAR
+7001	Target detected:0.782184,0.081525
+7001	targetDistance	0.782184<<<VAR
+7001	targetTrackerAngle	0.081525<<<VAR
+7001	Setting angular vel to: 0.122287.
+7001	emitTwoWheeledEvent: l=0.446500, r=0.553500, linearSpeed=0.080000, angularVel=0.122287, maxAngVel=1.142857
+7001	Motor out: 0.446500,0.553500
+7001	angularVelocity	0.122287<<<VAR
+7001	targetPhi	0.081525<<<VAR
+7005	nWorld = 31
+7005	Running: AbstractTask::CloseObjectDetector::detect.
+7005	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7005	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7005	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.304138, bodyflag=0, area=0.000001
+7005	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7005	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.280240, bodyflag=0, area=0.009600
+7027	targetTrackerAngle	0.080791<<<VAR
+7027	Setting angular vel to: 0.121187.
+7027	emitTwoWheeledEvent: l=0.446981, r=0.553019, linearSpeed=0.080000, angularVel=0.121187, maxAngVel=1.142857
+7027	Motor out: 0.446981,0.553019
+7027	angularVelocity	0.121187<<<VAR
+7027	dphi	0.000733<<<VAR
+7099	Target detected:0.761354,0.083274
+7099	targetDistance	0.761354<<<VAR
+7099	targetTrackerAngle	0.083274<<<VAR
+7099	Setting angular vel to: 0.124911.
+7099	emitTwoWheeledEvent: l=0.445352, r=0.554648, linearSpeed=0.080000, angularVel=0.124911, maxAngVel=1.142857
+7099	Motor out: 0.445352,0.554648
+7099	angularVelocity	0.124911<<<VAR
+7099	targetPhi	0.083274<<<VAR
+7105	targetTrackerAngle	0.086890<<<VAR
+7105	Setting angular vel to: 0.130335.
+7105	emitTwoWheeledEvent: l=0.442978, r=0.557022, linearSpeed=0.080000, angularVel=0.130335, maxAngVel=1.142857
+7105	Motor out: 0.442978,0.557022
+7105	angularVelocity	0.130335<<<VAR
+7105	dphi	-0.003616<<<VAR
+7106	nWorld = 32
+7106	Running: AbstractTask::CloseObjectDetector::detect.
+7106	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7106	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.277780, bodyflag=0, area=0.010818
+7106	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7106	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7106	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.299666, bodyflag=0, area=0.000001
+7184	targetTrackerAngle	0.084544<<<VAR
+7184	Setting angular vel to: 0.126816.
+7184	emitTwoWheeledEvent: l=0.444518, r=0.555482, linearSpeed=0.080000, angularVel=0.126816, maxAngVel=1.142857
+7184	Motor out: 0.444518,0.555482
+7184	angularVelocity	0.126816<<<VAR
+7184	dphi	0.002346<<<VAR
+7201	nWorld = 33
+7201	Running: AbstractTask::CloseObjectDetector::detect.
+7201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7201	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.295466, bodyflag=0, area=0.000001
+7201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7201	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.269537, bodyflag=0, area=0.010500
+7201	Target detected:0.760614,0.086232
+7201	targetDistance	0.760614<<<VAR
+7201	targetTrackerAngle	0.086232<<<VAR
+7201	Setting angular vel to: 0.129348.
+7201	emitTwoWheeledEvent: l=0.443410, r=0.556590, linearSpeed=0.080000, angularVel=0.129348, maxAngVel=1.142857
+7201	Motor out: 0.443410,0.556590
+7201	angularVelocity	0.129348<<<VAR
+7201	targetPhi	0.086232<<<VAR
+7262	targetTrackerAngle	0.082665<<<VAR
+7262	Setting angular vel to: 0.123997.
+7262	emitTwoWheeledEvent: l=0.445751, r=0.554249, linearSpeed=0.080000, angularVel=0.123997, maxAngVel=1.142857
+7262	Motor out: 0.445751,0.554249
+7262	angularVelocity	0.123997<<<VAR
+7262	dphi	0.003567<<<VAR
+7301	Target detected:0.746502,0.082105
+7301	targetDistance	0.746502<<<VAR
+7301	targetTrackerAngle	0.082105<<<VAR
+7301	Setting angular vel to: 0.123158.
+7301	emitTwoWheeledEvent: l=0.446119, r=0.553881, linearSpeed=0.080000, angularVel=0.123158, maxAngVel=1.142857
+7301	Motor out: 0.446119,0.553881
+7301	angularVelocity	0.123158<<<VAR
+7301	targetPhi	0.082105<<<VAR
+7303	nWorld = 34
+7303	Running: AbstractTask::CloseObjectDetector::detect.
+7303	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7303	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7303	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.263154, bodyflag=0, area=0.010500
+7341	targetTrackerAngle	0.080444<<<VAR
+7341	Setting angular vel to: 0.120665.
+7341	emitTwoWheeledEvent: l=0.447209, r=0.552791, linearSpeed=0.080000, angularVel=0.120665, maxAngVel=1.142857
+7341	Motor out: 0.447209,0.552791
+7341	angularVelocity	0.120665<<<VAR
+7341	dphi	0.001662<<<VAR
+7401	Target detected:0.740550,0.080304
+7401	targetDistance	0.740550<<<VAR
+7401	targetTrackerAngle	0.080304<<<VAR
+7401	Setting angular vel to: 0.120456.
+7401	emitTwoWheeledEvent: l=0.447301, r=0.552699, linearSpeed=0.080000, angularVel=0.120456, maxAngVel=1.142857
+7402	Motor out: 0.447301,0.552699
+7402	angularVelocity	0.120456<<<VAR
+7402	targetPhi	0.080304<<<VAR
+7405	nWorld = 35
+7405	Running: AbstractTask::CloseObjectDetector::detect.
+7405	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7405	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7405	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.282312, bodyflag=0, area=0.000001
+7405	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7405	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.254540, bodyflag=0, area=0.007400
+7405	AbstractTask::CloseObjectDetector: We are close!
+7405	AbstractTask::CloseObjectDetector: In field of view: detected!
+7405	Task terminating because of obstacle: l=1, r=0
+7405	Reactive: onTaskTerminated
+7405	ReactiveConfigurator: Obstacle detected: l=1, r=0
+7405	ReactiveConfigurator: Avoidance to the RIGHT b/c obstacle to the left.
+7405	emitTwoWheeledEvent: l=0.447301, r=0.552699, linearSpeed=0.080000, angularVel=0.120456, maxAngVel=1.142857
+7405	Motor out: 0.447301,0.552699
+7405	onStart: AvoidTask
+7420	targetTrackerAngle	0.077958<<<VAR
+7420	dphi	0.002346<<<VAR
+7498	targetTrackerAngle	0.073120<<<VAR
+7498	dphi	0.004838<<<VAR
+7499	nWorld = 36
+7499	Running: AbstractTask::CloseObjectDetector::detect.
+7499	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7499	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7499	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.245711, bodyflag=0, area=0.009200
+7499	AbstractTask::CloseObjectDetector: We are close!
+7499	AbstractTask::CloseObjectDetector: In field of view: detected!
+7499	====> avoid, dir=1, detrad=0.255000, ang vel = -1.142857
+
+7499	Setting angular vel to: -1.142857.
+7499	emitTwoWheeledEvent: l=1.000000, r=0.000000, linearSpeed=0.080000, angularVel=-1.142857, maxAngVel=1.142857
+7499	Motor out: 1.000000,0.000000
+7502	Target detected:0.725929,0.078622
+7502	targetTrackerAngle	0.078622<<<VAR
+7502	targetPhi	0.078622<<<VAR
+7577	targetTrackerAngle	0.087516<<<VAR
+7577	dphi	-0.008894<<<VAR
+7601	nWorld = 37
+7601	Running: AbstractTask::CloseObjectDetector::detect.
+7601	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7601	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.242231, bodyflag=0, area=0.008700
+7601	AbstractTask::CloseObjectDetector: We are close!
+7601	AbstractTask::CloseObjectDetector: In field of view: detected!
+7601	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7601	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7601	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.281603, bodyflag=0, area=0.000001
+7601	AbstractTask::CloseObjectDetector: We are close!
+7601	AbstractTask::CloseObjectDetector: In field of view: detected!
+7601	====> avoid, dir=1, detrad=0.255000, ang vel = -1.142857
+
+7601	Setting angular vel to: -1.142857.
+7601	emitTwoWheeledEvent: l=1.000000, r=0.000000, linearSpeed=0.080000, angularVel=-1.142857, maxAngVel=1.142857
+7601	Motor out: 1.000000,0.000000
+7602	Target detected:0.720018,0.073938
+7602	targetTrackerAngle	0.073938<<<VAR
+7602	targetPhi	0.073938<<<VAR
+7656	targetTrackerAngle	0.132923<<<VAR
+7656	dphi	-0.058985<<<VAR
+7702	Targetloc: Contour discarded.
+7703	nWorld = 38
+7703	Running: AbstractTask::CloseObjectDetector::detect.
+7703	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7703	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.239342, bodyflag=0, area=0.007600
+7703	AbstractTask::CloseObjectDetector: We are close!
+7703	AbstractTask::CloseObjectDetector: In field of view: detected!
+7703	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7703	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7703	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.284429, bodyflag=0, area=0.000001
+7703	AbstractTask::CloseObjectDetector: We are close!
+7703	AbstractTask::CloseObjectDetector: In field of view: detected!
+7703	====> avoid, dir=1, detrad=0.255000, ang vel = -1.142857
+
+7703	Setting angular vel to: -1.142857.
+7703	emitTwoWheeledEvent: l=1.000000, r=0.000000, linearSpeed=0.080000, angularVel=-1.142857, maxAngVel=1.142857
+7703	Motor out: 1.000000,0.000000
+7734	targetTrackerAngle	0.213948<<<VAR
+7734	dphi	-0.081025<<<VAR
+7801	Targetloc: Contour discarded.
+7804	nWorld = 39
+7804	Running: AbstractTask::CloseObjectDetector::detect.
+7804	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7804	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.239728, bodyflag=0, area=0.008400
+7804	AbstractTask::CloseObjectDetector: We are close!
+7804	AbstractTask::CloseObjectDetector: In field of view: detected!
+7804	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7804	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7804	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.280179, bodyflag=0, area=0.000001
+7804	AbstractTask::CloseObjectDetector: We are close!
+7804	AbstractTask::CloseObjectDetector: In field of view: detected!
+7804	====> avoid, dir=1, detrad=0.255000, ang vel = -1.142857
+
+7804	Setting angular vel to: -1.142857.
+7804	emitTwoWheeledEvent: l=1.000000, r=0.000000, linearSpeed=0.080000, angularVel=-1.142857, maxAngVel=1.142857
+7805	Motor out: 1.000000,0.000000
+7813	targetTrackerAngle	0.296635<<<VAR
+7813	dphi	-0.082687<<<VAR
+7891	targetTrackerAngle	0.379761<<<VAR
+7891	dphi	-0.083127<<<VAR
+7898	Targetloc: Contour discarded.
+7907	nWorld = 40
+7907	Running: AbstractTask::CloseObjectDetector::detect.
+7907	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7907	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.704953, bodyflag=0, area=0.008491
+7907	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7907	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+7907	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.235505, bodyflag=0, area=0.008900
+7907	AbstractTask::CloseObjectDetector: We are close!
+7907	AbstractTask::CloseObjectDetector: In field of view: detected!
+7907	====> avoid, dir=1, detrad=0.255000, ang vel = -1.142857
+
+7907	Setting angular vel to: -1.142857.
+7907	emitTwoWheeledEvent: l=1.000000, r=0.000000, linearSpeed=0.080000, angularVel=-1.142857, maxAngVel=1.142857
+7907	Motor out: 1.000000,0.000000
+7970	targetTrackerAngle	0.461666<<<VAR
+7970	dphi	-0.081905<<<VAR
+8000	Targetloc: Contour discarded.
+8009	nWorld = 41
+8009	Running: AbstractTask::CloseObjectDetector::detect.
+8009	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8009	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8009	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.697725, bodyflag=0, area=0.006400
+8009	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8009	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.237601, bodyflag=0, area=0.007858
+8009	AbstractTask::CloseObjectDetector: We are close!
+8009	AbstractTask::CloseObjectDetector: In field of view: detected!
+8009	====> avoid, dir=1, detrad=0.255000, ang vel = -1.142857
+
+8009	Setting angular vel to: -1.142857.
+8009	emitTwoWheeledEvent: l=1.000000, r=0.000000, linearSpeed=0.080000, angularVel=-1.142857, maxAngVel=1.142857
+8009	Motor out: 1.000000,0.000000
+8049	targetTrackerAngle	0.545086<<<VAR
+8049	dphi	-0.083420<<<VAR
+8110	nWorld = 42
+8110	Running: AbstractTask::CloseObjectDetector::detect.
+8110	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8110	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8110	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.691456, bodyflag=0, area=0.007200
+8110	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8110	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.242953, bodyflag=0, area=0.009200
+8110	AbstractTask::CloseObjectDetector: We are close!
+8110	AbstractTask::CloseObjectDetector: But out of sight: 1.643570 > 1.570796.
+8127	targetTrackerAngle	0.630363<<<VAR
+8127	dphi	-0.085277<<<VAR
+8205	nWorld = 43
+8205	Running: AbstractTask::CloseObjectDetector::detect.
+8205	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8205	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8205	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.779630, bodyflag=0, area=0.002280
+8205	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8205	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.688756, bodyflag=0, area=0.009200
+8205	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8205	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.241350, bodyflag=0, area=0.010000
+8205	AbstractTask::CloseObjectDetector: We are close!
+8205	AbstractTask::CloseObjectDetector: But out of sight: 1.800701 > 1.570796.
+8206	targetTrackerAngle	0.713929<<<VAR
+8206	dphi	-0.083566<<<VAR
+8285	targetTrackerAngle	0.796713<<<VAR
+8285	dphi	-0.082784<<<VAR
+8306	nWorld = 44
+8306	Running: AbstractTask::CloseObjectDetector::detect.
+8306	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8306	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8306	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.246178, bodyflag=0, area=0.008432
+8306	AbstractTask::CloseObjectDetector: We are close!
+8306	AbstractTask::CloseObjectDetector: But out of sight: 1.944473 > 1.570796.
+8363	targetTrackerAngle	0.881110<<<VAR
+8363	dphi	-0.084397<<<VAR
+8409	nWorld = 45
+8409	Running: AbstractTask::CloseObjectDetector::detect.
+8409	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8409	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8409	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.249324, bodyflag=0, area=0.009700
+8409	AbstractTask::CloseObjectDetector: We are close!
+8409	AbstractTask::CloseObjectDetector: But out of sight: 2.038928 > 1.570796.
+8442	targetTrackerAngle	0.964335<<<VAR
+8442	dphi	-0.083224<<<VAR
+8510	nWorld = 46
+8510	Running: AbstractTask::CloseObjectDetector::detect.
+8510	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8510	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8510	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.255196, bodyflag=0, area=0.009000
+8510	AbstractTask::CloseObjectDetector: We are close!
+8510	AbstractTask::CloseObjectDetector: But out of sight: 2.175102 > 1.570796.
+8520	targetTrackerAngle	1.046142<<<VAR
+8520	dphi	-0.081807<<<VAR
+8599	targetTrackerAngle	1.129024<<<VAR
+8599	dphi	-0.082882<<<VAR
+8605	nWorld = 47
+8605	Running: AbstractTask::CloseObjectDetector::detect.
+8605	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8605	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8605	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.252988, bodyflag=0, area=0.009400
+8605	AbstractTask::CloseObjectDetector: We are close!
+8605	AbstractTask::CloseObjectDetector: But out of sight: 2.279596 > 1.570796.
+8605	Setting angular vel to: 0.000000.
+8605	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+8605	Motor out: 0.500000,0.500000
+8678	targetTrackerAngle	1.209512<<<VAR
+8678	dphi	-0.080488<<<VAR
+8707	nWorld = 48
+8707	Running: AbstractTask::CloseObjectDetector::detect.
+8707	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8707	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8707	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.261844, bodyflag=0, area=0.010100
+8707	AbstractTask::CloseObjectDetector: We are close!
+8707	AbstractTask::CloseObjectDetector: But out of sight: 2.396713 > 1.570796.
+8707	Setting angular vel to: 0.000000.
+8707	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+8707	Motor out: 0.500000,0.500000
+8756	targetTrackerAngle	1.244209<<<VAR
+8756	dphi	-0.034697<<<VAR
+8801	nWorld = 49
+8801	Running: AbstractTask::CloseObjectDetector::detect.
+8801	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8801	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8801	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.267527, bodyflag=0, area=0.009603
+8801	AbstractTask::CloseObjectDetector: We are close!
+8801	AbstractTask::CloseObjectDetector: But out of sight: 2.441579 > 1.570796.
+8801	Setting angular vel to: 0.000000.
+8801	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+8801	Motor out: 0.500000,0.500000
+8835	targetTrackerAngle	1.239371<<<VAR
+8835	dphi	0.004838<<<VAR
+8903	nWorld = 50
+8903	Running: AbstractTask::CloseObjectDetector::detect.
+8903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+8903	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.275100, bodyflag=0, area=0.010166
+8903	AbstractTask::CloseObjectDetector: We are close!
+8903	AbstractTask::CloseObjectDetector: But out of sight: 2.452769 > 1.570796.
+8903	Setting angular vel to: 0.000000.
+8903	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+8903	Motor out: 0.500000,0.500000
+8914	targetTrackerAngle	1.235901<<<VAR
+8914	dphi	0.003470<<<VAR
+8992	targetTrackerAngle	1.237367<<<VAR
+8992	dphi	-0.001466<<<VAR
+9005	nWorld = 51
+9005	Running: AbstractTask::CloseObjectDetector::detect.
+9005	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9005	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9005	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.277218, bodyflag=0, area=0.007200
+9005	AbstractTask::CloseObjectDetector: We are close!
+9005	AbstractTask::CloseObjectDetector: But out of sight: 2.458401 > 1.570796.
+9005	Setting angular vel to: 0.000000.
+9005	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+9005	Motor out: 0.500000,0.500000
+9071	targetTrackerAngle	1.237514<<<VAR
+9071	dphi	-0.000147<<<VAR
+9099	nWorld = 52
+9099	Running: AbstractTask::CloseObjectDetector::detect.
+9099	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9099	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9099	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.289613, bodyflag=0, area=0.009200
+9099	AbstractTask::CloseObjectDetector: We are close!
+9099	AbstractTask::CloseObjectDetector: But out of sight: 2.514468 > 1.570796.
+9099	Setting angular vel to: 0.000000.
+9099	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+9099	Motor out: 0.500000,0.500000
+9099	Reactive: onTaskTerminated
+9099	ReactiveConfigurator: Obstacle avoided. Now targeting again.
+9099	emitTwoWheeledEvent: l=0.500000, r=0.500000, linearSpeed=0.080000, angularVel=0.000000, maxAngVel=1.142857
+9099	Motor out: 0.500000,0.500000
+9099	onStart: TargetTask
+9144	Targetloc: Contour discarded.
+9150	targetTrackerAngle	1.240886<<<VAR
+9150	Setting angular vel to: 1.861328.
+9150	emitTwoWheeledEvent: l=-0.314331, r=1.314331, linearSpeed=0.080000, angularVel=1.861328, maxAngVel=1.142857
+9150	Motor out: -0.314331,1.314331
+9150	angularVelocity	1.861328<<<VAR
+9150	dphi	-0.003372<<<VAR
+9201	nWorld = 53
+9201	Running: AbstractTask::CloseObjectDetector::detect.
+9201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9201	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.297768, bodyflag=0, area=0.009200
+9228	targetTrackerAngle	1.241081<<<VAR
+9228	Setting angular vel to: 1.861622.
+9228	emitTwoWheeledEvent: l=-0.314460, r=1.314460, linearSpeed=0.080000, angularVel=1.861622, maxAngVel=1.142857
+9228	Motor out: -0.314460,1.314460
+9228	angularVelocity	1.861622<<<VAR
+9228	dphi	-0.000195<<<VAR
+9295	nWorld = 54
+9295	Running: AbstractTask::CloseObjectDetector::detect.
+9295	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9295	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9295	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303587, bodyflag=0, area=0.009200
+9307	targetTrackerAngle	1.179799<<<VAR
+9307	Setting angular vel to: 1.769699.
+9307	emitTwoWheeledEvent: l=-0.274243, r=1.274243, linearSpeed=0.080000, angularVel=1.769699, maxAngVel=1.142857
+9307	Motor out: -0.274243,1.274243
+9307	angularVelocity	1.769699<<<VAR
+9307	dphi	0.061282<<<VAR
+9385	targetTrackerAngle	1.080008<<<VAR
+9386	Setting angular vel to: 1.620012.
+9386	emitTwoWheeledEvent: l=-0.208755, r=1.208755, linearSpeed=0.080000, angularVel=1.620012, maxAngVel=1.142857
+9386	Motor out: -0.208755,1.208755
+9386	angularVelocity	1.620012<<<VAR
+9386	dphi	0.099791<<<VAR
+9397	nWorld = 55
+9397	Running: AbstractTask::CloseObjectDetector::detect.
+9397	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9397	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9397	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.295435, bodyflag=0, area=0.003876
+9397	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9397	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.360555, bodyflag=0, area=0.000001
+9397	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9397	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.432782, bodyflag=0, area=0.000001
+9464	targetTrackerAngle	0.982416<<<VAR
+9464	Setting angular vel to: 1.473624.
+9464	emitTwoWheeledEvent: l=-0.144711, r=1.144711, linearSpeed=0.080000, angularVel=1.473624, maxAngVel=1.142857
+9464	Motor out: -0.144711,1.144711
+9464	angularVelocity	1.473624<<<VAR
+9464	dphi	0.097592<<<VAR
+9498	nWorld = 56
+9498	Running: AbstractTask::CloseObjectDetector::detect.
+9498	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9498	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9498	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.296500, bodyflag=0, area=0.004000
+9498	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9498	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.362353, bodyflag=0, area=0.000001
+9543	targetTrackerAngle	0.891617<<<VAR
+9543	Setting angular vel to: 1.337426.
+9543	emitTwoWheeledEvent: l=-0.085124, r=1.085124, linearSpeed=0.080000, angularVel=1.337426, maxAngVel=1.142857
+9543	Motor out: -0.085124,1.085124
+9543	angularVelocity	1.337426<<<VAR
+9543	dphi	0.090799<<<VAR
+9601	nWorld = 57
+9601	Running: AbstractTask::CloseObjectDetector::detect.
+9601	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9601	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9601	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303318, bodyflag=0, area=0.002244
+9601	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9601	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.367696, bodyflag=0, area=0.000001
+9621	targetTrackerAngle	0.807611<<<VAR
+9621	Setting angular vel to: 1.211417.
+9621	emitTwoWheeledEvent: l=-0.029995, r=1.029995, linearSpeed=0.080000, angularVel=1.211417, maxAngVel=1.142857
+9622	Motor out: -0.029995,1.029995
+9622	angularVelocity	1.211417<<<VAR
+9622	dphi	0.084006<<<VAR
+9695	nWorld = 58
+9695	Running: AbstractTask::CloseObjectDetector::detect.
+9695	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9695	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9695	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303063, bodyflag=0, area=0.002706
+9695	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9695	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.362353, bodyflag=0, area=0.000001
+9700	targetTrackerAngle	0.726048<<<VAR
+9700	Setting angular vel to: 1.089072.
+9700	emitTwoWheeledEvent: l=0.023531, r=0.976469, linearSpeed=0.080000, angularVel=1.089072, maxAngVel=1.142857
+9700	Motor out: 0.023531,0.976469
+9700	angularVelocity	1.089072<<<VAR
+9700	dphi	0.081563<<<VAR
+9779	targetTrackerAngle	0.646636<<<VAR
+9779	Setting angular vel to: 0.969954.
+9779	emitTwoWheeledEvent: l=0.075645, r=0.924355, linearSpeed=0.080000, angularVel=0.969954, maxAngVel=1.142857
+9779	Motor out: 0.075645,0.924355
+9779	angularVelocity	0.969954<<<VAR
+9779	dphi	0.079412<<<VAR
+9797	nWorld = 59
+9797	Running: AbstractTask::CloseObjectDetector::detect.
+9797	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9797	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9797	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306789, bodyflag=0, area=0.003379
+9858	targetTrackerAngle	0.572892<<<VAR
+9858	Setting angular vel to: 0.859338.
+9858	emitTwoWheeledEvent: l=0.124039, r=0.875961, linearSpeed=0.080000, angularVel=0.859338, maxAngVel=1.142857
+9858	Motor out: 0.124039,0.875961
+9858	angularVelocity	0.859338<<<VAR
+9858	dphi	0.073744<<<VAR
+9899	nWorld = 60
+9899	Running: AbstractTask::CloseObjectDetector::detect.
+9899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9899	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.559644, bodyflag=0, area=0.005700
+9899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9899	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.290689, bodyflag=0, area=0.000001
+9899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9899	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310101, bodyflag=0, area=0.000700
+9899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+9899	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.372156, bodyflag=0, area=0.000001
+9936	targetTrackerAngle	0.505062<<<VAR
+9936	Setting angular vel to: 0.757593.
+9936	emitTwoWheeledEvent: l=0.168553, r=0.831447, linearSpeed=0.080000, angularVel=0.757593, maxAngVel=1.142857
+9936	Motor out: 0.168553,0.831447
+9936	angularVelocity	0.757593<<<VAR
+9936	dphi	0.067830<<<VAR
+10000	nWorld = 61
+10000	Running: AbstractTask::CloseObjectDetector::detect.
+10000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10000	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.567774, bodyflag=0, area=0.014200
+10000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10000	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.310964, bodyflag=0, area=0.000944
+10000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10000	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.291548, bodyflag=0, area=0.000001
+10015	targetTrackerAngle	0.446321<<<VAR
+10015	Setting angular vel to: 0.669481.
+10015	emitTwoWheeledEvent: l=0.207102, r=0.792898, linearSpeed=0.080000, angularVel=0.669481, maxAngVel=1.142857
+10015	Motor out: 0.207102,0.792898
+10015	angularVelocity	0.669481<<<VAR
+10015	dphi	0.058741<<<VAR
+10093	targetTrackerAngle	0.392614<<<VAR
+10093	Setting angular vel to: 0.588921.
+10093	emitTwoWheeledEvent: l=0.242347, r=0.757653, linearSpeed=0.080000, angularVel=0.588921, maxAngVel=1.142857
+10093	Motor out: 0.242347,0.757653
+10093	angularVelocity	0.588921<<<VAR
+10093	dphi	0.053707<<<VAR
+10103	nWorld = 62
+10103	Running: AbstractTask::CloseObjectDetector::detect.
+10103	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10103	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.559867, bodyflag=0, area=0.014000
+10103	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10103	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10103	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.299040, bodyflag=0, area=0.000010
+10103	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10103	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.314692, bodyflag=0, area=0.001046
+10103	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10103	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.375766, bodyflag=0, area=0.000001
+10172	targetTrackerAngle	0.351612<<<VAR
+10172	Setting angular vel to: 0.527419.
+10172	emitTwoWheeledEvent: l=0.269254, r=0.730746, linearSpeed=0.080000, angularVel=0.527419, maxAngVel=1.142857
+10172	Motor out: 0.269254,0.730746
+10172	angularVelocity	0.527419<<<VAR
+10172	dphi	0.041001<<<VAR
+10204	nWorld = 63
+10204	Running: AbstractTask::CloseObjectDetector::detect.
+10204	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10204	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.313267, bodyflag=0, area=0.000971
+10204	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10204	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.297321, bodyflag=0, area=0.000001
+10204	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10204	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10204	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.297321, bodyflag=0, area=0.000001
+10250	targetTrackerAngle	0.313836<<<VAR
+10250	Setting angular vel to: 0.470755.
+10250	emitTwoWheeledEvent: l=0.294045, r=0.705955, linearSpeed=0.080000, angularVel=0.470755, maxAngVel=1.142857
+10251	Motor out: 0.294045,0.705955
+10251	angularVelocity	0.470755<<<VAR
+10251	dphi	0.037776<<<VAR
+10306	nWorld = 64
+10306	Running: AbstractTask::CloseObjectDetector::detect.
+10306	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10306	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10306	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.314006, bodyflag=0, area=0.000800
+10306	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10306	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303645, bodyflag=0, area=0.000001
+10306	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10306	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306757, bodyflag=0, area=0.000001
+10329	targetTrackerAngle	0.281681<<<VAR
+10329	Setting angular vel to: 0.422521.
+10329	emitTwoWheeledEvent: l=0.315147, r=0.684853, linearSpeed=0.080000, angularVel=0.422521, maxAngVel=1.142857
+10329	Motor out: 0.315147,0.684853
+10329	angularVelocity	0.422521<<<VAR
+10329	dphi	0.032156<<<VAR
+10368	Targetloc: Contour discarded.
+10408	targetTrackerAngle	0.256855<<<VAR
+10408	Setting angular vel to: 0.385282.
+10408	emitTwoWheeledEvent: l=0.331439, r=0.668561, linearSpeed=0.080000, angularVel=0.385282, maxAngVel=1.142857
+10408	Motor out: 0.331439,0.668561
+10408	angularVelocity	0.385282<<<VAR
+10408	dphi	0.024826<<<VAR
+10408	nWorld = 65
+10408	Running: AbstractTask::CloseObjectDetector::detect.
+10408	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10408	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10408	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.317354, bodyflag=0, area=0.001132
+10408	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10408	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306757, bodyflag=0, area=0.000001
+10408	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10408	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306757, bodyflag=0, area=0.000001
+10468	Targetloc: Contour discarded.
+10486	targetTrackerAngle	0.234522<<<VAR
+10486	Setting angular vel to: 0.351783.
+10486	emitTwoWheeledEvent: l=0.346095, r=0.653905, linearSpeed=0.080000, angularVel=0.351783, maxAngVel=1.142857
+10487	Motor out: 0.346095,0.653905
+10487	angularVelocity	0.351783<<<VAR
+10487	dphi	0.022333<<<VAR
+10510	nWorld = 66
+10510	Running: AbstractTask::CloseObjectDetector::detect.
+10510	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10510	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10510	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.318277, bodyflag=0, area=0.000800
+10510	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10510	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.303645, bodyflag=0, area=0.000001
+10510	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10510	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306757, bodyflag=0, area=0.000001
+10565	targetTrackerAngle	0.208719<<<VAR
+10565	Setting angular vel to: 0.313078.
+10565	emitTwoWheeledEvent: l=0.363028, r=0.636972, linearSpeed=0.080000, angularVel=0.313078, maxAngVel=1.142857
+10565	Motor out: 0.363028,0.636972
+10565	angularVelocity	0.313078<<<VAR
+10565	dphi	0.025803<<<VAR
+10570	Targetloc: Contour discarded.
+10605	nWorld = 67
+10605	Running: AbstractTask::CloseObjectDetector::detect.
+10605	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10605	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306757, bodyflag=0, area=0.000001
+10605	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10605	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10605	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.321076, bodyflag=0, area=0.001260
+10644	targetTrackerAngle	0.193032<<<VAR
+10644	Setting angular vel to: 0.289548.
+10644	emitTwoWheeledEvent: l=0.373323, r=0.626677, linearSpeed=0.080000, angularVel=0.289548, maxAngVel=1.142857
+10644	Motor out: 0.373323,0.626677
+10644	angularVelocity	0.289548<<<VAR
+10644	dphi	0.015687<<<VAR
+10670	Targetloc: Contour discarded.
+10706	nWorld = 68
+10706	Running: AbstractTask::CloseObjectDetector::detect.
+10706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10706	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.319958, bodyflag=0, area=0.001164
+10706	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10706	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.306757, bodyflag=0, area=0.000001
+10722	targetTrackerAngle	0.174266<<<VAR
+10722	Setting angular vel to: 0.261399.
+10722	emitTwoWheeledEvent: l=0.385638, r=0.614362, linearSpeed=0.080000, angularVel=0.261399, maxAngVel=1.142857
+10722	Motor out: 0.385638,0.614362
+10722	angularVelocity	0.261399<<<VAR
+10722	dphi	0.018766<<<VAR
+10770	Targetloc: Contour discarded.
+10801	targetTrackerAngle	0.155109<<<VAR
+10801	Setting angular vel to: 0.232664.
+10801	emitTwoWheeledEvent: l=0.398210, r=0.601790, linearSpeed=0.080000, angularVel=0.232664, maxAngVel=1.142857
+10801	Motor out: 0.398210,0.601790
+10801	angularVelocity	0.232664<<<VAR
+10801	dphi	0.019157<<<VAR
+10808	nWorld = 69
+10808	Running: AbstractTask::CloseObjectDetector::detect.
+10808	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10808	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.316228, bodyflag=0, area=0.000001
+10808	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10808	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.316228, bodyflag=0, area=0.000001
+10808	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10808	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.320663, bodyflag=0, area=0.000760
+10808	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10808	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10808	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.319531, bodyflag=0, area=0.000001
+10870	Targetloc: Contour discarded.
+10880	targetTrackerAngle	0.145042<<<VAR
+10880	Setting angular vel to: 0.217563.
+10880	emitTwoWheeledEvent: l=0.404816, r=0.595184, linearSpeed=0.080000, angularVel=0.217563, maxAngVel=1.142857
+10880	Motor out: 0.404816,0.595184
+10880	angularVelocity	0.217563<<<VAR
+10880	dphi	0.010067<<<VAR
+10903	nWorld = 70
+10903	Running: AbstractTask::CloseObjectDetector::detect.
+10903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10903	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.322923, bodyflag=0, area=0.000993
+10903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+10903	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.319531, bodyflag=0, area=0.000001
+10958	targetTrackerAngle	0.137907<<<VAR
+10958	Setting angular vel to: 0.206861.
+10958	emitTwoWheeledEvent: l=0.409498, r=0.590502, linearSpeed=0.080000, angularVel=0.206861, maxAngVel=1.142857
+10958	Motor out: 0.409498,0.590502
+10958	angularVelocity	0.206861<<<VAR
+10958	dphi	0.007135<<<VAR
+10970	Target detected:0.595270,0.409494
+10970	targetDistance	0.595270<<<VAR
+10970	targetTrackerAngle	0.409494<<<VAR
+10970	Setting angular vel to: 0.614240.
+10970	emitTwoWheeledEvent: l=0.231270, r=0.768730, linearSpeed=0.080000, angularVel=0.614240, maxAngVel=1.142857
+10970	Motor out: 0.231270,0.768730
+10970	angularVelocity	0.614240<<<VAR
+10970	targetPhi	0.409494<<<VAR
+11004	nWorld = 71
+11004	Running: AbstractTask::CloseObjectDetector::detect.
+11004	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11004	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11005	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.324988, bodyflag=0, area=0.000938
+11005	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11005	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.323110, bodyflag=0, area=0.000001
+11037	targetTrackerAngle	0.400502<<<VAR
+11037	Setting angular vel to: 0.600752.
+11037	emitTwoWheeledEvent: l=0.237171, r=0.762829, linearSpeed=0.080000, angularVel=0.600752, maxAngVel=1.142857
+11037	Motor out: 0.237171,0.762829
+11037	angularVelocity	0.600752<<<VAR
+11037	dphi	0.008992<<<VAR
+11070	Target detected:0.587755,0.407169
+11070	targetDistance	0.587755<<<VAR
+11070	targetTrackerAngle	0.407169<<<VAR
+11070	Setting angular vel to: 0.610753.
+11070	emitTwoWheeledEvent: l=0.232796, r=0.767204, linearSpeed=0.080000, angularVel=0.610753, maxAngVel=1.142857
+11070	Motor out: 0.232796,0.767204
+11070	angularVelocity	0.610753<<<VAR
+11070	targetPhi	0.407169<<<VAR
+11106	nWorld = 72
+11106	Running: AbstractTask::CloseObjectDetector::detect.
+11106	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11106	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11106	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.325830, bodyflag=0, area=0.000810
+11106	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11106	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.323110, bodyflag=0, area=0.000001
+11115	targetTrackerAngle	0.373742<<<VAR
+11115	Setting angular vel to: 0.560613.
+11115	emitTwoWheeledEvent: l=0.254732, r=0.745268, linearSpeed=0.080000, angularVel=0.560613, maxAngVel=1.142857
+11116	Motor out: 0.254732,0.745268
+11116	angularVelocity	0.560613<<<VAR
+11116	dphi	0.033427<<<VAR
+11170	Targetloc: Contour discarded.
+11196	targetTrackerAngle	0.335380<<<VAR
+11196	Setting angular vel to: 0.503070.
+11196	emitTwoWheeledEvent: l=0.279907, r=0.720093, linearSpeed=0.080000, angularVel=0.503070, maxAngVel=1.142857
+11196	Motor out: 0.279907,0.720093
+11196	angularVelocity	0.503070<<<VAR
+11196	dphi	0.038362<<<VAR
+11201	nWorld = 73
+11201	Running: AbstractTask::CloseObjectDetector::detect.
+11201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11201	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.326535, bodyflag=0, area=0.000870
+11201	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11201	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.328938, bodyflag=0, area=0.000001
+11270	Targetloc: Contour discarded.
+11273	targetTrackerAngle	0.303370<<<VAR
+11273	Setting angular vel to: 0.455056.
+11273	emitTwoWheeledEvent: l=0.300913, r=0.699087, linearSpeed=0.080000, angularVel=0.455056, maxAngVel=1.142857
+11273	Motor out: 0.300913,0.699087
+11273	angularVelocity	0.455056<<<VAR
+11273	dphi	0.032009<<<VAR
+11302	nWorld = 74
+11302	Running: AbstractTask::CloseObjectDetector::detect.
+11302	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11302	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11302	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.328938, bodyflag=0, area=0.000781
+11302	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11302	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.328938, bodyflag=0, area=0.000001
+11351	targetTrackerAngle	0.274880<<<VAR
+11351	Setting angular vel to: 0.412320.
+11351	emitTwoWheeledEvent: l=0.319610, r=0.680390, linearSpeed=0.080000, angularVel=0.412320, maxAngVel=1.142857
+11351	Motor out: 0.319610,0.680390
+11351	angularVelocity	0.412320<<<VAR
+11351	dphi	0.028491<<<VAR
+11370	Targetloc: Contour discarded.
+11404	nWorld = 75
+11404	Running: AbstractTask::CloseObjectDetector::detect.
+11404	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11404	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11404	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.330492, bodyflag=0, area=0.001012
+11404	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11404	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.328938, bodyflag=0, area=0.000001
+11430	targetTrackerAngle	0.249712<<<VAR
+11430	Setting angular vel to: 0.374568.
+11430	emitTwoWheeledEvent: l=0.336126, r=0.663874, linearSpeed=0.080000, angularVel=0.374568, maxAngVel=1.142857
+11430	Motor out: 0.336126,0.663874
+11430	angularVelocity	0.374568<<<VAR
+11430	dphi	0.025168<<<VAR
+11471	Targetloc: Contour discarded.
+11499	nWorld = 76
+11499	Running: AbstractTask::CloseObjectDetector::detect.
+11499	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11499	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11499	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.332469, bodyflag=0, area=0.001000
+11499	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11499	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.328938, bodyflag=0, area=0.000001
+11509	targetTrackerAngle	0.224642<<<VAR
+11509	Setting angular vel to: 0.336963.
+11509	emitTwoWheeledEvent: l=0.352579, r=0.647421, linearSpeed=0.080000, angularVel=0.336963, maxAngVel=1.142857
+11509	Motor out: 0.352579,0.647421
+11509	angularVelocity	0.336963<<<VAR
+11509	dphi	0.025070<<<VAR
+11571	Targetloc: Contour discarded.
+11587	targetTrackerAngle	0.207685<<<VAR
+11587	Setting angular vel to: 0.311527.
+11587	emitTwoWheeledEvent: l=0.363707, r=0.636293, linearSpeed=0.080000, angularVel=0.311527, maxAngVel=1.142857
+11587	Motor out: 0.363707,0.636293
+11587	angularVelocity	0.311527<<<VAR
+11587	dphi	0.016958<<<VAR
+11600	nWorld = 77
+11600	Running: AbstractTask::CloseObjectDetector::detect.
+11600	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11600	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11600	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.333766, bodyflag=0, area=0.001005
+11600	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11600	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.338378, bodyflag=0, area=0.000001
+11666	targetTrackerAngle	0.191118<<<VAR
+11666	Setting angular vel to: 0.286677.
+11666	emitTwoWheeledEvent: l=0.374579, r=0.625421, linearSpeed=0.080000, angularVel=0.286677, maxAngVel=1.142857
+11666	Motor out: 0.374579,0.625421
+11666	angularVelocity	0.286677<<<VAR
+11666	dphi	0.016567<<<VAR
+11671	Targetloc: Contour discarded.
+11703	nWorld = 78
+11703	Running: AbstractTask::CloseObjectDetector::detect.
+11703	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11703	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11703	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.333447, bodyflag=0, area=0.002600
+11703	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11703	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.338378, bodyflag=0, area=0.000001
+11745	targetTrackerAngle	0.178656<<<VAR
+11745	Setting angular vel to: 0.267984.
+11745	emitTwoWheeledEvent: l=0.382757, r=0.617243, linearSpeed=0.080000, angularVel=0.267984, maxAngVel=1.142857
+11745	Motor out: 0.382757,0.617243
+11745	angularVelocity	0.267984<<<VAR
+11745	dphi	0.012462<<<VAR
+11771	Targetloc: Contour discarded.
+11797	nWorld = 79
+11797	Running: AbstractTask::CloseObjectDetector::detect.
+11797	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11797	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11797	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.335147, bodyflag=0, area=0.000786
+11797	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11797	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.341760, bodyflag=0, area=0.000001
+11823	targetTrackerAngle	0.164289<<<VAR
+11823	Setting angular vel to: 0.246433.
+11823	emitTwoWheeledEvent: l=0.392186, r=0.607814, linearSpeed=0.080000, angularVel=0.246433, maxAngVel=1.142857
+11823	Motor out: 0.392186,0.607814
+11823	angularVelocity	0.246433<<<VAR
+11823	dphi	0.014368<<<VAR
+11871	Targetloc: Contour discarded.
+11899	nWorld = 80
+11899	Running: AbstractTask::CloseObjectDetector::detect.
+11899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11899	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.336177, bodyflag=0, area=0.001771
+11899	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+11899	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.341760, bodyflag=0, area=0.000001
+11902	targetTrackerAngle	0.153782<<<VAR
+11902	Setting angular vel to: 0.230673.
+11902	emitTwoWheeledEvent: l=0.399081, r=0.600919, linearSpeed=0.080000, angularVel=0.230673, maxAngVel=1.142857
+11902	Motor out: 0.399081,0.600919
+11902	angularVelocity	0.230673<<<VAR
+11902	dphi	0.010507<<<VAR
+11971	Targetloc: Contour discarded.
+11980	targetTrackerAngle	0.140294<<<VAR
+11980	Setting angular vel to: 0.210441.
+11980	emitTwoWheeledEvent: l=0.407932, r=0.592068, linearSpeed=0.080000, angularVel=0.210441, maxAngVel=1.142857
+11981	Motor out: 0.407932,0.592068
+11981	angularVelocity	0.210441<<<VAR
+11981	dphi	0.013488<<<VAR
+12000	nWorld = 81
+12000	Running: AbstractTask::CloseObjectDetector::detect.
+12000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12000	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.339287, bodyflag=0, area=0.001600
+12000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12000	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12000	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.354683, bodyflag=0, area=0.000001
+12059	targetTrackerAngle	0.136091<<<VAR
+12059	Setting angular vel to: 0.204137.
+12059	emitTwoWheeledEvent: l=0.410690, r=0.589310, linearSpeed=0.080000, angularVel=0.204137, maxAngVel=1.142857
+12059	Motor out: 0.410690,0.589310
+12059	angularVelocity	0.204137<<<VAR
+12059	dphi	0.004203<<<VAR
+12072	Targetloc: Contour discarded.
+12096	nWorld = 82
+12096	Running: AbstractTask::CloseObjectDetector::detect.
+12096	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12096	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12096	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.341445, bodyflag=0, area=0.001600
+12096	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12096	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.349285, bodyflag=0, area=0.000001
+12138	targetTrackerAngle	0.130764<<<VAR
+12138	Setting angular vel to: 0.196147.
+12138	emitTwoWheeledEvent: l=0.414186, r=0.585814, linearSpeed=0.080000, angularVel=0.196147, maxAngVel=1.142857
+12138	Motor out: 0.414186,0.585814
+12138	angularVelocity	0.196147<<<VAR
+12138	dphi	0.005327<<<VAR
+12171	Target detected:0.452076,0.179519
+12171	targetDistance	0.452076<<<VAR
+12171	targetTrackerAngle	0.179519<<<VAR
+12171	Setting angular vel to: 0.269278.
+12171	emitTwoWheeledEvent: l=0.382191, r=0.617809, linearSpeed=0.080000, angularVel=0.269278, maxAngVel=1.142857
+12171	Motor out: 0.382191,0.617809
+12171	angularVelocity	0.269278<<<VAR
+12171	targetPhi	0.179519<<<VAR
+12197	nWorld = 83
+12197	Running: AbstractTask::CloseObjectDetector::detect.
+12197	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12197	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12197	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.343881, bodyflag=0, area=0.001600
+12197	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12197	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.349285, bodyflag=0, area=0.000001
+12216	targetTrackerAngle	0.173947<<<VAR
+12216	Setting angular vel to: 0.260921.
+12216	emitTwoWheeledEvent: l=0.385847, r=0.614153, linearSpeed=0.080000, angularVel=0.260921, maxAngVel=1.142857
+12216	Motor out: 0.385847,0.614153
+12216	angularVelocity	0.260921<<<VAR
+12216	dphi	0.005571<<<VAR
+12271	Target detected:0.442691,0.174903
+12271	targetDistance	0.442691<<<VAR
+12271	targetTrackerAngle	0.174903<<<VAR
+12271	Setting angular vel to: 0.262354.
+12271	emitTwoWheeledEvent: l=0.385220, r=0.614780, linearSpeed=0.080000, angularVel=0.262354, maxAngVel=1.142857
+12272	Motor out: 0.385220,0.614780
+12272	angularVelocity	0.262354<<<VAR
+12272	targetPhi	0.174903<<<VAR
+12295	targetTrackerAngle	0.168843<<<VAR
+12295	Setting angular vel to: 0.253264.
+12295	emitTwoWheeledEvent: l=0.389197, r=0.610803, linearSpeed=0.080000, angularVel=0.253264, maxAngVel=1.142857
+12295	Motor out: 0.389197,0.610803
+12295	angularVelocity	0.253264<<<VAR
+12295	dphi	0.006060<<<VAR
+12299	nWorld = 84
+12299	Running: AbstractTask::CloseObjectDetector::detect.
+12299	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12299	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12299	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.349607, bodyflag=0, area=0.000800
+12299	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12299	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.362491, bodyflag=0, area=0.000001
+12299	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12299	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.353412, bodyflag=0, area=0.000001
+12372	Target detected:0.431277,0.168994
+12372	targetDistance	0.431277<<<VAR
+12372	targetTrackerAngle	0.168994<<<VAR
+12372	Setting angular vel to: 0.253490.
+12372	emitTwoWheeledEvent: l=0.389098, r=0.610902, linearSpeed=0.080000, angularVel=0.253490, maxAngVel=1.142857
+12372	Motor out: 0.389098,0.610902
+12372	angularVelocity	0.253490<<<VAR
+12372	targetPhi	0.168994<<<VAR
+12374	targetTrackerAngle	0.161272<<<VAR
+12374	Setting angular vel to: 0.241908.
+12374	emitTwoWheeledEvent: l=0.394165, r=0.605835, linearSpeed=0.080000, angularVel=0.241908, maxAngVel=1.142857
+12374	Motor out: 0.394165,0.605835
+12374	angularVelocity	0.241908<<<VAR
+12374	dphi	0.007721<<<VAR
+12401	nWorld = 85
+12401	Running: AbstractTask::CloseObjectDetector::detect.
+12401	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12401	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12401	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.351070, bodyflag=0, area=0.000900
+12401	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12401	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.366742, bodyflag=0, area=0.000001
+12452	targetTrackerAngle	0.155164<<<VAR
+12452	Setting angular vel to: 0.232745.
+12452	emitTwoWheeledEvent: l=0.398174, r=0.601826, linearSpeed=0.080000, angularVel=0.232745, maxAngVel=1.142857
+12452	Motor out: 0.398174,0.601826
+12452	angularVelocity	0.232745<<<VAR
+12452	dphi	0.006109<<<VAR
+12472	Target detected:0.423318,0.163496
+12472	targetDistance	0.423318<<<VAR
+12472	targetTrackerAngle	0.163496<<<VAR
+12472	Setting angular vel to: 0.245244.
+12472	emitTwoWheeledEvent: l=0.392706, r=0.607294, linearSpeed=0.080000, angularVel=0.245244, maxAngVel=1.142857
+12472	Motor out: 0.392706,0.607294
+12472	angularVelocity	0.245244<<<VAR
+12472	targetPhi	0.163496<<<VAR
+12496	nWorld = 86
+12496	Running: AbstractTask::CloseObjectDetector::detect.
+12496	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12496	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12496	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.352568, bodyflag=0, area=0.000743
+12496	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12496	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.366742, bodyflag=0, area=0.000001
+12531	targetTrackerAngle	0.153624<<<VAR
+12531	Setting angular vel to: 0.230436.
+12531	emitTwoWheeledEvent: l=0.399184, r=0.600816, linearSpeed=0.080000, angularVel=0.230436, maxAngVel=1.142857
+12531	Motor out: 0.399184,0.600816
+12531	angularVelocity	0.230436<<<VAR
+12531	dphi	0.009872<<<VAR
+12572	Targetloc: Contour discarded.
+12597	nWorld = 87
+12597	Running: AbstractTask::CloseObjectDetector::detect.
+12597	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12597	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.353766, bodyflag=0, area=0.000852
+12597	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12597	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12597	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.371214, bodyflag=0, area=0.000001
+12610	targetTrackerAngle	0.146978<<<VAR
+12610	Setting angular vel to: 0.220467.
+12610	emitTwoWheeledEvent: l=0.403546, r=0.596454, linearSpeed=0.080000, angularVel=0.220467, maxAngVel=1.142857
+12610	Motor out: 0.403546,0.596454
+12610	angularVelocity	0.220467<<<VAR
+12610	dphi	0.006646<<<VAR
+12672	Target detected:0.405019,0.148255
+12672	targetDistance	0.405019<<<VAR
+12672	targetTrackerAngle	0.148255<<<VAR
+12672	Setting angular vel to: 0.222382.
+12672	emitTwoWheeledEvent: l=0.402708, r=0.597292, linearSpeed=0.080000, angularVel=0.222382, maxAngVel=1.142857
+12672	Motor out: 0.402708,0.597292
+12672	angularVelocity	0.222382<<<VAR
+12672	targetPhi	0.148255<<<VAR
+12690	targetTrackerAngle	0.140680<<<VAR
+12690	Setting angular vel to: 0.211020.
+12690	emitTwoWheeledEvent: l=0.407679, r=0.592321, linearSpeed=0.080000, angularVel=0.211020, maxAngVel=1.142857
+12691	Motor out: 0.407679,0.592321
+12691	angularVelocity	0.211020<<<VAR
+12691	dphi	0.007575<<<VAR
+12699	nWorld = 88
+12699	Running: AbstractTask::CloseObjectDetector::detect.
+12699	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12699	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12699	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.357561, bodyflag=0, area=0.000900
+12699	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12699	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.375899, bodyflag=0, area=0.000001
+12767	targetTrackerAngle	0.132959<<<VAR
+12767	Setting angular vel to: 0.199438.
+12767	emitTwoWheeledEvent: l=0.412746, r=0.587254, linearSpeed=0.080000, angularVel=0.199438, maxAngVel=1.142857
+12767	Motor out: 0.412746,0.587254
+12767	angularVelocity	0.199438<<<VAR
+12767	dphi	0.007721<<<VAR
+12772	Targetloc: Contour discarded.
+12800	nWorld = 89
+12800	Running: AbstractTask::CloseObjectDetector::detect.
+12800	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12800	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12800	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.365435, bodyflag=0, area=0.000800
+12800	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12800	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.375899, bodyflag=0, area=0.000001
+12845	targetTrackerAngle	0.125726<<<VAR
+12846	Setting angular vel to: 0.188589.
+12846	emitTwoWheeledEvent: l=0.417492, r=0.582508, linearSpeed=0.080000, angularVel=0.188589, maxAngVel=1.142857
+12846	Motor out: 0.417492,0.582508
+12846	angularVelocity	0.188589<<<VAR
+12846	dphi	0.007233<<<VAR
+12872	Targetloc: Contour discarded.
+12903	nWorld = 90
+12903	Running: AbstractTask::CloseObjectDetector::detect.
+12903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12903	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.365821, bodyflag=0, area=0.000090
+12903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12903	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.389487, bodyflag=0, area=0.000001
+12903	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12903	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.380789, bodyflag=0, area=0.000001
+12924	targetTrackerAngle	0.116490<<<VAR
+12924	Setting angular vel to: 0.174735.
+12924	emitTwoWheeledEvent: l=0.423553, r=0.576446, linearSpeed=0.080000, angularVel=0.174735, maxAngVel=1.142857
+12924	Motor out: 0.423553,0.576446
+12924	angularVelocity	0.174735<<<VAR
+12924	dphi	0.009236<<<VAR
+12972	Targetloc: Contour discarded.
+12997	nWorld = 91
+12997	Running: AbstractTask::CloseObjectDetector::detect.
+12997	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12997	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12997	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.369628, bodyflag=0, area=0.000090
+12997	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12997	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.389487, bodyflag=0, area=0.000001
+12997	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+12997	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.385876, bodyflag=0, area=0.000001
+13003	targetTrackerAngle	0.108720<<<VAR
+13003	Setting angular vel to: 0.163080.
+13003	emitTwoWheeledEvent: l=0.428653, r=0.571347, linearSpeed=0.080000, angularVel=0.163080, maxAngVel=1.142857
+13003	Motor out: 0.428653,0.571347
+13003	angularVelocity	0.163080<<<VAR
+13003	dphi	0.007770<<<VAR
+13073	Targetloc: Contour discarded.
+13081	targetTrackerAngle	0.104908<<<VAR
+13081	Setting angular vel to: 0.157362.
+13081	emitTwoWheeledEvent: l=0.431154, r=0.568846, linearSpeed=0.080000, angularVel=0.157362, maxAngVel=1.142857
+13081	Motor out: 0.431154,0.568846
+13081	angularVelocity	0.157362<<<VAR
+13081	dphi	0.003812<<<VAR
+13099	nWorld = 92
+13099	Running: AbstractTask::CloseObjectDetector::detect.
+13099	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13099	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13099	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.373664, bodyflag=0, area=0.000090
+13099	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13099	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.394462, bodyflag=0, area=0.000001
+13160	targetTrackerAngle	0.101243<<<VAR
+13160	Setting angular vel to: 0.151864.
+13160	emitTwoWheeledEvent: l=0.433559, r=0.566441, linearSpeed=0.080000, angularVel=0.151864, maxAngVel=1.142857
+13160	Motor out: 0.433559,0.566441
+13160	angularVelocity	0.151864<<<VAR
+13160	dphi	0.003665<<<VAR
+13173	Target detected:0.358285,0.115411
+13173	targetDistance	0.358285<<<VAR
+13173	targetTrackerAngle	0.115411<<<VAR
+13173	Setting angular vel to: 0.173117.
+13173	emitTwoWheeledEvent: l=0.424262, r=0.575738, linearSpeed=0.080000, angularVel=0.173117, maxAngVel=1.142857
+13173	Motor out: 0.424262,0.575738
+13173	angularVelocity	0.173117<<<VAR
+13173	targetPhi	0.115411<<<VAR
+13200	nWorld = 93
+13200	Running: AbstractTask::CloseObjectDetector::detect.
+13200	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13200	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.380296, bodyflag=0, area=0.000800
+13200	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13200	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.399625, bodyflag=0, area=0.000001
+13200	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13200	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.399625, bodyflag=0, area=0.000001
+13200	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13239	targetTrackerAngle	0.111453<<<VAR
+13239	Setting angular vel to: 0.167179.
+13239	emitTwoWheeledEvent: l=0.426859, r=0.573141, linearSpeed=0.080000, angularVel=0.167179, maxAngVel=1.142857
+13239	Motor out: 0.426859,0.573141
+13239	angularVelocity	0.167179<<<VAR
+13239	dphi	0.003958<<<VAR
+13273	Target detected:0.347120,0.112679
+13273	targetDistance	0.347120<<<VAR
+13273	targetTrackerAngle	0.112679<<<VAR
+13273	Setting angular vel to: 0.169018.
+13273	emitTwoWheeledEvent: l=0.426055, r=0.573945, linearSpeed=0.080000, angularVel=0.169018, maxAngVel=1.142857
+13274	Motor out: 0.426055,0.573945
+13274	angularVelocity	0.169018<<<VAR
+13274	targetPhi	0.112679<<<VAR
+13302	nWorld = 94
+13302	Running: AbstractTask::CloseObjectDetector::detect.
+13302	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13302	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13302	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.380420, bodyflag=0, area=0.000900
+13303	Running: AbstractTask::CloseObjectDetector::ReportFixture.
+13303	AbstractTask::CloseObjectDetector::ReportFixture: Distance = 0.404969, bodyflag=0, area=0.000001
+13317	targetTrackerAngle	0.109502<<<VAR
+13317	Setting angular vel to: 0.164253.
+13317	emitTwoWheeledEvent: l=0.428139, r=0.571861, linearSpeed=0.080000, angularVel=0.164253, maxAngVel=1.142857
+13317	Motor out: 0.428139,0.571861
+13317	angularVelocity	0.164253<<<VAR
+13317	dphi	0.003176<<<VAR
+13374	Target detected:0.338720,0.112491
+13374	targetDistance	0.338720<<<VAR
+13374	targetTrackerAngle	0.112491<<<VAR
+13374	onTargetDetected in TargetTask: We have arrived. r=0.338720 < 0.350000
+13374	Reactive: onTaskTerminated
+13374	ReactiveConfigurator: TargetReached: stopping.
+13374	emitTwoWheeledEvent: l=0.000000, r=0.000000, linearSpeed=0.000000, angularVel=0.164253, maxAngVel=0.000000
+13374	Motor out: 0.000000,0.000000
+13374	onStart: EndTask
+13374	targetPhi	0.112491<<<VAR
+13396	dphi	0.008210<<<VAR
+13404	nWorld = 95
+13474	Targetloc: Contour discarded.
+13475	dphi	0.000635<<<VAR
+13507	nWorld = 96
+13553	dphi	-0.000244<<<VAR
+13574	Target detected:0.328385,0.105195
+13574	targetPhi	0.105195<<<VAR
+13600	nWorld = 97
+13632	dphi	-0.001319<<<VAR
+13674	Target detected:0.327939,0.107715
+13674	targetPhi	0.107715<<<VAR
+13702	nWorld = 98
+13710	dphi	-0.000293<<<VAR
+13774	Target detected:0.328110,0.108429
+13774	targetPhi	0.108429<<<VAR
+13791	dphi	0.000049<<<VAR
+13805	nWorld = 99
+13868	dphi	-0.000000<<<VAR
+13875	Target detected:0.327913,0.108466
+13875	targetPhi	0.108466<<<VAR
+13899	nWorld = 100
+13946	dphi	-0.000049<<<VAR
+13974	Target detected:0.328327,0.108568
+13974	targetPhi	0.108568<<<VAR
+14001	nWorld = 101
+14025	dphi	-0.000293<<<VAR
+14074	Target detected:0.328319,0.108859
+14074	targetPhi	0.108859<<<VAR
+14103	nWorld = 102
+14104	dphi	-0.000098<<<VAR
+14174	Target detected:0.328883,0.108753
+14174	targetPhi	0.108753<<<VAR
+14182	dphi	-0.000391<<<VAR
+14205	nWorld = 103
+14261	dphi	-0.000049<<<VAR
+14274	Target detected:0.327992,0.109708
+14274	targetPhi	0.109708<<<VAR
+14299	nWorld = 104
+14340	dphi	-0.000049<<<VAR
+14374	Target detected:0.328386,0.109804
+14375	targetPhi	0.109804<<<VAR
+14401	nWorld = 105
+14418	dphi	-0.000000<<<VAR
+14474	Target detected:0.328934,0.109919
+14474	targetPhi	0.109919<<<VAR
+14497	dphi	-0.000000<<<VAR
+14503	nWorld = 106
+14574	Target detected:0.328104,0.109866
+14574	targetPhi	0.109866<<<VAR
+14575	dphi	-0.000000<<<VAR
+14597	nWorld = 107
+14654	dphi	0.000049<<<VAR
+14674	Target detected:0.329163,0.109922
+14674	targetPhi	0.109922<<<VAR
+14699	nWorld = 108
+14733	dphi	0.000049<<<VAR
+14774	Target detected:0.329070,0.109970
+14775	targetPhi	0.109970<<<VAR
+14793	nWorld = 109
+14811	dphi	-0.000000<<<VAR
+14874	Target detected:0.327978,0.110218
+14874	targetPhi	0.110218<<<VAR
+14892	dphi	-0.000000<<<VAR
+14895	nWorld = 110
+14969	dphi	0.000049<<<VAR
+14976	Target detected:0.329127,0.109752
+14976	targetPhi	0.109752<<<VAR
+14997	nWorld = 111
+15047	dphi	0.000049<<<VAR
+15074	Target detected:0.327909,0.110233
+15074	targetPhi	0.110233<<<VAR
+15099	nWorld = 112
+15126	dphi	-0.000000<<<VAR
+15174	Target detected:0.327848,0.110279
+15174	targetPhi	0.110279<<<VAR
+15200	nWorld = 113
+15205	dphi	0.000049<<<VAR
+15274	Target detected:0.329217,0.109992
+15274	targetPhi	0.109992<<<VAR
+15283	dphi	-0.000000<<<VAR
+15296	nWorld = 114
+15362	dphi	0.000049<<<VAR
+15374	Target detected:0.328037,0.110501
+15374	targetPhi	0.110501<<<VAR
+15397	nWorld = 115
+15440	dphi	0.000049<<<VAR
+15474	Target detected:0.329219,0.110017
+15474	targetPhi	0.110017<<<VAR
+15498	nWorld = 116
+15519	dphi	0.000049<<<VAR
+15572	Target detected:0.327795,0.110307
+15572	targetPhi	0.110307<<<VAR
+15598	dphi	0.000049<<<VAR
+15600	nWorld = 117
+15672	Target detected:0.327905,0.110577
+15672	targetPhi	0.110577<<<VAR
+15676	dphi	0.000049<<<VAR
+15695	nWorld = 118
+15755	dphi	0.000049<<<VAR
+15774	Target detected:0.329285,0.110032
+15774	targetPhi	0.110032<<<VAR
+15797	nWorld = 119
+15834	dphi	0.000049<<<VAR
+15875	Target detected:0.328176,0.110320
+15875	targetPhi	0.110320<<<VAR
+15899	nWorld = 120
+15912	dphi	0.000049<<<VAR
+15974	Target detected:0.327748,0.110298
+15974	targetPhi	0.110298<<<VAR
+16001	nWorld = 121
+16299	END
