@@ -119,7 +119,7 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TargetTask</b> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; at)</td></tr>
 <tr class="memdesc:a7143702fc7e779739ab099bfa76f518a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving info from previous task. <br /></td></tr>
 <tr class="memitem:acd123deec46372c29600c112973f530b" id="r_acd123deec46372c29600c112973f530b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd123deec46372c29600c112973f530b">onStart</a> () override</td></tr>
-<tr class="memdesc:acd123deec46372c29600c112973f530b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is starting. We set the linear speed to the default speed defined in <a class="el" href="const_8h_source.html">const.h</a> (fixme!).  <br /></td></tr>
+<tr class="memdesc:acd123deec46372c29600c112973f530b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is starting. We set the linear speed to the default speed defined in <a class="el" href="const_8h_source.html">const.h</a>.  <br /></td></tr>
 <tr class="memitem:accbd0daf95d8891aaaa4131203924d48" id="r_accbd0daf95d8891aaaa4131203924d48"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accbd0daf95d8891aaaa4131203924d48">onTargetDetected</a> (const float r, const float phi, const int index=0) override</td></tr>
 <tr class="memdesc:accbd0daf95d8891aaaa4131203924d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event checks if we have arrived or need to continue targeting.  <br /></td></tr>
 <tr class="memitem:a308794c9decd3bd98464d9bfdf723dea" id="r_a308794c9decd3bd98464d9bfdf723dea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a308794c9decd3bd98464d9bfdf723dea">onGyroTurn</a> (const float dphi) override</td></tr>
@@ -266,6 +266,13 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </div><div class="memdoc">
 
 <p>Event: New LIDAR scan. We need to check if we are crashing into an obstacle and to terminate the task! </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The box2d World generated from the LIDAR scan. </td></tr>
+    <tr><td class="paramname">robot</td><td>The location of the robot in the world. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classAbstractTask.html#a8ce63367f8f2be9d1b4398b2ac764bd8">AbstractTask</a>.</p>
 
@@ -294,7 +301,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 </div><div class="memdoc">
 
-<p>Event: called when the task is starting. We set the linear speed to the default speed defined in <a class="el" href="const_8h_source.html">const.h</a> (fixme!). </p>
+<p>Event: called when the task is starting. We set the linear speed to the default speed defined in <a class="el" href="const_8h_source.html">const.h</a>. </p>
 
 <p>Implements <a class="el" href="classAbstractTask.html#a13ab1e6d34fb6b0915cf34daca98f2d0">AbstractTask</a>.</p>
 
@@ -333,6 +340,14 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </div><div class="memdoc">
 
 <p>Event checks if we have arrived or need to continue targeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The distance from the target (that's just a rough estimate). </td></tr>
+    <tr><td class="paramname">phi</td><td>The direction of the target (should be precise). </td></tr>
+    <tr><td class="paramname">targetIndex</td><td>No used yet. Ignore. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classAbstractTask.html#a48d941a5f1b314dc47e6fa7389a1e19a">AbstractTask</a>.</p>
 
