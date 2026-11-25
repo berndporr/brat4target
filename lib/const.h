@@ -58,7 +58,7 @@ constexpr float TARGET_ARRIVED_DISTANCE = 0.35; // m
 
 // Avoidance task
 constexpr int MIN_LIDAR_AVOID_SAMPLES = 10;
-constexpr float RELATIVE_AVOID_STEERING_GAIN = 1;
+constexpr float RELATIVE_AVOID_STEERING_GAIN = 0.8;
 
 // Targeting task
 constexpr float TARGET_STEERING_GAIN = 1.5;

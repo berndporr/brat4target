@@ -27,6 +27,7 @@ void drive_to_target ()
     printf ("Drive to target:\n");
     bratlogger.start ("/tmp", "sim", "drive2target.txt");
     auto task = std::make_shared<TargetTask> ();
+    task->setLinearSpeed(LINEAR_SPEED_DEFAULT);
     CoordinateContainer coords = loadLIDARdata ("lidar_scans/far_target.tsv");
     WorldClusterBuilder worldBuilder;
     std::shared_ptr<b2World> world
@@ -48,6 +49,7 @@ void avoid_obstacle (AvoidTask::AvoidDirecton ad)
     auto filename = std::format ("avoid_obstacle{}.txt", (int)ad);
     bratlogger.start ("/tmp", "sim", filename);
     auto task = std::make_shared<AvoidTask> (ad);
+    task->setLinearSpeed(LINEAR_SPEED_DEFAULT);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
@@ -75,6 +77,7 @@ void avoid_obstacle_drive_to_target (AvoidTask::AvoidDirecton ad)
         = std::format ("avoid_obstacle_drive_to_target{}.txt", (int)ad);
     bratlogger.start ("/tmp/", "sim", filename);
     auto taskAvoid = std::make_shared<AvoidTask> (ad);
+    taskAvoid->setLinearSpeed(LINEAR_SPEED_DEFAULT);
     CoordinateContainer coords
         = loadLIDARdata ("lidar_scans/close_obst_far_target.tsv");
     WorldClusterBuilder worldBuilder;
