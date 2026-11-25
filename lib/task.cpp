@@ -134,9 +134,9 @@ void AvoidTask::onLIDARworld (std::shared_ptr<b2World> world,
     CloseObjectDetector braitenbergAvoider (nearbyObstacleDetectionRadius * 1.5,
                                            nearbyMaxObstacleDetectionAngle);
 
-    auto threatsDetected = braitenbergAvoider.detect (world, robot);
+    threats = braitenbergAvoider.detect (world, robot);
 
-    if (threatsDetected.hasThreats())
+    if (threats.hasThreats())
     {
         float escapeAngularVel = RELATIVE_AVOID_STEERING_GAIN
                                  * getMaxAngularVelocity ();

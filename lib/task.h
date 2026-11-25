@@ -451,7 +451,8 @@ class Waiting4TargetTask : public AbstractTask
     }
 
     /**
-     * @brief Event: New LIDAR scan. Ignore!
+     * @brief Event: New LIDAR scan. Nothing to do here.
+     * The robot is not moivng so no need to detect obstacles.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                Robot robot) override
@@ -459,7 +460,8 @@ class Waiting4TargetTask : public AbstractTask
     }
 
     /**
-     * @brief Event: new gyro rotation. Ignore!
+     * @brief Event: new gyro rotation. Nothing to do.
+     * We are not moving so no rotation.
      */
     virtual void onGyroTurn (const float dphi) override {}
 
@@ -467,6 +469,9 @@ class Waiting4TargetTask : public AbstractTask
      * @brief Event: target detected.
      * Target is detected and that triggers the termination of the stop task
      * and then emits a message that we have a target.
+     * @param r The distance from the target (that's just a rough estimate).
+     * @param phi The direction of the target (should be precise).
+     * @param targetIndex No used yet. Ignore.
      */
     virtual void onTargetDetected (const float r, const float phi,
                                    const int index = 0) override
@@ -490,7 +495,8 @@ class Waiting4TargetTask : public AbstractTask
 /**
  * @brief Final task not terminating ever.
  * Task which is doing nothing and won't terminate. This can be created
- * once a target has been reached.
+ * once a target has been reached. Usually the task at the end of a chain
+ * of tasks. 
  */
 class EndTask : public AbstractTask
 {
@@ -543,7 +549,7 @@ class TargetTask : public AbstractTask
 
     /**
      * @brief Event: called when the task is starting. 
-     * We set the linear speed to the default speed defined in const.h (fixme!).
+     * We set the linear speed to the default speed defined in const.h
      */
     virtual void onStart () override
     {
@@ -553,6 +559,9 @@ class TargetTask : public AbstractTask
 
     /**
      * @brief Event checks if we have arrived or need to continue targeting.
+     * @param r The distance from the target (that's just a rough estimate).
+     * @param phi The direction of the target (should be precise).
+     * @param targetIndex No used yet. Ignore.
      */
     virtual void onTargetDetected (const float r, const float phi,
                                    const int index = 0) override
@@ -603,6 +612,8 @@ class TargetTask : public AbstractTask
      * @brief Event: New LIDAR scan.
      * We need to check if we are crashing into an obstacle and to terminate
      * the task!
+     * @param world The box2d World generated from the LIDAR scan.
+     * @param robot The location of the robot in the world.
      */
     void onLIDARworld (std::shared_ptr<b2World> world, Robot robot) override
     {
@@ -628,7 +639,11 @@ class TargetTask : public AbstractTask
     }
 
   private:
-    // Adjusts steering angle that we drive towards the target.
+    /**
+     * @brief Adjusts steering angle that we drive towards the target.
+     * Closing the loop: a simple proportional controller translating the
+     * angle toewards the target to the angular velocity.
+     */
     void targetAngle2MotorAngularVelocity ()
     {
         if (!targetTracker->getAngle ())
@@ -638,9 +653,15 @@ class TargetTask : public AbstractTask
         bratlogger.logVariable ("angularVelocity", angularVelocity);
     }
 
+    /**
+     * @brief Number of target detection evens of having arrived.
+     */
     int nArrived = 0;
 
-    // Number of targetdet events signalling arrival at the target.
+    /**
+     * @brief Number of targetdet events signalling arrival at the target.
+     * This is used to prevent spurios detecton in one of the camera frames.
+     */
     const int numArrivedBelowThres = 2;
 };
 
@@ -666,11 +687,16 @@ class AvoidTask : public AbstractTask
 
     /**
      * @brief Avoid task constructor with the direction (left or right).
+     * @param ad Sets the avoidance direction either to the left or right.
+     * This forces the robot to either veer to the left or right.
      */
     AvoidTask (AvoidDirecton ad) : AbstractTask (), avoidDirection (ad) {}
 
     /**
      * @brief Avoid task constructor absorbing all variables from its predecessor.
+      * This takes the previous task and copis over all parameters.
+      * @param a Sets the parameters of this task from the previous task.
+      * @param ad The direction the robit should be driving: left or right.
      */
     AvoidTask (std::shared_ptr<AbstractTask> a, AvoidDirecton ad)
         : AbstractTask (a), avoidDirection (ad)
@@ -679,6 +705,7 @@ class AvoidTask : public AbstractTask
 
     /**
      * @brief No default constructor as we need to set the direction at least.
+     * Doesn't make sense with a default constructor so deleting it.
      */
     AvoidTask () = delete;
 
@@ -688,12 +715,15 @@ class AvoidTask : public AbstractTask
      */
     virtual void onStart () override
     {
-        setLinearSpeed (LINEAR_SPEED_DEFAULT);
         bratlogger.log ("onStart: AvoidTask");
     }
 
     /**
      * @brief Event: Called with a fresh LIDAR scan as World and the robot in it for simulation.
+     * In this event the avoidance behaviour is generated. As long as there is an obstacle
+     * detected turn to the left or right.
+     * @param world The box2d World generated from the LIDAR scan.
+     * @param robot The location of the robot in the world.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world,
                                Robot robot) override;
@@ -702,6 +732,7 @@ class AvoidTask : public AbstractTask
      * @brief gyroEvent allowing to update the target angle.
      * Most likely the camera can't see the target so
      * we correct the target angle with the gyro readings.
+     * @param dphi The rotation of the robot in rad.
      */
     void onGyroTurn (const float dphi) override
     {
@@ -709,6 +740,14 @@ class AvoidTask : public AbstractTask
         logTargetAngle ();
     }
 
+    /**
+    * @brief Event: new target distance and angle.
+    * Since we are avoiding the target direction and distance is just
+    * recorded but not acted upon.
+    * @param r The distance from the target (that's just a rough estimate).
+    * @param phi The direction of the target (should be precise).
+    * @param targetIndex No used yet. Ignore.
+    */
     void onTargetDetected (const float r, const float phi, const int) override
     {
         targetDistance = r;
