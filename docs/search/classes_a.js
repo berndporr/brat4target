@@ -7,5 +7,6 @@ var searchData=
   ['targettrackerinterface_4',['TargetTrackerInterface',['../classTargetTrackerInterface.html',1,'']]],
   ['tasksimulator_5',['TaskSimulator',['../classBaseConfigurator_1_1TaskSimulator.html',1,'BaseConfigurator']]],
   ['terminationmessage_6',['TerminationMessage',['../structAbstractTask_1_1TerminationMessage.html',1,'AbstractTask']]],
-  ['type_3c_20pointf_20_3e_7',['Type&lt; Pointf &gt;',['../structcv_1_1traits_1_1Type_3_01Pointf_01_4.html',1,'cv::traits']]]
+  ['threats_7',['Threats',['../structAbstractTask_1_1Threats.html',1,'AbstractTask']]],
+  ['type_3c_20pointf_20_3e_8',['Type&lt; Pointf &gt;',['../structcv_1_1traits_1_1Type_3_01Pointf_01_4.html',1,'cv::traits']]]
 ];

@@ -110,12 +110,10 @@ Collaboration diagram for AbstractTask::CloseObjectDetector:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b294e327a993d241b52e52342a6d21d" id="r_a7b294e327a993d241b52e52342a6d21d"><td class="memItemLeft" align="right" valign="top"><a id="a7b294e327a993d241b52e52342a6d21d" name="a7b294e327a993d241b52e52342a6d21d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CloseObjectDetector</b> (const float maxDetectionRadius, const float maxDetectionAngle)</td></tr>
-<tr class="memdesc:a7b294e327a993d241b52e52342a6d21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which sets the detection radius and field of view. <br /></td></tr>
-<tr class="memitem:aaea4210f651d2e1d1ccc1b7359b8356e" id="r_aaea4210f651d2e1d1ccc1b7359b8356e"><td class="memItemLeft" align="right" valign="top"><a id="aaea4210f651d2e1d1ccc1b7359b8356e" name="aaea4210f651d2e1d1ccc1b7359b8356e"></a>
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>detect</b> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot)</td></tr>
-<tr class="memdesc:aaea4210f651d2e1d1ccc1b7359b8356e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the threat angle if there is a threat. Detects threats close to the robot in its world. <br /></td></tr>
+<tr class="memitem:a7b294e327a993d241b52e52342a6d21d" id="r_a7b294e327a993d241b52e52342a6d21d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b294e327a993d241b52e52342a6d21d">CloseObjectDetector</a> (const float maxDetectionRadius, const float maxDetectionAngle)</td></tr>
+<tr class="memdesc:a7b294e327a993d241b52e52342a6d21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which sets the detection radius and field of view.  <br /></td></tr>
+<tr class="memitem:a00ab1044113f18c7d8e4fb91301840f5" id="r_a00ab1044113f18c7d8e4fb91301840f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAbstractTask_1_1Threats.html">Threats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ab1044113f18c7d8e4fb91301840f5">detect</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot)</td></tr>
+<tr class="memdesc:a00ab1044113f18c7d8e4fb91301840f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the threat angle if there is a threat. Detects threats close to the robot in its world.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -124,7 +122,77 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReportFixture</b> (b2
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Detects objects which the robot will crash into. This is used to terminate a task and signal an obstacle. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7b294e327a993d241b52e52342a6d21d" name="a7b294e327a993d241b52e52342a6d21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b294e327a993d241b52e52342a6d21d">&#9670;&#160;</a></span>CloseObjectDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AbstractTask::CloseObjectDetector::CloseObjectDetector </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>maxDetectionRadius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>maxDetectionAngle</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor which sets the detection radius and field of view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxDetectionRadius</td><td>The detection radius which triggers a detection. </td></tr>
+    <tr><td class="paramname">maxDetectionAngle</td><td>The detection angle +/- basically like a camera angle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a00ab1044113f18c7d8e4fb91301840f5" name="a00ab1044113f18c7d8e4fb91301840f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ab1044113f18c7d8e4fb91301840f5">&#9670;&#160;</a></span>detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structAbstractTask_1_1Threats.html">AbstractTask::Threats</a> AbstractTask::CloseObjectDetector::detect </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; b2World &gt;</td>          <td class="paramname"><span class="paramname"><em>world</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRobot.html">Robot</a></td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the threat angle if there is a threat. Detects threats close to the robot in its world. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The world we'd like to detect threats. </td></tr>
+    <tr><td class="paramname">robot</td><td>The robot in the world. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>lib/<a class="el" href="task_8h_source.html">task.h</a></li>
 <li>lib/<b>task.cpp</b></li>
 </ul>

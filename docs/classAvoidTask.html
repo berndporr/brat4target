@@ -72,7 +72,6 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -103,19 +102,16 @@ Collaboration diagram for AvoidTask:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAvoidTask__coll__graph.png" border="0" usemap="#aAvoidTask_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aAvoidTask_coll__map" id="aAvoidTask_coll__map">
-<area shape="rect" title="Task which is driving away from an obstacle either to the left or right." alt="" coords="64,174,150,201"/>
-<area shape="rect" href="classAbstractTask.html" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="55,98,159,126"/>
-<area shape="poly" title=" " alt="" coords="109,140,109,174,105,172,105,143"/>
+<area shape="rect" title="Task which is driving away from an obstacle either to the left or right." alt="" coords="166,200,253,228"/>
+<area shape="rect" href="classAbstractTask.html" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="158,123,262,151"/>
+<area shape="poly" title=" " alt="" coords="212,164,212,201,207,198,208,168"/>
 <area shape="rect" title=" " alt="" coords="5,5,209,50"/>
-<area shape="poly" title=" " alt="" coords="108,63,110,98,104,97,106,68"/>
+<area shape="poly" title=" " alt="" coords="139,59,200,122,195,123,137,64"/>
+<area shape="rect" href="structAbstractTask_1_1Threats.html" title="Records the number of threats in the proximity of the robot. This is filled by the proximity detector..." alt="" coords="233,14,394,42"/>
+<area shape="poly" title=" " alt="" coords="293,52,224,124,221,120,288,54"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:BraitenbergAvoider" id="r_BraitenbergAvoider"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAvoidTask_1_1BraitenbergAvoider.html">BraitenbergAvoider</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects obstacles close to the robot in world.  <a href="classAvoidTask_1_1BraitenbergAvoider.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ae57929951829d833ccf61e9223326937" id="r_ae57929951829d833ccf61e9223326937"><td class="memItemLeft" align="right" valign="top"><a id="ae57929951829d833ccf61e9223326937" name="ae57929951829d833ccf61e9223326937"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae57929951829d833ccf61e9223326937">AvoidDirecton</a> { <b>LEFT</b>
@@ -150,45 +146,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeefd498c8b7c926bd0f39d2c80b198ec" id="r_aeefd498c8b7c926bd0f39d2c80b198ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeefd498c8b7c926bd0f39d2c80b198ec">onTargetDetected</a> (const float r, const float phi, const int) override</td></tr>
 <tr class="memdesc:aeefd498c8b7c926bd0f39d2c80b198ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
-<tr class="memitem:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
-<tr class="memdesc:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the motor callback with the physical robot. <br /></td></tr>
+<tr class="memitem:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#a883be435e172e22d8d54525d4770940e">registerMotorEvent</a> (<a class="el" href="classAbstractTask.html#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
+<tr class="memdesc:a883be435e172e22d8d54525d4770940e inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the motor callback with the physical robot.  <br /></td></tr>
 <tr class="memitem:a0a0bbe4db0f7d9752b90edbc23e05313 inherit pub_methods_classAbstractTask" id="r_a0a0bbe4db0f7d9752b90edbc23e05313"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerTerminated</b> (<a class="el" href="classAbstractTask.html#aa4201923b367a0cafdb58591f83e65c4">TerminatedEvent</a> te)</td></tr>
 <tr class="memdesc:a0a0bbe4db0f7d9752b90edbc23e05313 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback of the termination event. <br /></td></tr>
 <tr class="memitem:a492cf70c210abd9504fcd1b31499192d inherit pub_methods_classAbstractTask" id="r_a492cf70c210abd9504fcd1b31499192d"><td class="memItemLeft" align="right" valign="top">
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxAngularVelocity</b> () const</td></tr>
 <tr class="memdesc:a492cf70c210abd9504fcd1b31499192d inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current max angular velocity. Gets the max anglular velocity of the robot which depends on its wheel speed. At max angular velocity the robot just rotates around its axis. <br /></td></tr>
-<tr class="memitem:abec79295612524eb681f912f1ea800e3 inherit pub_methods_classAbstractTask" id="r_abec79295612524eb681f912f1ea800e3"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAngularVelocity</b> (const float a)</td></tr>
-<tr class="memdesc:abec79295612524eb681f912f1ea800e3 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Angular velocity and triggers a motor event. <br /></td></tr>
-<tr class="memitem:a1fd9b67d990367c4633f9227a90f573f inherit pub_methods_classAbstractTask" id="r_a1fd9b67d990367c4633f9227a90f573f"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLinearSpeed</b> (const float s)</td></tr>
-<tr class="memdesc:a1fd9b67d990367c4633f9227a90f573f inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear speed in m/s. It's converted to motor units and triggers a motor event. <br /></td></tr>
-<tr class="memitem:acceb02f51ea57df29fec9ce4bb923c5a inherit pub_methods_classAbstractTask" id="r_acceb02f51ea57df29fec9ce4bb923c5a"><td class="memItemLeft" align="right" valign="top">
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getLinearSpeed</b> () const</td></tr>
-<tr class="memdesc:acceb02f51ea57df29fec9ce4bb923c5a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the linear speed in m/s. <br /></td></tr>
-<tr class="memitem:afcbd517ed1b4fab46e093321614fde4f inherit pub_methods_classAbstractTask" id="r_afcbd517ed1b4fab46e093321614fde4f"><td class="memItemLeft" align="right" valign="top">
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getangularVelocity</b> () const</td></tr>
-<tr class="memdesc:afcbd517ed1b4fab46e093321614fde4f inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angular velocity. <br /></td></tr>
-<tr class="memitem:a5a2518247c5eff4a07f7549542bc544d inherit pub_methods_classAbstractTask" id="r_a5a2518247c5eff4a07f7549542bc544d"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMoving</b> () const</td></tr>
-<tr class="memdesc:a5a2518247c5eff4a07f7549542bc544d inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the robot is moving (speed &gt; 0). <br /></td></tr>
+<tr class="memitem:abec79295612524eb681f912f1ea800e3 inherit pub_methods_classAbstractTask" id="r_abec79295612524eb681f912f1ea800e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#abec79295612524eb681f912f1ea800e3">setAngularVelocity</a> (const float a)</td></tr>
+<tr class="memdesc:abec79295612524eb681f912f1ea800e3 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Angular velocity and triggers a motor event.  <br /></td></tr>
+<tr class="memitem:a1fd9b67d990367c4633f9227a90f573f inherit pub_methods_classAbstractTask" id="r_a1fd9b67d990367c4633f9227a90f573f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#a1fd9b67d990367c4633f9227a90f573f">setLinearSpeed</a> (const float s)</td></tr>
+<tr class="memdesc:a1fd9b67d990367c4633f9227a90f573f inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear speed in m/s. It's converted to motor units and triggers a motor event.  <br /></td></tr>
+<tr class="memitem:acceb02f51ea57df29fec9ce4bb923c5a inherit pub_methods_classAbstractTask" id="r_acceb02f51ea57df29fec9ce4bb923c5a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#acceb02f51ea57df29fec9ce4bb923c5a">getLinearSpeed</a> () const</td></tr>
+<tr class="memdesc:acceb02f51ea57df29fec9ce4bb923c5a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the linear speed in m/s.  <br /></td></tr>
+<tr class="memitem:afcbd517ed1b4fab46e093321614fde4f inherit pub_methods_classAbstractTask" id="r_afcbd517ed1b4fab46e093321614fde4f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#afcbd517ed1b4fab46e093321614fde4f">getangularVelocity</a> () const</td></tr>
+<tr class="memdesc:afcbd517ed1b4fab46e093321614fde4f inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angular velocity.  <br /></td></tr>
+<tr class="memitem:a5a2518247c5eff4a07f7549542bc544d inherit pub_methods_classAbstractTask" id="r_a5a2518247c5eff4a07f7549542bc544d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#a5a2518247c5eff4a07f7549542bc544d">isMoving</a> () const</td></tr>
+<tr class="memdesc:a5a2518247c5eff4a07f7549542bc544d inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the robot is moving (speed &gt; 0).  <br /></td></tr>
 <tr class="memitem:a411b1b5beabae23f37f56cba1305a367 inherit pub_methods_classAbstractTask" id="r_a411b1b5beabae23f37f56cba1305a367"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractTask</b> ()=default</td></tr>
 <tr class="memdesc:a411b1b5beabae23f37f56cba1305a367 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Is used to create the 1st task in a chain of tasks. This won't inherit anything from previous tasks so uses default values. <br /></td></tr>
-<tr class="memitem:a2bde71adba77f51941ede81eb462786b inherit pub_methods_classAbstractTask" id="r_a2bde71adba77f51941ede81eb462786b"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>AbstractTask</b> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; at)</td></tr>
-<tr class="memdesc:a2bde71adba77f51941ede81eb462786b inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving data from previous task. Creates a task based on a previous one receiving all the previous internal values such as linear speed or angular velocity. And most importantly where the target is! <br /></td></tr>
-<tr class="memitem:afebc78ed730e0eaf2835fa82bcc2ba8a inherit pub_methods_classAbstractTask" id="r_afebc78ed730e0eaf2835fa82bcc2ba8a"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetAngle</b> ()</td></tr>
-<tr class="memdesc:afebc78ed730e0eaf2835fa82bcc2ba8a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target angle as an optional as it might not know it (yet!). <br /></td></tr>
-<tr class="memitem:ae1e621524516584ebf735ce54e0e95f6 inherit pub_methods_classAbstractTask" id="r_ae1e621524516584ebf735ce54e0e95f6"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetDistance</b> ()</td></tr>
-<tr class="memdesc:ae1e621524516584ebf735ce54e0e95f6 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target distance as an optional as it might not know it (yet!). <br /></td></tr>
-<tr class="memitem:aee5575ee8fb13140953022888bff522a inherit pub_methods_classAbstractTask" id="r_aee5575ee8fb13140953022888bff522a"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getThreatAngle</b> ()</td></tr>
-<tr class="memdesc:aee5575ee8fb13140953022888bff522a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angle of a potential threat. It's optional as there might be no threat. <br /></td></tr>
+<tr class="memitem:a2bde71adba77f51941ede81eb462786b inherit pub_methods_classAbstractTask" id="r_a2bde71adba77f51941ede81eb462786b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#a2bde71adba77f51941ede81eb462786b">AbstractTask</a> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; at)</td></tr>
+<tr class="memdesc:a2bde71adba77f51941ede81eb462786b inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving data from previous task. Creates a task based on a previous one receiving all the previous internal values such as linear speed or angular velocity. And most importantly where the target is!  <br /></td></tr>
+<tr class="memitem:afebc78ed730e0eaf2835fa82bcc2ba8a inherit pub_methods_classAbstractTask" id="r_afebc78ed730e0eaf2835fa82bcc2ba8a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#afebc78ed730e0eaf2835fa82bcc2ba8a">getTargetAngle</a> ()</td></tr>
+<tr class="memdesc:afebc78ed730e0eaf2835fa82bcc2ba8a inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target angle as an optional as it might not know it (yet!).  <br /></td></tr>
+<tr class="memitem:ae1e621524516584ebf735ce54e0e95f6 inherit pub_methods_classAbstractTask" id="r_ae1e621524516584ebf735ce54e0e95f6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#ae1e621524516584ebf735ce54e0e95f6">getTargetDistance</a> ()</td></tr>
+<tr class="memdesc:ae1e621524516584ebf735ce54e0e95f6 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target distance as an optional as it might not know it (yet!).  <br /></td></tr>
+<tr class="memitem:a3ccfb52b92dc140df0fb1e66f1a84df0 inherit pub_methods_classAbstractTask" id="r_a3ccfb52b92dc140df0fb1e66f1a84df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAbstractTask_1_1Threats.html">Threats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#a3ccfb52b92dc140df0fb1e66f1a84df0">getThreats</a> ()</td></tr>
+<tr class="memdesc:a3ccfb52b92dc140df0fb1e66f1a84df0 inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the treats left and right.  <br /></td></tr>
 <tr class="memitem:ab91208d8cb058112d0844bcc0ef503fd inherit pub_methods_classAbstractTask" id="r_ab91208d8cb058112d0844bcc0ef503fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask.html#ab91208d8cb058112d0844bcc0ef503fd">setTargetTracker</a> (std::unique_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt; tt)</td></tr>
 <tr class="memdesc:ab91208d8cb058112d0844bcc0ef503fd inherit pub_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the default target tracker with a fancier one!  <br /></td></tr>
 </table><table class="memberdecls">
@@ -227,8 +213,17 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angularVelocity</b> 
 std::shared_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetTracker</b> = std::make_shared&lt;<a class="el" href="classSimpleTargetTracker.html">SimpleTargetTracker</a>&gt; ()</td></tr>
 <tr class="memitem:a6de276cc5ee1e3ceb0979b56a0316725 inherit pro_attribs_classAbstractTask" id="r_a6de276cc5ee1e3ceb0979b56a0316725"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetDistance</b></td></tr>
-<tr class="memitem:a513e9b16df93edc2d8fe1149946738ec inherit pro_attribs_classAbstractTask" id="r_a513e9b16df93edc2d8fe1149946738ec"><td class="memItemLeft" align="right" valign="top">
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threatAngle</b></td></tr>
+<tr class="memitem:a96860ea93c670c6963153ee14bb0b3f5 inherit pro_attribs_classAbstractTask" id="r_a96860ea93c670c6963153ee14bb0b3f5"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structAbstractTask_1_1Threats.html">Threats</a>&#160;</td><td class="memItemRight" valign="bottom"><b>threats</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classAbstractTask"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAbstractTask')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classAbstractTask.html">AbstractTask</a></td></tr>
+<tr class="memitem:ab123d6608125faa26fe62db69bd24393 inherit pro_methods_classAbstractTask" id="r_ab123d6608125faa26fe62db69bd24393"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emitTwoWheeledEvent</b> ()</td></tr>
+<tr class="memdesc:ab123d6608125faa26fe62db69bd24393 inherit pro_methods_classAbstractTask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the phys speeds into servo speeds and sends them to the motors. This is hardware specific and converts the linear speeds into continous servo speeds. The mapping form speed in m/s to contionous servo speeds (-1..+1) is in REAL_SPEED_TO_CONT_SERVO_SPEED and defined in <a class="el" href="const_8h_source.html">const.h</a>. <br /></td></tr>
+<tr class="memitem:a2e52a8bc204afd31c05fefad1cf0cd90 inherit pro_methods_classAbstractTask" id="r_a2e52a8bc204afd31c05fefad1cf0cd90"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>logTargetAngle</b> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Task which is driving away from an obstacle either to the left or right. </p>
@@ -357,6 +352,14 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </div><div class="memdoc">
 
 <p>Event: new target distance and angle. Task needs to incorporate new target direction from the camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The distance from the target (that's just a rough estimate). </td></tr>
+    <tr><td class="paramname">phi</td><td>The direction of the target (should be precise). </td></tr>
+    <tr><td class="paramname">targetIndex</td><td>No used yet. Ignore. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classAbstractTask.html#a48d941a5f1b314dc47e6fa7389a1e19a">AbstractTask</a>.</p>
 

@@ -1,7 +1,9 @@
 <map id="Waiting4TargetTask" name="Waiting4TargetTask">
-<area shape="rect" id="Node000001" title="Task which is doing nothing till it receives target info. The task idles till the event onTargetDetec..." alt="" coords="33,174,181,201"/>
-<area shape="rect" id="Node000002" href="$classAbstractTask.html" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="55,98,159,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,140,109,174,105,172,105,143"/>
+<area shape="rect" id="Node000001" title="Task which is doing nothing till it receives target info. The task idles till the event onTargetDetec..." alt="" coords="136,200,283,228"/>
+<area shape="rect" id="Node000002" href="$classAbstractTask.html" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="158,123,262,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,164,212,201,207,198,208,168"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,5,209,50"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,63,110,98,104,97,106,68"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,59,200,122,195,123,137,64"/>
+<area shape="rect" id="Node000004" href="$structAbstractTask_1_1Threats.html" title="Records the number of threats in the proximity of the robot. This is filled by the proximity detector..." alt="" coords="233,14,394,42"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="293,52,224,124,221,120,288,54"/>
 </map>

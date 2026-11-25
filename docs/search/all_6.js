@@ -16,6 +16,6 @@ var searchData=
   ['getsystemarchitecture_13',['getSystemArchitecture',['../classLogger.html#aa66fd52b7001ccd441a0a586ef134846',1,'Logger']]],
   ['gettargetangle_14',['getTargetAngle',['../classAbstractTask.html#afebc78ed730e0eaf2835fa82bcc2ba8a',1,'AbstractTask']]],
   ['gettargetdistance_15',['getTargetDistance',['../classAbstractTask.html#ae1e621524516584ebf735ce54e0e95f6',1,'AbstractTask']]],
-  ['getthreatangle_16',['getThreatAngle',['../classAbstractTask.html#aee5575ee8fb13140953022888bff522a',1,'AbstractTask']]],
+  ['getthreats_16',['getThreats',['../classAbstractTask.html#a3ccfb52b92dc140df0fb1e66f1a84df0',1,'AbstractTask']]],
   ['gettransform_17',['getTransform',['../classRobot.html#a90619d167d34899080d651f2053d84a1',1,'Robot']]]
 ];

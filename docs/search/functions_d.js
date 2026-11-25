@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['setangle_0',['setAngle',['../classRobot.html#a7af1b24c1d62f6a681b6e363fa684312',1,'Robot']]],
-  ['setangularvelocity_1',['setAngularVelocity',['../classRobot.html#aa45b56756abf8a8849d00d4894079faf',1,'Robot::setAngularVelocity()'],['../classAbstractTask.html#abec79295612524eb681f912f1ea800e3',1,'AbstractTask::setAngularVelocity()']]],
-  ['setcurrenttask_2',['setCurrentTask',['../classBaseConfigurator.html#a509171993d3bfa57644f95e37cb61a5e',1,'BaseConfigurator']]],
-  ['setinitialtask_3',['setInitialTask',['../classBaseConfigurator.html#af38f6e00737873cf8af48f9d9d2ae544',1,'BaseConfigurator']]],
-  ['setlinearspeed_4',['setLinearSpeed',['../classAbstractTask.html#a1fd9b67d990367c4633f9227a90f573f',1,'AbstractTask']]],
-  ['setlinearvelocity_5',['setLinearVelocity',['../classRobot.html#a6e4d2dbd4043a9326563b97e2eaa6c71',1,'Robot']]],
-  ['setmaxtasks_6',['setMaxTasks',['../classReactiveConfigurator.html#acf8725123bf4563426e12a9922a2a587',1,'ReactiveConfigurator']]],
-  ['settarget_7',['setTarget',['../classBaseConfigurator_1_1TaskSimulator.html#a66f88738a8fb592d146adb919d4f6c34',1,'BaseConfigurator::TaskSimulator']]],
-  ['settargettracker_8',['setTargetTracker',['../classAbstractTask.html#ab91208d8cb058112d0844bcc0ef503fd',1,'AbstractTask']]],
-  ['start_9',['start',['../classLogger.html#a22389527084298297895f0ae6c363b9f',1,'Logger::start()'],['../classTargetLoc.html#aa941559f5f707c2498ee2b3c6f476080',1,'TargetLoc::start(TargetLocSettings settings=TargetLocSettings())']]],
-  ['stop_10',['stop',['../classTargetLoc.html#ada0beb5e1e286a2f348794ac455f0477',1,'TargetLoc']]]
+  ['registerdetcallback_0',['registerDetCallback',['../classTargetDet.html#a3a47f7a236cd5275250550796a3fcf36',1,'TargetDet']]],
+  ['registermotorevent_1',['registerMotorEvent',['../classBaseConfigurator.html#ae271a77d9da6a9730147413f637d5ef2',1,'BaseConfigurator::registerMotorEvent()'],['../classAbstractTask.html#a883be435e172e22d8d54525d4770940e',1,'AbstractTask::registerMotorEvent(MotorEvent me)']]],
+  ['registerterminated_2',['registerTerminated',['../classAbstractTask.html#a0a0bbe4db0f7d9752b90edbc23e05313',1,'AbstractTask']]],
+  ['registerworldreadycallback_3',['registerWorldReadyCallback',['../classWorldBuilder.html#a6287752321b5894e87a5b150d2033a43',1,'WorldBuilder']]],
+  ['robot_4',['Robot',['../classRobot.html#aedfa9ef5eddca9d7639418ea21073531',1,'Robot']]],
+  ['run_5',['run',['../classBaseConfigurator_1_1TaskSimulator.html#a22fb9abbea894c311bc6c5c509cf62d8',1,'BaseConfigurator::TaskSimulator']]]
 ];

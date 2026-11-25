@@ -59,6 +59,7 @@ class SimpleTargetTracker : public TargetTrackerInterface
  * such as attracion or avoidance.
  * Input units are physical units. The Speed is in m/s. The angular velocity is rad/s.
  * Output units are servo units (-1..+1).
+ * This must be created with std::make_shared.
  */
 class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 {
@@ -89,6 +90,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
     /**
      * @brief Registers the motor callback with the physical robot.
+     * @param me MotorEvent which is called if there is a change in wheel speed.
      */
     void registerMotorEvent (MotorEvent me) { motorEvent = me; }
 
@@ -159,8 +161,13 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         return 2.0f * linearSpeed / BETWEEN_WHEELS;
     }
 
-  private:
-    // Converts the phys speeds into servo speeds and sends them to the motors.
+  protected:
+    /**
+     * @brief Converts the phys speeds into servo speeds and sends them to the motors.
+     * This is hardware specific and converts the linear speeds into continous
+     * servo speeds. The mapping form speed in m/s to contionous servo speeds (-1..+1)
+     * is in REAL_SPEED_TO_CONT_SERVO_SPEED and defined in const.h
+     */
     void emitTwoWheeledEvent ()
     {
         if (!motorEvent)
@@ -189,6 +196,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
   public:
     /**
      * @brief Sets the Angular velocity and triggers a motor event. 
+     * @param a The new anglular velocity in rad/sec.
      */
     void setAngularVelocity (const float a)
     {
@@ -200,6 +208,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     /**
      * @brief Sets the linear speed in m/s. 
      * It's converted to motor units and triggers a motor event.
+     * @param s The linear speed in m/s.
      */
     void setLinearSpeed (const float s)
     {
@@ -209,13 +218,19 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
     /**
      * @brief Gets the linear speed in m/s.
+     * @returns The linear speed in m/s.
      */
     float getLinearSpeed () const { return linearSpeed; }
 
     /**
      * @brief Event: new LIDAR scan.
-     * Task needs to react to the LIDAR world. Needs to be fille with content
+     * Task needs to react to the LIDAR world. Needs to be filled with content
      * by its derived classes.
+     * @param world Fresh LIDAR scan turned into box2d objects
+     * @param robot The robot in the world. For real world it's always at 0,0.
+     * Provides a LIDAR scan and the robot in it. The robot has already been
+     * placed in the world and if simulated might have already been travelled.
+     * For real world events the robot always sits at the centre of the world at 0,0.
      */
     virtual void onLIDARworld (std::shared_ptr<b2World> world, Robot robot)
         = 0;
@@ -223,6 +238,9 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
     /**
     * @brief Event: new target distance and angle.
     * Task needs to incorporate new target direction from the camera.
+    * @param r The distance from the target (that's just a rough estimate).
+    * @param phi The direction of the target (should be precise).
+    * @param targetIndex No used yet. Ignore.
     */
     virtual void onTargetDetected (const float r, const float phi,
                                    const int targetIndex = 0)
@@ -232,28 +250,46 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      * @brief Event: new gyro rotation.
      * Gyro rotation of the robot. Called from the gyro driver.
      * Needs to be implemented by actual tasks below.
+     * @param dphi The rotation of the robot in rad.
+     * This is the change of orientation of the robot since the last call of
+     * onGyroTurn. Can be used to correct the target angle if no
+     * target detection is possible.
      */
     virtual void onGyroTurn (const float dphi) = 0;
 
     /**
     * @brief Event: called when the task is being started.
+    * Must be called before task receives any events.
     */
     virtual void onStart () = 0;
 
     /**
      * @brief Gets the angular velocity.
+     * @returns The angular velocity in rad/sec.
      */
     float getangularVelocity () const { return angularVelocity; }
 
     /**
      * @brief If the robot is moving (speed > 0).
+     * @returns Is true if the robot's lin speed is greater than zero.
      */
     bool isMoving () const { return fabs (linearSpeed) > 0; }
 
+    /**
+     * @brief Records the number of threats in the proximity of the robot.
+     * This is filled by the proximity detector and keeps track if there are
+     * any threats to the left or right of the robot.
+     */
     struct Threats
     {
         int nLeft = 0;
         int nRight = 0;
+        /**
+         * @brief Returns if there are any threats either to the left or right.
+         * 
+         * @return true There are threats left / right or in front of it.
+         * @return false There are no threats.
+         */
         bool hasThreats () const { return (nLeft > 0) || (nRight > 0); }
     };
 
@@ -267,6 +303,8 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
       public:
         /**
          * @brief Constructor which sets the detection radius and field of view.
+         * @param maxDetectionRadius The detection radius which triggers a detection.
+         * @param maxDetectionAngle The detection angle +/- basically like a camera angle.
          */
         CloseObjectDetector (const float maxDetectionRadius,
                              const float maxDetectionAngle)
@@ -278,6 +316,8 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
         /**
          * @brief Returns the threat angle if there is a threat.
          * Detects threats close to the robot in its world.
+         * @param world The world we'd like to detect threats.
+         * @param robot The robot in the world.
          **/
         Threats detect (std::shared_ptr<b2World> world, Robot robot);
 
@@ -307,6 +347,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
      * all the previous internal values such as linear speed
      * or angular velocity. And most importantly where the
      * target is!
+     * @param at The task which just has been terminated.
      */
     AbstractTask (std::shared_ptr<AbstractTask> at)
     {
@@ -324,6 +365,7 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
   public:
     /**
      * @brief Returns the target angle as an optional as it might not know it (yet!).
+     * @returns The angle of the target, if it exists.
      */
     std::optional<float> getTargetAngle ()
     {
@@ -332,11 +374,13 @@ class AbstractTask : public std::enable_shared_from_this<AbstractTask>
 
     /**
      * @brief Returns the target distance as an optional as it might not know it (yet!).
+     * @returns The distance of the target, if it exists.
      */
     std::optional<float> getTargetDistance () { return targetDistance; };
 
     /**
      * @brief Gets the treats left and right.
+     * @returns The threats detected left and right.
      */
     Threats getThreats () { return threats; }
 

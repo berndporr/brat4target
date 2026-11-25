@@ -76,13 +76,14 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classAbstractTask-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">AbstractTask Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Turns sensor events into motor outputs. This is an abstract task which has all common features of the derived classes such as attracion or avoidance. Input units are physical units. The Speed is in m/s. The angular velocity is rad/s. Output units are servo units (-1..+1).  
+<p>Turns sensor events into motor outputs. This is an abstract task which has all common features of the derived classes such as attracion or avoidance. Input units are physical units. The Speed is in m/s. The angular velocity is rad/s. Output units are servo units (-1..+1). This must be created with std::make_shared.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="task_8h_source.html">task.h</a>&gt;</code></p>
@@ -109,9 +110,11 @@ Collaboration diagram for AbstractTask:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAbstractTask__coll__graph.png" border="0" usemap="#aAbstractTask_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aAbstractTask_coll__map" id="aAbstractTask_coll__map">
-<area shape="rect" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="55,98,159,126"/>
+<area shape="rect" title="Turns sensor events into motor outputs. This is an abstract task which has all common features of the..." alt="" coords="158,123,262,151"/>
 <area shape="rect" title=" " alt="" coords="5,5,209,50"/>
-<area shape="poly" title=" " alt="" coords="109,64,109,98,105,96,105,68"/>
+<area shape="poly" title=" " alt="" coords="139,59,200,122,195,123,137,64"/>
+<area shape="rect" href="structAbstractTask_1_1Threats.html" title="Records the number of threats in the proximity of the robot. This is filled by the proximity detector..." alt="" coords="233,14,394,42"/>
+<area shape="poly" title=" " alt="" coords="293,52,224,125,221,120,288,54"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,6 +122,8 @@ Collaboration diagram for AbstractTask:</div>
 Classes</h2></td></tr>
 <tr class="memitem:TerminationMessage" id="r_TerminationMessage"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAbstractTask_1_1TerminationMessage.html">TerminationMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Termination message emitted by the task. Message emitted when the task decides to terminate for the reasons below. Contains also a pointer to itself so that the configurator can inspect the task and the next task can aquire values from the terminated task.  <a href="structAbstractTask_1_1TerminationMessage.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Threats" id="r_Threats"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAbstractTask_1_1Threats.html">Threats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records the number of threats in the proximity of the robot. This is filled by the proximity detector and keeps track if there are any threats to the left or right of the robot.  <a href="structAbstractTask_1_1Threats.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CloseObjectDetector" id="r_CloseObjectDetector"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractTask_1_1CloseObjectDetector.html">CloseObjectDetector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects objects which the robot will crash into. This is used to terminate a task and signal an obstacle.  <a href="classAbstractTask_1_1CloseObjectDetector.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
@@ -133,53 +138,43 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>TerminatedEvent</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a883be435e172e22d8d54525d4770940e" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top"><a id="a883be435e172e22d8d54525d4770940e" name="a883be435e172e22d8d54525d4770940e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMotorEvent</b> (<a class="el" href="#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
-<tr class="memdesc:a883be435e172e22d8d54525d4770940e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the motor callback with the physical robot. <br /></td></tr>
+<tr class="memitem:a883be435e172e22d8d54525d4770940e" id="r_a883be435e172e22d8d54525d4770940e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a883be435e172e22d8d54525d4770940e">registerMotorEvent</a> (<a class="el" href="#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a> me)</td></tr>
+<tr class="memdesc:a883be435e172e22d8d54525d4770940e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the motor callback with the physical robot.  <br /></td></tr>
 <tr class="memitem:a0a0bbe4db0f7d9752b90edbc23e05313" id="r_a0a0bbe4db0f7d9752b90edbc23e05313"><td class="memItemLeft" align="right" valign="top"><a id="a0a0bbe4db0f7d9752b90edbc23e05313" name="a0a0bbe4db0f7d9752b90edbc23e05313"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>registerTerminated</b> (<a class="el" href="#aa4201923b367a0cafdb58591f83e65c4">TerminatedEvent</a> te)</td></tr>
 <tr class="memdesc:a0a0bbe4db0f7d9752b90edbc23e05313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback of the termination event. <br /></td></tr>
 <tr class="memitem:a492cf70c210abd9504fcd1b31499192d" id="r_a492cf70c210abd9504fcd1b31499192d"><td class="memItemLeft" align="right" valign="top"><a id="a492cf70c210abd9504fcd1b31499192d" name="a492cf70c210abd9504fcd1b31499192d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxAngularVelocity</b> () const</td></tr>
 <tr class="memdesc:a492cf70c210abd9504fcd1b31499192d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current max angular velocity. Gets the max anglular velocity of the robot which depends on its wheel speed. At max angular velocity the robot just rotates around its axis. <br /></td></tr>
-<tr class="memitem:abec79295612524eb681f912f1ea800e3" id="r_abec79295612524eb681f912f1ea800e3"><td class="memItemLeft" align="right" valign="top"><a id="abec79295612524eb681f912f1ea800e3" name="abec79295612524eb681f912f1ea800e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAngularVelocity</b> (const float a)</td></tr>
-<tr class="memdesc:abec79295612524eb681f912f1ea800e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Angular velocity and triggers a motor event. <br /></td></tr>
-<tr class="memitem:a1fd9b67d990367c4633f9227a90f573f" id="r_a1fd9b67d990367c4633f9227a90f573f"><td class="memItemLeft" align="right" valign="top"><a id="a1fd9b67d990367c4633f9227a90f573f" name="a1fd9b67d990367c4633f9227a90f573f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLinearSpeed</b> (const float s)</td></tr>
-<tr class="memdesc:a1fd9b67d990367c4633f9227a90f573f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear speed in m/s. It's converted to motor units and triggers a motor event. <br /></td></tr>
-<tr class="memitem:acceb02f51ea57df29fec9ce4bb923c5a" id="r_acceb02f51ea57df29fec9ce4bb923c5a"><td class="memItemLeft" align="right" valign="top"><a id="acceb02f51ea57df29fec9ce4bb923c5a" name="acceb02f51ea57df29fec9ce4bb923c5a"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getLinearSpeed</b> () const</td></tr>
-<tr class="memdesc:acceb02f51ea57df29fec9ce4bb923c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the linear speed in m/s. <br /></td></tr>
+<tr class="memitem:abec79295612524eb681f912f1ea800e3" id="r_abec79295612524eb681f912f1ea800e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abec79295612524eb681f912f1ea800e3">setAngularVelocity</a> (const float a)</td></tr>
+<tr class="memdesc:abec79295612524eb681f912f1ea800e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Angular velocity and triggers a motor event.  <br /></td></tr>
+<tr class="memitem:a1fd9b67d990367c4633f9227a90f573f" id="r_a1fd9b67d990367c4633f9227a90f573f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fd9b67d990367c4633f9227a90f573f">setLinearSpeed</a> (const float s)</td></tr>
+<tr class="memdesc:a1fd9b67d990367c4633f9227a90f573f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear speed in m/s. It's converted to motor units and triggers a motor event.  <br /></td></tr>
+<tr class="memitem:acceb02f51ea57df29fec9ce4bb923c5a" id="r_acceb02f51ea57df29fec9ce4bb923c5a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acceb02f51ea57df29fec9ce4bb923c5a">getLinearSpeed</a> () const</td></tr>
+<tr class="memdesc:acceb02f51ea57df29fec9ce4bb923c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the linear speed in m/s.  <br /></td></tr>
 <tr class="memitem:a8ce63367f8f2be9d1b4398b2ac764bd8" id="r_a8ce63367f8f2be9d1b4398b2ac764bd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ce63367f8f2be9d1b4398b2ac764bd8">onLIDARworld</a> (std::shared_ptr&lt; b2World &gt; world, <a class="el" href="classRobot.html">Robot</a> robot)=0</td></tr>
-<tr class="memdesc:a8ce63367f8f2be9d1b4398b2ac764bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes.  <br /></td></tr>
+<tr class="memdesc:a8ce63367f8f2be9d1b4398b2ac764bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be filled with content by its derived classes.  <br /></td></tr>
 <tr class="memitem:a48d941a5f1b314dc47e6fa7389a1e19a" id="r_a48d941a5f1b314dc47e6fa7389a1e19a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48d941a5f1b314dc47e6fa7389a1e19a">onTargetDetected</a> (const float r, const float phi, const int targetIndex=0)=0</td></tr>
 <tr class="memdesc:a48d941a5f1b314dc47e6fa7389a1e19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new target distance and angle. Task needs to incorporate new target direction from the camera.  <br /></td></tr>
 <tr class="memitem:a6f26bbceee3a61896a7a0c19776c2c0b" id="r_a6f26bbceee3a61896a7a0c19776c2c0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f26bbceee3a61896a7a0c19776c2c0b">onGyroTurn</a> (const float dphi)=0</td></tr>
 <tr class="memdesc:a6f26bbceee3a61896a7a0c19776c2c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: new gyro rotation. Gyro rotation of the robot. Called from the gyro driver. Needs to be implemented by actual tasks below.  <br /></td></tr>
 <tr class="memitem:a13ab1e6d34fb6b0915cf34daca98f2d0" id="r_a13ab1e6d34fb6b0915cf34daca98f2d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13ab1e6d34fb6b0915cf34daca98f2d0">onStart</a> ()=0</td></tr>
-<tr class="memdesc:a13ab1e6d34fb6b0915cf34daca98f2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is being started.  <br /></td></tr>
-<tr class="memitem:afcbd517ed1b4fab46e093321614fde4f" id="r_afcbd517ed1b4fab46e093321614fde4f"><td class="memItemLeft" align="right" valign="top"><a id="afcbd517ed1b4fab46e093321614fde4f" name="afcbd517ed1b4fab46e093321614fde4f"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getangularVelocity</b> () const</td></tr>
-<tr class="memdesc:afcbd517ed1b4fab46e093321614fde4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angular velocity. <br /></td></tr>
-<tr class="memitem:a5a2518247c5eff4a07f7549542bc544d" id="r_a5a2518247c5eff4a07f7549542bc544d"><td class="memItemLeft" align="right" valign="top"><a id="a5a2518247c5eff4a07f7549542bc544d" name="a5a2518247c5eff4a07f7549542bc544d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMoving</b> () const</td></tr>
-<tr class="memdesc:a5a2518247c5eff4a07f7549542bc544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the robot is moving (speed &gt; 0). <br /></td></tr>
+<tr class="memdesc:a13ab1e6d34fb6b0915cf34daca98f2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event: called when the task is being started. Must be called before task receives any events.  <br /></td></tr>
+<tr class="memitem:afcbd517ed1b4fab46e093321614fde4f" id="r_afcbd517ed1b4fab46e093321614fde4f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcbd517ed1b4fab46e093321614fde4f">getangularVelocity</a> () const</td></tr>
+<tr class="memdesc:afcbd517ed1b4fab46e093321614fde4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angular velocity.  <br /></td></tr>
+<tr class="memitem:a5a2518247c5eff4a07f7549542bc544d" id="r_a5a2518247c5eff4a07f7549542bc544d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2518247c5eff4a07f7549542bc544d">isMoving</a> () const</td></tr>
+<tr class="memdesc:a5a2518247c5eff4a07f7549542bc544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the robot is moving (speed &gt; 0).  <br /></td></tr>
 <tr class="memitem:a411b1b5beabae23f37f56cba1305a367" id="r_a411b1b5beabae23f37f56cba1305a367"><td class="memItemLeft" align="right" valign="top"><a id="a411b1b5beabae23f37f56cba1305a367" name="a411b1b5beabae23f37f56cba1305a367"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractTask</b> ()=default</td></tr>
 <tr class="memdesc:a411b1b5beabae23f37f56cba1305a367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Is used to create the 1st task in a chain of tasks. This won't inherit anything from previous tasks so uses default values. <br /></td></tr>
-<tr class="memitem:a2bde71adba77f51941ede81eb462786b" id="r_a2bde71adba77f51941ede81eb462786b"><td class="memItemLeft" align="right" valign="top"><a id="a2bde71adba77f51941ede81eb462786b" name="a2bde71adba77f51941ede81eb462786b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AbstractTask</b> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; at)</td></tr>
-<tr class="memdesc:a2bde71adba77f51941ede81eb462786b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving data from previous task. Creates a task based on a previous one receiving all the previous internal values such as linear speed or angular velocity. And most importantly where the target is! <br /></td></tr>
-<tr class="memitem:afebc78ed730e0eaf2835fa82bcc2ba8a" id="r_afebc78ed730e0eaf2835fa82bcc2ba8a"><td class="memItemLeft" align="right" valign="top"><a id="afebc78ed730e0eaf2835fa82bcc2ba8a" name="afebc78ed730e0eaf2835fa82bcc2ba8a"></a>
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetAngle</b> ()</td></tr>
-<tr class="memdesc:afebc78ed730e0eaf2835fa82bcc2ba8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target angle as an optional as it might not know it (yet!). <br /></td></tr>
-<tr class="memitem:ae1e621524516584ebf735ce54e0e95f6" id="r_ae1e621524516584ebf735ce54e0e95f6"><td class="memItemLeft" align="right" valign="top"><a id="ae1e621524516584ebf735ce54e0e95f6" name="ae1e621524516584ebf735ce54e0e95f6"></a>
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTargetDistance</b> ()</td></tr>
-<tr class="memdesc:ae1e621524516584ebf735ce54e0e95f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target distance as an optional as it might not know it (yet!). <br /></td></tr>
-<tr class="memitem:aee5575ee8fb13140953022888bff522a" id="r_aee5575ee8fb13140953022888bff522a"><td class="memItemLeft" align="right" valign="top"><a id="aee5575ee8fb13140953022888bff522a" name="aee5575ee8fb13140953022888bff522a"></a>
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getThreatAngle</b> ()</td></tr>
-<tr class="memdesc:aee5575ee8fb13140953022888bff522a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the angle of a potential threat. It's optional as there might be no threat. <br /></td></tr>
+<tr class="memitem:a2bde71adba77f51941ede81eb462786b" id="r_a2bde71adba77f51941ede81eb462786b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bde71adba77f51941ede81eb462786b">AbstractTask</a> (std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt; at)</td></tr>
+<tr class="memdesc:a2bde71adba77f51941ede81eb462786b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor receiving data from previous task. Creates a task based on a previous one receiving all the previous internal values such as linear speed or angular velocity. And most importantly where the target is!  <br /></td></tr>
+<tr class="memitem:afebc78ed730e0eaf2835fa82bcc2ba8a" id="r_afebc78ed730e0eaf2835fa82bcc2ba8a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afebc78ed730e0eaf2835fa82bcc2ba8a">getTargetAngle</a> ()</td></tr>
+<tr class="memdesc:afebc78ed730e0eaf2835fa82bcc2ba8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target angle as an optional as it might not know it (yet!).  <br /></td></tr>
+<tr class="memitem:ae1e621524516584ebf735ce54e0e95f6" id="r_ae1e621524516584ebf735ce54e0e95f6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1e621524516584ebf735ce54e0e95f6">getTargetDistance</a> ()</td></tr>
+<tr class="memdesc:ae1e621524516584ebf735ce54e0e95f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target distance as an optional as it might not know it (yet!).  <br /></td></tr>
+<tr class="memitem:a3ccfb52b92dc140df0fb1e66f1a84df0" id="r_a3ccfb52b92dc140df0fb1e66f1a84df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAbstractTask_1_1Threats.html">Threats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ccfb52b92dc140df0fb1e66f1a84df0">getThreats</a> ()</td></tr>
+<tr class="memdesc:a3ccfb52b92dc140df0fb1e66f1a84df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the treats left and right.  <br /></td></tr>
 <tr class="memitem:ab91208d8cb058112d0844bcc0ef503fd" id="r_ab91208d8cb058112d0844bcc0ef503fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab91208d8cb058112d0844bcc0ef503fd">setTargetTracker</a> (std::unique_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt; tt)</td></tr>
 <tr class="memdesc:ab91208d8cb058112d0844bcc0ef503fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the default target tracker with a fancier one!  <br /></td></tr>
 </table><table class="memberdecls">
@@ -195,6 +190,14 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>nearbyMaxObstacleDet
 float&#160;</td><td class="memItemRight" valign="bottom"><b>targetArrivedDistance</b> = TARGET_ARRIVED_DISTANCE</td></tr>
 <tr class="memdesc:a7ff25656f05cd4f26ab9b1343e4446e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance to target which warrants arrival triggers the arrival event. <br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab123d6608125faa26fe62db69bd24393" id="r_ab123d6608125faa26fe62db69bd24393"><td class="memItemLeft" align="right" valign="top"><a id="ab123d6608125faa26fe62db69bd24393" name="ab123d6608125faa26fe62db69bd24393"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emitTwoWheeledEvent</b> ()</td></tr>
+<tr class="memdesc:ab123d6608125faa26fe62db69bd24393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the phys speeds into servo speeds and sends them to the motors. This is hardware specific and converts the linear speeds into continous servo speeds. The mapping form speed in m/s to contionous servo speeds (-1..+1) is in REAL_SPEED_TO_CONT_SERVO_SPEED and defined in <a class="el" href="const_8h_source.html">const.h</a>. <br /></td></tr>
+<tr class="memitem:a2e52a8bc204afd31c05fefad1cf0cd90" id="r_a2e52a8bc204afd31c05fefad1cf0cd90"><td class="memItemLeft" align="right" valign="top"><a id="a2e52a8bc204afd31c05fefad1cf0cd90" name="a2e52a8bc204afd31c05fefad1cf0cd90"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>logTargetAngle</b> ()</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a057452d6436599eb1faace86004aef58" id="r_a057452d6436599eb1faace86004aef58"><td class="memItemLeft" align="right" valign="top"><a id="a057452d6436599eb1faace86004aef58" name="a057452d6436599eb1faace86004aef58"></a>
@@ -209,12 +212,214 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angularVelocity</b> 
 std::shared_ptr&lt; <a class="el" href="classTargetTrackerInterface.html">TargetTrackerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetTracker</b> = std::make_shared&lt;<a class="el" href="classSimpleTargetTracker.html">SimpleTargetTracker</a>&gt; ()</td></tr>
 <tr class="memitem:a6de276cc5ee1e3ceb0979b56a0316725" id="r_a6de276cc5ee1e3ceb0979b56a0316725"><td class="memItemLeft" align="right" valign="top"><a id="a6de276cc5ee1e3ceb0979b56a0316725" name="a6de276cc5ee1e3ceb0979b56a0316725"></a>
 std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targetDistance</b></td></tr>
-<tr class="memitem:a513e9b16df93edc2d8fe1149946738ec" id="r_a513e9b16df93edc2d8fe1149946738ec"><td class="memItemLeft" align="right" valign="top"><a id="a513e9b16df93edc2d8fe1149946738ec" name="a513e9b16df93edc2d8fe1149946738ec"></a>
-std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>threatAngle</b></td></tr>
+<tr class="memitem:a96860ea93c670c6963153ee14bb0b3f5" id="r_a96860ea93c670c6963153ee14bb0b3f5"><td class="memItemLeft" align="right" valign="top"><a id="a96860ea93c670c6963153ee14bb0b3f5" name="a96860ea93c670c6963153ee14bb0b3f5"></a>
+<a class="el" href="structAbstractTask_1_1Threats.html">Threats</a>&#160;</td><td class="memItemRight" valign="bottom"><b>threats</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Turns sensor events into motor outputs. This is an abstract task which has all common features of the derived classes such as attracion or avoidance. Input units are physical units. The Speed is in m/s. The angular velocity is rad/s. Output units are servo units (-1..+1). </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Turns sensor events into motor outputs. This is an abstract task which has all common features of the derived classes such as attracion or avoidance. Input units are physical units. The Speed is in m/s. The angular velocity is rad/s. Output units are servo units (-1..+1). This must be created with std::make_shared. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2bde71adba77f51941ede81eb462786b" name="a2bde71adba77f51941ede81eb462786b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bde71adba77f51941ede81eb462786b">&#9670;&#160;</a></span>AbstractTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AbstractTask::AbstractTask </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classAbstractTask.html">AbstractTask</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>at</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor receiving data from previous task. Creates a task based on a previous one receiving all the previous internal values such as linear speed or angular velocity. And most importantly where the target is! </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">at</td><td>The task which just has been terminated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="afcbd517ed1b4fab46e093321614fde4f" name="afcbd517ed1b4fab46e093321614fde4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcbd517ed1b4fab46e093321614fde4f">&#9670;&#160;</a></span>getangularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float AbstractTask::getangularVelocity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the angular velocity. </p>
+<dl class="section return"><dt>Returns</dt><dd>The angular velocity in rad/sec. </dd></dl>
+
+</div>
+</div>
+<a id="acceb02f51ea57df29fec9ce4bb923c5a" name="acceb02f51ea57df29fec9ce4bb923c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acceb02f51ea57df29fec9ce4bb923c5a">&#9670;&#160;</a></span>getLinearSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float AbstractTask::getLinearSpeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the linear speed in m/s. </p>
+<dl class="section return"><dt>Returns</dt><dd>The linear speed in m/s. </dd></dl>
+
+</div>
+</div>
+<a id="afebc78ed730e0eaf2835fa82bcc2ba8a" name="afebc78ed730e0eaf2835fa82bcc2ba8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afebc78ed730e0eaf2835fa82bcc2ba8a">&#9670;&#160;</a></span>getTargetAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; float &gt; AbstractTask::getTargetAngle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the target angle as an optional as it might not know it (yet!). </p>
+<dl class="section return"><dt>Returns</dt><dd>The angle of the target, if it exists. </dd></dl>
+
+</div>
+</div>
+<a id="ae1e621524516584ebf735ce54e0e95f6" name="ae1e621524516584ebf735ce54e0e95f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e621524516584ebf735ce54e0e95f6">&#9670;&#160;</a></span>getTargetDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; float &gt; AbstractTask::getTargetDistance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the target distance as an optional as it might not know it (yet!). </p>
+<dl class="section return"><dt>Returns</dt><dd>The distance of the target, if it exists. </dd></dl>
+
+</div>
+</div>
+<a id="a3ccfb52b92dc140df0fb1e66f1a84df0" name="a3ccfb52b92dc140df0fb1e66f1a84df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ccfb52b92dc140df0fb1e66f1a84df0">&#9670;&#160;</a></span>getThreats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structAbstractTask_1_1Threats.html">Threats</a> AbstractTask::getThreats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the treats left and right. </p>
+<dl class="section return"><dt>Returns</dt><dd>The threats detected left and right. </dd></dl>
+
+</div>
+</div>
+<a id="a5a2518247c5eff4a07f7549542bc544d" name="a5a2518247c5eff4a07f7549542bc544d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2518247c5eff4a07f7549542bc544d">&#9670;&#160;</a></span>isMoving()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AbstractTask::isMoving </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If the robot is moving (speed &gt; 0). </p>
+<dl class="section return"><dt>Returns</dt><dd>Is true if the robot's lin speed is greater than zero. </dd></dl>
+
+</div>
+</div>
 <a id="a6f26bbceee3a61896a7a0c19776c2c0b" name="a6f26bbceee3a61896a7a0c19776c2c0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f26bbceee3a61896a7a0c19776c2c0b">&#9670;&#160;</a></span>onGyroTurn()</h2>
 
@@ -239,6 +444,12 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </div><div class="memdoc">
 
 <p>Event: new gyro rotation. Gyro rotation of the robot. Called from the gyro driver. Needs to be implemented by actual tasks below. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dphi</td><td>The rotation of the robot in rad. This is the change of orientation of the robot since the last call of onGyroTurn. Can be used to correct the target angle if no target detection is possible. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classAvoidTask.html#a271e844dfc3ca65476904a55944584f3">AvoidTask</a>, <a class="el" href="classEndTask.html#a19081f29df97d87553e266e499e0d438">EndTask</a>, <a class="el" href="classTargetTask.html#a308794c9decd3bd98464d9bfdf723dea">TargetTask</a>, and <a class="el" href="classWaiting4TargetTask.html#ae9ce426b3a5103a185109611105d6225">Waiting4TargetTask</a>.</p>
 
@@ -271,7 +482,14 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 </div><div class="memdoc">
 
-<p>Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be fille with content by its derived classes. </p>
+<p>Event: new LIDAR scan. Task needs to react to the LIDAR world. Needs to be filled with content by its derived classes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>Fresh LIDAR scan turned into box2d objects </td></tr>
+    <tr><td class="paramname">robot</td><td>The robot in the world. For real world it's always at 0,0. Provides a LIDAR scan and the robot in it. The robot has already been placed in the world and if simulated might have already been travelled. For real world events the robot always sits at the centre of the world at 0,0. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classAvoidTask.html#a6498749a73a2bcdf6fb8807911c65ba0">AvoidTask</a>, <a class="el" href="classEndTask.html#a92a9451ec2eda4d885c8de9846690e88">EndTask</a>, <a class="el" href="classTargetTask.html#af171236eed06d6b49bb153e5a1aeed86">TargetTask</a>, and <a class="el" href="classWaiting4TargetTask.html#ad9099a758200fa32baca6804f8ae646c">Waiting4TargetTask</a>.</p>
 
@@ -300,7 +518,7 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 </div><div class="memdoc">
 
-<p>Event: called when the task is being started. </p>
+<p>Event: called when the task is being started. Must be called before task receives any events. </p>
 
 <p>Implemented in <a class="el" href="classAvoidTask.html#a45d3db39fd8cf9bca3d0310b1a75236c">AvoidTask</a>, <a class="el" href="classEndTask.html#a6594ebf6d66b7f627d34115d0fbb18a5">EndTask</a>, <a class="el" href="classTargetTask.html#acd123deec46372c29600c112973f530b">TargetTask</a>, and <a class="el" href="classWaiting4TargetTask.html#a5276d08a04da02ebc3ce4b4ac4be82f8">Waiting4TargetTask</a>.</p>
 
@@ -339,8 +557,115 @@ std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </div><div class="memdoc">
 
 <p>Event: new target distance and angle. Task needs to incorporate new target direction from the camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The distance from the target (that's just a rough estimate). </td></tr>
+    <tr><td class="paramname">phi</td><td>The direction of the target (should be precise). </td></tr>
+    <tr><td class="paramname">targetIndex</td><td>No used yet. Ignore. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classAvoidTask.html#aeefd498c8b7c926bd0f39d2c80b198ec">AvoidTask</a>, <a class="el" href="classEndTask.html#a6a477816a3e672d48260a55b7cfac815">EndTask</a>, <a class="el" href="classTargetTask.html#accbd0daf95d8891aaaa4131203924d48">TargetTask</a>, and <a class="el" href="classWaiting4TargetTask.html#a776e93eeeb3c13110ed40354a0ce4d79">Waiting4TargetTask</a>.</p>
+
+</div>
+</div>
+<a id="a883be435e172e22d8d54525d4770940e" name="a883be435e172e22d8d54525d4770940e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883be435e172e22d8d54525d4770940e">&#9670;&#160;</a></span>registerMotorEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AbstractTask::registerMotorEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a6081edc70419f663deac5c97b3ae38e6">MotorEvent</a></td>          <td class="paramname"><span class="paramname"><em>me</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers the motor callback with the physical robot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">me</td><td><a class="el" href="#a6081edc70419f663deac5c97b3ae38e6" title="Motor event callback which drives the wheels of the robot. Values of l and r are between -1 and +1....">MotorEvent</a> which is called if there is a change in wheel speed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abec79295612524eb681f912f1ea800e3" name="abec79295612524eb681f912f1ea800e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec79295612524eb681f912f1ea800e3">&#9670;&#160;</a></span>setAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AbstractTask::setAngularVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the Angular velocity and triggers a motor event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The new anglular velocity in rad/sec. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fd9b67d990367c4633f9227a90f573f" name="a1fd9b67d990367c4633f9227a90f573f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd9b67d990367c4633f9227a90f573f">&#9670;&#160;</a></span>setLinearSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AbstractTask::setLinearSpeed </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the linear speed in m/s. It's converted to motor units and triggers a motor event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>The linear speed in m/s. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

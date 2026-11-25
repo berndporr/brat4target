@@ -1,5 +1,0 @@
-<map id="AvoidTask::BraitenbergAvoider" name="AvoidTask::BraitenbergAvoider">
-<area shape="rect" id="Node000001" title="Detects obstacles close to the robot in world." alt="" coords="5,81,225,109"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="49,5,181,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,47,117,82,113,79,113,51"/>
-</map>

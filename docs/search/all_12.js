@@ -15,5 +15,6 @@ var searchData=
   ['terminationmessage2task_12',['terminationMessage2task',['../classReactiveConfigurator.html#a7ddb06e6aa595b807e5759b6a2db5efb',1,'ReactiveConfigurator']]],
   ['terminationreason_13',['TerminationReason',['../structAbstractTask_1_1TerminationMessage.html#a7f05c18e58e3ec2a4af3f1f97a70574d',1,'AbstractTask::TerminationMessage']]],
   ['terminationreason_14',['terminationReason',['../structAbstractTask_1_1TerminationMessage.html#aa105877462220fa716d153a3798c6d63',1,'AbstractTask::TerminationMessage']]],
-  ['type_3c_20pointf_20_3e_15',['Type&lt; Pointf &gt;',['../structcv_1_1traits_1_1Type_3_01Pointf_01_4.html',1,'cv::traits']]]
+  ['threats_15',['Threats',['../structAbstractTask_1_1Threats.html',1,'AbstractTask']]],
+  ['type_3c_20pointf_20_3e_16',['Type&lt; Pointf &gt;',['../structcv_1_1traits_1_1Type_3_01Pointf_01_4.html',1,'cv::traits']]]
 ];
